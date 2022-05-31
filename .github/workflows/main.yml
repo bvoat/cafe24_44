@@ -30,3 +30,5 @@ jobs:
           *.ini
           *.gif
           *.yml
+          *.scss
+          *.css.map
