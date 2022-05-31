@@ -13,6 +13,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: 14.128.139.71
+        local-dir: ./index.html
         server-dir: /sde_design/mobile21/
         username: bvoatofficial
         password: ftpqlqhxm2@
