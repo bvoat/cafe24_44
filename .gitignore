@@ -1,2 +1,14 @@
 .DS_Store
 .vscode
+**/.git*
+**/.git*/**
+**/node_modules/**
+**/.github*
+**/.github*/**
+**/preference*
+**/preference*/**
+*.json
+*.ini
+*gif
+preference
+preference/product/product_category.ini
