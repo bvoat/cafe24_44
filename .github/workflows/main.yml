@@ -9,11 +9,35 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
 
-    - name: 📂 Sync files mobile
+    - name: 📂 Sync files mobile21
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: ${{ secrets.ACTION_FTP_HOST }}
         server-dir: /sde_design/mobile21/
+        username: bvoatofficial
+        password: ${{ secrets.ACTION_FTP_PWD }}
+        protocol: ftp
+        port: 21
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.github*
+          **/.github*/**
+          **/preference*
+          **/preference*/**
+          *.json
+          *.ini
+          *.gif
+          *.yml
+          *.scss
+          *.css.map
+
+    - name: 📂 Sync files skin45
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{ secrets.ACTION_FTP_HOST }}
+        server-dir: /sde_design/skin45/
         username: bvoatofficial
         password: ${{ secrets.ACTION_FTP_PWD }}
         protocol: ftp
