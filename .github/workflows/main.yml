@@ -12,7 +12,7 @@ jobs:
     - name: 📂 Sync files mobile
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: bvoatofficial.ftp.cafe24.com
+        server: 14.128.139.71
         server-dir: /sde_design/mobile21/
         username: bvoatofficial
         password: ftpqlqhxm2@
