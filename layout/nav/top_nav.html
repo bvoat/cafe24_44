@@ -1,0 +1,26 @@
+<!--@css(/layout/basic/css/top_nav.css)-->
+
+<section id="top_nav">
+    <!-- Slider header container -->
+    <div class="top_nav_category swiper">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide top_nav_name">
+                <a href="">크루 가입</a>
+            </li>
+            <li class="swiper-slide top_nav_name">
+                <a href="">스토어 홈</a>
+            </li>
+            <li class="swiper-slide top_nav_name">
+                <a href="">비보트 딜리버리</a>
+            </li>
+            <li id="cate{$cate_no}" class="swiper-slide top_nav_name" module="layout_category"><a href="/product/list.html{$param}"
+                    class="top_nav_category_link">{$name_or_img_tag}</a>
+            </li>
+            <li class="swiper-slide top_nav_name">
+                <a href="">펀딩/공구</a>
+            </li>
+        </ul>
+
+    </div>
+</section>
+<script src="../../js/module/layout/top_nav.js"></script>

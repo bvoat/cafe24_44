@@ -1,1 +1,75 @@
-/* No CSS *//*# sourceMappingURL=header.css.map */
+#header {
+  width: 100%;
+  height: 88px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  overflow: hidden;
+}
+
+#header #header-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header #header-section .header-logo {
+  width: 73px;
+  height: 39px;
+  background: url("../../../images/logo/Bvoat.png") no-repeat center;
+  background-size: contain;
+  text-indent: -9999px;
+}
+
+#header #header-section .header-menu {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 0;
+  width: 52px;
+  height: 20px;
+}
+
+#header #header-section .header-menu li {
+  width: 19px;
+  height: 19px;
+}
+
+#header #header-section .header-menu li:nth-child(1) {
+  background: url("../../../images/icon/icon-search.png") no-repeat center;
+  background-size: contain;
+  text-indent: -9999px;
+}
+
+#header #header-section .header-menu li:nth-child(2) {
+  background: url("../../../images/icon/icon-love.png") no-repeat center;
+  background-size: contain;
+  text-indent: -9999px;
+}
+/*# sourceMappingURL=header.css.map */

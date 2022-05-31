@@ -1,1 +1,9 @@
-/* No CSS *//*# sourceMappingURL=layout.css.map */
+#bvt_container {
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: aliceblue;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 11px;
+}
+/*# sourceMappingURL=layout.css.map */
