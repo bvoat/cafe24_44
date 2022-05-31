@@ -1,5 +1,5 @@
 on: push
-name: 🚀 Deploy Bvoat website on push
+name: 🚀 Deploy Bvoat on push from web to mobile
 jobs:
   web-deploy:
     name: 🎉 Deploy
