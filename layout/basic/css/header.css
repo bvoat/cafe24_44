@@ -1,6 +1,6 @@
 #header {
-  width: 100%;
-  height: 88px;
+  width: auto;
+  height: auto;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,6 +10,8 @@
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   overflow: hidden;
+  padding: 0 11px;
+  border-bottom: 1px solid #E2E2E2;
 }
 
 #header #header-section {
@@ -51,7 +53,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  right: 0;
+  right: 33px;
   width: 52px;
   height: 20px;
 }
