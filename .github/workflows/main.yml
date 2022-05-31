@@ -12,11 +12,10 @@ jobs:
     - name: 📂 Sync files mobile
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: 14.128.139.71
-        local-dir: ./index.html
+        server: ${{ secrets.ACTION_FTP_HOST }}
         server-dir: /sde_design/mobile21/
         username: bvoatofficial
-        password: ftpqlqhxm2@
+        password: ${{ secrets.ACTION_FTP_PWD }}
         protocol: ftp
         port: 21
         exclude: |
