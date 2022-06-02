@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "product_list.scss",
+        "../../../layout/basic/css/abstracts/_variables.scss",
+        "../../../layout/basic/css/abstracts/_mixin.scss"
+    ],
+    "names": [],
+    "file": "product_list.css"
+}
