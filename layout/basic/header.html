@@ -1,14 +1,15 @@
 <!--@css(/layout/basic/css/header.css)-->
 
 <section id="header">
-    <section id="header-section">
-        <div class="header-logo">비보트Bvoat</div>
-        <ul class="header-menu">
-            <li>
+    <section id="header_section">
+        <div class="header_logo">비보트Bvoat</div>
+        <ul class="header_menu">
+            <li class="header_search">
                 <a title="상품검색">검색</a>
             </li>
-            <li>
-                <a title="상품 찜 리스트">찜</a>
+            <li class="header_cart">
+                <a href="/order/basket.html" title="장바구니">장바구니</a>
+                <div module="Layout_orderBasketcount"><span class="count">{$basket_count}</span></div>
             </li>
         </ul>
     </section>

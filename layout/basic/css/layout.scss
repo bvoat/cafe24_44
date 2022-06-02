@@ -4,8 +4,9 @@
 
 #bvt_container{
     max-width: 450px;
+    min-width: 300px;
+    overflow-x: hidden;
     margin: 0 auto;
-    background-color: aliceblue;
     box-sizing: border-box;
     #contents{
         padding: 0 11px;
