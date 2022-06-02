@@ -28,111 +28,115 @@
     box-sizing: border-box;
     overflow: hidden;
 
-    .bottom_nav_wrap{
-        width: 100%;
-        height: 64px;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-
-        li{
-            width: 18%;
-            height: 100%;
+    #bottom_nav_wrap{
+            width: 100%;
+        .bottom_nav_list{
+            width: 100%;
+            height: 64px;
             display: flex;
-            flex-flow: column nowrap;
+            flex-flow: row nowrap;
+            justify-content: space-between;
             align-items: center;
-            justify-content: space-around;
-            cursor: pointer;
-
-            a{
-                position: relative;
+    
+            li{
+                width: 18%;
+                height: 100%;
                 display: flex;
                 flex-flow: column nowrap;
-                justify-content: space-between;
                 align-items: center;
-                width: var(--text-width);
-                text-align: center;
-                font-size: 1.1rem;
-                font-weight: 700;
-            }
-
-            &:nth-child(1){
+                justify-content: space-around;
+                cursor: pointer;
+    
                 a{
-                    color: var(--text-color-feed);
-                    &::before{
-                        display: block;
-                        position: relative;
-                        width: var(--icon-width);
-                        height: var(--icon-height);
-                        content: " ";
-                        background: var(--feed) no-repeat center;
-                        background-size: contain;
-                        padding-bottom: 6px;
+                    position: relative;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: var(--text-width);
+                    text-align: center;
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                }
+    
+                &:nth-child(1){
+                    a{
+                        color: var(--text-color-feed);
+                        &::before{
+                            display: block;
+                            position: relative;
+                            width: var(--icon-width);
+                            height: var(--icon-height);
+                            content: " ";
+                            background: var(--feed) no-repeat center;
+                            background-size: contain;
+                            padding-bottom: 6px;
+                        }
                     }
                 }
-            }
-            &:nth-child(2){
-                a{
-                    color: var(--text-color-category);
-                    &::before{
-                        display: block;
-                        position: relative;
-                        width: var(--icon-width);
-                        height: var(--icon-height);
-                        content: " ";
-                        background: var(--category) no-repeat center;
-                        background-size: contain;
-                        padding-bottom: 6px;
+                &:nth-child(2){
+                    a{
+                        color: var(--text-color-category);
+                        &::before{
+                            display: block;
+                            position: relative;
+                            width: var(--icon-width);
+                            height: var(--icon-height);
+                            content: " ";
+                            background: var(--category) no-repeat center;
+                            background-size: contain;
+                            padding-bottom: 6px;
+                        }
                     }
                 }
-            }
-            &:nth-child(3){
-                a{
-                    color: var(--text-color-store);
-                    &::before{
-                        display: block;
-                        position: relative;
-                        width: var(--icon-width);
-                        height: var(--icon-height);
-                        content: " ";
-                        background: var(--store)  no-repeat center;
-                        background-size: contain;
-                        padding-bottom: 6px;
+                &:nth-child(3){
+                    a{
+                        color: var(--text-color-store);
+                        &::before{
+                            display: block;
+                            position: relative;
+                            width: var(--icon-width);
+                            height: var(--icon-height);
+                            content: " ";
+                            background: var(--store)  no-repeat center;
+                            background-size: contain;
+                            padding-bottom: 6px;
+                        }
                     }
                 }
-            }
-            &:nth-child(4){
-                a{
-                    color: var(--text-color-like);
-                    &::before{
-                        display: block;
-                        position: relative;
-                        width: var(--icon-width);
-                        height: var(--icon-height);
-                        content: " ";
-                        background: var(--like) no-repeat center;
-                        background-size: contain;
-                        padding-bottom: 6px;
+                &:nth-child(4){
+                    a{
+                        color: var(--text-color-like);
+                        &::before{
+                            display: block;
+                            position: relative;
+                            width: var(--icon-width);
+                            height: var(--icon-height);
+                            content: " ";
+                            background: var(--like) no-repeat center;
+                            background-size: contain;
+                            padding-bottom: 6px;
+                        }
                     }
                 }
-            }
-            &:nth-child(5){
-                a{
-                    color: var(--text-color-user);
-                    &::before{
-                        display: block;
-                        position: relative;
-                        width: var(--icon-width);
-                        height: var(--icon-height);
-                        content: " ";
-                        background: var(--user) no-repeat center;
-                        background-size: contain;
-                        padding-bottom: 6px;
+                &:nth-child(5){
+                    a{
+                        color: var(--text-color-user);
+                        &::before{
+                            display: block;
+                            position: relative;
+                            width: var(--icon-width);
+                            height: var(--icon-height);
+                            content: " ";
+                            background: var(--user) no-repeat center;
+                            background-size: contain;
+                            padding-bottom: 6px;
+                        }
                     }
                 }
+    
             }
-
         }
     }
+    
 }

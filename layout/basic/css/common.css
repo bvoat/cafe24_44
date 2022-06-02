@@ -120,6 +120,7 @@ hr.layout {
 a {
     text-decoration: none;
     color: #292929;
+    cursor: pointer;
 }
 
 /* a:hover {
@@ -135,6 +136,10 @@ a:focus {
     text-decoration: none;
 }
 
+summary{
+    cursor: pointer;
+    list-style: none;
+}
 /* 드래그 시 노란색 표시 */
 
 ::selection {

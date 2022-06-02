@@ -1,16 +1,4 @@
 
-
-// const controlCategoryName = () => {
-//     const category = document.querySelectorAll(".top_nav_category_link");
-//     console.log(category);
-//     const korCategory = ["패션", "식품", "리빙", "뷰티"];
-//     const arrCategory = [...category];
-//     arrCategory.map((node, i)=>{
-//       node.innerHTML=korCategory[i]
-//     })
-//   }
-  
-  
   // swiper
   var swiper = new Swiper('.swiper', {
       slidesPerView: 6,
