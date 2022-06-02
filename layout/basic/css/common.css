@@ -42,8 +42,6 @@ img {
     padding-block-end: 0;
     padding-inline-start: 0;
     padding-inline-end: 0;
-    font-family: 'Noto Sans KR', 'Jost', 'Nunito', Dotum, Verdana, AppleGothic, sans-serif;
-    ;
     font-size: 62.5%;
 }
 
@@ -58,6 +56,9 @@ code {
     color: #292929;
     /* color:#353535;  */
     background: #ffffff;
+    font-family: 'Noto Sans KR', 'Jost', 'Nunito', Dotum, Verdana, AppleGothic, sans-serif;
+    letter-spacing: -0.8px;    
+    transform: rotate(0.04deg);
 }
 
 /* body { min-width:1480px; } */
@@ -115,7 +116,7 @@ hr.layout {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #292929;
 }
 
 /* a:hover {
