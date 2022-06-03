@@ -1,11 +1,11 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAKA,AAAA,gCAAgC,CAAA;EAC5B,gBAAgB,EAAE,UAAU;CAC/B",
     "sources": [
-        "product_list.scss",
+        "product_listrecommend.scss",
         "../../../layout/basic/css/abstracts/_variables.scss",
         "../../../layout/basic/css/abstracts/_mixin.scss"
     ],
     "names": [],
-    "file": "product_list.css"
+    "file": "product_listrecommend.css"
 }

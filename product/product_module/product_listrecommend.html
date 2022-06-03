@@ -1,0 +1,33 @@
+<!--@css(../../css/module/product/module/product_listrecommend.css)-->
+<ul class="product_listrecommend_list_wrap">
+    <li class="listrecommend_list" id="anchorBoxId_{$product_no}">
+        <div class="recommend_product">
+            <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}" title="{$product_name_tag|striptag}">
+                <img src="{$image_medium}" id="{$image_medium_id}"  alt="{$seo_alt_tag}" class="recommend_img" />
+                <span class="product_select_icon">{$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</span>
+            </a>
+            <a href="/product/detail.html{$param}">
+                {$product_name|striptag}
+            </a>
+            <ul class="recommend_product_price price_wrap">
+                <li class="price">{$product_price|numberformat}</li>          
+                <li>{$prd_price_sale}</li>  
+            </ul>
+        </div>
+    </li>
+    <li class="listrecommend_list" id="anchorBoxId_{$product_no}">
+        <div class="recommend_product">
+            <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}" title="{$product_name_tag|striptag}">
+                <img src="{$image_medium}" id="{$image_medium_id}"  alt="{$seo_alt_tag}"  class="recommend_img" />
+                <span class="product_select_icon">{$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</span>
+            </a>
+            <a href="/product/detail.html{$param}">
+                {$product_name|striptag}
+            </a>
+            <ul class="recommend_product_price price_wrap">
+                <li class="price">{$product_price|numberformat}</li> 
+                <li>{$prd_price_sale}</li>  
+            </ul>
+        </div>
+    </li>
+</ul>
