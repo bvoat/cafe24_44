@@ -64,41 +64,42 @@ jobs:
         # For posting a rich message using Block Kit
         payload: |
           {
+          "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
           "blocks": [
-            {
-              "type": "header",
-              "text": {
-                "type": "plain_text",
-                "text": "[카페24 GitHub FTP Deploy 배포🚀]",
-                "emoji": true
-              }
-            },
-            {
-              "type": "section",
-              "text": {
-                "type": "mrkdwn",
-                "text": "*GitHub Action 실행 결과 : * *${{ job.status }}* \n *Pushed by :* ${{ github.actor }}\n\n\n\n ⏤"
-              }
-            },
-            {
-              "type": "section",
-              "text": {
-                "type": "mrkdwn",
-                "text": "*카페24 깃허브 레포지토리 보러가기*"
-              },
-              "accessory": {
-                "type": "button",
+              {
+                "type": "header",
                 "text": {
                   "type": "plain_text",
-                  "text": "Cafe24 Repository 🔔",
+                  "text": "[카페24 GitHub FTP Deploy 배포🚀]",
                   "emoji": true
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*GitHub Action 실행 결과 : * *${{ job.status }}* \n *Pushed by :* ${{ github.actor }}\n\n\n\n ⏤"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*카페24 깃허브 레포지토리 보러가기*"
                 },
-                "value": "${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
-                "action_id": "button-action"
+                "accessory": {
+                  "type": "button",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "Cafe24 Repository 🔔",
+                    "emoji": true
+                  },
+                  "value": "${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
+                  "action_id": "button-action"
+                }
               }
-            }
-          ]
-        }
+            ]
+           }
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.ACTION_SLACK_WEBHOOK_URL }}
         SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
