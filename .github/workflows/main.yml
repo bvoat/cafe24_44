@@ -64,13 +64,23 @@ jobs:
         # For posting a rich message using Block Kit
         payload: |
           {
-            "text": "[카페24 GitHub Action 배포🚀] \n \n GitHub Action 실행 결과: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
-            "blocks": [
+            "text": "${{github.event.workflow_run.name}}\n *GitHub Action 실행 결과 : * ${{ job.status }}\n\n [GitHub Link](${{ github.event.pull_request.html_url || github.event.head_commit.url }})\n \n 
+            *Pushed by : * ${{ env.AUTHOR_NAME }} "
+                "blocks": [
+            		{
+                "type": "header",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*[카페24 GitHub Action 배포🚀]*",
+                  "emoji": true
+                }
+              },
               {
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "[카페24 GitHub Action 배포🚀] \n \n GitHub Action 실행 결과: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+                  "text": "${{github.event.workflow_run.name}}\n *GitHub Action 실행 결과 : * ${{ job.status }}\n\n [GitHub Link](${{ github.event.pull_request.html_url || github.event.head_commit.url }})\n \n 
+                  *Pushed by : * ${{ env.AUTHOR_NAME }} "
                 }
               }
             ]
