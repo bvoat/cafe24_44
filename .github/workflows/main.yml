@@ -65,22 +65,22 @@ jobs:
         payload: |
           {
             "text": "*[카페24 GitHub Action 배포🚀]*",
-            "blocks": [
-              {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": "\n\n ${{github.event.workflow_run.name}}\n *GitHub Action 실행 결과 : * ${{ job.status }} \n *Pushed by : * ${{ github.event.sender.login }} ${{ github.event.pull_request.user.login }}"
-              },
-              {
-                "type": "button",
-                "text": {
-                  "type": "plain_text",
-                  "text": "Repo Link"
+            "blocks": {
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "\n\n\n ${{github.event.workflow_run.name}}\n *GitHub Action 실행 결과 : * ${{ job.status }} \n *Pushed by : ${{ github.actor }}"
                 },
-                "url": "${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
-              }
-            ]
+                {
+                  "type": "button",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "Repo Link"
+                  },
+                  "url": "${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+                }
+            }
           }
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.ACTION_SLACK_WEBHOOK_URL }}
