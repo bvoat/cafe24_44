@@ -57,15 +57,21 @@ jobs:
           *.scss
           *.css.map
           
-    - name: Post to a Slack channel
+    - name: Send FTP Result data to Passengers Slack 
       id: slack
-      uses: slackapi/slack-github-action@v1.19.0
+      uses: slackapi/slack-github-action@v1.18.0
       with:
-        # Slack channel id, channel name, or user id to post message.
-        # See also: https://api.slack.com/methods/chat.postMessage#channels
-        channel-id: 'C03F6KWAQCC'
-        # For posting a simple plain text message
-        slack-message: "[카페24 GitHub Action 배포] \n \n GitHub Action 실행 결과: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
-      env:
-        SLACK_WEBHOOK_URL: ${{ secrets.ACTION_SLACK_WEBHOOK_URL }}
-        SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+        # For posting a rich message using Block Kit
+        payload: |
+          {
+            "text": "[카페24 GitHub Action 배포🚀] \n \n GitHub Action 실행 결과: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
+            "blocks": [
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "[카페24 GitHub Action 배포🚀] \n \n GitHub Action 실행 결과: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+                }
+              }
+            ]
+          }
