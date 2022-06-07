@@ -32,7 +32,6 @@ jobs:
           *.yml
           *.scss
           *.css.map
-
     - name: 📂 Sync files skin45
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
@@ -78,7 +77,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "*GitHub Action 실행 결과 : * *${{ job.status }}* \n *Pushed by :* ${{ github.actor }}\n\n\n\n ⏤"
+                  "text": "*GitHub Action 실행 결과 : * *${{ job.status }}* \n *Pushed by :* ${{ github.actor }}\n\n ⏤"
                 }
               },
               {
@@ -94,7 +93,7 @@ jobs:
                     "text": "Cafe24 Repository 🔔",
                     "emoji": true
                   },
-                  "value": "${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
+                  "value": ${{ github.event.pull_request.html_url || github.event.head_commit.url }},
                   "action_id": "button-action"
                 }
               }
