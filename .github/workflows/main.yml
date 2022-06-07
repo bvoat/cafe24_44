@@ -70,8 +70,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "* \n\n ${{github.event.workflow_run.name}}\n *GitHub Action 실행 결과 : * ${{ job.status }}\n \n *Pushed by : * ${{ github.event.sender.login }} ${{ github.event.pull_request.user.login }}"
-                }
+                  "text": "\n\n ${{github.event.workflow_run.name}}\n *GitHub Action 실행 결과 : * ${{ job.status }} \n *Pushed by : * ${{ github.event.sender.login }} ${{ github.event.pull_request.user.login }}"
               },
               {
                 "type": "button",
