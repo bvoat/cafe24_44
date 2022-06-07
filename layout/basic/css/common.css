@@ -42,6 +42,8 @@ img {
     padding-inline-start: 0;
     padding-inline-end: 0;
     font-size: 62.5%;
+    box-sizing: border-box;
+    word-break: keep-all;
 }
 
 html {
@@ -51,17 +53,15 @@ html {
 
 body,
 code {
-    /* font:0.75em Verdana,Dotum,AppleGothic,sans-serif;  */
+    /* font:0.75em Verdana, Dotum,AppleGothic,sans-serif;  */
     color: #292929;
     /* color:#353535;  */
     background: #ffffff;
     font-family: 'Noto Sans KR', 'Jost', 'Nunito', Dotum, Verdana, AppleGothic, sans-serif;
     letter-spacing: -0.2px;
     font-stretch: 98%;    
-    transform: rotate(0.04deg);
-    image-rendering: -webkit-optimize-contrast;
-    transform: translateZ(0);
-    backface-visibility: hidden;
+    font-variant: tabular-nums;
+    font-feature-settings: "tnum";
 }
 
 /* body { min-width:1480px; } */
@@ -81,6 +81,9 @@ fieldset {
     /* border:none; 
     vertical-align:top;  */
     border: 0;
+    image-rendering: -webkit-optimize-contrast;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 em,
@@ -122,6 +125,10 @@ a {
     color: #292929;
     cursor: pointer;
 }
+
+a, h1, h2, h3, h4, h5, h6, p, span, em, i {
+    transform: rotate(0.04deg);
+} 
 
 /* a:hover {
     text-decoration: underline;

@@ -3,12 +3,39 @@
 @import "./abstracts/_mixin";
 
 #bvt_container{
+    position: relative;
     max-width: 450px;
     min-width: 300px;
     overflow-x: hidden;
     margin: 0 auto;
     box-sizing: border-box;
+    
+    #header{
+        position: fixed;
+        display: block;
+        z-index: 999;
+        max-width: 450px;
+        min-width: 300px;
+        width: 100%;
+        top: 0;
+        background: $bvt-white;
+        overflow: hidden;
+    }
     #contents{
-        padding: 0 11px;
+        // header fixed로 floating 된 값 만큼 컨텐츠가 늘 내려가야 함
+        // header의 computed height 81px
+        padding: 81px 11px 0;
+    }
+    #bottom{
+        position: fixed;
+        display: block;
+        z-index: 999;
+        max-width: 450px;
+        min-width: 300px;
+        width: 100%;
+        bottom: 0;
+        background: $bvt-white;   
+        box-shadow: $bvt-top-shadow;
+        overflow: hidden;
     }
 }

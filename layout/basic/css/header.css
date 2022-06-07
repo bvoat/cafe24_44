@@ -1,4 +1,4 @@
-#header {
+#header_wrap {
   width: auto;
   height: auto;
   position: relative;
@@ -14,7 +14,7 @@
   border-bottom: 1px solid #E2E2E2;
 }
 
-#header #header_section {
+#header_wrap #header_logo_section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,7 +30,7 @@
           align-items: center;
 }
 
-#header #header_section .header_logo {
+#header_wrap #header_logo_section .header_logo {
   width: 73px;
   height: 40px;
   background: url("../../../images/logo/Bvoat.png") no-repeat center;
@@ -38,7 +38,7 @@
   text-indent: -9999px;
 }
 
-#header #header_section .header_menu {
+#header_wrap #header_logo_section .header_menu {
   position: absolute;
   width: 60px;
   height: 40px;
@@ -57,11 +57,11 @@
   right: 11px;
 }
 
-#header #header_section .header_menu li {
+#header_wrap #header_logo_section .header_menu li {
   position: relative;
 }
 
-#header #header_section .header_menu li:nth-child(1) a {
+#header_wrap #header_logo_section .header_menu li:nth-child(1) a {
   position: relative;
   display: block;
   width: 20px;
@@ -71,7 +71,7 @@
   text-indent: -9999px;
 }
 
-#header #header_section .header_menu li:nth-child(2) a {
+#header_wrap #header_logo_section .header_menu li:nth-child(2) a {
   position: relative;
   display: block;
   width: 23px;
@@ -81,7 +81,7 @@
   text-indent: -9999px;
 }
 
-#header #header_section .header_menu li:nth-child(2) .xans-layout-orderbasketcount {
+#header_wrap #header_logo_section .header_menu li:nth-child(2) .xans-layout-orderbasketcount {
   position: absolute;
   width: 15px;
   height: 15px;

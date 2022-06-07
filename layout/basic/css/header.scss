@@ -2,7 +2,7 @@
 @import "./abstracts/_variables";
 @import "./abstracts/_mixin";
 
-#header {
+#header_wrap {
     width: auto;
     height: auto;
     position: relative;
@@ -12,7 +12,7 @@
     padding: 0 11px;
     border-bottom: $bvt-btn-border-gray;
 
-    #header_section {
+    #header_logo_section {
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;

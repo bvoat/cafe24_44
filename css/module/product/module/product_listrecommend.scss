@@ -1,8 +1,169 @@
 @charset "utf-8";
-@import "../../../layout/basic/css/abstracts/_variables";
-@import "../../../layout/basic/css/abstracts/_mixin";
+@import "../../../../layout/basic/css/abstracts/mixin";
+@import "../../../../layout/basic/css/abstracts/variables";
 
+// 상품 추천 목록
 
-.product_listrecommend_list_wrap{
-    background-color: aquamarine;
+#product_listrecommend_list {
+    margin-bottom: 37px;
+
+    // 상품 개별
+    .listrecommend_list {
+        padding-bottom: 27.5px;
+
+        .recommend_product {
+            position: relative;
+
+            //상품 이미지 구역
+            .recommend_img_wrap {
+                position: relative;
+                width: 100%;
+
+                .recommend_img_box {
+                    display: block;
+                    position: relative;
+                    margin-bottom: 6.9px;
+                    padding-top: calc(100% - 15px);
+                    overflow: hidden;
+                    border-radius: 4px;
+
+                    .recommend_img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+
+                .product_select_icon {
+                    position: absolute;
+                    width: 71px;
+                    height: 30px;
+                    border-radius: 4px;
+                    top: 7.2px;
+                    left: 5.6px;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+
+                    }
+                }
+
+                .product_wish {
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 38px;
+                    height: 38px;
+                    bottom: 9.2px;
+                    left: 8.7px;
+                    padding: 4px 0 0 1px;
+                    background: $bvt-white;
+                    border-radius: 50%;
+                    box-shadow: $bvt-btn-shadow;
+
+                    img {
+                        display: block;
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            //상품 브랜드 구역
+            .recommend_product_brand {
+                width: 100%;
+                height: 34px;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+
+                .brand {
+                    font-size: 1.1rem;
+                    color: $bvt-darkgray;
+                }
+
+                .summary_desc {
+                    font-size: 1.1rem;
+                    color: $bvt-darkgray;
+                }
+            }
+
+            //상품 정보 구역
+            .recommend_product_info {
+                margin-top: 9px;
+                .recommend_product_name {
+                    display: block;
+                    width: 100%;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    margin-bottom: 9px;
+                    vertical-align: top;
+                    overflow: hidden;
+                    @include ellipsis(2, 1.4rem)
+                }
+
+                .recommend_product_price {
+                    display: flex;
+                    align-items: center;
+
+                    .product_price {
+                        font-size: 1.8rem;
+                        font-weight: 700;
+                        color: $bvt-blue;
+
+                        >span {
+                            font-weight: 500;
+                            color: $bvt-black;
+                            margin-right: 8px;
+                            margin-left: 1px;
+                        }
+
+                    }
+
+                    .sale_price {
+                        font-size: 1.8rem;
+                        font-weight: 700;
+                        color: $bvt-blue;
+
+                        >span {
+                            margin-left: 1px;
+                            font-weight: 400;
+                            color: $bvt-black;
+                        }
+                    }
+
+                    .out_focus {
+                        text-decoration: line-through;
+                        color: $bvt-lostfocus-gray;
+
+                        >span {
+                            margin-left: 1px;
+                            font-weight: 400;
+                            text-decoration: line-through;
+                            color: $bvt-lostfocus-gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //프로그래스 바
+    .product_list_pagination {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        border-radius: 4px;
+        background: $bvt-progress-bar;
+
+        .swiper-pagination-progressbar-fill {
+            background-color: $bvt-blue;
+            border-radius: 20px;
+            transform: scale(0);
+            transform-origin: left top;
+        }
+    }
 }
