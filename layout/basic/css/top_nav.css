@@ -1,3 +1,8 @@
+#top_nav {
+  -webkit-backdrop-filter: blur(30%) brightness(50%) opacity(71%);
+          backdrop-filter: blur(30%) brightness(50%) opacity(71%);
+}
+
 #top_nav .swiper {
   width: 100%;
   height: 40px;
@@ -31,7 +36,7 @@
 }
 
 #top_nav .swiper .swiper-wrapper .swiper-slide a {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-stretch: condensed;
 }
 /*# sourceMappingURL=top_nav.css.map */

@@ -18,7 +18,8 @@
         min-width: 300px;
         width: 100%;
         top: 0;
-        background: $bvt-white;
+        background: #ffffff71;    
+        backdrop-filter: blur(30px) brightness(150%);
         overflow: hidden;
     }
     #contents{
