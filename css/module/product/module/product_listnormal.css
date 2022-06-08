@@ -111,12 +111,12 @@
 }
 
 #product_listnormal_list .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_brand .brand {
-  font-size: 1.1rem;
+  font-size: 5px !important;
   color: #707070;
 }
 
 #product_listnormal_list .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_brand .summary_desc {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #707070;
 }
 
@@ -127,8 +127,8 @@
 #product_listnormal_list .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_name {
   display: block;
   width: 100%;
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.35rem;
+  font-weight: 600;
   margin-bottom: 9px;
   vertical-align: top;
   overflow: hidden;
@@ -138,12 +138,13 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.6rem;
+  line-height: 1.5rem;
   height: 3.2rem;
   /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
 }
 
 #product_listnormal_list .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_name > span {
+  font-size: 1.3rem !important;
   color: #292929 !important;
 }
 
@@ -157,27 +158,27 @@
 }
 
 #product_listnormal_list .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_price .product_price {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #022CFF;
 }
 
 #product_listnormal_list .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_price .product_price > span {
-  font-weight: 400;
+  font-weight: 300;
   color: #292929;
   margin-right: 8px;
   margin-left: 1px;
 }
 
 #product_listnormal_list .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_price .sale_price {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #022CFF;
 }
 
 #product_listnormal_list .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_price .sale_price > span {
   margin-left: 1px;
-  font-weight: 400;
+  font-weight: 300;
   color: #292929;
 }
 

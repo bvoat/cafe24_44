@@ -57,7 +57,7 @@ code {
     color: #292929;
     /* color:#353535;  */
     background: #ffffff;
-    font-family: 'Noto Sans KR', 'Jost', 'Nunito', Dotum, Verdana, AppleGothic, sans-serif;
+    font-family: noto-sans-cjk-kr, 'noto sans', Verdana, Dotum, 'Jost', 'Nunito', AppleGothic, sans-serif;
     letter-spacing: -0.2px;
     font-stretch: 98%;    
     font-variant: tabular-nums;

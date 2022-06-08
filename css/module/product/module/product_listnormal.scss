@@ -92,12 +92,12 @@
                     justify-content: space-between;
 
                     .brand {
-                        font-size: 1.1rem;
+                        font-size: 5px !important;
                         color: $bvt-darkgray;
                     }
 
                     .summary_desc {
-                        font-size: 1.1rem;
+                        font-size: 1rem;
                         color: $bvt-darkgray;
                     }
                 }
@@ -109,12 +109,13 @@
                     .normal_product_name {
                         display: block;
                         width: 100%;
-                        font-size: 1.4rem;
-                        font-weight: 700;                        margin-bottom: 9px;
+                        font-size: 1.35rem;
+                        font-weight: 600;                        margin-bottom: 9px;
                         vertical-align: top;
-                        @include ellipsis(2, 1.4rem);
+                        @include ellipsis(2, 1.3rem);
                         >span{
-                            //더보기 할 때 color 적용되지 않는 오류 수정
+                            //더보기 할 때 size, color 적용되지 않는 오류 수정
+                            font-size: 1.3rem !important;
                             color: $bvt-black !important;
                         }
                     }
@@ -124,12 +125,12 @@
                         align-items: center;
 
                         .product_price {
-                            font-size: 1.8rem;
+                            font-size: 1.6rem;
                             font-weight: 700;
                             color: $bvt-blue;
 
                             >span {
-                                font-weight: 400;
+                                font-weight: 300;
                                 color: $bvt-black;
                                 margin-right: 8px;
                                 margin-left: 1px;
@@ -138,13 +139,13 @@
                         }
 
                         .sale_price {
-                            font-size: 1.8rem;
+                            font-size: 1.6rem;
                             font-weight: 700;
                             color: $bvt-blue;
 
                             >span {
                                 margin-left: 1px;
-                                font-weight: 400;
+                                font-weight: 300;
                                 color: $bvt-black;
                             }
                         }
