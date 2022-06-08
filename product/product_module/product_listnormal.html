@@ -4,10 +4,9 @@
             ※ 상품 진열 갯수 변수, 디폴트는 200개
             $count = 6
             $moreview = yes
+            $cache = yes            
             $basket_result = /product/add_basket.html
             $basket_option = /product/basket_option.html
-            $cache = no
-            $type = moreview
     -->
     <ul class="product_listnormal_list_wrap">
         <li class="listnormal_list" id="anchorBoxId_{$product_no}">
@@ -32,7 +31,7 @@
                         {$product_name|striptag}
                     </a>
                     <div class="normal_product_price price_wrap">
-                        <span class="product_price">{$product_price|numberformat}<span>원</span></span>
+                        <span class="product_price">{$disp_product_price}<span>원</span></span>
                         <span class="sale_price">{$prd_price_sale|striptag}</span>
                     </div>
                 </li>
@@ -60,7 +59,7 @@
                         {$product_name|striptag}
                     </a>
                     <div class="normal_product_price price_wrap">
-                        <span class="product_price">{$product_price|numberformat}<span>원</span></span>
+                        <span class="product_price">{$disp_product_price}<span>원</span></span>
                         <span class="sale_price">{$prd_price_sale|striptag}</span>
                     </div>
                 </li>

@@ -110,11 +110,13 @@
                         display: block;
                         width: 100%;
                         font-size: 1.4rem;
-                        font-weight: 700;
-                        margin-bottom: 9px;
+                        font-weight: 700;                        margin-bottom: 9px;
                         vertical-align: top;
-                        overflow: hidden;
-                        @include ellipsis(2, 1.4rem)
+                        @include ellipsis(2, 1.4rem);
+                        >span{
+                            //더보기 할 때 color 적용되지 않는 오류 수정
+                            color: $bvt-black !important;
+                        }
                     }
 
                     .normal_product_price {

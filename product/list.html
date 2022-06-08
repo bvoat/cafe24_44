@@ -47,11 +47,15 @@
 
 <!-- 더보기 버튼 -->
 <div id="product_listmore" module="product_listmore">
-    <button class="product_listmore_btn" onclick="try { $M.displayMore(0, 0, 102, 6, 5, false, 'S0000000', false, ''); } catch(e) { return false; };">
+    <button class="product_listmore_btn" onclick="{$more_action}">
         가치소비 더 보기
     </button>
 </div>
 <!-- 더보기 버튼 -->
+
+<!-- heading2 title 변경, 하위카테고리 슬라이드, customProductPrice -->
 <script src="../js/module/product/list.js"></script>
+
+<!-- recommend swiper -->
 <script src="../../js/module/product/product_listrecommend.js"></script>
 <script src="../../js/module/product/product_listnormal.js"></script>
