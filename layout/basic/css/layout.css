@@ -20,6 +20,7 @@
   -webkit-backdrop-filter: blur(80px) brightness(150%);
           backdrop-filter: blur(80px) brightness(150%);
   overflow: hidden;
+  margin: 0 auto;
 }
 
 #bvt_container #contents {

@@ -1,0 +1,130 @@
+@charset "UTF-8";
+:root {
+  --mileage-bar: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='428' height='2'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='.023' y1='.5' x2='1' y2='.5' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23f9f100'/%3E%3Cstop offset='.71' stop-color='%2332acef'/%3E%3Cstop offset='1' stop-color='%23022cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect data-name='사각형 2302' width='428' height='2' rx='1' fill='url(%23a)'/%3E%3C/svg%3E");
+}
+
+#mCafe24Order {
+  width: 100%;
+  margin: 0;
+  padding: 0 0 80px !important;
+  border: none;
+  background-color: #F9F9FE;
+}
+
+#mCafe24Order .title_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 330px;
+  background: #ffffff;
+}
+
+#mCafe24Order .title_section .title_wrap {
+  width: 100%;
+  height: 207px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#mCafe24Order .title_section .title_wrap p {
+  font-size: 4.4rem;
+  font-weight: 300;
+}
+
+#mCafe24Order .title_section .title_wrap h1 {
+  font-size: 4.4rem;
+  font-weight: bold;
+  line-height: 4.8rem;
+  text-align: center;
+}
+
+#mCafe24Order .title_section .title_wrap h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #707070;
+}
+
+#mCafe24Order .mileage_section {
+  width: 100%;
+  height: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  margin: 0;
+  padding: 64px 0 52px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.35rem;
+  color: #707070;
+  background: #00000000;
+}
+
+#mCafe24Order .mileage_section h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+#mCafe24Order .mileage_section .mileage {
+  width: 100%;
+  padding: 0 13px;
+  font-size: 2.6rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#mCafe24Order .mileage_section .mileage::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: var(--mileage-bar);
+  margin: 24px 0;
+}
+
+#mCafe24Order .mileage_section p {
+  font-size: inherit;
+  font-weight: 300;
+}
+
+#mCafe24Order .segment_section {
+  background: #ffffff;
+  border: 1px solid #E2E2E2;
+}
+
+#mCafe24Order .segment_section .segment_details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=order_result.css.map */

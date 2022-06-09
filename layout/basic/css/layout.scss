@@ -21,6 +21,7 @@
         background: #ffffff71;    
         backdrop-filter: blur(80px) brightness(150%);
         overflow: hidden;
+        margin: 0 auto;
     }
     #contents{
         // header fixed로 floating 된 값 만큼 컨텐츠가 늘 내려가야 함
