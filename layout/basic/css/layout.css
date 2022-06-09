@@ -17,8 +17,8 @@
   width: 100%;
   top: 0;
   background: #ffffff71;
-  -webkit-backdrop-filter: blur(30px) brightness(150%);
-          backdrop-filter: blur(30px) brightness(150%);
+  -webkit-backdrop-filter: blur(80px) brightness(150%);
+          backdrop-filter: blur(80px) brightness(150%);
   overflow: hidden;
 }
 
