@@ -1,14 +1,16 @@
 @charset "UTF-8";
 :root {
   --mileage-bar: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='428' height='2'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='.023' y1='.5' x2='1' y2='.5' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23f9f100'/%3E%3Cstop offset='.71' stop-color='%2332acef'/%3E%3Cstop offset='1' stop-color='%23022cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect data-name='사각형 2302' width='428' height='2' rx='1' fill='url(%23a)'/%3E%3C/svg%3E");
+  --off-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.582' height='7.194'%3E%3Cpath data-name='Icon ionic-ios-arrow-forward' d='M6.293 5.025 11.051.264a.9.9 0 0 1 1.27 0 .907.907 0 0 1 0 1.274L6.93 6.932a.9.9 0 0 1-1.24.026L.262 1.541A.9.9 0 1 1 1.532.268Z' fill='%23ababab'/%3E%3C/svg%3E");
 }
 
 #mCafe24Order {
+  position: relative;
   width: 100%;
   margin: 0;
   padding: 0 0 80px !important;
   border: none;
-  background-color: #F9F9FE;
+  background-color: #FAFAFE;
 }
 
 #mCafe24Order .title_section {
@@ -108,7 +110,7 @@
   content: "";
   width: 100%;
   height: 2px;
-  background: var(--mileage-bar);
+  background: var(--mileage-bar) no-repeat center;
   margin: 24px 0;
 }
 
@@ -118,13 +120,312 @@
 }
 
 #mCafe24Order .segment_section {
+  width: calc(100% - 22px);
   background: #ffffff;
   border: 1px solid #E2E2E2;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 15px;
 }
 
 #mCafe24Order .segment_section .segment_details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: 100%;
+  height: auto;
+}
+
+#mCafe24Order .segment_section .segment_details summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 52px;
+  padding: 0 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #707070;
+}
+
+#mCafe24Order .segment_section .segment_details summary::after {
+  display: inline-block;
+  content: "";
+  width: 13px;
+  height: 7.5px;
+  background: var(--off-arrow) no-repeat center;
+  margin-top: 2px;
+}
+
+#mCafe24Order .segment_section .segment_details .segment_info {
+  padding: 22px 0 25px 25px;
+  border-top: 1px solid #E2E2E2;
+}
+
+#mCafe24Order .segment_section .segment_details .segment_info .ec-base-table li {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #707070;
+  line-height: 1.8rem;
+}
+
+#mCafe24Order .segment_section .segment_details .segment_info .ec-base-table li:nth-child(3) {
+  margin-top: 20px;
+}
+
+#mCafe24Order .segment_section .segment_details .segment_info .ec-base-table li:nth-child(3) button {
+  width: 114px;
+  height: 35px;
+  background: #ECECF4;
+  border-radius: 4px;
+  margin-right: 6px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #707070;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#mCafe24Order .segment_section .segment_details .segment_info .ec-base-table li:nth-child(3) button:hover {
+  color: #292929;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#mCafe24Order .order_product_section {
+  width: calc(100% - 22px);
+  background: #ffffff;
+  border: 1px solid #E2E2E2;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+#mCafe24Order .order_product_section .order_product_details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: 100%;
+  height: auto;
+}
+
+#mCafe24Order .order_product_section .order_product_details summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 52px;
+  padding: 0 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #707070;
+}
+
+#mCafe24Order .order_product_section .order_product_details summary::after {
+  display: inline-block;
+  content: "";
+  width: 13px;
+  height: 7.5px;
+  background: var(--off-arrow) no-repeat center;
+  margin-top: 2px;
+}
+
+#mCafe24Order .order_product_section .order_product_details .order_info {
+  padding: 0 25px;
+  border-top: 1px solid #E2E2E2;
+}
+
+#mCafe24Order .order_product_section .order_product_details .order_info .product_list_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mCafe24Order .order_product_section .order_product_details .order_info .product_list_box .product_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 200;
+  color: #707070;
+  border-bottom: 1px solid #E2E2E2;
+  padding: 22px 0;
+}
+
+#mCafe24Order .order_product_section .order_product_details .order_info .product_list_box .product_list .thumbnail {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+}
+
+#mCafe24Order .order_product_section .order_product_details .order_info .product_list_box .product_list .thumbnail a .thumbnail_img {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  top: 0;
+  left: 0;
+}
+
+#mCafe24Order .order_product_section .order_product_details .order_info .product_list_box .product_list .description {
+  width: 75%;
+  margin-left: 8px;
+}
+
+#mCafe24Order .order_product_section .order_product_details .order_info .product_list_box .product_list .description .prdName a {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #707070;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.4rem;
+}
+
+#mCafe24Order .order_product_section .order_product_details .order_info .product_list_box .product_list .description .info {
+  margin-top: 8px;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.4rem;
+}
+
+#mCafe24Order .order_product_section .order_product_details .order_info .product_list_box .product_list .description .info li .option {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.1rem;
+}
+
+#mCafe24Order .order_product_section .order_product_details .order_info .product_total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 53px;
+  padding: 12px 0;
+  color: #707070;
+}
+
+#mCafe24Order .order_product_section .order_product_details .order_info .product_total .total_price {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+#mCafe24Order .order_product_section .order_product_details .order_info .product_total .price_num {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+#mCafe24Order .move_btn_section {
+  background-color: saddlebrown;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1999;
+  width: 100%;
+  height: 64px;
+  max-width: 450px;
+  min-width: 300px;
+  bottom: 0;
+  overflow: hidden;
+  margin-left: -11px;
+}
+
+#mCafe24Order .move_btn_section a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 64px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.38rem;
+}
+
+#mCafe24Order .move_btn_section a:nth-child(1) {
+  background: #292929;
+}
+
+#mCafe24Order .move_btn_section a:nth-child(2) {
+  background: #022CFF;
 }
 /*# sourceMappingURL=order_result.css.map */

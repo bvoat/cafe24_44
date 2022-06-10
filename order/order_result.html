@@ -32,150 +32,118 @@
     <section class="segment_section">
         <div class="segment_details">
             <summary>결제 수단</summary>
-            <div class="segment">
-                <div class="ec-base-table typeView">
-                    {$paymethod_name}
-                    <div class="methodDetail">{$paymethod_detail}</div>
-                    <span class="methodButton">
-                        <button href="#none" onclick="{$action_issue_cash}"
-                            class="btnNormal mini {$issue_cash_display|display}">현금영수증 신청</button>
-                        <button href="#none" onclick="{$action_issue_tax}"
-                            class="btnNormal mini {$issue_tax_display|display}">세금계산서 신청</button>
-                    </span>
-
-                    <div class="{$eguarantee_display|display}">
-                        <div>전자보증보험</div>
-                        <div>{$eguarantee_detail}</div>
-                    </div>
-                </div>
+            <div class="segment_info">
+                <ul class="ec-base-table typeView">
+                    <li class="segment_sort">{$paymethod_name}
+                    </li>
+                    <li class="methodDetail">{$paymethod_detail}</li>
+                    <li class="methodButton">
+                        <button onclick="{$action_issue_cash}" class="segment_btn">현금영수증 신청</button>
+                        <button onclick="{$action_issue_tax}" class="segment_btn">세금계산서 신청</button>
+                    </li>
+                    <li class="{$eguarantee_display|display}">
+                        전자보증보험
+                        <div class="{$eguarantee_display|display}">{$eguarantee_detail}</div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- [주문상품] -->
-    <section class="order_product_section pannelArea">
-        <div class="contents">
+    <section class="order_product_section">
+        <div class="order_product_details">
             <summary>주문 상품</summary>
             <!-- 국내배송상품 주문내역 -->
-            <div class="orderArea">
-                <div class="{$normal_display|display}" nspace="normal">
-                    <!-- 주문 상품 리스트 -->
-                    <div module="Order_normalresultlist">
-                        <!-- 주문 상품 리스트 반복 1 -->
-                        <div class="ec-base-prdInfo">
-                            <div class="prdBox">
-                                <!-- 상품 이미지 -->
-                                <div class="thumbnail">
-                                    <a href="/product/detail.html{$param}">
-                                        <img src="{$product_image}" alt="" width="90" height="90">
-                                    </a>
-                                </div>
-                                <!-- 상품 설명 -->
-                                <div class="description">
-                                    <p class="prdName" title="상품명">{$set_product_icon}
-                                        {$product_name_link}
-                                    </p>
-                                    <ul class="info">
-                                        <!-- 옵션 -->
-                                        <li title="옵션">
-                                            <p class="option {$product_option_str_display|display}">{$option_str}</p>
-                                            <ul class="option" module="Order_optionSet">
-                                                <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
-                                                <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
-                                            </ul>
-                                        </li>
-                                        <!-- 수량 -->
-                                        <li>수량: {$product_quantity}개</li>
-                                        <li>
-                                            <span id="{$product_purchase_price_div_id}">상품구매금액:
-                                                {$product_purchase_price_front_head}{$product_purchase_price_front}{$product_purchase_price_front_tail}
-                                            </span>
-                                            <span
-                                                class="{$product_purchase_ref_display|display}">({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span>
-                                        </li>
-                                        <li id="{$product_discount_price_div_id}"
-                                            class="{$product_discount_price_display|display}">
-                                            할인금액: <span class="txtWarn">-{$product_discount_price_front_head}<span
-                                                    id="{$product_discount_price_front_id}">{$product_discount_price_front}</span>{$product_sale_price_front_tail}
-                                            </span>
-                                            <span
-                                                class="txtWarn {$product_discount_price_ref_display|display}">({$product_discount_price_back_head}{$product_discount_price_back}{$product_discount_price_back_tail})</span></span>
-                                        </li>
-                                        <li title="배송">기본배송 <span
-                                                class="{$oversea_able_display|display}">(해외배송가능)</span></li>
-                                        <li class="{$product_weight_display|display}">상품중량 : {$product_weight}kg *
-                                            {$product_quantity}개 = {$total_product_weight}kg</li>
-                                    </ul>
-                                </div>
-                            </div>
+            <div class="order_info" nspace="normal">
+                <!-- 주문 상품 리스트 -->
+                <ul module="Order_normalresultlist" class="product_list_box">
+                    <!-- 주문 상품 리스트 반복 1 -->
+                    <li class="product_list">
+                        <!-- 상품 이미지 -->
+                        <div class="thumbnail">
+                            <a href="/product/detail.html{$param}">
+                                <img class="thumbnail_img" src="{$product_image}" alt="
+                                        {$product_name}">
+                            </a>
                         </div>
-                        <!-- 주문 상품 리스트 반복 2 -->
-                        <div class="ec-base-prdInfo">
-                            <div class="prdBox">
-                                <!-- 상품 이미지 -->
-                                <div class="thumbnail">
-                                    <a href="/product/detail.html{$param}">
-                                        <img src="{$product_image}" alt="" width="90" height="90">
-                                    </a>
-                                </div>
-                                <!-- 상품 설명 -->
-                                <div class="description">
-                                    <p class="prdName" title="상품명">{$set_product_icon}
-                                        {$product_name_link}
+                        <!-- 상품 설명 -->
+                        <div class="description">
+                            <p class="prdName" title="상품명">
+                                {$product_name_link}
+                            </p>
+                            <ul class="info">
+                                <!-- 옵션 -->
+                                <li title="옵션">
+                                    <p class="option">
+                                        <!-- 상품 옵션 선택내용 -->
+                                        [옵션 : {$option_detail_str}]
                                     </p>
-                                    <ul class="info">
-                                        <!-- 옵션 -->
-                                        <li title="옵션">
-                                            <p class="option {$product_option_str_display|display}">{$option_str}</p>
-                                            <ul class="option" module="Order_optionSet">
-                                                <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
-                                                <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
-                                            </ul>
-                                        </li>
-                                        <!-- 수량 -->
-                                        <li>수량: {$product_quantity}개</li>
-                                        <li>
-                                            <span id="{$product_purchase_price_div_id}">상품구매금액:
-                                                {$product_purchase_price_front_head}{$product_purchase_price_front}{$product_purchase_price_front_tail}
-                                            </span>
-                                            <span
-                                                class="{$product_purchase_ref_display|display}">({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span>
-                                        </li>
-                                        <li id="{$product_discount_price_div_id}"
-                                            class="{$product_discount_price_display|display}">
-                                            할인금액: <span class="txtWarn">-{$product_discount_price_front_head}<span
-                                                    id="{$product_discount_price_front_id}">{$product_discount_price_front}</span>{$product_sale_price_front_tail}
-                                            </span>
-                                            <span
-                                                class="txtWarn {$product_discount_price_ref_display|display}">({$product_discount_price_back_head}{$product_discount_price_back}{$product_discount_price_back_tail})</span></span>
-                                        </li>
-                                        <li title="배송">기본배송 <span
-                                                class="{$oversea_able_display|display}">(해외배송가능)</span></li>
-                                        <li class="{$product_weight_display|display}">상품중량 : {$product_weight}kg *
-                                            {$product_quantity}개 = {$total_product_weight}kg</li>
-                                    </ul>
-                                </div>
-                            </div>
+                                </li>
+                                <!-- 상품구매금액*수량 -->
+                                <li title="상품 구매수량">
+                                    <span id="{$product_purchase_price_div_id}">
+                                        {$product_purchase_price_front_head}{$product_purchase_price_front}{$product_purchase_price_front_tail}원
+                                        * {$product_quantity}개
+                                    </span>
+                                </li>
+                                <li title="배송">기본 배송
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                    <!-- 주문 상품 합계/금액 -->
-                    <h4 scope="row">합계</h4>
-                    <div class="right">
+                    </li>
+                    <!-- 주문 상품 리스트 반복 2 -->
+                    <li class="product_list">
+                        <!-- 상품 이미지 -->
+                        <div class="thumbnail">
+                            <a href="/product/detail.html{$param}">
+                                <img class="thumbnail_img" src="{$product_image}" alt="
+                                        {$product_name}">
+                            </a>
+                        </div>
+                        <!-- 상품 설명 -->
+                        <div class="description">
+                            <p class="prdName" title="상품명">
+                                {$product_name_link}
+                            </p>
+                            <ul class="info">
+                                <!-- 옵션 -->
+                                <li title="옵션">
+                                    <p class="option">
+                                        <!-- 상품 옵션 선택내용 -->
+                                        [옵션 : {$option_detail_str}]
+                                    </p>
+                                </li>
+                                <!-- 상품구매금액*수량 -->
+                                <li title="상품 구매수량">
+                                    <span id="{$product_purchase_price_div_id}">
+                                        {$product_purchase_price_front_head}{$product_purchase_price_front}{$product_purchase_price_front_tail}원
+                                        * {$product_quantity}개
+                                    </span>
+                                </li>
+                                <li title="배송">기본 배송
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 주문 상품 합계/금액 -->
+                <div class="product_total">
+                    <p class="total_price">합계</p>
+                    <p
+                        class="price_num">{$normal_total_price_front_head}{$normal_total_price_front}{$normal_total_price_front_tail}
                         <span
-                            class="txtStrong">{$normal_total_price_front_head}{$normal_total_price_front}{$normal_total_price_front_tail}
-                            <span
-                                class="refer {$normal_total_price_ref_display|display}">({$normal_total_price_back_head}{$normal_total_price_back}{$normal_total_price_back_tail})
-                            </span>
+                            class="refer {$normal_total_price_ref_display|display}">({$normal_total_price_back_head}{$normal_total_price_back}{$normal_total_price_back_tail})
                         </span>
-                    </div>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 하단 버튼 -->
-    <section class="move_btn_section ec-base-button gColumn">
-        <a href="/myshop/order/list.html" class="btnEm">주문 내역 보기</a>
-        <a href="/" class="btnSubmit">홈으로 이동</a>
+    <section class="move_btn_section">
+        <a href="/myshop/order/list.html" class="move_order btnSub">주문 내역 보기</a>
+        <a href="/" class="move_home btnMain">홈으로 이동</a>
     </section>
 </article>
