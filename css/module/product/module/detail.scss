@@ -1,3 +1,449 @@
 @charset "utf-8";
 @import "../../../../layout/basic/css/abstracts/mixin";
 @import "../../../../layout/basic/css/abstracts/variables";
+
+//변수
+:root {
+    --share-btn: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35'%3E%3Cg data-name='그룹 2024' transform='translate(-406 -606)'%3E%3Ccircle data-name='타원 717' cx='17.5' cy='17.5' r='17.5' transform='translate(406 606)' fill='%23f2f2f2'/%3E%3Cg data-name='Icon feather-share-2' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath data-name='패스 1743' d='M429.98 617.663a2.663 2.663 0 1 1-2.664-2.663 2.663 2.663 0 0 1 2.663 2.663Z'/%3E%3Cpath data-name='패스 1744' d='M419.327 623.877a2.663 2.663 0 1 1-2.664-2.663 2.663 2.663 0 0 1 2.664 2.663Z'/%3E%3Cpath data-name='패스 1745' d='M429.98 630.091a2.663 2.663 0 1 1-2.664-2.663 2.663 2.663 0 0 1 2.664 2.663Z'/%3E%3Cpath data-name='패스 1746' d='m418.962 625.218 6.063 3.535'/%3E%3Cpath data-name='패스 1747' d='m425.017 619.004-6.055 3.535'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+    --box-dashline: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='428' height='1'%3E%3Cpath data-name='패스 1753' d='M0 .5h428' fill='none' stroke='%23eaeaf3' stroke-dasharray='10 3'/%3E%3C/svg%3E");
+    --mileage-line: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='428' height='2'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='.023' y1='.5' x2='1' y2='.5' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23f9f100'/%3E%3Cstop offset='.71' stop-color='%2332acef'/%3E%3Cstop offset='1' stop-color='%23022cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect data-name='사각형 2302' width='428' height='2' rx='1' fill='url(%23a)'/%3E%3C/svg%3E");
+    --info-iconblue: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.625' height='14.625'%3E%3Cpath data-name='Icon ionic-md-information-circle' d='M7.313 0a7.313 7.313 0 1 0 7.312 7.313A7.316 7.316 0 0 0 7.313 0Zm.738 10.969H6.574V6.574h1.477Zm0-5.836H6.574V3.656h1.477Z' fill='%23022cff'/%3E%3C/svg%3E");
+    --info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.625' height='14.625'%3E%3Cpath data-name='Icon ionic-md-information-circle' d='M7.313 0a7.313 7.313 0 1 0 7.312 7.313A7.316 7.316 0 0 0 7.313 0Zm.738 10.969H6.574V6.574h1.477Zm0-5.836H6.574V3.656h1.477Z' fill='%23707070'/%3E%3C/svg%3E");
+}
+
+// 상품 정보 상단
+#product_detail_top {
+    position: relative;
+
+    .product_brand {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 63px;
+
+        h2,
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: $bvt-darkgray;
+            margin-bottom: 2px;
+
+            em {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .product_thumnail_wrap {
+        position: relative;
+        // content padding 극복
+        width: calc(100% + 22px);
+        margin-left: -11px;
+        max-width: 450px;
+        /* 1:1 ratio */
+        padding-top: 100%;
+        overflow: hidden;
+
+        .product_icon {
+            position: absolute;
+            width: 75px;
+            height: 75px;
+            top: 0;
+            left: 0;
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .product_info_wrap {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 17px 0;
+        border-bottom: $bvt-btn-border-gray;
+        box-sizing: border-box;
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: $bvt-black;
+            margin-bottom: 17px;
+        }
+
+        .price_wrap {
+            margin-bottom: 17px;
+
+            .price {
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: $bvt-blue;
+                margin-right: 6px;
+
+                >span {
+                    font-weight: 300;
+                    color: $bvt-black;
+                }
+            }
+
+            .if_sale_price {
+                font-size: 1.25rem;
+                text-decoration: line-through;
+                color: $bvt-lostfocus-gray;
+
+                >span {
+                    margin-left: 1px;
+                    font-weight: 400;
+                    text-decoration: line-through;
+                    color: $bvt-lostfocus-gray;
+                }
+            }
+        }
+
+        .tag-box {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: first baseline;
+            align-items: center;
+            width: 100%;
+
+            >div {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                width: fit-content;
+                height: 28px;
+                padding: 0 11px;
+                box-sizing: border-box;
+                border: $bvt-btn-border-gray;
+                border-radius: 14px;
+                margin: 0 6px 6px 0;
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+        }
+
+        .share_btn {
+            position: absolute;
+            display: block;
+            width: 35px;
+            height: 35px;
+            background: var(--share-btn) no-repeat center;
+            text-indent: -9999px;
+            top: calc(19%);
+            right: 0;
+        }
+    }
+
+    .delivery_wrap {
+        width: 100%;
+
+        .delivery_info {
+            width: 100%;
+            margin: 24px 0;
+
+            li {
+                position: relative;
+                font-size: 1.25rem;
+                color: $bvt-black;
+                margin-bottom: 6px;
+
+                .delivery_title {
+                    position: relative;
+                    font-weight: 600;
+                }
+
+                .delivery_detail {
+                    position: absolute;
+                    left: 80px;
+                    font-weight: 300;
+
+                    >em {
+                        font-weight: 600;
+                        color: $bvt-blue;
+                    }
+                }
+            }
+        }
+    }
+
+    .mileage_wrap {
+        position: relative;
+        width: calc(100% + 22px);
+        margin-left: -11px;
+        background: $bvt-bg-lightblue;
+        padding: 35px 11px 0;
+
+        &::after {
+            position: relative;
+            bottom: 0;
+            display: block;
+            content: " ";
+            width: 100%;
+            height: 2px;
+            background: var(--box-dashline) no-repeat;
+        }
+
+        >h1 {
+            font-size: 1.45rem;
+            margin-bottom: 2px;
+        }
+
+        .mileage {
+            position: relative;
+            margin-bottom: 135px;
+            color: $bvt-darkgray;
+
+            &::before {
+                position: absolute;
+                display: block;
+                content: "";
+                width: 100%;
+                height: 2px;
+                background: var(--mileage-line) no-repeat;
+                top: 32px;
+            }
+
+            .mileage_voter {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                position: absolute;
+                left: calc(50% - 35px);
+
+                p {
+                    font-size: 1.35rem;
+
+                    &:nth-child(1) {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: center;
+                        align-items: center;
+                        position: inherit;
+                        top: 36px;
+                        font-size: 1.2rem;
+
+                        &::before {
+                            display: block;
+                            content: "▲";
+
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        >em {
+                            color: $bvt-black;
+                            font-weight: 700;
+                        }
+
+                        >span {
+                            color: $bvt-black;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+
+            .mileage_crew {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                position: absolute;
+                right: 22px;
+
+                p {
+                    font-size: 1.35rem;
+
+                    &:nth-child(1) {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: center;
+                        align-items: flex-end;
+                        position: inherit;
+                        top: 36px;
+                        right: 0;
+                        font-size: 1.2rem;
+
+                        &::before {
+                            display: block;
+                            content: "▲";
+
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        >em {
+                            color: $bvt-black;
+                            font-weight: 700;
+                        }
+
+                        >span {
+                            color: $bvt-black;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+
+            .mileage_txt{
+                position: relative;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                height: 18px;
+                top: 90px;
+                font-size: 1.1rem;
+
+                >a{
+                    color: $bvt-blue;
+                    text-decoration: underline;
+                }
+            }
+
+            .mileage_crew_txt {
+                &::before {
+                    display: inline-block;
+                    content: " ";
+                    width: 14px;
+                    height: 14px;
+                    background: var(--info-iconblue);
+                    background-size: contain;
+                    margin-right: 5px;
+                }
+            }
+
+            .mileage_mileage_txt {
+
+                &::before {
+                    display: inline-block;
+                    content: " ";
+                    width: 14px;
+                    height: 14px;
+                    background: var(--info-icon);
+                    background-size: contain;
+                    margin-right: 5px;
+                }
+            }
+
+
+
+        }
+
+    }
+
+    .stamp_wrap {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: calc(100% + 22px);
+        margin-left: -11px;
+        background: $bvt-bg-lightblue;
+        padding: 35px 11px;
+        box-sizing: border-box;
+
+        .stamp_title {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            font-size: 1.45rem;
+            margin-bottom: 14px;
+
+            >span{
+                font-weight: 300;
+
+                >em {
+                    font-weight: 700;
+                }
+            }
+        }
+        .stamp_list{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            width: 305px;
+            margin-bottom: 24px;
+            height: 60px;
+
+            li{
+                width: 60px;
+                height: 60px;
+                text-indent: -9999px;
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='59' height='59'%3E%3Ccircle data-name='타원 721' cx='29.5' cy='29.5' r='29.5' fill='%23f2f2fc'/%3E%3C/svg%3E") no-repeat center;
+            }
+        }
+        .stamp_txt{
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            height: 18px;
+            font-size: 1.1rem;
+            color: $bvt-darkgray;
+
+            >a{
+                display: inline;
+                text-decoration: underline;
+                margin-left: 3px;
+                color: $bvt-darkgray;
+            }
+            &::before {
+                display: inline-block;
+                content: " ";
+                width: 14px;
+                height: 14px;
+                background: var(--info-icon);
+                background-size: contain;
+                margin-right: 5px;
+            }
+        }
+
+    }
+
+}
+
+// 상품 정보 하단
+#product_detail_bottom {
+    margin: 60px 0;
+
+    .detail_tab_wrap{
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: start;
+        width: 100%;
+        border-bottom: $bvt-btn-border-gray;
+        padding-bottom: 12px;
+        box-sizing: border-box;
+
+
+    }
+    .detail_wrap{
+        width: 100%;
+        padding: 10px 0;
+        box-sizing: border-box;
+        
+        .detail_swiper_wrap{
+
+
+            >div{
+                width: 100%;
+                border: 2px solid blueviolet;
+            }
+            
+            
+
+        }
+    }
+}

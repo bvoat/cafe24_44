@@ -48,8 +48,8 @@ const customProductPrice = (priceWrapNode) => {
         make_span.appendChild(make_won);
         node.children[1].appendChild(make_span);
       }
-      //정가에 out_focus 클래스 추가
-      node.children[0].classList.add("out_focus");
+      //정가에 if_sale_price 클래스 추가
+      node.children[0].classList.add("if_sale_price");
     }
   });
 };

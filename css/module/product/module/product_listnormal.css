@@ -182,12 +182,12 @@
   color: #292929;
 }
 
-#product_listnormal_list .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_price .out_focus {
+#product_listnormal_list .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_price .if_sale_price {
   text-decoration: line-through;
   color: #ABABAB;
 }
 
-#product_listnormal_list .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_price .out_focus > span {
+#product_listnormal_list .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_price .if_sale_price > span {
   margin-left: 1px;
   font-weight: 400;
   text-decoration: line-through;

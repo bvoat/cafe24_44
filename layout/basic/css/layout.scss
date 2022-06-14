@@ -24,6 +24,7 @@
         margin: 0 auto;
     }
     #contents{
+        position: relative;
         // header fixed로 floating 된 값 만큼 컨텐츠가 늘 내려가야 함
         // header의 computed height 81px
         padding: 81px 11px 0;
