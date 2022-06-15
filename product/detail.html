@@ -14,7 +14,6 @@
         <h1 class="displaynone">브랜드 소개</h1>
         <h2>From. <em>{$prd_brand}</em></h2>
         <h3 class="summary_desc">{$summary_desc}</h3>
-        <p>{$dc_value}	</p>
     </section>
     <!-- 브랜드 -->
     <!-- 썸네일 -->
@@ -32,7 +31,7 @@
             <span class="sale_price price">{$product_sale_price|numberformat}
             </span>
             <span class="product_price price if_sale_price">{$product_price|numberformat}<span>원</span>
-        </span>
+            </span>
         </div>
         <article class="tag-box">
             <div>🥤 플라스틱 줄이기</div>
@@ -95,9 +94,8 @@
 <!-- 상품 정보 상단 -->
 
 <!-- 상품 정보 하단 -->
-<article class="wrapper2" id="product_detail_bottom" module="product_additional">
     <!-- 상품 정보 하단 선택 탭 -->
-    <ul class="detail_tab_wrap">
+    <ul class="detail_tab_wrap" module="product_additional">
         <li class="tab1 tab">상품정보
         </li>
         <li class="tab2 tab">소비기록
@@ -108,149 +106,165 @@
         </li>
     </ul>
     <!-- 상품 정보 하단 선택 탭 -->
+<div id="product_detail_bottom" module="product_additional">
     <!-- 상품 정보 하단 정보 -->
-    <section class="detail_wrap tapMenu">
         <div class="detail_swiper_wrap swiper-wrapper">
             <!-- tab1 상품정보 -->
-            <div id="tab1" class="tab-content swiper-slide">
-                <!--이벤트-->
-                <div class="w100 eventArea {$common_event_a|display}">
-                    <div class="event">{$common_event_a}</div>
+            <div id="tab1" class="tab_content swiper-slide">
+                <div class="tab_height_cont info">
+                    <!--이벤트-->
+                    <div class="tab_detail_page eventArea {$common_event_a|display}">
+                        <div class="event">{$common_event_a}</div>
+                    </div>
+                    <!--상세페이지-->
+                    <div class="tab_detail_page">
+                        <!--@css(../css/module/product/module/product_detail.css)-->
+                        {$product_detail}
+                    </div>
                 </div>
-                <!--상세페이지-->
-                <div class="w100">
-                    {$product_detail}
-                </div>
-
             </div>
             <!-- tab1 상품정보 -->
             <!-- tab2 소비기록 -->
-            <div id="tab2" class="tab-content swiper-slide">
-                <div class="tab-tip">
-                    <div class="tab-tip-head">
+            <div id="tab2" class="tab_content swiper-slide">
+                <div class="tab_height_cont buy_record">
+                    <div id="buy_records_detail">
+                        <iframe id="buy_record_frame" border="0"
+                            src="https://bvoat-test.shop/buy_records?product_no={$product_no}"></iframe>
                     </div>
                 </div>
-                <div id="buy_records_detail">
-                    <iframe id="buy_record_frame" border="0"
-                        src="https://bvoat-test.shop/buy_records?product_no={$product_no}"></iframe>
-                </div>
-
             </div>
             <!-- tab3 Q&A -->
-            <div id="tab3" class="tab-content swiper-slide">
-                <div class="tab-tip">
-                    <div class="tab-tip-head">
-                        <b>{$prd_model}</b>에 대해 <br>궁금하신가요?
+            <div id="tab3" class="tab_content swiper-slide">
+                <div class="tab_height_cont qna">
+                    <div class="tab-tip">
+                        <div class="tab-tip-head tab3_heading">
+                            <em>{$prd_model}</em>에 대해 궁금하신가요?
+                        </div>
                     </div>
-                </div>
-                <div class="padding2" module="product_qna">
-                    <!--@css(/css/module/product/qna.css)-->
-                    <!--@css(/cssbvt/module/product/qna.css)-->
-                    <!--@js(/js/module/product/qna.js)-->
-                    <!--
-                        $count = 6
-                -->
-
-                    <p class="noAccess {$deny_display|display}">글읽기 권한이 없습니다.</p>
-
-                    <ul class=" tab-board-table {$list_display|display}">
-                        <li>
-                            <p class="descriptions">
-                                <a href="/board/product/read.html{$param_read}">
-                                    <strong class="summary">{$icon_re} {$icon_lock} {$icon_mobile} {$subject} <span
-                                            class="commentCnt">{$comment_count}</span> {$icon_hit} {$icon_file}
-                                        {$icon_new}</strong>
-                                    <span class="id" title="작성자">{$member_icon}{$writer}</span>
-                                    <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
-                                    <span class="{$hit_display|display}">조회 {$hit_count}</span>
-                                    <span class="{$vote_display|display}">추천 {$vote}</span>
-                                    <span class="point {$use_point_display|display}"><img
-                                            src="//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_star{$point_count}.png"
-                                            alt="{$point_count}점" width="50" height="8"></span>
+                    <div class="product_detail_qna" module="product_qna">
+                        <!--@css(/css/module/product/qna.css)-->
+                        <!--@js(/js/module/product/qna.js)-->
+                        <!--
+                            $count = 6
+                        -->
+                        <p class="noAccess {$deny_display|display}">글읽기 권한이 없습니다.</p>
+                        <ul class="tab-board-table {$list_display|display}">
+                            <li class="descriptions">
+                                <a class="description_link" title="{$subject}" href="/board/product/read.html{$param_read}">
+                                    
+                                    <h1> {$icon_re} {$icon_lock} {$icon_mobile} {$subject} </h1>
+                                    <p>
+                                        {$member_icon}
+                                        <span class="id" title="작성자">{$writer}</span>
+                                        <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
+                                    </p>
                                 </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="descriptions">
-                                <a href="/board/product/read.html{$param_read}">
-                                    <strong class="summary">{$icon_re} {$icon_lock} {$icon_mobile} {$subject} <span
-                                            class="commentCnt">{$comment_count}</span> {$icon_hit} {$icon_file}
-                                        {$icon_new}</strong>
-                                    <span class="id" title="작성자">{$member_icon}{$writer}</span>
-                                    <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
-                                    <span class="{$hit_display|display}">조회 {$hit_count}</span>
-                                    <span class="{$vote_display|display}">추천 {$vote}</span>
-                                    <span class="point {$use_point_display|display}"><img
-                                            src="//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_star{$point_count}.png"
-                                            alt="{$point_count}점" width="50" height="8"></span>
+                            </li>
+                            <li class="descriptions">
+                                <a class="description_link" title="{$subject}" href="/board/product/read.html{$param_read}">
+                                    
+                                    <h1> {$icon_re} {$icon_lock} {$icon_mobile} {$subject} </h1>
+                                    <p>
+                                        {$member_icon}
+                                        <span class="id" title="작성자">{$writer}</span>
+                                        <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
+                                    </p>
                                 </a>
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="padding2 tab-tips-btns">
-                    <div class=" btn-basic btn-size-m btn-type1"><a href="{$qna_write}">물어보기</a>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-                <div module="product_qnapaging" class="paginate">
-                    <div class="paginate-box">
-                        <a href="{$param_before}" class="btnPrev">이전</a>
-                        <ol>
-                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                        </ol>
-                        <a href="{$param_next}" class="btnNext">다음</a>
+                    <div class="tab-tips-btns">
+                        <div class="qna_btn"><a href="{$qna_write}">물어보기</a>
+                        </div>
+                    </div>
+                    <div class="product_detail_paginate" module="product_qnapaging">
+                        <div class="paginate-box">
+                            <span class="btnPrev_wrap">
+                                <a href="{$param_before}" class="btnPrev">이전</a>
+                            </span>
+                            <ol>
+                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                            </ol>
+                            <span class="btnNext_wrap">
+                                <a href="{$param_next}" class="btnNext">다음</a>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- tab3 Q&A -->
             <!-- tab4 배송안내 -->
-            <div id="tab4" class="tab-content swiper-slide">
-                <div class="tab-prd-info">
-                    <div class="title">상품결제정보</div>
-                    <div class="content">{$payment_info}</div>
-                </div>
-                <div class="tab-prd-info">
-                    <div class="title">배송정보</div>
-                    <div class="content">
-                        <ul class="delivery">
-                            <li>배송 방법 : {$shipping_method}</li>
-                            <li>배송 지역 : {$shipping_area}</li>
-                            <li>배송 비용 : {$shipping_fee}</li>
-                            <li>배송 기간 : {$shipping_period}</li>
-                            <li>배송 안내 : {$shipping_info}</li>
-                        </ul>
+            <div id="tab4" class="tab_content swiper-slide">
+                <div class="tab_height_cont parcel">
+                    <div class="tab_prd_info">
+                        <div class="title">상품결제정보</div>
+                        <div class="content">{$payment_info}</div>
                     </div>
-                </div>
-                <div class="tab-prd-info">
-                    <div class="title">교환/반품정보</div>
-                    <div class="content">{$exchange_info}</div>
-                </div>
-                <div class="tab-prd-info">
-                    <div class="title">서비스 문의</div>
-                    <div class="content">{$supplier_id} & 비보트 카카오톡 상담</div>
+                    <div class="tab_prd_info">
+                        <div class="title">배송정보</div>
+                        <div class="content">
+                            <ul class="delivery">
+                                <li>배송 방법 : {$shipping_method}</li>
+                                <li>배송 지역 : {$shipping_area}</li>
+                                <li>배송 비용 : {$shipping_fee}</li>
+                                <li>배송 기간 : {$shipping_period}</li>
+                                <li>배송 안내 : {$shipping_info}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab_prd_info">
+                        <div class="title">교환/반품정보</div>
+                        <div class="content">{$exchange_info}</div>
+                    </div>
+                    <div class="tab_prd_info">
+                        <div class="title">서비스 문의</div>
+                        <div class="content">{$supplier_id} & 비보트 카카오톡 상담</div>
+                    </div>
                 </div>
             </div>
             <!-- tab4 배송안내 -->
         </div>
-    </section>
     <!-- 상품 정보 하단 정보 -->
-</article>
+</div>
 <!-- 상품 정보 하단 -->
 
 <!--@define(cmc_log)-->
 <script>
-    var swiper = new Swiper(".tapMenu", {
-      slidesPerView: "auto",
-      centeredSlides: true,
-      spaceBetween: 90,
-      pagination: {
-        el: ".detail_tab_wrap",
-        clickable: true,
-        
-      },
+
+
+    //가치소비기록 iframe 높이 조절
+   
+
+    //상품 상세 하단 페이지 탭 슬라이더
+
+    //node 값 받아서 Array
+    const tab_name = [...document.querySelectorAll(".tab")];
+    const tab_txt = tab_name.map(node => node.innerHTML)
+    var swiper = new Swiper("#product_detail_bottom", {
+        activeHeight: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 22,
+        loop: true,
+        pagination: {
+            el: ".detail_tab_wrap",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return `<span class="tab_custom swiper-pagination-bullet" tabindex="${index}" role="button" aria-label=${tab_txt[index]}> ${tab_txt[index]} </span> `;
+            },
+        },
+        on: {
+            slideChangeTransitionEnd : function change () { 
+                
+                console.log(swiper.height	)
+                console.log("change")
+            }
+                
+        },
     });
-  </script>
+
+</script>

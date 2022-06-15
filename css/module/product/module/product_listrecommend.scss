@@ -56,18 +56,20 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 38px;
-                    height: 38px;
+                    width: 32px;
+                    height: 32px;
                     bottom: 9.2px;
                     left: 8.7px;
-                    padding: 4px 0 0 1px;
                     background: $bvt-white;
                     border-radius: 50%;
                     box-shadow: $bvt-btn-shadow;
-
+                    padding-top: 2px;
+                    
                     img {
                         display: block;
                         box-shadow: none;
+                        width: 20px;
+                        height: 18px;
                     }
                 }
             }
@@ -154,6 +156,7 @@
     //프로그래스 바
     .product_list_pagination {
         position: relative;
+        height: 3px;
         bottom: 0;
         left: 0;
         border-radius: 4px;
@@ -161,9 +164,7 @@
 
         .swiper-pagination-progressbar-fill {
             background-color: $bvt-blue;
-            border-radius: 20px;
-            transform: scale(0);
-            transform-origin: left top;
+            border-radius: 4px;
         }
     }
 }

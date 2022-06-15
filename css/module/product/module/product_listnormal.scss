@@ -67,18 +67,20 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        width: 38px;
-                        height: 38px;
+                        width: 32px;
+                        height: 32px;
                         bottom: 9.2px;
                         left: 8.7px;
-                        padding: 4px 0 0 1px;
                         background: $bvt-white;
                         border-radius: 50%;
                         box-shadow: $bvt-btn-shadow;
-
+                        padding-top: 2px;
+                        
                         img {
                             display: block;
                             box-shadow: none;
+                            width: 20px;
+                            height: 18px;
                         }
                     }
                 }
