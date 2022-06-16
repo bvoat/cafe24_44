@@ -1,3 +1,9 @@
+@charset "UTF-8";
+:root {
+  --plus-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35'%3E%3Cg data-name='그룹 2025'%3E%3Cpath data-name='사각형 2328' fill='%23fff' d='M0 0h35v35H0z'/%3E%3Cg data-name='Icon feather-plus' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath data-name='패스 1754' d='M17.5 11v13'/%3E%3Cpath data-name='패스 1755' d='M11 17.5h13'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  --minus-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35'%3E%3Cg data-name='그룹 2025'%3E%3Cpath data-name='사각형 2328' fill='%23fff' d='M0 0h35v35H0z'/%3E%3Cpath data-name='Icon feather-minus' d='M11.5 17.5h13' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
+}
+
 #buyScreen {
   position: fixed;
   display: -webkit-box;
@@ -67,12 +73,13 @@
 }
 
 #buyScreen .buy_screen_box .buy_screen_payment {
+  height: auto;
   padding: 11px;
-  background-color: gray;
   overflow-y: auto;
+  margin: 11px 0;
 }
 
-#buyScreen .buy_screen_box .buy_screen_payment #product_option .product_select tr {
+#buyScreen .buy_screen_box .buy_screen_payment #totalSelects table tbody tr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,22 +96,305 @@
   height: 40px;
 }
 
-#buyScreen .buy_screen_box .buy_screen_payment #product_option .product_select tr th {
+#buyScreen .buy_screen_box .buy_screen_payment #totalSelects table tbody tr th {
   width: 20%;
   font-size: 1.45rem;
 }
 
-#buyScreen .buy_screen_box .buy_screen_payment #product_option .product_select tr td {
+#buyScreen .buy_screen_box .buy_screen_payment #totalSelects table tbody tr td {
   width: 80%;
   font-size: 1.45rem;
 }
 
-#buyScreen .buy_screen_box .buy_screen_payment #product_option .product_select tr td select {
+#buyScreen .buy_screen_box .buy_screen_payment #totalSelects table tbody tr td select {
   width: 100%;
   height: 35px;
   font-size: 1.45rem;
   padding: 5px 12px;
   cursor: pointer;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment #totalProducts .select-tip {
+  font-size: 1.20rem;
+  font-weight: 300;
+  color: #707070;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment #totalProducts table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  width: auto;
+  height: auto;
+  padding: 12px;
+  background-color: #F9F9FE;
+  border-radius: 3px;
+  margin-bottom: 6px;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment #totalProducts table tr td {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 1.45rem;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment #totalProducts table tr td .quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto !important;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment #totalProducts table tr td .quantity input {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 70px;
+  height: 35px;
+  font-size: 1.45rem;
+  padding: 5px 12px;
+  text-align: center;
+  border: 1px solid #E2E2E2;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment #totalProducts table tr td .quantity a {
+  display: block;
+  width: 35px;
+  height: 35px;
+  font-size: 1.45rem;
+  cursor: pointer;
+  border: 1px solid #E2E2E2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment #totalProducts table tr td .quantity a img {
+  display: none;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment #totalProducts table tr td .quantity a:nth-child(3) {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  background: var(--minus-icon);
+  background-size: contain;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment #totalProducts table tr td .quantity a:nth-child(2) {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  background: var(--plus-icon);
+  background-size: contain;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment #totalProducts table tr td .product {
+  font-weight: 500;
+  font-size: 1.45rem;
+  word-wrap: break-word;
+  word-break: keep-all;
+  padding-bottom: 5px;
+  color: #022CFF;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment #totalProducts table tr td .delete {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-top: -90px;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment #totalProducts table tr td .delete img {
+  width: 18px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment #totalProducts table tr .right {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-top: -5px;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment #totalProducts table tr .right > span {
+  margin-top: -30px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment #totalProducts table tr .right .mileage {
+  display: none;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment .option_products tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  width: 100%;
+  height: auto;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment .option_products tr td {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 1.45rem;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment .option_products tr td .quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto !important;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment .option_products tr td .quantity input {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 70px;
+  height: 35px;
+  font-size: 1.45rem;
+  padding: 5px 12px;
+  text-align: center;
+  border: 1px solid #E2E2E2;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment .option_products tr td .quantity a {
+  display: block;
+  width: 35px;
+  height: 35px;
+  font-size: 1.45rem;
+  cursor: pointer;
+  border: 1px solid #E2E2E2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment .option_products tr td .quantity a img {
+  display: none;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment .option_products tr td .quantity a:nth-child(3) {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  background: var(--minus-icon);
+  background-size: contain;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment .option_products tr td .quantity a:nth-child(2) {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  background: var(--plus-icon);
+  background-size: contain;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment .option_products tr td p {
+  font-weight: 500;
+  font-size: 1.45rem;
+  word-wrap: break-word;
+  word-break: keep-all;
+  padding-bottom: 5px;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment .option_products tr td .delete {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-top: -90px;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment .option_products tr td .delete img {
+  width: 18px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment .option_products tr .right {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-top: -5px;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment .option_products tr .right > span {
+  margin-top: -30px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#buyScreen .buy_screen_box .buy_screen_payment .option_products tr .right .mileage {
+  display: none;
 }
 
 #buyScreen .buy_screen_box .buy-button-box {

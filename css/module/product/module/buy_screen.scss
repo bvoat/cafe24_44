@@ -2,6 +2,11 @@
 @import "../../../../layout/basic/css/abstracts/mixin";
 @import "../../../../layout/basic/css/abstracts/variables";
 
+:root{
+    --plus-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35'%3E%3Cg data-name='그룹 2025'%3E%3Cpath data-name='사각형 2328' fill='%23fff' d='M0 0h35v35H0z'/%3E%3Cg data-name='Icon feather-plus' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath data-name='패스 1754' d='M17.5 11v13'/%3E%3Cpath data-name='패스 1755' d='M11 17.5h13'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+    --minus-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35'%3E%3Cg data-name='그룹 2025'%3E%3Cpath data-name='사각형 2328' fill='%23fff' d='M0 0h35v35H0z'/%3E%3Cpath data-name='Icon feather-minus' d='M11.5 17.5h13' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
+}
 
 #buyScreen {
     position: fixed;
@@ -31,7 +36,7 @@
         font-size: 1.4rem;
         font-weight: 300;
 
-        .buy_screen_title{
+        .buy_screen_title {
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
@@ -39,55 +44,271 @@
             width: 100%;
             height: 50px;
             border-bottom: $bvt-btn-border-gray;
-            h1{
+
+            h1 {
                 font-size: 1.45rem;
                 font-weight: 400;
                 margin-left: calc(50% - 25px);
             }
-            .screen_close_btn{
+
+            .screen_close_btn {
                 width: 15px;
                 height: 15px;
                 background: $x-btn no-repeat center;
             }
         }
 
-        .buy_screen_payment{
-
+        .buy_screen_payment {
+            height: auto;
             padding: 11px;
-            background-color: gray;
             overflow-y: auto;
+            margin: 11px 0;
+            #totalSelects {
+                table {
+                    tbody {
+                        tr {
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: space-between;
+                            align-items: center;
+                            height: 40px;
 
-            #product_option{
-                .product_select{
+                            th {
+                                width: 20%;
+                                font-size: 1.45rem;
+                            }
 
-                    tr{
+                            td {
+                                width: 80%;
+                                font-size: 1.45rem;
+
+                                select {
+                                    width: 100%;
+                                    height: 35px;
+                                    font-size: 1.45rem;
+                                    padding: 5px 12px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            #totalProducts {
+                .select-tip {
+                    font-size: 1.20rem;
+                    font-weight: 300;
+                    color: $bvt-darkgray;
+                    text-align: center;
+                    padding: 20px 0;
+                }
+            // 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역 1
+                table {
+                    tr {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: space-between;
+                        align-items: left;
+                        width: auto;
+                        height: auto;
+                        padding: 12px;
+                        background-color: $bvt-bg-blue;
+                        border-radius: 3px;
+                        margin-bottom: 6px;
+    
+    
+                        // 옵션 선택 이후
+                        td {
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                            font-size: 1.45rem;
+    
+                            .quantity {
+                                display: flex;
+                                flex-flow: row nowrap;
+                                justify-content: center;
+                                align-items: center;
+                                width: auto !important;
+                                input {
+                                    order: 1;
+                                    width: 70px;
+                                    height: 35px;
+                                    font-size: 1.45rem;
+                                    padding: 5px 12px;
+                                    text-align: center;
+                                    border: $bvt-btn-border-gray;
+                                }
+                                a{
+                                    display: block;
+                                    width: 35px;
+                                    height: 35px;
+                                    font-size: 1.45rem;
+                                    cursor: pointer;
+                                    border: $bvt-btn-border-gray;
+                                    box-sizing: border-box;
+                                    img{
+                                        display: none;
+                                    }
+                                    &:nth-child(3){
+                                        order: 0;
+                                        background: var(--minus-icon);
+                                        background-size: contain;
+                                    }
+                                    &:nth-child(2){
+                                        order: 2;
+                                        background: var(--plus-icon);
+                                        background-size: contain;
+                                    }
+                                }
+                            }
+    
+                            .product {
+                                font-weight: 500;
+                                font-size: 1.45rem;
+                                word-wrap: break-word;
+                                word-break: keep-all;
+                                padding-bottom: 5px;
+                                color: $bvt-blue;
+                            }
+    
+                            .delete{
+                                display: block;
+                                width: 18px;
+                                height: 18px;
+                                margin-top: -90px;
+                                
+                                img{
+                                    width: 18px;
+                                    object-fit: cover;
+                                }
+                            }
+    
+                        }
+    
+                        .right{
+                            flex-direction: row-reverse;
+                            margin-top: -5px;
+    
+                            >span{
+                                margin-top: -30px;
+                                font-size: 1.5rem;
+                                font-weight: 500;
+                            }
+    
+                            .mileage{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            // 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역 2
+            .option_products {
+
+                tr {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: space-between;
+                    align-items: left;
+                    width: 100%;
+                    height: auto;
+
+
+                    // 옵션 선택 이후
+                    td {
                         display: flex;
                         flex-flow: row nowrap;
                         justify-content: space-between;
                         align-items: center;
-                        height: 40px;
-                        th{
-                            width: 20%;
-                            font-size: 1.45rem;
-                        }
-                        td{
-                            width: 80%;
-                            font-size: 1.45rem;
-                            select{
-                                width: 100%;
+                        width: 100%;
+                        font-size: 1.45rem;
+
+                        .quantity {
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: center;
+                            align-items: center;
+                            width: auto !important;
+                            input {
+                                order: 1;
+                                width: 70px;
                                 height: 35px;
                                 font-size: 1.45rem;
                                 padding: 5px 12px;
-                                cursor: pointer;
+                                text-align: center;
+                                border: $bvt-btn-border-gray;
                             }
+                            a{
+                                display: block;
+                                width: 35px;
+                                height: 35px;
+                                font-size: 1.45rem;
+                                cursor: pointer;
+                                border: $bvt-btn-border-gray;
+                                box-sizing: border-box;
+                                img{
+                                    display: none;
+                                }
+                                &:nth-child(3){
+                                    order: 0;
+                                    background: var(--minus-icon);
+                                    background-size: contain;
+                                }
+                                &:nth-child(2){
+                                    order: 2;
+                                    background: var(--plus-icon);
+                                    background-size: contain;
+                                }
+                            }
+                        }
 
+                        p {
+                            font-weight: 500;
+                            font-size: 1.45rem;
+                            word-wrap: break-word;
+                            word-break: keep-all;
+                            padding-bottom: 5px;
+                        }
+
+                        .delete{
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                            margin-top: -90px;
+                            
+                            img{
+                                width: 18px;
+                                object-fit: cover;
+                            }
+                        }
+
+                    }
+
+                    .right{
+                        flex-direction: row-reverse;
+                        margin-top: -5px;
+
+                        >span{
+                            margin-top: -30px;
+                            font-size: 1.5rem;
+                            font-weight: 500;
+                        }
+
+                        .mileage{
+                            display: none;
                         }
                     }
                 }
             }
         }
 
-        .buy-button-box{
+        .buy-button-box {
             background-color: forestgreen;
         }
     }

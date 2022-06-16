@@ -2,12 +2,12 @@
 <section id="buyScreen" module="product_detail">
     <div class="buy_screen_box">
         <!-- 구매하기 타이틀 -->
-        <section class="buy_screen_title">
+        <div class="buy_screen_title">
             <h1>
                 구매하기
             </h1>
             <button class="screen_close_btn" onclick="toggleOverscreen('buyScreen',false);">
-        </section>
+        </div>
         <!-- 구매하기 타이틀 -->
 
         <!-- 상품선택 -->
@@ -63,7 +63,8 @@
             <!-- 수량 선택 -->
 
             <!-- 옵션 선택 테이블-->
-            <table border="0" id="product_option" summary="" module="product_option">
+            <div id="totalSelects">
+            <table border="0" id="totalSelects" class="product_option" summary="옵션 선택" module="product_option">
                 <!-- displaynone -->
                 <tbody>
                     <tr module="product_addoption">
@@ -95,7 +96,7 @@
                         </td>
                     </tr>
                 </tbody>
-                <tbody>
+                <tbody class="product_select">
                     <tr class="{$option_push_button_display|display}" id="{$option_push_button_id}">
                         <td colspan="2" class="selectButton"><a href="#none" class="btnSubmit sizeS"
                                 onclick="{$action_push_button}">옵션선택</a>
@@ -113,9 +114,11 @@
                     </tr>
                 </tbody>
             </table>
+            </div>
             <!-- 옵션 선택 테이블-->
 
             <!--세트상품-->
+            <!-- displaynone -->
             <div class="productSet" module="product_setproduct">
                 <div class="title">
                     <h3>세트상품</h3>
@@ -312,9 +315,11 @@
                     </dd>
                 </dl>
             </div>
+            <!-- displaynone -->
             <!--세트상품-->
 
             <!--추가구성상품-->
+            <!-- displaynone -->
             <div class="productSet additional" module="product_addproduct">
                 <div class="title">
                     <h3>추가구성상품 <span>추가로 구매를 원하시면 선택하세요.</span></h3>
@@ -441,15 +446,17 @@
                     </li>
                 </ul>
             </div>
+            <!-- displaynone -->
             <!--추가구성상품-->
 
+            <!-- 옵션 선택 결과 -->
             <div id="{$total.total_id}" class="{$total.total_display|display}">
-                <p class="select-tip {$several_item_display|display}">옵션선택 박스를 선택하시면 상품이 추가됩니다.
-                </p>
-                <table border="0" summary="">
+                <h2 class="select-tip {$several_item_display|display}">옵션선택 박스를 선택하시면 상품이 추가됩니다.
+                </h2>
+                <table border="0" summary="옵션 정보">
                     <tbody class="{$quantity_display|display}">
                         <tr>
-                            <td>{$prd_model}</td>
+                            <td class="product_name">{$prd_model}</td>
                             <td></td>
                             <td>
                                 <span class="quant">
@@ -460,13 +467,13 @@
                                             src="/bvtIMG/btn_quantity_up.svg" alt="수량증가" /></a>
                                 </span>
                             </td>
-
+                            <!-- 옵션별 가격, 마일리지 -->
                             <td class="right">
                                 <!-- <span class="{$total.quantity_price}">{$product_price}</span> <span class="mileage {$mileage_display|display}">(<img src="{$mileage_mileage_icon}" /> <span class="{$total.mileage_price}">{$mileage_value}</span>)</span> -->
                             </td>
                         </tr>
                     </tbody>
-                    <!-- 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역입니다. 쇼핑몰 화면에는 아래와 같은 마크업구조로 표시됩니다. 삭제시 기능이 정상동작 하지 않습니다. -->
+                    <!--  옵션선택 또는 세트상품 선택시 상품이 추가되는 영역/하단 주석 부분 삭제금지-->
                     <tbody>
                         <!-- tr>
                                 <td>
@@ -489,9 +496,11 @@
                                 </td>
                             </tr -->
                     </tbody>
-                    <!-- // 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역입니다. 쇼핑몰 화면에는 아래와 같은 마크업구조로 표시됩니다. 삭제시 기능이 정상동작 하지 않습니다. -->
+                    <!-- 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역/하단 주석 부분 삭제금지 -->
                 </table>
             </div>
+            <!-- 옵션 선택 결과 -->
+
         </section>
         <!-- 상품선택 -->
 
@@ -532,3 +541,9 @@
         </div>
     </div>
 </section>
+<script>
+    const product = document.querySelectorAll(".product");
+    product.forEach((node)=>{
+        node.innerText = node.innerText.replace(/\n|\r|\s*/gi," ");
+    })
+</script>
