@@ -147,6 +147,13 @@ summary{
     cursor: pointer;
     list-style: none;
 }
+
+iframe{
+    width: 100%;
+    height: auto;
+    border: none;
+    
+}
 /* 드래그 시 노란색 표시 */
 
 ::selection {

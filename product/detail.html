@@ -8,7 +8,7 @@
 -->
 
 <!-- 상품 정보 상단 -->
-<article module="product_detail" id="product_detail_top">
+<article id="product_detail_top" module="product_detail">
     <!-- 브랜드 -->
     <section class="product_brand">
         <h1 class="displaynone">브랜드 소개</h1>
@@ -26,7 +26,7 @@
     <!-- 상품명, 가격정보, 태그 -->
     <section class="product_info_wrap">
         <h1 class="displaynone">상품 정보</h1>
-        <h2>{$name}</h2>
+        <h2 class="product_name">{$name}</h2>
         <div class="price_wrap">
             <span class="sale_price price">{$product_sale_price|numberformat}
             </span>
@@ -44,7 +44,7 @@
             <div>🐇 PETA Cruelty Free and Vegan 인증</div>
 
         </article>
-        <button class="share_btn">공유하기</button>
+        <button id="shareBtn" class="share_btn">공유하기</button>
     </section>
     <!-- 상품명, 가격정보, 태그 -->
     <!-- 상품 배송 안내 -->
@@ -68,11 +68,11 @@
         <ul class="mileage">
             <li class="mileage_voter">
                 <p>보터 등급</p>
-                <p><em>{$mileage_value}</em><span>점</span> 적립</p>
+                <p><em class="voter_value">{$mileage_value}</em><span>점</span> 적립</p>
             </li>
             <li class="mileage_crew">
                 <p>크루 등급</p>
-                <p><em>{$mileage_value}</em><span>점</span> 적립</p>
+                <p><em class="crew_value">{$mileage_value}</em><span>점</span> 적립</p>
             </li>
             <li class="mileage_crew_txt mileage_txt"><a href="">비보트 크루</a>는 두 배 적립됩니다.</li>
             <li class="mileage_mileage_txt mileage_txt">마일리지는 비보트 내에서 현금처럼 사용이 가능합니다.</li>
@@ -92,143 +92,150 @@
     </section>
 </article>
 <!-- 상품 정보 상단 -->
-
 <!-- 상품 정보 하단 -->
-    <!-- 상품 정보 하단 선택 탭 -->
-    <ul class="detail_tab_wrap" module="product_additional">
-        <li class="tab1 tab">상품정보
-        </li>
-        <li class="tab2 tab">소비기록
-        </li>
-        <li class="tab3 tab">Q&A({$qna_count})
-        </li>
-        <li class="tab4 tab">배송안내
-        </li>
-    </ul>
-    <!-- 상품 정보 하단 선택 탭 -->
-<div id="product_detail_bottom" module="product_additional">
+<!-- 상품 정보 하단 선택 탭 -->
+<ul class="detail_tab_wrap" module="product_additional">
+    <li class="tab1 tab" data-hash="prd_detail">상품정보
+    </li>
+    <li class="tab2 tab" data-hash="prd_bh">소비기록
+    </li>
+    <li class="tab3 tab" data-hash="use_qna">Q&A({$qna_count})
+    </li>
+    <li class="tab4 tab" data-hash="prd_info">배송안내
+    </li>
+</ul>
+<!-- 상품 정보 하단 선택 탭 -->
+<article id="product_detail_bottom" module="product_additional">
     <!-- 상품 정보 하단 정보 -->
-        <div class="detail_swiper_wrap swiper-wrapper">
-            <!-- tab1 상품정보 -->
-            <div id="tab1" class="tab_content swiper-slide">
-                <div class="tab_height_cont info">
-                    <!--이벤트-->
-                    <div class="tab_detail_page eventArea {$common_event_a|display}">
-                        <div class="event">{$common_event_a}</div>
-                    </div>
-                    <!--상세페이지-->
-                    <div class="tab_detail_page">
-                        <!--@css(../css/module/product/module/product_detail.css)-->
-                        {$product_detail}
-                    </div>
+    <div id="detail_swiper_wrap" class="detail_swiper_wrap swiper-wrapper">
+        <!-- tab0 상품정보 -->
+        <div id="tab0" class="tab_content swiper-slide" data-hash="prd_detail">
+            <div id="prd_detail">
+                <!--이벤트-->
+                <div class="tab_detail_page eventArea {$common_event_a|display}">
+                    <div class="event">{$common_event_a}</div>
+                </div>
+                <!--상세페이지-->
+                <div class="tab_detail_page">
+                    <!--@css(../css/module/product/module/product_detail.css)-->
+                    {$product_detail}
                 </div>
             </div>
-            <!-- tab1 상품정보 -->
-            <!-- tab2 소비기록 -->
-            <div id="tab2" class="tab_content swiper-slide">
-                <div class="tab_height_cont buy_record">
-                    <div id="buy_records_detail">
-                        <iframe id="buy_record_frame" border="0"
-                            src="https://bvoat-test.shop/buy_records?product_no={$product_no}"></iframe>
-                    </div>
+        </div>
+        <!-- tab0 상품정보 -->
+        <!-- tab1 소비기록 -->
+        <div id="tab1" class="tab_content swiper-slide" data-hash="prd_bh">
+            <div id="prd_bh">
+                <div id="buy_records_detail">
+                    <iframe id="buy_record_frame" border="0"
+                        src="https://bvoat-test.shop/buy_records?product_no={$product_no}"></iframe>
                 </div>
             </div>
-            <!-- tab3 Q&A -->
-            <div id="tab3" class="tab_content swiper-slide">
-                <div class="tab_height_cont qna">
-                    <div class="tab-tip">
-                        <div class="tab-tip-head tab3_heading">
-                            <em>{$prd_model}</em>에 대해 궁금하신가요?
-                        </div>
+        </div>
+        <!-- tab1 소비기록 -->
+        <!-- tab2 Q&A -->
+        <div id="tab2" class="tab_content swiper-slide" data-hash="use_qna">
+            <div id="use_qna">
+                <div class="tab-tip">
+                    <div class="tab-tip-head tab3_heading">
+                        <em>{$prd_model}</em>에 대해 궁금하신가요?
                     </div>
-                    <div class="product_detail_qna" module="product_qna">
-                        <!--@css(/css/module/product/qna.css)-->
-                        <!--@js(/js/module/product/qna.js)-->
-                        <!--
+                </div>
+                <div class="product_detail_qna" module="product_qna">
+                    <!--@css(/css/module/product/qna.css)-->
+                    <!--@js(/js/module/product/qna.js)-->
+                    <!--
                             $count = 6
                         -->
-                        <p class="noAccess {$deny_display|display}">글읽기 권한이 없습니다.</p>
-                        <ul class="tab-board-table {$list_display|display}">
-                            <li class="descriptions">
-                                <a class="description_link" title="{$subject}" href="/board/product/read.html{$param_read}">
-                                    
-                                    <h1> {$icon_re} {$icon_lock} {$icon_mobile} {$subject} </h1>
-                                    <p>
-                                        {$member_icon}
-                                        <span class="id" title="작성자">{$writer}</span>
-                                        <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="descriptions">
-                                <a class="description_link" title="{$subject}" href="/board/product/read.html{$param_read}">
-                                    
-                                    <h1> {$icon_re} {$icon_lock} {$icon_mobile} {$subject} </h1>
-                                    <p>
-                                        {$member_icon}
-                                        <span class="id" title="작성자">{$writer}</span>
-                                        <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
-                                    </p>
-                                </a>
-                            </li>
+                    <p class="noAccess {$deny_display|display}">글읽기 권한이 없습니다.</p>
+                    <ul class="tab-board-table {$list_display|display}">
+                        <li class="descriptions">
+                            <a class="description_link" title="{$subject}" href="/board/product/read.html{$param_read}">
+
+                                <h1> {$icon_re} {$icon_lock} {$icon_mobile} {$subject} </h1>
+                                <p>
+                                    {$member_icon}
+                                    <span class="id" title="작성자">{$writer}</span>
+                                    <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="descriptions">
+                            <a class="description_link" title="{$subject}" href="/board/product/read.html{$param_read}">
+
+                                <h1> {$icon_re} {$icon_lock} {$icon_mobile} {$subject} </h1>
+                                <p>
+                                    {$member_icon}
+                                    <span class="id" title="작성자">{$writer}</span>
+                                    <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-tips-btns">
+                    <div class="qna_btn"><a href="{$qna_write}">물어보기</a>
+                    </div>
+                </div>
+                <div class="product_detail_paginate" module="product_qnapaging">
+                    <div class="paginate-box">
+                        <span class="btnPrev_wrap">
+                            <a href="{$param_before}" class="btnPrev">이전</a>
+                        </span>
+                        <ol>
+                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                        </ol>
+                        <span class="btnNext_wrap">
+                            <a href="{$param_next}" class="btnNext">다음</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- tab2 Q&A -->
+        <!-- tab3 배송안내 -->
+        <div id="tab3" class="tab_content swiper-slide" data-hash="prd_info">
+            <div id="prd_info">
+                <div class="tab_prd_info">
+                    <div class="title">상품결제정보</div>
+                    <div class="content">{$payment_info}</div>
+                </div>
+                <div class="tab_prd_info">
+                    <div class="title">배송정보</div>
+                    <div class="content">
+                        <ul class="delivery">
+                            <li>배송 방법 : {$shipping_method}</li>
+                            <li>배송 지역 : {$shipping_area}</li>
+                            <li>배송 비용 : {$shipping_fee}</li>
+                            <li>배송 기간 : {$shipping_period}</li>
+                            <li>배송 안내 : {$shipping_info}</li>
                         </ul>
                     </div>
-                    <div class="tab-tips-btns">
-                        <div class="qna_btn"><a href="{$qna_write}">물어보기</a>
-                        </div>
-                    </div>
-                    <div class="product_detail_paginate" module="product_qnapaging">
-                        <div class="paginate-box">
-                            <span class="btnPrev_wrap">
-                                <a href="{$param_before}" class="btnPrev">이전</a>
-                            </span>
-                            <ol>
-                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                            </ol>
-                            <span class="btnNext_wrap">
-                                <a href="{$param_next}" class="btnNext">다음</a>
-                            </span>
-                        </div>
-                    </div>
+                </div>
+                <div class="tab_prd_info">
+                    <div class="title">교환/반품정보</div>
+                    <div class="content">{$exchange_info}</div>
+                </div>
+                <div class="tab_prd_info">
+                    <div class="title">서비스 문의</div>
+                    <div class="content">{$supplier_id} & 비보트 카카오톡 상담</div>
                 </div>
             </div>
-            <!-- tab3 Q&A -->
-            <!-- tab4 배송안내 -->
-            <div id="tab4" class="tab_content swiper-slide">
-                <div class="tab_height_cont parcel">
-                    <div class="tab_prd_info">
-                        <div class="title">상품결제정보</div>
-                        <div class="content">{$payment_info}</div>
-                    </div>
-                    <div class="tab_prd_info">
-                        <div class="title">배송정보</div>
-                        <div class="content">
-                            <ul class="delivery">
-                                <li>배송 방법 : {$shipping_method}</li>
-                                <li>배송 지역 : {$shipping_area}</li>
-                                <li>배송 비용 : {$shipping_fee}</li>
-                                <li>배송 기간 : {$shipping_period}</li>
-                                <li>배송 안내 : {$shipping_info}</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="tab_prd_info">
-                        <div class="title">교환/반품정보</div>
-                        <div class="content">{$exchange_info}</div>
-                    </div>
-                    <div class="tab_prd_info">
-                        <div class="title">서비스 문의</div>
-                        <div class="content">{$supplier_id} & 비보트 카카오톡 상담</div>
-                    </div>
-                </div>
-            </div>
-            <!-- tab4 배송안내 -->
         </div>
+        <!-- tab4 배송안내 -->
+    </div>
     <!-- 상품 정보 하단 정보 -->
+</article>
+
+<div class="">
+    <button class="fixed_wish" alt="찜"></button>
+
+    <button class="fixed_gift" onclick="toggleOverscreen('buyScreen',true);">선물하기</button>
+    <button class="fixed_buy" onclick="toggleOverscreen('buyScreen',false);">구매하기</button>
 </div>
 <!-- 상품 정보 하단 -->
 
@@ -237,34 +244,172 @@
 
 
     //가치소비기록 iframe 높이 조절
-   
 
+    const computedHeight = (idx) => {
+        const detailBottomWrap = document.getElementById("product_detail_bottom");
+        const detailBottomContent = document.getElementById("detail_swiper_wrap");
+        const tabContent = document.getElementById(`tab${idx}`);
+        //함수 실행
+        if (document.readyState == 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                let firstTab = getComputedStyle(detailBottomContent);
+            });
+        } else {
+            let tab = getComputedStyle(tabContent);
+            const controlContentWrapHeight = () => {
+                detailBottomWrap.style.height = tab.height;
+                detailBottomContent.style.height = tab.height;
+                tabContent.style.height = tab.height;
+            }
+            controlContentWrapHeight();
+        }
+    }
     //상품 상세 하단 페이지 탭 슬라이더
-
     //node 값 받아서 Array
-    const tab_name = [...document.querySelectorAll(".tab")];
-    const tab_txt = tab_name.map(node => node.innerHTML)
+    const tab = [...document.querySelectorAll(".tab")];
+    const tab_txt = tab.map(node => node.innerHTML);
+    const tab_hash = tab.map(node => node.dataset.hash);
     var swiper = new Swiper("#product_detail_bottom", {
-        activeHeight: true,
+        observer: true,
+        observeParents: true,
         slidesPerView: 'auto',
         centeredSlides: true,
         spaceBetween: 22,
         loop: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        edgeSwipeDetection: true,
+        hashNavigation: {
+            replaceState: true,
+        },
         pagination: {
             el: ".detail_tab_wrap",
             clickable: true,
             renderBullet: function (index, className) {
-                return `<span class="tab_custom swiper-pagination-bullet" tabindex="${index}" role="button" aria-label=${tab_txt[index]}> ${tab_txt[index]} </span> `;
+                return `<span class="tab_custom swiper-pagination-bullet" tabindex="${index}" role="button" aria-label=${tab_txt[index]} data-hash=${tab_hash[index]}> ${tab_txt[index]} </span> `;
             },
         },
         on: {
-            slideChangeTransitionEnd : function change () { 
-                
-                console.log(swiper.height	)
-                console.log("change")
+            slideChangeTransitionEnd: function change() {
+                computedHeight(swiper.realIndex);
+
             }
-                
+
         },
     });
+
+
+    //슬라이더 이외 함수 시작
+
+    //Q&A heading 컨트롤
+    const qnaControl = () => {
+        const dataCheck = document.querySelectorAll(".noAccess");
+        const tabHeading = document.querySelectorAll(".tab3_heading");
+        if (dataCheck[0].classList.value.includes("displaynone")) {
+            tabHeading.forEach((node) => { node.classList.add("displaynone") })
+        }
+    }
+
+    //소비기록 컨트롤
+    const buyRecordFrameControl = () => {    // 가치소비기록 iframe 높이 조절
+        let bh_frame = document.querySelectorAll("#buy_record_frame");
+        let bh_detail = document.querySelectorAll("#buy_records_detail");
+
+        window.addEventListener("message", function (e) {
+            let message = e.data;
+            // console.log("e",e)
+            if (message && message.height) {
+                bh_frame.forEach((node) => {
+                    node.style.height = message.height + 10 + 'px';
+                })
+                bh_detail.forEach((node) => {
+                    node.style.height = message.height + 10 + 'px';
+                })
+                //iframe 높이 조절
+            }
+        });
+        // 스크롤 하단까지 갔을때 iframe 에 전달
+        var loading = false;
+        let sObj = {};
+        let b_p = 0;
+        let st = 0;
+        // var iframe_content = document.getElementById('buy_record_frame').contentWindow;
+        window.scroll(function () {
+            // if ($("div.tab1 .swiper-slide-duplicate-active").length > 0) {
+            st = window.scrollTop();
+            if (b_p < st) {
+                if (st + 200 >= document.height() - window.height()) {
+                    //    if(!loading) 
+                    {
+                        sObj.more = true;
+                        loading = true;
+                        bh_frame.postMessage(sObj, '*');
+
+                    }
+                }
+            }
+            b_p = st;
+            // }
+        });
+    }
+
+    //크루 등급 마일리지 2배 변환
+    const crewValueControl = (multiple) => {
+        const voterValue = document.querySelector(".voter_value");
+        const crewValue = document.querySelector(".crew_value");
+        voterValue ? crewValue.innerHTML = (voterValue.innerHTML * multiple) : null;
+    }
+
+    //공유 이벤트
+    function goShrBtn(type, _url) {
+        if (type == "link") {
+            if (navigator.share) {
+                navigator.share({
+                    title: `[비보트]`+ document.getElementsByClassName("product_name").innerText,
+                    text: document.getElementsByClassName("product_name").innerText,
+                    url: _url + '/?utm_source=webshareapi&utm_medium=link&utm_campaign=sharebylink&utm_content=funding_link',
+                })
+            }
+        }
+        else if (type == "kakao") {
+            Kakao.Link.sendDefault({
+                objectType: 'feed',
+                content: {
+                    title: document.getElementsByClassName("product_name").innerText,
+                    description: document.getElementsByClassName("product_name").innerText,
+                    imageUrl:
+                        'https://bvoatofficial.cafe24.com/web/upload/share-image-1-7415ca0886cec14f1fbbe5c28cbccec1.png',
+                    link: {
+                        mobileWebUrl: _url + '/?utm_source=kakaotalk&utm_medium=sharelink&utm_campaign=sharebykakao',
+                        webUrl: _url + '/?utm_source=kakaotalk&utm_medium=sharelink&utm_campaign=sharebykakao',
+                    },
+                },
+                buttons: [
+                    {
+                        title: '바로가기',
+                        link: {
+                            mobileWebUrl: _url + '/?utm_source=kakaotalk&utm_medium=sharelink&utm_campaign=sharebykakao',
+                            webUrl: _url + '/?utm_source=kakaotalk&utm_medium=sharelink&utm_campaign=sharebykakao',
+                        },
+                    },
+                ],
+            })
+        }
+    }
+    const shareBtn = document.querySelector("#shareBtn")
+
+
+    //최종 함수 실행
+        //소비기록 컨트롤
+        buyRecordFrameControl();
+        //크루 등급 마일리지 2배 변환
+        crewValueControl(2);
+        //공유 이벤트 클릭
+        shareBtn.addEventListener("click", e => {
+            const url = window.location.href;
+            goShrBtn(`link`, url)
+        })
+        //Q&A heading 컨트롤
+        qnaControl()
 
 </script>
