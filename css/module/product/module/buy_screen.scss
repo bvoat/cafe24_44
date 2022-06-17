@@ -13,29 +13,36 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     top: 0;
     left: 0;
     background: transparentize($bvt-black, 0.7), ;
     z-index: 999;
 
-    .buy_screen_box {
+    .screen_on{
+        animation: rise-item 0.25s;
+        animation-delay: .12s;
+        animation-fill-mode	: both;  
+    }
+    @include rise-item-keyframe;
+
+    #buy_screen_box {
         position: relative;
         width: 100%;
         max-width: 450px;
-        height: 80vh;
+        height: 90vh;
         background-color: $bvt-white;
         box-shadow: $bvt-btn-shadow;
-        bottom: 61px;
+        bottom: 0;
         z-index: 999;
         padding: 11px;
-        margin: -11px;
         overflow-y: auto;
         overflow-x: hidden;
         font-size: 1.4rem;
         font-weight: 300;
+
 
         .buy_screen_title {
             display: flex;
@@ -73,6 +80,7 @@
                             justify-content: space-between;
                             align-items: center;
                             height: 40px;
+                            margin-bottom: 5px;
 
                             th {
                                 width: 15%;
@@ -95,229 +103,37 @@
                     }
                 }
             }
-
             #totalProducts {
                 .select-tip {
-                    font-size: 1.20rem;
+                    font-size: 1.5rem;
                     font-weight: 300;
                     color: $bvt-darkgray;
                     text-align: center;
-                    padding: 20px 0;
-                }
-            // 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역 1
-                table {
-                    tr {
-                        display: flex;
-                        flex-flow: column nowrap;
-                        justify-content: space-between;
-                        align-items: left;
-                        width: auto;
-                        height: auto;
-                        padding: 12px;
-                        background-color: $bvt-bg-blue;
-                        border-radius: 3px;
-                        margin-bottom: 6px;
-    
-    
-                        // 옵션 선택 이후
-                        td {
-                            display: flex;
-                            flex-flow: row nowrap;
-                            justify-content: space-between;
-                            align-items: center;
-                            width: 100%;
-                            font-size: 1.45rem;
-    
-                            .quantity {
-                                display: flex;
-                                flex-flow: row nowrap;
-                                justify-content: center;
-                                align-items: center;
-                                width: auto !important;
-                                input {
-                                    order: 1;
-                                    width: 70px;
-                                    height: 35px;
-                                    font-size: 1.45rem;
-                                    padding: 5px 12px;
-                                    text-align: center;
-                                    border: $bvt-btn-border-gray;
-                                }
-                                a{
-                                    display: block;
-                                    width: 35px;
-                                    height: 35px;
-                                    font-size: 1.45rem;
-                                    cursor: pointer;
-                                    border: $bvt-btn-border-gray;
-                                    box-sizing: border-box;
-                                    img{
-                                        display: none;
-                                    }
-                                    &:nth-child(3){
-                                        order: 0;
-                                        background: var(--minus-icon);
-                                        background-size: contain;
-                                    }
-                                    &:nth-child(2){
-                                        order: 2;
-                                        background: var(--plus-icon);
-                                        background-size: contain;
-                                    }
-                                }
-                            }
-    
-                            .product {
-                                font-weight: 500;
-                                font-size: 1.45rem;
-                                word-wrap: break-word;
-                                word-break: keep-all;
-                                padding-bottom: 5px;
-                                color: $bvt-blue;
-                            }
-    
-                            .delete{
-                                display: block;
-                                width: 15px;
-                                height: 15px;
-                                margin-top: -25%;
-                                background: $x-btn no-repeat;
-                                background-size: cover;
-                                img{
-                                    display: none;
-                                }
-                            }
-    
-                        }
-    
-                        .right{
-                            flex-direction: row-reverse;
-                            margin-top: -5px;
-    
-                            >span{
-                                margin-top: -30px;
-                                font-size: 1.5rem;
-                                font-weight: 500;
-                            }
-    
-                            .mileage{
-                                display: none;
-                            }
-                        }
-                    }
+                    padding: 5px 0 10px;
                 }
             }
+            // 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역 1
+            .option_products, .option_direct {
 
-            // 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역 2
-            .option_products {
-                tr {
+                // 개별 칸
+                tr{
+                    position: relative;
                     display: flex;
-                    flex-flow: column nowrap;
-                    justify-content: space-between;
-                    align-items: left;
-                    width: auto;
-                    height: auto;
-                    padding: 12px;
-                    background-color: $bvt-bg-blue;
+                    flex-flow: row wrap;
+                    height: 100px;
+                    background: $bvt-bg-lightblue;
                     border-radius: 3px;
-                    margin-bottom: 6px;
-
-
-                    // 옵션 선택 이후
-                    td {
-                        display: flex;
-                        flex-flow: row nowrap;
-                        justify-content: space-between;
-                        align-items: center;
-                        width: 100%;
-                        font-size: 1.45rem;
-
-                        .quantity {
-                            display: flex;
-                            flex-flow: row nowrap;
-                            justify-content: center;
-                            align-items: center;
-                            width: auto !important;
-                            input {
-                                order: 1;
-                                width: 70px;
-                                height: 35px;
-                                font-size: 1.45rem;
-                                padding: 5px 12px;
-                                text-align: center;
-                                border: $bvt-btn-border-gray;
-                            }
-                            a{
-                                display: block;
-                                width: 35px;
-                                height: 35px;
-                                font-size: 1.45rem;
-                                cursor: pointer;
-                                border: $bvt-btn-border-gray;
-                                box-sizing: border-box;
-                                img{
-                                    display: none;
-                                }
-                                &:nth-child(3){
-                                    order: 0;
-                                    background: var(--minus-icon);
-                                    background-size: contain;
-                                }
-                                &:nth-child(2){
-                                    order: 2;
-                                    background: var(--plus-icon);
-                                    background-size: contain;
-                                }
-                            }
-                        }
-
-                        .product {
-                            font-weight: 500;
-                            font-size: 1.45rem;
-                            word-wrap: break-word;
-                            word-break: keep-all;
-                            padding-bottom: 5px;
-                            color: $bvt-blue;
-                        }
-
-                        .delete{
-                            position: relative;
-                            display: block;
-                            width: 13px;
-                            height: 13px;
-                            background: $x-btn no-repeat;
-                            background-size: cover;
-                            top: 0;
-                            img{
-                                display: none;
-                            }
-                        }
-
-                    }
-
-                    .right{
-                        flex-direction: row-reverse;
-                        margin-top: -5px;
-
-                        >span{
-                            margin-top: -30px;
-                            font-size: 1.5rem;
-                            font-weight: 500;
-                        }
-
-                        .mileage{
-                            display: none;
-                        }
-                    }
+                    margin-bottom: 5px;
+                    padding: 20px;  
                 }
             }
         }
 
-        .buy-button-box {
+        .buy_button_box {
             position: fixed;
             width: 100%;
             max-width: 450px;
-            padding: 22px 22px 0 22px;
+            padding: 22px 22px 61px 22px;
             margin-left: -11px;
             bottom: 0;
             box-sizing: border-box;
@@ -378,10 +194,12 @@
                 margin: 15px 0;
             }
             .product_action{
+                position: absolute;
                 display: flex;
                 justify-content: space-between;
-                width: calc(100% + 22px);
+                width: 100%;
                 height: 60px;
+                bottom: 0;
                 margin-left: -22px;
                 div{
                     width: 50%;
@@ -407,7 +225,103 @@
                         color: $bvt-black;
                     }
                 }
+                .select_none{
+                    width: 100%;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    color: $bvt-darkgray;
+                    text-align: center;
+                }
             }
         }
+    }
+}
+
+//옵션 및 상품 선택 컨트롤
+
+//수량
+.option_directs>tr>td:nth-child(1) >p:nth-child(3), .quantity, .quant{
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    width: auto !important;
+    height: auto;
+    bottom: 20px;
+    left: 20px;
+
+    //옵션 선택인 경우
+}   
+
+// 상품명
+.product{
+    color: $bvt-blue;
+    font-size: 1.35rem;
+    font-weight: 500;   
+    margin-bottom: 10px;   
+}
+
+// input
+#quantity, .eProductQuantityClass{
+    width: 60px;
+    height: 35px;
+    text-align: center;
+    order: 2;
+    border: none;
+    border-top: $bvt-btn-border-gray;
+    border-bottom: $bvt-btn-border-gray;
+    font-size: 1.5rem;
+}
+// +
+.eProductQuantityUpClass, .up{
+    width: 35px;
+    height: 35px;
+    border: $bvt-btn-border-gray;
+    box-sizing: border-box;
+    background: var(--plus-icon) no-repeat;
+    background-size: cover;
+    order: 3;
+    >img{
+        display: none;
+    }
+}  
+// -
+.eProductQuantityDownClass, .down{
+    width: 35px;
+    height: 35px;
+    border: $bvt-btn-border-gray;
+    box-sizing: border-box;
+    background: var(--minus-icon) no-repeat;
+    background-size: cover;
+    order: 1;
+    >img{
+        display: none;
+    }
+}  
+
+// 마일리지 삭제
+.mileage{
+    display: none;
+}
+
+// 상품 가격
+.ec-front-product-item-price{
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 600;
+    right: 20px;
+    bottom: 20px;
+}
+
+// 옵션 삭제
+.delete{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: $x-btn no-repeat;
+    background-size: contain;
+    top: 20px;
+    right: 20px;
+    >img{
+        visibility: hidden;
     }
 }

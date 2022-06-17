@@ -1,0 +1,106 @@
+#basketLayer {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background: rgba(41, 41, 41, 0.3);
+  z-index: 1000;
+}
+
+#basketLayer .ec-base-layer {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 0;
+  width: 100%;
+  max-width: 450px;
+  height: 50vh;
+  border: 0;
+}
+
+#basketLayer .ec-base-layer h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 45px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background: #FAFAFE;
+}
+
+#basketLayer .ec-base-layer .total_basket {
+  width: 100%;
+  max-width: 450px;
+}
+
+#basketLayer .ec-base-layer .total_basket .total_basket_wrap {
+  width: 100%;
+  max-width: 450px;
+  overflow: hidden;
+}
+
+#basketLayer .ec-base-layer .total_basket .total_basket_wrap .total_basket_item {
+  width: 100%;
+  max-width: 450px;
+}
+
+#basketLayer .ec-base-layer .total_basket .total_basket_wrap .total_basket_item .resImg {
+  position: relative;
+  width: 100px;
+  border-radius: 8px;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+
+#basketLayer .ec-base-layer .total_basket .total_basket_wrap .total_basket_item .resImg .basket_thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#basketLayer .ec-base-layer .total_basket .total_basket_wrap .total_basket_item .resImg .basket_thumbnail img {
+  height: auto;
+  width: 100%;
+}
+
+#basketLayer .ec-base-layer .total_basket .total_basket_wrap .total_basket_item .basket_info_wrap {
+  display: block;
+}
+
+#basketLayer .ec-base-layer .ec-base-button {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+/*# sourceMappingURL=add_basket2.css.map */

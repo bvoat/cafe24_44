@@ -6,17 +6,19 @@
     $project_page = /product/project.html
     $jointbuy_page = /product/jointbuy.html
 -->
-<!-- 상품 구매 탭 -->
 <!--@import(./buy_screen.html)-->
-<section id="buyAction">
-    <button class="fixed_wish" alt="찜"></button>
-    <button class="fixed_gift" onclick="toggleOverscreen('buyScreen',true);">선물하기</button>
-    <button class="fixed_buy" onclick="toggleOverscreen('buyScreen',false);">구매하기</button>
-</section>
-<!-- 상품 구매 탭 -->
+
 
 <!-- 상품 정보 상단 -->
 <article id="product_detail_top" module="product_detail">
+    <!-- 상품 구매 탭 -->
+    <section id="buyAction" module="product_action">
+        <button class="wish_btn" alt="찜" onclick="{$action_wishlist}">찜</button>
+        <button class="gift_btn" onclick="toggleBuyScreen(`gift`);" alt="선물하기">선물하기</button>
+        <button class="buy_btn" onclick="toggleBuyScreen(`cart`);" alt="구매하기">구매하기</button>
+    </section>
+    <!-- 상품 구매 탭 -->
+
     <!-- 브랜드 -->
     <section class="product_brand">
         <h1 class="displaynone">브랜드 소개</h1>
@@ -73,7 +75,7 @@
     <!-- 마일리지 -->
     <section class="mileage_wrap">
         <h1>마일리지</h1>
-        <ul class="mileage">
+        <ul id="mileage">
             <li class="mileage_voter">
                 <p>보터 등급</p>
                 <p><em class="voter_value">{$mileage_value}</em><span>점</span> 적립</p>
@@ -318,7 +320,6 @@
 
         window.addEventListener("message", function (e) {
             let message = e.data;
-            // console.log("e",e)
             if (message && message.height) {
                 bh_frame.forEach((node) => {
                     node.style.height = message.height + 10 + 'px';
@@ -362,7 +363,7 @@
     }
 
     //공유 이벤트
-    function goShrBtn(type, _url) {
+    const goShrBtn = (type, _url) => {
         if (type == "link") {
             if (navigator.share) {
                 navigator.share({
@@ -397,7 +398,29 @@
             })
         }
     }
-    const shareBtn = document.querySelector("#shareBtn")
+    const shareBtn = document.querySelector("#shareBtn");
+
+    //찜 클릭 미완
+    const detailProductWish = () => {
+        const wishBtnImg = document.querySelector(".wish_btn>img");
+        if(wishBtnImg.attributes.icon_status.value === "off"){
+            wishBtnImg.src = "https://bvoat.com/bvtIMG/icon/detail-wish-none.png";
+        }else if(wishBtnImg.attributes.icon_status.value === "on"){
+            wishBtnImg.src = "https://bvoat.com/bvtIMG/icon/detail-wish.png"
+        }
+    }
+    //선물하기 / 구매하기 클릭
+
+    const toggleBuyScreen = (type) => {
+        console.log("type",type)
+        const buyScreen = document.getElementById("buyScreen");
+        const buyScreenBox = document.getElementById("buy_screen_box");
+
+        buyScreen.classList.toggle("displaynone");
+        buyScreenBox.classList.toggle("displaynone");
+        buyScreenBox.classList.toggle("screen_on");
+    }
+
 
 
     //최종 함수 실행
@@ -411,6 +434,8 @@
             goShrBtn(`link`, url)
         })
         //Q&A heading 컨트롤
-        qnaControl()
+        qnaControl();
+        //찜
+        detailProductWish();
 
 </script>

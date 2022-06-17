@@ -1,12 +1,12 @@
 <!--@css(../css/module/product/module/buy_screen.css)-->
-<section id="buyScreen" module="product_detail">
-    <div class="buy_screen_box">
+<section id="buyScreen" module="product_detail" class="displaynone">
+    <div id="buy_screen_box" class="displaynone">
         <!-- 구매하기 타이틀 -->
         <div class="buy_screen_title">
             <h1>
                 구매하기
             </h1>
-            <button class="screen_close_btn" onclick="toggleOverscreen('buyScreen',false);">
+            <button class="screen_close_btn" onclick="toggleBuyScreen();">
         </div>
         <!-- 구매하기 타이틀 -->
 
@@ -123,7 +123,7 @@
                 <div class="title">
                     <h3>세트상품</h3>
                 </div>
-                <ul class="product">
+                <ul class="product_set_ul">
                     <li>
                         <div class="information">
                             <div class="thumbnail">
@@ -327,7 +327,7 @@
                             src="//img.echosting.cafe24.com/skin/base/product/btn_additional_close.gif"
                             alt="추가구성상품 닫기" /></a>
                 </div>
-                <ul class="product">
+                <ul class="product_additional_ul">
                     <li>
                         <div class="information">
                             <div class="thumbnail">
@@ -454,9 +454,9 @@
                 <h2 class="select-tip {$several_item_display|display}">옵션선택 박스를 선택하시면 상품이 추가됩니다.
                 </h2>
                 <table border="0" summary="옵션 정보">
-                    <tbody class="{$quantity_display|display}">
+                    <tbody class="option_direct {$quantity_display|display} ">
                         <tr>
-                            <td class="product_name">{$prd_model}</td>
+                            <td class="product">{$prd_model}</td>
                             <td></td>
                             <td>
                                 <span class="quant">
@@ -466,6 +466,9 @@
                                     <a href="javascript:;" class="up {$quantity_up_class}"><img
                                             src="/bvtIMG/btn_quantity_up.svg" alt="수량증가" /></a>
                                 </span>
+                            </td>
+                            <td class="right">
+                                <!-- <span class="{$total.quantity_price}">{$product_price}</span> <span class="mileage {$mileage_display|display}">(<img src="{$mileage_mileage_icon}" /> <span class="{$total.mileage_price}">{$mileage_value}</span>)</span> -->
                             </td>
                             <!-- 옵션별 가격, 마일리지 -->
                             <td class="right">
@@ -500,19 +503,18 @@
                 </table>
             </div>
             <!-- 옵션 선택 결과 -->
-
         </section>
         <!-- 상품선택 -->
 
-        <section class="buy-button-box">
+        <section class="buy_button_box">
             <h1>결제금액</h1>
-            <div id="{$total.total_price_id}" class="total_price">
-                <span>총 상품금액(수량) :</span>
-                <span class="{$total.total_cnt}"><em>0</em>(0개)</span>
+            <div id="{$total.total_price_id}" class="total_price total-price">
+                <span>총 상품금액 (수량) :</span> <span class="{$total.total_cnt}"><strong><em>0</em></strong>
+                    (0개)</span>
             </div>
-            <div id="totalDelivery" class="total_delivery">
+            <div id="totalDelivery" class="total_delivery total-price">
                 <span>배송비 : </span>
-                <span class="total_delivery_price">{$delivery_price}</span>
+                <span class="total_delivery_price total">{$delivery_price}</span>
             </div>
             <p class="ec-base-help {$price_warning_class}">할인가가 적용된 최종 결제예정금액은 주문 시 확인할 수
                 있습니다.</p>
@@ -529,18 +531,15 @@
                     </a>
                 </div>
                 <div class="btn_cart {$basket_display|display}">
-                    <a href="#none" class="cart" onclick="checkToggle(); {$action_basket}">장바구니</a>
+                    <a href="#none" class="cart" onclick="{$action_basket}">장바구니</a>
                 </div>
                 <div class="btn-basic btn-size-all btn-type0 {$soldout_display|display}">
                     구매할 수 없는 상품입니다</div>
             </div>
-
+            <input type="hidden" value="" class="buy_type"/>
         </section>
     </div>
 </section>
 <script>
-    const product = document.querySelectorAll(".product");
-    product.forEach((node)=>{
-        node.innerText = node.innerText.replace(/\n|\r|\s*/gi," ");
-    })
+
 </script>
