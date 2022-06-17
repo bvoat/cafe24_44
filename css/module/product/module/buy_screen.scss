@@ -31,6 +31,7 @@
         bottom: 61px;
         z-index: 999;
         padding: 11px;
+        margin: -11px;
         overflow-y: auto;
         overflow-x: hidden;
         font-size: 1.4rem;
@@ -42,24 +43,24 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            height: 50px;
+            height: 55px;
             border-bottom: $bvt-btn-border-gray;
 
             h1 {
-                font-size: 1.45rem;
-                font-weight: 400;
+                font-size: 1.5rem;
+                font-weight: 500;
                 margin-left: calc(50% - 25px);
             }
 
             .screen_close_btn {
-                width: 15px;
+                width: 30px;
                 height: 15px;
                 background: $x-btn no-repeat center;
             }
         }
 
         .buy_screen_payment {
-            height: auto;
+            height: 50%;
             padding: 11px;
             overflow-y: auto;
             margin: 11px 0;
@@ -74,17 +75,17 @@
                             height: 40px;
 
                             th {
-                                width: 20%;
+                                width: 15%;
                                 font-size: 1.45rem;
                             }
 
                             td {
-                                width: 80%;
+                                width: 85%;
                                 font-size: 1.45rem;
 
                                 select {
                                     width: 100%;
-                                    height: 35px;
+                                    height: 40px;
                                     font-size: 1.45rem;
                                     padding: 5px 12px;
                                     cursor: pointer;
@@ -177,13 +178,13 @@
     
                             .delete{
                                 display: block;
-                                width: 18px;
-                                height: 18px;
-                                margin-top: -90px;
-                                
+                                width: 15px;
+                                height: 15px;
+                                margin-top: -25%;
+                                background: $x-btn no-repeat;
+                                background-size: cover;
                                 img{
-                                    width: 18px;
-                                    object-fit: cover;
+                                    display: none;
                                 }
                             }
     
@@ -205,19 +206,21 @@
                         }
                     }
                 }
-
             }
 
             // 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역 2
             .option_products {
-
                 tr {
                     display: flex;
                     flex-flow: column nowrap;
                     justify-content: space-between;
                     align-items: left;
-                    width: 100%;
+                    width: auto;
                     height: auto;
+                    padding: 12px;
+                    background-color: $bvt-bg-blue;
+                    border-radius: 3px;
+                    margin-bottom: 6px;
 
 
                     // 옵션 선택 이후
@@ -268,23 +271,25 @@
                             }
                         }
 
-                        p {
+                        .product {
                             font-weight: 500;
                             font-size: 1.45rem;
                             word-wrap: break-word;
                             word-break: keep-all;
                             padding-bottom: 5px;
+                            color: $bvt-blue;
                         }
 
                         .delete{
+                            position: relative;
                             display: block;
-                            width: 18px;
-                            height: 18px;
-                            margin-top: -90px;
-                            
+                            width: 13px;
+                            height: 13px;
+                            background: $x-btn no-repeat;
+                            background-size: cover;
+                            top: 0;
                             img{
-                                width: 18px;
-                                object-fit: cover;
+                                display: none;
                             }
                         }
 
@@ -309,7 +314,100 @@
         }
 
         .buy-button-box {
-            background-color: forestgreen;
+            position: fixed;
+            width: 100%;
+            max-width: 450px;
+            padding: 22px 22px 0 22px;
+            margin-left: -11px;
+            bottom: 0;
+            box-sizing: border-box;
+            background: $bvt-bg-lightblue;
+            h1{
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: $bvt-black;
+                padding-bottom: 20px;
+            }
+            .total_price{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1.5rem;
+                span{
+                    &:nth-child(1){
+
+                    }
+                    &:nth-child(2){
+                        font-weight: 600;
+                    }
+                }
+            }
+            .total_delivery{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1.5rem;
+                padding: 5px 0 10px;
+                span{
+                    &:nth-child(1){
+
+                    }
+                    &:nth-child(2){
+                        span{
+                            font-size: 1.5rem;
+                            span{
+                                font-size: 1.2rem;
+                                strong{
+                                    font-size: 1.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ec-base-help{
+                font-size: 1.3rem;
+                text-align: center;
+                padding-bottom: 15px;
+            }
+            #NaverChk_Button{
+                display: flex;
+                justify-content: center;
+                margin: 15px 0;
+            }
+            .product_action{
+                display: flex;
+                justify-content: space-between;
+                width: calc(100% + 22px);
+                height: 60px;
+                margin-left: -22px;
+                div{
+                    width: 50%;
+                    a{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        font-weight: 500;
+                        font-size: 1.6rem;
+                    }
+                }
+                .btn_buy{
+                    background: $bvt-blue;
+                    a{
+                        color: $bvt-white;
+                    }
+                }
+                .btn_cart{
+                    background: $bvt-white;
+                    a{
+                        color: $bvt-black;
+                    }
+                }
+            }
         }
     }
 }
