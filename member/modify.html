@@ -571,3 +571,26 @@
     </div>
 
 </div>
+
+<script>
+    //세션 확인
+    let join_day = new Date(JSON.parse(sessionStorage.getItem("member_1")).data.created_date);
+    let today = new Date();
+    const current_date = 24 * 60 * 60 * 1000;// 시 * 분 * 초 * 밀리세컨
+
+    let diff_date = parseInt((today - join_day)/current_date)
+    console.log("가입한지 "+diff_date+" 일")
+
+    //가입한지 30일 지나면 추천인 아이디에 displaynone
+
+    document.addEventListener("DOMContentLoaded", ()=>{
+        const reco_id = document.querySelector("#reco_id");
+
+        if(diff_date > 30){
+        reco_id.setAttribute("readonly", true)
+        reco_id.setAttribute("placeholder", "추천인은 30일 이내에 입력할 수 있습니다.")
+    }
+    });
+
+
+</script>

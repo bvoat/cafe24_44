@@ -18,7 +18,7 @@
   z-index: 1000;
 }
 
-#basketLayer .ec-base-layer {
+#basketLayer .layer_basket {
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -36,11 +36,13 @@
   bottom: 0;
   width: 100%;
   max-width: 450px;
-  height: 50vh;
+  height: 30%;
   border: 0;
+  background: #ffffff;
+  overflow: hidden;
 }
 
-#basketLayer .ec-base-layer h3 {
+#basketLayer .layer_basket h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,56 +53,117 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 45px;
+  height: 60px;
   font-size: 1.6rem;
   font-weight: 400;
   background: #FAFAFE;
 }
 
-#basketLayer .ec-base-layer .total_basket {
+#basketLayer .layer_basket .basket_wrap {
+  width: 450px;
+  height: 190px;
+}
+
+#basketLayer .layer_basket .basket_wrap .Order_prdList {
   width: 100%;
   max-width: 450px;
+  height: 180px;
 }
 
-#basketLayer .ec-base-layer .total_basket .total_basket_wrap {
-  width: 100%;
-  max-width: 450px;
-  overflow: hidden;
-}
-
-#basketLayer .ec-base-layer .total_basket .total_basket_wrap .total_basket_item {
-  width: 100%;
-  max-width: 450px;
-}
-
-#basketLayer .ec-base-layer .total_basket .total_basket_wrap .total_basket_item .resImg {
-  position: relative;
-  width: 100px;
-  border-radius: 8px;
-  padding-bottom: 100px;
-  overflow: hidden;
-}
-
-#basketLayer .ec-base-layer .total_basket .total_basket_wrap .total_basket_item .resImg .basket_thumbnail {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+#basketLayer .layer_basket .basket_wrap .Order_prdList .basket_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   height: 100%;
 }
 
-#basketLayer .ec-base-layer .total_basket .total_basket_wrap .total_basket_item .resImg .basket_thumbnail img {
-  height: auto;
-  width: 100%;
-}
-
-#basketLayer .ec-base-layer .total_basket .total_basket_wrap .total_basket_item .basket_info_wrap {
+#basketLayer .layer_basket .basket_wrap .Order_prdList .basket_item > a {
   display: block;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-#basketLayer .ec-base-layer .ec-base-button {
+#basketLayer .layer_basket .basket_wrap .Order_prdList .basket_item > ul {
+  text-align: center;
+}
+
+#basketLayer .layer_basket .basket_wrap .Order_prdList .basket_item > ul .name {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+#basketLayer .layer_basket .basket_wrap .Order_prdList .basket_item > ul .option {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #707070;
+}
+
+#basketLayer .layer_basket .basket_wrap .Order_prdList .basket_item > ul .price {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+#basketLayer .layer_basket .basket_wrap .progressbar {
+  width: 100%;
+  height: 5px;
+  bottom: 58px;
+  left: 0;
+}
+
+#basketLayer .layer_basket .layer_basket_btn {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   bottom: 0;
   width: 100%;
+  max-width: 450px;
+  height: 61px;
+  padding: 0;
+}
+
+#basketLayer .layer_basket .layer_basket_btn > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 100%;
+  font-weight: 500;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+#basketLayer .layer_basket .layer_basket_btn .move_basket_btn {
+  background: #ffffff;
+  color: #292929;
+}
+
+#basketLayer .layer_basket .layer_basket_btn .stay_btn {
+  background: #022CFF;
+  color: #ffffff;
 }
 /*# sourceMappingURL=add_basket2.css.map */

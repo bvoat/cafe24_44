@@ -1,55 +1,54 @@
+<!--@css(../css/module/product/module/add_basket2.css)-->
 <section id="basketLayer">
-<div module="Order_LayerBasketPackage" class="ec-base-layer">
-    <!--@css(/layout/basic/css/ec-base-layer.css)-->
-    <!-- @css(/css/module/product/default/basketAdd2.css) -->
-    <!--@css(/css/module/product/module/add_basket2.css)-->
+    <div class="layer_basket" module="Order_LayerBasket">
+        <!--
+            $moreview = yes
+                ※ 더보기 기능 사용 여부를 설정합니다. 사용하지 않을 경우, 더보기 버튼이 노출되지 않습니다.
+        -->
+        <h1>🛒 장바구니에 담았어요!</h1>
+        <div class="basket_wrap">
+            <ul class="Order_prdList swiper-wrapper" module="Order_list">
+                <li class="swiper-slide basket_item">
+                        <a href="/product/detail.html{$param}"><img src="{$img}"
+                                onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';"
+                                alt="{$name_alt}" class="thumb" /></a>
 
-    <h3>🛒 장바구니에 담았어요!</h3>
-    <div class="total_basket" module="Order_LayerBasket">
-        <ul class="total_basket_wrap swiper-wrapper" module="Order_list">
-            <li class="total_basket_item swiper-slide">
-                <div class="resImg">
-                    <a href="/product/detail.html{$param}" class="basket_thumbnail">                       <img src="{$img}" onerror="this.src='http://img.echosting.cafe24.com/design/common/error_img.gif';" alt="{$name_alt}" class="thumb" />
-                    </a>
-                </div>
+                        <ul>
+                            <li class="name" >
+                                <a href="/product/detail.html{$param}">{$name}</a>
+                            </li>
+                            <li class="option">{$option_str}</li>
+                            <li class="price {$product_price_strike}">{$quantity} 개</li>
+                        </ul>
+                </li>
+                <li class="swiper-slide basket_item">
+                    <a href="/product/detail.html{$param}"><img src="{$img}"
+                            onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';"
+                            alt="{$name_alt}" class="thumb" /></a>
 
-                <ul class="basket_info_wrap">
-                    <li class="basket_name">{$product_name_link}{$icon}</li>
-                    <li class="basket_option">{$option_str}</li>
-                    <li class="price">{$purchase_price}</li>
-                    <li>수량 : {$quantity}개</li>
-                </ul>
-            </li>
-            <li class="total_basket_item swiper-slide">
-                <div class="resImg">
-                    <a href="/product/detail.html{$param}" class="basket_thumbnail">                       <img src="{$img}" onerror="this.src='http://img.echosting.cafe24.com/design/common/error_img.gif';" alt="{$name_alt}" class="thumb" />
-                    </a>
-                </div>
-                <ul class="basket_info_wrap">
-                    <li class="basket_name">{$product_name_link}{$icon}</li>
-                    <li class="basket_option">{$option_str}</li>
-                    <li class="price">{$purchase_price}</li>
-                    <li>수량 : {$quantity}개</li>
-                </ul>
-            </li>
-        </ul>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="ec-base-button">
-        <a href="#none" class="displaynone btnSubmitFix sizeS" onclick="Basket.orderLayerAll(this)" link-order="/order/orderform.html?basket_type=all_buy" link-login="/member/login.html">바로 구매하기</a>
-        <a href="/order/basket.html{$basket_param}" class="btnNormalFix sizeS">장바구니 이동</a>
-        <a href="#none" onclick="$('#confirmLayer').remove();" class="btnNormalFix sizeS">쇼핑계속하기</a>
-    </div>
-    <a class="close" onclick="$('#confirmLayer').remove();"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" alt="닫기" /></a>
-</div>
+                    <ul>
+                        <li class="name" >
+                            <a href="/product/detail.html{$param}">{$name}</a>
+                        </li>
+                        <li class="option">{$option_str}</li>
+                        <li class="price {$product_price_strike}">{$quantity} 개</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="progressbar swiper-pagination"></div>
+        </div>
+        <div class="layer_basket_btn">
+            <a href="/order/basket.html{$basket_param}" class="move_basket_btn">장바구니 이동</a>
+            <a href="#none" class="stay_btn" onclick="$('#confirmLayer').hide();">쇼핑계속하기</a>
+        </div>
 </section>
 <script>
-    var swiperBasket = new Swiper('.total_basket', {
-        slidesPerView: 4,
-        spaceBetween: 14,
+    var swiperBasket = new Swiper('.basket_wrap', {
+        slidesPerView: 'auto',
+        spaceBetween: 5,
         pagination: {
-            el: ".swiper-pagination",
-            type: "progressbar",
+            el: '.progressbar',
+            type: 'progressbar',
         },
     });
 </script>

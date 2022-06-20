@@ -2,7 +2,7 @@
 @import "../../../../layout/basic/css/abstracts/mixin";
 @import "../../../../layout/basic/css/abstracts/variables";
 
-#basketLayer{
+#basketLayer {
     position: fixed;
     display: flex;
     justify-content: center;
@@ -14,7 +14,8 @@
     left: 0;
     background: transparentize($bvt-black, 0.7), ;
     z-index: 1000;
-    .ec-base-layer{
+
+    .layer_basket {
         position: fixed;
         display: flex;
         flex-flow: column nowrap;
@@ -23,64 +24,102 @@
         bottom: 0;
         width: 100%;
         max-width: 450px;
-        height: 50vh;
+        height: 30%;
         border: 0;
+        background: $bvt-white;
+        overflow: hidden;
 
-        h3{
+        h1 {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: 45px;
+            height: 60px;
             font-size: 1.6rem;
             font-weight: 400;
             background: $bvt-bg-lightblue;
         }
-        
-        .total_basket{
-            width: 100%;
-            max-width: 450px;
-            .total_basket_wrap{
+
+        .basket_wrap {
+            width: 450px;
+            height: 190px;
+
+            .Order_prdList {
                 width: 100%;
                 max-width: 450px;
-                overflow: hidden;
-            //개별 아이템
-                .total_basket_item{
-                    width: 100%;
-                    max-width: 450px;
-                    .resImg{
-                        position: relative;
-                        width: 100px;
-                        border-radius: 8px;
-                        padding-bottom: 100px;
-                        overflow: hidden;
-                        .basket_thumbnail{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            img{
-                                height: auto;
-                                width: 100%;
-                            }
-                        }
-                    }
-                    
-                    .basket_info_wrap{
+                height: 180px;
+
+                .basket_item {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    height: 100%;
+                    >a{
                         display: block;
+                        border-radius: 6px;
+                        overflow: hidden;
                     }
 
+                    >ul{
+                        text-align: center;
+                        .name{
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                        }
+                        .option{
+                            font-size: 1.2rem;
+                            font-weight: 300;
+                            color: $bvt-darkgray;
+                        }
+                        .price{
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                            margin-top: 5px;
+                        }
 
-
+                    }
                 }
+            }
+            .progressbar{
+                width: 100%;
+                height: 5px;
+                bottom: 58px;
+                left: 0;
             }
         }
 
-        .ec-base-button{
+        .layer_basket_btn {
             position: relative;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
             bottom: 0;
             width: 100%;
+            max-width: 450px;
+            height: 61px;
+            padding: 0;
+
+            >a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                height: 100%;
+                font-weight: 500;
+                font-size: 1.4rem;
+                cursor: pointer;
+            }
+
+            .move_basket_btn {
+                background: $bvt-white;
+                color: $bvt-black;
+            }
+
+            .stay_btn {
+                background: $bvt-blue;
+                color: $bvt-white;
+            }
         }
     }
 }

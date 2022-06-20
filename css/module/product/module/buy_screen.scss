@@ -2,7 +2,7 @@
 @import "../../../../layout/basic/css/abstracts/mixin";
 @import "../../../../layout/basic/css/abstracts/variables";
 
-:root{
+:root {
     --plus-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35'%3E%3Cg data-name='그룹 2025'%3E%3Cpath data-name='사각형 2328' fill='%23fff' d='M0 0h35v35H0z'/%3E%3Cg data-name='Icon feather-plus' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath data-name='패스 1754' d='M17.5 11v13'/%3E%3Cpath data-name='패스 1755' d='M11 17.5h13'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
     --minus-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35'%3E%3Cg data-name='그룹 2025'%3E%3Cpath data-name='사각형 2328' fill='%23fff' d='M0 0h35v35H0z'/%3E%3Cpath data-name='Icon feather-minus' d='M11.5 17.5h13' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
@@ -21,11 +21,12 @@
     background: transparentize($bvt-black, 0.7), ;
     z-index: 999;
 
-    .screen_on{
+    .screen_on {
         animation: rise-item 0.25s;
         animation-delay: .12s;
-        animation-fill-mode	: both;  
+        animation-fill-mode: both;
     }
+
     @include rise-item-keyframe;
 
     #buy_screen_box {
@@ -71,6 +72,7 @@
             padding: 11px;
             overflow-y: auto;
             margin: 11px 0;
+
             #totalSelects {
                 table {
                     tbody {
@@ -103,6 +105,7 @@
                     }
                 }
             }
+
             #totalProducts {
                 .select-tip {
                     font-size: 1.5rem;
@@ -111,20 +114,25 @@
                     text-align: center;
                     padding: 5px 0 10px;
                 }
+
             }
+
             // 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역 1
-            .option_products, .option_direct {
+            .option_products,
+            .option_direct {
 
                 // 개별 칸
-                tr{
+                tr {
                     position: relative;
                     display: flex;
-                    flex-flow: row wrap;
+                    flex-flow: column nowrap;
+                    justify-content: space-between;
+                    align-items: flex-start;
                     height: 100px;
                     background: $bvt-bg-lightblue;
                     border-radius: 3px;
                     margin-bottom: 5px;
-                    padding: 20px;  
+                    padding: 20px;
                 }
             }
         }
@@ -138,44 +146,49 @@
             bottom: 0;
             box-sizing: border-box;
             background: $bvt-bg-lightblue;
-            h1{
+
+            h1 {
                 font-size: 1.6rem;
                 font-weight: 600;
                 color: $bvt-black;
                 padding-bottom: 20px;
             }
-            .total_price{
+
+            .total_price {
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-between;
                 align-items: center;
                 font-size: 1.5rem;
-                span{
-                    &:nth-child(1){
 
-                    }
-                    &:nth-child(2){
+                span {
+                    &:nth-child(1) {}
+
+                    &:nth-child(2) {
                         font-weight: 600;
                     }
                 }
             }
-            .total_delivery{
+
+            .total_delivery {
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-between;
                 align-items: center;
                 font-size: 1.5rem;
                 padding: 5px 0 10px;
-                span{
-                    &:nth-child(1){
 
-                    }
-                    &:nth-child(2){
-                        span{
+                span {
+                    &:nth-child(1) {}
+
+                    &:nth-child(2) {
+                        span {
                             font-size: 1.5rem;
-                            span{
+
+                            span {
                                 font-size: 1.2rem;
-                                strong{
+
+                                strong {
                                     font-size: 1.5rem;
                                 }
                             }
@@ -183,17 +196,20 @@
                     }
                 }
             }
-            .ec-base-help{
+
+            .ec-base-help {
                 font-size: 1.3rem;
                 text-align: center;
                 padding-bottom: 15px;
             }
-            #NaverChk_Button{
+
+            #NaverChk_Button {
                 display: flex;
                 justify-content: center;
                 margin: 15px 0;
             }
-            .product_action{
+
+            .product_action {
                 position: absolute;
                 display: flex;
                 justify-content: space-between;
@@ -201,9 +217,11 @@
                 height: 60px;
                 bottom: 0;
                 margin-left: -22px;
-                div{
+
+                div {
                     width: 50%;
-                    a{
+
+                    a {
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -213,19 +231,24 @@
                         font-size: 1.6rem;
                     }
                 }
-                .btn_buy{
+
+                .btn_buy {
                     background: $bvt-blue;
-                    a{
+
+                    a {
                         color: $bvt-white;
                     }
                 }
-                .btn_cart{
+
+                .btn_cart {
                     background: $bvt-white;
-                    a{
+
+                    a {
                         color: $bvt-black;
                     }
                 }
-                .select_none{
+
+                .select_none {
                     width: 100%;
                     font-size: 1.6rem;
                     font-weight: 500;
@@ -240,7 +263,9 @@
 //옵션 및 상품 선택 컨트롤
 
 //수량
-.option_directs>tr>td:nth-child(1) >p:nth-child(3), .quantity, .quant{
+.option_directs>tr>td:nth-child(1)>p:nth-child(3),
+.quantity,
+.quant {
     position: absolute;
     display: flex;
     flex-flow: row nowrap;
@@ -250,18 +275,19 @@
     left: 20px;
 
     //옵션 선택인 경우
-}   
+}
 
 // 상품명
-.product{
+.product {
     color: $bvt-blue;
     font-size: 1.35rem;
-    font-weight: 500;   
-    margin-bottom: 10px;   
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
 // input
-#quantity, .eProductQuantityClass{
+#quantity,
+.eProductQuantityClass {
     width: 60px;
     height: 35px;
     text-align: center;
@@ -271,8 +297,10 @@
     border-bottom: $bvt-btn-border-gray;
     font-size: 1.5rem;
 }
+
 // +
-.eProductQuantityUpClass, .up{
+.eProductQuantityUpClass,
+.up {
     width: 35px;
     height: 35px;
     border: $bvt-btn-border-gray;
@@ -280,12 +308,15 @@
     background: var(--plus-icon) no-repeat;
     background-size: cover;
     order: 3;
-    >img{
+
+    >img {
         display: none;
     }
-}  
+}
+
 // -
-.eProductQuantityDownClass, .down{
+.eProductQuantityDownClass,
+.down {
     width: 35px;
     height: 35px;
     border: $bvt-btn-border-gray;
@@ -293,18 +324,19 @@
     background: var(--minus-icon) no-repeat;
     background-size: cover;
     order: 1;
-    >img{
+
+    >img {
         display: none;
     }
-}  
+}
 
 // 마일리지 삭제
-.mileage{
+.mileage {
     display: none;
 }
 
 // 상품 가격
-.ec-front-product-item-price{
+.ec-front-product-item-price {
     position: absolute;
     font-size: 1.5rem;
     font-weight: 600;
@@ -313,7 +345,7 @@
 }
 
 // 옵션 삭제
-.delete{
+.delete {
     position: absolute;
     width: 15px;
     height: 15px;
@@ -321,7 +353,8 @@
     background-size: contain;
     top: 20px;
     right: 20px;
-    >img{
+
+    >img {
         visibility: hidden;
     }
 }

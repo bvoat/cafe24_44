@@ -450,32 +450,63 @@
             <!--추가구성상품-->
 
             <!-- 옵션 선택 결과 -->
-            <div id="{$total.total_id}" class="{$total.total_display|display}">
+            <div id="{$total.total_id}" class="{$total.total_display|display} option_direct">
                 <h2 class="select-tip {$several_item_display|display}">옵션선택 박스를 선택하시면 상품이 추가됩니다.
                 </h2>
-                <table border="0" summary="옵션 정보">
-                    <tbody class="option_direct {$quantity_display|display} ">
+                <!-- 상품 옵션이 없는 경우 -->
+                <table border="0" summary="상품 추가">
+                    <caption>상품 추가 목록</caption>
+                    <tbody class="{$quantity_display|display}">
                         <tr>
-                            <td class="product">{$prd_model}</td>
-                            <td></td>
+                            <td class="product">{$name}</td>
                             <td>
-                                <span class="quant">
-                                    <a href="javascript:;" class="down {$quantity_down_class}"><img
-                                            src="/bvtIMG/btn_quantity_down.svg" alt="수량감소" /></a>
+                                <span class="quantity" style="position:relative; bottom:0; left:0;">
                                     {$quantity}
-                                    <a href="javascript:;" class="up {$quantity_up_class}"><img
-                                            src="/bvtIMG/btn_quantity_up.svg" alt="수량증가" /></a>
+                                    <a href="javascript:;" class="up {$quantity_up_class}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif" alt="수량증가" /></a>
+                                    <a href="javascript:;" class="down {$quantity_down_class}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif" alt="수량감소" /></a>
                                 </span>
                             </td>
-                            <td class="right">
-                                <!-- <span class="{$total.quantity_price}">{$product_price}</span> <span class="mileage {$mileage_display|display}">(<img src="{$mileage_mileage_icon}" /> <span class="{$total.mileage_price}">{$mileage_value}</span>)</span> -->
-                            </td>
-                            <!-- 옵션별 가격, 마일리지 -->
-                            <td class="right">
-                                <!-- <span class="{$total.quantity_price}">{$product_price}</span> <span class="mileage {$mileage_display|display}">(<img src="{$mileage_mileage_icon}" /> <span class="{$total.mileage_price}">{$mileage_value}</span>)</span> -->
+                            <td class="right displaynone"><span class="{$total.quantity_price} ">{$product_price}</span> <span class="mileage displaynone">(<img src="{$mileage_mileage_icon}" /> <span class="{$total.mileage_price}">{$mileage_value}</span>)</span></td>
+                        </tr>
+                        <tr id="{$total.option_id}" class="option displaynone" module="product_option">
+                            <!--
+                            $use_per_add_option = yes
+                            $default_option = yes
+                            -->
+                            <td class="middle" colspan="3">
+                                <table border="1" summary="">
+                                    <caption>옵션 정보</caption>
+                                    <colgroup>
+                                        <col style="width:105px;">
+                                        <col style="width:auto;">
+                                    </colgroup>
+                                    <tbody>
+
+                                    <!-- <tr module="product_addoption">
+                                        <th scope="row">{$add_option_name}</th>
+                                        <td>
+                                            {$form.add_option}
+                                             <span class="txtByte" title="현재글자수/최대글자수">(<strong class="length">0</strong>/{$option_maxlength})</span>
+                                        </td>
+                                    </tr>
+                                    <tr module="product_fileoption">
+                                        <th scope="row">{$file_option_name}</th>
+                                        <td class="fileInfo">
+                                            {$form.file_option}
+                                            <ul class="infoDesc">
+                                                <li>- 파일은 최대 5개까지 {$file_option_limit}M 이하로 개별업로드 가능합니다.</li>
+                                            </ul>
+                                        </td>
+                                    </tr> -->
+                                    </tbody>
+                                </table>
                             </td>
                         </tr>
-                    </tbody>
+                    </tbody>					
+
+
+
+
                     <!--  옵션선택 또는 세트상품 선택시 상품이 추가되는 영역/하단 주석 부분 삭제금지-->
                     <tbody>
                         <!-- tr>
