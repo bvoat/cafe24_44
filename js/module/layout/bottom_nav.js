@@ -1,9 +1,7 @@
   
   
       let page_path = window.location.pathname;
-
       const bottom_menu = document.querySelectorAll(".bottom_menu");
-      console.log("path", page_path)
   
       const bottomControl = () => {
       page_path === "/" || page_path.includes("list") || page_path.includes("detail") ? 

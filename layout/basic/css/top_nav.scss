@@ -1,9 +1,10 @@
 @charset "utf-8";
-
 @import "./abstracts/_variables";
 @import "./abstracts/_mixin";
 
 #top_nav {
+    padding: 0 11px;
+    border-bottom: $bvt-btn-border-gray;
     backdrop-filter: blur(30%) brightness(50%) opacity(71%);
     // slider swiper zone
     .swiper {

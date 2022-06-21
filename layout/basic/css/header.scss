@@ -9,16 +9,12 @@
     display: flex;
     flex-flow: column nowrap;
     overflow: hidden;
-    padding: 0 11px;
-    border-bottom: $bvt-btn-border-gray;
-
-
     #header_logo_section {
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
-
+        padding: 0 11px;
         .header_logo {
             width: 73px;
             height: 40px;
