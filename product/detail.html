@@ -43,16 +43,8 @@
             <span class="product_price price" data-price="{$product_price}">{$product_price|numberformat}<span>원</span>
             </span>
         </div>
-        <article class="tag-box">
+        <article id="tag-box" class="tag-box">
             <div>🥤 플라스틱 줄이기</div>
-            <div>⌛️ 생분해 소재</div>
-            <div>🌏 환경오염 줄이기</div>
-            <div>🌽 생분해 옥수수 섬유</div>
-            <div>✅ 비건소사이어티 인증</div>
-            <div>🌱 순식물성</div>
-            <div>🐮 동물 성분 대체</div>
-            <div>🐇 PETA Cruelty Free and Vegan 인증</div>
-
         </article>
         <button id="shareBtn" class="share_btn">공유하기</button>
     </section>
@@ -90,13 +82,13 @@
     </section>
     <!-- 마일리지 -->
     <section id="stamp_cont" class="stamp_wrap">
-        <h1 class="stamp_title">가치 스탬프<span><em></em> 지급</span></h1>
+        <h1 class="stamp_title">가치 스탬프<span><em class="stamp_pcs"></em> 지급</span></h1>
         <ul class="stamp_list">
-            <li class="stamp stamp1">1개</li>
-            <li class="stamp stamp2">2개</li>
-            <li class="stamp stamp3">3개</li>
-            <li class="stamp stamp4">4개</li>
-            <li class="stamp stamp5">5개</li>
+            <li><span class="prd_stamp stamp0">1개</span></li>
+            <li><span class="prd_stamp stamp1">2개</span></li>
+            <li><span class="prd_stamp stamp2">3개</span></li>
+            <li><span class="prd_stamp stamp3">4개</span></li>
+            <li><span class="prd_stamp stamp4">5개</span></li>
         </ul>
         <p class="stamp_txt">가치 스탬프 5개를 모으면 <a href=""> 크루 등급</a>으로 등업됩니다.</p>
     </section>
@@ -414,54 +406,76 @@
         buyScreenBox.classList.toggle("screen_on");
     }
 
-    //가치스탬프 표시
-
+    /* 가격 할인가 확인 표시 */
     const priceArr = document.querySelectorAll(".price");
+    const salePrice = parseInt(document.querySelector(".sale_price").dataset.price);
+    const productPrice = parseInt(document.querySelector(".product_price").dataset.price);
     //가격 node 확인하고 한 개 없애기
     //가격 node 확인하고 판매가에 스타일 적용
-    //최종 가격 할당 받기
-    const customProductPrice = (priceArr) => {
-        if (priceArr[0].dataset.price === priceArr[1].dataset.price) {
-            priceArr[1].classList.add("displaynone");
-        } else if (priceArr[0].dataset.price < priceArr[1].dataset.price) {
-            priceArr[1].classList.add("if_sale_price");
-        }
-    };
-    //Dom 불러오는 시간차 때문에 콜백함수로 실행
-    const getPriceNode = (customProductPrice) => {
-        customProductPrice(priceArr);
+    const controlPriceStyle = (priceArr) => {
+        salePrice === productPrice ?  priceArr[1].classList.add("displaynone") :          priceArr[1].classList.add("if_sale_price")
     };
 
-    //가격 -> 스탬프
-
-    //스탬프 갯수 변수 초기화
-    const getStampFromPrice = (price) => {
-        if(price < 1){
-           return 0;
-        } else if (1 <= price && price < 5){
-            let halfPrice = Math.floor(price) + 0.5;
-            if(price < halfPrice){
-                return Math.floor(price);
-            } else if (halfPrice < price){
-                return halfPrice;
+    /* 가격 -> 스탬프 */
+    //스탬프 갯수 변수 할당
+    const createStampPcsFromPrice = (price) => {
+        return new Promise((resolve, reject)=>{
+            let floatPrice;
+            if(price < 0.5){
+                floatPrice = 0;
+            } else if( 0.5 < price && price < 1){
+                floatPrice = 0.5;
+            } else if (1 <= price && price < 5){
+            let halfFloat = Math.floor(price) + 0.5;
+            price < halfFloat ? floatPrice = halfFloat - 0.5 : floatPrice = halfFloat;
+            } else if (5 < price){
+                floatPrice = 5;
             }
-        } else if (5 < price){
-            return 5;
-        }
+            resolve(floatPrice);
+        })
     }
-
-    const getPriceToDom = (changeStampFromFloat) => {
-        let stampList = document.querySelectorAll(".stamp");
-        console.log("stampList", stampList)
-        let floatForStamp = (parseFloat(document.querySelector(".sale_price").dataset.price))/10000;
-        let stamp = getStampFromPrice(floatForStamp);
-        stampList.map((node)=>{
-            
+    //스탬프 갯수 DOM 출력
+    const displayStampTxt = (productStamp) => {
+            //스탬프 숫자 표시
+            const stampPcs = document.querySelector(".stamp_pcs");
+            productStamp > 0 ? stampPcs.innerHTML=`${productStamp}개` : stampPcs.innerHTML="0개"
+    }
+    //스탬프 이미지 DOM 출력 
+    const displayStampImg = (productStamp) => {
+            //스탬프 표시
+            let stampList = document.querySelectorAll(".prd_stamp");
+            //스탬프 이미지 표시
+            let i = 0;
+            if(Number.isInteger(productStamp)){
+                while(i < productStamp){
+                    stampList[i].classList.add("whole_stamp");
+                    i++;
+                }
+            }else if(!Number.isInteger(productStamp)){
+                while(i < productStamp){
+                    stampList[i].classList.add("whole_stamp");
+                    i++;
+                }
+                stampList[Math.floor(productStamp)].classList.add("half_stamp");
+            }
+    }
+    //스탬프 promise 진행
+    const createStamp = (salePrice,createStampPcsFromPrice) => {
+        //스탬프 총 갯수 변수에 할당
+         createStampPcsFromPrice(salePrice/10000)
+         .then((res)=>{
+            console.log("stamp", res, "개")
+            displayStampImg(res);
+            displayStampTxt(res);
+        })
+        .catch((reject)=>{
+            console.log("스탬프 에러", reject);
+            displayStampImg(0);
+            displayStampTxt(0);
         })
     }
 
-
-    //최종 함수 실행
+    /* 최종 함수 실행 */
     //소비기록 컨트롤
     buyRecordFrameControl();
     //크루 등급 마일리지 2배 변환
@@ -474,7 +488,7 @@
     //Q&A heading 컨트롤
     qnaControl();
     //가격 스타일 처리
-    getPriceNode(customProductPrice);
+    controlPriceStyle(priceArr);
     //스탬프 만들기
-    getPriceToDom(getStampFromPrice);
+    createStamp(salePrice,createStampPcsFromPrice);
 </script>
