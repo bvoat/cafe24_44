@@ -2,16 +2,20 @@
 @import "./abstracts/_variables";
 @import "./abstracts/_mixin";
 
-#bvt_container{
+body{
     position: relative;
+    display: flex;
     max-width: 450px;
     min-width: 200px;
     overflow-x: hidden;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
     margin: 0 auto;
     box-sizing: border-box;
     
     #header{
-        position: fixed;
+        position: sticky;
         display: block;
         z-index: 99;
         max-width: 450px;
@@ -24,13 +28,14 @@
         margin: 0 auto;
     }
     #contents{
-        // header fixed로 floating 된 값 만큼 컨텐츠가 늘 내려가야 함
-        // header의 computed height 81px
-        // bottom nav의 computed height 63px
-        padding: 81px 11px 63px;
+        width: 100%;
+        height: auto;
+        max-width: 450px;
+        min-width: 200px;
+        padding: 0 11px;
     }
     #bottom{
-        position: fixed;
+        position: sticky;
         display: block;
         z-index: 99;
         max-width: 450px;

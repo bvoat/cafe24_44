@@ -49,6 +49,7 @@ img {
     image-rendering: -webkit-optimize-contrast;
     transform: translateZ(0);
     backface-visibility: hidden;
+    min-inline-size: 0 !important;
 }
 
 html {
@@ -89,6 +90,12 @@ fieldset {
     image-rendering: -webkit-optimize-contrast;
     transform: translateZ(0);
     backface-visibility: hidden;
+}
+
+detail,
+summary{
+    padding: 0;
+    box-sizing: border-box;
 }
 
 em,

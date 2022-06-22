@@ -2,8 +2,10 @@
   
       let page_path = window.location.pathname;
       const bottom_menu = document.querySelectorAll(".bottom_menu");
-  
-      const bottomControl = () => {
+      const exclude_path = ["join.html"];
+
+      //bottom nav 아이콘 변경 함수
+      const bottomIconControl = () => {
       page_path === "/" || page_path.includes("list") || page_path.includes("detail") ? 
       (document.documentElement.style.setProperty("--store", `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25.878' height='25.878'%3E%3Cpath d='M12.939 0a12.939 12.939 0 1 0 12.939 12.939A12.954 12.954 0 0 0 12.939 0ZM23.2 11.645h-3.576a18.982 18.982 0 0 0-2.319-8.078 10.369 10.369 0 0 1 5.9 8.078Zm-9.575-9.023a16.807 16.807 0 0 1 3.4 9.023H9.1a16.51 16.51 0 0 1 3.171-9.024c.223-.013.445-.034.671-.034s.458.021.686.035Zm-4.971.906a19.6 19.6 0 0 0-2.145 8.117H2.678a10.369 10.369 0 0 1 5.976-8.116ZM2.678 14.233h3.848a20.28 20.28 0 0 0 2.013 8.061 10.364 10.364 0 0 1-5.861-8.061Zm9.551 9.023a15.486 15.486 0 0 1-3.117-9.023h7.91a15.784 15.784 0 0 1-3.368 9.021c-.235.016-.471.036-.713.036s-.474-.021-.712-.035Zm5.19-1a19.86 19.86 0 0 0 2.188-8.023H23.2a10.358 10.358 0 0 1-5.781 8.024Z' fill='%23022cff'/%3E%3C/svg%3E")`),
       document.documentElement.style.setProperty("--text-color-store", `#022CFF`)
@@ -24,15 +26,23 @@
       document.documentElement.style.setProperty("--text-color-user", `#022CFF`)) : 
       null;
       }
-  
-  
+      
+      //bottom nav 숨김 함수 
+      const bottomHideControl = (_pathArr, _path) => {
+        _pathArr.map((path)=>{
+          _path.includes(path)? document.querySelector("#bottom").classList.add("displaynone") : null
+        });
+      }
+      
   
   //함수 실행
   if (document.readyState == 'loading') {
     // 아직 로딩 중이므로 이벤트를 기다립니다.
-    document.addEventListener('DOMContentLoaded', bottomControl);
+    document.addEventListener('DOMContentLoaded', bottomIconControl());
+    document.addEventListener('DOMContentLoaded', bottomHideControl(exclude_path, page_path))
   } else {
     // DOM이 완성되었습니다!
-    bottomControl();
+    bottomIconControl();
+    bottomHideControl(exclude_path, page_path);
   }
   

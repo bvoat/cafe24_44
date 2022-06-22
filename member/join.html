@@ -1,235 +1,229 @@
 <!--@layout(/layout/basic/layout.html)-->
-<!--@css(../cssbvt/scss/module/member/join.css)-->
+<!--@css(../css/module/member/module/join.css)-->
 
-<article id="member_join" class="content">
-    <section id="member_join_title">
-        <h1>회원가입 페이지</h1>
+<article id="memberJoin" class="content">
+    <section id="memberJoinTitle">
+        <h1 class="displaynone">회원가입 페이지</h1>
         <h2>🤗 1분이면 가입 완료!</h2>
         <h3>첫 구매 무료배송 쿠폰이 바로 지급됩니다.</h3>
     </section>
-    <fieldset>
-        <legend>회원가입</legend>
-        <!-- xans-member-join -->
-        <div module="member_join">
-            <section id="member_join_section">
-                <ul>
-                    <!--
-                    $returnUrl = /member/join_result.html
-                    $personalName = 이름
-                    -->
+    <section id="memberJoinField">
+        <fieldset>
+            <legend class="displaynone">회원가입</legend>
+            <!-- xans-member-join -->
+            <div module="member_join">
+                <section id="member_join_section">
+                    <ul>
+                        <!--
+                        $returnUrl = /member/join_result.html
+                        $personalName = 이름
+                        -->
 
-                    <!-- 아이디 시작 -->
+                        <!-- 아이디 시작 -->
 
-                    <li class="member_join_list">
-                        <label class="input_label" for="member_id">아이디</label>
-                        <p class="member_join_input_wrap">
-                            <input id="member_id" name="member_id"
-                            title="아이디"
-                                fw-filter="isFill&amp;isFill&amp;isMin[4]&amp;isMax[16]&amp;isIdentity" fw-label="아이디"
-                                fw-msg="" class="inputTypeText input_box" placeholder="" value="" type="text" autofocus autocapitalize="off"
-                                required>
-                            <button type="button" class="btnBasic input_btn" onclick="checkId('')">중복 확인</button>
-                        <p id="idMsg" class="val_check_msg"></p>
-                        </p>
-                    </li>
-                    <!-- 아이디 끝 -->
-                    <!-- 비밀번호 시작 -->
-                    <li class="member_join_list">
-                        <label class="input_label" for="passwd">비밀번호</label>
-                        <p class="member_join_input_wrap">
-                            <input id="passwd" class="input_box" name="passwd"
-                            title="비밀번호"
-                                fw-filter="isFill&amp;isMin[4]&amp;isMax[16]" fw-label="비밀번호" fw-msg=""
-                                autocomplete="off" maxlength="16" 0="disabled" value=""
-                                placeholder="8~16자 영문, 숫자, 특수문자 중 3가지 이상" type="password" required>
-                        </p>
-                        <p class="member_join_input_wrap">
-                            <label class="input_label input_label_hidden" for="user_passwd_confirm">비밀번호 확인</label>
-                            <input id="user_passwd_confirm" class="input_box" name="user_passwd_confirm"
-                            title="비밀번호 확인"
-                                fw-filter="isFill&amp;isMatch[passwd]" fw-label="비밀번호 확인" fw-msg="비밀번호를 다시 한 번 확인해주세요."
-                                autocomplete="off" maxlength="16" 0="disabled" value="" placeholder="비밀번호 확인"
-                                type="password" required>
-                        <p id="pwConfirmMsg" class="val_check_msg"></p>
-                        </p>
-                    </li>
-                    <!-- 비밀번호 확인 종료 -->
-                    <!-- 이름 시작 -->
-                    <li class="member_join_list">
-                        <label class="input_label" for="name">이름</label>
-                        <p class="member_join_input_wrap">
-                            <input type="text" name="name" id="name" class="input_box"
-                            title="이름" placeholder="이름 입력"
-                                maxlength="20" autocapitalize="off" required>
-                        </p>
-                    </li>
-                    <!-- 이름 종료 -->
-                    <!-- 휴대전화 시작 -->
-                    <li class="member_join_list">
-                        <label class="input_label" for="mobile2">휴대전화</label>
-                        <label class="input_label_hidden input_label" for="mobile1">휴대전화 앞자리 선택</label>
-                        <label class="input_label_hidden input_label" for="mobile3">휴대전화 마지막 4자리</label>
-                        <p class="member_join_input_wrap">
-                            <select id="mobile1" class="mobile_select_box" name="mobile[]" fw-filter="isNumber"
-                                fw-label="휴대전화" fw-alone="N" fw-msg="" required>
-                                <option value="010" selected>010</option>
-                                <option value="011">011</option>
-                                <option value="016">016</option>
-                                <option value="017">017</option>
-                                <option value="018">018</option>
-                                <option value="019">019</option>
-                            </select>
-                            <input id="mobile2" class="input_box mobile_input_box" name="mobile[]" 
-                            title="휴대전화 가운데 4자리"
-                            maxlength="4"
-                                fw-filter="isNumber" pattern="[0-9]+" fw-label="휴대전화" fw-alone="N" fw-msg="" value=""
-                                type="tel" required>
-                            <input id="mobile3" class="input_box mobile_input_box" name="mobile[]" 
-                            title="휴대전화 뒷 4자리" maxlength="4"
-                                fw-filter="isNumber" pattern="[0-9]+" fw-label="휴대전화" fw-alone="N" fw-msg="" value=""
-                                type="tel" required>
-                            <!-- 휴대전화 인증 시작 -->
+                        <li class="member_join_list">
+                            <label class="input_label" for="member_id">아이디</label>
+                            <p class="member_join_input_wrap">
+                                <input id="member_id" name="member_id" title="아이디"
+                                    fw-filter="isFill&amp;isFill&amp;isMin[4]&amp;isMax[16]&amp;isIdentity"
+                                    fw-label="아이디" fw-msg="" class="inputTypeText input_box small_mobile_input" placeholder="" value=""
+                                    type="text" autofocus autocapitalize="off" required>
+                                <button type="button" class="btnBasic input_btn" onclick="checkId('')">중복 확인</button>
+                            <p id="idMsg" class="val_check_msg"></p>
+                            </p>
+                        </li>
+                        <!-- 아이디 끝 -->
+                        <!-- 비밀번호 시작 -->
+                        <li class="member_join_list">
+                            <label class="input_label" for="passwd">비밀번호</label>
+                            <p class="member_join_input_wrap">
+                                <input id="passwd" class="input_box small_mobile_input" name="passwd" title="비밀번호"
+                                    fw-filter="isFill&amp;isMin[4]&amp;isMax[16]" fw-label="비밀번호" fw-msg=""
+                                    autocomplete="off" maxlength="16" 0="disabled" value=""
+                                    placeholder="8~16자 영문, 숫자, 특수문자 중 3가지 이상" type="password" required>
+                            </p>
+                            <p class="member_join_input_wrap">
+                                <label class="input_label displaynone" for="user_passwd_confirm">비밀번호 확인</label>
+                                <input id="user_passwd_confirm" class="input_box small_mobile_input" name="user_passwd_confirm"
+                                    title="비밀번호 확인" fw-filter="isFill&amp;isMatch[passwd]" fw-label="비밀번호 확인"
+                                    fw-msg="비밀번호를 다시 한 번 확인해주세요." autocomplete="off" maxlength="16" 0="disabled"
+                                    value="" placeholder="비밀번호 확인" type="password" required>
+                            <p id="pwConfirmMsg" class="val_check_msg"></p>
+                            </p>
+                        </li>
+                        <!-- 비밀번호 확인 종료 -->
+                        <!-- 이름 시작 -->
+                        <li class="member_join_list">
+                            <label class="input_label" for="name">이름</label>
+                            <p class="member_join_input_wrap">
+                                <input type="text" name="name" id="name" class="input_box small_mobile_input" title="이름"
+                                    placeholder="이름 입력" maxlength="20" autocapitalize="off" required>
+                            </p>
+                        </li>
+                        <!-- 이름 종료 -->
+                        <!-- 휴대전화 시작 -->
+                        <li class="member_join_list">
+                            <label class="input_label" for="mobile2">휴대전화</label>
+                            <label class="input_label displaynone" for="mobile1">휴대전화 앞자리 선택</label>
+                            <label class="input_label displaynone" for="mobile3">휴대전화 마지막 4자리</label>
+                            <p class="member_join_input_wrap">
+                                <select id="mobile1" class="mobile_input_box" name="mobile[]" fw-filter="isNumber"
+                                    fw-label="휴대전화" fw-alone="N" fw-msg="" required>
+                                    <option value="010" selected>010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select>
+                                <input id="mobile2" class="input_box mobile_input_box" name="mobile[]"
+                                    title="휴대전화 가운데 4자리" maxlength="4" fw-filter="isNumber" pattern="[0-9]+"
+                                    fw-label="휴대전화" fw-alone="N" fw-msg="" value="" type="tel" required>
+                                <input id="mobile3" class="input_box mobile_input_box" name="mobile[]"
+                                    title="휴대전화 뒷 4자리" maxlength="4" fw-filter="isNumber" pattern="[0-9]+"
+                                    fw-label="휴대전화" fw-alone="N" fw-msg="" value="" type="tel" required>
+                                <!-- 휴대전화 인증 시작 -->
 
-                            <button type="button" id="{$btn_action_verify_mobile}" class="input_btn {$display_verify_mobile|display}" onclick="{$action_verify_mobile}">인증 받기</button>
-                        </p>
-                        <p class="val_check_msg gBlank5 {$bDisplayMobileVerifyInfoDefault|display}" id="{$result_send_verify_mobile_fail}"></p>
-                            <div class="member_join_input_wrap {$display_verify_mobile_confirm|display}" id="{$confirm_verify_mobile}" id="{$confirm_verify_mobile}">
+                                <button type="button" id="{$btn_action_verify_mobile}"
+                                    class="input_btn {$display_verify_mobile|display}"
+                                    onclick="{$action_verify_mobile}">인증 받기</button>
+                            </p>
+                            <p class="val_check_msg gBlank5 {$bDisplayMobileVerifyInfoDefault|display}"
+                                id="{$result_send_verify_mobile_fail}"></p>
+                            <div class="member_join_input_wrap {$display_verify_mobile_confirm|display}"
+                                id="{$confirm_verify_mobile}" id="{$confirm_verify_mobile}">
                                 <div class=" member_join_input_wrap verify">
-                                    <input id="verify_sms_number" name="verify_sms_number" fw-filter="isMax[15]" fw-label="verify_sms_number" fw-msg="" class="inputTypeText" maxlength="15" value="" type="text" placeholder="카카오톡 메시지를 확인해주세요">
+                                    <input id="verify_sms_number" name="verify_sms_number" fw-filter="isMax[15]"
+                                        fw-label="verify_sms_number" fw-msg="" class="inputTypeText small_mobile_input" maxlength="15"
+                                        value="" type="text" placeholder="카카오톡 메시지를 확인해주세요">
                                     <span class="time" id="expiryTime"></span>
                                 </div>
-                                <button type="button" class="input_btn btnNormal" id="{$btn_verify_mobile_confirm}" onclick="{$action_verify_mobile_confirm}">확인</button>
+                                <button type="button" class="input_btn btnNormal" id="{$btn_verify_mobile_confirm}"
+                                    onclick="{$action_verify_mobile_confirm}">확인</button>
                             </div>
-                        <!-- 휴대전화 인증 종료 -->
+                            <!-- 휴대전화 인증 종료 -->
 
-                    </li>
-                    <!-- 휴대전화 종료 -->
-                    <!-- 이메일 시작 -->
-                    <li class="member_join_list">
-                        <label class="input_label" for="email1">이메일</label>
-                        <p class="member_join_input_wrap">
-                            <input id="email1" class="input_box" name="email" 
-                            title="이메일" fw-filter="isFill&amp;isEmail"
-                                fw-label="이메일" fw-alone="N" fw-msg="" value="" type="email" autocomplete="on" autocapitalize="off" required>
-                            <button type="button" class="btnNormal input_btn" onclick="checkEmail('')">중복 확인</button>
-                        <p id="emailMsg" class="val_check_msg"></p>
-                        </p>
-                    </li>
-                    <!-- 이메일 종료 -->
-                    <!-- 별명 시작 -->
-                    <li class="member_join_list">
-                        <label class="input_label" for="nick_name">닉네임</label>
-                        <p class="member_join_input_wrap">
-                            <input id="nick_name" class="input_box" name="nick_name" 
-                            title="닉네임" fw-filter="isFill" fw-label="별명"
-                                fw-msg="" class="inputTypeText" placeholder="" maxlength="20" value="" type="text" autocapitalize="off"
-                                required>
-                        </p>
-                    </li>
-                    <!-- 별명 종료 -->
-                    <!-- 추천인아이디 시작 -->
-                    <li class="member_join_list">
-                        <label class="input_label" for="reco_id">추천인 아이디</label>
-                        <!-- <p class="input_info_txt">없을 시 공백, 입력하시면 바로 크루 등급이 됩니다.</p> -->
-                        <p class="member_join_input_wrap">
-                            <input id="reco_id" class="input_box"
-                            title="추천인 아이디" name="reco_id" fw-filter="" fw-label="추천인 ID"
-                                fw-msg="" class="inputTypeText" placeholder="" value="" type="text" autocapitalize="off"
-                                required>
-                        </p>
-                    </li>
-                    <!-- 추천인아이디 종료 -->
-
-
-                </ul>
-            </section>
-            <section id="member_agree_section">
-                <!-- 전체 동의 시작 -->
-                <div class="agreeAll">
-                    <div class="agreeArea_title">
-                        <input type="checkbox" id="sAgreeAllChecked" 
-                        title="모든 약관 동의" onchange="selectedAll(this)">
-                        <label for="sAgreeAllChecked" class="label_all">전체 동의하기</label>
-                    </div>
-                </div>
-                <!-- 전체 동의 종료 -->
-                <!-- 이용약관 동의 시작 -->
-                <details class="agreeArea_control agreeArea_service">
-                    <summary class="agreeArea_title">
-                        <input id="agree_service_check0"
-                        title="비보트 이용약관 동의"
-                        name="agree_service_check[]" fw-filter="/1/" fw-label="이용약관 동의"
-                            fw-msg="이용약관에 동의 하세요" class="ec-base-chk sAgreeAllChecked-chkbox" value="1" type="checkbox">
-                        <label for="agree_service_check0" class="check agreeArea_label">비보트 이용 약관
-                            <span>(필수)</span></label>
-                        <span class="agreeArea_arr"></span>
-
-                    </summary>
-                    <div class="contents">
-                        {$service_desc}
-                    </div>
-                </details>
-                <!-- 이용약관 동의 종료 -->
-                <!-- 개인정보취급방침 동의 시작 -->
-                <details class="agreeArea_control agreeArea_private">
-                    <summary class="agreeArea_title">
-                        <input id="agree_privacy_check0" title="개인정보 수집 동의" name="agree_privacy_check[]" fw-filter="/1/"
-                            fw-label="개인정보 수집 및 이용 방침" fw-msg="개인정보 수집 및 이용 방침에 동의하세요"
-                            class="ec-base-chk sAgreeAllChecked-chkbox" value="1" type="checkbox">
-                        <label for="agree_privacy_check0" class="check">개인정보처리방침 동의 <span>(필수)</span></label>
-                        <span class="agreeArea_arr"></span>
-
-                    </summary>
-                    <div class="contents">
-                        {$privacy_desc}
-                    </div>
-                </details>
-                <!-- 개인정보취급방침 동의 종료 -->
-                <!-- SNS / Email 수신 동의 시작 -->
-                <div class="agreeArea_marketing">
-                    <div class="agreeArea_title">
-                        <input type="checkbox" id="sMarketingAgreeAllChecked"
-                            class="ec-base-chk sAgreeAllChecked-chkbox" 
-                            title="마케팅 정보 수신 동의" onchange="selectedMarketingAll(this)">
-                        <label for="sMarketingAgreeAllChecked" class="check">혜택/이벤트 알림 수신 동의 <span>(선택)</span></label>
-                    </div>
-                    <ul class="agereeArea_marketing_list">
-                        <li class="agereeArea_marketing_sms">
-                            <input id="is_sms0" name="is_sms" 
-                            title="SMS 수신 동의" fw-label="is_sms" fw-msg=""
-                                class="ec-base-chk sAgreeAllChecked-chkbox sMarketingAgreeAllChecked-chkbox" value="T"
-                                type="checkbox">
-                            <label for="is_sms0">SMS 수신동의</label>
                         </li>
-                        <li class="agereeArea_marketing_mail">
-                            <input id="is_news_mail0" name="is_news_mail" 
-                            title="메일 수신 동의" fw-label="is_news_mail" fw-msg=""
-                                class="ec-base-chk sAgreeAllChecked-chkbox sMarketingAgreeAllChecked-chkbox" value="T"
-                                type="checkbox">
-                            <label for="is_news_mail0">이메일 수신동의</label>
+                        <!-- 휴대전화 종료 -->
+                        <!-- 이메일 시작 -->
+                        <li class="member_join_list">
+                            <label class="input_label" for="email1">이메일</label>
+                            <p class="member_join_input_wrap">
+                                <input id="email1" class="input_box" name="email" title="이메일"
+                                    fw-filter="isFill&amp;isEmail" fw-label="이메일" fw-alone="N" fw-msg="" value=""
+                                    type="email" autocomplete="on" autocapitalize="off" required>
+                                <button type="button" class="btnNormal input_btn" onclick="checkEmail('')">중복
+                                    확인</button>
+                            <p id="emailMsg" class="val_check_msg"></p>
+                            </p>
                         </li>
+                        <!-- 이메일 종료 -->
+                        <!-- 별명 시작 -->
+                        <li class="member_join_list">
+                            <label class="input_label" for="nick_name">닉네임</label>
+                            <p class="member_join_input_wrap">
+                                <input id="nick_name" class="input_box small_mobile_input" name="nick_name" title="닉네임" fw-filter="isFill"
+                                    fw-label="별명" fw-msg="" class="inputTypeText" placeholder="" maxlength="20" value=""
+                                    type="text" autocapitalize="off" required>
+                            </p>
+                        </li>
+                        <!-- 별명 종료 -->
+                        <!-- 추천인아이디 시작 -->
+                        <li class="member_join_list">
+                            <label class="input_label" for="reco_id">추천인 아이디</label>
+                            <p class="input_info_txt">없을 시 공백, 입력하시면 바로 크루 등급이 됩니다.<br>
+                            추천인 아이디는 가입 후 30일동안 입력하실 수 있습니다.
+                            </p>
+                            <p class="member_join_input_wrap">
+                                <input id="reco_id" class="input_box small_mobile_input" title="추천인 아이디" name="reco_id" fw-filter=""
+                                    fw-label="추천인 ID" fw-msg="" class="inputTypeText" placeholder="" value=""
+                                    type="text" autocapitalize="off" required>
+                            </p>
+                        </li>
+                        <!-- 추천인아이디 종료 -->
+
+
                     </ul>
+                </section>
+                <section id="member_agree_section">
+                    <!-- 전체 동의 시작 -->
+                    <div class="agreeAll">
+                        <div class="agreeArea_title">
+                            <input type="checkbox" id="sAgreeAllChecked" title="모든 약관 동의" onchange="selectedAll(this)">
+                            <label for="sAgreeAllChecked" class="label_all">전체 동의하기</label>
+                        </div>
+                    </div>
+                    <!-- 전체 동의 종료 -->
+                    <!-- 이용약관 동의 시작 -->
+                    <details class="agreeArea_control agreeArea_service">
+                        <summary class="agreeArea_title">
+                            <input id="agree_service_check0" title="비보트 이용약관 동의" name="agree_service_check[]"
+                                fw-filter="/1/" fw-label="이용약관 동의" fw-msg="이용약관에 동의 하세요"
+                                class="ec-base-chk sAgreeAllChecked-chkbox" value="1" type="checkbox">
+                            <label for="agree_service_check0" class="check agreeArea_label">비보트 이용 약관
+                                <span>(필수)</span></label>
+                            <span class="agreeArea_arr"></span>
 
-                </div>
-                <!-- SNS / Email 수신 동의 종료 -->
-            </section>
-            <!-- xans-member-join 종료 -->
+                        </summary>
+                        <div class="contents">
+                            {$service_desc}
+                        </div>
+                    </details>
+                    <!-- 이용약관 동의 종료 -->
+                    <!-- 개인정보취급방침 동의 시작 -->
+                    <details class="agreeArea_control agreeArea_private">
+                        <summary class="agreeArea_title">
+                            <input id="agree_privacy_check0" title="개인정보 수집 동의" name="agree_privacy_check[]"
+                                fw-filter="/1/" fw-label="개인정보 수집 및 이용 방침" fw-msg="개인정보 수집 및 이용 방침에 동의하세요"
+                                class="ec-base-chk sAgreeAllChecked-chkbox" value="1" type="checkbox">
+                            <label for="agree_privacy_check0" class="check">개인정보처리방침 동의 <span>(필수)</span></label>
+                            <span class="agreeArea_arr"></span>
+                        </summary>
+                        <div class="contents">
+                            {$privacy_desc}
+                        </div>
+                    </details>
+                    <!-- 개인정보취급방침 동의 종료 -->
+                    <!-- SNS / Email 수신 동의 시작 -->
+                    <div class="agreeArea_marketing">
+                        <div class="agreeArea_title">
+                            <input type="checkbox" id="sMarketingAgreeAllChecked"
+                                class="ec-base-chk sAgreeAllChecked-chkbox" title="마케팅 정보 수신 동의"
+                                onchange="selectedMarketingAll(this)">
+                            <label for="sMarketingAgreeAllChecked" class="check">혜택/이벤트 알림 수신 동의
+                                <span>(선택)</span></label>
+                        </div>
+                        <ul class="agereeArea_marketing_list">
+                            <li class="agereeArea_marketing_sms">
+                                <input id="is_sms0" name="is_sms" title="SMS 수신 동의" fw-label="is_sms" fw-msg=""
+                                    class="ec-base-chk sAgreeAllChecked-chkbox sMarketingAgreeAllChecked-chkbox"
+                                    value="T" type="checkbox">
+                                <label for="is_sms0">SMS 수신동의</label>
+                            </li>
+                            <li class="agereeArea_marketing_mail">
+                                <input id="is_news_mail0" name="is_news_mail" title="메일 수신 동의" fw-label="is_news_mail"
+                                    fw-msg=""
+                                    class="ec-base-chk sAgreeAllChecked-chkbox sMarketingAgreeAllChecked-chkbox"
+                                    value="T" type="checkbox">
+                                <label for="is_news_mail0">이메일 수신동의</label>
+                            </li>
+                        </ul>
 
-        </div>
-    </fieldset>
-
-
+                    </div>
+                    <!-- SNS / Email 수신 동의 종료 -->
+                </section>
+                <!-- xans-member-join 종료 -->
+            </div>
+        </fieldset>
+    </section>
 </article>
 <button type="submit" class="join_btn" onclick="memberJoinAction()">
     <p>가입 완료!</p>
 </button>
 <script>
-
     //동의 내 detail node->arr
     const agreeAreaNode = document.querySelectorAll(".agreeArea_control");
-    const agreeAreaControl = [...agreeAreaNode]
-    //detail 컨트롤
-
+    const agreeAreaControl = [...agreeAreaNode];
 
     //전체 동의 함수
     const selectAllChkbox = document.querySelector("#sAgreeAllChecked");
@@ -237,18 +231,15 @@
 
     //전체 동의 확인
     const selectedAll = (selectAll) => {
-
         //최상단 전체 동의 클릭 시 전체 동의
         sAgreeAllCheckedChkbox.forEach((checkbox) => {
             checkbox.checked = selectAll.checked;
         })
-
     }
 
     //마케팅 전체 동의 함수
     const selectedMarketingAll = (selectedMarketingAll) => {
         const sMarketingAgreeAllChecked = document.querySelectorAll(".sMarketingAgreeAllChecked-chkbox");
-
         // 마케팅 클릭 시 마케팅 동의
         sMarketingAgreeAllChecked.forEach((mtCheckbox) => {
             mtCheckbox.checked = selectedMarketingAll.checked;
@@ -259,13 +250,9 @@
     console.log("params", decodeURIComponent(params))
     let returnUrl = document.querySelector("#returnUrl");
     // const next_btn = document.querySelector(".btnSubmit");
-      console.log("next returnUrl" , returnUrl.value)
+    console.log("next returnUrl", returnUrl.value)
 
-     if(params != undefined){
+    if (params != undefined) {
         returnUrl.value = `/member/join_result.html${params}`;
     }
-
-
-
-    //세션 체크해서 추천인 숨기기 (기간 한 달)
 </script>

@@ -52,5 +52,15 @@
         .small_mobile_hide{
             display: none;
         }
+
+        .small_mobile_input{
+            &::placeholder {
+                font-size: 8px !important;
+            }
+        }
+        select{
+            padding: 3px !important;
+            font-size: 7px !important;
+        }
     }
 }
