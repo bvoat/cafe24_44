@@ -5,6 +5,7 @@ $bvt-blue: #022CFF;
 $bvt-bg-blue: #F9F9FE;
 $bvt-bg-lightblue: #FAFAFE;
 $bvt-lightblue: #ECECF4;
+$bvt-btn-lightblue: #ECF0F2;
 $bvt-darkgray: #707070;
 $bvt-second-darkgray: #8E8E8E;
 $bvt-lightgray: #C4C4C4;
@@ -29,6 +30,10 @@ $bvt-btn-shadow: 0px 3px 7px #70707027;
 
 
 //icon
+$off-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.582' height='7.194'%3E%3Cpath data-name='Icon ionic-ios-arrow-forward' d='M6.293 5.025 11.051.264a.9.9 0 0 1 1.27 0 .907.907 0 0 1 0 1.274L6.93 6.932a.9.9 0 0 1-1.24.026L.262 1.541A.9.9 0 1 1 1.532.268Z' fill='%23ababab'/%3E%3C/svg%3E");
+
+$on-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.194' height='12.582'%3E%3Cpath data-name='Icon ionic-ios-arrow-forward' d='M5.026 6.289.265 1.531a.9.9 0 0 1 0-1.27.907.907 0 0 1 1.274 0l5.394 5.391a.9.9 0 0 1 .026 1.24L1.542 12.32a.9.9 0 1 1-1.274-1.27Z' fill='%23ababab'/%3E%3C/svg%3E");
+
 $x-btn: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.426' height='13.423'%3E%3Cpath data-name='Icon ionic-ios-close' d='m8.304 6.711 4.8-4.8A1.124 1.124 0 0 0 11.515.327l-4.8 4.8-4.8-4.8A1.124 1.124 0 1 0 .331 1.911l4.8 4.8-4.8 4.8a1.124 1.124 0 0 0 1.584 1.584l4.8-4.8 4.8 4.8a1.124 1.124 0 1 0 1.584-1.584Z' fill='%23707070'/%3E%3C/svg%3E");
 
 $share-btn: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35'%3E%3Cg data-name='그룹 2024' transform='translate(-406 -606)'%3E%3Ccircle data-name='타원 717' cx='17.5' cy='17.5' r='17.5' transform='translate(406 606)' fill='%23f2f2f2'/%3E%3Cg data-name='Icon feather-share-2' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath data-name='패스 1743' d='M429.98 617.663a2.663 2.663 0 1 1-2.664-2.663 2.663 2.663 0 0 1 2.663 2.663Z'/%3E%3Cpath data-name='패스 1744' d='M419.327 623.877a2.663 2.663 0 1 1-2.664-2.663 2.663 2.663 0 0 1 2.664 2.663Z'/%3E%3Cpath data-name='패스 1745' d='M429.98 630.091a2.663 2.663 0 1 1-2.664-2.663 2.663 2.663 0 0 1 2.664 2.663Z'/%3E%3Cpath data-name='패스 1746' d='m418.962 625.218 6.063 3.535'/%3E%3Cpath data-name='패스 1747' d='m425.017 619.004-6.055 3.535'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -37,6 +42,16 @@ $wish-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wid
 
 $gift-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24.011' height='24.011'%3E%3Cg data-name='Icon feather-gift' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath data-name='패스 1738' d='M20.81 12.006v11.006H3.201V12.006'/%3E%3Cpath data-name='패스 1739' d='M1 6.503h22.011v5.5H1Z'/%3E%3Cpath data-name='패스 1740' d='M12.006 23.011V6.503'/%3E%3Cpath data-name='패스 1741' d='M12.002 6.5H7.053a2.751 2.751 0 0 1 0-5.5c3.849 0 4.949 5.5 4.949 5.5Z'/%3E%3Cpath data-name='패스 1742' d='M12.006 6.5h4.953a2.751 2.751 0 1 0 0-5.5c-3.853 0-4.953 5.5-4.953 5.5Z'/%3E%3C/g%3E%3C/svg%3E");
 
+$mileage-bar: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='428' height='2'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='.023' y1='.5' x2='1' y2='.5' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23f9f100'/%3E%3Cstop offset='.71' stop-color='%2332acef'/%3E%3Cstop offset='1' stop-color='%23022cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect data-name='사각형 2302' width='428' height='2' rx='1' fill='url(%23a)'/%3E%3C/svg%3E");
+
+$info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.625' height='14.625'%3E%3Cpath data-name='Icon ionic-md-information-circle' d='M7.313 0a7.313 7.313 0 1 0 7.312 7.313A7.316 7.316 0 0 0 7.313 0Zm.738 10.969H6.574V6.574h1.477Zm0-5.836H6.574V3.656h1.477Z' fill='%23707070'/%3E%3C/svg%3E");
+
+$info-iconblue: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.625' height='14.625'%3E%3Cpath data-name='Icon ionic-md-information-circle' d='M7.313 0a7.313 7.313 0 1 0 7.312 7.313A7.316 7.316 0 0 0 7.313 0Zm.738 10.969H6.574V6.574h1.477Zm0-5.836H6.574V3.656h1.477Z' fill='%23022cff'/%3E%3C/svg%3E");
+
+$stamp-board: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='59' height='59'%3E%3Ccircle data-name='타원 721' cx='29.5' cy='29.5' r='29.5' fill='%23f2f2fc'/%3E%3C/svg%3E") no-repeat center;
+
 $whole-stamp: url("https://bvoatofficial.cafe24.com/bvtIMG/icon/whole-stamp.png") no-repeat;
 
 $half-stamp: url("https://bvoatofficial.cafe24.com/bvtIMG/icon/half-stamp.png") no-repeat;
+
+$noactive-stamp: url("https://bvoatofficial.cafe24.com/bvtIMG/icon/whole-stamp-noactive.png") no-repeat;

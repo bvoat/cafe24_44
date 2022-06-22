@@ -34,3 +34,23 @@
         }
     }
 }
+
+// 위 아래 툴팁 애니메이션
+@mixin up-and-down-keyframe($start, $end) {
+    @keyframes up-and-down-item {
+        0% {transform: translateY($start);}
+        50% {transform: translateY($end);}
+        100% {transform: translateY($start);}
+    }
+}
+
+
+//미디어쿼리
+// 320px 아래의 기기 
+@mixin query-small-mobile {
+    @media (max-width: 320px) {
+        .small_mobile_hide{
+            display: none;
+        }
+    }
+}

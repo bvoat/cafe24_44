@@ -1,80 +1,93 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="path">
-    <span>현재 위치</span>
-    <ol>
-        <li><a href="/">홈</a></li>
-        <li title="현재 위치"><strong>로그인</strong></li>
-    </ol>
-</div>
-
-<div class="titleArea">
-    <h2>로그인</h2>
-</div>
-
-<div module="member_login" class="ec-base-box typeThin">
-    <!--@css(/css/module/member/login.css)-->
+<!--@css(../css/module/member/module/login.css)-->
+<article id="memberLogin" class="content">
     <!--
         $defaultReturnUrl = /index.html
-        $forbidIpUrl = member/adminFail.html
     -->
-    <div class="login">
-        <h3 class="boxTitle">회원로그인</h3>
+    <section id="memberLoginTitle">
+        <h1 class="displaynone">비보트 로그인</h1>
+        <h2>소비는 곧<br>세상에 던지는<br>투표니까요</h2>
+        <h3>가치소비가 쉬워지는 곳, 비보트</h3>
+    </section>
+    <section id="memberLoginField">
+        <h1 class="displaynone">로그인 폼</h1>
         <fieldset>
-            <legend>회원로그인</legend>
-            <label class="id ePlaceholder" title="{$login_id_type_text}">{$form.member_id}</label>
-            <label class="password ePlaceholder" title="비밀번호">{$form.member_passwd}</label>
-            <p class="security">
-                {$form.member_check_save_id}
-                {$form.member_check_secret_connect}
-            </p>
-            <a href="#none" class="btnLogin" onclick="{$action_func_login}">로그인</a>
-            <ul class="snsArea">
-                <li class="{$display_naver|display}">
-                    <a href="#none" onclick="{$naver_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_naver_login.gif" alt="네이버 로그인" /></a>
-                </li>
-                <li class="{$display_facebook|display}">
-                    <a href="#none" onclick="{$facebook_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_facebook_login.gif" alt="페이스북 로그인" /></a>
-                </li>
-                <li class="{$display_google|display}">
-                    <a href="#none" onclick="{$google_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_google_login.gif" alt="구글 로그인" /></a>
-                </li>
-                <li class="{$display_kakao|display}">
-                    <a href="#none" onclick="{$kakao_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_kakao_login.gif" alt="카카오계정 로그인" /></a>
-                </li>
-                <li class="{$display_line|display}">
-                    <a href="#none" onclick="{$line_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_line_login.gif" alt="LINE 로그인" /></a>
-                </li>
-                <li class="{$display_apple|display}">
-                    <a href="#none" onclick="{$apple_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_apple_login.gif" alt="Apple 로그인" /></a>
-                </li>
-                <li class="{$display_yahoojp|display}">
-                    <a href="#none" onclick="{$yahoojp_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_yahoo_login.gif" alt="Yahoo! 로그인" /></a>
-                </li>
-            </ul>
-            <ul>
-                <li><a href="/member/id/find_id.html">아이디찾기</a></li>
-                <li><a href="/member/passwd/find_passwd_info.html">비밀번호찾기</a></li>
-                <li><a href="/member/join.html">회원가입</a></li>
-            </ul>
-            <p class="link {$display_nomember|display}" id="noMemberWrap">
-                비회원님도 상품구매가 가능하나 다양한<br />회원혜택에서 제외됩니다.
-                <a href="{$returnUrl}" class="btnEm" onclick="{$action_nomember_order}">비회원구매</a>
-            </p>
-        </fieldset>
-    </div>
-</div>
+            <legend class="displaynone">회원로그인</legend>
+            <!-- xans-member-login -->
+            <div module="member_login" id="{$member_login_module_id}">
+                <section class="member_login_section">
+                    <ul class="input_form">
+                        <li class="member_login_list">
+                            <label for="member_id">아이디</label>
+                            <input id="member_id" name="member_id" fw-filter="isFill" fw-label="아이디" fw-msg=""
+                                class="inputTypeText" placeholder="아이디" value="" type="text" required>
+                        </li>
+                        <li class="member_login_list">
+                            <label for="member_passwd">비밀번호</label>
+                            <input id="member_passwd" name="member_passwd" fw-filter="isFill&amp;isMin[4]&amp;isMax[16]"
+                                fw-label="패스워드" fw-msg="" autocomplete="off" value="" type="password" placeholder="비밀번호"
+                                required>
+                        </li>
+                    </ul>
+                    <ul class="input_option">
+                        <li class="auto_login security save">
+                            <input id="use_login_keeping0" name="use_login_keeping" title="로그인 상태 유지" fw-filter=""
+                                fw-label="로그인상태유지" fw-msg="" value="T" type="checkbox">
+                            <label for="use_login_keeping0">로그인 상태 유지</label>
+                            {$form.member_check_save_id}
+                        </li>
+                    </ul>
+                    <button type="submit" class="login-submit" onclick="{$action_func_login}">로그인하기</button>
+                    <div class="login_section_bottom">
+                        <ul class="login_util">
+                            <li><a href="/member/id/find_id.html" class="btnLogin">아이디 찾기</a></li>
+                            <li><a href="/member/passwd/find_passwd_info.html" class="btnLogin">비밀번호 찾기</a></li>
+                            <li><a href="/member/join.html" class="btnLogin">회원 가입</a>
+                                <span class="login_util_tooltip small_mobile_hide">무료배송 쿠폰 지급</span>
+                            </li>
 
-<div module="MyShop_OrderHistoryNologin" class="ec-base-box typeThin">
-    <!--@css(/css/module/myshop/orderHistoryNologin.css)-->
-    <!--
-        $orderDetailUrl = /myshop/order/list.html
-    -->
-    <h3 class="boxTitle">비회원 로그인</h3>
-    <p>비회원의 경우, 주문시의 주문번호로 주문조회가 가능합니다.</p>
-    <dl class="ec-base-desc gBlank20">
-        <dt>{$form_label.order_name}</dt><dd>{$form.order_name}</dd>
-        <dt>{$form_label.order_id}</dt><dd>{$form.order_id}</dd>
-        <dt>{$form_label.order_password}</dt><dd>{$form.order_password}</dd>
-    </dl>
-    <p class="ec-base-button gColumn"><button type="submit" class="btnNormal sizeM">조회</button></p>
-</div>
+                        </ul>
+                        <ul class="login_sns">
+                            <h4>SNS 계정으로 로그인하기</h4>
+                            <section class="login_sns_icon_wrap">
+                                <li><a href="#none" class="btnKakao 1"
+                                        onclick="MemberAction.kakaosyncLogin('8d06e7b36f8d0b4e7496c6380453ff15')" title="카카오 로그인"><span>카카오
+                                            로그인</span></a></li>
+                                <li><a href="#none" class="btnNaver 1"
+                                        onclick="MemberAction.snsLogin('naver', '%2Findex.html')" title="네이버 로그인"><span>네이버
+                                            로그인</span></a>
+                                </li>
+                                <li><a href="#none" class="btnFacebook 1"
+                                        onclick="MemberAction.snsLogin('facebook', '%2Findex.html')" title="페이스북 로그인"><span>Facebook
+                                            로그인</span></a></li>
+                                <li><a href="#none" class="btnApple 1"
+                                        onclick="MemberAction.snsLogin('apple', '%2Findex.html')" title="애플 로그인"><span>Apple
+                                            로그인</span></a>
+                                </li>
+                            </section>
+                        </ul>
+                    </div>
+                    <a href="/member/login_nomember.html?noMemberOrder&returnUrl=%2Fmyshop%2Forder%2Flist.html"
+                        class="nomember_order">비회원 주문 조회</a>
+                </section>
+            </div>
+        </fieldset>
+    </section>
+</article>
+<script>
+    function toggle() {
+        document.getElementById(`basiclogin`).style.display = "block";
+        var location = document.getElementById(`basiclogin`).offsetTop;
+        window.scrollTo({ top: location, behavior: 'smooth' });
+    }
+
+    //return URL check code
+    let params = location.search;
+    const joinLink = document.querySelector(".join-link");
+
+    if (params != undefined) {
+        joinLink.href = `/member/join_agree.html?${params.substr(12)}`;
+    }
+
+
+</script>

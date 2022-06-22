@@ -5,7 +5,7 @@
 #bvt_container{
     position: relative;
     max-width: 450px;
-    min-width: 300px;
+    min-width: 200px;
     overflow-x: hidden;
     margin: 0 auto;
     box-sizing: border-box;
@@ -15,7 +15,7 @@
         display: block;
         z-index: 99;
         max-width: 450px;
-        min-width: 300px;
+        min-width: 200px;
         width: 100%;
         top: 0;
         background: #ffffff71;    
@@ -34,7 +34,7 @@
         display: block;
         z-index: 99;
         max-width: 450px;
-        min-width: 300px;
+        min-width: 200px;
         width: 100%;
         bottom: 0;
         background: $bvt-white;   
@@ -42,3 +42,5 @@
         overflow: hidden;
     }
 }
+
+@include query-small-mobile;

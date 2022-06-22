@@ -1,0 +1,241 @@
+@charset "utf-8";
+@import "../../../../layout/basic/css/abstracts/mixin";
+@import "../../../../layout/basic/css/abstracts/variables";
+
+:root{
+    --login-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/bvoat-logo-earthst.png") 
+}
+
+#memberLogin{
+    width: 100%;
+    max-width: 450px;
+    padding: 30px 11px;
+    #memberLoginTitle {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 100%;
+        max-width: 450px;
+        height: 195px;
+        text-align: center;
+        margin-bottom: 18px;
+        background: var(--login-bg) no-repeat center;
+        background-size: contain;
+        background-position-y: 65px;
+        h2 {
+            font-weight: 500;
+            font-size: 3rem;
+            letter-spacing: -1px;
+            line-height: 1.2em;
+        }
+        h3 {
+            margin-top: 15px;
+            font-weight: 300;
+            font-size: 1.4rem;
+            color: transparentize($bvt-black, 0.1);
+            letter-spacing: -0.5px;
+        }
+    }
+
+    #memberLoginField{
+        fieldset{
+            width: 100%;
+            max-width: 450px;
+            background: none;
+            border: none;
+            padding: 0;
+            .xans-member-login{
+                width: 100%;
+                max-width: 450px;
+                .member_login_section{
+                    .input_form{
+                        width: 100%;
+                        height: 106.9px;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: space-between;
+                        margin-bottom: 14.4px;
+                        .member_login_list{
+                            width: 100%;
+                            height: 50px;
+                            label{
+                                position: absolute;
+                                text-indent: -9999px;
+                            }
+                            input{
+                                display: block;
+                                width: 100%;
+                                height: 50px;
+                                padding: 12px 25px;
+                                border-radius: 90px;
+                                border: $bvt-input-border;
+                                font-size: 1.4rem;
+                                color: $bvt-darkgray;
+    
+                                &::placeholder {
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    color: $bvt-darkgray;
+                                    letter-spacing: -0.5px;
+                                }
+                            } 
+                        }
+                    }
+                    .input_option{
+                        margin-bottom: 20px;
+                        .auto_login{
+                            display: flex;
+                            flex-flow: row nowrap;
+                            align-items: center;                       
+                            input{
+                                display: block;
+                                width: 16px;
+                                height: 16px;
+                                cursor: pointer;
+                            }
+                            label{
+                                display: block;
+                                height: 18px;
+                                font-size: 1.25rem;
+                                font-weight: bold;
+                                color: $bvt-darkgray;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                    .login-submit{
+                        display: flex;
+                        width: 100%;
+                        height: 60px;
+                        align-items: center;
+                        align-content: center;
+                        justify-content: center;
+                        background-color: $bvt-blue;
+                        border: none;
+                        border-radius: 90px;
+                        color: $bvt-white;
+                        font-weight: 300;
+                        font-size: 1.3rem;
+                        cursor: pointer;
+                    }
+                    .login_section_bottom{
+                        .login_util{
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 23px 0 60px;
+                            li{
+                                margin-left: 18px;
+                                font-size: 1.3rem;
+                                font-weight: 300;
+                                a{
+                                    color: $bvt-darkgray;
+                                }
+                                &:nth-child(3){
+                                    position: relative;
+                                   a{ 
+                                       color:$bvt-blue; 
+                                       font-weight: 500;
+                                    }
+                                }
+                            }
+                            .login_util_tooltip{
+                                position: fixed;
+                                width: 190%;
+                                height: 24px;
+                                top: 27px;
+                                left: -23px;
+                                background: $bvt-black;
+                                font-size: 1.02rem;
+                                font-weight: 400;
+                                color: $bvt-white;
+                                text-align: center;
+                                line-height: 2.2em;
+                                border-radius: 4px;
+                                cursor: default;
+                                animation: up-and-down-item 1.2s ease-in-out infinite;
+
+                                &::after{
+                                    position: fixed;
+                                    display: block;
+                                    content: "";
+                                    width: 9px;
+                                    height: 9px;
+                                    background-color: $bvt-black;
+                                    top: -10%;
+                                    left: calc(50% - 4px);
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                        .login_sns{
+                            display: flex;
+                            width: 100%;
+                            flex-flow: column nowrap;
+                            align-items: center;
+                            box-shadow:  $bvt-shadow;
+                            border-radius: 7px;
+                            padding: 23px 0;
+                            h4{
+                                display: block;
+                                font-size: 13px;
+                                font-weight: 300;
+                                color: $bvt-darkgray;
+                            }
+                            .login_sns_icon_wrap{
+                                display: flex;
+                                flex-flow: row nowrap;
+                                justify-content: space-between;
+                                width: 192px;
+                                height: 44px;
+                                margin-top: 12px;
+                                li{
+                                    display: block;
+                                    width: 44px;
+                                    height: 44px;
+                                    cursor: pointer;
+                                    &:nth-child(1){
+                                        background: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/kakao-login-icon.png") no-repeat center;
+                                        background-size: contain;
+                                        text-indent: -9999px;
+                                    }
+                                    &:nth-child(2){
+                                        background: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/naver-login-icon.png") no-repeat center;
+                                        background-size: contain;
+                                        text-indent: -9999px;
+                                    }
+                                    &:nth-child(3){
+                                        background: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/facebook-login-icon.png") no-repeat center;
+                                        background-size: contain;
+                                        text-indent: -9999px;
+                                    }
+                                    &:nth-child(4){
+                                        background: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/apple-login-icon.png") no-repeat center;
+                                        background-size: contain;
+                                        text-indent: -9999px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .nomember_order{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 49px;
+                        background: $bvt-btn-lightblue;
+                        border-radius: 7px;
+                        margin-top: 17px;
+                        color: transparentize($bvt-darkgray,0.1);
+                        font-size: 1.2rem;
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include up-and-down-keyframe(-3%, 4%);

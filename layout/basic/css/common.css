@@ -26,6 +26,8 @@ legend,
 input,
 select,
 textarea,
+section,
+article,
 p,
 blockquote,
 th,
@@ -44,6 +46,9 @@ img {
     font-size: 62.5%;
     box-sizing: border-box;
     word-break: keep-all;
+    image-rendering: -webkit-optimize-contrast;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 html {
