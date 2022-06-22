@@ -4,103 +4,6 @@
   --like-icon-bk: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27.085' height='24.626'%3E%3Cpath data-name='패스 1748' d='M24.609 2.475a7.6 7.6 0 0 0-9.848-.754l-1.156 1.141-.387-.387A7.6 7.6 0 0 0 2.474 13.219l11.084 11.054L24.609 13.22a7.6 7.6 0 0 0 0-10.746ZM14.415 12.528c1.4.983 3.292 2.79 4.609 3.717l-4.609 4.73Zm-10.2 0-.527-.527a5.874 5.874 0 0 1 8.307-8.308l.667.666v16.583l-8.021-8.019Zm19.172-.527-3.322 3.238c-.961-.676-2.037-1.754-3.4-2.711-.551-.386-1.557-1.307-2.249-1.791V4.474a6.1 6.1 0 0 1 .649-.781 6.411 6.411 0 0 1 .8-.655 5.875 5.875 0 0 1 7.528 8.963Z' fill='%23292929' stroke='%23292929' stroke-width='.5'/%3E%3C/svg%3E");
 }
 
-#buyAction {
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  max-width: 450px;
-  height: 64px;
-  z-index: 100;
-  margin-left: -11px;
-  bottom: 0;
-}
-
-#buyAction button {
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-
-#buyAction .wish_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 15%;
-  height: 100%;
-  background: #ffffff;
-  color: #292929;
-  font-size: 1.15rem;
-}
-
-#buyAction .wish_btn::before {
-  display: block;
-  content: "";
-  width: 22px;
-  height: 22px;
-  background: var(--like-icon-bk) no-repeat;
-  background-size: contain;
-  padding-bottom: 7px;
-}
-
-#buyAction .gift_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 15%;
-  height: 100%;
-  background: #292929;
-  color: #ffffff;
-  font-size: 1.15rem;
-}
-
-#buyAction .gift_btn::before {
-  display: block;
-  content: "";
-  width: 22px;
-  height: 22px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24.011' height='24.011'%3E%3Cg data-name='Icon feather-gift' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath data-name='패스 1738' d='M20.81 12.006v11.006H3.201V12.006'/%3E%3Cpath data-name='패스 1739' d='M1 6.503h22.011v5.5H1Z'/%3E%3Cpath data-name='패스 1740' d='M12.006 23.011V6.503'/%3E%3Cpath data-name='패스 1741' d='M12.002 6.5H7.053a2.751 2.751 0 0 1 0-5.5c3.849 0 4.949 5.5 4.949 5.5Z'/%3E%3Cpath data-name='패스 1742' d='M12.006 6.5h4.953a2.751 2.751 0 1 0 0-5.5c-3.853 0-4.953 5.5-4.953 5.5Z'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
-  background-size: contain;
-  padding-bottom: 8px;
-}
-
-#buyAction .buy_btn {
-  width: 70%;
-  height: 100%;
-  background: #022CFF;
-  color: #ffffff;
-}
-
 #product_detail_top {
   position: relative;
 }
@@ -951,5 +854,103 @@
 #product_detail_bottom .detail_swiper_wrap #tab3 div .tab_prd_info .content > ul li div {
   font-size: 1.35rem;
   line-height: 1.8rem;
+}
+
+#buyAction {
+  position: -webkit-sticky;
+  position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100% + 22px);
+  max-width: 450px;
+  height: 64px;
+  z-index: 100;
+  margin-left: -11px;
+  bottom: 0;
+}
+
+#buyAction button {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+#buyAction .wish_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15%;
+  height: 100%;
+  background: #ffffff;
+  color: #292929;
+  font-size: 1.15rem;
+}
+
+#buyAction .wish_btn::before {
+  display: block;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: var(--like-icon-bk) no-repeat;
+  background-size: contain;
+  padding-bottom: 7px;
+}
+
+#buyAction .gift_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15%;
+  height: 100%;
+  background: #292929;
+  color: #ffffff;
+  font-size: 1.15rem;
+}
+
+#buyAction .gift_btn::before {
+  display: block;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24.011' height='24.011'%3E%3Cg data-name='Icon feather-gift' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath data-name='패스 1738' d='M20.81 12.006v11.006H3.201V12.006'/%3E%3Cpath data-name='패스 1739' d='M1 6.503h22.011v5.5H1Z'/%3E%3Cpath data-name='패스 1740' d='M12.006 23.011V6.503'/%3E%3Cpath data-name='패스 1741' d='M12.002 6.5H7.053a2.751 2.751 0 0 1 0-5.5c3.849 0 4.949 5.5 4.949 5.5Z'/%3E%3Cpath data-name='패스 1742' d='M12.006 6.5h4.953a2.751 2.751 0 1 0 0-5.5c-3.853 0-4.953 5.5-4.953 5.5Z'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
+  background-size: contain;
+  padding-bottom: 8px;
+}
+
+#buyAction .buy_btn {
+  width: 70%;
+  height: 100%;
+  background: #022CFF;
+  color: #ffffff;
 }
 /*# sourceMappingURL=detail.css.map */

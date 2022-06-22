@@ -6,6 +6,7 @@ body {
   max-width: 450px;
   min-width: 200px;
   overflow-x: hidden;
+  overflow-y: auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -19,6 +20,7 @@ body {
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding: 0;
 }
 
 body #header {

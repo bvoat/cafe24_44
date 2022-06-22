@@ -1,24 +1,15 @@
+
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(../css/module/product/module/detail.css)-->
-
 <!--
     $category_page = /product/list.html
     $project_page = /product/project.html
     $jointbuy_page = /product/jointbuy.html
 -->
+
 <!--@import(./buy_screen.html)-->
-
-
 <!-- 상품 정보 상단 -->
 <article id="product_detail_top" module="product_detail">
-    <!-- 상품 구매 탭 -->
-    <section id="buyAction" module="product_action">
-        <button class="wish_btn" alt="찜" onclick="{$action_wishlist}">찜</button>
-        <button class="gift_btn" onclick="toggleBuyScreen(`gift`);" alt="선물하기">선물하기</button>
-        <button class="buy_btn" onclick="toggleBuyScreen(`cart`);" alt="구매하기">구매하기</button>
-    </section>
-    <!-- 상품 구매 탭 -->
-
     <!-- 브랜드 -->
     <section class="product_brand">
         <h1 class="displaynone">브랜드 소개</h1>
@@ -233,7 +224,13 @@
     <!-- 상품 정보 하단 정보 -->
 </article>
 <!-- 상품 정보 하단 -->
-
+<!-- 상품 구매 탭 -->
+<section id="buyAction" module="product_action">
+    <button class="wish_btn" alt="찜" onclick="{$action_wishlist}">찜</button>
+    <button class="gift_btn" onclick="toggleBuyScreen(`gift`);" alt="선물하기">선물하기</button>
+    <button class="buy_btn" onclick="toggleBuyScreen(`cart`);" alt="구매하기">구매하기</button>
+</section>
+<!-- 상품 구매 탭 -->
 <!--@define(cmc_log)-->
 <script>
 
@@ -394,16 +391,16 @@
     }
     const shareBtn = document.querySelector("#shareBtn");
 
-
     //선물하기 / 구매하기 클릭
     const toggleBuyScreen = (type) => {
-        console.log("type", type)
         const buyScreen = document.getElementById("buyScreen");
         const buyScreenBox = document.getElementById("buy_screen_box");
-
         buyScreen.classList.toggle("displaynone");
         buyScreenBox.classList.toggle("displaynone");
         buyScreenBox.classList.toggle("screen_on");
+        //추가 스타일 처리
+        document.querySelector("body").style.overflow="hidden";
+        document.querySelector("header").style.zIndex="0";
     }
 
     /* 가격 할인가 확인 표시 */

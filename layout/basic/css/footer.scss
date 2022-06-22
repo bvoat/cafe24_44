@@ -6,8 +6,9 @@
 
 #footer {
     display: block;
-    width: 100%;
+    width: calc(100% + 22px);
     height: auto;
+    margin-left: -11px;
     padding: 33px 11px 93px 11px;
     background: $bvt-bg-blue;
 

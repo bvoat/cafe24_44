@@ -2,7 +2,7 @@
   
       let page_path = window.location.pathname;
       const bottom_menu = document.querySelectorAll(".bottom_menu");
-      const exclude_path = ["join.html"];
+      const exclude_path = ["join.html", "detail"];
 
       //bottom nav 아이콘 변경 함수
       const bottomIconControl = () => {
