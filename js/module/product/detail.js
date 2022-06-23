@@ -242,6 +242,31 @@ const createStamp = (salePrice,createStampPcsFromPrice) => {
     })
 }
 
+/* 가치태그 수신 */
+let prd_no = new URLSearchParams(location.search).get("product_no");
+
+const reciveTagDetail = (prd_no) => {
+    fetch(`https://bvoat-test.shop/products/tagdetail?no=${prd_no}`, {
+    method: 'GET', // 또는 'PUT'
+    headers: {
+        'Content-Type': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    })
+    .then((response) => response.json())
+    .then((data) => {
+    console.log('성공:', data);
+        data.forEach((tag)=>{
+            document.querySelector("#tag-box").insertAdjacentHTML("beforeend", `<div>${tag.emoji} ${tag.tag_name}</div>`)
+        })
+    })
+    .catch((error) => {
+    console.error('실패:', error);
+    });        
+}
+
+
+
 /* 최종 함수 실행 */
 //소비기록 컨트롤
 buyRecordFrameControl();
@@ -258,77 +283,78 @@ qnaControl();
 controlPriceStyle(priceArr);
 //스탬프 만들기
 createStamp(salePrice,createStampPcsFromPrice);
-
+//가치태그 수신
+reciveTagDetail(prd_no)
 
 /* cafe24 default */
 // Tab event
-$('#tabProduct a').on('click', function(e){
-    var oTarget = $(this).attr('href');
-    $(this).parent('li').addClass('selected').siblings().removeClass('selected');
+// $('#tabProduct a').on('click', function(e){
+//     var oTarget = $(this).attr('href');
+//     $(this).parent('li').addClass('selected').siblings().removeClass('selected');
 
-    $('#tabProduct a').each(function(){
-        var oSiblings = $(this).attr('href');
-        if (oTarget != oSiblings) {
-            $(oSiblings).hide();
-        } else {
-            $(oTarget).show();
-        }
-    });
-    removePagingArea(oTarget);
-});
+//     $('#tabProduct a').each(function(){
+//         var oSiblings = $(this).attr('href');
+//         if (oTarget != oSiblings) {
+//             $(oSiblings).hide();
+//         } else {
+//             $(oTarget).show();
+//         }
+//     });
+//     removePagingArea(oTarget);
+// });
 
 
-function removePagingArea(oTarget)
-{
-    if ($(oTarget).length < 1 && (oTarget != '#prdReview' || oTarget != '#prdQna')) return;
+// function removePagingArea(oTarget)
+// {
+//     if ($(oTarget).length < 1 && (oTarget != '#prdReview' || oTarget != '#prdQna')) return;
 
-    if ($(oTarget).css('display') == 'block') {
-        if (oTarget == '#prdReview') {
-            //var record = $('#prdReview .xans-record-', '.xans-product-review').first();
-            var record = $('.xans-record-', '.xans-product-review').first();
-            if (record.length < 1 || record.is(':not(:visible)')) {
-                $('.xans-product-reviewpaging').remove();
-             }
-         } else if (oTarget == '#prdQnA') {
-             //var record = $('#prdQnA .xans-record-', 'xans-product-qna').first();
-             var record = $('.xans-record-', '.xans-product-qna').first();
-             if (record.length < 1 || record.is(':not(:visible)')) {
-                 $('.xans-product-qnapaging').remove();
-             }
-         }
-     }
-}
+//     if ($(oTarget).css('display') == 'block') {
+//         if (oTarget == '#prdReview') {
+//             //var record = $('#prdReview .xans-record-', '.xans-product-review').first();
+//             var record = $('.xans-record-', '.xans-product-review').first();
+//             if (record.length < 1 || record.is(':not(:visible)')) {
+//                 $('.xans-product-reviewpaging').remove();
+//              }
+//          } else if (oTarget == '#prdQnA') {
+//              //var record = $('#prdQnA .xans-record-', 'xans-product-qna').first();
+//              var record = $('.xans-record-', '.xans-product-qna').first();
+//              if (record.length < 1 || record.is(':not(:visible)')) {
+//                  $('.xans-product-qnapaging').remove();
+//              }
+//          }
+//      }
+// }
 
-$(function() {
+// $(function() {
 
-    $('#actionCartClone, #actionWishClone, #actionBuyClone, #actionWishSoldoutClone').off().on('click', function() {
-        try {
-            var id = $(this).attr('id').replace(/Clone/g, '');
-            if (typeof(id) !== 'undefined') $('#' + id).trigger('click');
-            else return false;
-        } catch(e) {
-            return false;
-        }
-    });
+//     $('#actionCartClone, #actionWishClone, #actionBuyClone, #actionWishSoldoutClone').off().on('click', function() {
+//         try {
+//             var id = $(this).attr('id').replace(/Clone/g, '');
+//             if (typeof(id) !== 'undefined') $('#' + id).trigger('click');
+//             else return false;
+//         } catch(e) {
+//             return false;
+//         }
+//     });
 
-    function productDetailOrigin(){
-        var imgChk = $('#prdDetailContent').find('img').length;
-        if(imgChk <= 0){
-            $('#prdDetailBtn').remove();
-        }
-    }
-    productDetailOrigin();
+//     function productDetailOrigin(){
+//         var imgChk = $('#prdDetailContent').find('img').length;
+//         if(imgChk <= 0){
+//             $('#prdDetailBtn').remove();
+//         }
+//     }
+//     productDetailOrigin();
 
-    // Add Image
-    var oTarget = $('.xans-product-mobileimage ul li');
-    var oAppend = oTarget.first().children('p').clone();
+//     // Add Image
+//     var oTarget = $('.xans-product-mobileimage ul li');
+//     var oAppend = oTarget.first().children('p').clone();
 
-    oTarget.slice(1).each(function() {
-        var listHtml = $(this).html();
-        $(this).children().wrap(function() {
-            return '<p class="thumbnail">' + oAppend.html() + listHtml + '</p>';
-        });
+//     oTarget.slice(1).each(function() {
+//         var listHtml = $(this).html();
+//         $(this).children().wrap(function() {
+//             return '<p class="thumbnail">' + oAppend.html() + listHtml + '</p>';
+//         });
 
-        $(this).children('p').children('img').first().remove();
-    });
-});
+//         $(this).children('p').children('img').first().remove();
+//     });
+// });
