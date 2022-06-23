@@ -1,5 +1,5 @@
 :root {
-  --login-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/bvoat-logo-earthst.png") 
+  --login-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/bvoat-logo-earthst.png")
 ;
 }
 
@@ -157,7 +157,7 @@
   margin-left: 5px;
 }
 
-#memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login-submit {
+#memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_submit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,7 +175,7 @@
   border: none;
   border-radius: 90px;
   color: #ffffff;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.3rem;
   cursor: pointer;
 }
@@ -337,6 +337,147 @@
   color: rgba(112, 112, 112, 0.9);
   font-size: 1.2rem;
   font-weight: 200;
+}
+
+#noMemberLogin {
+  padding: 20px 0 60%;
+}
+
+#noMemberLogin #noMemberLoginTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 450px;
+  height: 195px;
+  text-align: center;
+  margin-bottom: 18px;
+  background: var(--login-bg) no-repeat center;
+  background-size: contain;
+  background-position-y: 65px;
+}
+
+#noMemberLogin #noMemberLoginTitle h2 {
+  font-weight: 500;
+  font-size: 3rem;
+  letter-spacing: -1px;
+  line-height: 1.2em;
+}
+
+#noMemberLogin #noMemberLoginTitle h3 {
+  margin: 15px 0;
+  font-weight: 300;
+  font-size: 1.4rem;
+  color: rgba(41, 41, 41, 0.9);
+  letter-spacing: -0.5px;
+}
+
+#noMemberLogin #noMemberLoginTitle p {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #022CFF;
+}
+
+#noMemberLogin #noMemberLoginField {
+  margin: 50px 11px;
+}
+
+#noMemberLogin #noMemberLoginField fieldset {
+  width: 100%;
+  max-width: 450px;
+  background: none;
+  border: none;
+  padding: 0 0 20px;
+}
+
+#noMemberLogin #noMemberLoginField fieldset > ul .nomem_login_input_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: 100%;
+}
+
+#noMemberLogin #noMemberLoginField fieldset > ul .nomem_login_input_wrap > label {
+  display: block;
+  height: 18px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #707070;
+  margin-left: 5px;
+}
+
+#noMemberLogin #noMemberLoginField fieldset > ul .nomem_login_input_wrap > input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 12px 25px;
+  margin: 8px 0;
+  border-radius: 90px;
+  border: 1px solid #C4C4C4;
+  font-size: 1.4rem;
+  color: #707070;
+}
+
+#noMemberLogin #noMemberLoginField fieldset > ul .nomem_login_input_wrap > input::-webkit-input-placeholder {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #707070;
+  letter-spacing: -0.5px;
+}
+
+#noMemberLogin #noMemberLoginField fieldset > ul .nomem_login_input_wrap > input:-ms-input-placeholder {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #707070;
+  letter-spacing: -0.5px;
+}
+
+#noMemberLogin #noMemberLoginField fieldset > ul .nomem_login_input_wrap > input::-ms-input-placeholder {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #707070;
+  letter-spacing: -0.5px;
+}
+
+#noMemberLogin #noMemberLoginField fieldset > ul .nomem_login_input_wrap > input::placeholder {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #707070;
+  letter-spacing: -0.5px;
+}
+
+#noMemberLogin #noMemberLoginField .nomem_login_submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #022CFF;
+  border: none;
+  border-radius: 90px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.3rem;
+  cursor: pointer;
 }
 
 @-webkit-keyframes up-and-down-item {

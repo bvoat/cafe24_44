@@ -1,11 +1,11 @@
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(../css/module/member/module/login.css)-->
 <article id="memberLogin" class="content">
+    <h1 class="displaynone">비보트 로그인</h1>
     <!--
         $defaultReturnUrl = /index.html
     -->
     <section id="memberLoginTitle">
-        <h1 class="displaynone">비보트 로그인</h1>
         <h2>소비는 곧<br>세상에 던지는<br>투표니까요</h2>
         <h3>가치소비가 쉬워지는 곳, 비보트</h3>
     </section>
@@ -37,7 +37,7 @@
                             {$form.member_check_save_id}
                         </li>
                     </ul>
-                    <button type="submit" class="login-submit" onclick="{$action_func_login}">로그인하기</button>
+                    <button type="submit" class="login_submit" onclick="{$action_func_login}">로그인하기</button>
                     <div class="login_section_bottom">
                         <ul class="login_util">
                             <li><a href="/member/id/find_id.html" class="btnLogin">아이디 찾기</a></li>

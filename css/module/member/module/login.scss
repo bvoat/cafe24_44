@@ -2,15 +2,16 @@
 @import "../../../../layout/basic/css/abstracts/mixin";
 @import "../../../../layout/basic/css/abstracts/variables";
 
-:root{
-    --login-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/bvoat-logo-earthst.png") 
+:root {
+    --login-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/bvoat-logo-earthst.png")
 }
 
-#memberLogin{
+#memberLogin {
     width: 100%;
     max-width: 450px;
     padding: 80px 11px;
     margin-top: -40px; //top_nav hide
+
     #memberLoginTitle {
         display: flex;
         flex-flow: column nowrap;
@@ -23,12 +24,14 @@
         background: var(--login-bg) no-repeat center;
         background-size: contain;
         background-position-y: 65px;
+
         h2 {
             font-weight: 500;
             font-size: 3rem;
             letter-spacing: -1px;
             line-height: 1.2em;
         }
+
         h3 {
             margin-top: 15px;
             font-weight: 300;
@@ -38,32 +41,37 @@
         }
     }
 
-    #memberLoginField{
-        fieldset{
+    #memberLoginField {
+        fieldset {
             width: 100%;
             max-width: 450px;
             background: none;
             border: none;
             padding: 0;
-            .xans-member-login{
+
+            .xans-member-login {
                 width: 100%;
                 max-width: 450px;
-                .member_login_section{
-                    .input_form{
+
+                .member_login_section {
+                    .input_form {
                         width: 100%;
                         height: 106.9px;
                         display: flex;
                         flex-flow: column nowrap;
                         justify-content: space-between;
                         margin-bottom: 14.4px;
-                        .member_login_list{
+
+                        .member_login_list {
                             width: 100%;
                             height: 50px;
-                            label{
+
+                            label {
                                 position: absolute;
                                 text-indent: -9999px;
                             }
-                            input{
+
+                            input {
                                 display: block;
                                 width: 100%;
                                 height: 50px;
@@ -72,29 +80,33 @@
                                 border: $bvt-input-border;
                                 font-size: 1.4rem;
                                 color: $bvt-darkgray;
-    
+
                                 &::placeholder {
                                     font-size: 1.3rem;
                                     font-weight: 300;
                                     color: $bvt-darkgray;
                                     letter-spacing: -0.5px;
                                 }
-                            } 
+                            }
                         }
                     }
-                    .input_option{
+
+                    .input_option {
                         margin-bottom: 20px;
-                        .auto_login{
+
+                        .auto_login {
                             display: flex;
                             flex-flow: row nowrap;
-                            align-items: center;                       
-                            input{
+                            align-items: center;
+
+                            input {
                                 display: block;
                                 width: 16px;
                                 height: 16px;
                                 cursor: pointer;
                             }
-                            label{
+
+                            label {
                                 display: block;
                                 height: 18px;
                                 font-size: 1.25rem;
@@ -104,7 +116,8 @@
                             }
                         }
                     }
-                    .login-submit{
+
+                    .login_submit {
                         display: flex;
                         width: 100%;
                         height: 60px;
@@ -115,33 +128,39 @@
                         border: none;
                         border-radius: 90px;
                         color: $bvt-white;
-                        font-weight: 300;
+                        font-weight: 400;
                         font-size: 1.3rem;
                         cursor: pointer;
                     }
-                    .login_section_bottom{
-                        .login_util{
+
+                    .login_section_bottom {
+                        .login_util {
                             display: flex;
                             flex-flow: row nowrap;
                             justify-content: center;
                             align-items: center;
                             margin: 23px 0 60px;
-                            li{
+
+                            li {
                                 margin-left: 18px;
                                 font-size: 1.3rem;
                                 font-weight: 300;
-                                a{
+
+                                a {
                                     color: $bvt-darkgray;
                                 }
-                                &:nth-child(3){
+
+                                &:nth-child(3) {
                                     position: relative;
-                                   a{ 
-                                       color:$bvt-blue; 
-                                       font-weight: 500;
+
+                                    a {
+                                        color: $bvt-blue;
+                                        font-weight: 500;
                                     }
                                 }
                             }
-                            .login_util_tooltip{
+
+                            .login_util_tooltip {
                                 position: absolute;
                                 width: 190%;
                                 height: 24px;
@@ -157,7 +176,7 @@
                                 cursor: default;
                                 animation: up-and-down-item 1.2s ease-in-out infinite;
 
-                                &::after{
+                                &::after {
                                     position: fixed;
                                     display: block;
                                     content: "";
@@ -170,48 +189,56 @@
                                 }
                             }
                         }
-                        .login_sns{
+
+                        .login_sns {
                             display: flex;
                             width: 100%;
                             flex-flow: column nowrap;
                             align-items: center;
-                            box-shadow:  $bvt-shadow;
+                            box-shadow: $bvt-shadow;
                             border-radius: 7px;
                             padding: 23px 0;
-                            h4{
+
+                            h4 {
                                 display: block;
                                 font-size: 13px;
                                 font-weight: 300;
                                 color: $bvt-darkgray;
                             }
-                            .login_sns_icon_wrap{
+
+                            .login_sns_icon_wrap {
                                 display: flex;
                                 flex-flow: row nowrap;
                                 justify-content: space-between;
                                 width: 192px;
                                 height: 44px;
                                 margin-top: 12px;
-                                li{
+
+                                li {
                                     display: block;
                                     width: 44px;
                                     height: 44px;
                                     cursor: pointer;
-                                    &:nth-child(1){
+
+                                    &:nth-child(1) {
                                         background: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/kakao-login-icon.png") no-repeat center;
                                         background-size: contain;
                                         text-indent: -9999px;
                                     }
-                                    &:nth-child(2){
+
+                                    &:nth-child(2) {
                                         background: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/naver-login-icon.png") no-repeat center;
                                         background-size: contain;
                                         text-indent: -9999px;
                                     }
-                                    &:nth-child(3){
+
+                                    &:nth-child(3) {
                                         background: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/facebook-login-icon.png") no-repeat center;
                                         background-size: contain;
                                         text-indent: -9999px;
                                     }
-                                    &:nth-child(4){
+
+                                    &:nth-child(4) {
                                         background: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/apple-login-icon.png") no-repeat center;
                                         background-size: contain;
                                         text-indent: -9999px;
@@ -220,7 +247,8 @@
                             }
                         }
                     }
-                    .nomember_order{
+
+                    .nomember_order {
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -229,13 +257,112 @@
                         background: $bvt-btn-lightblue;
                         border-radius: 7px;
                         margin-top: 17px;
-                        color: transparentize($bvt-darkgray,0.1);
+                        color: transparentize($bvt-darkgray, 0.1);
                         font-size: 1.2rem;
                         font-weight: 200;
                     }
                 }
             }
         }
+    }
+}
+
+
+#noMemberLogin {
+    padding: 20px 0 60%;
+    //높이 생성 위한 padding
+    #noMemberLoginTitle {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 100%;
+        max-width: 450px;
+        height: 195px;
+        text-align: center;
+        margin-bottom: 18px;
+        background: var(--login-bg) no-repeat center;
+        background-size: contain;
+        background-position-y: 65px;
+
+        h2 {
+            font-weight: 500;
+            font-size: 3rem;
+            letter-spacing: -1px;
+            line-height: 1.2em;
+        }
+        h3 {
+            margin: 15px 0;
+            font-weight: 300;
+            font-size: 1.4rem;
+            color: transparentize($bvt-black, 0.1);
+            letter-spacing: -0.5px;
+        }
+        p{
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: $bvt-blue;
+        }
+    }
+
+
+    #noMemberLoginField {
+        margin: 50px 11px;
+        fieldset {
+            width: 100%;
+            max-width: 450px;
+            background: none;
+            border: none;
+            padding: 0 0 20px;
+            >ul{
+                .nomem_login_input_wrap {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    width: 100%;
+                    >label {
+                        display: block;
+                        height: 18px;
+                        font-size: 1.25rem;
+                        font-weight: bold;
+                        color: $bvt-darkgray;
+                        margin-left: 5px;
+                    }
+                    >input {
+                        display: block;
+                        width: 100%;
+                        height: 50px;
+                        padding: 12px 25px;
+                        margin: 8px 0;
+                        border-radius: 90px;
+                        border: $bvt-input-border;
+                        font-size: 1.4rem;
+                        color: $bvt-darkgray;
+                        
+                        &::placeholder {
+                            font-size: 1.3rem;
+                            font-weight: 300;
+                            color: $bvt-darkgray;
+                            letter-spacing: -0.5px;
+                        }
+                    }
+                }
+            }
+        }
+        .nomem_login_submit {
+            display: flex;
+            width: 100%;
+            height: 60px;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            background-color: $bvt-blue;
+            border: none;
+            border-radius: 90px;
+            color: $bvt-white;
+            font-weight: 400;
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
     }
 }
 
