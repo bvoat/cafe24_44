@@ -255,4 +255,13 @@
     if (params != undefined) {
         returnUrl.value = `/member/join_result.html${params}`;
     }
+
+    /* 휴대전화 입력 4자리 포커스 이동*/
+
+    const mobile_left = document.querySelector("#mobile2");
+    const mobile_right = document.querySelector("#mobile3");
+
+    mobile_left.addEventListener("keyup", (e)=>{
+        e.currentTarget.value.length === 4 ? mobile_right.focus() : null;
+    })
 </script>
