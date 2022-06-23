@@ -1,0 +1,190 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(../css/module/member/module/modify.css)-->
+
+<article id="memberModify" module="member_edit">
+    <!--
+        $login_page = /member/login.html
+        $isRuleBasedAddrForm = T
+     -->
+    <section id="memberModifyTitle">
+        <h1 class="displaynone">회원 정보 수정 페이지</h1>
+        <h2>🤗 내 정보 수정</h2>
+    </section>
+    <section id="memberModifyField">
+        <fieldset>
+            <legend class="displaynone">회원 정보 수정</legend>
+            <div class="modify_form">
+                <section class="member_modify_section">
+                    <ul>
+                        <!-- 아이디 시작 -->
+                        <li class="member_modify_list">
+                            <label class="input_label" for="member_id">아이디</label>
+                            <p class="member_modify_input_wrap">
+                                <input id="member_id" name="member_id"
+                                    fw-filter="isFill&amp;isFill&amp;isMin[4]&amp;isMax[16]&amp;isIdentity"
+                                    fw-label="아이디" fw-msg="" class="inputTypeText" placeholder="" readonly="readonly"
+                                    value="" type="text">
+                            </p>
+                        </li>
+                        <!-- 아이디 끝 -->
+                        <!-- 비밀번호 시작 -->
+                        <li class="member_modify_list">
+                            <label class="input_label" for="passwd">비밀번호</label>
+                            <p class="input_info_txt">비밀번호와 비밀번호 재확인을 입력하셔야 회원정보 수정이 가능합니다.</p>
+                            <p class="member_modify_input_wrap">
+                                <input id="passwd" name="passwd" fw-filter="isFill&amp;isMin[4]&amp;isMax[16]" fw-label="비밀번호" fw-msg="" autocomplete="off" maxlength="16" 0="disabled" value="" 
+                                placeholder="비밀번호 입력" type="password">
+                            </p>
+                            <p class="member_modify_input_wrap">
+                                <label class="displaynone" for="input_label user_passwd_confirm">비밀번호 확인</label>
+                                <input id="user_passwd_confirm" name="user_passwd_confirm"
+                                    fw-filter="isFill&amp;isMatch[passwd]" fw-label="비밀번호 확인" fw-msg="비밀번호가 일치하지 않습니다."
+                                    autocomplete="off" maxlength="16" 0="disabled" value="" type="password"
+                                    placeholder="비밀번호 재확인">
+                            </p>
+                            <p id="{$pwConfirmMsg_id}" class="val_check_msg"></p>
+                            
+                        </li>
+                        <!-- 비밀번호 끝 -->
+                        <!-- 이름 시작 -->
+                        <li class="member_modify_list">
+                            <label class="input_label" for="name">이름</label>
+                            <p class="member_modify_input_wrap">
+                                {$form.name}</p>
+                        </li>
+                        <!-- 이름 끝 -->
+                        <!-- 휴대전화 시작 -->
+                        <li class="member_modify_list">
+                            <label class="input_label" for="mobile1">휴대전화</label>
+                            <p class="member_modify_input_wrap small_mobile_input">
+                                {$form.mobile}
+                                <button type="button" class="input_btn {$display_verify_mobile|display}"
+                                    id="{$btn_action_verify_mobile}" onclick="{$action_verify_mobile}">인증 받기</button>
+                            </p>
+                            <p class="val_check_msg {$bDisplayMobileVerifyInfoDefault|display}"
+                                id="{$result_send_verify_mobile_fail}"></p>
+                            <ul class="val_check_msg  {$bDisplayMobileVerifyInfoDefault|display}"
+                                id="{$result_send_verify_mobile_success}">
+                                <li>인증번호가 발송되었습니다.</li>
+                                <li>인증번호를 받지 못하셨다면 휴대폰 번호를 확인해 주세요.</li>
+                            </ul>
+                        </li>
+                        <!-- 휴대전화 끝 -->
+                        <!-- 인증번호 시작 -->
+                        <li class="member_modify_list" id="{$confirm_verify_mobile}">
+                            <label class="input_label" for="verify_sms_number">인증번호</label>
+                            <div class="verify member_modify_input_wrap">
+                                {$form.verify_sms_number}
+                                <span class="time" id="{$expiryTime}"></span>
+
+                                <button type="button" class="input_btn" id="{$btn_verify_mobile_confirm}"
+                                    onclick="{$action_verify_mobile_confirm}">확인</button>
+                            </div>
+                        </li>
+                        <!-- 인증번호 끝 -->
+                        <!-- 이메일 시작 -->
+                        <li class="member_modify_list">
+                            <label class="input_label" for="email1">이메일</label>
+                            <p class="member_modify_input_wrap">
+                                {$form.email}
+                            </p>
+                            <p id="emailMsg" class="val_check_msg"></p>
+                        </li>
+                        <!-- 이메일 끝 -->
+                        <!-- 별명 시작 -->
+                        <li class="member_modify_list">
+                            <label class="input_label" for="nick_name">닉네임</label>
+                            <p class="member_modify_input_wrap">
+                                {$form.nick_name}
+                            </p>
+                        </li>
+                        <!-- 별명 끝 -->
+                        <!-- 추천인 시작 -->
+                        <li class="member_modify_list">
+                            <label class="input_label" for="reco_id">추천인 아이디</label>
+                            <p class="member_modify_input_wrap">
+                                {$form.reco_id}</p>
+                        </li>
+                        <!-- 추천인 끝 -->
+                    </ul>
+                </section>
+                <section class="member_agree_section">
+                    <ul>
+                        <!-- SMS 수신여부 시작 -->
+                        <li class="member_modify_list {$display_is_sms|display}">
+                            <p class="input_label" for="is_sms1">SMS 수신여부</p>
+                            <p class="member_modify_input_wrap">
+                                {$form.is_sms}	
+                            </p>
+                        </li>
+                        <!-- SMS 수신여부 끝 -->
+                        <!-- 이메일 수신여부 시작 -->
+                        <li class="member_modify_list {$display_is_news_mail|display}">
+                            <p class="input_label" for="is_news_mail1">이메일 수신여부</p>
+                            <p class="member_modify_input_wrap">
+                                {$form.is_news_mail}	
+                            </p>
+                        </li>
+                        <!-- 이메일 수신여부 끝 -->
+                    </ul>
+                </section>
+            </div>
+        </fieldset>
+    </section>
+    <!-- <button class="modify_btn" onclick="{$action_func_join}">회원 정보 수정</button> -->
+    <button class="modify_btn" onclick="{$action_func_join}">회원 정보 수정</button> 
+    <button class="member_delete" 
+    onclick="{$action_func_del}">회원 탈퇴</button>
+</article>
+
+<script>
+
+    /* 휴대전화 입력 4자리 포커스 이동*/
+
+    const mobile_left = document.querySelector("#mobile2");
+    const mobile_right = document.querySelector("#mobile3");
+
+    mobile_left.addEventListener("keyup", (e)=>{
+        e.currentTarget.value.length === 4 ? mobile_right.focus() : null;
+    })
+
+    /* 추천인 수정 제한 조건 30일*/
+    //세션 확인
+    let join_day = new Date(JSON.parse(sessionStorage.getItem("member_1")).data.created_date);
+    let today = new Date();
+    const current_date = 24 * 60 * 60 * 1000;// 시 * 분 * 초 * 밀리세컨
+
+    let diff_date = parseInt((today - join_day) / current_date)
+    console.log("가입한지 " + diff_date + " 일")
+
+    //가입한지 30일 지나면 추천인 아이디에 displaynone
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const reco_id = document.querySelector("#reco_id");
+        if (diff_date > 30) {
+            reco_id.setAttribute("readonly", true)
+            reco_id.parentNode.insertAdjacentHTML('afterend', '<p class="input_info_txt">추천인은 가입일 이후 30일 동안 입력할 수 있습니다.</p>')
+            reco_id.style.background="#00000008";
+            reco_id.style.cursor="not-allowed";
+
+        }
+    });
+
+    /* 비밀번호 입력 확인 */
+    // const pwd = document.querySelector("#passwd");
+    // const pwd_check = document.querySelector("#user_passwd_confirm");
+    // const submit_btn = document.querySelector(".modify_btn");
+
+    // submit_btn.addEventListener("click", () => {
+    //     if(pwd.value != undefined && pwd.value.length != 0 && 
+    //     pwd_check.value != undefined && pwd.value.length != 0){
+    //         memberEditAction()
+    //     } else {
+    //         alert("회원 정보 수정을 위해 비밀번호를 입력해주세요.") ; 
+    //         return false;
+    //     }
+    // })
+
+
+    
+</script>

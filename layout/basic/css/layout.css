@@ -54,6 +54,10 @@ body #bvtContainer #bvtContents {
   height: max-content;
   max-width: 450px;
   min-width: 200px;
+  min-height: 100vh;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
   padding: 80px 11px 0;
 }
 
