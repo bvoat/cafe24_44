@@ -30,7 +30,7 @@
       //bottom nav 숨김 함수 
       const bottomHideControl = (_pathArr, _path) => {
         _pathArr.map((path)=>{
-          _path.includes(path)? document.querySelector("#bottom").classList.add("displaynone") : null
+          _path.includes(path)? document.querySelector("#bvtBottom").classList.add("displaynone") : null
         });
       }
       

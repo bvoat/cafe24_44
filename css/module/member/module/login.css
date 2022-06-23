@@ -6,7 +6,8 @@
 #memberLogin {
   width: 100%;
   max-width: 450px;
-  padding: 70px 11px 30px;
+  padding: 80px 11px;
+  margin-top: -40px;
 }
 
 #memberLogin #memberLoginTitle {
@@ -216,7 +217,7 @@
 }
 
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_util .login_util_tooltip {
-  position: fixed;
+  position: absolute;
   width: 190%;
   height: 24px;
   top: 27px;

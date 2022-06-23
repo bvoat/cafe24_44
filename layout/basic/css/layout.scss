@@ -4,48 +4,59 @@
 
 body{
     position: relative;
-    display: flex;
-    max-width: 450px;
-    min-width: 200px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    box-sizing: border-box;
+    width: 100%;
+    height: auto;
     padding: 0;
-    #header{
-        position: sticky;
-        display: block;
-        z-index: 99;
+    overflow-x: hidden;
+
+    #bvtContainer{
+        position: relative;
         max-width: 450px;
         min-width: 200px;
-        width: 100%;
-        top: 0;
-        background: #ffffff71;    
-        backdrop-filter: blur(80px) brightness(150%);
-        overflow: hidden;
+        height: max-content;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-between;
         margin: 0 auto;
-    }
-    #contents{
-        width: 100%;
-        height: auto;
-        max-width: 450px;
-        min-width: 200px;
-        padding: 0 11px;
-    }
-    #bottom{
-        position: sticky;
-        display: block;
-        z-index: 99;
-        max-width: 450px;
-        min-width: 200px;
-        width: 100%;
-        bottom: 0;
-        background: $bvt-white;   
-        box-shadow: $bvt-top-shadow;
-        overflow: hidden;
+        box-sizing: border-box;
+        padding: 0;
+
+        #bvtHeader{
+            position: fixed;
+            display: block;
+            max-width: 450px;
+            min-width: 200px;
+            width: 100%;
+            height: fit-content;
+            top: 0;
+            background: #ffffff71;    
+            backdrop-filter: blur(80px) brightness(150%);
+            margin: 0 auto;
+            z-index: 99;
+            padding: 0;
+        }
+        #bvtContents{
+            width: 100%;
+            height: max-content;
+            max-width: 450px;
+            min-width: 200px;
+            padding: 80px 11px 0;
+        }
+        .bvt_content_header{
+            padding: 41px 11px 0;
+        }
+        #bvtBottom{
+            position: sticky;
+            display: block;
+            z-index: 99;
+            width: 100%;
+            max-width: 450px;
+            min-width: 200px;
+            height: 64px;
+            bottom: 0;
+            background: $bvt-white;   
+            box-shadow: $bvt-top-shadow;
+        }
     }
 }
 

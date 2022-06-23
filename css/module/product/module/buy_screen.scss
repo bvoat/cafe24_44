@@ -13,13 +13,12 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    width:100vw;
-    margin-left: calc(-50vw + 50% - 11px);
+    width: 100vw;
     height: 100vh;
-    margin-top: -40px;
+    top: 0;
+    left: 0;
     overflow: hidden;
     background: transparentize($bvt-black, 0.7);
-    // background-color: black;
     z-index: 99999;
 
     .screen_on {
@@ -40,8 +39,7 @@
         bottom: 0;
         z-index: 999;
         padding: 11px;
-        overflow-y: auto;
-        overflow-x: hidden;
+        overflow: hidden;
         font-size: 1.4rem;
         font-weight: 300;
 
@@ -69,7 +67,8 @@
         }
 
         .buy_screen_payment {
-            height: 50%;
+            width: 100%;
+            height: 40%;
             padding: 11px;
             overflow-y: auto;
             margin: 11px 0;
@@ -142,6 +141,7 @@
             position: fixed;
             width: 100%;
             max-width: 450px;
+            height: 49%;
             padding: 22px 22px 61px 22px;
             margin-left: -11px;
             bottom: 0;
@@ -207,7 +207,7 @@
             #NaverChk_Button {
                 display: flex;
                 justify-content: center;
-                margin: 15px 0;
+                margin-bottom: 15px;
             }
 
             .product_action {

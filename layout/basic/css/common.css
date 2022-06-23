@@ -46,10 +46,6 @@ img {
     font-size: 62.5%;
     box-sizing: border-box;
     word-break: keep-all;
-    image-rendering: -webkit-optimize-contrast;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    min-inline-size: 0 !important;
 }
 
 html {
@@ -88,7 +84,6 @@ fieldset {
     vertical-align:top;  */
     border: 0;
     image-rendering: -webkit-optimize-contrast;
-    transform: translateZ(0);
     backface-visibility: hidden;
 }
 
@@ -163,8 +158,11 @@ summary{
 iframe{
     width: 100%;
     height: auto;
-    border: none;
-    
+    border: none;   
+}
+
+fieldset{
+    min-inline-size: 0 !important;
 }
 /* 드래그 시 노란색 표시 */
 

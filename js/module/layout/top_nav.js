@@ -15,9 +15,13 @@
   const controlHideTabNav = () => {
     // console.log("page_path",page_path)
     const topNav = document.querySelector("#top_nav");
+    const contents = document.getElementById("bvtContents");
     const exceptPath = ['myshop', 'member', 'detail'];
+
     exceptPath.forEach((dir)=>{
-      window.location.pathname.includes(dir) ? topNav.classList.add("displaynone") : null;
+      if(window.location.pathname.includes(dir)) {
+        topNav.classList.add("displaynone");
+      };
     })
     
 
