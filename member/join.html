@@ -12,7 +12,7 @@
             <legend class="displaynone">회원가입</legend>
             <!-- xans-member-join -->
             <div module="member_join">
-                <section id="member_join_section">
+                <section class="member_join_section">
                     <ul>
                         <!--
                         $returnUrl = /member/join_result.html
@@ -20,7 +20,6 @@
                         -->
 
                         <!-- 아이디 시작 -->
-
                         <li class="member_join_list">
                             <label class="input_label" for="member_id">아이디</label>
                             <p class="member_join_input_wrap">
@@ -40,8 +39,9 @@
                                 <input id="passwd" class="input_box small_mobile_input" name="passwd" title="비밀번호"
                                     fw-filter="isFill&amp;isMin[4]&amp;isMax[16]" fw-label="비밀번호" fw-msg=""
                                     autocomplete="off" maxlength="16" 0="disabled" value=""
-                                    placeholder="8~16자 영문, 숫자, 특수문자 중 3가지 이상" type="password" required>
+                                    placeholder="{$passwd_type_desc}" type="password" required>
                             </p>
+                            
                             <p class="member_join_input_wrap">
                                 <label class="input_label displaynone" for="user_passwd_confirm">비밀번호 확인</label>
                                 <input id="user_passwd_confirm" class="input_box small_mobile_input" name="user_passwd_confirm"
@@ -123,7 +123,7 @@
                             <label class="input_label" for="nick_name">닉네임</label>
                             <p class="member_join_input_wrap">
                                 <input id="nick_name" class="input_box small_mobile_input" name="nick_name" title="닉네임" fw-filter="isFill"
-                                    fw-label="별명" fw-msg="" class="inputTypeText" placeholder="" maxlength="20" value=""
+                                    fw-label="별명" fw-msg="" class="inputTypeText" placeholder="한글 2~10자 / 영문 대소문자 4~20자 / 숫자 혼용가능" maxlength="20" value=""
                                     type="text" autocapitalize="off" required>
                             </p>
                         </li>
@@ -145,7 +145,7 @@
 
                     </ul>
                 </section>
-                <section id="member_agree_section">
+                <section class="member_agree_section">
                     <!-- 전체 동의 시작 -->
                     <div class="agreeAll">
                         <div class="agreeArea_title">

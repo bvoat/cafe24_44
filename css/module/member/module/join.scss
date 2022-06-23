@@ -35,7 +35,7 @@
                 width: 100%;
                 max-width: 450px;
                 .xans-member-join {
-                    #member_join_section {
+                    .member_join_section {
                         >ul {
                             display: flex;
                             flex-flow: column nowrap;
@@ -148,7 +148,7 @@
                             }
                         }
                     }
-                    #member_agree_section {
+                    .member_agree_section {
                         display: flex;
                         flex-flow: column nowrap;
                         justify-content: start;

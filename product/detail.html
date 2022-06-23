@@ -395,12 +395,14 @@
     const toggleBuyScreen = (type) => {
         const buyScreen = document.getElementById("buyScreen");
         const buyScreenBox = document.getElementById("buy_screen_box");
+        const bodyCont = document.querySelector("body");
+        const headerCont = document.querySelector("#header");
         buyScreen.classList.toggle("displaynone");
         buyScreenBox.classList.toggle("displaynone");
         buyScreenBox.classList.toggle("screen_on");
         //추가 스타일 처리
-        document.querySelector("body").style.overflow="hidden";
-        document.querySelector("header").style.zIndex="0";
+        bodyCont.classList.toggle("overhidden");
+        headerCont.classList.toggle("zindexzero");
     }
 
     /* 가격 할인가 확인 표시 */

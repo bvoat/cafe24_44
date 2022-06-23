@@ -301,7 +301,12 @@ div.layerProgress {
 .displaynone {
     display: none;
 }
-
+.overhidden {
+    overflow: hidden !important;
+}
+.zindexzero {
+    z-index: 0 !important;
+}
 
 .dimmed {
     position: fixed;
