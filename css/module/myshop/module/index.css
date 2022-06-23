@@ -20,6 +20,7 @@
   width: 100%;
   max-width: 450px;
   padding: 0 11px;
+  margin-top: -40px;
 }
 
 #mypageWrap .mypage_info_wrap {
@@ -262,6 +263,8 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  height: 60px;
+  margin-bottom: 19px;
 }
 
 #mypageWrap .mypage_benefit_wrap .mypage_benefit_bottom .mypage_stamp_txt {
@@ -272,14 +275,14 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 64px;
-  margin-bottom: 20px;
+  width: auto;
+  height: 60px;
 }
 
 #mypageWrap .mypage_benefit_wrap .mypage_benefit_bottom .mypage_stamp_txt > li:nth-child(1) {
@@ -291,6 +294,7 @@
 #mypageWrap .mypage_benefit_wrap .mypage_benefit_bottom .mypage_stamp_txt > li:nth-child(2) {
   font-size: 1.9rem;
   font-weight: 600;
+  letter-spacing: -0.2px;
 }
 
 #mypageWrap .mypage_benefit_wrap .mypage_benefit_bottom .mypage_stamp_list {
@@ -309,7 +313,6 @@
           align-items: center;
   width: 303px;
   height: 58px;
-  margin-bottom: 19px;
 }
 
 #mypageWrap .mypage_benefit_wrap .mypage_benefit_bottom .mypage_stamp_list > li {

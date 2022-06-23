@@ -308,9 +308,15 @@
                                     font-weight: bold;
                                     font-size: 14px;
                                     color: $bvt-darkgray;
-                                    span {
+                                    >span {
                                         font-weight: lighter;
                                         color: $bvt-darkgray;
+                                    }
+                                    >p{
+                                        margin-top: 3px;
+                                        color: $bvt-lightgray;
+                                        font-weight: 300;
+                                        font-size: 1.2rem;
                                     }
                                 }
                                 input {
@@ -325,8 +331,6 @@
                                 flex-flow: row nowrap;
                                 margin-left: 50px;
                                 align-items: center;
-                                align-content: center;
-                                vertical-align: middle;
                                 li {
                                     display: flex;
                                     flex-flow: row nowrap;
@@ -337,12 +341,12 @@
                                         display: inline-block;
                                         width: 15px;
                                         height: 15px;
-                                        margin-right: 6px;
+                                        margin: 20px 6px 0 0;
                                         cursor: pointer;
                                     }
                                     label {
                                         display: inline-block;
-                                        margin-right: 20px;
+                                        margin: 20px 20px 0 0;
                                         color: $bvt-darkgray;
                                         font-weight: 100;
                                         vertical-align: middle;

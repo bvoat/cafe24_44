@@ -4,11 +4,13 @@
         $url = /member/login.html
     -->
 </div>
+
 <!--@css(../css/module/myshop/module/index.css)-->
 <article id="mypageWrap" class="mypage_wrap">
     <h1 class="displaynone">마이페이지</h1>
     <section class="mypage_info_wrap" module="myshop_benefit">
         <h2 class="displaynone">내 정보</h2>
+        <input id="member_id" name="member_id" type="hidden" value="{$member_id}" />
         <section class="mypage_info_top">
             <ul class="mypage_info">
                 <li class="myinfo_img" title="프로필 사진"><img src="https://bvoat.shop/images/new_img/ico__11.png" /></li>
@@ -46,12 +48,12 @@
                 <li>가치 스탬프</li>
                 <li><em class="my_stamp_pcs">🙂 -개</em></li>
             </ul>
-            <ol class="mypage_stamp_list">
-                <li><span class="my_stamp stamp0">1개</span></li>
-                <li><span class="my_stamp stamp1">2개</span></li>
-                <li><span class="my_stamp stamp2">3개</span></li>
-                <li><span class="my_stamp stamp3">4개</span></li>
-                <li><span class="my_stamp stamp4">5개</span></li>
+            <ol class="mypage_stamp_list stamp_list">
+                <li><span class="stamp_node stamp0">1개</span></li>
+                <li><span class="stamp_node stamp1">2개</span></li>
+                <li><span class="stamp_node stamp2">3개</span></li>
+                <li><span class="stamp_node stamp3">4개</span></li>
+                <li><span class="stamp_node stamp4">5개</span></li>
             </ol>
         </section>
         <section class="mypage_stamp_info">
@@ -72,5 +74,52 @@
 </article>
 
 <script>
+/*  stamp 수신 */
+let voter_identity = document.querySelector("#member_id").value;
+//스탬프 이미지 DOM 출력 
+const displayStampImg = (stamp) => {
+        //스탬프 표시
+        let stampList = document.querySelectorAll(".stamp_node");
+        //스탬프 이미지 표시
+        let i = 0;
+        if(Number.isInteger(stamp)){
+            while(i < stamp){
+                stampList[i].classList.add("whole_stamp");
+                i++;
+            }
+        }else if(!Number.isInteger(stamp)){
+            while(i < stamp){
+                stampList[i].classList.add("whole_stamp");
+                i++;
+            }
+            stampList[Math.floor(stamp)].classList.add("half_stamp");
+        }
+}
+const reciveVoterStamp = (voterID,displayStampImg) => {
+    fetch(`https://bvoat-test.shop/myshop/stamp?id=${voterID}`, {
+    method: 'GET', // 또는 'PUT'
+    headers: {
+        'Content-Type': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    })
+    .then((response) => response.json())
+    .then((res) => {
+        console.log('성공:', res)
+        console.log(res.success)
+        if(res.success){
+            let stamp_node = document.querySelector(".my_stamp_pcs");
+            let stamp_num = res.data[0].stamp;
+            stamp_num < 5 ? stamp_node.innerHTML = `🙂 ${stamp_num}개` : stamp_num = 5 ? stamp_node.innerHTML = `🥳 5개` : stamp_node.innerHTML = `🙂 -개`;
+            displayStampImg(stamp_num)
+        }
+    })
+    .catch((error) => {
+    console.error('실패:', error);
+    });        
+}
+
+reciveVoterStamp(voter_identity,displayStampImg)
+
 
 </script>

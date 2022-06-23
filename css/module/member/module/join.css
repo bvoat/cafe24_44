@@ -407,9 +407,16 @@
   color: #707070;
 }
 
-#memberJoin #memberJoinField fieldset form .xans-member-join .member_agree_section .agreeArea_marketing .agreeArea_title label span {
+#memberJoin #memberJoinField fieldset form .xans-member-join .member_agree_section .agreeArea_marketing .agreeArea_title label > span {
   font-weight: lighter;
   color: #707070;
+}
+
+#memberJoin #memberJoinField fieldset form .xans-member-join .member_agree_section .agreeArea_marketing .agreeArea_title label > p {
+  margin-top: 3px;
+  color: #C4C4C4;
+  font-weight: 300;
+  font-size: 1.2rem;
 }
 
 #memberJoin #memberJoinField fieldset form .xans-member-join .member_agree_section .agreeArea_marketing .agreeArea_title input {
@@ -430,9 +437,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  vertical-align: middle;
 }
 
 #memberJoin #memberJoinField fieldset form .xans-member-join .member_agree_section .agreeArea_marketing .agereeArea_marketing_list li {
@@ -456,13 +460,13 @@
   display: inline-block;
   width: 15px;
   height: 15px;
-  margin-right: 6px;
+  margin: 20px 6px 0 0;
   cursor: pointer;
 }
 
 #memberJoin #memberJoinField fieldset form .xans-member-join .member_agree_section .agreeArea_marketing .agereeArea_marketing_list li label {
   display: inline-block;
-  margin-right: 20px;
+  margin: 20px 20px 0 0;
   color: #707070;
   font-weight: 100;
   vertical-align: middle;

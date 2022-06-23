@@ -63,3 +63,22 @@
         }
     }
 }
+
+//스탬프
+@mixin stamp-variation{
+    .whole_stamp{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $whole-stamp;
+        background-size: contain;
+
+    }
+    .half_stamp{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $half-stamp;
+        background-size: contain;
+    }
+}

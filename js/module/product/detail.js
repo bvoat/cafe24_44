@@ -210,7 +210,7 @@ const displayStampTxt = (productStamp) => {
 //스탬프 이미지 DOM 출력 
 const displayStampImg = (productStamp) => {
         //스탬프 표시
-        let stampList = document.querySelectorAll(".prd_stamp");
+        let stampList = document.querySelectorAll(".stamp_node");
         //스탬프 이미지 표시
         let i = 0;
         if(Number.isInteger(productStamp)){

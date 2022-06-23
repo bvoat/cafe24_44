@@ -15,7 +15,7 @@
   top: 0;
   left: 0;
   background: rgba(41, 41, 41, 0.3);
-  z-index: 1000;
+  z-index: 100000;
 }
 
 #basketLayer .layer_basket {
@@ -36,7 +36,7 @@
   bottom: 0;
   width: 100%;
   max-width: 450px;
-  height: 30%;
+  height: 340px;
   border: 0;
   background: #ffffff;
   overflow: hidden;
@@ -64,13 +64,13 @@
   height: 190px;
 }
 
-#basketLayer .layer_basket .basket_wrap .Order_prdList {
+#basketLayer .layer_basket .basket_wrap > ul {
   width: 100%;
   max-width: 450px;
   height: 180px;
 }
 
-#basketLayer .layer_basket .basket_wrap .Order_prdList .basket_item {
+#basketLayer .layer_basket .basket_wrap > ul .basket_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,28 +87,28 @@
   height: 100%;
 }
 
-#basketLayer .layer_basket .basket_wrap .Order_prdList .basket_item > a {
+#basketLayer .layer_basket .basket_wrap > ul .basket_item > a {
   display: block;
   border-radius: 6px;
   overflow: hidden;
 }
 
-#basketLayer .layer_basket .basket_wrap .Order_prdList .basket_item > ul {
+#basketLayer .layer_basket .basket_wrap > ul .basket_item > ul {
   text-align: center;
 }
 
-#basketLayer .layer_basket .basket_wrap .Order_prdList .basket_item > ul .name {
+#basketLayer .layer_basket .basket_wrap > ul .basket_item > ul .name {
   font-size: 1.2rem;
   font-weight: 500;
 }
 
-#basketLayer .layer_basket .basket_wrap .Order_prdList .basket_item > ul .option {
+#basketLayer .layer_basket .basket_wrap > ul .basket_item > ul .option {
   font-size: 1.2rem;
   font-weight: 300;
   color: #707070;
 }
 
-#basketLayer .layer_basket .basket_wrap .Order_prdList .basket_item > ul .price {
+#basketLayer .layer_basket .basket_wrap > ul .basket_item > ul .price {
   font-size: 1.2rem;
   font-weight: 500;
   margin-top: 5px;
@@ -117,7 +117,7 @@
 #basketLayer .layer_basket .basket_wrap .progressbar {
   width: 100%;
   height: 5px;
-  bottom: 58px;
+  bottom: 61px;
   left: 0;
 }
 

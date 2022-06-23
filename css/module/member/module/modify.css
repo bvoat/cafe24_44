@@ -291,6 +291,22 @@
   cursor: pointer;
 }
 
+#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list .val_check_msg {
+  word-wrap: break-word;
+  word-break: keep-all;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #C4C4C4;
+  margin: 3px 0 0 3px;
+}
+
+#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list .input_info_txt {
+  font-size: 1.25rem;
+  color: #022CFF;
+  letter-spacing: -0.3px;
+  margin: -5px 0 6px 1px;
+}
+
 #memberModify .modify_btn {
   position: -webkit-sticky;
   position: sticky;

@@ -149,8 +149,9 @@
                                     color: $bvt-blue;
                                     word-break: keep-all;
                                     cursor: pointer;
-                                }    
+                                }
                             }
+
                             // 에러메시지
                             .val_check_msg {
                                 word-wrap: break-word;
@@ -215,6 +216,24 @@
                                     height: 18px;
                                     cursor: pointer;
                                 }
+
+                            }
+
+                            // 에러메시지
+                            .val_check_msg {
+                                word-wrap: break-word;
+                                word-break: keep-all;
+                                font-size: 1.2rem;
+                                font-weight: bold;
+                                color: $bvt-lightgray;
+                                margin: 3px 0 0 3px;
+                            }
+
+                            .input_info_txt {
+                                font-size: 1.25rem;
+                                color: $bvt-blue;
+                                letter-spacing: -0.3px;
+                                margin: -5px 0 6px 1px;
                             }
                         }
                     }
