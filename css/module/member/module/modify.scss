@@ -9,7 +9,7 @@
     width: 100%;
     max-width: 450px;
     padding: 23px 11px;
-
+    margin-top: -40px;//top_nav hide
     #memberModifyTitle {
         display: flex;
         flex-flow: column nowrap;
@@ -262,11 +262,18 @@
         cursor: pointer;
     }
 
-    .member_delete {
+    .member_delete_btn {
         display: block;
         background: transparentize($bvt-black, 1);
         text-align: center;
         text-decoration: underline;
         margin: 20px 0;
+        color: $bvt-darkgray;
+        transition: all .5s;
+        &:hover{
+            font-weight: 600;
+            color: $bvt-lightgray;
+            transition: all .5s;
+        }
     }
 }

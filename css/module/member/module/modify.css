@@ -12,6 +12,7 @@
   width: 100%;
   max-width: 450px;
   padding: 23px 11px;
+  margin-top: -40px;
 }
 
 #memberModify #memberModifyTitle {
@@ -334,11 +335,21 @@
   cursor: pointer;
 }
 
-#memberModify .member_delete {
+#memberModify .member_delete_btn {
   display: block;
   background: rgba(41, 41, 41, 0);
   text-align: center;
   text-decoration: underline;
   margin: 20px 0;
+  color: #707070;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+#memberModify .member_delete_btn:hover {
+  font-weight: 600;
+  color: #C4C4C4;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 /*# sourceMappingURL=modify.css.map */

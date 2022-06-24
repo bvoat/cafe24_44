@@ -1,12 +1,12 @@
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(../css/module/product/module/list.css)-->
 
-<article id="product_list">
+<article id="productList">
 <!-- 카테고리 타이틀 -->
-<div module="product_headcategory" class="product_category_title">
+<section module="product_headcategory" class="product_category_title">
     <h1 data-category="{$title_text}">가치소비 {$title_text} 추천</h1>
     <h2></h2>
-</div>
+</section>
 <!-- 카테고리 타이틀 -->
 
 <!-- 추천 상품 진열 -->
@@ -15,7 +15,7 @@
 <!-- 추천 상품 진열 -->
 
 <!-- 하위 카테고리 -->
-<div module="Product_menupackage" class="product_menupackage subCategorySwiper">
+<section module="Product_menupackage" class="product_menupackage subCategorySwiper">
     <ul class="menuCategory swiper-wrapper">
         <li class="{$selected} menuCategory_list_all swiper-slide">
             <a href="" title="전체보기 {$link_product_list_sub}">ALL</a>
@@ -24,11 +24,11 @@
             <a href="{$link_product_list_sub}" title="{$link_product_list_sub}">{$category_name} </a>
         </li>
     </ul>
-</div>
+</section>
 <!-- 하위 카테고리 -->
 
 <!-- 상품 정렬 select-->
-<div id="product_normalmenu">
+<section id="product_normalmenu">
     <select id="selArray" name="selArray" module="product_Orderby">
         <option value="?cate_no=102&amp;sort_method=5#Product_ListMenu">신상품 순</option>
         <option value="?cate_no=102&amp;sort_method=1#Product_ListMenu">상품명 순</option>
@@ -37,7 +37,7 @@
         <option value="?cate_no=102&amp;sort_method=6#Product_ListMenu">인기상품 순</option>
     </select>
     <label for="selArray">▾</label>
-</div>
+</section>
 <!-- 상품 정렬 select -->
 
 <!-- 상품 목록 -->
