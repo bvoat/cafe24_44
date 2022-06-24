@@ -5,22 +5,23 @@ const category_title = document.querySelector(".product_category_title");
 //h1에서 data category 받아오기
 const category = document.querySelector(".product_category_title > h1").dataset
   .category;
-//h2 생성
-let heading_two = document.createElement("h2");
 // 멘트 객체
 const description = {
   패션: "책임 있는 소비와 생산, 지속 가능한 패션 어때요?",
   식품: "공장식 축산업 문제, 기후 위기 해결에 투표하세요.",
   뷰티: "식물성으로 만든 순하디 순한 비건 뷰티로 갈아탈 때",
   리빙: "오히려 좋아, 오히려 편해! 친환경 리빙 가보자고!",
+  All: "발견해요, 가치있게 대체할 것"
 };
 
 //카테고리 별로 h2 변경
 const makeHeadingTwo = (category, description) => {
-  let find = description[category];
-  let heading_description = document.createTextNode(find);
-  heading_two.appendChild(heading_description);
-  category_title.appendChild(heading_two);
+  if(category != undefined){
+    let find = description[category];
+    category_title.insertAdjacentHTML('beforeend',`<h2>${find}</h2>`)
+  } else {
+    category_title.insertAdjacentHTML('beforeend',`<h2>${description['All']}</h2>`)
+  }
 };
 makeHeadingTwo(category, description);
 
