@@ -1,36 +1,25 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="path">
-    <span>현재 위치</span>
-    <ol>
-        <li><a href="/">홈</a></li>
-        <li title="현재 위치"><strong>비밀번호 찾기</strong></li>
-    </ol>
-</div>
+<!--@css(/css/module/member/module/find.css)-->
 
-<div class="titleArea">
-    <h2>비밀번호 찾기</h2>
-</div>
-
-<div module="member_findpasswdresult" class="ec-base-box typeThin">
-    <!--@css(/css/module/member/find_passwd_result.css)-->
-    <div class="findPw">
-        <h3 class="boxTitle">비밀번호 찾기</h3>
-        <div class="desc">
-            <p class="{$display_email_method|display}">임시 비밀번호가 고객님 메일로 전송되었습니다.</p>
-            <p class="{$display_mobile_method|display}">임시 비밀번호가<br /> 고객님 휴대폰 번호로 전송되었습니다.</p>
-        </div>
-        <div class="ec-base-box typeMember gMessage">
-            <strong class="message">저희 쇼핑몰을 이용해주셔서 감사합니다.</strong>
-            <div class="information">
-                <p class="thumbnail"><img src="//img.echosting.cafe24.com/skin/base/member/img_member_default.gif" alt="" /></p>
-                <p class="description">
-                    <span class="{$display_id_method|display}"><strong class="txtEm">{$id}</strong> 회원님, </span>임시 비밀번호를<br />
-                    <strong class="txtEm"><span class="{$display_email_method|display}">{$email}</span><span class="{$display_mobile_method|display}">{$mobile}</span></strong>으로 보내드렸습니다.
+<article id="findPwdIdResult" class="find_article">
+    <section id="findPwdIdResultTitle" class="find_title">
+        <h1 class="displaynone">비밀번호 찾기</h1>
+        <h2>비밀번호 찾기</h2>
+        <h3>보내드린 비밀번호를 확인하세요.</h3>
+    </section>
+    <section id="findPwdIdResultInfo" class="find_form" module="member_findpasswdresult">
+        <ul class="findPw">
+            <li class="find_method">
+                <p>보터님,</p>
+                <p class="{$display_email_method|display}">임시 비밀번호를 등록하신 <span>이메일</span>로 보내드렸어요.</p>
+                <p class="{$display_mobile_method|display}">임시 비밀번호를 등록하신 <span>휴대폰 번호</span>로 보내드렸어요.</p>
+                <p>
+                    <span class="{$display_email_method|display}">{$email}</span>
+                    <span class="{$display_mobile_method|display}">{$mobile}</span>
+                    로<br> 보내드린 비밀번호를 확인하시고 <br>로그인 해주세요.
                 </p>
-            </div>
-        </div>
-        <div class="ec-base-button gBlank20">
-            <a href="/member/login.html" class="btnSubmitFix sizeM">로그인</a>
-        </div>
-    </div>
-</div>
+            </li>
+        </ul>
+        <a class="login_btn" href="/member/login.html" >로그인</a>
+    </section>
+</article>

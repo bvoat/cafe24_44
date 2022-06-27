@@ -96,7 +96,7 @@ const displayStampImg = (stamp) => {
         }
 }
 const reciveVoterStamp = (voterID,displayStampImg) => {
-    fetch(`https://bvoat-test.shop/myshop/stamp?id=${voterID}`, {
+    fetch(`https://bvoat-test.shop/stamp?id=${voterID}`, {
     method: 'GET', // 또는 'PUT'
     headers: {
         'Content-Type': 'application/json',
@@ -109,8 +109,10 @@ const reciveVoterStamp = (voterID,displayStampImg) => {
         console.log(res.success)
         if(res.success){
             let stamp_node = document.querySelector(".my_stamp_pcs");
-            let stamp_num = res.data[0].stamp;
-            stamp_num < 5 ? stamp_node.innerHTML = `🙂 ${stamp_num}개` : stamp_num = 5 ? stamp_node.innerHTML = `🥳 5개` : stamp_node.innerHTML = `🙂 -개`;
+            let stamp_num = res.data.stamp;
+            console.log('stamp_num: ', stamp_num);
+            stamp_num < 5 ? stamp_node.innerHTML = `🙂 ${stamp_num}개` : stamp_num => 5 ? stamp_node.innerHTML = `🥳 5개` : stamp_node.innerHTML = `🙂 -개`;
+            
             displayStampImg(stamp_num)
         }
     })
@@ -118,8 +120,6 @@ const reciveVoterStamp = (voterID,displayStampImg) => {
     console.error('실패:', error);
     });        
 }
-
 reciveVoterStamp(voter_identity,displayStampImg)
-
 
 </script>

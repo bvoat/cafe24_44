@@ -1,1 +1,88 @@
 <!--@layout(/layout/basic/layout.html)-->
+<!--@css(../css/module/product/module/category.css)-->
+
+<article id="category">
+    <section id="categoryTitle">
+        <h1 class="displaynone">비보트 카테고리</h1>
+        <h1>Guide</h1>
+        <h2>발견해요, 가치있게 대체할 것</h2>
+    </section>
+    <section id="categorySwiper">
+        <div class="category_pagination"></div>
+        <ul class="category_cont swiper-wrapper">
+            <li class="category_product_wrap swiper-slide">
+                <ul class="category_product ">
+                </ul>
+            </li>
+            <li class="category_tag_wrap swiper-slide">
+                <ul class="category_tag">
+                </ul>
+            </li>
+        </ul>
+    </section>
+</article>
+<!--@import(/layout/basic/footer.html)-->
+<!--@js(../js/module/layout/category.js)-->
+<script>
+    const categorization = ['상품별 카테고리', '가치별 카테고리'];
+    var swiper = new Swiper("#categorySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 1,
+        centeredSlides: true,
+        pagination: {
+          el: ".category_pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return `<span class="swiper-pagination-bullet">
+                <span class="tab_custom" data-index="${index}" role="button" aria-label=${categorization[index]}> ${categorization[index]}</span>
+            </span>
+            `;
+        },
+        },
+    });
+    // const createdParentCategory = () => {
+    //     let parentCategoryArray = [];
+    //     let allCategory = [];
+
+    //     fetch(`/exec/front/Product/SubCategory`, {
+    //     method: 'GET', // 또는 'PUT'
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //         'Content-Type': 'application/x-www-form-urlencoded',
+    //     },
+    //     })
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //         if (data === null || data === 'undefined') return false;
+    //         data.forEach((el) => {
+    //             if(!parentCategoryArray.includes(el.parent_cate_no)) {
+    //                 parentCategoryArray.push(el.parent_cate_no);
+    //             };
+    //         });
+    //         parentCategoryArray.forEach((el)=>{
+    //             let tmpCateInfo = {
+    //                 parent : '',
+    //                 cate : []
+    //             }
+    //             tmpCateInfo.parent = el;
+    //             allCategory.push(tmpCateInfo)
+    //         });
+    //         data.forEach((el,i)=>{
+    //             allCategory.forEach((cate)=>{
+    //                 if(cate.parent === el.parent_cate_no){
+    //                     cate.cate.push(el)
+    //                 }
+    //             })
+    //         })
+    //     })
+    //     return allCategory;
+    // }
+    // let resultParentCategory = createdParentCategory();
+    // console.log("resultParentCategory",resultParentCategory)
+    
+    // const category_product = document.querySelector(".category_product");
+    // const category_tag = document.querySelector(".category_tag");
+
+
+    // console.log(resultParentCategory.length);
+</script>

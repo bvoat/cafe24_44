@@ -74,20 +74,3 @@
         </fieldset>
     </section>
 </article>
-<script>
-    function toggle() {
-        document.getElementById(`basiclogin`).style.display = "block";
-        var location = document.getElementById(`basiclogin`).offsetTop;
-        window.scrollTo({ top: location, behavior: 'smooth' });
-    }
-
-    //return URL check code
-    let params = location.search;
-    const joinLink = document.querySelector(".join-link");
-
-    if (params != undefined) {
-        joinLink.href = `/member/join_agree.html?${params.substr(12)}`;
-    }
-
-
-</script>

@@ -1,0 +1,26 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/member/module/find.css)-->
+
+<article id="findPwdId" class="find_article">
+    <section id="findPwdIdTitle" class="find_title">
+        <h1 class="displaynone">비밀번호 변경</h1>
+        <h2>비밀번호 변경</h2>
+        <h3>아래 정보를 입력해주세요
+        </h3>
+    </section>
+    <section id="findPwdIdForm" class="find_form" module="member_changepasswd">
+            <fieldset>
+                {$form.enc_password}
+                {$form.returnUrl}
+                <legend class="displaynone">비밀번호 변경</legend>
+                <ul class="ec-base-desc gSmall">
+                    <li class="find_input_wrap"><label for="" class="input_label">아이디</label><span>{$member_id}</span></li>
+                    <li class="find_input_wrap"><label for="passwd" class="input_label">현재 비밀번호</label>{$form.passwd}</li>
+                    <li class="find_input_wrap"><label for="new_passwd" class="input_label">새 비밀번호</label>{$form.new_passwd}<span class="txtInfo gBlank5">{$passwd_type_desc}</span>
+                        </li>
+                    <li class="find_input_wrap"><label for="new_passwd_confirm" class="input_label">새 비밀번호 확인</label>{$form.new_passwd_confirm}</li>
+                </ul>
+            </fieldset>
+            <button class="find_btn" onclick="{$change_password_action}">비밀번호 변경하기</button>
+    </section>
+</article>

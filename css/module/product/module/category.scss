@@ -1,0 +1,90 @@
+@charset "utf-8";
+@import "../../../../layout/basic/css/abstracts/mixin";
+@import "../../../../layout/basic/css/abstracts/variables";
+
+#category{
+    width: 100%;
+    max-width: 450px;
+    padding: 23px 0;
+    margin-top: 0px;//top_nav hide
+    #categoryTitle {
+        margin-bottom: 18px;
+        h2 {
+            font-weight: 600;
+            font-size: 2.2rem;
+            font-family: 'Jost';
+        }
+        h3 {
+            font-weight: 300;
+            font-size: 1.4rem;
+            color: $bvt-darkgray;
+        }
+    }
+    #categorySwiper{
+        width: calc(100% + 22px);
+        max-width: 450px;
+        height: 100%;
+        margin-left: -11px;
+        background: saddlebrown;
+        overflow: hidden;
+        .category_pagination{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 60px;
+            .swiper-pagination-bullet{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                height: 100%;
+                border-radius: 25px 25px 0 0;
+                background: transparentize($bvt-black, 1);
+                top:12px;
+                .tab_custom{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+            }
+            .swiper-pagination-bullet-active{
+                background: red;
+            }
+        }
+        .category_cont{
+            width: 100%;
+            max-width: 450px;
+            background: salmon;
+            height: 100vh;
+            border-radius: 20px;
+            box-shadow: $bvt-shadow;
+
+            .category_product_wrap{
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 100%;
+                height: 100%;
+                padding: 50px 25px;
+                >ul{
+                    >li{
+                        font-size: 2.1rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .category_tag_wrap{
+
+            }
+        }
+        .category_tag{
+            width: 100%;
+            max-width: 450px;
+            height: 100vh;
+            background: sandybrown;
+        }
+    }
+}

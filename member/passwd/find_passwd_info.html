@@ -2,18 +2,25 @@
 <!--@css(/css/module/member/module/find.css)-->
 <article id="findPwdId" class="find_article">
     <section id="findPwdIdTitle" class="find_title">
-        <h1 class="displaynone">아이디 찾기</h1>
-        <h2>아이디 찾기</h2>
+        <h1 class="displaynone">비밀번호 찾기</h1>
+        <h2>비밀번호 찾기</h2>
         <h3>아래 정보를 입력해주세요
         </h3>
     </section>
-    <section id="findPwdIdForm" class="find_form" module="member_findid">
-    <!--
-        $returnURL = /member/id/find_id_result.html
+    <section id="findPwdIdForm" class="find_form" module="member_findpasswd">
+        <!--
+        $nextURL = /member/passwd/find_passwd_question.html 
      -->
         <fieldset>
-            <legend class="displaynone">아이디</legend>
+            <legend class="displaynone">비밀번호 찾기 1단계 정보 입력</legend>
             <ul>
+                <li class="find_input_wrap member"><label class="input_label" for="searchType">회원유형</label> <select id="searchType" name="searchType" fw-filter="" fw-label="회원유형" fw-msg="">
+                    <option value="indi" selected="selected">개인회원</option>
+                    <option value="indibuis">개인 사업자회원</option>
+                    <option value="corp">법인 사업자회원</option>
+                    <option value="fore">외국인회원</option>
+                </select>
+                </li>
                 <li class="check">
                     <input id="check_method0" name="check_method" fw-filter="" fw-label="찾는방법" fw-msg="" value="1" type="radio" style="display: none;">
                     <label class="input_label" for="check_method0" style="display: none;"><span id="ssn_lable" style="display: none;"></span></label>
@@ -22,6 +29,7 @@
                     <input id="check_method2" name="check_method" fw-filter="" fw-label="찾는방법" fw-msg="" value="3" type="radio">
                     <label class="input_label" for="check_method2"><span id="search_type_mobile_lable" style="display:inline;">휴대폰번호</span></label>
                 </li>
+                <li class="find_input_wrap id"><label class="input_label" for="member_id">아이디</label> {$form.member_id}</li>
                 <li id="name_view" class="find_input_wrap name"><label class="input_label"  id="name_lable" for="name">이름</label> {$form.name}</li>
                 <li id="email_view" class="email find_input_wrap" style="display:none;"><label class="input_label" for="email">가입한 이메일</label><input id="email" name="email" fw-filter="isEmail" fw-label="이메일" fw-msg="" class="lostInput" placeholder="" value="" type="email"></li>
                 <li id="mobile_view" class="find_input_wrap mobile" style="display:none;"><label class="input_label" for="mobile1">휴대폰 번호로 찾기</label> {$form.mobile1} - 
@@ -34,7 +42,8 @@
                             style="vertical-align:middle" /></a>
                 </li>
             </ul>
-            <button id="findPwdIdBtn" type="button" onclick="{$action_func_find_id}">아이디 찾기</button>
+            <button id="findPwdIdBtn" type="button" onclick="{$action_func_find_passwd_question}">비밀번호 찾기</button>
+
         </fieldset>
     </section>
 </article>
