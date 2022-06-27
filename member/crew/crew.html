@@ -88,7 +88,7 @@
                         </li>
                         <li>
                             <!-- 로그인 관련 모듈 -->
-                            <span module="myshop_benefit"><input type="hidden" id="recoIdCheck" value="http://{$shop_domain}/?reco_id={$member_id}"></span>
+                            <span module="myshop_benefit"><input type="hidden" id="recoIdCheck" value="http://{$shop_domain}/?reco_id={$member_id}" data-id="{$member_id}"></span>
                             <button class="crew_link_copy">내 초대 링크 복사하기</button>
                             <button class="crew_link_share">내 초대 링크 공유하기</button>
                         </li>
@@ -172,9 +172,10 @@
     /* 추천인 링크 */
     const crew_link_copy = document.querySelector(".crew_link_copy");
     const crew_link_share = document.querySelector(".crew_link_share");
-    const reco_id_check = document.querySelector("#recoIdCheck");
+    const reco_id = document.querySelector("#recoIdCheck");
+    console.log('reco_id: ', reco_id);
 
-    let copy_description = (reco_id) => `
+    let copy_description = () => `
     🤗 물건도 브랜드도 착해야 산다!
     가치소비가 쉬워지는 곳, 비보트로 초대합니다.
 
@@ -186,13 +187,15 @@
     > https:/bvoat.com/member/crew/crew.html
 
     친구 초대 전용 가입 링크
-    >http://bvoat.com?reco_id=${reco_id}
-    (추천인 코드 : ${reco_id})
+    >${reco_id.value}
+    (추천인 코드 : ${reco_id.dataset.id})
     `
-    const copyBtnClick = (reco_id_check) => {
-
-        if(reco_id_check != null){
-            console.log("로그인 됨", reco_id_check.value)
+    const copyBtnClick = () => {
+        if(reco_id != null){
+            console.log("로그인 됨", reco_id.value)
+            window.navigator.clipboard.writeText(copy_description).then(()=>{
+                alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
+            })
         }
         else{
             alert("링크 복사를 위해서는 로그인이 필요해요 🤗");
@@ -200,7 +203,29 @@
             return false;
         }
     }
-    crew_link_copy.addEventListener("click", copyBtnClick)
+    const shareBtnClick = () => {
+        if(reco_id != null){
+            console.log("로그인 됨", reco_id.value)
+            if (navigator.share) {
+                navigator.share({
+                title: '비보트 크루 멤버십 초대',
+                text: `${copy_description}`
+                }).then(() => {
+                    alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
+                })
+                .catch(console.error);
+            } else {
+                alert("오류가 발생했어요. 잠시후에 시도해주세요.")
+            }
+        }
+        else{
+            alert("공유를 위해서는 로그인이 필요해요 🤗");
+            window.location = '/member/login.html?returnUrl=member/crew/crew.html';
+            return false;
+        }
+    }
+    crew_link_copy.addEventListener("click", copyBtnClick);
+    crew_link_share.addEventListener("click", shareBtnClick);
 
     /* url 제출 함수 */
     //btn addEvent
