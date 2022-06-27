@@ -91,15 +91,15 @@
     setTimeout(() => {
         methods.parent.map(function (param) {
             var _no = param.cate_no;
-            $(".category_product").append(`<div class="main-category-${_no}">${param.name}</div>`)
+            $(".cat_by-prd").append(`<div class="main-category-${_no}">${param.name}</div>`)
             if (methods.aSubCategory[_no]) {
                 $(`.main-category-${_no}`).after(`<div class="main-middle"></div>`)
                 methods.aSubCategory[_no].map(function (param2, index) {
                     if ((index + 1) % 3 == 0) {
-                        $(`.main-category-${_no}`).next(`.main-middle`).append(`<li class="middle-category-line-${param2.cate_no}"><p class="middle-title">${param2.name}</p></li>`)
+                        $(`.main-category-${_no}`).next(`.main-middle`).append(`<div class="middle-category-line-${param2.cate_no}"><div class="middle-title">${param2.name}</div></div>`)
                     }
                     else {
-                        $(`.main-category-${_no}`).next(`.main-middle`).append(`<li class="middle-category-${param2.cate_no}"><p class="middle-title">${param2.name}</p></li>`)
+                        $(`.main-category-${_no}`).next(`.main-middle`).append(`<div class="middle-category-${param2.cate_no}"><div class="middle-title">${param2.name}</div></div>`)
 
                     }
 
@@ -108,23 +108,23 @@
 
         });
 
-    }, 500);
+    }, 100);
 
     //가치별 카테고리
     setTimeout(() => {
-        $(".category_tag").append(`<div class="main-tag-category"><div class="main-middle"></div></div>`)
+        $(".cat_by-tag").append(`<div class="main-tag-category"><div class="main-middle"></div></div>`)
         if (methods.aSubCategory[273]) {
             methods.aSubCategory[273].map(function (param2, index) {
                 if ((index + 1) % 2 == 0) {
-                    $(`.main-tag-category`).children(`.main-middle`).append(`<li class="middle-tag-category-line-${param2.cate_no}"><p class="middle-title">${param2.name}</p></li>`)
+                    $(`.main-tag-category`).children(`.main-middle`).append(`<div class="middle-tag-category-line-${param2.cate_no}"><div class="middle-title">${param2.name}</div></div>`)
                 }
                 else {
-                    $(`.main-tag-category`).children(`.main-middle`).append(`<li class="middle-tag-category-${param2.cate_no}"><p class="middle-title">${param2.name}</p></li>`)
+                    $(`.main-tag-category`).children(`.main-middle`).append(`<div class="middle-tag-category-${param2.cate_no}"><div class="middle-title">${param2.name}</div></div>`)
 
                 }
             })
         }
-    }, 500);
+    }, 100);
 
     $(document).on("click", `div[class^="middle-category"]`, function () {
         var click_tmp = $(this);
