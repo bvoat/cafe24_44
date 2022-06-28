@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "basket.scss",
+        "../../../../layout/basic/css/abstracts/_mixin.scss",
+        "../../../../layout/basic/css/abstracts/_variables.scss"
+    ],
+    "names": [],
+    "file": "basket.css"
+}
