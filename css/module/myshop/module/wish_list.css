@@ -47,6 +47,12 @@
   max-width: 450px;
 }
 
+#wishList #wishListCardSection .empty {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.6rem;
+}
+
 #wishList #wishListCardSection #wishListList {
   width: 100%;
   max-width: 450px;

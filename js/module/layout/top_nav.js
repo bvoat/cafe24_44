@@ -16,7 +16,7 @@
     // console.log("page_path",page_path)
     const topNav = document.querySelector("#top_nav");
     const contents = document.getElementById("bvtContents");
-    const exceptPath = ['myshop', 'join', 'modify', 'detail'];
+    const exceptPath = ['myshop', 'join', 'modify', 'detail', 'basket'];
 
     exceptPath.forEach((dir)=>{
       if(window.location.pathname.includes(dir)) {

@@ -1,5 +1,6 @@
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(../../css/module/member/module/crew.css)-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
 <article id="memberCrew">
     <section id="memberCrewTitle" class="displaynone">
@@ -9,13 +10,16 @@
         <section id="crewInfomation" class="crew_infomation">
             <h2 class="crew_title">너,<br>우리의 크루가<br>되어라!</h2>
             <h4>가치소비로 함께 세상을 바꿀 수 있도록.</h4>
-            <p>하루의 시작부터 끝까지 우리는 선택합니다.</p>
-            <p>누군가는 선택 후 그것이 더 나은 선택이었길 바라지만,<br>어떤 사람들은 실제로 더 가치 있는 선택을 합니다.</p>
-            <p>비보트는 가치를 선택하는 사람들,<br>비보트 크루와 함께 세상을 바꿉니다.</p>
-            <a href="#crewLevelUpAnchorPoint">크루 가입 바로가기</a>
+            <ul data-aos="fade-up"
+            data-aos-duration="1200" data-aos-delay="100" data-aos-offset="200">
+                <li>하루의 시작부터 끝까지 우리는 선택합니다.</li>
+                <li>누군가는 선택 후 그것이 더 나은 선택이었길 바라지만,<br>어떤 사람들은 실제로 더 가치 있는 선택을 합니다.</li>
+                <li>비보트는 가치를 선택하는 사람들,<br>비보트 크루와 함께 세상을 바꿉니다.</li>
+            </ul>
+            <button id="moveLevelUp">크루 가입 바로가기</button>
         </section>
         <section id="crewBenefit" class="crew_benefit">
-            <h2 class="crew_title">비보트 크루<br>전용 혜택</h2>
+            <h2 class="crew_title">비보트 크루<br >전용 혜택</h2>
             <h4>가치소비, 훨씬 쉬워집니다.</h4>
             <div class="crew_benefit_img_wrap">
                 <ul class="crew_benefit_img swiper-wrapper" aria-hidden="true">
@@ -35,34 +39,34 @@
             </div>
 
             <ul class="crew_benefit_section">
-                <li class="crew_benefit_mile crew_benefit_1"><span>💰</span><br>마일리지<br>무제한 2배 적립 <p>횟수 무제한 가치소비 마일리지 자동
+                <li class="crew_benefit_mile crew_benefit_1"><span>💰</span><h4 data-aos="fade-up" data-aos-duration="800" data-aos-delay="50" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom">마일리지<br>무제한 2배 적립</h4><p>횟수 무제한 가치소비 마일리지 자동
                         2% 적립</p>
                 </li>
-                <li class="crew_benefit_records crew_benefit_2"><span>✍️</span><br>소비기록<br>마일리지 5배 적립 <p>가치소비 리뷰 작성 시 건당
+                <li class="crew_benefit_records crew_benefit_2"><span>✍️</span><h4 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom">소비기록<br>마일리지 5배 적립</h4><p>가치소비 리뷰 작성 시 건당
                         최대 1,000점 적립
                     </p>
                 </li>
-                <li class="crew_benefit_badge crew_benefit_3"><span>😎</span><br>비보트 크루<br>전용 뱃지 노출<p>비보트 크루 전용 뱃지 커뮤니티,
+                <li class="crew_benefit_badge crew_benefit_3"><span>😎</span><h4 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="120" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom">비보트 크루<br>전용 뱃지 노출</h4><p>비보트 크루 전용 뱃지 커뮤니티,
                         프로필(예정) 노출
                     </p>
                 </li>
-                <li class="crew_benefit_coupon crew_benefit_4"><span>📦</span><br>10% 할인 쿠폰,<br>무료배송 쿠폰 지급<p>10% 할인 쿠폰,
+                <li class="crew_benefit_coupon crew_benefit_4"><span>📦</span><h4 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom">10% 할인 쿠폰,<br>무료배송 쿠폰 지급</h4><p>10% 할인 쿠폰,
                         무료 배송 쿠폰 바로
                         지급</p>
                 </li>
-                <li class="crew_benefit_next crew_benefit_5"><span>📮</span><br>WHAT'S NEXT?<br>
+                <li class="crew_benefit_next crew_benefit_5"><span>📮</span><h4 data-aos="fade-up" data-aos-duration="1200" data-aos-delay="250" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom">WHAT'S NEXT?</h4>
                     <p>비보트 크루 전용 혜택은 지속적으로 추가됩니다.</p>
                 </li>
-                <p id="crewLevelUpAnchorPoint" aria-hidden="true"></p>
             </ul>
         </section>
         <section id="crewLevelUp" class="crew_levelup_method">
             <h2 class="crew_title">하나만 해도<br>크루 등급</h2>
             <h4>어렵지 않아요, 24시간 내에 크루 등업</h4>
             <ul class="crew_levelup_method_list">
-                <li><span class="crew_method_list_title">방법 1</span>
+                <li class="crew_method_list_content">
                     <ul class="crew_method_desc method_stamp">
-                        <li>가치 스탬프<br>5개 적립</li>
+                        <li class="crew_method_list_title">방법 1</li>
+                        <li class="crew_method_list_heading" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="250" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom">가치 스탬프<br>5개 적립</li>
                         <li class="crew_method_img_wrap" aria-hidden="true">
                             <ul class="crew_method_img swiper-wrapper" aria-hidden="true">
                                 <li class="swiper-slide">업사이클링 숄더백</li>
@@ -73,36 +77,41 @@
                                 <li class="swiper-slide">리에코 스콘 랩탑 파우치</li>
                             </ul>
                         </li>
-                        <li>상품 구매 시 지급되는 스탬프 5개 모으면 크루 등급<br>(상품별 상세페이지 확인)</li>
-                        <li>(가치 스탬프는 지급 받은 시점으로부터 30일이 경과되면 소멸됩니다.)</li>
+                        <li class="crew_method_txt">상품 구매 시 지급되는 스탬프 5개 모으면 크루 등급</li>
+                        <li class="crew_method_sub_txt">*상품별 상세페이지 확인, 가치 스탬프는 지급 받은 시점으로부터<br>30일이 경과되면 소멸됩니다.</li>
                     </ul>
                 </li>
-                <li><span class="crew_method_list_title">방법 2</span>
+                
+                <li class="crew_method_list_content">
                     <ul class="crew_method_desc method_recommend">
-                        <li>친구를 데려오면<br>친구와 함께 크루 등급</li>
-                        <li>친구가 추천인 아이디 입력하면<br>둘 다 함께 크루 등급</li>
-                        <li>
+                        <li class="crew_method_list_title">방법 2</li>
+                        <li class="crew_method_list_heading" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="250" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom">친구를 데려오면<br>친구와 함께 크루 등급</li>
+                        <li class="crew_method_txt">친구가 추천인 아이디 입력하면<br>둘 다 함께 크루 등급</li>
+                        <li class="crew_method_sub_txt">
                             <p>*친구 초대는 월 1회만 가능하며,<br>아이디당 최대 3회까지 가능합니다.</p>
-                            <p>초대 링크가 아닌 SNS 로그인 가입 시에는<br>마이페이지 - 내 정보 수정에서 추천인 등록이 가능합니다.</p>
+                            <p>*초대 링크가 아닌 SNS 로그인 가입 시에는<br>마이페이지 - 내 정보 수정에서 추천인 등록이 가능합니다.</p>
                             <p>*7월 1일 이후 가입 건부터 유효합니다.</p>
                         </li>
-                        <li>
+                        <li class="crew_method_btn_wrap">
                             <!-- 로그인 관련 모듈 -->
-                            <span module="myshop_benefit"><input type="hidden" id="recoIdCheck" value="http://{$shop_domain}/?reco_id={$member_id}" data-id="{$member_id}"></span>
+                            <span module="myshop_benefit"><input type="hidden" id="recoIdCheck"
+                                    value="http://{$shop_domain}/?reco_id={$member_id}" data-id="{$member_id}"></span>
                             <button class="crew_link_copy">내 초대 링크 복사하기</button>
                             <button class="crew_link_share">내 초대 링크 공유하기</button>
                         </li>
                     </ul>
                 </li>
-                <li><span class="crew_method_list_title">방법 3</span>
+                
+                <li class="crew_method_list_content">
                     <ul class="crew_method_desc method_share">
-                        <li>해시태그와 함께<br>가치소비 공유</li>
-                        <li>
+                        <li class="crew_method_list_title">방법 3</li>
+                        <li class="crew_method_list_heading" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="250" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom">해시태그와 함께<br>가치소비 공유</li>
+                        <li class="crew_method_txt">
                             <p>가치소비 후기, 서비스 추천글 등을<br>인스타그램, 트위터, 블로그 등 원하는 곳에</p>
-                            <p><em>#비보트</em><em>#가치소비보트</em> 와 함께<br>업로드 하면 바로 크루 등급!</p>
-                            <p>*7월 1일 이후 게시글 작성 건부터 유효하며<br>1회에 한하여 참여 가능합니다.</p>
+                            <p><em>#비보트</em><em> #가치소비보트</em> 와 함께<br>업로드 하면 바로 크루 등급!</p>
                         </li>
-                        <li>
+                        <li class="crew_method_sub_txt">*7월 1일 이후 게시글 작성 건부터 유효하며<br>1회에 한하여 참여 가능합니다.</li>
+                        <li class="crew_method_form_wrap">
                             <form id="crewUrlForm" class="crew_url_form">
                                 <fieldset>
                                     <legend class="displaynone">작성한 sns 게시글 url 입력하기</legend>
@@ -110,10 +119,10 @@
                                     <p class="share_input_wrap">
                                         <!-- 로그인 관련 모듈 -->
                                         <span module="myshop_benefit">
-                                            <input module="myshop_benefit" type="hidden"
-                                                name="id" id="member_id" value="{$member_id}"></span>
+                                            <input module="myshop_benefit" type="hidden" name="id" id="member_id"
+                                                value="{$member_id}"></span>
 
-                                        <input type="url" name="url" id="tag_url" placeholder="가치소비를 공유한 게시글 주소를 입력해주세요"
+                                        <input type="url" name="url" id="tag_url" placeholder="공유한 게시글 주소를 입력해주세요."
                                             pattern="https://.*" size="120">
                                         <button type="submit">신청</button>
                                     </p>
@@ -126,9 +135,12 @@
         </section>
         <section id="crewText" class="crew_text">
             <h3 class="crew_title">우리가<br>먹고, 입고, 쓰는 일이<br>보다 가치 있도록</h3>
-            <p>나의 현재도, 미래도, 내 삶의 주인도 오롯이<br>내가 될 수 있도록 함께 소비로 투표해요</p>
-            <p>우리의 가치있는 내일을 함께 선택할 수 있도록<br>가치 있는 브랜드와 상생하겠습니다.</p>
-            <a href="#memberCrew">다시 읽기</a>
+            <ul data-aos="fade-up"
+                data-aos-duration="1600" data-aos-delay="100" data-aos-offset="200">
+                <li>나의 현재도, 미래도, 내 삶의 주인도 오롯이<br>내가 될 수 있도록 함께 소비로 투표해요</li>
+                <li>우리의 가치있는 내일을 함께 선택할 수 있도록<br>가치 있는 브랜드와 상생하겠습니다.</li>
+            </ul>
+            <button  id="moveTop">다시 읽기</button>
         </section>
         <section id="crewRole" class="crew_role">
             <ul>유의사항
@@ -149,6 +161,7 @@
         </section>
     </section>
 </article>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
     /* 슬라이더 */
     var swiper = new Swiper(".crew_benefit_img_wrap", {
@@ -168,6 +181,34 @@
         slidesPerView: "auto",
         spaceBetween: 10,
     });
+    /* aos 초기화 */
+    AOS.init();
+
+    /* 부드럽게 이동 */
+
+    const moveLevelUp = document.querySelector("#moveLevelUp");
+    const moveTop = document.querySelector("#moveTop");
+    const crewLevelUp = document.querySelector("#crewLevelUp")
+
+    const smoothScroll = (element, target) => {
+        if(target == 'top'){
+            target = element.offsetTop;
+        } else {
+            target = element.offsetHeight;
+        }
+        window.scroll({
+            behavior : 'smooth',
+            left: 0,
+            top: target 
+        })
+    }
+
+    moveTop.addEventListener("click", ()=>{
+        smoothScroll(document.querySelector("body"),'top')
+    })
+    moveLevelUp.addEventListener("click", ()=>{
+        smoothScroll(crewLevelUp,'top')
+    })
 
     /* 추천인 링크 */
     const crew_link_copy = document.querySelector(".crew_link_copy");
@@ -191,34 +232,34 @@
     (추천인 코드 : ${reco_id.dataset.id})
     `
     const copyBtnClick = () => {
-        if(reco_id != null){
+        if (reco_id != null) {
             console.log("로그인 됨", reco_id.value)
-            window.navigator.clipboard.writeText(copy_description).then(()=>{
+            window.navigator.clipboard.writeText(copy_description).then(() => {
                 alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
             })
         }
-        else{
+        else {
             alert("링크 복사를 위해서는 로그인이 필요해요 🤗");
             window.location = '/member/login.html?returnUrl=member/crew/crew.html';
             return false;
         }
     }
     const shareBtnClick = () => {
-        if(reco_id != null){
+        if (reco_id != null) {
             console.log("로그인 됨", reco_id.value)
             if (navigator.share) {
                 navigator.share({
-                title: '비보트 크루 멤버십 초대',
-                text: `${copy_description}`
+                    title: '비보트 크루 멤버십 초대',
+                    text: `${copy_description}`
                 }).then(() => {
                     alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
                 })
-                .catch(console.error);
+                    .catch(console.error);
             } else {
                 alert("오류가 발생했어요. 잠시후에 시도해주세요.")
             }
         }
-        else{
+        else {
             alert("공유를 위해서는 로그인이 필요해요 🤗");
             window.location = '/member/login.html?returnUrl=member/crew/crew.html';
             return false;
@@ -232,19 +273,33 @@
     const crew_Form = document.querySelector("#crewUrlForm");
     //fetch 통신 함수
     const postURLAsJson = (formData) => {
+        console.log("formdata", formData)
         fetch(`https://bvoat-test.shop/sns`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Content-Type': 'application/x-www-form-urlencoded',
             },
             body: formData
         })
-            .then((response) => {
-                console.log("response ? :", response.status)
-                response.status === 500 ? alert("서버 오류입니다. 관리자에게 문의해주세요.") : status.status === 409 ? alert("이미 등록된 URL 입니다.") : alert("신청이 완료되었습니다.")
+        .then((response) => {
+            if(response.status === 500){
+                alert("서버 오류입니다. 관리자에게 문의해주세요.")
                 return false;
-            })
+
+            } else if (response.status === 409){
+                alert("이미 등록된 URL 입니다.")
+                return false;
+
+            } else if(response.status === 201) {
+                let receivingPrompt = confirm("신청이 완료되었습니다! 가입 신청은 sns 게시글 확인 후 승인됩니다. (최대 24시간 내 승인) 크루가 되면 알려드릴까요?");
+                if(receivingPrompt){
+                    console.log('api 실행')
+                } else {
+                    return false;
+                }
+            }
+            return false;
+        })
     }
 
     //submit 함수
@@ -271,22 +326,18 @@
                 const form_data = new FormData(form);
                 const plainFormData = JSON.stringify(Object.fromEntries(form_data.entries()));
                 console.log('plainFormData: ', plainFormData);
-
                 const responseData = await postURLAsJson(plainFormData);
                 console.log({ responseData });
             }
-
         }
         else {
             alert("가입 신청을 위해서는 로그인이 필요해요 🤗");
             window.location = '/member/login.html?returnUrl=member/crew/crew.html';
             return false;
         }
-
         return false;
     }
-
     //submit 될 때 함수 실행
-    crew_Form.addEventListener("submit", snsURLSubmit)
+    crew_Form.addEventListener("submit", snsURLSubmit);
 </script>
 <!--@import(../../layout/basic/footer.html)-->

@@ -16,7 +16,8 @@
                 <li class="myinfo_img" title="프로필 사진"><img src="https://bvoat.shop/images/new_img/ico__11.png" /></li>
                 <li class="myinfo_txt" title="닉네임">
                     <p class="nickname">{$member_name}</p>
-                    <p class="level">등급명</p>
+                    <p class="level">{$group_name}</p>
+                    <input id="level_name" type="hidden" value="{$group_name}">
                 </li>
             </ul>
             <a class="mypage_modify" href="/member/modify.html">내 정보 수정</a>
@@ -74,9 +75,14 @@
 </article>
 
 <script>
+
+/* 등급 크루인 경우 */
+let voter_level = document.querySelector("#level_name");
+console.log('voter_level: ', voter_level.value);
+
+
 /*  stamp 수신 */
 let voter_identity = document.querySelector("#member_id").value;
-console.log("login", voter_identity)
 //스탬프 이미지 DOM 출력 
 const displayStampImg = (stamp) => {
         //스탬프 표시
@@ -97,29 +103,36 @@ const displayStampImg = (stamp) => {
         }
 }
 const reciveVoterStamp = (voterID,displayStampImg) => {
-    fetch(`https://bvoat-test.shop/stamp?id=${voterID}`, {
-    method: 'GET', // 또는 'PUT'
-    headers: {
-        'Content-Type': 'application/json',
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-    })
-    .then((response) => response.json())
-    .then((res) => {
-        console.log('성공:', res)
-        console.log(res.success)
-        if(res.success){
-            let stamp_node = document.querySelector(".my_stamp_pcs");
-            let stamp_num = res.data.stamp;
-            console.log('stamp_num: ', stamp_num);
-            stamp_num < 5 ? stamp_node.innerHTML = `🙂 ${stamp_num}개` : stamp_num => 5 ? stamp_node.innerHTML = `🥳 5개` : stamp_node.innerHTML = `🙂 -개`;
-            
+    if(voter_identity != null && voter_level != null){
+        if(voter_level != '크루'){
+            fetch(`https://bvoat-test.shop/stamp?id=${voterID}`, {
+            method: 'GET', // 또는 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            })
+            .then((response) => response.json())
+            .then((res) => {
+                console.log('성공:', res)
+                console.log(res.success)
+                if(res.success){
+                    let stamp_node = document.querySelector(".my_stamp_pcs");
+                    let stamp_num = res.data.stamp;
+                    console.log('stamp_num: ', stamp_num);
+                    stamp_num < 5 ? stamp_node.innerHTML = `🙂 ${stamp_num}개` : stamp_num => 5 ? stamp_node.innerHTML = `🥳 5개` : stamp_node.innerHTML = `🙂 -개`;
+                    displayStampImg(stamp_num)
+                }
+            })
+            .catch((error) => {
+            console.error('실패:', error);
+            });     
+        } else if (voter_level === '크루') {
+            stamp_num = 5;
             displayStampImg(stamp_num)
         }
-    })
-    .catch((error) => {
-    console.error('실패:', error);
-    });        
+    }   
+    return false;
 }
 reciveVoterStamp(voter_identity,displayStampImg)
 

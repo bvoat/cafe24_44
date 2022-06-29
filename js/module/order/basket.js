@@ -63,3 +63,12 @@ function selBasketDel(id) {
     $('[id="'+id+'"]').prop('checked', true);
     Basket.deleteBasket();
 }
+
+//장바구니 상품이 없을 때 전체선택 버튼 없애기
+
+const product_select_all = document.querySelector("#product_select_all");
+const order_list_check = document.querySelector(".order_list_check");
+
+if(order_list_check != null){
+    product_select_all.classList.add("displaynone");
+}

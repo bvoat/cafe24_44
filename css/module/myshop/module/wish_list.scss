@@ -34,6 +34,11 @@
     #wishListCardSection {
         width: 100%;
         max-width: 450px;
+        .empty{
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.6rem;
+        }
         #wishListList{
             width: 100%;
             max-width: 450px;
