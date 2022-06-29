@@ -1,7 +1,12 @@
+:root {
+  --result-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/result-back.png");
+  --result-title-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/bvoat-logo-earthst.png");
+}
+
 #memberJoin {
   width: 100%;
   max-width: 450px;
-  padding: 23px 11px;
+  padding: 23px 11px 100px;
   margin-top: -40px;
 }
 
@@ -474,8 +479,184 @@
 }
 
 .join_btn {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  width: calc(100% + 22px);
+  max-width: 450px;
+  height: 61px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: -11px;
+  z-index: 99;
+  background-color: #022CFF;
+  border: none;
+  cursor: pointer;
+}
+
+.join_btn > p {
+  color: #ffffff;
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+#memberResult {
+  width: 100%;
+  max-width: 450px;
+  margin-top: -40px;
+}
+
+#memberResult #memberResultTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 450px;
+  height: 475px;
+  padding: 68px 11px 0;
+  margin-bottom: 36px;
+  text-align: center;
+  background: var(--result-bg) no-repeat;
+  background-size: cover;
+}
+
+#memberResult #memberResultTitle h1 {
+  display: none;
+}
+
+#memberResult #memberResultTitle h2 {
+  width: 100%;
+  max-width: 450px;
+  height: 135px;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: -0.5px;
+  line-height: 1.6em;
+  text-align: center;
+  margin-bottom: 36px;
+  background: var(--result-title-bg) no-repeat center;
+  background-position-y: 19px;
+}
+
+#memberResult #memberResultTitle .member_result_card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 151px;
+  border-radius: 14px;
+  -webkit-box-shadow: 3px 7px 11px #EDEFF5;
+          box-shadow: 3px 7px 11px #EDEFF5;
+  color: #292929;
+  background: #ffffff;
+}
+
+#memberResult #memberResultTitle .member_result_card .profile_img {
+  width: 68px;
+  height: 68px;
+}
+
+#memberResult #memberResultTitle .member_result_card .profile_img > img {
+  width: 68px;
+  height: 68px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#memberResult #memberResultTitle .member_result_card .profile_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: calc(100% - 110px);
+}
+
+#memberResult #memberResultTitle .member_result_card .profile_group .group_name {
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #707070;
+}
+
+#memberResult #memberResultTitle .member_result_card .profile_group .profile_name {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+#memberResult #memberResultTitle .member_result_card .profile_group .profile_txt {
+  font-size: 13px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+#memberResult #memberResultTxt {
+  padding-bottom: 100px;
+}
+
+#memberResult #memberResultTxt .result_welcome_txt {
+  width: 100%;
+  max-width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#memberResult #memberResultTxt .result_welcome_txt h3 {
+  font-size: 17px;
+  color: #292929;
+}
+
+#memberResult #memberResultTxt .result_welcome_txt p {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #707070;
+}
+
+.result_btn {
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -494,7 +675,7 @@
   background-color: #022CFF;
   border: none;
   color: #ffffff;
-  font-size: 2.1rem;
+  font-size: 1.45rem;
   font-weight: 500;
   cursor: pointer;
 }
