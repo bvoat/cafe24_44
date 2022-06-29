@@ -32,7 +32,7 @@ body{
             background: #ffffff71;    
             backdrop-filter: blur(80px) brightness(150%);
             margin: 0 auto;
-            z-index: 99;
+            z-index: 9;
             padding: 0;
         }
         #bvtContents{
@@ -43,6 +43,7 @@ body{
             min-height: 100vh;
             max-height: max-content;
             padding: 80px 11px 0;
+            z-index: 0;
         }
         .bvt_content_header{
             padding: 41px 11px 0;
@@ -50,7 +51,6 @@ body{
         #bvtBottom{
             position: sticky;
             display: block;
-            z-index: 99;
             width: 100%;
             max-width: 450px;
             min-width: 200px;
@@ -58,6 +58,7 @@ body{
             bottom: 0;
             background: $bvt-white;   
             box-shadow: $bvt-top-shadow;
+            z-index: 9; 
         }
     }
     

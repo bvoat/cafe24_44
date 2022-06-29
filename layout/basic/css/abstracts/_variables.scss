@@ -6,6 +6,7 @@ $bvt-bg-blue: #F9F9FE;
 $bvt-bg-lightblue: #FAFAFE;
 $bvt-lightblue: #ECECF4;
 $bvt-btn-lightblue: #ECF0F2;
+$bvt-bg-skyblue: #F5F6FC;
 $bvt-darkgray: #707070;
 $bvt-second-darkgray: #8E8E8E;
 $bvt-lightgray: #C4C4C4;
@@ -30,6 +31,13 @@ $bvt-btn-shadow: 0px 3px 7px #70707027;
 
 
 //icon
+
+$bvt-logo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='73' height='39'%3E%3Ctext transform='translate(0 29)' fill='%23022cff' font-size='31' font-family='GilbertBoldPreview5, Gilbert'%3E%3Ctspan x='0' y='0'%3EBvoat%3C/tspan%3E%3C/text%3E%3C/svg%3E");
+
+$cart-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27.838' height='25.417'%3E%3Cg data-name='그룹 2020' transform='translate(1 1.234)' stroke='%23000'%3E%3Cpath data-name='선 2' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M0 0h3.243'/%3E%3Cpath data-name='선 263' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M7.703 15.811 3.243 0'/%3E%3Cpath data-name='선 264' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M7.703 15.811h13.379'/%3E%3Cpath data-name='선 265' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m25.542 4.46-4.46 11.352'/%3E%3Cpath data-name='선 266' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M25.541 4.46H4.865'/%3E%3Crect data-name='사각형 1123' width='3.886' height='3.685' rx='1.843' transform='translate(6.869 19.998)'/%3E%3Crect data-name='사각형 1124' width='3.886' height='3.685' rx='1.843' transform='translate(18.303 19.998)'/%3E%3C/g%3E%3C/svg%3E");
+
+$search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24.2' height='24.2'%3E%3Cg data-name='Icon feather-search' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath data-name='패스 1690' d='M20.365 10.683A9.683 9.683 0 1 1 10.683 1a9.683 9.683 0 0 1 9.683 9.683Z'/%3E%3Cpath data-name='패스 1691' d='m22.786 22.786-5.265-5.265'/%3E%3C/g%3E%3C/svg%3E");
+
 $off-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.582' height='7.194'%3E%3Cpath data-name='Icon ionic-ios-arrow-forward' d='M6.293 5.025 11.051.264a.9.9 0 0 1 1.27 0 .907.907 0 0 1 0 1.274L6.93 6.932a.9.9 0 0 1-1.24.026L.262 1.541A.9.9 0 1 1 1.532.268Z' fill='%23ababab'/%3E%3C/svg%3E");
 
 $on-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.194' height='12.582'%3E%3Cpath data-name='Icon ionic-ios-arrow-forward' d='M5.026 6.289.265 1.531a.9.9 0 0 1 0-1.27.907.907 0 0 1 1.274 0l5.394 5.391a.9.9 0 0 1 .026 1.24L1.542 12.32a.9.9 0 1 1-1.274-1.27Z' fill='%23ababab'/%3E%3C/svg%3E");

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #header_wrap {
   width: auto;
   height: auto;
@@ -30,9 +31,10 @@
 }
 
 #header_wrap #header_logo_section .header_logo {
+  display: block;
   width: 73px;
   height: 40px;
-  background: url("../../../images/logo/Bvoat.png") no-repeat center;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='73' height='39'%3E%3Ctext transform='translate(0 29)' fill='%23022cff' font-size='31' font-family='GilbertBoldPreview5, Gilbert'%3E%3Ctspan x='0' y='0'%3EBvoat%3C/tspan%3E%3C/text%3E%3C/svg%3E") no-repeat center;
   background-size: contain;
   text-indent: -9999px;
 }
@@ -60,36 +62,41 @@
   position: relative;
 }
 
-#header_wrap #header_logo_section .header_menu li:nth-child(1) a {
+#header_wrap #header_logo_section .header_menu .header_search > button {
   position: relative;
   display: block;
   width: 20px;
   height: 20px;
-  background: url("../../../images/icon/icon-search.png") no-repeat center;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24.2' height='24.2'%3E%3Cg data-name='Icon feather-search' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath data-name='패스 1690' d='M20.365 10.683A9.683 9.683 0 1 1 10.683 1a9.683 9.683 0 0 1 9.683 9.683Z'/%3E%3Cpath data-name='패스 1691' d='m22.786 22.786-5.265-5.265'/%3E%3C/g%3E%3C/svg%3E") no-repeat center;
   background-size: contain;
   text-indent: -9999px;
 }
 
-#header_wrap #header_logo_section .header_menu li:nth-child(2) a {
+#header_wrap #header_logo_section .header_menu .header_cart {
   position: relative;
-  display: block;
-  width: 23px;
+  width: 25px;
   height: 23px;
-  background: url("../../../images/icon/icon-cart.png") no-repeat center;
+}
+
+#header_wrap #header_logo_section .header_menu .header_cart a {
+  display: block;
+  width: 25px;
+  height: 23px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27.838' height='25.417'%3E%3Cg data-name='그룹 2020' transform='translate(1 1.234)' stroke='%23000'%3E%3Cpath data-name='선 2' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M0 0h3.243'/%3E%3Cpath data-name='선 263' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M7.703 15.811 3.243 0'/%3E%3Cpath data-name='선 264' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M7.703 15.811h13.379'/%3E%3Cpath data-name='선 265' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m25.542 4.46-4.46 11.352'/%3E%3Cpath data-name='선 266' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M25.541 4.46H4.865'/%3E%3Crect data-name='사각형 1123' width='3.886' height='3.685' rx='1.843' transform='translate(6.869 19.998)'/%3E%3Crect data-name='사각형 1124' width='3.886' height='3.685' rx='1.843' transform='translate(18.303 19.998)'/%3E%3C/g%3E%3C/svg%3E") no-repeat center;
   background-size: contain;
   text-indent: -9999px;
 }
 
-#header_wrap #header_logo_section .header_menu li:nth-child(2) .xans-layout-orderbasketcount {
+#header_wrap #header_logo_section .header_menu .header_cart .count {
   position: absolute;
   width: 15px;
   height: 15px;
-  top: -20%;
-  right: -24%;
   background: #022CFF;
   font-weight: 700;
   color: #ffffff;
   border-radius: 50%;
   text-align: center;
+  top: -3px;
+  right: -7px;
 }
 /*# sourceMappingURL=header.css.map */

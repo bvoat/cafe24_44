@@ -1,0 +1,65 @@
+<!--@css(../../css/module/product/module/search.css)-->
+
+<article id="searchModal" class="displaynone">
+    <section id="searchModalHeader" module="Layout_SearchHeader">
+        <button type="button" class="search_close_btn" onclick="classToggle(document.querySelector('#searchModal'), 'displaynone');">닫기</button>
+        <a href="/" title="비보트 메인으로" target="_self"><span class="header_logo">비보트 Bvoat</span></a>
+        <p class="header_cart" module="Layout_orderBasketcount">
+            <a href="/order/basket.html" title="장바구니">장바구니</a>
+            <span class="count">{$basket_count}</span>
+        </p>
+    </section>
+    <section id="searchModalTitle">
+        <h1 class="displaynone">검색</h1>
+        <h2>🔍 Search</h2>
+        <h3>오늘은 어떤 가치소비를 해볼까요?</h3>
+    </section>
+    <section module="Layout_SearchHeader" class="search_input_box" id="{$search_box_id}">
+        <!--
+            $category_page=/product/list.html
+        -->
+        <div class="search_input">
+            {$form.keyword}
+            <!-- <button type="button" class="btnDelete">삭제</button> -->
+            <button type="button" class="search_btn" onclick="
+            {$action_search_submit}">검색</button>
+        </div>
+
+        <section class="recent_keyword displaynone">
+            <h4 class="search_title">내가 찾아본 키워드</h4>
+            <div class="search_recent" module="search_recentkeyword">
+                <p class="empty {$recent_none_display|display}">최근 검색어가 없습니다.</p>
+                <ul class="recent_list {$recent_list_display|display}">
+                    <li data-index="{$recent_keyword_index}">
+                        <a href="{$recent_keyword_url}">{$recent_keyword_name}</a>
+                        <button type="button" class="btnDelete" onclick="{$recent_keyword_remove}">삭제</button>
+                    </li>
+                    <li data-index="{$recent_keyword_index}">
+                        <a href="{$recent_keyword_url}">{$recent_keyword_name}</a>
+                        <button type="button" class="btnDelete" onclick="{$recent_keyword_remove}">삭제</button>
+                    </li>
+                </ul>
+                <!-- <div class="button">
+                    <button type="button" class="btnDeleteAll" onclick="{$recent_keyword_remove_all}">검색기록 전체삭제</button>
+                </div> -->
+            </div>
+        </section>
+        
+        <section class="hot_keyword">
+        <h4 class="search_title">HOT 키워드</h4>
+        <div class="search_hot" module="search_hotkeyword">
+            <ul class="hot_list">
+                <li><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+                <li><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+            </ul>
+        </div>
+        </section>
+    </section>
+</article>
+<script>
+    const search = document.querySelector(".search");
+    search.addEventListener("click", ()=>{
+        SEARCH_BANNER.submitSearchBanner(this); return false;
+        classToggle(document.querySelector('#searchModal'), 'displaynone');
+    })
+</script>

@@ -1,17 +1,16 @@
 <!--@css(/layout/basic/css/header.css)-->
-
-<div id="header_wrap">
+<article id="header_wrap">
     <section id="header_logo_section">
-        <a href="/" title="비보트 메인으로" target="_self"><div class="header_logo">비보트 Bvoat</div></a>
+        <a href="/" title="비보트 메인으로" target="_self"><span class="header_logo">비보트 Bvoat</span></a>
         <ul class="header_menu">
             <li class="header_search">
-                <a href="/product/search.html" title="상품 검색">검색</a>
+                <button type="button" class="search_btn" title="상품 검색" onclick="classToggle(document.querySelector('#searchModal'), 'displaynone')">검색</button>
             </li>
-            <li class="header_cart">
+            <li class="header_cart" module="Layout_orderBasketcount">
                 <a href="/order/basket.html" title="장바구니">장바구니</a>
-                <div module="Layout_orderBasketcount"><span class="count">{$basket_count}</span></div>
+                <span class="count">{$basket_count}</span>
             </li>
         </ul>
     </section>
     <!--@import(../nav/top_nav.html)-->
-</div>
+</article>

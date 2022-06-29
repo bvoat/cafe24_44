@@ -3,12 +3,6 @@
   var swiper = new Swiper('.swiper', {
       slidesPerView: 6,
       direction: "horizontal",
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      on: {
-      },
     });
   
   //top_nav 감춤 스크립트
@@ -23,8 +17,6 @@
         topNav.classList.add("displaynone");
       };
     })
-    
-
   }
 
   //함수 실행

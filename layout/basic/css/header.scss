@@ -9,16 +9,19 @@
     display: flex;
     flex-flow: column nowrap;
     overflow: hidden;
+
     #header_logo_section {
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
         padding: 0 11px;
+
         .header_logo {
+            display: block;
             width: 73px;
             height: 40px;
-            background: url("../../../images/logo/Bvoat.png") no-repeat center;
+            background: $bvt-logo no-repeat center;
             background-size: contain;
             text-indent: -9999px;
         }
@@ -35,43 +38,47 @@
 
             li {
                 position: relative;
-                &:nth-child(1) {
-                    a {
-                        position: relative;
-                        display: block;
-                        width: 20px;
-                        height: 20px;
-                        background: url("../../../images/icon/icon-search.png") no-repeat center;
-                        background-size: contain;
-                        text-indent: -9999px;
-                    }
-                }
+            }
 
-                &:nth-child(2) {
-                    a {
-                        position: relative;
-                        display: block;
-                        width: 23px;
-                        height: 23px;
-                        background: url("../../../images/icon/icon-cart.png") no-repeat center;
-                        background-size: contain;
-                        text-indent: -9999px;
-                    }
-
-                    .xans-layout-orderbasketcount {
-                        position: absolute;
-                        width: 15px;
-                        height: 15px;
-                        top: -20%;
-                        right: -24%;
-                        background: $bvt-blue;
-                        font-weight: 700;
-                        color: $bvt-white;
-                        border-radius: 50%;
-                        text-align: center;
-                    }
+            .header_search {
+                >button {
+                    position: relative;
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    background: $search-icon no-repeat center;
+                    background-size: contain;
+                    text-indent: -9999px;
                 }
             }
+
+            .header_cart {
+                position: relative;
+                width: 25px;
+                height: 23px;
+                a {
+                    display: block;
+                    width: 25px;
+                    height: 23px;
+                    background: $cart-icon no-repeat center;
+                    background-size: contain;
+                    text-indent: -9999px;
+                }
+
+                .count {
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    background: $bvt-blue;
+                    font-weight: 700;
+                    color: $bvt-white;
+                    border-radius: 50%;
+                    text-align: center;
+                    top: -3px;
+                    right: -7px;
+                }
+            }
+
         }
     }
 

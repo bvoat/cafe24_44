@@ -321,7 +321,7 @@ div.layerProgress {
     height: 100%;
     background: #fff;
     opacity: 0.8;
-    filter: alpha(opacity=80);
+    filter: alpha(opacity=90);
 }
 
 /* **************************** 필수 CSS 수정 및 삭제 불가 **************************** */

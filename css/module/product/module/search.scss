@@ -1,0 +1,484 @@
+@charset "utf-8";
+@import "../../../../layout/basic/css/abstracts/mixin";
+@import "../../../../layout/basic/css/abstracts/variables";
+
+
+#searchModal{
+    position: fixed;
+    width: 100%;
+    max-width: 450px;
+    height: 100vh;
+    background: $bvt-bg-skyblue;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 999;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 0 11px;
+
+    #searchModalHeader{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 450px;
+        height: 40px;
+        padding: 9px 0;
+        .search_close_btn{
+            width: 18px;
+            height: 18px;
+            background: $x-btn no-repeat;
+            background-size: cover;
+            text-indent: -9999px;
+        }
+        .header_logo {
+            display: block;
+            width: 73px;
+            height: 40px;
+            background: $bvt-logo no-repeat center;
+            background-size: cover;
+            text-indent: -9999px;
+            >span{
+                text-indent: -9999px;
+            }
+        }
+        .header_cart {
+            position: relative;
+                width: 25px;
+                height: 23px;
+                a {
+                    display: block;
+                    width: 25px;
+                    height: 23px;
+                    background: $cart-icon no-repeat center;
+                    background-size: contain;
+                    text-indent: -9999px;
+                }
+
+                .count {
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    background: $bvt-blue;
+                    font-weight: 700;
+                    color: $bvt-white;
+                    border-radius: 50%;
+                    text-align: center;
+                    top: -3px;
+                    right: -7px;
+                }
+        }
+    }
+    #searchModalTitle{
+        width: 100%;
+        max-width: 450px;
+        margin: 2.2rem 0;
+        h2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            font-family: 'Jost', 'Noto Sans KR';
+        }
+        h3 {
+            font-weight: 300;
+            font-size: 1.4rem;
+            color: $bvt-darkgray;
+        }
+    }
+
+    #searchBarForm{
+        width: 100%;
+        max-width: 450px;
+        .search_input_box{
+            width: 100%;
+            max-width: 450px;
+            padding: 0 11px;
+
+            .search_input{
+                position: relative;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                #keyword{
+                    display: block;
+                    width: 100%;
+                    height: 45px;
+                    border-radius: 23px;
+                    border: $bvt-input-border;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    color: $bvt-darkgray;
+                    padding-left: 20px;
+                }
+                .search_btn{
+                    position: absolute;
+                    width: 21px;
+                    height: 21px;
+                    right: 12px;
+                    background: $search-icon no-repeat;
+                    background-size: cover;
+                    text-indent: -9999px;
+                }
+            }
+            .recent_keyword{
+                width: 100%;
+                max-width: 450px;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin: 18px 0;
+                .search_title{
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                    font-family: 'Jost', 'Noto Sans KR';
+                }
+                .search_recent{
+                    margin: 14px 0;
+                    .empty{            
+                        text-align: center;
+                        margin-top: 50px;
+                        font-size: 1.6rem;
+                    }
+
+                    .recent_list{
+                        display: flex;
+                        flex-flow: row wrap;
+
+                        >li{
+                            background: $bvt-white;
+                            border-radius: 6px;
+                            padding: 3px 6px;
+                            font-size: 1.3rem;
+                            font-weight: 500;
+                            margin: 0 3px 3px 0;
+                            
+                            >a{
+
+                            }
+                            >button{
+                                width: 27px;
+                                height: 22px;
+                                background-color: $bvt-blue;
+                                color: $bvt-white;
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .hot_keyword{
+                width: 100%;
+                max-width: 450px;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin: 18px 0;
+
+                .search_title{
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                    font-family: 'Jost', 'Noto Sans KR';
+                }
+                .search_hot{
+                    margin: 14px 0;
+                    .empty{            
+                        text-align: center;
+                        margin-top: 50px;
+                        font-size: 1.6rem;
+                    }
+
+                    .hot_list{
+                        display: flex;
+                        flex-flow: row wrap;
+                        >li{
+                            background: $bvt-white;
+                            border-radius: 6px;
+                            padding: 6px 10px;
+                            font-size: 1.3rem;
+                            font-weight: 500;
+                            margin: 0 3px 3px 0;
+
+                            >a{
+
+                            }
+                            >button{
+                                width: 27px;
+                                height: 22px;
+                                background-color: $bvt-blue;
+                                color: $bvt-white;
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .dimmed{
+            display: none;
+        }
+    }
+}
+
+#searchResult{
+    width: 100%;
+    max-width: 450px;
+    padding: 23px 11px;
+    margin-top: 0px;//top_nav hide
+    #searchResultTitle{
+        margin-bottom: 18px;
+        h2 {
+            font-weight: 600;
+            font-size: 2.2rem;
+        }
+        h3 {
+            font-weight: 300;
+            font-size: 1.4rem;
+            color: $bvt-darkgray;
+        }
+    }
+
+    #searchResultEmpty{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        .empty{
+            text-align: center;
+            margin: 50px;
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+        .empty_info{
+            >li{font-size: 1.4rem;}
+        }
+    }
+    #searchResultProductList{
+        .product_listnormal_list_wrap {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            width: 100%;
+            height: auto;
+            // 상품 개별
+            .listnormal_list {
+        
+                width: 49%;
+                height: auto;
+                padding-bottom: 30px;
+
+                .normal_product {
+                    position: relative;
+                    display: inline;
+                    padding-bottom: 30px;
+
+                    //상품 이미지 구역
+                    .normal_img_wrap {
+                        position: relative;
+                        width: 100%;
+
+                        .normal_img_box {
+                            display: block;
+                            position: relative;
+                            margin-bottom: 6.9px;
+                            padding-top: calc(100% - 15px);
+                            overflow: hidden;
+                            border-radius: 4px;
+
+                            .normal_img {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                            }
+                        }
+
+                        .product_select_icon {
+                            position: absolute;
+                            width: 71px;
+                            height: 30px;
+                            border-radius: 4px;
+                            top: 7.2px;
+                            left: 5.6px;
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        .product_wish {
+                            position: absolute;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 32px;
+                            height: 32px;
+                            bottom: 9.2px;
+                            left: 8.7px;
+                            background: $bvt-white;
+                            border-radius: 50%;
+                            box-shadow: $bvt-btn-shadow;
+                            padding-top: 2px;
+                            
+                            img {
+                                display: block;
+                                box-shadow: none;
+                                width: 20px;
+                                height: 18px;
+                            }
+                        }
+                    }
+
+                    //상품 브랜드 구역
+                    .normal_product_brand {
+                        width: 100%;
+                        height: 32px;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: space-between;
+
+                        .brand {
+                            font-size: 5px !important;
+                            color: $bvt-darkgray;
+                        }
+
+                        .summary_desc {
+                            font-size: 1rem;
+                            color: $bvt-darkgray;
+                        }
+                    }
+
+                    //상품 정보 구역
+                    .normal_product_info {
+                        margin-top: 10px;
+
+                        .normal_product_name {
+                            display: block;
+                            width: 100%;
+                            font-size: 1.35rem;
+                            font-weight: 600;                        margin-bottom: 9px;
+                            vertical-align: top;
+                            @include ellipsis(2, 1.3rem);
+                            >span{
+                                //더보기 할 때 size, color 적용되지 않는 오류 수정
+                                font-size: 1.3rem !important;
+                                color: $bvt-black !important;
+                            }
+                        }
+
+                        .normal_product_price {
+                            display: flex;
+                            align-items: center;
+
+                            .product_price {
+                                font-size: 1.6rem;
+                                font-weight: 700;
+                                color: $bvt-blue;
+
+                                >span {
+                                    font-weight: 300;
+                                    color: $bvt-black;
+                                    margin-right: 8px;
+                                    margin-left: 1px;
+                                }
+
+                            }
+
+                            .sale_price {
+                                font-size: 1.6rem;
+                                font-weight: 700;
+                                color: $bvt-blue;
+
+                                >span {
+                                    margin-left: 1px;
+                                    font-weight: 300;
+                                    color: $bvt-black;
+                                }
+                            }
+
+                            .if_sale_price {
+                                text-decoration: line-through;
+                                color: $bvt-lostfocus-gray;
+
+                                >span {
+                                    margin-left: 1px;
+                                    font-weight: 400;
+                                    text-decoration: line-through;
+                                    color: $bvt-lostfocus-gray;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #searchResultPagination{
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+
+        .paginate-box {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+            width: auto;
+            height: 40px;
+            background: $bvt-bg-lightblue;
+            border-radius: 30px;
+            padding: 0 15px;
+            font-size: 1.3rem;
+
+            .btnPrev_wrap,
+            .btnNext_wrap {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                width: 60px;
+                height: 30px;
+                background: $bvt-white;
+                border-radius: 50%;
+                line-height: 30px;
+                text-align: center;
+                margin: 0 6px;
+
+                a {display: block;
+                    width: 100%;
+                    height: 100%;
+                    color: $bvt-darkgray;
+                    margin: 0 5px;
+                }
+            }
+
+            ol {
+                display: flex;
+                flex-flow: row nowrap;
+                width: 100%;
+                justify-content: space-evenly;
+
+                li {
+                    a {display: block;
+                        width: 100%;
+                        height: 100%;
+                        font-weight: 400;
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                        color: $bvt-darkgray;
+                        margin: 0 5px;
+                    }
+
+                    .this {
+                        font-weight: 600;
+                        color: $bvt-blue;
+                    }
+                }
+            }
+        }
+    }
+
+}
