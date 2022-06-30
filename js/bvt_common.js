@@ -1,10 +1,42 @@
 /* 비보트에서 공통으로 사용하는 함수 모음 */
 
 /*
-* 변수 선언 금지
+* DOM 관련 변수 선언 금지
 * layout.html에 script 태그로 삽입
-
 */
+
+//환경변수 세팅
+let api_domain;
+const cafe_host = window.location.host;
+const live_arr = ["bvoat.com", "m.bvoat.com", "mobile21", "skin38", "mobile10", "skin21"];
+const test_arr = ["skin44", "mobile9"];
+
+live_arr.forEach((path)=>{
+    cafe_host.includes(path) ? api_domain = "bvoat" : api_domain = "bvoat-test";
+})
+
+//.pricenonsale in common.css
+const customPrice = (priceList) => {
+    priceList.forEach((node) => {
+        //node 두 개의 children 모두 존재하면 정가(오른쪽1)에 pricenonsale 클래스 추가 아니면 sale_price(왼쪽0) displaynone
+            if(node.children[0].dataset.price && node.children[1].dataset.price) {
+            node.children[1].classList.add("pricenonsale");
+            } else {
+                node.children[0].classList.add("displaynone");
+            }
+          
+    });
+}
+const priceNonSaleStyle = (customPrice) => {
+const price_wrap_node = document.querySelectorAll(".price_wrap");
+customPrice(price_wrap_node) 
+}
+//함수 실행
+setTimeout(() => {priceNonSaleStyle(customPrice)}, 1000)
+/* 가격 할인율 표시 */
+
+
+
 
 //클래스 토글
 const classToggle = (element, className) => {
@@ -26,35 +58,7 @@ const createdModal = (heading, text, okmsg, nomsg, okfunc, nofunc) => {
     </section>
     `
     document.querySelector('#bvtContainer').insertAdjacentHTML("afterbegin", modal_form)
+    // 버튼 클릭 시 발생할 이벤트 수신
     document.querySelector(".ok_btn").addEventListener("click", okfunc)
     document.querySelector(".no_btn").addEventListener("click", nofunc)
 }
-
-//가격 할인율 표시
-//.pricenonsale in common.css
-
-const customPrice = (priceList) => {
-    priceList.forEach((node) => {
-        console.log('node: ', node);
-        //node 두 개의 children 모두 존재하면 정가(오른쪽1)에 pricenonsale 클래스 추가 아니면 sale_price(왼쪽0) displaynone
-            if(node.children[0].dataset.price && node.children[1].dataset.price) {
-            node.children[1].classList.add("pricenonsale");
-            } else {
-                node.children[0].classList.add("displaynone");
-            }
-          
-    });
-
-}
-
-
-const priceNonSaleStyle = (customPrice) => {
-
-const price_wrap_node = document.querySelectorAll(".price_wrap");
-customPrice(price_wrap_node) 
-
-
-}
-//함수 실행
-
-setTimeout(() => {priceNonSaleStyle(customPrice)}, 800)

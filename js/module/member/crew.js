@@ -110,7 +110,7 @@ const crew_Form = document.querySelector("#crewUrlForm");
 //fetch 통신 함수
 const postURLAsJson = (formData) => {
     console.log("formdata", formData)
-    fetch(`https://bvoat-test.shop/sns`, {
+    fetch(`https://${api_domain}.shop/sns`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ const postURLAsJson = (formData) => {
                     console.log('api 실행')
                     
                     const receivingOk = (id, state) => {
-                        fetch(`https://bvoat-test.shop/customer_info/receiving`, {
+                        fetch(`https://${api_domain}.shop/customer_info/receiving`, {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',

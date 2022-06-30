@@ -1,5 +1,9 @@
 /* ------------------------------------------------------------------------------------ */
 /* bvt */
+// 소비기록 수신
+const buy_record_frame = document.querySelector("#buy_records_detail > iframe");
+buy_record_frame.setAttribute("src", `https://${api_domain}.shop/buy_records?product_no={$product_no}`)
+
 //가치소비기록 iframe 높이 조절
 
 const computedHeight = (idx) => {
@@ -177,11 +181,6 @@ const toggleBuyScreen = (type) => {
 const priceArr = document.querySelectorAll(".price");
 const salePrice = parseInt(document.querySelector(".sale_price").dataset.price);
 const productPrice = parseInt(document.querySelector(".product_price").dataset.price);
-//가격 node 확인하고 한 개 없애기
-//가격 node 확인하고 판매가에 스타일 적용
-const controlPriceStyle = (priceArr) => {
-    salePrice === productPrice ?  priceArr[1].classList.add("displaynone") :          priceArr[1].classList.add("if_sale_price")
-};
 
 /* 가격 -> 스탬프 */
 //스탬프 갯수 변수 할당
@@ -246,7 +245,7 @@ const createStamp = (salePrice,createStampPcsFromPrice) => {
 let prd_no = new URLSearchParams(location.search).get("product_no");
 
 const reciveTagDetail = (prd_no) => {
-    fetch(`https://bvoat-test.shop/products/tagdetail?no=${prd_no}`, {
+    fetch(`https://${api_domain}.shop/products/tagdetail?no=${prd_no}`, {
     method: 'GET', // 또는 'PUT'
     headers: {
         'Content-Type': 'application/json',
@@ -280,7 +279,7 @@ shareBtn.addEventListener("click", e => {
 //Q&A heading 컨트롤
 qnaControl();
 //가격 스타일 처리
-controlPriceStyle(priceArr);
+// controlPriceStyle(priceArr);
 //스탬프 만들기
 createStamp(salePrice,createStampPcsFromPrice);
 //가치태그 수신

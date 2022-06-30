@@ -28,10 +28,10 @@
     <section class="product_info_wrap">
         <h1 class="displaynone">상품 정보</h1>
         <h2 class="product_name">{$name}</h2>
-        <ul class="price_wrap">
-            <li class="product_price" data-pricename="상품가격" data-price="{$prd_price_sale}">{$prd_price_sale}<span class="wontag">원</span></li>
-            <li class="sale_price {$product_price|display}" data-pricename="할인 가격" data-price="{$disp_product_price}">{$disp_product_price}<span class="wontag">원</span</li>
-        </ul>
+            <ul class="price_wrap">
+                <li class="product_price {$product_price_display|display}" data-pricename="상품가격" data-price="{$product_price}">{$product_price}<span class="wontag">원</span></li>
+                <li class="sale_price {$product_sale_price_display|display}" data-pricename="할인 가격" data-price="{$product_sale_price}">{$product_sale_price}<span class="wontag">원</span</li>
+            </ul>
         <article id="tag-box" class="tag-box">
             <!-- 태그 삽입 부분 -->
         </article>
@@ -118,8 +118,7 @@
         <div id="tab1" class="tab_content swiper-slide" data-hash="prd_bh">
             <div id="prd_bh">
                 <div id="buy_records_detail">
-                    <iframe id="buy_record_frame" border="0"
-                        src="https://bvoat-test.shop/buy_records?product_no={$product_no}"></iframe>
+                    <iframe id="buy_record_frame" border="0"></iframe>
                 </div>
             </div>
         </div>

@@ -109,7 +109,7 @@ const reciveVoterStamp = (voterID,displayStampImg) => {
         if(voter_level.value == '일반' || voter_level.value != '크루'){
             console.log('voter_level: ', voter_level.value);
             
-            fetch(`https://bvoat-test.shop/stamp?id=${voterID}`, {
+            fetch(`https:///${api_domain}.shop/stamp?id=${voterID}`, {
             method: 'GET', // 또는 'PUT'
             headers: {
                 'Content-Type': 'application/json',
@@ -146,7 +146,7 @@ const buy_records_num = document.querySelector(".buy_records_num");
 const reciveNotWriteBuyRecords = (voter_identity) => {
     console.log('voter_identity: ', voter_identity);
     if(voter_identity != null){
-        fetch(`https://bvoat-test.shop/buy_records/data?div=not_write_cnt&member_id=${voter_identity}`, {
+        fetch(`https://${api_domain}.shop/buy_records/data?div=not_write_cnt&member_id=${voter_identity}`, {
         method: 'GET', // 또는 'PUT'
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
