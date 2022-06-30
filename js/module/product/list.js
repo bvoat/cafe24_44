@@ -19,6 +19,9 @@ const makeHeadingTwo = (category, description) => {
   if(category != undefined){
     let find = description[category];
     category_title.insertAdjacentHTML('beforeend',`<h2>${find}</h2>`)
+    if(category == 'All'){
+      document.querySelector(".product_category_title > h1").innerHTML="가치소비 전체보기";
+    }
   } else {
     category_title.insertAdjacentHTML('beforeend',`<h2>${description['All']}</h2>`)
   }

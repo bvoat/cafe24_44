@@ -1,5 +1,4 @@
       let page_path = window.location.pathname;
-      console.log("bottom_path", page_path)
       const bottom_menu = document.querySelectorAll(".bottom_menu");
       const exclude_path = ["join.html", "detail"];
       
