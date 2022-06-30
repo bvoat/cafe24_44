@@ -131,7 +131,6 @@ const postURLAsJson = (formData) => {
                 console.log("ok", e.currentTarget.dataset.msg)
                 if(e.currentTarget.dataset.msg){
                     console.log('api 실행')
-                    
                     const receivingOk = (id, state) => {
                         fetch(`https://${api_domain}.shop/customer_info/receiving`, {
                             method: 'PUT',
