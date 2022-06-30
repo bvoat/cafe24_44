@@ -1,7 +1,7 @@
 
   // swiper
   var swiper = new Swiper('.swiper', {
-      slidesPerView: 6,
+      slidesPerView:6,
       direction: "horizontal",
     });
   

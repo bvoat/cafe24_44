@@ -42,15 +42,20 @@ var swiper = new Swiper(".subCategorySwiper", {
 const customProductPrice = (priceWrapNode) => {
   priceWrapNode.forEach((node) => {
     //할인가에 원 붙이기
-    if (!(node.children[1].innerHTML === "")) {
-      if (!node.children[1].innerHTML.includes(">")) {
-        const make_span = document.createElement("span");
-        const make_won = document.createTextNode("원");
-        make_span.appendChild(make_won);
-        node.children[1].appendChild(make_span);
-      }
-      //정가에 if_sale_price 클래스 추가
-      node.children[0].classList.add("if_sale_price");
+    // if (!(node.children[1].innerHTML === "")) {
+    //   if (!node.children[1].innerHTML.includes(">")) {
+    //     const make_span = document.createElement("span");
+    //     const make_won = document.createTextNode("원");
+    //     make_span.appendChild(make_won);
+    //     node.children[1].appendChild(make_span);
+    //   }
+    //   //정가에 if_sale_price 클래스 추가
+    //   node.children[0].classList.add("if_sale_price");
+    // }
+    if(node.children[0].dataset.price && node.children[1].dataset.price) {
+      node.children[1].classList.add("pricenonsale");
+      }  else {
+        node.children[0].classList.add("displaynone");
     }
   });
 };

@@ -104,7 +104,15 @@
   line-height: 1.8rem;
   max-width: 130px;
   max-height: 90px;
+  display: block;
+  overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 2.3rem;
   word-break: break-all;
   white-space: nowrap;
   overflow: hidden;

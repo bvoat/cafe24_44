@@ -1,0 +1,246 @@
+@charset "utf-8";
+@import "./abstracts/_variables";
+@import "./abstracts/_mixin";
+
+#bvtHome {
+    width: calc(100% + 22px);
+    max-width: 450px;
+    margin-left: -11px;
+    padding-bottom: 80px;
+
+    //회원정보
+    #indexUserCnt {
+        width: 100%;
+        max-width: 450px;
+        padding: 10px 11px;
+
+        #indexUserCntTitle {
+            padding: 10px 0;
+
+            >h2 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                font-family: 'Jost', 'Noto Sans KR';
+            }
+
+            >h3 {
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: $bvt-darkgray;
+            }
+
+        }
+
+        #indexUserCntBanner {
+
+            >ul {
+                width: 100%;
+                padding: 5px 0;
+
+                >li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 55px;
+                    border-radius: 9px;
+                    margin: 8px 0;
+
+                    &:nth-child(1) {
+                        border: $bvt-btn-border-gray;
+
+                        >div {
+                            font-size: 1.38rem;
+                            color: $bvt-darkgray;
+
+                            #membernct {
+                                font-weight: 600;
+                                color: $bvt-blue;
+                                font-size: 1.45rem;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        background: $bvt-blue;
+
+                        >a {
+                            font-size: 1.45rem;
+                            color: $bvt-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //자체배송
+    #indexProductBvt {
+        width: 100%;
+        max-width: 450px;
+        padding: 10px 11px;
+
+        #indexProductListTitle {
+            padding: 10px 0;
+
+            >h2 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                font-family: 'Jost', 'Noto Sans KR';
+            }
+
+            >h3 {
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: $bvt-darkgray;
+            }
+        }
+
+        #indexProductList {}
+
+
+    }
+
+    //카테고리
+    #indexCategory {
+        width: 100%;
+        max-width: 450px;
+        padding: 10px 11px;
+
+        #indexCategoryTitle {
+            padding: 10px 0;
+
+            >h2 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                font-family: 'Jost', 'Noto Sans KR';
+            }
+
+            >h3 {
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: $bvt-darkgray;
+            }
+        }
+
+        #indexCategoryList {
+
+            #categorySwipe{
+                padding: 0 11px;
+                #index_category {
+                    margin: 20px 0;
+                    .category {
+                        width: auto;
+                        border-radius: 17px;
+                        a {
+                            display: block;
+                            color: #fff;
+                            width: 104px;
+                            height: 104px;
+                            text-align: center;
+                            line-height: 104px;
+                            font-family: 'Jost', 'Noto Sans KR' !important;
+                            font-size: 17px;
+                            font-weight: normal;
+                        }
+    
+                        >a[name="?cate_no=105"] {
+                            background: url(/bvtIMG/icon/index_category_105.svg) no-repeat 0 0;
+                            background-size: cover;
+                        }
+    
+                        >a[name="?cate_no=146"] {
+                            background: url(/bvtIMG/icon/index_category_146.svg) no-repeat 0 0;
+                            background-size: cover;
+                        }
+    
+                        >a[name="?cate_no=116"] {
+                            background: url(/bvtIMG/icon/index_category_116.svg) no-repeat 0 0;
+                            background-size: cover;
+                        }
+    
+                        >a[name="?cate_no=102"] {
+                            background: url(/bvtIMG/icon/index_category_102.svg) no-repeat 0 0;
+                            background-size: cover;
+                        }
+    
+                        >a[name="?cate_no=207"] {
+                            background: url(/bvtIMG/icon/index_category_207.svg) no-repeat 0 0;
+                            background-size: contain;
+                            text-align: left;
+                            padding-left: 30px;
+                            color: #ABABAB;
+                        }
+    
+                    }
+    
+    
+                }
+                .swiper-pagination {}
+    
+                .category_btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.4rem;
+                    width: 100%;
+                    padding: 12px 0;
+                    margin: 20px 0;
+                    height: auto;
+                    text-align: center;
+                    border-radius: 20px;
+                    background: $bvt-bg-lightblue;
+                }
+            }
+        }
+    }
+
+    //현재 구매 중
+    #nowBuying {
+        width: 100%;
+        max-width: 450px;
+        padding: 10px 11px;
+
+        #nowBuyingTitle {
+            padding: 10px 0;
+
+            >h2 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                font-family: 'Jost', 'Noto Sans KR';
+            }
+
+            >h3 {
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: $bvt-darkgray;
+            }
+        }
+    }
+
+
+}
+
+
+//메인 공통
+.index_main {
+    width: 100%;
+    max-width: 450px;
+    padding: 16px 11px;
+    border-radius: 24px;
+    box-shadow: $bvt-shadow;
+    background: $bvt-white;
+    overflow: hidden;
+}
+
+.info_txt {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    border: $bvt-btn-border;
+    border-radius: 6px;
+    padding: 8px 11px;
+    font-size: 1.1rem;
+    color: $bvt-blue;
+    margin: 10px 0;
+}

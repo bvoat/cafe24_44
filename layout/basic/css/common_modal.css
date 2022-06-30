@@ -1,0 +1,90 @@
+#bvtCommonModal {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100% - 11px);
+  max-width: 450px;
+  height: 100%;
+  background: rgba(112, 112, 112, 0.7);
+  z-index: 999;
+  overflow: hidden;
+  border: 0;
+}
+
+#bvtCommonModal #bvtCommonForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 425px;
+  height: 344px;
+  min-height: 200px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px 11px;
+  overflow: hidden;
+}
+
+#bvtCommonModal #bvtCommonForm .bvt_modal_title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+#bvtCommonModal #bvtCommonForm .bvt_modal_text {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #707070;
+  text-align: center;
+}
+
+#bvtCommonModal #bvtCommonForm .bvt_modal_btn {
+  width: 100%;
+  max-width: 425px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#bvtCommonModal #bvtCommonForm .bvt_modal_btn > button {
+  width: calc(50% - 5px);
+  height: 59px;
+  border-radius: 42px;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+#bvtCommonModal #bvtCommonForm .bvt_modal_btn .ok_btn {
+  background: #022CFF;
+}
+
+#bvtCommonModal #bvtCommonForm .bvt_modal_btn .no_btn {
+  background: #C4C4C4;
+}
+/*# sourceMappingURL=common_modal.css.map */

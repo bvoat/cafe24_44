@@ -28,12 +28,10 @@
     <section class="product_info_wrap">
         <h1 class="displaynone">상품 정보</h1>
         <h2 class="product_name">{$name}</h2>
-        <div class="price_wrap">
-            <span class="sale_price price" data-price="{$product_sale_price}">{$product_sale_price|numberformat}<span>원</span>
-            </span>
-            <span class="product_price price" data-price="{$product_price}">{$product_price|numberformat}<span>원</span>
-            </span>
-        </div>
+        <ul class="price_wrap">
+            <li class="product_price" data-pricename="상품가격" data-price="{$prd_price_sale}">{$prd_price_sale}<span class="wontag">원</span></li>
+            <li class="sale_price {$product_price|display}" data-pricename="할인 가격" data-price="{$disp_product_price}">{$disp_product_price}<span class="wontag">원</span</li>
+        </ul>
         <article id="tag-box" class="tag-box">
             <!-- 태그 삽입 부분 -->
         </article>

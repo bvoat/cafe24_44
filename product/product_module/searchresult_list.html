@@ -21,10 +21,10 @@
                     <a class="normal_product_name" href="/product/detail.html{$param}">
                         {$product_name|striptag}
                     </a>
-                    <div class="normal_product_price price_wrap">
-                        <span class="product_price">{$disp_product_price}<span>원</span></span>
-                        <span class="sale_price">{$prd_price_sale|striptag}</span>
-                    </div>
+                    <ul class="normal_product_price price_wrap">
+                        <li class="product_price" data-pricename="상품가격" data-price="{$prd_price_sale}">{$prd_price_sale}<span class="wontag">원</span></li>
+                        <li class="sale_price {$product_price|display}" data-pricename="할인 가격" data-price="{$disp_product_price}">{$disp_product_price}<span class="wontag">원</span</li>
+                    </ul>
                 </li>
             </ul>
         </li>
@@ -49,10 +49,10 @@
                     <a class="normal_product_name" href="/product/detail.html{$param}">
                         {$product_name|striptag}
                     </a>
-                    <div class="normal_product_price price_wrap">
-                        <span class="product_price">{$disp_product_price}<span>원</span></span>
-                        <span class="sale_price">{$prd_price_sale|striptag}</span>
-                    </div>
+                    <ul class="normal_product_price price_wrap">
+                        <li class="product_price" data-pricename="상품가격" data-price="{$prd_price_sale}">{$prd_price_sale}<span class="wontag">원</span></li>
+                        <li class="sale_price {$product_price|display}" data-pricename="할인 가격" data-price="{$disp_product_price}">{$disp_product_price}<span class="wontag">원</span</li>
+                    </ul>
                 </li>
             </ul>
         </li>

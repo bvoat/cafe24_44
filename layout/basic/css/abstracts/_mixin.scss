@@ -12,6 +12,7 @@
 
 // ellipsis 처리만
 @mixin only-ellipsis($line-cnt, $line-height) {
+    display: block;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

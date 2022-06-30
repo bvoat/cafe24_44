@@ -1,8 +1,123 @@
 <!--@layout(/layout/basic/layout.html)-->
+<!--@css(/layout/basic/css/index.css)-->
 
-<div id="index">
+<article id="bvtHome">
+    <!-- 배너 -->
+    <!--@import(/main/module/index_slide.html)-->
+    <!-- 배너 -->
+    <!--보터 카운트-->
+    <section id="indexUserCnt" class="index_user">
+        <section id="indexUserCntTitle">
+            <h2>Bvoat Now</h2>
+            <h3>이만큼 가치소비를 함께하고 있어요</h3>
+        </section>
+        <section id="indexUserCntBanner">
+            <ul>
+                <li>
+                    <div id="joinbanner" class="joinbanner">🥳<em id="membernct"></em>의 보터가 소비로 투표 중이에요!</div>
+                </li>
+                <li><a href="/myshop/community/community_list.html">💬&nbsp;가치소비 커뮤니티 바로 가기 &nbsp;<span> 〉 </span></a>
+                </li>
+            </ul>
+        </section>
+    </section>
+    <!--보터 카운트-->
 
-</div>
+    <!-- 메인진열 사입 검증 -->
+    <section id="indexProductBvt" class="index_prd_list">
+        <section id="indexProductListTitle">
+            <h2>Bvoat Delivery</h2>
+            <h3>브랜드 무관, 한 번에 배송되는 비보트 딜리버리 🚛</h3>
+            <p class="info_txt">
+                - 회원 가입 시 1만 원 이상 무료배송 쿠폰 지급<br>
+                - 구매자 전원 비보트 뱃지 증정 (소진시 조기 종료)
+            </p>
+        </section>
+        <section id="indexProductList" class="index_prd_list_bvt index_main">
+            <div module="product_listmain_50">
+                <!--
+                    $count = 12
+                    $basket_result = /product/add_basket.html
+                    $basket_option = /product/basket_option.html
+            -->
+                <!--@import(/product/product_module/product_listmain.html)-->
+            </div>
+        </section>
+    </section>
+    <!-- 메인진열 사입 검증 -->
+
+    <!-- 카테고리 -->
+    <section id="indexCategory">
+        <section id="indexCategoryTitle">
+            <h2 class="t14">Category</h2>
+            <h3 class="t09">우리의 가치있는 의식주를 위해</h3>
+        </section>
+        <section id="indexCategoryList">
+            <div id="categorySwipe" class="swiper-container category_swipe index_main">
+                <div class="swiper-wrapper" id="index_category" module="Layout_category">
+                    <div class="category swiper-slide"><a href="/product/list.html{$param}"
+                            name="{$param}">{$name_or_img_tag}</a>
+                        </div>
+                    <div class="category swiper-slide"><a href="/product/list.html{$param}"
+                            name="{$param}">{$name_or_img_tag}</a>
+                        </div>
+                    <div class="category swiper-slide"><a href="/product/list.html{$param}"
+                            name="{$param}">{$name_or_img_tag}</a>
+                        </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                    <a href="/product/category.html" class="category_btn">
+                        더 많은 카테고리 보러 가기<img src="/bvtIMG/icon/arrow-right_gray.svg" alt="화살표">
+                    </a>
+            </div>
+        </section>
+    </section>
+    <!-- 카테고리 -->
+
+    <!-- 현재 구매 중 -->
+    <section id="nowBuying">
+        <section id="nowBuyingTitle">
+            <h2>Congrats!</h2>
+            <h3>지금 보터들이 구매하고 있어요.</h3>
+        </section>
+        <section id="nowBuyingList" class="index_main" module="product_listmain_46">
+            <!--
+        $count = 20
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+        -->
+
+            <!--@import(/product/product_module/product_listmain_swiper.html)-->
+            <div class="swiper-pagination"></div>
+        </section>
+    </section>
+    <!-- 현재 구매 중 -->
+
+</article>
 <!--@import(/layout/basic/footer.html)-->
-
 <!--@define(cmc_log)-->
+
+<script>
+    var swiper_order = new Swiper("#nowBuyingList", {
+        slidesPerView: 'auto',
+        spaceBetween: 12,
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            type: "progressbar",
+        },
+    });
+
+    var swiper_cat = new Swiper("#categorySwipe", {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+        autoHeight: true, //enable auto height
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            type: "progressbar",
+        },
+    });
+</script>

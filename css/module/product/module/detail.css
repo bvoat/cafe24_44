@@ -82,35 +82,6 @@
   margin-bottom: 17px;
 }
 
-#productDetailTop .product_info_wrap .price_wrap {
-  margin-bottom: 17px;
-}
-
-#productDetailTop .product_info_wrap .price_wrap .price {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #022CFF;
-  margin-right: 6px;
-}
-
-#productDetailTop .product_info_wrap .price_wrap .price > span {
-  font-weight: 300;
-  color: #292929;
-}
-
-#productDetailTop .product_info_wrap .price_wrap .if_sale_price {
-  font-size: 1.25rem;
-  text-decoration: line-through;
-  color: #ABABAB;
-}
-
-#productDetailTop .product_info_wrap .price_wrap .if_sale_price > span {
-  margin-left: 1px;
-  font-weight: 400;
-  text-decoration: line-through;
-  color: #ABABAB;
-}
-
 #productDetailTop .product_info_wrap .tag-box {
   display: -webkit-box;
   display: -ms-flexbox;

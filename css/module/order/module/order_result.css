@@ -360,6 +360,7 @@
   font-size: 1.35rem;
   font-weight: 500;
   color: #707070;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -378,6 +379,7 @@
 }
 
 #mCafe24Order .order_product_section .order_product_details .order_info .product_list_box .product_list .description .info li .option {
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;

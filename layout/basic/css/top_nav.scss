@@ -16,14 +16,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            >li{
+                &:nth-child(1), &:nth-child(2), &:nth-child(8){
+                    width: 86px !important;
+                }
+            }
             .top_nav_name {
                 display: flex;
+                justify-content: center;
                 align-items: center;
-                width: fit-content !important;
                 font-size: 1.5rem;
                 font-weight: normal;
-                text-align: left;
-                margin-right: 15px;
+                text-align: center;
                 a {
                     font-size: 1.45rem;
                     font-stretch: condensed;

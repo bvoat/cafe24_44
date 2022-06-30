@@ -90,6 +90,7 @@
                 .summary_desc {
                     font-size: 1rem;
                     color: $bvt-darkgray;
+                    @include ellipsis(2, 2.2rem);
                 }
             }
 
@@ -107,48 +108,6 @@
                     @include ellipsis(2, 1.3rem);
                 }
 
-                .recommend_product_price {
-                    display: flex;
-                    align-items: center;
-
-                    .product_price {
-                        font-size: 1.6rem;
-                        font-weight: 700;
-                        color: $bvt-blue;
-
-                        >span {
-                            font-weight: 300;
-                            color: $bvt-black;
-                            margin-right: 8px;
-                            margin-left: 1px;
-                        }
-
-                    }
-
-                    .sale_price {
-                        font-size: 1.6rem;
-                        font-weight: 700;
-                        color: $bvt-blue;
-
-                        >span {
-                            margin-left: 1px;
-                            font-weight: 300;
-                            color: $bvt-black;
-                        }
-                    }
-
-                    .if_sale_price {
-                        text-decoration: line-through;
-                        color: $bvt-lostfocus-gray;
-
-                        >span {
-                            margin-left: 1px;
-                            font-weight: 400;
-                            text-decoration: line-through;
-                            color: $bvt-lostfocus-gray;
-                        }
-                    }
-                }
             }
         }
     }

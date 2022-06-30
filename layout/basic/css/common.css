@@ -311,6 +311,31 @@ div.layerProgress {
 .zindexzero {
     z-index: 0 !important;
 }
+/* 가격 표시 */
+.price_wrap{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.price_wrap>li{
+    font-size: 1.48rem;
+    font-weight: 600;
+    color: #022cff;
+}
+.pricenonsale{
+    text-decoration: line-through;
+    color: #ABABAB !important;
+    font-size :
+    1.3rem;
+    margin-left: 8px;
+}
+.pricenonsale>.wontag{
+    color: #ABABAB !important;
+}
+.wontag{
+        font-weight: 300;
+        margin-left: 2px;
+        color: #292929;
+}
 
 .dimmed {
     position: fixed;

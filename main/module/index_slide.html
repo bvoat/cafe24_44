@@ -1,0 +1,27 @@
+<!--@css(../../css/module/main/module/index_slide.css)-->
+<section id="indexBannerSlider">
+    <ul class="index_banner swiper-wrapper">
+        <!-- Slides -->
+        <li class="swiper-slide">
+            <a href="/front/php/b/board_read.php?board_no=2&no=604" class="index_banner_anchor">
+                <ul>
+                    <li class="banner_icon">비보트 소개</li>
+                    <li class="banner_title">소비는 투표다!<br>가치소비할 땐 비보트</li>
+                </ul>
+            </a>
+        </li>
+    </ul>
+<div class="banner_pagination"></div>
+</section>
+<script>
+    var swiper = new Swiper('#indexBannerSlider', {
+        slidesPerView:1,
+         direction: "horizontal",
+        loop: true,
+        pagination: {
+            el: '.banner_pagination',
+            type: "progressbar",
+
+        },
+    });
+</script>

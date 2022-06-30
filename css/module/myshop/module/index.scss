@@ -58,7 +58,7 @@
                                 line-height: 1.8rem;
                                 max-width: 130px;
                                 max-height: 90px;
-                                text-overflow: ellipsis;
+                                @include only-ellipsis(1, 2.1rem);
                                 word-break: break-all;
                                 white-space: nowrap;
                                 overflow: hidden;

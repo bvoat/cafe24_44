@@ -76,35 +76,6 @@
             margin-bottom: 17px;
         }
 
-        .price_wrap {
-            margin-bottom: 17px;
-
-            .price {
-                font-size: 1.6rem;
-                font-weight: 600;
-                color: $bvt-blue;
-                margin-right: 6px;
-
-                >span {
-                    font-weight: 300;
-                    color: $bvt-black;
-                }
-            }
-
-            .if_sale_price {
-                font-size: 1.25rem;
-                text-decoration: line-through;
-                color: $bvt-lostfocus-gray;
-
-                >span {
-                    margin-left: 1px;
-                    font-weight: 400;
-                    text-decoration: line-through;
-                    color: $bvt-lostfocus-gray;
-                }
-            }
-        }
-
         .tag-box {
             display: flex;
             flex-flow: row wrap;

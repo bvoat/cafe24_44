@@ -58,8 +58,10 @@
 </article>
 <script>
     const search = document.querySelector(".search");
-    search.addEventListener("click", ()=>{
+    if(search != null){
+        search.addEventListener("click", ()=>{
         SEARCH_BANNER.submitSearchBanner(this); return false;
         classToggle(document.querySelector('#searchModal'), 'displaynone');
     })
+    }
 </script>

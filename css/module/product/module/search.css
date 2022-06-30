@@ -439,6 +439,16 @@
 #searchResult #searchResultProductList .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_brand .summary_desc {
   font-size: 1rem;
   color: #707070;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 2.4rem;
+  height: 5rem;
+  /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
 }
 
 #searchResult #searchResultProductList .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info {
@@ -467,52 +477,6 @@
 #searchResult #searchResultProductList .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_name > span {
   font-size: 1.3rem !important;
   color: #292929 !important;
-}
-
-#searchResult #searchResultProductList .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#searchResult #searchResultProductList .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_price .product_price {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #022CFF;
-}
-
-#searchResult #searchResultProductList .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_price .product_price > span {
-  font-weight: 300;
-  color: #292929;
-  margin-right: 8px;
-  margin-left: 1px;
-}
-
-#searchResult #searchResultProductList .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_price .sale_price {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #022CFF;
-}
-
-#searchResult #searchResultProductList .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_price .sale_price > span {
-  margin-left: 1px;
-  font-weight: 300;
-  color: #292929;
-}
-
-#searchResult #searchResultProductList .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_price .if_sale_price {
-  text-decoration: line-through;
-  color: #ABABAB;
-}
-
-#searchResult #searchResultProductList .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_price .if_sale_price > span {
-  margin-left: 1px;
-  font-weight: 400;
-  text-decoration: line-through;
-  color: #ABABAB;
 }
 
 #searchResult #searchResultPagination {
