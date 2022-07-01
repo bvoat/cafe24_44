@@ -332,8 +332,8 @@ div.layerProgress {
     color: #ABABAB !important;
 }
 .wontag{
-        font-weight: 300;
-        margin-left: 2px;
+        font-weight: normal;
+        margin-left: 1.5px;
         color: #292929;
 }
 
