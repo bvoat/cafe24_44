@@ -188,9 +188,7 @@ const toggleBuyScreen = (type) => {
 const priceArr = document.querySelectorAll(".price");
 console.log('priceArr: ', priceArr);
 const salePrice = document.querySelector("#span_product_price_sale").innerText;
-console.log('salePrice: ', salePrice);
 const productPrice = document.querySelector("#span_product_price_text").innerText;
-console.log('productPrice: ', productPrice);
 
 /* 가격 -> 스탬프 */
 //스탬프 갯수 변수 할당
@@ -238,7 +236,7 @@ const displayStampImg = (productStamp) => {
 //스탬프 promise 진행
 const createStamp = (salePrice,createStampPcsFromPrice) => {
     //스탬프 총 갯수 변수에 할당
-     createStampPcsFromPrice(salePrice/10000)
+     createStampPcsFromPrice(parseInt(salePrice)/10)
      .then((res)=>{
         console.log("stamp", res, "개")
         displayStampImg(res);
@@ -264,7 +262,6 @@ const reciveTagDetail = (prd_no) => {
     })
     .then((response) => response.json())
     .then((data) => {
-    console.log('성공:', data);
         data.forEach((tag)=>{
             document.querySelector("#tag-box").insertAdjacentHTML("beforeend", `<div>${tag.emoji} ${tag.tag_name}</div>`)
         })
@@ -288,8 +285,6 @@ shareBtn.addEventListener("click", e => {
 })
 //Q&A heading 컨트롤
 qnaControl();
-//가격 스타일 처리
-customPriceDetail(priceArr);
 //스탬프 만들기
 createStamp(salePrice,createStampPcsFromPrice);
 //가치태그 수신
