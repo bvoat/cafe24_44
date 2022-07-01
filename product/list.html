@@ -3,8 +3,9 @@
 
 <article id="productList">
 <!-- 카테고리 타이틀 -->
-<section module="product_headcategory" class="product_category_title">
-    <h1 data-category="{$title_text}">가치소비 {$title_text} 추천</h1>
+<section id="productListTitle" module="product_headcategory">
+    <input type="hidden" id="topNavControl" name="{$name_1}" value="{$name_1}" class="displaynone">
+    <h1 class="category_title" data-category="{$title_text}" data-main="{$name_1}">가치소비 {$title_text} 추천</h1>
     <h2></h2>
 </section>
 <!-- 카테고리 타이틀 -->

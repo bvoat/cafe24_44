@@ -2,8 +2,9 @@
 /* bvt */
 // 소비기록 수신
 const buy_record_frame = document.querySelector("#buy_records_detail > iframe");
-buy_record_frame.setAttribute("src", `https://${api_domain}.shop/buy_records?product_no={$product_no}`)
-
+if(buy_record_frame != null){
+    buy_record_frame.setAttribute("src", `https://${api_domain}.shop/buy_records?product_no={$product_no}`)
+}
 //가치소비기록 iframe 높이 조절
 
 const computedHeight = (idx) => {
@@ -50,7 +51,7 @@ var swiper = new Swiper("#productDetailBottom", {
         el: ".detail_tab_wrap",
         clickable: true,
         renderBullet: function (index, className) {
-            return `<span class="tab_custom swiper-pagination-bullet" tabindex="${index}" role="button" aria-label=${tab_txt[index]} data-hash=${tab_hash[index]}> ${tab_txt[index]} </span> `;
+            return `<span class="tab_custom swiper-pagination-bullet tab${index+1}" tabindex="${index}" role="button" aria-label=${tab_txt[index]} data-hash=${tab_hash[index]}> ${tab_txt[index]} </span> `;
         },
     },
     on: {

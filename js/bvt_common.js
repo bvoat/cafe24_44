@@ -4,7 +4,8 @@
 * DOM 관련 변수 선언 금지
 * layout.html에 script 태그로 삽입
 */
-
+//path 체크
+console.log('path_name', window.location.href);
 //환경변수 세팅
 let api_domain;
 const cafe_host = window.location.host;
@@ -28,8 +29,10 @@ const customPrice = (priceList) => {
     });
 }
 const priceNonSaleStyle = (customPrice) => {
-const price_wrap_node = document.querySelectorAll(".price_wrap");
-customPrice(price_wrap_node) 
+    const price_wrap_node = document.querySelectorAll(".price_wrap");
+    if(price_wrap_node != null){
+        customPrice(price_wrap_node) 
+    }
 }
 //함수 실행
 setTimeout(() => {priceNonSaleStyle(customPrice)}, 1000)

@@ -1,0 +1,290 @@
+@charset "UTF-8";
+/* 펀딩 메인진열 */
+.normalBanner-swipe > .swiper-wrapper > .swiper-slide > a > .img-res > img {
+  width: 100%;
+  -webkit-box-shadow: 0px 10px 20px #0000000F;
+          box-shadow: 0px 10px 20px #0000000F;
+  border-radius: 5px;
+}
+
+.bvt-listmain-box > .prdList {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0;
+  line-height: 0;
+  min-width: 0;
+}
+
+.bvt-listmain-box .box-img a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.bvt-listmain-box .box-img {
+  width: 100%;
+}
+
+.bvt-listmain-box .box-img > a {
+  position: relative;
+  padding-top: 100%;
+  /* 1:1 ratio */
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.bvt-listmain-box .prdList > li {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 1.4;
+  width: calc(50% - 3px);
+  position: relative;
+  margin: 0;
+}
+
+.bvt-listmain-box .prdList > li:nth-of-type(odd) {
+  margin-right: 6px;
+}
+
+.bvt-listmain-box .box-desc {
+  width: 100%;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  margin-top: -30px;
+}
+
+.bvt-listmain-box .brand {
+  margin-bottom: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #022CFF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bvt-listmain-box .title * {
+  margin-bottom: 18px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  color: #292929;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.bvt-listmain-box .price {
+  display: inline-block;
+  font-size: 14px;
+  color: #292929;
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.bvt-listmain-box .price2 {
+  display: inline-block;
+  font-size: 13px;
+  text-decoration: line-through;
+  color: #C7C7C7;
+}
+
+/*listmain 좋아요,관심상품 */
+.bvt-listmain-box .likePrd, .bvt-listmain-box .wish {
+  position: relative;
+  left: 8px;
+  bottom: 37px;
+}
+
+.bvt-listmain-box .likePrd .gdVote, .bvt-listmain-box .wish .gdVote {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid white;
+  outline: none;
+  padding: 0;
+  -webkit-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
+}
+
+.bvt-listmain-box .wish .ec-product-listwishicon {
+  height: 18px;
+  width: auto;
+}
+
+.bvt-listmain-box .likePrd .gdVote:hover {
+  border: 2px solid #022CFF;
+  -webkit-transition: ease-in 0.07s;
+  transition: ease-in 0.07s;
+  cursor: pointer;
+}
+
+.bvt-listmain-box .likePrd .gdVote img {
+  height: 18px;
+  width: auto;
+}
+
+/* listmain2*/
+.bvt-listmain2-box {
+  margin-bottom: 15px;
+}
+
+.bvt-listmain2-box > .prdList > div {
+  position: relative;
+}
+
+.bvt-listmain2-box .box-img > a {
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.bvt-listmain2-box .box-img > a > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -22%);
+          transform: translate(-50%, -22%);
+}
+
+.bvt-listmain2-box .box-btns {
+  width: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1;
+  padding: 0 12px;
+}
+
+.bvt-listmain2-box .box-icon {
+  height: 40px;
+  display: inline-block;
+}
+
+.bvt-listmain2-box .box-bottom {
+  padding: 35px 20px 25px 20px;
+  border-radius: 0 0 8px 8px;
+  background-color: #fff;
+}
+
+.bvt-listmain2-box .box-desc {
+  position: relative;
+  top: -40px;
+}
+
+.bvt-listmain2-box .box-icon > img {
+  height: 100%;
+  -webkit-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 30px;
+}
+
+.bvt-listmain2-box .brand {
+  margin-bottom: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #022CFF;
+  white-space: nowrap;
+}
+
+.bvt-listmain2-box .title * {
+  margin-bottom: 8px;
+  width: 100%;
+  font-size: 20px;
+  color: #292929;
+  font-weight: bold;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.bvt-listmain2-box .price {
+  display: inline-block;
+  font-size: 15px;
+  color: #292929;
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.bvt-listmain2-box .price2 {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 13px;
+  text-decoration: line-through;
+  color: #C7C7C7;
+}
+
+.bvt-listmain2-box .likePrd {
+  height: 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bvt-listmain2-box .likePrd .gdVote {
+  height: 41px;
+  width: 41px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid white;
+  outline: none;
+  padding: 0;
+  -webkit-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
+  vertical-align: middle;
+  margin-right: 13px;
+}
+
+.bvt-listmain2-box .likePrd .gdVote:hover {
+  border: 2px solid #022CFF;
+  -webkit-transition: ease-in 0.07s;
+  transition: ease-in 0.07s;
+  cursor: pointer;
+  -webkit-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
+}
+
+.bvt-listmain2-box .likePrd .gdVote img {
+  height: 22px;
+  width: auto;
+}
+
+.bvt-listmain2-box .likePrd .gdCount {
+  vertical-align: middle;
+  border-radius: 100px;
+  padding: 12px 17px;
+  -webkit-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
+  background-color: #ffffff;
+}
+
+.bvt-listmain2-box .discountPrd {
+  position: absolute;
+  font-size: 15px;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+}
+/*# sourceMappingURL=funding.css.map */

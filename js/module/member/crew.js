@@ -119,33 +119,50 @@ const postURLAsJson = (formData) => {
     })
     .then((response) => {
         if(response.status === 500){
-            alert("서버 오류입니다. 관리자에게 문의해주세요.")
+            alert("😢 서버 오류입니다. 비보트에게 알려주세요!");
+            ChannelIO('show');
             return false;
-
         } else if (response.status === 409){
-            alert("이미 등록된 URL 입니다.")
+            alert("이미 등록하신 URL 입니다 👍")
             return false;
 
         } else if(response.status === 201) {
             const okSns = (e) => {
                 console.log("ok", e.currentTarget.dataset.msg)
                 if(e.currentTarget.dataset.msg){
-                    console.log('api 실행')
                     const receivingOk = (id, state) => {
-                        fetch(`https://${api_domain}.shop/customer_info/receiving`, {
-                            method: 'PUT',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: {
+                        console.log('id', id, 'state', state )
+                        console.log("test",JSON.stringify({
+                            "id" : id,
+                            "state" : state
+                        }))
+                        $.ajax({
+                            url: `https://${api_domain}.shop/customerinfo/receiving`,
+                            data: {
                                 "id" : id,
                                 "state" : state
-                            }
-                        }
-                        )
-                        .then((res)=>{
-                            console.log("sns", res.json())
-                            return res.json()
+                            },
+                            method: 'POST',
+                            dataType: 'json'
+                            }).done((res) => {
+                                console.log("sns", res)                                
+                                if(res.status=== 200){
+                                    document.querySelector("#bvtCommonModal").remove()
+                                    return false;
+                                } else{
+                                    let sns_confirm = confirm("😢 마케팅 수신 동의에 오류가 발생했어요! 비보트에게 알려주세요!");
+                                    if(sns_confirm){
+                                        document.querySelector("#bvtCommonModal").remove();
+                                        ChannelIO('show');
+                                        return false;
+                                    } else {
+                                        document.querySelector("#bvtCommonModal").remove();
+                                        return false;
+                                    }
+                                    return false;
+                                }
+                                return false;
+
                         })
                     
                     }

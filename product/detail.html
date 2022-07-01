@@ -29,8 +29,8 @@
         <h1 class="displaynone">상품 정보</h1>
         <h2 class="product_name">{$name}</h2>
             <ul class="price_wrap">
-                <li class="product_price {$product_price_display|display}" data-pricename="상품가격" data-price="{$product_price}">{$product_price}<span class="wontag">원</span></li>
-                <li class="sale_price {$product_sale_price_display|display}" data-pricename="할인 가격" data-price="{$product_sale_price}">{$product_sale_price}<span class="wontag">원</span</li>
+                <li class="sale_price {$product_sale_price_display|display}" data-pricename="할인 가격" data-price="{$product_sale_price}">{$product_sale_price|numberformat}<span class="wontag">원</span</li>
+                <li class="product_price {$product_price_display|display}" data-pricename="상품가격" data-price="{$product_price}">{$product_price|numberformat}<span class="wontag">원</span></li>
             </ul>
         <article id="tag-box" class="tag-box">
             <!-- 태그 삽입 부분 -->
@@ -65,7 +65,7 @@
                 <p>크루 등급</p>
                 <p><em class="crew_value">{$mileage_value}</em><span>점</span> 적립</p>
             </li>
-            <li class="mileage_crew_txt mileage_txt"><a href="">비보트 크루</a>는 두 배 적립됩니다.</li>
+            <li class="mileage_crew_txt mileage_txt"><a href="/member/crew/crew.html">비보트 크루</a>는 두 배 적립됩니다.</li>
             <li class="mileage_mileage_txt mileage_txt">마일리지는 비보트 내에서 현금처럼 사용이 가능합니다.</li>
         </ul>
     </section>
@@ -79,7 +79,7 @@
             <li><span class="stamp_node stamp3">4개</span></li>
             <li><span class="stamp_node stamp4">5개</span></li>
         </ol>
-        <p class="stamp_txt">가치 스탬프 5개를 모으면 <a href=""> 크루 등급</a>으로 등업됩니다.</p>
+        <p class="stamp_txt">가치 스탬프 5개를 모으면 <a href="/member/crew/crew.html"> 크루 등급</a>으로 등업됩니다.</p>
     </section>
 </article>
 <!-- 상품 정보 상단 -->

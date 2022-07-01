@@ -1,10 +1,10 @@
 /* category description 추가 */
 
 //title 전체 변수화
-const category_title = document.querySelector(".product_category_title");
+const category_title = document.querySelector("#productListTitle");
 //h1에서 data category 받아오기
-const category = document.querySelector(".product_category_title > h1").dataset
-  .category;
+const category = document.querySelector(".category_title").dataset.main;
+console.log('category: ', category);
 // 멘트 객체
 const description = {
   패션: "책임 있는 소비와 생산, 지속 가능한 패션 어때요?",
@@ -20,14 +20,14 @@ const makeHeadingTwo = (category, description) => {
     let find = description[category];
     category_title.insertAdjacentHTML('beforeend',`<h2>${find}</h2>`)
     if(category == 'All'){
-      document.querySelector(".product_category_title > h1").innerHTML="가치소비 전체보기";
+      category.innerHTML="가치소비 전체보기";
     }
   } else {
     category_title.insertAdjacentHTML('beforeend',`<h2>${description['All']}</h2>`)
   }
 };
-makeHeadingTwo(category, description);
-
+window.addEventListener("DOMContentLoaded",makeHeadingTwo(category, description)
+)
 /* category description 추가 */
 
 /* 하위 카테고리 슬라이드 */

@@ -1,10 +1,10 @@
-<section module="Product_menupackage" class="product_menupackage subCategorySwiper">
+<section module="product_children" class="product_menupackage subCategorySwiper">
     <ul class="menuCategory swiper-wrapper">
-        <li class="{$selected} menuCategory_list swiper-slide">
-            <a href="" title="전체보기 {$link_product_list_sub}">ALL</a>
-        </li>
+        <!-- <li class="{$selected} menuCategory_list swiper-slide">
+            <a href="{$link_product_list_sub}" title="전체보기 {$link_product_list_sub}">ALL</a>
+        </li> -->
         <li module="product_displaycategory" class="{$selected} menuCategory_list swiper-slide">
-            <a href="{$link_product_list_sub}" title="{$link_product_list_sub}">{$category_name} </a>
+            <a href="/product/list.html?{$param_cate_no}" title="{$category_name}">{$category_name} </a>
         </li>
     </ul>
 </section>

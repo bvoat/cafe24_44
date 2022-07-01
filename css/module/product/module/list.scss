@@ -2,7 +2,7 @@
 @import "../../../../layout/basic/css/abstracts/mixin";
 @import "../../../../layout/basic/css/abstracts/variables";
 
-.product_category_title {
+#productListTitle {
 
     margin: 19px 0;
 
@@ -31,9 +31,7 @@
         display: flex;
         width: 100%;
         flex-flow: row nowrap;
-        justify-content: space-between;
         align-items: center;
-        align-content: center;
         padding: 0 11px;
 
        .menuCategory_list{

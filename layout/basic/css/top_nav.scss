@@ -20,12 +20,11 @@
                 justify-content: center;
                 align-items: center;
                 font-size: 1.45rem;
-                font-weight: 500;
+                font-weight: normal;
                 margin: 0 15px;
                 width: max-content !important;
                 max-width: max-content !important;
-                height: inherit;
-
+                
                 >a{
                     display: block;
                 }
@@ -38,6 +37,18 @@
                 align-items: center;
                 width: max-content !important;
                 max-width: max-content !important;
+                >a{color: $bvt-blue;}
+                &::before{
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background: $bvt-blue;
+                    top: -1px;
+                    right: -6px;
+                }
                 &::after{
                     position: absolute;
                     display: block;
@@ -46,7 +57,7 @@
                     height: 3px;
                     background: $bvt-blue;
                     border-radius: 50px;
-                    bottom: 0;
+                    bottom: -10px;
                 }
             }
         }
