@@ -1,10 +1,11 @@
 <ul class="price_wrap">
     <li class="price_check displaynone">
-        <input type="hidden" name="discount" class="sale_price price" value="{$prd_price_sale}" data-discount="{$discount_display}" data-disprice="{$product_sale_price}"> 
+        <input type="hidden" name="discount" class="sale_price prd_sale_price" value="{$prd_price_sale}" data-discount="{$discount_display}"> 
+        <input type="hidden" name="discount" class="sale_price product_sale_price" value="{$product_sale_price}" data-discount="{$discount_display}"> 
         <input type="hidden" name="product" class="product_price price" value="{$disp_product_price}">
     </li>
     <li class="sale_price " data-pricename="할인 가격"
-    data-price="{$prd_price_sale} {$product_sale_price}" >{$prd_price_sale} {$product_sale_price}<b class="wontag">원</b></li>
+    data-price="{$prd_price_sale} {$product_sale_price}" >{$prd_price_sale} <b class="wontag">원</b></li>
     <li class="product_price {$product_price_display|display} {$product_price_del}" data-pricename="상품 가격"
     data-price="">{$product_price|numberformat}<b class="wontag">원</b></li>
 </ul>
