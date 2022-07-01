@@ -35,7 +35,7 @@ const priceNonSaleStyle = (customPrice) => {
     }
 }
 //함수 실행
-setTimeout(() => {priceNonSaleStyle(customPrice)}, 1000)
+// setTimeout(() => {priceNonSaleStyle(customPrice)}, 1000)
 /* 가격 할인율 표시 */
 
 

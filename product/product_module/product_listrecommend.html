@@ -12,7 +12,7 @@
             <ul class="recommend_product">
                 <li class="recommend_img_wrap">
                     <a class="recommend_img_box" href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"
-                    title="{$product_name_tag|striptag}">
+                        title="{$product_name_tag|striptag}">
                         <img src="{$image_big}" id="{$image_big_id}" alt="{$seo_alt_tag}" class="recommend_img" />
                     </a>
                     <span class="product_select_icon">{$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons}
@@ -29,11 +29,7 @@
                     <a class="recommend_product_name" href="/product/detail.html{$param}">
                         {$product_name|striptag}
                     </a>
-                </a>
-                <ul class="normal_product_price price_wrap">
-                    <li class="product_price" data-pricename="상품가격" data-price="{$prd_price_sale}">{$prd_price_sale}<span class="wontag">원</span></li>
-                    <li class="sale_price {$product_price|display}" data-pricename="할인 가격" data-price="{$disp_product_price}">{$disp_product_price}<span class="wontag">원</span</li>
-                </ul>
+                    <!--@import(./list_price_wrap.html)-->
                 </li>
             </ul>
         </li>
@@ -41,7 +37,7 @@
             <ul class="recommend_product">
                 <li class="recommend_img_wrap">
                     <a class="recommend_img_box" href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"
-                    title="{$product_name_tag|striptag}">
+                        title="{$product_name_tag|striptag}">
                         <img src="{$image_big}" id="{$image_big_id}" alt="{$seo_alt_tag}" class="recommend_img" />
                     </a>
                     <span class="product_select_icon">{$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons}
@@ -58,10 +54,7 @@
                     <a class="recommend_product_name" href="/product/detail.html{$param}">
                         {$product_name|striptag}
                     </a>
-                    <ul class="recommend_product_price price_wrap">
-                        <li class="product_price" data-pricename="상품가격" data-price="{$prd_price_sale}">{$prd_price_sale}<span class="wontag">원</span></li>
-                        <li class="sale_price {$product_price|display}" data-pricename="할인 가격" data-price="{$disp_product_price}">{$disp_product_price}<span class="wontag">원</span</li>
-                    </ul>
+                    <!--@import(./list_price_wrap.html)-->
                 </li>
             </ul>
         </li>
