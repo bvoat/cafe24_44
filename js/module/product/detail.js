@@ -180,8 +180,11 @@ const toggleBuyScreen = (type) => {
 
 /* 가격 할인가 확인 표시 */
 const priceArr = document.querySelectorAll(".price");
+console.log('priceArr: ', priceArr);
 const salePrice = parseInt(document.querySelector(".sale_price").dataset.price);
+console.log('salePrice: ', salePrice);
 const productPrice = parseInt(document.querySelector(".product_price").dataset.price);
+console.log('productPrice: ', productPrice);
 
 /* 가격 -> 스탬프 */
 //스탬프 갯수 변수 할당
