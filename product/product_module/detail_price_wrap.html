@@ -8,7 +8,7 @@
   </li>  
 </ul> -->
 
-
+<!-- 
 <div module="product_detaildesign" class="price_wrap">
     <span class="displaynone">{$item_content|striptag}</span>
     <span class="displaynone"><span class="blue2 b">From.</span> {$item_content|striptag}</span>
@@ -18,8 +18,41 @@
     <span class="display_discount price">{$item_content|striptag}</span>
     <span class="display_product price">{$item_content|striptag}</span>
     <span class="">{$item_content|striptag}</span>
+</div> -->
+
+
+
+
+<div module="product_detaildesign">
+    <!--
+        $cache = no
+    -->
+    <ul class="price_wrap">
+            <li class="{$item_display|display} displaynone"> 
+                <span>{$item_title}</span>
+                <span>{$item_content}</span>
+            </li>
+            <li class="{$item_display|display} displaynone">
+                <span>{$item_title}</th>
+                <span>{$item_content}</td>
+            </li>
+            <li class="{$item_display|display} displaynone">
+                <span>{$item_title}</th>
+                <span>{$item_content}</td>
+            </li>
+            <li class="{$item_display|display} displaynone">
+                <span>{$item_title}</th>
+                <span>{$item_content}</td>
+            </li>
+            <li class="{$item_display|display} displaynone">
+                <span>{$item_title}</th>
+                <span>{$item_content}</td>
+            </li>
+            <li class="{$item_display|display}display_discount price ">
+                {$item_content}
+            </li>
+            <li class="{$item_display|display}display_product price detail_product">
+                {$item_content}
+            </li>
+    </ul>
 </div>
-
-
-
-

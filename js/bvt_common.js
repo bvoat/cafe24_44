@@ -17,7 +17,8 @@ live_arr.forEach((path)=>{
 })
 
 //.pricenonsale in common.css
-//list.js에 더보기에 적용하는 customPrice 있음
+//list.js에 더보기에 적용하는 customPrice 함수 있음
+//detail.js에 적용하는 customPrice 함수 있음
 const customPrice = (priceList) => {
     priceList.forEach((node) => {
         //node 두 개의 children 모두 존재하면 정가(오른쪽1)에 pricenonsale 클래스 추가 아니면 sale_price(왼쪽0) displaynone

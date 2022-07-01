@@ -187,9 +187,9 @@ const toggleBuyScreen = (type) => {
 /* 가격 할인가 확인 표시 */
 const priceArr = document.querySelectorAll(".price");
 console.log('priceArr: ', priceArr);
-const salePrice = parseInt(document.querySelector(".sale_price").dataset.price);
+const salePrice = document.querySelector("#span_product_price_sale").innerText;
 console.log('salePrice: ', salePrice);
-const productPrice = parseInt(document.querySelector(".product_price").dataset.price);
+const productPrice = document.querySelector("#span_product_price_text").innerText;
 console.log('productPrice: ', productPrice);
 
 /* 가격 -> 스탬프 */
@@ -289,7 +289,7 @@ shareBtn.addEventListener("click", e => {
 //Q&A heading 컨트롤
 qnaControl();
 //가격 스타일 처리
-// controlPriceStyle(priceArr);
+customPriceDetail(priceArr);
 //스탬프 만들기
 createStamp(salePrice,createStampPcsFromPrice);
 //가치태그 수신

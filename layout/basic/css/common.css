@@ -353,34 +353,28 @@ div.layerProgress {
     font-weight: 600;
     color: #022cff;
 }
-
-.price_wrap>li>span{
+.price_wrap>li>span, .price_wrap>li>span>span{
     font-size: 1.48rem !important;
     font-weight: 600 !important;
     color: #022cff !important;
 }
 .price::after{
     display: inline-block;
-    margin-left: 8px;
     content: "원";
+    font-size: 1.43rem;
     font-weight: normal;
-    margin-left: 1.5px;
     color: #292929;
+    margin-left: 1px;
 }
-.pricenonsale{
+.pricenonsale, .detail_product>span, .detail_product>span>strong{
     text-decoration: line-through !important;
     color: #ABABAB !important;
     font-size :
-    1.4rem !important;
+    1.43rem !important;
     margin-left: 8px !important;
 }
-.pricenonsale::after{
+.pricenonsale::after, .detail_product::after{
     color: #ABABAB !important;
-}
-.wontag{
-        font-weight: normal;
-        margin-left: 1.5px;
-        color: #292929;
 }
 
 .dimmed {
