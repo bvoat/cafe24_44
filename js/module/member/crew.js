@@ -69,6 +69,8 @@ let copy_description =`
 (추천인 코드 : ${reco_id.dataset.id})
 `
 const copyBtnClick = (copy_description, reco_id) => {
+    console.log("copy_description",copy_description,"reco_id",reco_id)
+
     if (reco_id != null) {
         console.log("로그인 됨", reco_id.value)
         window.navigator.clipboard.writeText(copy_description).then(() => {
