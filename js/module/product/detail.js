@@ -8,11 +8,8 @@ if(buy_record_frame != null){
 //가치소비기록 iframe 높이 조절
 const computedHeight = (idx) => {
     const detailBottomWrap = document.getElementById("productDetailBottom");
-    console.log('detailBottomWrap: ', detailBottomWrap);
     const detailBottomContent = document.getElementById("detail_swiper_wrap");
-    console.log('detailBottomContent: ', detailBottomContent);
     const tabContent = document.getElementById(`tab${idx}`);
-    console.log('tabContent: ', tabContent);
     //함수 실행
     if (document.readyState == 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
@@ -187,8 +184,8 @@ const toggleBuyScreen = (type) => {
 /* 가격 할인가 확인 표시 */
 const priceArr = document.querySelectorAll(".price");
 console.log('priceArr: ', priceArr);
-const salePrice = document.querySelector("#span_product_price_sale").innerText;
-const productPrice = document.querySelector("#span_product_price_text").innerText;
+const salePrice = document.querySelector("#span_product_price_sale");
+const productPrice = document.querySelector("#span_product_price_text");
 
 /* 가격 -> 스탬프 */
 //스탬프 갯수 변수 할당
@@ -234,19 +231,38 @@ const displayStampImg = (productStamp) => {
         }
 }
 //스탬프 promise 진행
-const createStamp = (salePrice,createStampPcsFromPrice) => {
-    //스탬프 총 갯수 변수에 할당
-     createStampPcsFromPrice(parseInt(salePrice)/10)
-     .then((res)=>{
-        console.log("stamp", res, "개")
-        displayStampImg(res);
-        displayStampTxt(res);
-    })
-    .catch((reject)=>{
-        console.log("스탬프 에러", reject);
-        displayStampImg(0);
-        displayStampTxt(0);
-    })
+const createStamp = (salePrice,productPrice,createStampPcsFromPrice) => {
+console.log("salePrice",salePrice,"productPrice",productPrice);
+    if(productPrice != null && salePrice != null){
+        // console.log("???",parseInt(salePrice.innerText));
+        //스탬프 총 갯수 변수에 할당
+        createStampPcsFromPrice(parseInt(salePrice.innerText)/10)
+        .then((res)=>{
+            console.log("stamp", res, "개")
+            displayStampImg(res);
+            displayStampTxt(res);
+        })
+        .catch((reject)=>{
+            console.log("스탬프 에러", reject);
+            displayStampImg(0);
+            displayStampTxt(0);
+        })
+    } else if(salePrice == null && productPrice != null){
+        // console.log("??",parseInt(productPrice.innerText));
+        
+        //스탬프 총 갯수 변수에 할당
+        createStampPcsFromPrice(parseInt(productPrice.innerText)/10)
+        .then((res)=>{
+            console.log("stamp", res, "개")
+            displayStampImg(res);
+            displayStampTxt(res);
+        })
+        .catch((reject)=>{
+            console.log("스탬프 에러", reject);
+            displayStampImg(0);
+            displayStampTxt(0);
+        })
+    }
 }
 
 /* 가치태그 수신 */
@@ -286,7 +302,7 @@ shareBtn.addEventListener("click", e => {
 //Q&A heading 컨트롤
 qnaControl();
 //스탬프 만들기
-createStamp(salePrice,createStampPcsFromPrice);
+createStamp(salePrice,productPrice,createStampPcsFromPrice);
 //가치태그 수신
 reciveTagDetail(prd_no)
 
