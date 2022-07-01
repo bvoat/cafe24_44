@@ -20,16 +20,18 @@ live_arr.forEach((path)=>{
 const customPrice = (priceList) => {
     priceList.forEach((node) => {
         //node 두 개의 children 모두 존재하면 정가(오른쪽1)에 pricenonsale 클래스 추가 아니면 sale_price(왼쪽0) displaynone
-            if(node.children[0].dataset.price && node.children[1].dataset.price) {
+            if(node.children[0].hasChildNodes() && node.children[1].hasChildNodes()) {
             node.children[1].classList.add("pricenonsale");
             } else {
                 node.children[0].classList.add("displaynone");
             }
-          
+            // console.log("node", node);
+            // console.log("node.chidren[0]", node.children[0].hasChildNodes());
+            // console.log("node.chidren[1]", node.children[1].hasChildNodes());
     });
 }
 const priceNonSaleStyle = (customPrice) => {
-    const price_wrap_node = document.querySelectorAll(".price_check");
+    const price_wrap_node = document.querySelectorAll(".price_wrap");
     if(price_wrap_node != null){
         customPrice(price_wrap_node) 
     }

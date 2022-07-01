@@ -316,7 +316,12 @@ div.layerProgress {
     display: flex;
     flex-flow: row nowrap;
 }
-.price_wrap>li,.price_wrap>li>span{
+.price_wrap>li{
+    font-size: 1.48rem !important;
+    font-weight: 600 !important;
+    color: #022cff ;
+}
+.price_wrap>li>span{
     font-size: 1.48rem !important;
     font-weight: 600 !important;
     color: #022cff !important;
@@ -336,7 +341,7 @@ div.layerProgress {
     1.3rem !important;
     margin-left: 8px !important;
 }
-.pricenonsale>.wontag{
+.pricenonsale::after{
     color: #ABABAB !important;
 }
 .wontag{
