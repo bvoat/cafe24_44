@@ -321,6 +321,14 @@ div.layerProgress {
     font-weight: 600 !important;
     color: #022cff !important;
 }
+.price::after{
+    display: inline-block;
+    margin-left: 8px;
+    content: "원";
+    font-weight: normal;
+    margin-left: 1.5px;
+    color: #292929;
+}
 .pricenonsale{
     text-decoration: line-through !important;
     color: #ABABAB !important;

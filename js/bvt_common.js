@@ -29,13 +29,13 @@ const customPrice = (priceList) => {
     });
 }
 const priceNonSaleStyle = (customPrice) => {
-    const price_wrap_node = document.querySelectorAll(".price_wrap");
+    const price_wrap_node = document.querySelectorAll(".price_check");
     if(price_wrap_node != null){
         customPrice(price_wrap_node) 
     }
 }
 //함수 실행
-// setTimeout(() => {priceNonSaleStyle(customPrice)}, 1000)
+setTimeout(() => {priceNonSaleStyle(customPrice)}, 1000)
 /* 가격 할인율 표시 */
 
 
