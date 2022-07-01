@@ -89,7 +89,7 @@
                 justify-content: space-between;
 
                 .brand {
-                    font-size: 5px !important;
+                    font-size: 1rem !important;
                     color: $bvt-darkgray;
                 }
 
@@ -196,6 +196,7 @@
         .box-desc {
 
             .brand {
+                font-size: 1rem !important;
                 font-weight: 600;
                 color: $bvt-darkgray;
                 margin-bottom: 4px;

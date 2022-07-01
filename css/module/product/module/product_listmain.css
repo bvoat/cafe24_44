@@ -108,7 +108,7 @@
 }
 
 .product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_brand .brand {
-  font-size: 5px !important;
+  font-size: 1rem !important;
   color: #707070;
 }
 
@@ -239,6 +239,7 @@
 }
 
 .product_listnormal_swiper_wrap .listnormal_list .box-desc .brand {
+  font-size: 1rem !important;
   font-weight: 600;
   color: #707070;
   margin-bottom: 4px;

@@ -93,7 +93,7 @@
 }
 
 #product_listrecommend_list .listrecommend_list .recommend_product .recommend_product_brand .brand {
-  font-size: 0.8rem;
+  font-size: 1rem !important;
   color: #707070;
 }
 
