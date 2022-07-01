@@ -90,9 +90,9 @@ code {
     color: #292929;
     /* color:#353535;  */
     background: #ffffff;
-    font-family: 'Noto Sans KR', 'Jost', 'Nunito', noto-sans-cjk-kr, 'noto sans', Verdana, Dotum,  AppleGothic, sans-serif;
-    letter-spacing: -0.2px;
-    font-stretch: 98%;    
+    font-family: 'Noto Sans KR', noto-sans-cjk-kr, AppleGothic, 'Jost', 'Nunito', 'noto sans', Verdana, Dotum, sans-serif;
+    letter-spacing: -0.1px;
+    font-stretch: 99%;    
     font-variant: tabular-nums;
     font-feature-settings: "tnum";
 }
@@ -348,11 +348,12 @@ div.layerProgress {
     display: flex;
     flex-flow: row nowrap;
 }
-.price_wrap>li{
-    font-size: 1.48rem !important;
-    font-weight: 600 !important;
-    color: #022cff ;
+.price_wrap>.price{
+    font-size: 1.48rem;
+    font-weight: 600;
+    color: #022cff;
 }
+
 .price_wrap>li>span{
     font-size: 1.48rem !important;
     font-weight: 600 !important;
@@ -370,7 +371,7 @@ div.layerProgress {
     text-decoration: line-through !important;
     color: #ABABAB !important;
     font-size :
-    1.3rem !important;
+    1.4rem !important;
     margin-left: 8px !important;
 }
 .pricenonsale::after{
