@@ -1,4 +1,4 @@
-<ul class="price_wrap">
+<!-- <ul class="price_wrap">
     <li class="sale_price {$product_sale_price_display|display}" data-pricename="할인 가격" data-price="{$product_sale_price}">{$product_sale_price|numberformat}<b class="wontag">원</b</li>
     <li class="product_price {$product_price_display|display}" data-pricename="상품 가격" data-price="{$product_price}">{$product_price|numberformat}<b class="wontag">원</b></li>
 </ul>
@@ -6,17 +6,17 @@
   <li><input type="hidden" name="sale" class="price_discount price" value="{$product_sale_price}"></li>
   <li> <input type="hidden" name="product" class="price_origin price" value="{$product_price}">
   </li>  
-</ul>
+</ul> -->
 
 
-<div module="product_detaildesign" class="padding2">
+<div module="product_detaildesign" class="price_wrap">
     <span class="displaynone">{$item_content|striptag}</span>
     <span class="displaynone"><span class="blue2 b">From.</span> {$item_content|striptag}</span>
     <span class="displaynone prd_name">{$item_content|striptag}</span>
     <span class="displaynone">{$item_content|striptag}</span>
     <span class="displaynone">{$item_content|striptag}</span>
-    <span class="">{$item_content|striptag}</span>
-    <span class="">{$item_content|striptag}</span>
+    <span class="sale_price">{$item_content|striptag}</span>
+    <span class="product_price">{$item_content|striptag}</span>
     <span class="">{$item_content|striptag}</span>
 </div>
 
