@@ -42,35 +42,25 @@ var swiper = new Swiper(".subCategorySwiper", {
 
 //price 중에 sale_price 있으면 정가에 스타일 처리
 //sale_price에 '원' 빠진 경우 span 만들어서 원 글자 삽입
-const customProductPrice = (priceWrapNode) => {
+const customPriceListMoreview = (priceWrapNode) => {
   priceWrapNode.forEach((node) => {
-    //할인가에 원 붙이기
-    // if (!(node.children[1].innerHTML === "")) {
-    //   if (!node.children[1].innerHTML.includes(">")) {
-    //     const make_span = document.createElement("span");
-    //     const make_won = document.createTextNode("원");
-    //     make_span.appendChild(make_won);
-    //     node.children[1].appendChild(make_span);
-    //   }
-    //   //정가에 if_sale_price 클래스 추가
-    //   node.children[0].classList.add("if_sale_price");
-    // }
-    if(node.children[0].dataset.price && node.children[1].dataset.price) {
+    //node 두 개의 children 모두 존재하면 정가(오른쪽1)에 pricenonsale 클래스 추가 아니면 sale_price(왼쪽0) displaynone
+    if(node.children[0].hasChildNodes() && node.children[1].hasChildNodes()) {
       node.children[1].classList.add("pricenonsale");
-      }  else {
-        node.children[0].classList.add("displaynone");
-    }
+      } else {
+          node.children[0].classList.add("displaynone");
+      }
   });
 };
 
-const moreViewClick = (customProductPrice) => {
+const moreViewClick = (customPriceListMoreview) => {
   //DOM 변화 감시하다가 변화 있으면 적용
   const priceWrapNode = document.querySelectorAll(".price_wrap");
-  customProductPrice(priceWrapNode);
+  customPriceListMoreview(priceWrapNode);
 };
 
 //최초 DOM 로딩 시 실행
-moreViewClick(customProductPrice);
+moreViewClick(customPriceListMoreview);
 
 //감시 할 DOM Node
 let target = document.querySelector(".product_listnormal_list_wrap");
@@ -79,7 +69,7 @@ let observer = new MutationObserver(function (mutations) {
   mutations.forEach(function (mutation) {
     // console.log(mutation);
     //mutations 변화 시 실행
-    moreViewClick(customProductPrice);
+    moreViewClick(customPriceListMoreview);
   });
 });
 
