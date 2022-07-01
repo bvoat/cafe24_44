@@ -68,7 +68,7 @@ let copy_description =`
 >${reco_id.value}
 (추천인 코드 : ${reco_id.dataset.id})
 `
-const copyBtnClick = () => {
+const copyBtnClick = (copy_description, reco_id) => {
     if (reco_id != null) {
         console.log("로그인 됨", reco_id.value)
         window.navigator.clipboard.writeText(copy_description).then(() => {
@@ -81,7 +81,7 @@ const copyBtnClick = () => {
         return false;
     }
 }
-const shareBtnClick = () => {
+const shareBtnClick = (copy_description, reco_id) => {
     if (reco_id != null) {
         if (navigator.share) {
             navigator.share({
@@ -101,8 +101,8 @@ const shareBtnClick = () => {
         return false;
     }
 }
-crew_link_copy.addEventListener("click", ()=>{copyBtnClick()});
-crew_link_share.addEventListener("click", ()=>{shareBtnClick()});
+crew_link_copy.addEventListener("click", ()=>{copyBtnClick(copy_description, reco_id)});
+crew_link_share.addEventListener("click", ()=>{shareBtnClick(copy_description, reco_id)});
 
 /* url 제출 함수 */
 //btn addEvent
