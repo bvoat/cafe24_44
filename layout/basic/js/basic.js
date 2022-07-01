@@ -137,46 +137,46 @@ $(function(){
 /**
  *  tooltip
  */
-$('.eTooltip').each(function(i){
-    $(this).find('.btnClose').attr('tabIndex','-1');
-});
-//tooltip input focus
-$('.eTooltip').find('input').on('focus', function() {
-    var targetName = returnTagetName(this);
-    targetName.siblings('.ec-base-tooltip').show();
-});
-$('.eTooltip').find('input').on('focusout', function() {
-    var targetName = returnTagetName(this);
-    targetName.siblings('.ec-base-tooltip').hide();
-});
-function returnTagetName(_this){
-    var ePlacename = $(_this).parent().attr("class");
-    var targetName;
-    if(ePlacename == "ePlaceholder"){ //ePlaceholder 대응
-        targetName = $(_this).parents();
-    }else{
-        targetName = $(_this);
-    }
-    return targetName;
-}
+// $('.eTooltip').each(function(i){
+//     $(this).find('.btnClose').attr('tabIndex','-1');
+// });
+// //tooltip input focus
+// $('.eTooltip').find('input').on('focus', function() {
+//     var targetName = returnTagetName(this);
+//     targetName.siblings('.ec-base-tooltip').show();
+// });
+// $('.eTooltip').find('input').on('focusout', function() {
+//     var targetName = returnTagetName(this);
+//     targetName.siblings('.ec-base-tooltip').hide();
+// });
+// function returnTagetName(_this){
+//     var ePlacename = $(_this).parent().attr("class");
+//     var targetName;
+//     if(ePlacename == "ePlaceholder"){ //ePlaceholder 대응
+//         targetName = $(_this).parents();
+//     }else{
+//         targetName = $(_this);
+//     }
+//     return targetName;
+// }
 
 /**
  *  eTab
  */
-$("body").on("click", ".eTab a", function(e){
-    // 클릭한 li 에 selected 클래스 추가, 기존 li에 있는 selected 클래스는 삭제.
-    var _li = $(this).parent("li").addClass("selected").siblings().removeClass("selected"),
-    _target = $(this).attr("href"),
-    _siblings = $(_target).attr("class"),
-    _arr = _siblings.split(" "),
-    _classSiblings = "."+_arr[0];
+// $("body").on("click", ".eTab a", function(e){
+//     // 클릭한 li 에 selected 클래스 추가, 기존 li에 있는 selected 클래스는 삭제.
+//     var _li = $(this).parent("li").addClass("selected").siblings().removeClass("selected"),
+//     _target = $(this).attr("href"),
+//     _siblings = $(_target).attr("class"),
+//     _arr = _siblings.split(" "),
+//     _classSiblings = "."+_arr[0];
 
-    //클릭한 탭에 해당하는 요소는 활성화, 기존 요소는 비활성화 함.
-    $(_target).show().siblings(_classSiblings).hide();
+//     //클릭한 탭에 해당하는 요소는 활성화, 기존 요소는 비활성화 함.
+//     $(_target).show().siblings(_classSiblings).hide();
 
 
-    //preventDefault 는 a 태그 처럼 클릭 이벤트 외에 별도의 브라우저 행동을 막기 위해 사용됨.
-    e.preventDefault();
-});
+//     //preventDefault 는 a 태그 처럼 클릭 이벤트 외에 별도의 브라우저 행동을 막기 위해 사용됨.
+//     e.preventDefault();
+// });
 
 

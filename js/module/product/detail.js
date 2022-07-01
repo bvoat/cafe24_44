@@ -6,18 +6,23 @@ if(buy_record_frame != null){
     buy_record_frame.setAttribute("src", `https://${api_domain}.shop/buy_records?product_no={$product_no}`)
 }
 //가치소비기록 iframe 높이 조절
-
 const computedHeight = (idx) => {
     const detailBottomWrap = document.getElementById("productDetailBottom");
+    console.log('detailBottomWrap: ', detailBottomWrap);
     const detailBottomContent = document.getElementById("detail_swiper_wrap");
+    console.log('detailBottomContent: ', detailBottomContent);
     const tabContent = document.getElementById(`tab${idx}`);
+    console.log('tabContent: ', tabContent);
     //함수 실행
     if (document.readyState == 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
             let firstTab = getComputedStyle(detailBottomContent);
-            detailBottomWrap.style.height = firstTab.height;
-            detailBottomContent.style.height = firstTab.height;
-            tabContent.style.height = firstTab.height;
+            const firstControlContentWrapHeight = (firstTab) => {
+                detailBottomWrap.style.height = firstTab.height;
+                detailBottomContent.style.height = firstTab.height;
+                tabContent.style.height = firstTab.height;
+            }
+            firstControlContentWrapHeight();
         });
     } else {
         let tab = getComputedStyle(tabContent);
