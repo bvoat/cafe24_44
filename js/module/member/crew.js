@@ -50,9 +50,10 @@ const voter_identity = document.querySelector('#member_id');
 const crew_link_copy = document.querySelector(".crew_link_copy");
 const crew_link_share = document.querySelector(".crew_link_share");
 const reco_id = document.querySelector("#recoIdCheck");
-console.log('reco_id: ', reco_id);
 
-let copy_description = () => `
+console.log('reco_id: ', reco_id, 'reco_id.value: ', reco_id.value ,'reco_id.dataset.id: ', reco_id.dataset.id);
+
+let copy_description =`
 🤗 물건도 브랜드도 착해야 산다!
 가치소비가 쉬워지는 곳, 비보트로 초대합니다.
 
@@ -61,7 +62,7 @@ let copy_description = () => `
 전용 뱃지 노출까지 되는 크루 등급으로 시작할 수 있어요.
 
 크루 혜택 확인하기
-> https:/bvoat.com/member/crew/crew.html
+> https://bvoat.com/member/crew/crew.html
 
 친구 초대 전용 가입 링크
 >${reco_id.value}
@@ -82,7 +83,6 @@ const copyBtnClick = () => {
 }
 const shareBtnClick = () => {
     if (reco_id != null) {
-        console.log("로그인 됨", reco_id.value)
         if (navigator.share) {
             navigator.share({
                 title: '비보트 크루 멤버십 초대',
@@ -101,8 +101,8 @@ const shareBtnClick = () => {
         return false;
     }
 }
-crew_link_copy.addEventListener("click", copyBtnClick);
-crew_link_share.addEventListener("click", shareBtnClick);
+crew_link_copy.addEventListener("click", ()=>{copyBtnClick()});
+crew_link_share.addEventListener("click", ()=>{shareBtnClick()});
 
 /* url 제출 함수 */
 //btn addEvent
