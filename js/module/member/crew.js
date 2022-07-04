@@ -148,14 +148,6 @@ const postURLAsJson = (formData) => {
         console.log("ok", e.currentTarget.dataset.msg);
         if (e.currentTarget.dataset.msg) {
           const receivingOk = (id, state) => {
-            console.log("id", id, "state", state);
-            console.log(
-              "test",
-              JSON.stringify({
-                id: id,
-                state: state,
-              })
-            );
             $.ajax({
               url: `https://${api_domain}.shop/customerinfo/receiving`,
               data: {
@@ -164,27 +156,28 @@ const postURLAsJson = (formData) => {
               },
               method: "POST",
               dataType: "json",
-            }).done((res) => {
-              console.log("sns", res);
-              if (res.status === 200) {
-                document.querySelector("#bvtCommonModal").remove();
-                return false;
-              } else {
-                let sns_confirm = confirm(
-                  "😢 마케팅 수신 동의에 오류가 발생했어요! 비보트에게 알려주세요!"
-                );
-                if (sns_confirm) {
-                  document.querySelector("#bvtCommonModal").remove();
-                  ChannelIO("show");
-                  return false;
-                } else {
-                  document.querySelector("#bvtCommonModal").remove();
-                  return false;
-                }
-                return false;
+              success: function(response){
+                    console.log("sns", response);
+                    if (response.status === 200) {
+                      document.querySelector("#bvtCommonModal").remove();
+                      return false;
+                    } else {
+                      let sns_confirm = confirm(
+                        "😢 마케팅 수신 동의에 오류가 발생했어요! 비보트에게 알려주세요!"
+                      );
+                      if (sns_confirm) {
+                        document.querySelector("#bvtCommonModal").remove();
+                        ChannelIO("show");
+                        return false;
+                      } else {
+                        document.querySelector("#bvtCommonModal").remove();
+                        return false;
+                      }
+                      return false;
+                    }
+                    return false;
               }
-              return false;
-            });
+            })
           };
           let receiving_result = receivingOk(voter_identity.value, "T");
           console.log("receiving_result: ", receiving_result);
