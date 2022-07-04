@@ -182,10 +182,10 @@ const toggleBuyScreen = (type) => {
 
 /* 가격 할인가 확인 표시 */
 const priceArr = document.querySelectorAll(".price");
-const salePrice = document.querySelector(".display_discount");
+const salePrice = document.querySelector(".display_discount > span > span");
 const productPrice = document.querySelector(".display_product");
 console.log('salePrice: ', salePrice, 'productPrice', productPrice);
-console.log('salePrice.innerText: ', parseFloat(salePrice.innerText), 'productPrice.innerText', parseFloat(productPrice.innerText));
+console.log('salePrice.innerText: ', parseFloat(salePrice.textContent), 'productPrice.innerText', parseFloat(productPrice.textContent));
 
 /* 가격 -> 스탬프 */
 //스탬프 갯수 변수 할당
@@ -234,7 +234,7 @@ const displayStampImg = (productStamp) => {
 const createStamp = (salePrice,productPrice,createStampPcsFromPrice) => {
 // console.log("salePrice",salePrice,"productPrice",productPrice);
     if(salePrice != null && productPrice != null){
-       console.log("sale",parseFloat(salePrice.innerText)/10000)
+       console.log("sale",parseFloat(salePrice.textContent)/10000)
         //스탬프 총 갯수 변수에 할당
         // createStampPcsFromPrice(price1)
         // .then((res)=>{
@@ -248,7 +248,7 @@ const createStamp = (salePrice,productPrice,createStampPcsFromPrice) => {
         //     displayStampTxt(0);
         // })
     } else {
-       console.log("productPrice",parseFloat(productPrice.innerText)/10000)
+       console.log("productPrice",parseFloat(productPrice.textContent)/10000)
 
     }
 }
