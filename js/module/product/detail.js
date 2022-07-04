@@ -233,38 +233,37 @@ const displayStampImg = (productStamp) => {
 }
 //스탬프 promise 진행
 const createStamp = (salePrice,productPrice,createStampPcsFromPrice) => {
-console.log("salePrice",salePrice,"productPrice",productPrice);
-    if(productPrice != null && salePrice != null){
+console.log("salePrice",salePrice.innerText,"productPrice",productPrice.innerText);
+    // if(salePrice != null && productPrice != null){
         // console.log("???",parseInt(salePrice.innerText));
         //스탬프 총 갯수 변수에 할당
-        createStampPcsFromPrice(parseInt(salePrice.innerText)/10)
-        .then((res)=>{
-            console.log("stamp", res, "개")
-            displayStampImg(res);
-            displayStampTxt(res);
-        })
-        .catch((reject)=>{
-            console.log("스탬프 에러", reject);
-            displayStampImg(0);
-            displayStampTxt(0);
-        })
-    } else if(salePrice == null && productPrice != null){
+        // createStampPcsFromPrice(parseInt(salePrice.innerText)/10)
+        // .then((res)=>{
+        //     console.log("stamp", res, "개")
+        //     displayStampImg(res);
+        //     displayStampTxt(res);
+        // })
+        // .catch((reject)=>{
+        //     console.log("스탬프 에러", reject);
+        //     displayStampImg(0);
+        //     displayStampTxt(0);
+        // })
+    // } else if(salePrice == null && productPrice != null){
         // console.log("??",parseInt(productPrice.innerText));
-        document.querySelector(".display_product").classList.add("displaynone");
-        
+        // document.querySelector(".display_product").classList.add("displaynone");
         //스탬프 총 갯수 변수에 할당
-        createStampPcsFromPrice(parseInt(productPrice.innerText)/10)
-        .then((res)=>{
-            console.log("stamp", res, "개")
-            displayStampImg(res);
-            displayStampTxt(res);
-        })
-        .catch((reject)=>{
-            console.log("스탬프 에러", reject);
-            displayStampImg(0);
-            displayStampTxt(0);
-        })
-    }
+        // createStampPcsFromPrice(parseInt(productPrice.innerText)/10)
+        // .then((res)=>{
+        //     console.log("stamp", res, "개")
+        //     displayStampImg(res);
+        //     displayStampTxt(res);
+        // })
+        // .catch((reject)=>{
+        //     console.log("스탬프 에러", reject);
+        //     displayStampImg(0);
+        //     displayStampTxt(0);
+        // })
+    // }
 }
 
 /* 가치태그 수신 */
