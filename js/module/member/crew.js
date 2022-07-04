@@ -111,7 +111,7 @@ const shareBtnClick = (e) => {
             navigator.share({
                 title: "비보트로 초대합니다.",
                 text: copy_text,
-        })
+            })
         .then((response) =>{ 
         console.log("공유 성공!", response)
         return false;

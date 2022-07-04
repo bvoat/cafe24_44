@@ -205,14 +205,14 @@ const createStampPcsFromPrice = (price) => {
     let floatPrice;
     if (price < 0.5) {
       floatPrice = 0;
-    } else if (0.5 < price && price < 1) {
+    } else if (0.5 <= price && price < 1) {
       floatPrice = 0.5;
     } else if (1 <= price && price < 5) {
       let halfFloat = Math.floor(price) + 0.5;
       price < halfFloat
         ? (floatPrice = halfFloat - 0.5)
         : (floatPrice = halfFloat);
-    } else if (5 < price) {
+    } else if (5 <= price) {
       floatPrice = 5;
     }
     resolve(floatPrice);
@@ -251,7 +251,6 @@ const createStamp = (createStampPcsFromPrice) => {
   let sale = document.querySelector("#span_product_price_sale");
   let origin = document.querySelector("#span_product_price_text");
   let final_price = final_price_list[0].textContent;
-
   if (sale != null && origin != null) {
     console.log("sale != null && origin != null");
     console.log("sale", sale.textContent, "origin", origin.textContent);
@@ -266,6 +265,7 @@ const createStamp = (createStampPcsFromPrice) => {
 
   if (final_price < 1000) {
     final_price = parseFloat(final_price_list[0].textContent) / 10000;
+    console.log('final_price1: ', final_price);
     //스탬프 총 갯수 변수에 할당
     createStampPcsFromPrice(final_price)
       .then((res) => {
@@ -280,6 +280,7 @@ const createStamp = (createStampPcsFromPrice) => {
       });
   } else {
     final_price = parseFloat(final_price_list[0].textContent) / 10;
+    console.log('final_price2: ', final_price);
     //스탬프 총 갯수 변수에 할당
     createStampPcsFromPrice(final_price)
       .then((res) => {
