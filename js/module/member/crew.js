@@ -46,7 +46,7 @@ moveLevelUp.addEventListener("click", () => {
 });
 
 /* 추천인 링크 */
-const voter_identity = document.querySelector("#member_id");
+
 const crew_link_copy = document.querySelector(".crew_link_copy");
 const crew_link_share = document.querySelector(".crew_link_share");
 const voter_id = document.querySelector("#recoIdCheck");
@@ -148,11 +148,7 @@ const postURLAsJson = (formData) => {
         console.log("ok", e.currentTarget.dataset.msg);
         if (e.currentTarget.dataset.msg) {
           const receivingOk = (id, state) => {
-            
-          };
-          let receiving_result = receivingOk(voter_identity.value, "T");
-          console.log("receiving_result: ", receiving_result);
-          fetch(`https://${api_domain}.shop/customerinfo/receiving`, {
+            fetch(`https://${api_domain}.shop/customerinfo/receiving`, {
             method: "POST",
             headers: {
             "Content-Type": "application/json",
@@ -161,9 +157,13 @@ const postURLAsJson = (formData) => {
                 id: id,
                 state: state,
               },
-        }).then((res)=>{
-            console.log("sns result", res);
-        })
+            }).then((response) => {
+                console.log("sns result", res);
+            });
+
+          };
+          let receiving_result = receivingOk(voter_id.value, "T");
+          console.log("receiving_result: ", receiving_result);
         } else {
           document.querySelector("#bvtCommonModal").remove();
         }
