@@ -185,7 +185,7 @@ const priceArr = document.querySelectorAll(".price");
 const salePrice = document.querySelector(".display_discount");
 const productPrice = document.querySelector(".display_product");
 console.log('salePrice: ', salePrice, 'productPrice', productPrice);
-console.log('salePrice.innerText: ', salePrice.innerText, 'productPrice', productPrice.innerText);
+console.log('salePrice.innerText: ', parseFloat(salePrice.innerText), 'productPrice.innerText', parseFloat(productPrice.innerText));
 
 /* 가격 -> 스탬프 */
 //스탬프 갯수 변수 할당
