@@ -85,7 +85,7 @@ const shareBtnClick = () => {
     return false;
   } else if (voter_id != null) {
     let shareData = {
-      title: "파일 공유하기",
+      title: `비보트로 초대합니다!`,
       text: `
             🤗 물건도 브랜드도 착해야 산다!
             가치소비가 쉬워지는 곳, 비보트로 초대합니다.
