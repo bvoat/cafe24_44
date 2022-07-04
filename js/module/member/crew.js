@@ -148,12 +148,9 @@ const postURLAsJson = (formData) => {
         console.log("ok", e.currentTarget.dataset.msg);
         if (e.currentTarget.dataset.msg) {
           const receivingOk = (id, state) => {
-            console.log("id", id, "state", state)
+            console.log("id", id,  state)
             $.ajax({
                 type: 'POST',
-                beforeSend: function (xhr) {
-                    xhr.setRequestHeader("Content-type","application/json")
-                },
                 url: `https://${api_domain}.shop/customerinfo/receiving`,
                 data:JSON.stringify({
                     id: id,
@@ -168,7 +165,7 @@ const postURLAsJson = (formData) => {
             })
 
           };
-          let receiving_result = receivingOk(voter_id.value, "T");
+          let receiving_result = receivingOk(voter_id.dataset.id, "T");
           console.log("receiving_result: ", receiving_result);
         } else {
           document.querySelector("#bvtCommonModal").remove();
