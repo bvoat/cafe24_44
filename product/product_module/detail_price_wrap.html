@@ -55,9 +55,12 @@
                 <span>{$item_title}</span>
                 <span>{$item_content}</span>
             </li>
-            <li class="" title="상품가격" aria-hidden="false">
+            <li class="{$item_display|display} displaynone" title="상품가격" aria-hidden="false">
                 <span>{$item_title}</span>
                 <span class="">{$item_content}</span>
+            </li>
+            <li module="product_detail">
+                <span>{$product_price}</span>
             </li>
             <li class="" title="할인가격" aria-hidden="false">
                 <span>{$item_title}</span>
