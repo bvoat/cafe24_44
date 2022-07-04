@@ -12,8 +12,8 @@ const cafe_host = window.location.host;
 const live_arr = ["bvoat.com", "m.bvoat.com", "mobile21", "skin38", "mobile10", "skin21"];
 const test_arr = ["skin44", "mobile9"];
 
-live_arr.forEach((path)=>{
-    cafe_host.includes(path) ? api_domain = "bvoat" : api_domain = "bvoat-test";
+test_arr.forEach((path)=>{
+    cafe_host.includes(path) ? api_domain = "bvoat-test" : api_domain = "bvoat";
 })
 
 //.pricenonsale in common.css
