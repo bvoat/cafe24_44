@@ -201,7 +201,6 @@ const postURLAsJson = (formData) => {
       };
       const noSns = () => {
         document.querySelector("#bvtCommonModal").remove();
-        document.querySelector("#url").value = "";
       };
       createdModal(
         `신청이 완료되었습니다!<br>크루가 되면 알려드릴까요?`,
