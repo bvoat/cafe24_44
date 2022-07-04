@@ -51,8 +51,6 @@ const crew_link_share = document.querySelector(".crew_link_share");
 const reco_id = document.querySelector("#recoIdCheck");
 const voter_identity = document.querySelector("#recoIdCheck").value;
 
-console.log('reco_id: ', reco_id);
-
 let copy_description =`
     🤗 물건도 브랜드도 착해야 산다!
     가치소비가 쉬워지는 곳, 비보트로 초대합니다.
@@ -69,6 +67,8 @@ let copy_description =`
     (추천인 코드 : ${reco_id.dataset.id})
 `
 const copyBtnClick = (text, reco_id) => {
+    console.log('reco_id: ', reco_id);
+
     let copy_text = text;
     console.log("copy_description",copy_text,"reco_id",reco_id)
 
@@ -193,13 +193,15 @@ const postURLAsJson = (formData) => {
 }
 //submit 함수
 const snsURLSubmit = async (e) => {
+    e.preventDefault();
     const form = e.currentTarget;
     const input_url = document.querySelector('#tag_url');
+    const voter_id = document.querySelector("#recoIdCheck").value;
     // 모듈로 받아온  document.querySelector("#recoIdCheck") 통한 로그인 확인
-    console.log("Login Status", voter_identity)
+    console.log("Login Status", voter_id)
 
     //로그인 체크
-    if (voter_identity != null) {
+    if (voter_id != null) {
         //url 정규식 검사
         if (input_url.value == "") {
             alert("URL을 입력해주세요.");
@@ -211,7 +213,7 @@ const snsURLSubmit = async (e) => {
             const plainFormData = JSON.stringify(Object.fromEntries(form_data.entries()));
             console.log('plainFormData: ', plainFormData);
             const responseData = await postURLAsJson(plainFormData);
-            console.log({ responseData });
+            return false;
         }
     }
     else {
@@ -219,7 +221,6 @@ const snsURLSubmit = async (e) => {
         window.location = '/member/login.html?returnUrl=member/crew/crew.html';
         return false;
     }
-    return false;
 }
 //submit 될 때 함수 실행
 crew_Form.addEventListener("submit", snsURLSubmit);
