@@ -148,13 +148,14 @@ const postURLAsJson = (formData) => {
         console.log("ok", e.currentTarget.dataset.msg);
         if (e.currentTarget.dataset.msg) {
           const receivingOk = (id, state) => {
+            console.log("id", id, "state", state)
             $.ajax({
                 type: 'POST',
                 url: `https://${api_domain}.shop/customerinfo/receiving`,
-                data:JSON.stringify({
-                    id: id,
-                    state: state
-                }),
+                data:{
+                    'id': id,
+                    'state': state
+                },
                 success: function(response){
                     console.log('response',response);
                 },
