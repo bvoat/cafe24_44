@@ -46,12 +46,12 @@ moveLevelUp.addEventListener("click", ()=>{
 })
 
 /* 추천인 링크 */
-const voter_identity = document.querySelector('#member_id');
 const crew_link_copy = document.querySelector(".crew_link_copy");
 const crew_link_share = document.querySelector(".crew_link_share");
 const reco_id = document.querySelector("#recoIdCheck");
+const voter_identity = document.querySelector("#recoIdCheck").value;
 
-console.log('reco_id: ', reco_id, 'reco_id.value: ', reco_id.value ,'reco_id.dataset.id: ', reco_id.dataset.id);
+console.log('reco_id: ', reco_id);
 
 let copy_description =`
     🤗 물건도 브랜드도 착해야 산다!
@@ -193,24 +193,20 @@ const postURLAsJson = (formData) => {
 }
 //submit 함수
 const snsURLSubmit = async (e) => {
-
-    e.preventDefault();
     const form = e.currentTarget;
     const input_url = document.querySelector('#tag_url');
-    // 모듈 통한 로그인 확인
+    // 모듈로 받아온  document.querySelector("#recoIdCheck") 통한 로그인 확인
     console.log("Login Status", voter_identity)
 
     //로그인 체크
-    if (voter_identity) {
+    if (voter_identity != null) {
         //url 정규식 검사
         if (input_url.value == "") {
             alert("URL을 입력해주세요.");
             input_url.focus();
             return false;
-
         } else {
             console.log('form: ', form);
-
             const form_data = new FormData(form);
             const plainFormData = JSON.stringify(Object.fromEntries(form_data.entries()));
             console.log('plainFormData: ', plainFormData);
