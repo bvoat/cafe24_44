@@ -105,6 +105,10 @@ const shareBtnClick = (e) => {
     if (navigator.userAgent.toLocaleLowerCase().indexOf("android") > -1) {
       console.log("안드로이드");
       window.AndroidShareHandler.share(copy_text);
+      return false;
+    } else if (navigator.userAgent.toLocaleLowerCase().indexOf("mac") > -1) {
+        alert("지원하지 않는 브라우저입니다 😢 상단의 링크 복사를 이용해주세요!");
+        return false;
     } else {
       if (navigator.share) {
         navigator
