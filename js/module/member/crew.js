@@ -50,7 +50,6 @@ moveLevelUp.addEventListener("click", () => {
 const crew_link_copy = document.querySelector(".crew_link_copy");
 const crew_link_share = document.querySelector(".crew_link_share");
 const voter_id = document.querySelector("#recoIdCheck");
-console.log('voter_id: ', voter_id);
 
 
 const copyBtnClick = () => {
@@ -74,7 +73,6 @@ const copyBtnClick = () => {
         >${voter_id.value}
         (추천인 코드 : ${voter_id.dataset.id})
         `;
-    console.log("copy_text", copy_text, "voter_id", voter_id);
     window.navigator.clipboard.writeText(copy_text).then(() => {
       alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
     });
@@ -87,38 +85,30 @@ const shareBtnClick = () => {
     window.location = "/member/login.html?returnUrl=member/crew/crew.html";
     return false;
   } else if (voter_id != null) {
-    let copy_text = `
-        🤗 물건도 브랜드도 착해야 산다!
-        가치소비가 쉬워지는 곳, 비보트로 초대합니다.
-    
-        친구가 공유한 전용 링크로 가입하면
-        마일리지 무제한 2배 적립에 할인, 무료배송 쿠폰과
-        전용 뱃지 노출까지 되는 크루 등급으로 시작할 수 있어요.
-    
-        크루 혜택 확인하기
-        > https://bvoat.com/member/crew/crew.html
-    
-        친구 초대 전용 가입 링크
-        >${voter_id.value}
-        (추천인 코드 : ${voter_id.dataset.id})
-        `;
-    console.log("copy_text", copy_text);
-    if (navigator.share) {
-      navigator
-        .share({
-          title: "비보트 크루 멤버십 초대",
-          text: copy_text,
-        })
-        .then(() => {
-        console.log("공유 성공!");
+        let shareData = {
+            title: '파일 공유하기',
+            text: `
+            🤗 물건도 브랜드도 착해야 산다!
+            가치소비가 쉬워지는 곳, 비보트로 초대합니다.
+        
+            친구가 공유한 전용 링크로 가입하면
+            마일리지 무제한 2배 적립에 할인, 무료배송 쿠폰과
+            전용 뱃지 노출까지 되는 크루 등급으로 시작할 수 있어요.
+        
+            크루 혜택 확인하기
+            > https://bvoat.com/member/crew/crew.html
+        
+            친구 초대 전용 가입 링크
+            >${voter_id.value}
+            (추천인 코드 : ${voter_id.dataset.id})
+            `
+        };
+
+        if (navigator.canShare && navigator.canShare(shareData)) {
+            navigator.share(shareData);
+        }
         return false;
-        })
-        .catch((error)=>{
-            console.log(error);
-            return false;
-        });
-      return false;
-    }
+
   }
 };
 crew_link_copy.addEventListener("click", () => {
@@ -236,7 +226,6 @@ const snsURLSubmit = async (e) => {
       tag_url.focus();
       return false;
     } else {
-      console.log("form: ", form);
       const form_data = new FormData(form);
       const plainFormData = JSON.stringify(
         Object.fromEntries(form_data.entries())
