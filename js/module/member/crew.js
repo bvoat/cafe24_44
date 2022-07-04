@@ -51,7 +51,8 @@ const crew_link_copy = document.querySelector(".crew_link_copy");
 const crew_link_share = document.querySelector(".crew_link_share");
 const voter_id = document.querySelector("#recoIdCheck");
 
-const copyBtnClick = () => {
+const copyBtnClick = (e) => {
+    e.preventDefault();
   if (voter_id == null) {
     alert("링크 복사를 위해서는 로그인이 필요해요 🤗");
     window.location = "/member/login.html?returnUrl=member/crew/crew.html";
@@ -78,44 +79,42 @@ const copyBtnClick = () => {
     return false;
   }
 };
-const shareBtnClick = () => {
-  if (voter_id == null) {
+const shareBtnClick = (e) => {
+    e.preventDefault();
+    
+    if (voter_id == null) {
     alert("공유를 위해서는 로그인이 필요해요 🤗");
     window.location = "/member/login.html?returnUrl=member/crew/crew.html";
     return false;
   } else if (voter_id != null) {
-    let shareData = {
-      title: `비보트로 초대합니다!`,
-      text: `
-            🤗 물건도 브랜드도 착해야 산다!
-            가치소비가 쉬워지는 곳, 비보트로 초대합니다.
-        
-            친구가 공유한 전용 링크로 가입하면
-            마일리지 무제한 2배 적립에 할인, 무료배송 쿠폰과
-            전용 뱃지 노출까지 되는 크루 등급으로 시작할 수 있어요.
-        
-            크루 혜택 확인하기
-            > https://bvoat.com/member/crew/crew.html
-        
-            친구 초대 전용 가입 링크
-            >${voter_id.value}
-            (추천인 코드 : ${voter_id.dataset.id})
-            `,
-    };
+    let copy_text = `
+    🤗 물건도 브랜드도 착해야 산다!
+    가치소비가 쉬워지는 곳, 비보트로 초대합니다.
 
-    if (navigator.share) {
-        window.navigator.share(shareData);
-    } else{
-        alert("지원되지 않는 브라우저에요! 위의 복사하기를 이용해주세요 😢")
-    }
+    친구가 공유한 전용 링크로 가입하면
+    마일리지 무제한 2배 적립에 할인, 무료배송 쿠폰과
+    전용 뱃지 노출까지 되는 크루 등급으로 시작할 수 있어요.
+
+    크루 혜택 확인하기
+    > https://bvoat.com/member/crew/crew.html
+
+    친구 초대 전용 가입 링크
+    >${voter_id.value}
+    (추천인 코드 : ${voter_id.dataset.id})
+    `;
+    navigator.share({
+        title: "비보트로 초대합니다.",
+        text: copy_text,
+    });
+      console.log("공유 성공!");
     return false;
   }
 };
-crew_link_copy.addEventListener("click", () => {
-  copyBtnClick();
+crew_link_copy.addEventListener("click", (e) => {
+  copyBtnClick(e);
 });
-crew_link_share.addEventListener("click", () => {
-  shareBtnClick();
+crew_link_share.addEventListener("click", (e) => {
+  shareBtnClick(e);
 });
 
 /* url 제출 함수 */
