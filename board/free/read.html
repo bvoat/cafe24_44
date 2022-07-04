@@ -1,22 +1,6 @@
 <!--@layout(/layout/basic/layout.html)-->
 <div module="board_ReadPackage_1002">
     <!--@css(/css/module/board/readPackage.css)-->
-    <div module="board_title_1002">
-        <div class="path">
-            <span>현재 위치</span>
-            <ol>
-                <li><a href="/">홈</a></li>
-                <li><a href="/board/index.html">게시판</a></li>
-                <li title="현재 위치"><strong>{$board_name}</strong></li>
-            </ol>
-        </div>
-
-        <div class="titleArea">
-            <h2>{$board_title} {$board_adult_icon}</h2>
-            <p>{$board_info}</p>
-        </div>
-    </div>
-
     <div module="board_read_1002">
         <!--
             $login_page_url = /member/login.html
@@ -30,14 +14,6 @@
                 <col style="width:auto;" />
             </colgroup>
             <tbody>
-                <tr>
-                    <th scope="row">제목</th>
-                    <td>{$subject}</td>
-                </tr>
-                <tr>
-                    <th scope="row">작성자</th>
-                    <td>{$member_icon} {$writer} <span class="{$config.display_ip|display}">(ip:{$ip})</span> {$admin_mileage}</td>
-                </tr>
                 <tr>
                     <td colspan="2">
                         <ul class="etcArea">

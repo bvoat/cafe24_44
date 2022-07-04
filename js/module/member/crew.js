@@ -208,7 +208,6 @@ const snsURLSubmit = async (e) => {
   //로그인 체크
   if (voter_id == null) {
     // 모듈 통한 로그인 확인
-    console.log("Login Status", voter_id.dataset.id);
     alert("가입 신청을 위해서는 로그인이 필요해요 🤗");
     window.location = "/member/login.html?returnUrl=member/crew/crew.html";
     return false;
