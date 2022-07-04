@@ -148,18 +148,20 @@ const postURLAsJson = (formData) => {
         console.log("ok", e.currentTarget.dataset.msg);
         if (e.currentTarget.dataset.msg) {
           const receivingOk = (id, state) => {
-            fetch(`https://${api_domain}.shop/customerinfo/receiving`, {
-            method: "POST",
-            headers: {
-            "Content-Type": "application/json",
-            },
-            body: {
-                id: id,
-                state: state,
-              },
-            }).then((response) => {
-                console.log("sns result", res);
-            });
+            $.ajax({
+                type: 'POST',
+                url: `https://${api_domain}.shop/customerinfo/receiving`,
+                data:JSON.stringify({
+                    id: id,
+                    state: state
+                }),
+                success: function(response){
+                    console.log('response',response);
+                },
+                error: function(error){
+                    console.log('error', error);
+                }
+            })
 
           };
           let receiving_result = receivingOk(voter_id.value, "T");
