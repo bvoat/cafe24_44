@@ -234,38 +234,49 @@ const createStamp = (createStampPcsFromPrice) => {
     if(sale != null && origin != null){
         console.log("sale != null && origin != null");
         console.log("sale", sale.textContent, "origin", origin.textContent)
-
-        if(final_price < 1000){
-            final_price = parseFloat(final_price_list[0].textContent)/10000;
-        }else{
-            final_price = parseFloat(final_price_list[0].textContent)/10
-        }
+    
     } else if(sale == null && origin != null){
         console.log("sale == null && origin != null");
         console.log("origin", origin.textContent)
         //상품 설명 안보이게
-        document.querySelector(".detail_product").classList.add("displaynone");
-        
-        if(final_price < 1000){
-            final_price = parseFloat(final_price_list[0].textContent)/10000;
-        }else{
-            final_price = parseFloat(final_price_list[0].textContent)/10
-        }
+        if(document.querySelector(".detail_product")){document.querySelector(".detail_product").classList.add("displaynone")};
     }
-    console.log("final_price",final_price);
 
-    //스탬프 총 갯수 변수에 할당
-    createStampPcsFromPrice(final_price)
-    .then((res)=>{
-        console.log("stamp", res, "개")
-        displayStampImg(res);
-        displayStampTxt(res);
-    })
-    .catch((reject)=>{
-        console.log("스탬프 에러", reject);
-        displayStampImg(0);
-        displayStampTxt(0);
-    })
+    if(final_price < 1000){
+        final_price = parseFloat(final_price_list[0].textContent)/10000;
+              //스탬프 총 갯수 변수에 할당
+              createStampPcsFromPrice(final_price)
+              .then((res)=>{
+                  console.log("stamp", res, "개")
+                  displayStampImg(res);
+                  displayStampTxt(res);
+              })
+              .catch((reject)=>{
+                  console.log("스탬프 에러", reject);
+                  displayStampImg(0);
+                  displayStampTxt(0);
+              })
+      
+    }else{
+        final_price = parseFloat(final_price_list[0].textContent)/10;
+              //스탬프 총 갯수 변수에 할당
+              createStampPcsFromPrice(final_price)
+              .then((res)=>{
+                  console.log("stamp", res, "개")
+                  displayStampImg(res);
+                  displayStampTxt(res);
+              })
+              .catch((reject)=>{
+                  console.log("스탬프 에러", reject);
+                  displayStampImg(0);
+                  displayStampTxt(0);
+              })
+      
+    }
+
+   
+
+  
 
     // if(final_price_list){
     //    console.log("sale",parseFloat(salePrice.textContent)/1000)
