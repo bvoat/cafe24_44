@@ -114,9 +114,6 @@ const shareBtnClick = () => {
         })
         .catch(console.error);
       return false;
-    } else {
-      alert("오류가 발생했어요. 잠시후에 시도해주세요.");
-      return false;
     }
   }
 };
