@@ -103,8 +103,8 @@ const shareBtnClick = () => {
             `,
     };
 
-    if (navigator.canShare && navigator.canShare(shareData)) {
-      navigator.share(shareData);
+    if (navigator.share) {
+        window.navigator.share(shareData);
     }
     return false;
   }
