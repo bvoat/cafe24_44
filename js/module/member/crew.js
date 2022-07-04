@@ -160,10 +160,10 @@ const postURLAsJson = (formData) => {
                     state: state
                 },
                 success: function(response){
-                    if(response.statue == 200){
+                    if(response.status == '200'){
                         document.querySelector("#bvtCommonModal").remove();
                         return false;
-                      }else {
+                      } else {
                         let sns_confirm = confirm(
                           "😢 마케팅 수신 동의에 오류가 발생했어요! 비보트에게 알려주세요!"
                         );
