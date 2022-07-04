@@ -80,8 +80,8 @@ const copyBtnClick = (e) => {
   }
 };
 const shareBtnClick = (e) => {
+    console.log("share", e)
     e.preventDefault();
-    
     if (voter_id == null) {
     alert("공유를 위해서는 로그인이 필요해요 🤗");
     window.location = "/member/login.html?returnUrl=member/crew/crew.html";
@@ -102,7 +102,8 @@ const shareBtnClick = (e) => {
     >${voter_id.value}
     (추천인 코드 : ${voter_id.dataset.id})
     `;
-    navigator.share({
+    console.log('share copy_text: ', copy_text);
+    window.navigator.share({
         title: "비보트로 초대합니다.",
         text: copy_text,
     });
