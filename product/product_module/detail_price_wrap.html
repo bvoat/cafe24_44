@@ -1,4 +1,4 @@
-<ul class="price_wrap">
+<!-- <ul class="price_wrap">
     <li class="sale_price {$product_sale_price_display|display}" data-pricename="할인 가격" data-price="{$product_sale_price}">
         <p class="discount_for_web display_discount price detail_product">{$product_sale_price|numberformat}</p>
         <p class="discount_for_mobile display_discount price detail_product">{$prd_price_sale}</p>
@@ -9,7 +9,7 @@
   <li><input type="hidden" name="sale" class="price_discount price" value="{$product_sale_price}"></li>
   <li> <input type="hidden" name="product" class="price_origin price" value="{$product_price}">
   </li>  
-</ul>
+</ul> -->
 
 <!-- 
 <div module="product_detaildesign" class="price_wrap">
@@ -26,11 +26,11 @@
 
 
 
-<!-- <div module="product_detaildesign"> -->
+<div module="product_detaildesign">
     <!--
         $cache = no
     -->
-    <!-- <ul class="price_wrap">
+    <ul class="price_wrap">
             <li class="{$item_display|display} displaynone" title="상품명" aria-hidden="true"> 
                 <span>{$item_title}</span>
                 <span>{$item_content}</span>
@@ -58,11 +58,13 @@
             <li class="{$item_display|display}" title="상품가격" aria-hidden="false">
                 <span>{$item_title}</span>
                 <span>{$item_content}</span>
-                <span>{$prd_price_org}	</span>
             </li>
             <li class="{$item_display|display}" title="할인가격" aria-hidden="false">
                 <span>{$item_title}</span>
                 <span>{$item_content}</span>
             </li>
     </ul>
-</div> -->
+</div>
+<ul class="price_wrap">
+    <li>{$product_price}</li>
+</ul>
