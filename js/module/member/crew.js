@@ -52,7 +52,7 @@ const crew_link_share = document.querySelector(".crew_link_share");
 const voter_id = document.querySelector("#recoIdCheck");
 
 const copyBtnClick = (e) => {
-    e.preventDefault();
+  e.preventDefault();
   if (voter_id == null) {
     alert("링크 복사를 위해서는 로그인이 필요해요 🤗");
     window.location = "/member/login.html?returnUrl=member/crew/crew.html";
@@ -74,20 +74,19 @@ const copyBtnClick = (e) => {
         (추천인 코드 : ${voter_id.dataset.id})
         `;
     window.navigator.clipboard.writeText(copy_text).then(() => {
-        alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
-        return false;
+      alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
+      return false;
     });
   }
 };
 const shareBtnClick = (e) => {
-    console.log("share", e)
-    e.preventDefault();
-    if (voter_id == null) {
+  console.log("share", e);
+  e.preventDefault();
+  if (voter_id == null) {
     alert("공유를 위해서는 로그인이 필요해요 🤗");
     window.location = "/member/login.html?returnUrl=member/crew/crew.html";
     return false;
   } else if (voter_id != null) {
-
     let copy_text = `
     🤗 물건도 브랜드도 착해야 산다!
     가치소비가 쉬워지는 곳, 비보트로 초대합니다.
@@ -103,21 +102,22 @@ const shareBtnClick = (e) => {
     >${voter_id.value}
     (추천인 코드 : ${voter_id.dataset.id})
     `;
-    if(navigator.userAgent.toLocaleLowerCase().indexOf('android') > -1){
-        console.log("안드로이드");
-        window.AndroidShareHandler.share(copy_text)
-    }else{
-        if (navigator.share) {
-            navigator.share({
-                title: "비보트로 초대합니다.",
-                text: copy_text,
-            })
-        .then((response) =>{ 
-        console.log("공유 성공!", response)
-        return false;
-        })
-        .catch((error) => console.log("Error sharing", error));
-        }
+    if (navigator.userAgent.toLocaleLowerCase().indexOf("android") > -1) {
+      console.log("안드로이드");
+      window.AndroidShareHandler.share(copy_text);
+    } else {
+      if (navigator.share) {
+        navigator
+          .share({
+            title: "비보트로 초대합니다.",
+            text: copy_text,
+          })
+          .then((response) => {
+            console.log("공유 성공!", response);
+            return false;
+          })
+          .catch((error) => console.log("Error sharing", error));
+      }
     }
     return false;
   }
@@ -150,34 +150,19 @@ const postURLAsJson = (formData) => {
       return false;
     } else if (response.status === 201) {
       const okSns = (e) => {
-          const receivingOk = (id, state) => {
-            $.ajax({
-              type: "POST",
-              url: `https://${api_domain}.shop/customerinfo/receiving`,
-              data: {
-                id: id,
-                state: state,
-              },
-              success: function (response) {
-                if (response.status == 200) {
-                  document.querySelector("#bvtCommonModal").remove();
-                  return false;
-                } else {
-                  let sns_confirm = confirm(
-                    "😢 마케팅 수신 동의에 오류가 발생했어요! 비보트에게 알려주세요!"
-                  );
-                  if (sns_confirm) {
-                    document.querySelector("#bvtCommonModal").remove();
-                    ChannelIO("show");
-                    return false;
-                  } else {
-                    document.querySelector("#bvtCommonModal").remove();
-                    return false;
-                  }
-                }
-              },
-              error: function (error) {
-                console.log("error", error);
+        const receivingOk = (id, state) => {
+          $.ajax({
+            type: "POST",
+            url: `https://${api_domain}.shop/customerinfo/receiving`,
+            data: {
+              id: id,
+              state: state,
+            },
+            success: function (response) {
+              if (response.status == 200) {
+                document.querySelector("#bvtCommonModal").remove();
+                return false;
+              } else {
                 let sns_confirm = confirm(
                   "😢 마케팅 수신 동의에 오류가 발생했어요! 비보트에게 알려주세요!"
                 );
@@ -189,11 +174,25 @@ const postURLAsJson = (formData) => {
                   document.querySelector("#bvtCommonModal").remove();
                   return false;
                 }
-              },
-            });
-          };
-          receivingOk(voter_id.dataset.id, "T");
-         
+              }
+            },
+            error: function (error) {
+              console.log("error", error);
+              let sns_confirm = confirm(
+                "😢 마케팅 수신 동의에 오류가 발생했어요! 비보트에게 알려주세요!"
+              );
+              if (sns_confirm) {
+                document.querySelector("#bvtCommonModal").remove();
+                ChannelIO("show");
+                return false;
+              } else {
+                document.querySelector("#bvtCommonModal").remove();
+                return false;
+              }
+            },
+          });
+        };
+        receivingOk(voter_id.dataset.id, "T");
       };
       const noSns = () => {
         document.querySelector("#bvtCommonModal").remove();
