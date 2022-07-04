@@ -148,7 +148,6 @@ const postURLAsJson = (formData) => {
         console.log("ok", e.currentTarget.dataset.msg);
         if (e.currentTarget.dataset.msg) {
           const receivingOk = (id, state) => {
-            console.log("id", id,  state)
             $.ajax({
                 type: 'POST',
                 url: `https://${api_domain}.shop/customerinfo/receiving`,
@@ -157,10 +156,35 @@ const postURLAsJson = (formData) => {
                     state: state
                 },
                 success: function(response){
-                    console.log('response',response);
+                    if(response.statue == 200){
+                        document.querySelector("#bvtCommonModal").remove();
+                        return false;
+                      }else {
+                        let sns_confirm = confirm(
+                          "😢 마케팅 수신 동의에 오류가 발생했어요! 비보트에게 알려주세요!"
+                        );
+                        if (sns_confirm) {
+                          document.querySelector("#bvtCommonModal").remove();
+                          ChannelIO("show");
+                          return false;
+                        } else {
+                          document.querySelector("#bvtCommonModal").remove();
+                          return false;
+                        }
+                    }
                 },
                 error: function(error){
-                    console.log('error', error);
+                    let sns_confirm = confirm(
+                        "😢 마케팅 수신 동의에 오류가 발생했어요! 비보트에게 알려주세요!"
+                      );
+                      if (sns_confirm) {
+                        document.querySelector("#bvtCommonModal").remove();
+                        ChannelIO("show");
+                        return false;
+                      } else {
+                        document.querySelector("#bvtCommonModal").remove();
+                        return false;
+                      }
                 }
             })
 
@@ -190,13 +214,11 @@ const postURLAsJson = (formData) => {
 //submit 함수
 const snsURLSubmit = async (e) => {
   e.preventDefault();
-  const form = e.currentTarget;
-  console.log('form: ', form);
-  
+  const form = e.currentTarget;  
   //로그인 체크
   if (voter_id == null) {
     // 모듈 통한 로그인 확인
-    console.log("Login Status", voter_id);
+    console.log("Login Status", voter_id.dataset.id);
     alert("가입 신청을 위해서는 로그인이 필요해요 🤗");
     window.location = "/member/login.html?returnUrl=member/crew/crew.html";
     return false;
@@ -216,7 +238,6 @@ const snsURLSubmit = async (e) => {
       const plainFormData = JSON.stringify(
         Object.fromEntries(form_data.entries())
       );
-      console.log("plainFormData: ", plainFormData);
       const responseData = await postURLAsJson(plainFormData);
       console.log({ responseData });
     }
