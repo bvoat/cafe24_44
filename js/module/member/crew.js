@@ -155,10 +155,10 @@ const postURLAsJson = (formData) => {
                     xhr.setRequestHeader("Content-type","application/json")
                 },
                 url: `https://${api_domain}.shop/customerinfo/receiving`,
-                data:{
-                    'id': id,
-                    'state': state
-                },
+                data:JSON.stringify({
+                    id: id,
+                    state: state
+                }),
                 success: function(response){
                     console.log('response',response);
                 },
