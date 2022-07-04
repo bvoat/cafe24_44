@@ -102,12 +102,20 @@ const shareBtnClick = (e) => {
     >${voter_id.value}
     (추천인 코드 : ${voter_id.dataset.id})
     `;
-    console.log('share copy_text: ', copy_text);
-    window.navigator.share({
-        title: "비보트로 초대합니다.",
-        text: copy_text,
-    });
-      console.log("공유 성공!");
+    if(navigator.userAgent.toLocaleLowerCase().indexOf('android') > -1){
+        console.log("안드로이드");
+        window.AndroidShareHandler.share(copy_text)
+    }else{
+        if (navigator.share) {
+            navigator.share({
+                title: "비보트로 초대합니다.",
+                text: copy_text,
+        })
+        .then(() => console.log("공유 성공!"))
+        .catch((error) => console.log("Error sharing", error));
+        }
+    }
+
     return false;
   }
 };
