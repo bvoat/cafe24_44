@@ -51,7 +51,6 @@ const crew_link_copy = document.querySelector(".crew_link_copy");
 const crew_link_share = document.querySelector(".crew_link_share");
 const voter_id = document.querySelector("#recoIdCheck");
 
-
 const copyBtnClick = () => {
   if (voter_id == null) {
     alert("링크 복사를 위해서는 로그인이 필요해요 🤗");
@@ -85,9 +84,9 @@ const shareBtnClick = () => {
     window.location = "/member/login.html?returnUrl=member/crew/crew.html";
     return false;
   } else if (voter_id != null) {
-        let shareData = {
-            title: '파일 공유하기',
-            text: `
+    let shareData = {
+      title: "파일 공유하기",
+      text: `
             🤗 물건도 브랜드도 착해야 산다!
             가치소비가 쉬워지는 곳, 비보트로 초대합니다.
         
@@ -101,14 +100,13 @@ const shareBtnClick = () => {
             친구 초대 전용 가입 링크
             >${voter_id.value}
             (추천인 코드 : ${voter_id.dataset.id})
-            `
-        };
+            `,
+    };
 
-        if (navigator.canShare && navigator.canShare(shareData)) {
-            navigator.share(shareData);
-        }
-        return false;
-
+    if (navigator.canShare && navigator.canShare(shareData)) {
+      navigator.share(shareData);
+    }
+    return false;
   }
 };
 crew_link_copy.addEventListener("click", () => {
@@ -143,48 +141,47 @@ const postURLAsJson = (formData) => {
         if (e.currentTarget.dataset.msg) {
           const receivingOk = (id, state) => {
             $.ajax({
-                type: 'POST',
-                url: `https://${api_domain}.shop/customerinfo/receiving`,
-                data:{
-                    id: id,
-                    state: state
-                },
-                success: function(response){
-                    if(response.status == 200){
-                        document.querySelector("#bvtCommonModal").remove();
-                        return false;
-                      } else {
-                        let sns_confirm = confirm(
-                          "😢 마케팅 수신 동의에 오류가 발생했어요! 비보트에게 알려주세요!"
-                        );
-                        if (sns_confirm) {
-                          document.querySelector("#bvtCommonModal").remove();
-                          ChannelIO("show");
-                          return false;
-                        } else {
-                          document.querySelector("#bvtCommonModal").remove();
-                          return false;
-                        }
-                    }
-                },
-                error: function(error){
-                    let sns_confirm = confirm(
-                        "😢 마케팅 수신 동의에 오류가 발생했어요! 비보트에게 알려주세요!"
-                      );
-                      if (sns_confirm) {
-                        document.querySelector("#bvtCommonModal").remove();
-                        ChannelIO("show");
-                        return false;
-                      } else {
-                        document.querySelector("#bvtCommonModal").remove();
-                        return false;
-                      }
+              type: "POST",
+              url: `https://${api_domain}.shop/customerinfo/receiving`,
+              data: {
+                id: id,
+                state: state,
+              },
+              success: function (response) {
+                if (response.status == 200) {
+                  document.querySelector("#bvtCommonModal").remove();
+                  return false;
+                } else {
+                  let sns_confirm = confirm(
+                    "😢 마케팅 수신 동의에 오류가 발생했어요! 비보트에게 알려주세요!"
+                  );
+                  if (sns_confirm) {
+                    document.querySelector("#bvtCommonModal").remove();
+                    ChannelIO("show");
+                    return false;
+                  } else {
+                    document.querySelector("#bvtCommonModal").remove();
+                    return false;
+                  }
                 }
-            })
-
+              },
+              error: function (error) {
+                console.log("error", error);
+                let sns_confirm = confirm(
+                  "😢 마케팅 수신 동의에 오류가 발생했어요! 비보트에게 알려주세요!"
+                );
+                if (sns_confirm) {
+                  document.querySelector("#bvtCommonModal").remove();
+                  ChannelIO("show");
+                  return false;
+                } else {
+                  document.querySelector("#bvtCommonModal").remove();
+                  return false;
+                }
+              },
+            });
           };
-          let receiving_result = receivingOk(voter_id.dataset.id, "T");
-          console.log("receiving_result: ", receiving_result);
+          receivingOk(voter_id.dataset.id, "T");
         } else {
           document.querySelector("#bvtCommonModal").remove();
         }
@@ -207,7 +204,7 @@ const postURLAsJson = (formData) => {
 //submit 함수
 const snsURLSubmit = async (e) => {
   e.preventDefault();
-  const form = e.currentTarget;  
+  const form = e.currentTarget;
   //로그인 체크
   if (voter_id == null) {
     // 모듈 통한 로그인 확인
@@ -215,11 +212,10 @@ const snsURLSubmit = async (e) => {
     alert("가입 신청을 위해서는 로그인이 필요해요 🤗");
     window.location = "/member/login.html?returnUrl=member/crew/crew.html";
     return false;
-  } else if(voter_id != null) {
+  } else if (voter_id != null) {
     const tag_url = document.querySelector("#tag_url");
     const member_id = document.querySelector("#member_id");
     // 모듈 통한 로그인 확인
-    console.log("Login Status", member_id);
     //url 정규식 검사
     if (tag_url.value == "") {
       alert("URL을 입력해주세요.");
@@ -230,8 +226,7 @@ const snsURLSubmit = async (e) => {
       const plainFormData = JSON.stringify(
         Object.fromEntries(form_data.entries())
       );
-      const responseData = await postURLAsJson(plainFormData);
-      console.log({ responseData });
+      await postURLAsJson(plainFormData);
     }
   }
 };
