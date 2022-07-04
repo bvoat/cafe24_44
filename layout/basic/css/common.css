@@ -353,7 +353,7 @@ div.layerProgress {
     font-weight: 600;
     color: #022cff;
 }
-.price_wrap>li>span, .price_wrap>li>span>span{
+.price_wrap>li>span, .price_wrap>li>span>span, .price_wrap>li>span>span>span{
     font-size: 1.48rem !important;
     font-weight: 600 !important;
     color: #022cff !important;
