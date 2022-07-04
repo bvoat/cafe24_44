@@ -136,6 +136,7 @@ const crewValueControl = (multiple) => {
 
 //공유 이벤트
 const goShrBtn = (type, _url) => {
+  console.log("type", type, _url)
   if (type == "link") {
     if (navigator.share) {
       navigator.share({
@@ -148,38 +149,7 @@ const goShrBtn = (type, _url) => {
           "/?utm_source=webshareapi&utm_medium=link&utm_campaign=sharebylink&utm_content=funding_link",
       });
     }
-  } else if (type == "kakao") {
-    Kakao.Link.sendDefault({
-      objectType: "feed",
-      content: {
-        title: document.getElementsByClassName("product_name").innerText,
-        description: document.getElementsByClassName("product_name").innerText,
-        imageUrl:
-          "https://bvoatofficial.cafe24.com/web/upload/share-image-1-7415ca0886cec14f1fbbe5c28cbccec1.png",
-        link: {
-          mobileWebUrl:
-            _url +
-            "/?utm_source=kakaotalk&utm_medium=sharelink&utm_campaign=sharebykakao",
-          webUrl:
-            _url +
-            "/?utm_source=kakaotalk&utm_medium=sharelink&utm_campaign=sharebykakao",
-        },
-      },
-      buttons: [
-        {
-          title: "바로가기",
-          link: {
-            mobileWebUrl:
-              _url +
-              "/?utm_source=kakaotalk&utm_medium=sharelink&utm_campaign=sharebykakao",
-            webUrl:
-              _url +
-              "/?utm_source=kakaotalk&utm_medium=sharelink&utm_campaign=sharebykakao",
-          },
-        },
-      ],
-    });
-  }
+  } 
 };
 const shareBtn = document.querySelector("#shareBtn");
 
