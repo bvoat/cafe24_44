@@ -232,15 +232,20 @@ const createStamp = (createStampPcsFromPrice) => {
     let final_price = final_price_list[0].textContent;
 
     if(sale != null && origin != null){
-        console.log("sale != null && origin != null")
+        console.log("sale != null && origin != null");
+        console.log("sale", sale.textContent, "origin", origin.textContent)
+
         if(final_price < 1000){
             final_price = parseFloat(final_price_list[0].textContent)/10000;
         }else{
             final_price = parseFloat(final_price_list[0].textContent)/10
         }
     } else if(sale == null && origin != null){
-        console.log("sale == null && origin != null")
-        document.querySelector(".detail_product").classList.add("displaynone")
+        console.log("sale == null && origin != null");
+        console.log("origin", origin.textContent)
+        //상품 설명 안보이게
+        document.querySelector(".detail_product").classList.add("displaynone");
+        
         if(final_price < 1000){
             final_price = parseFloat(final_price_list[0].textContent)/10000;
         }else{
