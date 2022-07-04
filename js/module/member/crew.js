@@ -107,12 +107,16 @@ const shareBtnClick = () => {
       navigator
         .share({
           title: "비보트 크루 멤버십 초대",
-          text: `${copy_text}`,
+          text: copy_text,
         })
         .then(() => {
-          alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
+        console.log("공유 성공!");
+        return false;
         })
-        .catch(console.error);
+        .catch((error)=>{
+            console.log(error);
+            return false;
+        });
       return false;
     }
   }
