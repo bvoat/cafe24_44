@@ -87,6 +87,7 @@ const shareBtnClick = (e) => {
     window.location = "/member/login.html?returnUrl=member/crew/crew.html";
     return false;
   } else if (voter_id != null) {
+
     let copy_text = `
     🤗 물건도 브랜드도 착해야 산다!
     가치소비가 쉬워지는 곳, 비보트로 초대합니다.
@@ -111,11 +112,13 @@ const shareBtnClick = (e) => {
                 title: "비보트로 초대합니다.",
                 text: copy_text,
         })
-        .then(() => console.log("공유 성공!"))
+        .then((response) =>{ 
+        console.log("공유 성공!", response)
+        return false;
+        })
         .catch((error) => console.log("Error sharing", error));
         }
     }
-
     return false;
   }
 };
