@@ -185,8 +185,6 @@ const priceArr = document.querySelectorAll(".price");
 const salePrice = document.querySelector(".display_discount > span > span");
 const productPrice = document.querySelector(".display_product");
 console.log('salePrice: ', salePrice, 'productPrice', productPrice);
-console.log('salePrice.innerText: ', parseFloat(salePrice.textContent), 'productPrice.innerText', parseFloat(productPrice.textContent));
-
 /* 가격 -> 스탬프 */
 //스탬프 갯수 변수 할당
 const createStampPcsFromPrice = (price) => {
