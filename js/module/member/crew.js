@@ -152,10 +152,10 @@ const postURLAsJson = (formData) => {
             $.ajax({
                 type: 'POST',
                 url: `https://${api_domain}.shop/customerinfo/receiving`,
-                data:JSON.stringify({
+                data:{
                     id: id,
                     state: state
-                }),
+                },
                 success: function(response){
                     console.log('response',response);
                 },
