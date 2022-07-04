@@ -182,12 +182,10 @@ const toggleBuyScreen = (type) => {
 
 /* 가격 할인가 확인 표시 */
 const priceArr = document.querySelectorAll(".price");
-console.log('priceArr: ', priceArr);
 const salePrice = document.querySelector(".display_discount");
 const productPrice = document.querySelector(".display_product");
-console.log('salePrice: ', parseFloat(salePrice.innerText));
-console.log('productPrice: ', parseFloat(productPrice.innerText));
-
+console.log('salePrice: ', salePrice, 'productPrice', productPrice);
+console.log('salePrice.innerText: ', salePrice.innerText, 'productPrice', productPrice.innerText);
 
 /* 가격 -> 스탬프 */
 //스탬프 갯수 변수 할당
@@ -234,37 +232,38 @@ const displayStampImg = (productStamp) => {
 }
 //스탬프 promise 진행
 const createStamp = (salePrice,productPrice,createStampPcsFromPrice) => {
-console.log("salePrice",salePrice,"productPrice",productPrice);
+// console.log("salePrice",salePrice,"productPrice",productPrice);
     if(salePrice != null && productPrice != null){
-        console.log("???",new Number(salePrice.innerText));
         //스탬프 총 갯수 변수에 할당
-        createStampPcsFromPrice(parseInt(salePrice.innerText)/10)
-        .then((res)=>{
-            console.log("stamp", res, "개")
-            displayStampImg(res);
-            displayStampTxt(res);
-        })
-        .catch((reject)=>{
-            console.log("스탬프 에러", reject);
-            displayStampImg(0);
-            displayStampTxt(0);
-        })
+        // createStampPcsFromPrice(price1)
+        // .then((res)=>{
+        //     console.log("stamp", res, "개")
+        //     displayStampImg(res);
+        //     displayStampTxt(res);
+        // })
+        // .catch((reject)=>{
+        //     console.log("스탬프 에러", reject);
+        //     displayStampImg(0);
+        //     displayStampTxt(0);
+        // })
     } else if(salePrice == null && productPrice != null){
-        console.log("??",new Number(productPrice.innerText));
-        // 스탬프 총 갯수 변수에 할당
-        createStampPcsFromPrice(parseInt(productPrice.innerText)/10)
-        .then((res)=>{
-            console.log("stamp", res, "개")
-            displayStampImg(res);
-            displayStampTxt(res);
-            document.querySelector(".display_product").classList.add("displaynone");
+        let price2;
+arseFloat(productPrice.innerText)/10;
 
-        })
-        .catch((reject)=>{
-            console.log("스탬프 에러", reject);
-            displayStampImg(0);
-            displayStampTxt(0);
-        })
+        // 스탬프 총 갯수 변수에 할당
+        // createStampPcsFromPrice(price2)
+        // .then((res)=>{
+        //     console.log("stamp", res, "개")
+        //     displayStampImg(res);
+        //     displayStampTxt(res);
+        //     document.querySelector(".display_product").classList.add("displaynone");
+
+        // })
+        // .catch((reject)=>{
+        //     console.log("스탬프 에러", reject);
+        //     displayStampImg(0);
+        //     displayStampTxt(0);
+        // })
     }
 }
 
