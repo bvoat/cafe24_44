@@ -1,8 +1,7 @@
  <ul class="price_wrap displaynone">
-    <li class="sale_price {$product_sale_price_display|display}" data-pricename="할인 가격" data-price="{$product_sale_price}">
-        <p class="discount_for_web display_discount price detail_product">{$product_sale_price|numberformat} {$prd_price_sale}</p>
-        <p class="discount_for_mobile display_discount price detail_product">{$prd_price_sale} {$product_price|numberformat}</p>
-    </li>
+        <li class="discount_for_web display_discount price detail_product"> {$prd_sale_price} {$product_sale_price}</li>
+        <li class="discount_for_mobile display_discount price detail_product">{$prd_price_sale} {$product_price|numberformat}</li>
+    
 </ul>
 <!--<ul class="price_check displaynone">
   <li><input type="hidden" name="sale" class="price_discount price" value="{$product_sale_price}"></li>
