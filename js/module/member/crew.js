@@ -160,7 +160,7 @@ const postURLAsJson = (formData) => {
                     state: state
                 },
                 success: function(response){
-                    if(response.status == '200'){
+                    if(response.status == 200){
                         document.querySelector("#bvtCommonModal").remove();
                         return false;
                       } else {
