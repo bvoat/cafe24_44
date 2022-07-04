@@ -227,22 +227,25 @@ const displayStampImg = (productStamp) => {
 //스탬프 promise 진행
 const createStamp = (createStampPcsFromPrice) => {
     let final_price_list = document.querySelectorAll(".price");
-    console.log('final_price_list: ', final_price_list);
-
     let sale = document.querySelector("#span_product_price_sale");
     let origin = document.querySelector("#span_product_price_text");
-
-    console.log('final_price_list: ', final_price_list);
-    console.log("sale",sale,"origin",origin);
-
-
-    
     let final_price = final_price_list[0].textContent;
-    
-    if(final_price < 1000){
-        final_price = parseFloat(final_price_list[0].textContent)/10000;
-    }else{
-        final_price = parseFloat(final_price_list[0].textContent)/10
+
+    if(sale != null && origin != null){
+        console.log("sale != null && origin != null")
+        if(final_price < 1000){
+            final_price = parseFloat(final_price_list[0].textContent)/10000;
+        }else{
+            final_price = parseFloat(final_price_list[0].textContent)/10
+        }
+    } else if(sale == null && origin != null){
+        console.log("sale == null && origin != null")
+        document.querySelector(".detail_product").classList.add("displaynone")
+        if(final_price < 1000){
+            final_price = parseFloat(final_price_list[0].textContent)/10000;
+        }else{
+            final_price = parseFloat(final_price_list[0].textContent)/10
+        }
     }
     console.log("final_price",final_price);
 
