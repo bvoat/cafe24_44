@@ -64,6 +64,6 @@ const createdModal = (heading, text, okmsg, nomsg, okfunc, nofunc) => {
     `
     document.querySelector('#bvtContainer').insertAdjacentHTML("afterbegin", modal_form)
     // 버튼 클릭 시 발생할 이벤트 수신
-    document.querySelector(".ok_btn").addEventListener("click", okfunc)
-    document.querySelector(".no_btn").addEventListener("click", nofunc)
+    document.querySelector(".ok_btn").addEventListener("click", okfunc);
+    document.querySelector(".no_btn").addEventListener("click", nofunc);
 }
