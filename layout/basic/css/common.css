@@ -361,17 +361,17 @@ div.layerProgress {
 .price::after{
     display: inline-block;
     content: "원";
-    font-size: 1.43rem;
+    font-size: 1.42rem;
     font-weight: normal;
     color: #292929;
-    margin-left: 1px;
+    margin-left: -1px;
 }
-.pricenonsale, .detail_product>span, .detail_product>span>strong{
+.pricenonsale, .detail_product>span, .display_product>span>strong{
     text-decoration: line-through !important;
     color: #ABABAB !important;
     font-size :
     1.43rem !important;
-    margin-left: 8px !important;
+    margin-left: 5px !important;
 }
 .pricenonsale::after, .detail_product::after{
     color: #ABABAB !important;

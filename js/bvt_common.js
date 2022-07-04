@@ -27,11 +27,10 @@ const customPrice = (priceList) => {
                 node.children[0].classList.add("displaynone");
             }
             // console.log("node", node);
-            // console.log("node.chidren[0]", node.children[0].hasChildNodes());
-            // console.log("node.chidren[1]", node.children[1].hasChildNodes());
     });
 }
 const priceNonSaleStyle = (customPrice) => {
+
     const price_wrap_node = document.querySelectorAll(".price_wrap");
     if(price_wrap_node != null){
         customPrice(price_wrap_node) 

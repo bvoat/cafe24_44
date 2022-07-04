@@ -187,6 +187,7 @@ console.log('priceArr: ', priceArr);
 const salePrice = document.querySelector("#span_product_price_sale");
 const productPrice = document.querySelector("#span_product_price_text");
 
+
 /* 가격 -> 스탬프 */
 //스탬프 갯수 변수 할당
 const createStampPcsFromPrice = (price) => {
@@ -249,6 +250,7 @@ console.log("salePrice",salePrice,"productPrice",productPrice);
         })
     } else if(salePrice == null && productPrice != null){
         // console.log("??",parseInt(productPrice.innerText));
+        document.querySelector(".display_product").classList.add("displaynone");
         
         //스탬프 총 갯수 변수에 할당
         createStampPcsFromPrice(parseInt(productPrice.innerText)/10)

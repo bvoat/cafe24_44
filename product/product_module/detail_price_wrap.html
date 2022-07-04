@@ -48,11 +48,11 @@
                 <span>{$item_title}</span>
                 <span>{$item_content}</span>
             </li>
-            <li class="{$item_display|display}" title="할인가격" aria-hidden="false">
-                <span class="display_discount">{$item_content}</span>
+            <li class="{$item_display|display} display_discount price" title="할인가격" aria-hidden="false">
+                {$item_content}
             </li>
-            <li class="{$item_display|display}" title="상품가격" aria-hidden="true">
-                <span class="display_product">{$item_content}</span>
+            <li class="{$item_display|display} display_product price detail_product" title="상품가격" aria-hidden="true">
+                {$item_content}
             </li>
             <li class="{$item_display|display} displaynone" title="상품설명" aria-hidden="true">
                 <span>{$item_title}</span>
