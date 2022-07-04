@@ -46,12 +46,14 @@ moveLevelUp.addEventListener("click", ()=>{
 })
 
 /* 추천인 링크 */
+const voter_identity = document.querySelector('#member_id');
 const crew_link_copy = document.querySelector(".crew_link_copy");
 const crew_link_share = document.querySelector(".crew_link_share");
 const reco_id = document.querySelector("#recoIdCheck");
-const voter_identity = document.querySelector("#recoIdCheck").value;
 
-let copy_description =`
+
+const copyBtnClick = (reco_id) => {
+    let copy_text = `
     🤗 물건도 브랜드도 착해야 산다!
     가치소비가 쉬워지는 곳, 비보트로 초대합니다.
 
@@ -65,15 +67,11 @@ let copy_description =`
     친구 초대 전용 가입 링크
     >${reco_id.value}
     (추천인 코드 : ${reco_id.dataset.id})
-`
-const copyBtnClick = (text, reco_id) => {
-    console.log('reco_id: ', reco_id);
-
-    let copy_text = text;
-    console.log("copy_description",copy_text,"reco_id",reco_id)
+    `
+    console.log("copy_text",copy_text,"reco_id",reco_id)
 
     if (reco_id != null) {
-        console.log("로그인 됨", reco_id.dataset.id)
+        console.log("로그인 됨", reco_id.value)
         window.navigator.clipboard.writeText(copy_text).then(() => {
             alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
         })
@@ -85,8 +83,22 @@ const copyBtnClick = (text, reco_id) => {
         return false;
     }
 }
-const shareBtnClick = (text, reco_id) => {
-    let copy_text = text;
+const shareBtnClick = (reco_id) => {
+    let copy_text = `
+    🤗 물건도 브랜드도 착해야 산다!
+    가치소비가 쉬워지는 곳, 비보트로 초대합니다.
+
+    친구가 공유한 전용 링크로 가입하면
+    마일리지 무제한 2배 적립에 할인, 무료배송 쿠폰과
+    전용 뱃지 노출까지 되는 크루 등급으로 시작할 수 있어요.
+
+    크루 혜택 확인하기
+    > https://bvoat.com/member/crew/crew.html
+
+    친구 초대 전용 가입 링크
+    >${reco_id.value}
+    (추천인 코드 : ${reco_id.dataset.id})
+    `
     console.log("copy_text",copy_text)
     if (reco_id != null) {
         if (navigator.share) {
@@ -109,15 +121,14 @@ const shareBtnClick = (text, reco_id) => {
         return false;
     }
 }
-crew_link_copy.addEventListener("click", ()=>{copyBtnClick(copy_description, reco_id)});
-crew_link_share.addEventListener("click", ()=>{shareBtnClick(copy_description, reco_id)});
+crew_link_copy.addEventListener("click", ()=>{copyBtnClick(reco_id)});
+crew_link_share.addEventListener("click", ()=>{shareBtnClick(reco_id)});
 
 /* url 제출 함수 */
 //btn addEvent
 const crew_Form = document.querySelector("#crewUrlForm");
 //fetch 통신 함수
 const postURLAsJson = (formData) => {
-    console.log("formdata", formData)
     fetch(`https://${api_domain}.shop/sns`, {
         method: 'POST',
         headers: {
@@ -193,19 +204,20 @@ const postURLAsJson = (formData) => {
 }
 //submit 함수
 const snsURLSubmit = async (e) => {
+
     e.preventDefault();
     const form = e.currentTarget;
-    const input_url = document.querySelector('#tag_url');
-    const voter_id = document.querySelector("#recoIdCheck").value;
-    // 모듈로 받아온  document.querySelector("#recoIdCheck") 통한 로그인 확인
-    console.log("Login Status", voter_id)
+    const tag_url = document.querySelector("#tag_url");
+    const member_id = document.querySelector("#member_id");
+    // 모듈 통한 로그인 확인
+    console.log("Login Status", member_id)
 
     //로그인 체크
-    if (voter_id != null) {
+    if (member_id != null && member_id.value != null) {
         //url 정규식 검사
-        if (input_url.value == "") {
+        if (tag_url.value == "") {
             alert("URL을 입력해주세요.");
-            input_url.focus();
+            tag_url.focus();
             return false;
         } else {
             console.log('form: ', form);
@@ -213,7 +225,7 @@ const snsURLSubmit = async (e) => {
             const plainFormData = JSON.stringify(Object.fromEntries(form_data.entries()));
             console.log('plainFormData: ', plainFormData);
             const responseData = await postURLAsJson(plainFormData);
-            return false;
+            console.log({ responseData });
         }
     }
     else {
@@ -221,6 +233,7 @@ const snsURLSubmit = async (e) => {
         window.location = '/member/login.html?returnUrl=member/crew/crew.html';
         return false;
     }
+    return false;
 }
 //submit 될 때 함수 실행
 crew_Form.addEventListener("submit", snsURLSubmit);
