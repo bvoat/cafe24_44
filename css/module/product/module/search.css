@@ -48,7 +48,7 @@
   width: 73px;
   height: 40px;
   background: url("https://bvoatofficial.cafe24.com/bvtIMG/Bvoat_022CFF_Text_logo_trans_fit.png") no-repeat center;
-  background-size: cover;
+  background-size: contain;
   text-indent: -9999px;
 }
 
