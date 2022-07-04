@@ -137,8 +137,6 @@ const postURLAsJson = (formData) => {
       return false;
     } else if (response.status === 201) {
       const okSns = (e) => {
-        console.log("ok", e.currentTarget.dataset.msg);
-        if (e.currentTarget.dataset.msg) {
           const receivingOk = (id, state) => {
             $.ajax({
               type: "POST",
@@ -182,9 +180,7 @@ const postURLAsJson = (formData) => {
             });
           };
           receivingOk(voter_id.dataset.id, "T");
-        } else {
-          document.querySelector("#bvtCommonModal").remove();
-        }
+         
       };
       const noSns = () => {
         document.querySelector("#bvtCommonModal").remove();
