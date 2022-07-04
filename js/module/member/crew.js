@@ -54,28 +54,30 @@ const reco_id = document.querySelector("#recoIdCheck");
 console.log('reco_id: ', reco_id, 'reco_id.value: ', reco_id.value ,'reco_id.dataset.id: ', reco_id.dataset.id);
 
 let copy_description =`
-🤗 물건도 브랜드도 착해야 산다!
-가치소비가 쉬워지는 곳, 비보트로 초대합니다.
+    🤗 물건도 브랜드도 착해야 산다!
+    가치소비가 쉬워지는 곳, 비보트로 초대합니다.
 
-친구가 공유한 전용 링크로 가입하면
-마일리지 무제한 2배 적립에 할인, 무료배송 쿠폰과
-전용 뱃지 노출까지 되는 크루 등급으로 시작할 수 있어요.
+    친구가 공유한 전용 링크로 가입하면
+    마일리지 무제한 2배 적립에 할인, 무료배송 쿠폰과
+    전용 뱃지 노출까지 되는 크루 등급으로 시작할 수 있어요.
 
-크루 혜택 확인하기
-> https://bvoat.com/member/crew/crew.html
+    크루 혜택 확인하기
+    > https://bvoat.com/member/crew/crew.html
 
-친구 초대 전용 가입 링크
->${reco_id.value}
-(추천인 코드 : ${reco_id.dataset.id})
+    친구 초대 전용 가입 링크
+    >${reco_id.value}
+    (추천인 코드 : ${reco_id.dataset.id})
 `
-const copyBtnClick = (copy_description, reco_id) => {
-    console.log("copy_description",copy_description,"reco_id",reco_id)
+const copyBtnClick = (text, reco_id) => {
+    let copy_text = text;
+    console.log("copy_description",copy_text,"reco_id",reco_id)
 
     if (reco_id != null) {
-        console.log("로그인 됨", reco_id.value)
-        window.navigator.clipboard.writeText(copy_description).then(() => {
+        console.log("로그인 됨", reco_id.dataset.id)
+        window.navigator.clipboard.writeText(copy_text).then(() => {
             alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
         })
+        return false;
     }
     else {
         alert("링크 복사를 위해서는 로그인이 필요해요 🤗");
@@ -83,18 +85,22 @@ const copyBtnClick = (copy_description, reco_id) => {
         return false;
     }
 }
-const shareBtnClick = (copy_description, reco_id) => {
+const shareBtnClick = (text, reco_id) => {
+    let copy_text = text;
+    console.log("copy_text",copy_text)
     if (reco_id != null) {
         if (navigator.share) {
             navigator.share({
                 title: '비보트 크루 멤버십 초대',
-                text: `${copy_description}`
+                text: `${copy_text}`
             }).then(() => {
                 alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
             })
-                .catch(console.error);
+            .catch(console.error);
+            return false;
         } else {
-            alert("오류가 발생했어요. 잠시후에 시도해주세요.")
+            alert("오류가 발생했어요. 잠시후에 시도해주세요.");
+            return false;
         }
     }
     else {
