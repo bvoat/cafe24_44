@@ -213,7 +213,7 @@ const snsURLSubmit = async (e) => {
     console.log("Login Status", member_id)
 
     //로그인 체크
-    if (member_id != null && member_id.value != null) {
+    if (member_id != null) {
         //url 정규식 검사
         if (tag_url.value == "") {
             alert("URL을 입력해주세요.");
