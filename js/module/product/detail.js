@@ -232,9 +232,9 @@ const displayStampImg = (productStamp) => {
 }
 //스탬프 promise 진행
 const createStamp = (salePrice,productPrice,createStampPcsFromPrice) => {
-console.log("salePrice",salePrice.innerText,"productPrice",productPrice.innerText);
-    // if(salePrice != null && productPrice != null){
-        // console.log("???",parseInt(salePrice.innerText));
+console.log("salePrice",salePrice,"productPrice",productPrice);
+    if(salePrice != null && productPrice != null){
+        console.log("???",parseInt(salePrice.innerText));
         //스탬프 총 갯수 변수에 할당
         // createStampPcsFromPrice(parseInt(salePrice.innerText)/10)
         // .then((res)=>{
@@ -247,8 +247,8 @@ console.log("salePrice",salePrice.innerText,"productPrice",productPrice.innerTex
         //     displayStampImg(0);
         //     displayStampTxt(0);
         // })
-    // } else if(salePrice == null && productPrice != null){
-        // console.log("??",parseInt(productPrice.innerText));
+    } else if(salePrice == null && productPrice != null){
+        console.log("??",parseInt(productPrice.innerText));
         // document.querySelector(".display_product").classList.add("displaynone");
         //스탬프 총 갯수 변수에 할당
         // createStampPcsFromPrice(parseInt(productPrice.innerText)/10)
@@ -262,7 +262,7 @@ console.log("salePrice",salePrice.innerText,"productPrice",productPrice.innerTex
         //     displayStampImg(0);
         //     displayStampTxt(0);
         // })
-    // }
+    }
 }
 
 /* 가치태그 수신 */
