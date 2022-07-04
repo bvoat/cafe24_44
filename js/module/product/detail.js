@@ -226,10 +226,28 @@ const displayStampImg = (productStamp) => {
 }
 //스탬프 promise 진행
 const createStamp = (createStampPcsFromPrice) => {
-    console.log(document.querySelectorAll(".price"))
     let final_price_list = document.querySelectorAll(".price");
-    console.log("final_price_list", final_price_list.length)
-// console.log("salePrice",salePrice,"productPrice",productPrice);
+    let final_price = final_price_list[0].textContent;
+    if(final_price < 1000){
+        final_price = parseFloat(final_price_list[0].textContent)/10000;
+    }else{
+        final_price = parseFloat(final_price_list[0].textContent)/10
+    }
+    console.log("final_price",final_price);
+
+    //스탬프 총 갯수 변수에 할당
+    createStampPcsFromPrice(final_price)
+    .then((res)=>{
+        console.log("stamp", res, "개")
+        displayStampImg(res);
+        displayStampTxt(res);
+    })
+    .catch((reject)=>{
+        console.log("스탬프 에러", reject);
+        displayStampImg(0);
+        displayStampTxt(0);
+    })
+
     // if(final_price_list){
     //    console.log("sale",parseFloat(salePrice.textContent)/1000)
     //     //스탬프 총 갯수 변수에 할당
