@@ -34,7 +34,6 @@ const computedHeight = (idx) => {
 //상품 상세 하단 페이지 탭 슬라이더
 //node 값 받아서 Array
 const tab = [...document.querySelectorAll(".tab")];
-console.log('tab: ', tab);
 const tab_txt = tab.map(node => node.innerHTML);
 const tab_hash = tab.map(node => node.dataset.hash);
 var swiper = new Swiper("#productDetailBottom", {
