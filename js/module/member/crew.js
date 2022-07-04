@@ -105,6 +105,8 @@ const shareBtnClick = () => {
 
     if (navigator.share) {
         window.navigator.share(shareData);
+    } else{
+        alert("지원되지 않는 브라우저에요! 위의 복사하기를 이용해주세요 😢")
     }
     return false;
   }
