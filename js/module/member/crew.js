@@ -49,11 +49,16 @@ moveLevelUp.addEventListener("click", () => {
 const voter_identity = document.querySelector("#member_id");
 const crew_link_copy = document.querySelector(".crew_link_copy");
 const crew_link_share = document.querySelector(".crew_link_share");
+const voter_id = document.querySelector("#recoIdCheck");
+console.log('voter_id: ', voter_id);
+
 
 const copyBtnClick = () => {
-  const reco_id = document.querySelector("#recoIdCheck");
-
-  if (reco_id != null) {
+  if (voter_id == null) {
+    alert("링크 복사를 위해서는 로그인이 필요해요 🤗");
+    window.location = "/member/login.html?returnUrl=member/crew/crew.html";
+    return false;
+  } else if (voter_id != null) {
     let copy_text = `
         🤗 물건도 브랜드도 착해야 산다!
         가치소비가 쉬워지는 곳, 비보트로 초대합니다.
@@ -66,24 +71,22 @@ const copyBtnClick = () => {
         > https://bvoat.com/member/crew/crew.html
     
         친구 초대 전용 가입 링크
-        >${reco_id.value}
-        (추천인 코드 : ${reco_id.dataset.id})
+        >${voter_id.value}
+        (추천인 코드 : ${voter_id.dataset.id})
         `;
-    console.log("copy_text", copy_text, "reco_id", reco_id);
+    console.log("copy_text", copy_text, "voter_id", voter_id);
     window.navigator.clipboard.writeText(copy_text).then(() => {
       alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
     });
     return false;
-  } else if (reco_id == null) {
-    alert("링크 복사를 위해서는 로그인이 필요해요 🤗");
-    window.location = "/member/login.html?returnUrl=member/crew/crew.html";
-    return false;
   }
 };
 const shareBtnClick = () => {
-  const reco_id = document.querySelector("#recoIdCheck");
-
-  if (reco_id != null) {
+  if (voter_id == null) {
+    alert("공유를 위해서는 로그인이 필요해요 🤗");
+    window.location = "/member/login.html?returnUrl=member/crew/crew.html";
+    return false;
+  } else if (voter_id != null) {
     let copy_text = `
         🤗 물건도 브랜드도 착해야 산다!
         가치소비가 쉬워지는 곳, 비보트로 초대합니다.
@@ -96,8 +99,8 @@ const shareBtnClick = () => {
         > https://bvoat.com/member/crew/crew.html
     
         친구 초대 전용 가입 링크
-        >${reco_id.value}
-        (추천인 코드 : ${reco_id.dataset.id})
+        >${voter_id.value}
+        (추천인 코드 : ${voter_id.dataset.id})
         `;
     console.log("copy_text", copy_text);
     if (navigator.share) {
@@ -115,10 +118,6 @@ const shareBtnClick = () => {
       alert("오류가 발생했어요. 잠시후에 시도해주세요.");
       return false;
     }
-  } else if (reco_id == null) {
-    alert("공유를 위해서는 로그인이 필요해요 🤗");
-    window.location = "/member/login.html?returnUrl=member/crew/crew.html";
-    return false;
   }
 };
 crew_link_copy.addEventListener("click", () => {
@@ -216,11 +215,18 @@ const postURLAsJson = (formData) => {
 const snsURLSubmit = async (e) => {
   e.preventDefault();
   const form = e.currentTarget;
-  const tag_url = document.querySelector("#tag_url");
-  const member_id = document.querySelector("#member_id");
-
+  console.log('form: ', form);
+  
   //로그인 체크
-  if (member_id != null) {
+  if (voter_id == null) {
+    // 모듈 통한 로그인 확인
+    console.log("Login Status", voter_id);
+    alert("가입 신청을 위해서는 로그인이 필요해요 🤗");
+    window.location = "/member/login.html?returnUrl=member/crew/crew.html";
+    return false;
+  } else if(voter_id != null) {
+    const tag_url = document.querySelector("#tag_url");
+    const member_id = document.querySelector("#member_id");
     // 모듈 통한 로그인 확인
     console.log("Login Status", member_id);
     //url 정규식 검사
@@ -238,12 +244,6 @@ const snsURLSubmit = async (e) => {
       const responseData = await postURLAsJson(plainFormData);
       console.log({ responseData });
     }
-  } else {
-    // 모듈 통한 로그인 확인
-    console.log("Login Status", member_id);
-    alert("가입 신청을 위해서는 로그인이 필요해요 🤗");
-    window.location = "/member/login.html?returnUrl=member/crew/crew.html";
-    return false;
   }
 };
 //submit 될 때 함수 실행

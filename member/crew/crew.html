@@ -1,7 +1,9 @@
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(../../css/module/member/module/crew.css)-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-
+<!-- 로그인 관련 모듈 -->
+<span module="myshop_benefit"><input type="hidden" id="recoIdCheck"
+value="http://{$shop_domain}/?reco_id={$member_id}" data-id="{$member_id}"></span>
 <article id="memberCrew">
     <section id="memberCrewTitle" class="displaynone">
         <h1>크루 가입 안내 페이지</h1>
@@ -93,9 +95,6 @@
                             <p>*7월 1일 이후 가입 건부터 유효합니다.</p>
                         </li>
                         <li class="crew_method_btn_wrap">
-                            <!-- 로그인 관련 모듈 -->
-                            <span module="myshop_benefit"><input type="hidden" id="recoIdCheck"
-                                    value="http://{$shop_domain}/?reco_id={$member_id}" data-id="{$member_id}"></span>
                             <button class="crew_link_copy">내 초대 링크 복사하기</button>
                             <button class="crew_link_share">내 초대 링크 공유하기</button>
                         </li>
