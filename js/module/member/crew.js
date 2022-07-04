@@ -151,6 +151,9 @@ const postURLAsJson = (formData) => {
             console.log("id", id, "state", state)
             $.ajax({
                 type: 'POST',
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader("Content-type","application/json")
+                },
                 url: `https://${api_domain}.shop/customerinfo/receiving`,
                 data:{
                     'id': id,
