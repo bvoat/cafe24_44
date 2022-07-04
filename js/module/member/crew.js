@@ -74,9 +74,9 @@ const copyBtnClick = (e) => {
         (추천인 코드 : ${voter_id.dataset.id})
         `;
     window.navigator.clipboard.writeText(copy_text).then(() => {
-      alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
+        alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
+        return false;
     });
-    return false;
   }
 };
 const shareBtnClick = (e) => {
