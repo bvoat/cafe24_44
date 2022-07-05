@@ -178,6 +178,7 @@ const postURLAsJson = (formData) => {
                   document.querySelector("#bvtCommonModal").remove();
                   return false;
                 }
+                return false;
               }
             },
             error: function (error) {
