@@ -33,15 +33,8 @@ body #bvtContainer #bvtHeader {
 
 body #bvtContainer #bvtContents {
   width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
   max-width: 450px;
   min-width: 200px;
-  min-height: 100vh;
-  max-height: -webkit-max-content;
-  max-height: -moz-max-content;
-  max-height: max-content;
   margin: 0 auto;
   z-index: 0;
   overflow: hidden;

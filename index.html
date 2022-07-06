@@ -6,8 +6,6 @@
     <!--@import(/main/module/index_slide.html)-->
     <!-- 배너 -->
 
-    <!--메인페이지 공통 노출 배너-->
-    <!--@import(/bvtBANNER/allsquareBanner.html)-->
     <!--보터 카운트-->
     <section id="indexUserCnt" class="index_user">
         <section id="indexUserCntTitle">
@@ -32,7 +30,7 @@
                 $basket_result = /product/add_basket.html
                 $basket_option = /product/basket_option.html
             -->
-                <!--@import(/layoutbvt/listmain_double_mid.html)-->
+                <!--@import(/product/product_module/listmain/listmain_double_mid.html)-->
             </div>
         </section>
     </section>
@@ -50,7 +48,7 @@
                 $basket_result = /product/add_basket.html
                 $basket_option = /product/basket_option.html
             -->
-                <!--@import(/layoutbvt/listmain_double_mid.html)-->
+                <!--@import(/product/product_module/listmain/listmain_double_mid.html)-->
             </div>
         </section>
     </section>
@@ -68,7 +66,7 @@
                 $basket_result = /product/add_basket.html
                 $basket_option = /product/basket_option.html
             -->
-                <!--@import(/layoutbvt/listmain_single_big.html)-->
+                <!--@import(/product/product_module/listmain/listmain_single_big.html)-->
             </div>
         </section>
     </section>
@@ -87,7 +85,7 @@
                 $basket_result = /product/add_basket.html
                 $basket_option = /product/basket_option.html
             -->
-                <!--@import(/layoutbvt/listmain_moreview.html)-->
+                <!--@import(/product/product_module/listmain/listmain_moreview.html)-->
             </div>
             <!-- 더보기 -->
             <div class="paginate_moreview" module="product_listmore_2">
@@ -115,7 +113,7 @@
                 $basket_result = /product/add_basket.html
                 $basket_option = /product/basket_option.html
             -->
-                <!--@import(/layoutbvt/listmain_double_small.html)-->
+                <!--@import(/product/product_module/listmain/listmain_double_small.html)-->
             </div>
         </section>
     </section>
@@ -133,7 +131,7 @@
                 $basket_result = /product/add_basket.html
                 $basket_option = /product/basket_option.html
             -->
-                <!--@import(/layoutbvt/listmain_double_mid.html)-->
+                <!--@import(/product/product_module/listmain/listmain_double_mid.html)-->
             </div>
         </section>
     </section>
@@ -151,7 +149,7 @@
                 $basket_result = /product/add_basket.html
                 $basket_option = /product/basket_option.html
             -->
-                <!--@import(/layoutbvt/listmain_double_small.html)-->
+                <!--@import(/product/product_module/listmain/listmain_double_small.html)-->
             </div>
         </section>
     </section>
@@ -169,7 +167,7 @@
                 $basket_result = /product/add_basket.html
                 $basket_option = /product/basket_option.html
             -->
-                <!--@import(/layoutbvt/listmain_single_mid.html)-->
+                <!--@import(/product/product_module/listmain/listmain_single_mid.html)-->
             </div>
         </section>
     </section>
@@ -180,24 +178,46 @@
 <!--@define(cmc_log)-->
 
 <script>
-    var swiper_order = new Swiper("#nowBuyingList", {
-        slidesPerView: 'auto',
+var swiper = new Swiper(".index_main_double_mid_swiper", {
         spaceBetween: 12,
-
+        slidesPerView: "auto",
+        slidesPerColumn: 2,
+        slidesPerColumnFill: 'row',
         pagination: {
-            el: ".swiper-pagination",
+            el: ".list_item_progress",
             clickable: true,
             type: "progressbar",
         },
     });
-
-    var swiper_cat = new Swiper("#categorySwipe", {
-        slidesPerView: 'auto',
-        spaceBetween: 8,
-        autoHeight: true, //enable auto height
-
+    var swiper = new Swiper(".index_main_double_small_swiper", {
+        spaceBetween: 10.9,
+        slidesPerView: "auto",
+        slidesPerColumn: 2,
+        slidesPerColumnFill: 'row',
         pagination: {
-            el: ".swiper-pagination",
+            el: ".list_item_progress",
+            clickable: true,
+            type: "progressbar",
+        },
+    });
+    var swiper = new Swiper(".index_main_single_big_swiper", {
+        spaceBetween: 15,
+        slidesPerView: "auto",
+        slidesPerColumn: 1,
+        slidesPerColumnFill: 'row',
+        pagination: {
+            el: ".list_item_progress",
+            clickable: true,
+            type: "progressbar",
+        },
+    });
+    var swiper = new Swiper(".index_main_single_mid_swiper", {
+        spaceBetween: 13,
+        slidesPerView: "auto",
+        slidesPerColumn: 1,
+        slidesPerColumnFill: 'row',
+        pagination: {
+            el: ".list_item_progress",
             clickable: true,
             type: "progressbar",
         },

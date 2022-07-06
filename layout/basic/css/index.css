@@ -1,175 +1,57 @@
+@charset "UTF-8";
 #bvtHome {
-  width: calc(100% + 22px);
+  width: 100%;
   max-width: 450px;
-  margin-left: -11px;
-  padding-bottom: 80px;
+  margin: 81px auto;
+  /* 인덱스 보터 카운트 */
+  /* 더보기 버튼 */
+  /* 지금 구매중 배경 */
+  /* 메인진열  공통 */
+  /* heading과 간격 조절 (single line or small size (23px/15px) */
 }
 
 #bvtHome #indexUserCnt {
-  width: 100%;
-  max-width: 450px;
-  padding: 10px 11px;
-}
-
-#bvtHome #indexUserCnt #indexUserCntTitle {
-  padding: 10px 0;
-}
-
-#bvtHome #indexUserCnt #indexUserCntTitle > h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  font-family: 'Jost', 'Noto Sans KR';
-}
-
-#bvtHome #indexUserCnt #indexUserCntTitle > h3 {
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: #707070;
-}
-
-#bvtHome #indexUserCnt #indexUserCntBanner > ul {
-  width: 100%;
-  padding: 5px 0;
-}
-
-#bvtHome #indexUserCnt #indexUserCntBanner > ul > li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 55px;
-  border-radius: 9px;
-  margin: 8px 0;
+  padding: 21.5px 0;
+  background: #F5F6FA;
+  margin: 54px 0 43px 0;
 }
 
-#bvtHome #indexUserCnt #indexUserCntBanner > ul > li:nth-child(1) {
-  border: 1px solid #E2E2E2;
-}
-
-#bvtHome #indexUserCnt #indexUserCntBanner > ul > li:nth-child(1) > div {
-  font-size: 1.38rem;
-  color: #707070;
-}
-
-#bvtHome #indexUserCnt #indexUserCntBanner > ul > li:nth-child(1) > div #membernct {
-  font-weight: 600;
-  color: #022CFF;
-  font-size: 1.45rem;
-}
-
-#bvtHome #indexUserCnt #indexUserCntBanner > ul > li:nth-child(2) {
-  background: #022CFF;
-}
-
-#bvtHome #indexUserCnt #indexUserCntBanner > ul > li:nth-child(2) > a {
-  font-size: 1.45rem;
-  color: #ffffff;
-}
-
-#bvtHome #indexProductBvt {
-  width: 100%;
-  max-width: 450px;
-  padding: 10px 11px;
-}
-
-#bvtHome #indexProductBvt #indexProductListTitle {
-  padding: 10px 0;
-}
-
-#bvtHome #indexProductBvt #indexProductListTitle > h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  font-family: 'Jost', 'Noto Sans KR';
-}
-
-#bvtHome #indexProductBvt #indexProductListTitle > h3 {
+#bvtHome #indexUserCnt #indexUserCntTitle h3 {
   font-size: 1.4rem;
-  font-weight: 400;
   color: #707070;
-}
-
-#bvtHome #indexCategory {
-  width: 100%;
-  max-width: 450px;
-  padding: 10px 11px;
-}
-
-#bvtHome #indexCategory #indexCategoryTitle {
-  padding: 10px 0;
-}
-
-#bvtHome #indexCategory #indexCategoryTitle > h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  font-family: 'Jost', 'Noto Sans KR';
-}
-
-#bvtHome #indexCategory #indexCategoryTitle > h3 {
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: #707070;
-}
-
-#bvtHome #indexCategory #indexCategoryList #categorySwipe {
-  padding: 0 11px;
-}
-
-#bvtHome #indexCategory #indexCategoryList #categorySwipe #index_category {
-  margin: 20px 0;
-}
-
-#bvtHome #indexCategory #indexCategoryList #categorySwipe #index_category .category {
-  width: auto;
-  border-radius: 17px;
-}
-
-#bvtHome #indexCategory #indexCategoryList #categorySwipe #index_category .category a {
-  display: block;
-  color: #fff;
-  width: 104px;
-  height: 104px;
-  text-align: center;
-  line-height: 104px;
-  font-family: 'Jost', 'Noto Sans KR' !important;
-  font-size: 17px;
   font-weight: normal;
 }
 
-#bvtHome #indexCategory #indexCategoryList #categorySwipe #index_category .category > a[name="?cate_no=105"] {
-  background: url(/bvtIMG/icon/index_category_105.svg) no-repeat 0 0;
-  background-size: cover;
+#bvtHome #indexUserCnt #indexUserCntBanner #joinbanner {
+  border: 0;
+  font-size: 21px;
+  font-weight: bold;
+  margin: 6px 0 0 0;
 }
 
-#bvtHome #indexCategory #indexCategoryList #categorySwipe #index_category .category > a[name="?cate_no=146"] {
-  background: url(/bvtIMG/icon/index_category_146.svg) no-repeat 0 0;
-  background-size: cover;
+#bvtHome #indexUserCnt #indexUserCntBanner #joinbanner em {
+  color: #022CFF;
 }
 
-#bvtHome #indexCategory #indexCategoryList #categorySwipe #index_category .category > a[name="?cate_no=116"] {
-  background: url(/bvtIMG/icon/index_category_116.svg) no-repeat 0 0;
-  background-size: cover;
+#bvtHome .paginate_moreview {
+  width: 100%;
+  height: 42px;
 }
 
-#bvtHome #indexCategory #indexCategoryList #categorySwipe #index_category .category > a[name="?cate_no=102"] {
-  background: url(/bvtIMG/icon/index_category_102.svg) no-repeat 0 0;
-  background-size: cover;
-}
-
-#bvtHome #indexCategory #indexCategoryList #categorySwipe #index_category .category > a[name="?cate_no=207"] {
-  background: url(/bvtIMG/icon/index_category_207.svg) no-repeat 0 0;
-  background-size: contain;
-  text-align: left;
-  padding-left: 30px;
-  color: #ABABAB;
-}
-
-#bvtHome #indexCategory #indexCategoryList #categorySwipe .category_btn {
+#bvtHome .paginate_moreview .moreview_btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,58 +61,62 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.4rem;
   width: 100%;
-  padding: 12px 0;
-  margin: 20px 0;
-  height: auto;
-  text-align: center;
-  border-radius: 20px;
-  background: #FAFAFE;
+  height: 42px;
+  background: #fff;
+  border: 1px solid #022cff;
+  border-radius: 22px;
+  color: #022cff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-#bvtHome #nowBuying {
+#bvtHome .paginate_moreview .moreview_btn svg {
+  margin: 2px 0 0 6px;
+}
+
+#bvtHome #indexProductBvtH {
+  padding: 46px 0 60px 11px;
+  background: #F5F6FA;
+  /* 지금 구매중 이미지 - head 사이 간격 */
+}
+
+#bvtHome #indexProductBvtH .thumb {
+  margin-bottom: 12px;
+}
+
+#bvtHome .index_list {
+  position: relative;
+  display: block;
   width: 100%;
   max-width: 450px;
-  padding: 10px 11px;
+  padding: 0 0 0 11px;
+  margin-bottom: 96px;
 }
 
-#bvtHome #nowBuying #nowBuyingTitle {
-  padding: 10px 0;
+#bvtHome .index_list .index_list_title {
+  margin-bottom: 22px;
 }
 
-#bvtHome #nowBuying #nowBuyingTitle > h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  font-family: 'Jost', 'Noto Sans KR';
+#bvtHome .index_list .index_list_title h3 {
+  font-size: 2.28rem;
+  font-weight: bold;
+  margin-bottom: 3px;
+  letter-spacing: -0.3px;
 }
 
-#bvtHome #nowBuying #nowBuyingTitle > h3 {
-  font-size: 1.4rem;
-  font-weight: 400;
+#bvtHome .index_list .index_list_title h4 {
+  font-size: 1.3rem;
+  font-weight: normal;
   color: #707070;
 }
 
-.index_main {
-  width: 100%;
-  max-width: 450px;
-  padding: 16px 11px;
-  border-radius: 24px;
-  -webkit-box-shadow: 3px 7px 11px #EDEFF5;
-          box-shadow: 3px 7px 11px #EDEFF5;
-  background: #ffffff;
-  overflow: hidden;
+#bvtHome .small_single_list {
+  margin-top: -8px;
 }
 
-.info_txt {
-  display: inline-block;
-  width: auto;
-  height: auto;
-  border: 1px solid #022CFF;
-  border-radius: 6px;
-  padding: 8px 11px;
-  font-size: 1.1rem;
-  color: #022CFF;
-  margin: 10px 0;
+#bvtHome .swiper_container {
+  overflow: hidden;
 }
 /*# sourceMappingURL=index.css.map */

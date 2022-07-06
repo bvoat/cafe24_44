@@ -63,7 +63,7 @@ code {
     background: #fff; */
     /* 비보트 추가 */
     font-size: 10px;
-    font-family: 'Noto Sans KR', Apple Gothic, 'Apple SD Gothic Neo', 'Jost', 'Nunito', Verdana, Dotum, sans-serif;
+    font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', Verdana, Dotum, AppleGothic, sans-serif;
     color: #292929;
     font-weight: normal;
     letter-spacing: -0.1px;    
@@ -161,6 +161,10 @@ a {
 a, h1, h2, h3, h4, h5, h6, p, span, em, i {
     transform: rotate(0.04deg);
 } 
+/* 비보트 추가 */
+em{
+    font-style: normal;
+}
 
 /* a:hover {
     text-decoration: underline;
@@ -332,23 +336,23 @@ div.layerProgress {
     flex-flow: row nowrap;
 }
 .price_wrap>.price{
-    font-size: 1.48rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: bold;
     color: #022cff;
-}
-.price_wrap>li>span, .price_wrap>li>span>span, .price_wrap>li>span>span>span{
-    font-size: 1.48rem !important;
-    font-weight: 600 !important;
-    color: #022cff !important;
 }
 .price::after{
     display: inline-block;
     content: "원";
-    font-size: 1.42rem;
+    font-size: 1.38rem;
     font-weight: normal;
     color: #292929;
-    margin-left: -1px;
 }
+/* .price_wrap>li>span, .price_wrap>li>span>span, .price_wrap>li>span>span>span{
+    font-size: 1.48rem !important;
+    font-weight: 600 !important;
+    color: #022cff !important;
+}
+
 .pricenonsale, .detail_product>span, .display_product>span>strong{
     text-decoration: line-through !important;
     color: #ABABAB !important;
@@ -364,4 +368,4 @@ div.layerProgress {
 }
 .zindexzero {
     z-index: 0 !important;
-}
+} */

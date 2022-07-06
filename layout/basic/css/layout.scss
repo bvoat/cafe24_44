@@ -1,20 +1,18 @@
 @charset "utf-8";
-@import "./abstracts/_variables";
-@import "./abstracts/_mixin";
+@import "../../../css/abstracts/mixin";
+@import "../../../css/abstracts/variables";
 
 body{
     position: relative;
     width: 100%;
     height: auto;
     overflow-x: hidden;
-
     #bvtContainer{
         position: relative;
         max-width: 450px;
         min-width: 100px;
         height: auto;
         margin: 0 auto;
-
         #bvtHeader{
             position: fixed;
             display: block;
@@ -31,11 +29,8 @@ body{
         }
         #bvtContents{
             width: 100%;
-            height: max-content;
             max-width: 450px;
             min-width: 200px;
-            min-height: 100vh;
-            max-height: max-content;
             margin: 0 auto;
             z-index: 0;
             overflow: hidden;

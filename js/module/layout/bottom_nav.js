@@ -28,13 +28,7 @@
       
   
   //함수 실행
-  if (document.readyState == 'loading') {
-    // 아직 로딩 중이므로 이벤트를 기다립니다.
-    document.addEventListener('DOMContentLoaded', bottomIconControl());
-    document.addEventListener('DOMContentLoaded', bottomHideControl(exclude_path, page_path))
-  } else {
-    // DOM이 완성되었습니다!
     bottomIconControl();
     bottomHideControl(exclude_path, page_path);
-  }
+  
   

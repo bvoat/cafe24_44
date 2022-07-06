@@ -1,0 +1,310 @@
+@charset "UTF-8";
+/* listmain_double_mid */
+.doublemid .list_item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 182px;
+  margin-bottom: 27px;
+}
+
+.doublemid .list_item .thumb {
+  position: relative;
+  width: 100%;
+  height: 182px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* listmain_small_big */
+.singlebig .list_item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 222.5px;
+  margin-bottom: 27px;
+}
+
+.singlebig .list_item .thumb {
+  position: relative;
+  width: 100%;
+  height: 222.5px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* listmain_double_small */
+.doublesmall .list_item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 135.5px;
+  margin-bottom: 27px;
+}
+
+.doublesmall .list_item .thumb {
+  position: relative;
+  width: 100%;
+  height: 135.5px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* listmain_double_small */
+.singlemid .list_item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 182px;
+  margin-bottom: 27px;
+}
+
+.singlemid .list_item .thumb {
+  position: relative;
+  width: 100%;
+  height: 182px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.moreview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.moreview .list_item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 207px;
+  margin-bottom: 27px;
+}
+
+.moreview .list_item .thumb {
+  position: relative;
+  width: 100%;
+  height: 207px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.moreview > li:nth-child(2n-1) {
+  margin-right: 13.8px;
+}
+
+.thumb a {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.thumb a > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.wish {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+  bottom: 10px;
+  left: 10px;
+}
+
+.wish button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  cursor: pointer;
+}
+
+.wish button img {
+  position: relative;
+  width: 20px;
+  height: 18px;
+  margin-top: 1.5px;
+}
+
+.icon {
+  position: absolute;
+  width: 50px;
+  height: 20.5px;
+  border-radius: 4px;
+  top: 4.6px;
+  left: 4.6px;
+}
+
+.icon img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.name {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 102px;
+  height: 30px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #022CFF;
+  font-size: 13px;
+  font-weight: bold;
+  color: #022CFF;
+  top: calc(182px - 15px);
+  right: 0;
+}
+
+.name .customer {
+  display: inline-block;
+  width: 31px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 2px;
+}
+
+.desc {
+  padding: 7px 0 0 0;
+}
+
+.desc .brand {
+  font-size: 1rem;
+  color: #707070;
+  margin-bottom: 3px;
+}
+
+.desc .summary {
+  display: block;
+  font-size: 1.15rem;
+  color: #707070;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.5rem;
+  height: 1.9rem;
+  /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+  margin-bottom: 7px;
+}
+
+.desc .product_name, .desc .product_name span {
+  color: #292929;
+  font-size: 1.3rem;
+  font-weight: bold;
+  word-wrap: break-word;
+  word-break: keep-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.7rem;
+  height: 3.6rem;
+  /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+  margin-bottom: 7px;
+  height: 35px;
+}
+
+/* swiper progress 공통 */
+.list_item_progress {
+  width: calc(100% - 22px);
+  margin-left: -11px;
+  height: 3px;
+}
+
+.swiper-pagination-progressbar {
+  background: #E7ECEF;
+}
+/*# sourceMappingURL=listmain.css.map */

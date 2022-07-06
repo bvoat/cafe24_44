@@ -1,9 +1,10 @@
 
   // swiper
   var swiper = new Swiper('.top_nav_swiper', {
-      slidesPerView:6,
-      direction: "horizontal",
-    });
+    slidesPerView: 7,
+    spaceBetween: 15,
+    direction: "horizontal",
+  });
   
 /* nav 컨트롤 스크립트 */
   const controlTabNav = () => {

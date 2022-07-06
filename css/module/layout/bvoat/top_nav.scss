@@ -1,12 +1,12 @@
 @charset "utf-8";
-@import "./abstracts/_variables";
-@import "./abstracts/_mixin";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
 
-#top_nav {
+#topNav {
     border-bottom: $bvt-btn-border-gray;
     backdrop-filter: blur(30%) brightness(50%) opacity(71%);
     // slider swiper zone
-    >.default_top_nav{
+    .default_top_nav{
         width: 100%;
         height: 40px;
         .top_nav_list{
@@ -19,24 +19,15 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 1.45rem;
+                font-size: 1.5rem;
                 font-weight: normal;
-                margin: 0 15px;
-                width: max-content !important;
-                max-width: max-content !important;
-                
                 >a{
                     display: block;
                 }
             }
-
-            .top_nav_active{
+            .crew{
                 position: relative;
-                display: flex;
-                flex-flow: column nowrap;
-                align-items: center;
-                width: max-content !important;
-                max-width: max-content !important;
+                margin-left: 5px;
                 >a{color: $bvt-blue;}
                 &::before{
                     position: absolute;
@@ -46,18 +37,28 @@
                     height: 5px;
                     border-radius: 50%;
                     background: $bvt-blue;
-                    top: -1px;
-                    right: -6px;
+                    top: 5px;
+                    right:0px;
                 }
+            }
+            .crew, .store, .funding{
+                width: 70px !important;
+            }
+            .category{
+                width: 35px !important;
+            }
+
+            .top_nav_active{
+                >a{color: $bvt-blue; font-weight: bold;}
                 &::after{
                     position: absolute;
                     display: block;
                     content: " ";
-                    width: 120%;
+                    width: 110%;
                     height: 3px;
                     background: $bvt-blue;
                     border-radius: 50px;
-                    bottom: -10px;
+                    bottom: 0px;
                 }
             }
         }
@@ -86,21 +87,16 @@
                 }
             }
             .top_nav_active{
-                position: relative;
-                display: flex;
-                flex-flow: column nowrap;
-                align-items: center;
-                width: max-content !important;
-                max-width: max-content !important;
+                >a{color: $bvt-blue; font-weight: bold;}
                 &::after{
                     position: absolute;
                     display: block;
                     content: " ";
-                    width: 120%;
+                    width: 110%;
                     height: 3px;
                     background: $bvt-blue;
                     border-radius: 50px;
-                    bottom: 0;
+                    bottom: 0px;
                 }
             }
         }
