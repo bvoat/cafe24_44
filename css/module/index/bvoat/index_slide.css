@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* 인덱스 배너 */
+#indexBanner {
+  width: 100%;
+  max-width: 450px;
+  height: 450px;
+  background-color: red;
+}
+
+#indexBanner ul {
+  width: 100%;
+  max-width: 450px;
+}
+
+#indexBanner ul li {
+  width: 100%;
+  background: url("/bvtIMG/banner/220706_slide_banner_crew.png") no-repeat;
+  background-size: cover;
+}
+
+#indexBanner ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#indexBanner ul li:nth-child(1) {
+  background: url("/bvtIMG/banner/220706_slide_banner_crew.png") no-repeat;
+  background-size: cover;
+}
+
+.banner_item_bullet {
+  top: 14.5px !important;
+}
+/*# sourceMappingURL=index_slide.css.map */

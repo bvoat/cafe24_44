@@ -1,34 +1,4 @@
 @charset "utf-8";
-/* 폰트 선언 추가 */
-@font-face {font-family: 'Noto Sans KR';font-style: normal;
-    font-weight: 100;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) 
-    format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) 
-    format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');}
-    
-    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 300;
-    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) 
-    format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) 
-    format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');}
-    
-    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 400;
-    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) 
-    format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) 
-    format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');}
-    
-    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 500;
-    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');}
-    
-    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 700;
-    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) 
-    format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) 
-    format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');}
-    
-    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;
-    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) 
-    format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff)
-    format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');}
 
 /* **************************** //필수 CSS 수정 및 삭제 불가 **************************** */
 
@@ -55,17 +25,19 @@ form,
 fieldset,
 legend,
 input,
-select,
 textarea,
-section,
-article,
 p,
 blockquote,
 th,
 td,
-img {
+img,
+
+select,
+section,
+article{
     margin: 0;
     padding: 0;
+    /* 비보트 추가 */
     margin-block-start: 0;
     margin-block-end: 0;
     margin-inline-start: 0;
@@ -86,47 +58,66 @@ html {
 
 body,
 code {
-    /* font:0.75em Verdana, Dotum,AppleGothic,sans-serif;  */
+    /* font: 0.75em Verdana, Dotum, AppleGothic, sans-serif;
+    color: #353535;
+    background: #fff; */
+    /* 비보트 추가 */
+    font-size: 10px;
+    font-family: 'Noto Sans KR', Apple Gothic, 'Apple SD Gothic Neo', 'Jost', 'Nunito', Verdana, Dotum, sans-serif;
     color: #292929;
-    /* color:#353535;  */
-    background: #ffffff;
-    font-family: 'Noto Sans KR', noto-sans-cjk-kr, AppleGothic, 'Jost', 'Nunito', 'noto sans', Verdana, Dotum, sans-serif;
-    letter-spacing: -0.1px;
-    font-stretch: 99%;    
+    font-weight: normal;
+    letter-spacing: -0.1px;    
     font-variant: tabular-nums;
     font-feature-settings: "tnum";
 }
 
-/* body { min-width:1480px; } */
+/* body {
+    min-width: 1480px;
+} */
+/* 
 body#popup {
     min-width: 0;
-}
-
+} */
+/* 비보트 추가 */
 ul,
 ol,
 li {
     list-style: none;
 }
 
-/* li { list-style:none; } */
+/* 
+li {
+    list-style: none;
+} */
+
 img,
 fieldset {
-    /* border:none; 
-    vertical-align:top;  */
-    border: 0;
+    border: none;
+    vertical-align: top;
+    /* 비보트 추가 */
     image-rendering: -webkit-optimize-contrast;
     backface-visibility: hidden;
 }
-
+/* 비보트 추가 */
 detail,
 summary{
     padding: 0;
     box-sizing: border-box;
 }
-
-em,
-address {
-    font-style: normal
+/* 비보트 추가 */
+summary{
+    cursor: pointer;
+    list-style: none;
+}
+/* 비보트 추가 */
+iframe{
+    width: 100%;
+    height: auto;
+    border: none;   
+}
+/* 비보트 추가 */
+fieldset{
+    min-inline-size: 0 !important;
 }
 
 table {
@@ -159,11 +150,14 @@ hr.layout {
 }
 
 a {
+    /* text-decoration: none;
+    color: #000; */
+    /* 비보트 추가 */
     text-decoration: none;
     color: #292929;
     cursor: pointer;
 }
-
+/* 비보트 추가 */
 a, h1, h2, h3, h4, h5, h6, p, span, em, i {
     transform: rotate(0.04deg);
 } 
@@ -175,36 +169,11 @@ a, h1, h2, h3, h4, h5, h6, p, span, em, i {
 a:active {
     text-decoration: none;
 } */
+/* 비보트 추가 */
 a:hover,
 a:active,
 a:focus {
     text-decoration: none;
-}
-
-summary{
-    cursor: pointer;
-    list-style: none;
-}
-
-iframe{
-    width: 100%;
-    height: auto;
-    border: none;   
-}
-
-fieldset{
-    min-inline-size: 0 !important;
-}
-/* 드래그 시 노란색 표시 */
-
-::selection {
-    background-color: #fff239;
-    color: #292929;
-}
-
-::-moz-selection {
-    background-color: #fff239;
-    color: #292929;
 }
 
 .objHidden {
@@ -215,13 +184,6 @@ fieldset{
     height: 0;
     width: 0;
 }
-
-
-
-
-
-
-/* 카페24 */
 
 #content_CONTAINER table,
 #bi_inquire_content_CONTAINER table {
@@ -337,11 +299,32 @@ div.layerProgress {
 .displaynone {
     display: none;
 }
-.overhidden {
-    overflow: hidden !important;
+
+
+.dimmed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
 }
-.zindexzero {
-    z-index: 0 !important;
+
+/* **************************** 필수 CSS 수정 및 삭제 불가 **************************** */
+/* **************************** 비보트 공통 css **************************** */
+/* 드래그 시 노란색 표시 */
+
+::selection {
+    background-color: #fff239;
+    color: #292929;
+}
+
+::-moz-selection {
+    background-color: #fff239;
+    color: #292929;
 }
 /* 가격 표시 */
 .price_wrap{
@@ -376,17 +359,9 @@ div.layerProgress {
 .pricenonsale::after, .detail_product::after{
     color: #ABABAB !important;
 }
-
-.dimmed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 99;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    opacity: 0.8;
-    filter: alpha(opacity=90);
+.overhidden {
+    overflow: hidden !important;
 }
-
-/* **************************** 필수 CSS 수정 및 삭제 불가 **************************** */
+.zindexzero {
+    z-index: 0 !important;
+}

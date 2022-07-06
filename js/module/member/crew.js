@@ -14,7 +14,7 @@ var swiper = new Swiper(".crew_benefit_img_wrap", {
 });
 var swiper = new Swiper(".crew_method_img_wrap", {
   slidesPerView: "auto",
-  spaceBetween: 10,
+  spaceBetween: 100,
 });
 /* aos 초기화 */
 AOS.init();
@@ -187,17 +187,13 @@ const postURLAsJson = (formData) => {
                 "😢 마케팅 수신 동의에 오류가 발생했어요! 비보트에게 알려주세요!"
               );
               if (sns_confirm) {
+                document.querySelector("#bvtCommonModal").remove();
                 ChannelIO("show");
-                document.querySelector("#bvtCommonModal").remove();
                 return false;
-              } else if (!sns_confirm) {
-                document.querySelector("#bvtCommonModal").remove();
-                return false;
-              }else{
+              } else {
                 document.querySelector("#bvtCommonModal").remove();
                 return false;
               }
-              return false;
             },
           });
         };

@@ -22,39 +22,22 @@
   <title>비보트 - 오늘부터 가치소비</title>
 
   <!-- css -->
-  <script>
-    (function (d) {
-      var config = {
-        kitId: 'uap5wkq',
-        scriptTimeout: 3000,
-        async: true
-      },
-        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-    })(document);
-  </script>
-  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-  <!--@js(/layout/basic/js/KaKao.js)-->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-  
+  <!-- 공통 css -->
+  <link rel="preload" as="font" crossorigin="crossorigin" href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap">
   <!--@css(/layout/basic/css/common.css)-->
-  <!--@css(/layout/basic/css/layout.css)-->
   <!--@css(/layout/basic/css/common_modal.css)-->
-
-  <!-- script -->
-  <!-- Swiper -->
   <!--@css(/layout/basic/css/swiper.min.css)-->
 
-  <!--@js(/layout/basic/js/basic.js)-->
+  <!-- layout css -->
+  <!--@css(/layout/basic/css/layout.css)-->
+
+  <!-- script -->
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script src="/js/swiper_min.js"></script>
+  <script src="/js/bvt_common.js"></script>
+  <!--@js(/layout/basic/js/KaKao.js)-->
+  <!-- @ js(/layout/basic/js/basic.js) 사용하지 않음-->
   <!--@js(/js/common.js)-->
-  <script
-  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-  <script src="../../js/swiper_min.js"></script>
-  <script src="../../js/bvt_common.js"></script>
-
-
 </head>
 
 <body>

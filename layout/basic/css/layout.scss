@@ -6,20 +6,14 @@ body{
     position: relative;
     width: 100%;
     height: auto;
-    padding: 0;
     overflow-x: hidden;
 
     #bvtContainer{
         position: relative;
         max-width: 450px;
-        min-width: 200px;
-        height: max-content;
-        flex-flow: column nowrap;
-        align-items: center;
-        justify-content: space-between;
+        min-width: 100px;
+        height: auto;
         margin: 0 auto;
-        box-sizing: border-box;
-        padding: 0;
 
         #bvtHeader{
             position: fixed;
@@ -29,11 +23,11 @@ body{
             width: 100%;
             height: fit-content;
             top: 0;
-            background: #ffffff71;    
-            backdrop-filter: blur(80px) brightness(150%);
+            background: transparent;    
+            opacity: 1;
+            backdrop-filter: blur(30px);
             margin: 0 auto;
             z-index: 9;
-            padding: 0;
         }
         #bvtContents{
             width: 100%;
@@ -42,20 +36,19 @@ body{
             min-width: 200px;
             min-height: 100vh;
             max-height: max-content;
-            padding: 80px 11px 0;
+            margin: 0 auto;
             z-index: 0;
-        }
-        .bvt_content_header{
-            padding: 41px 11px 0;
+            overflow: hidden;
         }
         #bvtBottom{
-            position: sticky;
+            position: fixed;
             display: block;
             width: 100%;
             max-width: 450px;
             min-width: 200px;
             height: 64px;
             bottom: 0;
+            margin: 0 auto;
             background: $bvt-white;   
             box-shadow: $bvt-top-shadow;
             z-index: 9; 

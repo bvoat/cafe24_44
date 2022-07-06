@@ -5,93 +5,175 @@
     <!-- 배너 -->
     <!--@import(/main/module/index_slide.html)-->
     <!-- 배너 -->
+
+    <!--메인페이지 공통 노출 배너-->
+    <!--@import(/bvtBANNER/allsquareBanner.html)-->
     <!--보터 카운트-->
     <section id="indexUserCnt" class="index_user">
         <section id="indexUserCntTitle">
-            <h2>Bvoat Now</h2>
-            <h3>이만큼 가치소비를 함께하고 있어요</h3>
+            <h2></h2>
+            <h3>먹고, 입고, 쓰는 친환경 가치소비</h3>
         </section>
         <section id="indexUserCntBanner">
-            <ul>
-                <li>
-                    <div id="joinbanner" class="joinbanner">🥳<em id="membernct"></em>의 보터가 소비로 투표 중이에요!</div>
-                </li>
-                <li><a href="/myshop/community/community_list.html">💬&nbsp;가치소비 커뮤니티 바로 가기 &nbsp;<span> 〉 </span></a>
-                </li>
-            </ul>
+            <div id="joinbanner" class="joinbanner">👀<em id="membernct"></em>이 함께하고 있어요!</div>
         </section>
     </section>
     <!--보터 카운트-->
- 
-    <!-- 메인진열 사입 검증 -->
-    <section id="indexProductBvt" class="index_prd_list">
-        <section id="indexProductListTitle">
-            <h2>Bvoat Delivery</h2>
-            <h3>브랜드 무관, 한 번에 배송되는 비보트 딜리버리 🚛</h3>
-            <p class="info_txt">
-                - 회원 가입 시 비보트 딜리버리 무료 배송<br>
-                - 구매자 전원 비보트 뱃지 증정 (소진시 조기 종료)
-            </p>
+    <!-- 메인진열A indexMainDoubleMid -->
+    <section id="indexProductBvtA" class="index_list">
+        <section id="indexProductListTitle" class="index_list_title">
+            <h3 class="list_title_h2">옷잘러들의 친환경🌱 그래PICK!</h3>
+            <h4 class="list_title_h3">여름 흰티 + 그래픽은 치트키니까요 🤫</h4>
         </section>
-        <section id="indexProductList" class="index_prd_list_bvt index_main">
-            <div module="product_listmain_50">
+        <section id="indexMainDoubleMid" class="index_main_double_mid">
+            <div class="index_main_double_mid_swiper swiper_container" module="product_listmain_50">
                 <!--
-                    $count = 12
-                    $basket_result = /product/add_basket.html
-                    $basket_option = /product/basket_option.html
+                $count = 10
+                $basket_result = /product/add_basket.html
+                $basket_option = /product/basket_option.html
             -->
-                <!--@import(/product/product_module/product_listmain.html)-->
+                <!--@import(/layoutbvt/listmain_double_mid.html)-->
             </div>
         </section>
     </section>
-    <!-- 메인진열 사입 검증 -->
-
-    <!-- 카테고리 -->
-    <section id="indexCategory">
-        <section id="indexCategoryTitle">
-            <h2 class="t14">Category</h2>
-            <h3 class="t09">우리의 가치있는 의식주를 위해</h3>
+    <!-- 메인진열A indexMainDoubleMid -->
+    <!-- 메인진열B indexMainDoubleMid -->
+    <section id="indexProductBvtB" class="index_list">
+        <section id="indexProductListTitle" class="index_list_title">
+            <h3 class="list_title_h2">🧐 이 브랜드, 이 상품이 친환경?</h3>
+            <h4 class="list_title_h3">이제 브랜드도 친환경이 대세입니다.</h4>
         </section>
-        <section id="indexCategoryList">
-            <div id="categorySwipe" class="swiper-container category_swipe index_main">
-                <div class="swiper-wrapper" id="index_category" module="Layout_category">
-                    <div class="category swiper-slide"><a href="/product/list.html{$param}"
-                            name="{$param}">{$name_or_img_tag}</a>
-                        </div>
-                    <div class="category swiper-slide"><a href="/product/list.html{$param}"
-                            name="{$param}">{$name_or_img_tag}</a>
-                        </div>
-                    <div class="category swiper-slide"><a href="/product/list.html{$param}"
-                            name="{$param}">{$name_or_img_tag}</a>
-                        </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                    <a href="/product/category.html" class="category_btn">
-                        더 많은 카테고리 보러 가기<img src="/bvtIMG/icon/arrow-right_gray.svg" alt="화살표">
-                    </a>
+        <section id="indexMainDoubleMid" class="index_main_double_mid">
+            <div class="index_main_double_mid_swiper swiper_container" module="product_listmain_50">
+                <!--
+                $count = 8
+                $basket_result = /product/add_basket.html
+                $basket_option = /product/basket_option.html
+            -->
+                <!--@import(/layoutbvt/listmain_double_mid.html)-->
             </div>
         </section>
     </section>
-    <!-- 카테고리 -->
-
-    <!-- 현재 구매 중 -->
-    <section id="nowBuying">
-        <section id="nowBuyingTitle">
-            <h2>Congrats!</h2>
-            <h3>지금 보터들이 구매하고 있어요.</h3>
+    <!-- 메인진열B indexMainDoubleMid -->
+    <!-- 메인진열C indexMainSingleBig -->
+    <section id="indexProductBvtC" class="index_list">
+        <section id="indexProductListTitle" class="index_list_title">
+            <h3 class="list_title_h2">상상도 못한 소재 (Feat.환경을 위하여 👍)</h3>
+            <h4 class="list_title_h3">신기한 소재로 업사이클링 된 상품만 모았어요</h4>
         </section>
-        <section id="nowBuyingList" class="index_main" module="product_listmain_46">
-            <!--
-        $count = 20
-        $basket_result = /product/add_basket.html
-        $basket_option = /product/basket_option.html
-        -->
-
-            <!--@import(/product/product_module/product_listmain_swiper.html)-->
-            <div class="swiper-pagination"></div>
+        <section id="indexMainSingleBig" class="index_main_single_big small_single_list">
+            <div class="index_main_single_big_swiper swiper_container" module="product_listmain_50">
+                <!--
+                $count = 8
+                $basket_result = /product/add_basket.html
+                $basket_option = /product/basket_option.html
+            -->
+                <!--@import(/layoutbvt/listmain_single_big.html)-->
+            </div>
         </section>
     </section>
-    <!-- 현재 구매 중 -->
+    <!-- 메인진열C indexMainSingleBig -->
+    <!-- 메인진열D indexMainMoreview -->
+    <section id="indexProductBvtD" class="index_list">
+        <section id="indexProductListTitle" class="index_list_title">
+            <h3 class="list_title_h2">나는야 가죽 될 거야 👜</h3>
+            <h4 class="list_title_h3">사과, 선인장, 한지로 만든 다양한 가죽을 만나보세요</h4>
+        </section>
+        <section id="indexMainMoreview" class="index_main_moreview small_single_list">
+            <div class="index_main_moreview" module="product_listmain_2">
+                <!--
+                $count = 8
+                $moreview = yes
+                $basket_result = /product/add_basket.html
+                $basket_option = /product/basket_option.html
+            -->
+                <!--@import(/layoutbvt/listmain_moreview.html)-->
+            </div>
+            <!-- 더보기 -->
+            <div class="paginate_moreview" module="product_listmore_2">
+                <button class="moreview_btn" onclick="{$more_action}">
+                    더 보기 <svg xmlns="http://www.w3.org/2000/svg" width="9.154" height="5.234">
+                        <path data-name="Icon ionic-ios-arrow-down"
+                            d="M4.578 3.653 8.039.189a.651.651 0 0 1 .924 0 .66.66 0 0 1 0 .927L5.042 5.043a.653.653 0 0 1-.9.019L.19 1.121a.654.654 0 1 1 .924-.927Z"
+                            fill="#022cff" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </section>
+    <!-- 메인진열D indexMainMoreview -->
+    <!-- 메인진열E indexMainDoubleSmall -->
+    <section id="indexProductBvtE" class="index_list">
+        <section id="indexProductListTitle" class="index_list_title">
+            <h3 class="list_title_h2">새 신을 신고 뛰어보자 팔짝! 👟</h3>
+            <h4 class="list_title_h3">이번 여름은 환경과 함께하는 스니커즈 어때요?</h4>
+        </section>
+        <section id="indexMainDoubleSmall" class="index_main_double_small small_single_list">
+            <div class="index_main_double_small_swiper swiper_container" module="product_listmain_50">
+                <!--
+                $count = 10
+                $basket_result = /product/add_basket.html
+                $basket_option = /product/basket_option.html
+            -->
+                <!--@import(/layoutbvt/listmain_double_small.html)-->
+            </div>
+        </section>
+    </section>
+    <!-- 메인진열E indexMainDoubleSmall -->
+    <!-- 메인진열F indexMainDoubleMid -->
+    <section id="indexProductBvtF" class="index_list">
+        <section id="indexProductListTitle" class="index_list_title">
+            <h3 class="list_title_h2">일상을 만드는 즐거움 ✔</h3>
+            <h4 class="list_title_h3">가치있는 선택, 데일리 요모조모</h4>
+        </section>
+        <section id="indexMainDoubleMid" class="index_main_double_mid">
+            <div class="index_main_double_mid_swiper swiper_container" module="product_listmain_50">
+                <!--
+                $count = 8
+                $basket_result = /product/add_basket.html
+                $basket_option = /product/basket_option.html
+            -->
+                <!--@import(/layoutbvt/listmain_double_mid.html)-->
+            </div>
+        </section>
+    </section>
+    <!-- 메인진열F indexMainDoubleMid -->
+    <!-- 메인진열G indexMainDoubleSmall -->
+    <section id="indexProductBvtG" class="index_list">
+        <section id="indexProductListTitle" class="index_list_title">
+            <h3 class="list_title_h2">요즘 우리가 사는 맛 ⚠️</h3>
+            <h4 class="list_title_h3">#어글리 #노플라스틱 #업사이클링</h4>
+        </section>
+        <section id="indexMainDoubleSmall" class="index_main_double_small small_single_list">
+            <div class="index_main_double_small_swiper swiper_container" module="product_listmain_50">
+                <!--
+                $count = 6
+                $basket_result = /product/add_basket.html
+                $basket_option = /product/basket_option.html
+            -->
+                <!--@import(/layoutbvt/listmain_double_small.html)-->
+            </div>
+        </section>
+    </section>
+    <!-- 메인진열G indexMainDoubleSmall -->
+    <!-- 메인진열H indexMainSingleMid -->
+    <section id="indexProductBvtH" class="index_list">
+        <section id="indexProductListTitle" class="index_list_title">
+            <h3 class="list_title_h2">가치소비 하신 걸 축하합니다!</h3>
+            <h4 class="list_title_h3">지금 보터들이 구매하고 있어요.</h4>
+        </section>
+        <section id="indexMainSingleMid" class="index_main_single_mid small_single_list">
+            <div class="index_main_single_mid_swiper swiper_container" module="product_listmain_46">
+                <!--
+                $count = 12
+                $basket_result = /product/add_basket.html
+                $basket_option = /product/basket_option.html
+            -->
+                <!--@import(/layoutbvt/listmain_single_mid.html)-->
+            </div>
+        </section>
+    </section>
+    <!-- 메인진열H indexMainSingleMid -->
 
 </article>
 <!--@import(/layout/basic/footer.html)-->

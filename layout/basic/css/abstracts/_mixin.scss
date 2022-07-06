@@ -46,25 +46,6 @@
 }
 
 
-//미디어쿼리
-// 320px 아래의 기기 
-@mixin query-small-mobile {
-    @media (max-width: 320px) {
-        .small_mobile_hide{
-            display: none;
-        }
-        .small_mobile_input{
-            &::placeholder {
-                font-size: 8px !important;
-            }
-        }
-        select{
-            padding: 3px !important;
-            font-size: 7px !important;
-        }
-    }
-}
-
 //스탬프
 @mixin stamp-variation{
     .whole_stamp{
@@ -81,5 +62,25 @@
         height: 100%;
         background: $half-stamp;
         background-size: contain;
+    }
+}
+
+
+//미디어쿼리
+// 320px 아래의 기기 
+@mixin query-small-mobile {
+    @media (max-width: 320px) {
+        .small_mobile_hide{
+            display: none;
+        }
+        .small_mobile_input{
+            &::placeholder {
+                font-size: 8px !important;
+            }
+        }
+        select{
+            padding: 3px !important;
+            font-size: 7px !important;
+        }
     }
 }
