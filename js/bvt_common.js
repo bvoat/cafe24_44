@@ -59,9 +59,25 @@ document.querySelector(".no_btn").addEventListener("click", nofunc);
 //가격 감시 함수
 function monitoringPrice () {
   const price_content = document.querySelectorAll(".price_wrap");
-  Array.from(price_content).forEach((data)=>{
-    console.log('data: ', data);
 
+  price_content.forEach((price)=>{
+    let custom_price = price.children[0];
+    let fixed_price = price.children[1];
+
+    //소비자가(할인가)가 내부에 가격이 있고 판매가에도 가격이 있고 소비자가의 숫자가 0이 아니면 (할인 중)
+    if(custom_price.hasChildNodes()  && fixed_price.hasChildNodes() && custom_price.dataset.price != '0'){
+      //판매가에 onpromotion class 붙이고
+      fixed_price.classList.add("onpromotion");
+      let discount = fixed_price.dataset.price-custom_price.dataset.price;
+      //할인율 계산
+      let percentage = discount / fixed_price.dataset.price * 100;
+      console.log('percentage: ', percentage, "할인중");
+      //소비자가는 없고 판매가에 가격이 있고 소비자가의 가격이 0이면 (할인 안함)
+    }else if(!custom_price.hasChildNodes() && fixed_price.hasChildNodes() || custom_price.dataset.price == 0){
+      //소비자가에 "원" 표시되지 않도록 삭제
+      custom_price.classList.add("displaynone");
+    }
+    
   })
 }
 window.addEventListener("DOMContentLoaded", ()=>{monitoringPrice()})

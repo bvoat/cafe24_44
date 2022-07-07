@@ -312,12 +312,15 @@ const reciveTagDetail = (prd_no) => {
     .then((response) => response.json())
     .then((data) => {
       data.forEach((tag) => {
-        document
+        console.log("tag", tag);
+        if(tag.tag_type != "brand" ){
+          document
           .querySelector("#tag-box")
           .insertAdjacentHTML(
             "beforeend",
             `<div>${tag.emoji} ${tag.tag_name}</div>`
           );
+        }
       });
     })
     .catch((error) => {
@@ -327,18 +330,18 @@ const reciveTagDetail = (prd_no) => {
 
 /* 최종 함수 실행 */
 //소비기록 컨트롤
-buyRecordFrameControl();
+// buyRecordFrameControl();
 //크루 등급 마일리지 2배 변환
-crewValueControl(2);
+// crewValueControl(2);
 //공유 이벤트 클릭
-shareBtn.addEventListener("click", (e) => {
-  const url = window.location.href;
-  goShrBtn(`link`, url);
-});
+// shareBtn.addEventListener("click", (e) => {
+//   const url = window.location.href;
+//   goShrBtn(`link`, url);
+// });
 //Q&A heading 컨트롤
-qnaControl();
+// qnaControl();
 //스탬프 만들기
-createStamp(createStampPcsFromPrice);
+// createStamp(createStampPcsFromPrice);
 //가치태그 수신
 reciveTagDetail(prd_no);
 

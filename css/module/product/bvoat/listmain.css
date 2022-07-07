@@ -335,7 +335,7 @@
 }
 
 .name {
-  position: absolute;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -353,8 +353,8 @@
   font-size: 13px;
   font-weight: bold;
   color: #022CFF;
-  top: calc(182px - 15px);
-  right: 0;
+  top: -25px;
+  left: calc(100% - 102px);
 }
 
 .name .customer {

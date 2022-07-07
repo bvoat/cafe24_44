@@ -141,7 +141,7 @@
 
 //보터 이름
 .name {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,8 +153,8 @@
     font-size: 13px;
     font-weight: bold;
     color: $bvt-blue;
-    top: calc(182px - 15px);
-    right: 0;
+    top: -25px;
+    left: calc(100% - 102px);
     .customer {
         display: inline-block;
         width: 31px;

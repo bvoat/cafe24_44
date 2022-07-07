@@ -347,6 +347,19 @@ div.layerProgress {
     font-weight: normal;
     color: #292929;
 }
+.onpromotion{
+    text-decoration: line-through !important;
+    color: #ABABAB !important;
+    font-size :
+    1.4rem !important;
+    font-weight: 400 !important;
+    margin-left: 5px !important;
+}
+.onpromotion::after{
+    color: #ABABAB !important;
+    font-size :
+    1.43rem !important;
+}
 /* .price_wrap>li>span, .price_wrap>li>span>span, .price_wrap>li>span>span>span{
     font-size: 1.48rem !important;
     font-weight: 600 !important;
