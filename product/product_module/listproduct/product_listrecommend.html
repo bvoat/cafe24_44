@@ -1,6 +1,5 @@
-<!--@css(../../css/module/product/module/product_listrecommend.css)-->
-
-<div module="product_listrecommend" id="product_listrecommend_list" class="ec-base-product swiper recommendListSwiper">
+<!--@css(../../../css/module/product/bvoat/product_listrecommend.css)-->
+<section id="productListrecommendList" class="product_listrecommend_list prd_list"  module="product_listrecommend">
     <!--
         ※ 상품 진열 갯수 변수, 디폴트는 200개
         $count = 20
@@ -29,7 +28,7 @@
                     <a class="recommend_product_name" href="/product/detail.html{$param}">
                         {$product_name|striptag}
                     </a>
-                    <!--@import(./list_price_wrap.html)-->
+                    <!--@import(../list_price_wrap.html)-->
                 </li>
             </ul>
         </li>
@@ -54,11 +53,11 @@
                     <a class="recommend_product_name" href="/product/detail.html{$param}">
                         {$product_name|striptag}
                     </a>
-                    <!--@import(./list_price_wrap.html)-->
+                    <!--@import(../list_price_wrap.html)-->
                 </li>
             </ul>
         </li>
     </ul>
-    <div class="swiper-pagination product_list_pagination"></div>
+<div class="swiper-pagination product_list_pagination"></div>
 
-</div>
+</section>

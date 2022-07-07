@@ -1,53 +1,48 @@
 <!--@layout(/layout/basic/layout.html)-->
-<!--@css(../css/module/product/module/list.css)-->
-
+<link rel="stylesheet" href="/css/module/product/bvoat/list.css">
 <article id="productList">
-<!-- 카테고리 타이틀 -->
-<section id="productListTitle" module="product_headcategory">
-    <input type="hidden" id="topNavControl" name="{$name_1}" value="{$name_1}" class="displaynone">
-    <h1 class="category_title" data-category="{$title_text}" data-main="{$name_1}">가치소비 {$title_text} 추천</h1>
-    <h2></h2>
-</section>
-<!-- 카테고리 타이틀 -->
+    <!-- 카테고리 타이틀 -->
+    <section id="productListTitle" module="product_headcategory">
+        <input type="hidden" id="topNavControl" name="{$name_1}" value="{$name_1}" class="displaynone">
+        <h1 class="category_title" data-category="{$title_text}" data-main="{$name_1}">가치소비 {$title_text} 추천</h1>
+        <h2></h2>
+    </section>
+    <!-- 카테고리 타이틀 -->
 
-<!-- 추천 상품 진열 -->
+    <!-- 추천 상품 진열 -->
 
-<!--@import(/product/product_module/product_listrecommend.html)-->
-<!-- 추천 상품 진열 -->
+    <!--@import(/product/product_module/listproduct/product_listrecommend.html)-->
+    <!-- 추천 상품 진열 -->
 
-<!-- 하위 카테고리 -->
-<!--@import(/product/product_module/sub_category.html)-->
-<!-- 하위 카테고리 -->
+    <!-- 하위 카테고리 -->
+    <!--@import(/product/product_module/listproduct/sub_category.html)-->
+    <!-- 하위 카테고리 -->
 
-<!-- 상품 정렬 select-->
-<section id="product_normalmenu">
-    <select id="selArray" name="selArray" module="product_Orderby">
-        <option value="?cate_no=102&amp;sort_method=5#Product_ListMenu">신상품 순</option>
-        <option value="?cate_no=102&amp;sort_method=1#Product_ListMenu">상품명 순</option>
-        <option value="?cate_no=102&amp;sort_method=3#Product_ListMenu">낮은가격 순</option>
-        <option value="?cate_no=102&amp;sort_method=4#Product_ListMenu">높은가격 순</option>
-        <option value="?cate_no=102&amp;sort_method=6#Product_ListMenu">인기상품 순</option>
-    </select>
-    <label for="selArray">▾</label>
-</section>
-<!-- 상품 정렬 select -->
+    <!-- 상품 정렬 select-->
+    <section id="product_normalmenu">
+        <select id="selArray" name="selArray" module="product_Orderby">
+            <option value="?cate_no=102&amp;sort_method=5#Product_ListMenu">신상품 순</option>
+            <option value="?cate_no=102&amp;sort_method=1#Product_ListMenu">상품명 순</option>
+            <option value="?cate_no=102&amp;sort_method=3#Product_ListMenu">낮은가격 순</option>
+            <option value="?cate_no=102&amp;sort_method=4#Product_ListMenu">높은가격 순</option>
+            <option value="?cate_no=102&amp;sort_method=6#Product_ListMenu">인기상품 순</option>
+        </select>
+        <label for="selArray">▾</label>
+    </section>
+    <!-- 상품 정렬 select -->
 
-<!-- 상품 목록 -->
-    <!--@import(/product/product_module/product_listnormal.html)-->
-<!-- 상품 목록 -->
+    <!-- 상품 목록 -->
+    <!--@import(/product/product_module/listproduct/product_list.html)-->
+    <!-- 상품 목록 -->
 
-<!-- 더보기 버튼 -->
-<div id="product_listmore" module="product_listmore">
-    <button class="product_listmore_btn" onclick="{$more_action}">
-        가치소비 더 보기
-    </button>
-</div>
-<!-- 더보기 버튼 -->
+    <!-- 더보기 버튼 -->
+    <div id="product_listmore" module="product_listmore">
+        <button class="product_listmore_btn" onclick="{$more_action}">
+            가치소비 더 보기
+        </button>
+    </div>
+    <!-- 더보기 버튼 -->
 </article>
 
 <!-- heading2 title 변경, 하위카테고리 슬라이드, customProductPrice -->
-<script src="../js/module/product/list.js"></script>
-
-<!-- recommend swiper -->
-<script src="../../js/module/product/product_listrecommend.js"></script>
-<script src="../../js/module/product/product_listnormal.js"></script>
+<script src="/js/module/product/list.js"></script>

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.product_listnormal_list_wrap {
+#productListnormalList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,24 +14,24 @@
   height: auto;
 }
 
-.product_listnormal_list_wrap .listnormal_list {
+#productListnormalList .listnormal_list {
   width: 49%;
   height: auto;
   padding-bottom: 30px;
 }
 
-.product_listnormal_list_wrap .listnormal_list .normal_product {
+#productListnormalList .listnormal_list .normal_product {
   position: relative;
   display: inline;
   padding-bottom: 30px;
 }
 
-.product_listnormal_list_wrap .listnormal_list .normal_product .normal_img_wrap {
+#productListnormalList .listnormal_list .normal_product .normal_img_wrap {
   position: relative;
   width: 100%;
 }
 
-.product_listnormal_list_wrap .listnormal_list .normal_product .normal_img_wrap .normal_img_box {
+#productListnormalList .listnormal_list .normal_product .normal_img_wrap .normal_img_box {
   display: block;
   position: relative;
   margin-bottom: 6.9px;
@@ -40,14 +40,14 @@
   border-radius: 4px;
 }
 
-.product_listnormal_list_wrap .listnormal_list .normal_product .normal_img_wrap .normal_img_box .normal_img {
+#productListnormalList .listnormal_list .normal_product .normal_img_wrap .normal_img_box .normal_img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
 
-.product_listnormal_list_wrap .listnormal_list .normal_product .normal_img_wrap .product_select_icon {
+#productListnormalList .listnormal_list .normal_product .normal_img_wrap .product_select_icon {
   position: absolute;
   width: 71px;
   height: 30px;
@@ -57,12 +57,12 @@
   overflow: hidden;
 }
 
-.product_listnormal_list_wrap .listnormal_list .normal_product .normal_img_wrap .product_select_icon img {
+#productListnormalList .listnormal_list .normal_product .normal_img_wrap .product_select_icon img {
   width: 100%;
   height: 100%;
 }
 
-.product_listnormal_list_wrap .listnormal_list .normal_product .normal_img_wrap .product_wish {
+#productListnormalList .listnormal_list .normal_product .normal_img_wrap .product_wish {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,7 +84,7 @@
   padding-top: 2px;
 }
 
-.product_listnormal_list_wrap .listnormal_list .normal_product .normal_img_wrap .product_wish img {
+#productListnormalList .listnormal_list .normal_product .normal_img_wrap .product_wish img {
   display: block;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -92,7 +92,7 @@
   height: 18px;
 }
 
-.product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_brand {
+#productListnormalList .listnormal_list .normal_product .normal_product_brand {
   width: 100%;
   height: 32px;
   display: -webkit-box;
@@ -107,14 +107,15 @@
           justify-content: space-between;
 }
 
-.product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_brand .brand {
+#productListnormalList .listnormal_list .normal_product .normal_product_brand .brand {
   font-size: 1rem !important;
   color: #707070;
 }
 
-.product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_brand .summary_desc {
+#productListnormalList .listnormal_list .normal_product .normal_product_brand .summary_desc {
   font-size: 1rem;
   color: #707070;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -127,17 +128,18 @@
   /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
 }
 
-.product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info {
+#productListnormalList .listnormal_list .normal_product .normal_product_info {
   margin-top: 10px;
 }
 
-.product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_name {
+#productListnormalList .listnormal_list .normal_product .normal_product_info .normal_product_name {
   display: block;
   width: 100%;
   font-size: 1.35rem;
   font-weight: 600;
   margin-bottom: 9px;
   vertical-align: top;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -150,7 +152,7 @@
   /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
 }
 
-.product_listnormal_list_wrap .listnormal_list .normal_product .normal_product_info .normal_product_name > span {
+#productListnormalList .listnormal_list .normal_product .normal_product_info .normal_product_name > span {
   font-size: 1.3rem !important;
   color: #292929 !important;
 }

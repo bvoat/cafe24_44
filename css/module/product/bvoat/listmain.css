@@ -264,6 +264,7 @@
   display: block;
   font-size: 1.15rem;
   color: #707070;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -272,8 +273,6 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.5rem;
-  height: 1.9rem;
-  /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
   margin-bottom: 7px;
 }
 
@@ -283,6 +282,7 @@
   font-weight: bold;
   word-wrap: break-word;
   word-break: keep-all;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;

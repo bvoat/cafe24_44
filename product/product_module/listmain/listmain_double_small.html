@@ -14,10 +14,7 @@
             <li class="brand">{$prd_brand}</li>
             <li class="summary">{$summary_desc}</li>
             <li class="product_name"><a href="/product/detail.html{$param}">{$product_name}</a></li>
-            <li class="price_wrap">
-                <p class="price display_discount {$product_sale_display|display}">{$product_sale_price}</p>
-                <p class="price display_product detail_product {$product_price_display|display}">{$product_price|numberformat}</p>
-            </li>
+            <!--@import(../list_price_wrap.html)-->
         </ul>
     </li>
     <li id="anchorBoxId_{$product_no}" class="swiper-slide list_item">
@@ -34,10 +31,7 @@
             <li class="brand">{$prd_brand}</li>
             <li class="summary">{$summary_desc}</li>
             <li class="product_name"><a href="/product/detail.html{$param}">{$product_name}</a></li>
-            <li class="price_wrap">
-                <p class="price display_discount {$product_sale_display|display}">{$product_sale_price}</p>
-                <p class="price display_product detail_product {$product_price_display|display}">{$product_price|numberformat}</p>
-            </li>
+            <!--@import(../list_price_wrap.html)-->
         </ul>
     </li>
 </ul>

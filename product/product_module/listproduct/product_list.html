@@ -1,8 +1,9 @@
-<!--@css(../../css/module/product/module/product_listnormal.css)-->
-<div id="product_listnormal_list" module="product_listnormal">
+
+<!--@css(../../../css/module/product/bvoat/product_list.css)-->
+<section id="productListnormalList" class="product_list prd_list" module="product_listnormal">
     <!--
             ※ 상품 진열 갯수 변수, 디폴트는 200개
-            $count = 6
+            $count = 12
             $moreview = yes
             $cache = yes            
             $basket_result = /product/add_basket.html
@@ -29,7 +30,7 @@
                     <a class="normal_product_name" href="/product/detail.html{$param}">
                         {$product_name|striptag}
                     </a>
-                    <!--@import(./list_price_wrap.html)-->
+                    <!--@import(../list_price_wrap.html)-->
                 </li>
             </ul>
         </li>
@@ -53,10 +54,10 @@
                     <a class="normal_product_name" href="/product/detail.html{$param}">
                         {$product_name|striptag}
                     </a>
-                    <!--@import(./list_price_wrap.html)-->
+                    <!--@import(../list_price_wrap.html)-->
 
                 </li>
             </ul>
         </li>
     </ul>
-</div>
+</section>

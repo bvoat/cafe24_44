@@ -235,13 +235,6 @@ margin-top:30px;
     display: none;
 }
 
- :root {
-    /*
-    --swiper-pagination-color: var(--swiper-theme-color);
-    */
-}
-
-
 /* 페이지네이션 */
 .normalBanner-swiper-pagination {
     text-align: center;
@@ -257,8 +250,6 @@ margin-top:30px;
     transition: 300ms opacity;
     transform: translate3d(0, 0, 0);
     z-index: 10;
-    top:-40px;
-
 }
 
 .swiper-pagination.swiper-pagination-hidden {

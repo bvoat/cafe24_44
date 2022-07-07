@@ -26,14 +26,18 @@ const makeHeadingTwo = (category, description) => {
     category_title.insertAdjacentHTML('beforeend',`<h2>${description['All']}</h2>`)
   }
 };
-window.addEventListener("DOMContentLoaded",makeHeadingTwo(category, description)
-)
+window.addEventListener("DOMContentLoaded",makeHeadingTwo(category, description))
 /* category description 추가 */
 
 /* 하위 카테고리 슬라이드 */
-var swiper = new Swiper(".subCategorySwiper", {
-  slidesPerView: 6,
-  spaceBetween: 16,
+var swiper = new Swiper("#productListrecommendList", {
+  slidesPerView: 2,
+  spaceBetween: 11,
+  pagination: {
+      el: ".product_list_pagination",
+      clickable: true,
+      type: "progressbar",
+  },
 });
 
 /* 하위 카테고리 슬라이드 */

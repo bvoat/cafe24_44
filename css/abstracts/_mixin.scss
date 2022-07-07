@@ -1,5 +1,6 @@
 // 높이 동일하게 맞춘 ellipsis
 @mixin ellipsis($line-cnt, $line-height) {
+    display: block;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

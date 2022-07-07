@@ -212,7 +212,7 @@
         display: block;
         font-size: 1.15rem;
         color: $bvt-darkgray;
-        @include ellipsis(1, 1.3rem);
+        @include only-ellipsis(1, 1.3rem);
         margin-bottom: 7px;
     }
 

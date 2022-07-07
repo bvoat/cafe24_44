@@ -1,4 +1,10 @@
 @charset "UTF-8";
+#productList {
+  width: 100%;
+  max-width: 450px;
+  padding: 80px 0 20px 0;
+}
+
 #productListTitle {
   margin: 19px 0;
 }
