@@ -5,63 +5,59 @@
 /* listmain_double_mid */
 .doublemid {
     // 이미지 182px
+    //spaceBetween: 12,
     .list_item {
         position: relative;
         display: flex;
         flex-flow: column nowrap;
         align-items: flex-start;
         justify-content: space-between;
-        width: 182px;
+        width: calc(50% - 12px);
+        max-width: 182px;
         margin-bottom: 27px;
-        .thumb {
-            position: relative;
-            width: 100%;
-            height: 182px;
-            overflow: hidden;
-            border-radius: 4px;
-        }
+
+        //위시버튼
+        @include wish-button(33px, 33px, 9.9px, 7.9px);
+
     }
 }
 
 /* listmain_small_big */
 .singlebig {
     // 이미지 222.5px
-    .list_item {
+    //spaceBetween: 15,
+    >.list_item {
         position: relative;
         display: flex;
         flex-flow: column nowrap;
         align-items: flex-start;
         justify-content: space-between;
-        width: 222.5px;
+        width: calc(50% - 15px);
+        max-width: 222.5px;
         margin-bottom: 27px;
-        .thumb {
-            position: relative;
-            width: 100%;
-            height: 222.5px;
-            overflow: hidden;
-            border-radius: 4px;
-        }
+
+        //위시버튼
+        @include wish-button(41px, 41px, 13.1px, 9.6px);
+
     }
 }
 
 /* listmain_double_small */
 .doublesmall {
     // 이미지 135.5px
-    .list_item {
+    //spaceBetween: 10.9,
+    >.list_item {
         position: relative;
         display: flex;
         flex-flow: column nowrap;
         align-items: flex-start;
         justify-content: space-between;
-        width: 135.5px;
+        width: calc(50% - 10.9px);
+        max-width: 135.5px;
         margin-bottom: 27px;
-        .thumb {
-            position: relative;
-            width: 100%;
-            height: 135.5px;
-            overflow: hidden;
-            border-radius: 4px;
-        }
+
+        //위시버튼
+        @include wish-button(25px, 25px, 8px, 5.7px);
     }
 }
 
@@ -69,21 +65,18 @@
 /* listmain_double_small */
 .singlemid {
     // 이미지 182px
-    .list_item {
+    //spaceBetween: 13,
+    >.list_item {
         position: relative;
         display: flex;
         flex-flow: column nowrap;
         align-items: flex-start;
         justify-content: space-between;
-        width: 182px;
+        width: calc(50% - 13px);
+        max-width: 182px;
         margin-bottom: 27px;
-        .thumb {
-            position: relative;
-            width: 100%;
-            height: 182px;
-            overflow: hidden;
-            border-radius: 4px;
-        }
+        //위시버튼
+        @include wish-button(33px, 33px, 9.9px, 7.9px);
     }
 }
 
@@ -93,21 +86,18 @@
     flex-flow: row wrap;
     align-items: center;
     // 이미지 207px
-    .list_item {
+    >.list_item {
         position: relative;
         display: flex;
         flex-flow: column nowrap;
         align-items: flex-start;
         justify-content: space-between;
-        width: 207px;
+        width: calc(50% - 10px);
+        max-width: 207px;
         margin-bottom: 27px;
-        .thumb {
-            position: relative;
-            width: 100%;
-            height: 207px;
-            overflow: hidden;
-            border-radius: 4px;
-        }
+
+        //위시버튼
+        @include wish-button(38px, 38px, 10px, 10px);
     }
     >li:nth-child(2n-1) {
         margin-right: 13.8px;
@@ -118,44 +108,19 @@
 // 이미지 정사각형 공통
 // 부모에게 w 정해줘야 함
 .thumb {
+    position: relative;
+    width: 100%;
     a {
         display: block;
         position: relative;
-        width: 100%;
-        padding-top: 100%;
+        padding-top: calc(100% - 14.5px);
+        overflow: hidden;
+        border-radius: 4px;
         >img {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-        }
-    }
-}
-
-// 위시버튼 공통
-.wish {
-    position: absolute;
-    width: 33px;
-    height: 33px;
-    cursor: pointer;
-    bottom: 10px;
-    left: 10px;
-    button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: inherit;
-        height: inherit;
-        border: 0;
-        border-radius: 50%;
-        background: #fff;
-        box-shadow: 0px 3px 7px 0px transparentize($bvt-darkgray, 0.73);
-        cursor: pointer;
-        img {
-            position: relative;
-            width: 20px;
-            height: 18px;
-            margin-top: 1.5px;
         }
     }
 }

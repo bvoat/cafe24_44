@@ -58,28 +58,11 @@ document.querySelector(".no_btn").addEventListener("click", nofunc);
 
 //가격 감시 함수
 function monitoringPrice () {
-    // 1. 주기적으로 감지할 대상 요소 선정
-  const target = document.querySelector('#bvtContents');
-  
-  // 2. 옵저버 콜백 생성
-  const callback = (mutationList, observer) => {
-    console.log(mutationList);
-  };
-  
-  // 3. 옵저버 인스턴스 생성
-  const observer = new MutationObserver(callback); // 타겟에 변화가 일어나면 콜백함수를 실행하게 된다.
-  
-  // 4. DOM의 어떤 부분을 감시할지를 옵션 설정
-  const config = { 
-      attributes: true, // 속성 변화 할때 감지
-      childList: true, // 자식노드 추가/제거 감지
-      // characterData: true // 데이터 변경전 내용 기록
-  };
-  
-  // 5. 감지 시작
-  observer.observe(target, config);
-  
-  // 6. 감지 중지
-  observer.disconnect();
+  const price_content = document.querySelectorAll(".price_wrap");
+  Array.from(price_content).forEach((data)=>{
+    console.log('data: ', data);
+
+  })
 }
 window.addEventListener("DOMContentLoaded", ()=>{monitoringPrice()})
+

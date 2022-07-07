@@ -4,11 +4,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: $line-cnt; /* 라인수 */
+    -webkit-line-clamp: $line-cnt;
+    /* 라인수 */
     -webkit-box-orient: vertical;
-    word-wrap:break-word; 
-    line-height: $line-height + 0.2rem;
-    height: (($line-height) * $line-cnt) + 0.6rem; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+    word-wrap: break-word;
+    line-height: $line-height + 0.3rem;
+    height: (($line-height) * $line-cnt) + 0.8rem;
 }
 
 // ellipsis 처리만
@@ -17,20 +18,22 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: $line-cnt; /* 라인수 */
+    -webkit-line-clamp: $line-cnt;
+    /* 라인수 */
     -webkit-box-orient: vertical;
-    word-wrap:break-word; 
-    line-height: $line-height + 0.2rem;
+    word-wrap: break-word;
+    line-height: $line-height + 0.3rem;
 }
 
 // 떠오르기 애니메이션
 @mixin rise-item-keyframe {
     @keyframes rise-item {
-        from{
+        from {
             opacity: 0;
             transform: translate3d(0, 100%, 0);
         }
-        to{
+
+        to {
             opacity: 1;
             transform: translateZ(0);
         }
@@ -40,16 +43,24 @@
 // 위 아래 툴팁 애니메이션
 @mixin up-and-down-keyframe($start, $end) {
     @keyframes up-and-down-item {
-        0% {transform: translateY($start);}
-        50% {transform: translateY($end);}
-        100% {transform: translateY($start);}
+        0% {
+            transform: translateY($start);
+        }
+
+        50% {
+            transform: translateY($end);
+        }
+
+        100% {
+            transform: translateY($start);
+        }
     }
 }
 
 
 //스탬프
-@mixin stamp-variation{
-    .whole_stamp{
+@mixin stamp-variation {
+    .whole_stamp {
         display: block;
         width: 100%;
         height: 100%;
@@ -57,7 +68,8 @@
         background-size: contain;
 
     }
-    .half_stamp{
+
+    .half_stamp {
         display: block;
         width: 100%;
         height: 100%;
@@ -71,17 +83,124 @@
 // 320px 아래의 기기 
 @mixin query-small-mobile {
     @media (max-width: 320px) {
-        .small_mobile_hide{
+        .small_mobile_hide {
             display: none;
         }
-        .small_mobile_input{
+
+        .small_mobile_input {
             &::placeholder {
                 font-size: 8px !important;
             }
         }
-        select{
+
+        select {
             padding: 3px !important;
             font-size: 7px !important;
+        }
+    }
+}
+
+
+//상품 목록 이미지 구역 thumb공통 처리
+@mixin product-thumb($width, $height, $bottom, $left) {
+
+    //상품 이미지 구역
+    .thumb {
+        position: relative;
+        width: 100%;
+
+        >a {
+            display: block;
+            position: relative;
+            padding-top: calc(100% - 14.5px);
+            overflow: hidden;
+            border-radius: 4px;
+
+            >img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+
+        //상품 안내 아이콘
+        .icon {
+            position: absolute;
+            width: 50px;
+            height: 20.5px;
+            border-radius: 4px;
+            top: 4.6px;
+            left: 4.6px;
+
+            img {
+                object-fit: cover;
+            }
+        }
+        @include wish-button($width, $height, $bottom, $left)
+    }
+}
+
+//상품 목록 하단 정보
+//필요시에만 사용
+@mixin product-desc($top-padding, $brand-ftsz, $summary-ftsz, $name-ftsz) {
+    //상품 설명
+    .desc {
+        padding: $top-padding 0 0 0;
+        .brand {
+            font-size: $brand-ftsz;
+            color: $bvt-darkgray;
+            margin-bottom: 3px;
+        }
+
+        .summary {
+            display: block;
+            font-size: $summary-ftsz;
+            color: $bvt-darkgray;
+            @include only-ellipsis(1, $summary-ftsz);
+            margin-bottom: 7px;
+        }
+
+        .product_name,
+        .product_name span {
+            color: $bvt-black;
+            font-size: $name-ftsz;
+            font-weight: bold;
+            word-wrap: break-word;
+            word-break: keep-all;
+            @include ellipsis(2, $name-ftsz);
+            margin-bottom: 7px;
+            height: 35px;
+        }
+    }
+}
+
+//위시 버튼
+@mixin wish-button($width, $height, $bottom, $left) {
+    .wish {
+        position: absolute;
+        width: $width;
+        height: $height;
+        cursor: pointer;
+        bottom: $bottom;
+        left: $left;
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: inherit;
+            height: inherit;
+            border: 0;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0px 3px 7px 0px transparentize($bvt-darkgray, 0.73);
+            cursor: pointer;
+            img {
+                position: relative;
+                width: 60%;
+                height: 53%;
+                margin-top: 1.5px;
+            }
         }
     }
 }

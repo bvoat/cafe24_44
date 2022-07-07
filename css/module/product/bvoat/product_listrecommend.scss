@@ -5,7 +5,7 @@
 // 상품 추천 목록
 
 #productListrecommendList {
-    padding-bottom: 37px;
+    padding: 0 11px 37px;
 
     // 상품 개별
     .listrecommend_list {
@@ -18,68 +18,8 @@
     }
 
 }
-
-
-
 //상품 이미지 구역
-.recommend_img_wrap {
-    position: relative;
-    width: 100%;
-
-    .recommend_img_box {
-        display: block;
-        position: relative;
-        margin-bottom: 6.9px;
-        padding-top: calc(100% - 15px);
-        overflow: hidden;
-        border-radius: 4px;
-
-        .recommend_img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-        }
-    }
-
-    .product_select_icon {
-        position: absolute;
-        width: 71px;
-        height: 30px;
-        border-radius: 4px;
-        top: 7.2px;
-        left: 5.6px;
-        overflow: hidden;
-
-        img {
-            width: 100%;
-            height: 100%;
-
-        }
-    }
-
-    .product_wish {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 32px;
-        height: 32px;
-        bottom: 9.2px;
-        left: 8.7px;
-        background: $bvt-white;
-        border-radius: 50%;
-        box-shadow: $bvt-btn-shadow;
-        padding-top: 2px;
-
-        img {
-            display: block;
-            box-shadow: none;
-            width: 20px;
-            height: 18px;
-        }
-    }
-}
+@include product-thumb(32px, 32px, 9.7px, 8.7px);
 
 //상품 브랜드 구역
 .recommend_product_brand {
@@ -101,20 +41,33 @@
     }
 }
 
-//상품 정보 구역
-.recommend_product_info {
-    margin-top: 10px;
-
-    .recommend_product_name {
-        display: block;
-        width: 100%;
-        font-size: 1.35rem;
-        font-weight: 600;
-        margin-bottom: 9px;
-        vertical-align: top;
-        overflow: hidden;
-        @include ellipsis(2, 1.3rem);
+//상품 설명
+.desc {
+    padding: 7px 0 0 0;
+    .brand {
+        font-size: 1rem;
+        color: $bvt-darkgray;
+        margin-bottom: 3px;
     }
+
+    .summary {
+        display: block;
+        font-size: 1.15rem;
+        color: $bvt-darkgray;
+        @include only-ellipsis(1, 1.3rem);
+        margin-bottom: 7px;
+    }
+
+    .product_name, .product_name span {
+        color: $bvt-black;
+        font-size: 1.3rem;
+        font-weight: bold;
+        word-wrap: break-word;
+        word-break: keep-all;
+        @include ellipsis(2, 1.5rem);
+        margin-bottom: 7px;
+    }
+
 }
 
 //프로그래스 바
