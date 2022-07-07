@@ -14,7 +14,12 @@ var swiper = new Swiper(".crew_benefit_img_wrap", {
 });
 var swiper = new Swiper(".crew_method_img_wrap", {
   slidesPerView: "auto",
-  spaceBetween: 100,
+  spaceBetween: 12,
+  pagination: {
+    el: ".img_pagination",
+    clickable: true,
+    type: "progressbar",
+},  
 });
 /* aos 초기화 */
 AOS.init();
@@ -54,7 +59,7 @@ const voter_id = document.querySelector("#recoIdCheck");
 const copyBtnClick = (e) => {
   e.preventDefault();
   if (voter_id == null) {
-    alert("링크 복사를 위해서는 로그인이 필요해요 🤗");
+    alert("공유를 위해서는 로그인이 필요해요");
     window.location = "/member/login.html?returnUrl=member/crew/crew.html";
     return false;
   } else if (voter_id != null) {
@@ -83,7 +88,7 @@ const shareBtnClick = (e) => {
   console.log("share", e);
   e.preventDefault();
   if (voter_id == null) {
-    alert("공유를 위해서는 로그인이 필요해요 🤗");
+    alert("공유를 위해서는 로그인이 필요해요");
     window.location = "/member/login.html?returnUrl=member/crew/crew.html";
     return false;
   } else if (voter_id != null) {
