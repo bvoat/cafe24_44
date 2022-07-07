@@ -305,7 +305,7 @@ const reciveTagDetail = (prd_no) => {
     .then((data) => {
       data.forEach((tag) => {
         console.log("tag", tag);
-        if(tag.tag_type != "brand" ){
+        if(tag.tag_type != "brand"){
           document
           .querySelector("#tag-box")
           .insertAdjacentHTML(
