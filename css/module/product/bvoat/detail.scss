@@ -1,6 +1,6 @@
 @charset "utf-8";
-@import "../../../../layout/basic/css/abstracts/mixin";
-@import "../../../../layout/basic/css/abstracts/variables";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
 
 //변수
 :root {
@@ -12,7 +12,7 @@
 // 상품 정보 상단
 #productDetailTop {
     position: relative;
-    margin-top: -40px;//top_nav hide
+    margin-top: 40px;//top_nav hide
 
     .product_brand {
         display: flex;
@@ -20,7 +20,7 @@
         justify-content: center;
         align-items: flex-start;
         width: 100%;
-        padding: 10px 0 15px 0;
+        padding: 10px 11px 15px;
 
         h2,
         h3 {
@@ -65,7 +65,7 @@
         position: relative;
         width: 100%;
         height: auto;
-        padding: 17px 0;
+        padding: 17px 11px;
         border-bottom: $bvt-btn-border-gray;
         box-sizing: border-box;
 
@@ -108,14 +108,14 @@
             height: 35px;
             background: $share-btn no-repeat center;
             text-indent: -9999px;
-            top: calc(19%);
-            right: 0;
+            top: calc(50% - (35px / 2));
+            right: 11px;
         }
     }
 
     .delivery_wrap {
         width: 100%;
-
+        padding: 0 11px;
         .delivery_info {
             width: 100%;
             margin: 24px 0;
@@ -147,11 +147,10 @@
 
     .mileage_wrap {
         position: relative;
-        width: calc(100% + 22px);
-        margin-left: -11px;
-        background: $bvt-bg-lightblue;
+        width: 100%;
+        background: url(/bvtIMG/page_image/common/top_wave_bg.svg) no-repeat;
+        background-size: 100%;
         padding: 35px 11px 0;
-
         &::after {
             position: relative;
             bottom: 0;
@@ -191,7 +190,6 @@
 
                 p {
                     font-size: 1.35rem;
-
                     &:nth-child(1) {
                         display: flex;
                         flex-flow: column nowrap;
@@ -231,7 +229,7 @@
 
                 p {
                     font-size: 1.35rem;
-
+                    margin-right: -5px;
                     &:nth-child(1) {
                         display: flex;
                         flex-flow: column nowrap;
@@ -239,7 +237,7 @@
                         align-items: flex-end;
                         position: inherit;
                         top: 36px;
-                        right: 0;
+                        right: -3px;
                         font-size: 1.2rem;
 
                         &::before {
@@ -314,8 +312,7 @@
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        width: calc(100% + 22px);
-        margin-left: -11px;
+        width: 100%;
         background: $bvt-bg-lightblue;
         padding: 35px 11px;
         box-sizing: border-box;
@@ -394,25 +391,24 @@
     justify-content: start;
     width: 100%;
     border-bottom: $bvt-btn-border-gray;
-    padding: 52px 0 9px 0;
+    padding: 52px 11px 9px;
     margin-bottom: 10px;
     box-sizing: border-box;
     color: $bvt-black;
 
     .tab_custom {
-        width: fit-content;
-        height: 20px;
-        background: transparent;
-        margin-right: 20px;
-        font-size: 1.45rem;
-        color: $bvt-black;
+        width: fit-content !important;
+        height: 20px  !important;
+        background: transparent  !important;
+        margin-right: 15px  !important;
+        font-size: 1.45rem  !important;
+        color: $bvt-darkgray;
         opacity: 1;
     }
 
     .swiper-pagination-bullet-active {
-        color: #4D4D4D;
+        color: $bvt-black;
         font-weight: bold;
-
         &::after {
             display: block;
             content: "";
@@ -431,7 +427,7 @@
 #productDetailBottom {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
     z-index: 1;
     display: flex;
     transition-property: height;
@@ -441,6 +437,14 @@
 
 
     .detail_swiper_wrap {
+        height: auto;
+        //각각의 탭
+        >div{
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            padding: 0 11px;
+        }
         #tab0 {
             img {
                 position: relative;
@@ -448,7 +452,8 @@
                 max-width: 450px;
                 min-width: 200px;
                 object-fit: cover;
-                // object-position: 50% 50%;
+                object-position: 50% 50%;
+                margin: 20px 0;
             }
 
             iframe {
@@ -709,7 +714,7 @@
 
 //buy screen 버튼
 #buyAction{
-    position: sticky;
+    position: fixed;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;

@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<!--@css(../css/module/product/module/detail.css)-->
+<!--@css(/css/module/product/bvoat/detail.css)-->
 <!--
     $category_page = /product/list.html
     $project_page = /product/project.html
@@ -226,9 +226,9 @@
 <!-- 상품 구매 탭 -->
 <section id="buyAction" module="product_action">
     <button class="wish_btn" alt="찜" onclick="{$action_wishlist}">찜</button>
-    <button class="gift_btn" onclick="toggleBuyScreen(`gift`);" alt="선물하기">선물하기</button>
-    <button class="buy_btn" onclick="toggleBuyScreen(`cart`);" alt="구매하기">구매하기</button>
+    <button class="gift_btn purchase_button" data-type="gift" alt="선물하기">선물하기</button>
+    <button class="buy_btn purchase_button" data-type="buy"  alt="구매하기">구매하기</button>
 </section>
 <!-- 상품 구매 탭 -->
 <!--@define(cmc_log)-->
-<script src="../js/module/product/detail.js"></script>
+<script src="/js/module/product/detail.js"></script>

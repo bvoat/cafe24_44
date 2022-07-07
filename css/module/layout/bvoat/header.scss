@@ -1,6 +1,6 @@
 @charset "utf-8";
-@import "./abstracts/_variables";
-@import "./abstracts/_mixin";
+@import "../../../abstracts/_variables";
+@import "../../../abstracts/_mixin";
 
 #header_wrap {
     width: auto;
@@ -9,7 +9,7 @@
     display: flex;
     flex-flow: column nowrap;
     overflow: hidden;
-
+    backdrop-filter: blur(30px);
     #header_logo_section {
         display: flex;
         flex-flow: row nowrap;

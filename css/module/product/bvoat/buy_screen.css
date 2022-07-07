@@ -59,7 +59,7 @@
   }
 }
 
-#buyScreen #buy_screen_box {
+#buyScreen .buy_screen_box {
   position: relative;
   width: 100%;
   max-width: 450px;
@@ -75,7 +75,7 @@
   font-weight: 300;
 }
 
-#buyScreen #buy_screen_box .buy_screen_title {
+#buyScreen .buy_screen_box .buy_screen_title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,19 +94,19 @@
   border-bottom: 1px solid #E2E2E2;
 }
 
-#buyScreen #buy_screen_box .buy_screen_title h1 {
+#buyScreen .buy_screen_box .buy_screen_title h1 {
   font-size: 1.5rem;
   font-weight: 500;
   margin-left: calc(50% - 25px);
 }
 
-#buyScreen #buy_screen_box .buy_screen_title .screen_close_btn {
+#buyScreen .buy_screen_box .buy_screen_title .screen_close_btn {
   width: 30px;
   height: 15px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.426' height='13.423'%3E%3Cpath data-name='Icon ionic-ios-close' d='m8.304 6.711 4.8-4.8A1.124 1.124 0 0 0 11.515.327l-4.8 4.8-4.8-4.8A1.124 1.124 0 1 0 .331 1.911l4.8 4.8-4.8 4.8a1.124 1.124 0 0 0 1.584 1.584l4.8-4.8 4.8 4.8a1.124 1.124 0 1 0 1.584-1.584Z' fill='%23707070'/%3E%3C/svg%3E") no-repeat center;
 }
 
-#buyScreen #buy_screen_box .buy_screen_payment {
+.buy_screen_payment {
   width: 100%;
   height: 40%;
   padding: 11px;
@@ -114,7 +114,7 @@
   margin: 11px 0;
 }
 
-#buyScreen #buy_screen_box .buy_screen_payment #totalSelects table tbody tr {
+.buy_screen_payment #totalSelects table tbody tr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,17 +132,17 @@
   margin-bottom: 5px;
 }
 
-#buyScreen #buy_screen_box .buy_screen_payment #totalSelects table tbody tr th {
+.buy_screen_payment #totalSelects table tbody tr th {
   width: 15%;
   font-size: 1.45rem;
 }
 
-#buyScreen #buy_screen_box .buy_screen_payment #totalSelects table tbody tr td {
+.buy_screen_payment #totalSelects table tbody tr td {
   width: 85%;
   font-size: 1.45rem;
 }
 
-#buyScreen #buy_screen_box .buy_screen_payment #totalSelects table tbody tr td select {
+.buy_screen_payment #totalSelects table tbody tr td select {
   width: 100%;
   height: 40px;
   font-size: 1.45rem;
@@ -150,7 +150,7 @@
   cursor: pointer;
 }
 
-#buyScreen #buy_screen_box .buy_screen_payment #totalProducts .select-tip {
+.buy_screen_payment #totalProducts .select-tip {
   font-size: 1.5rem;
   font-weight: 300;
   color: #707070;
@@ -158,8 +158,8 @@
   padding: 5px 0 10px;
 }
 
-#buyScreen #buy_screen_box .buy_screen_payment .option_products tr,
-#buyScreen #buy_screen_box .buy_screen_payment .option_direct tr {
+.buy_screen_payment .option_products tr,
+.buy_screen_payment .option_direct tr {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -181,11 +181,11 @@
   padding: 20px;
 }
 
-#buyScreen #buy_screen_box .buy_button_box {
+.buy_button_box {
   position: fixed;
   width: 100%;
   max-width: 450px;
-  height: 49%;
+  height: 30%;
   padding: 22px 22px 61px 22px;
   margin-left: -11px;
   bottom: 0;
@@ -194,14 +194,14 @@
   background: #FAFAFE;
 }
 
-#buyScreen #buy_screen_box .buy_button_box h1 {
+.buy_button_box h1 {
   font-size: 1.6rem;
   font-weight: 600;
   color: #292929;
   padding-bottom: 20px;
 }
 
-#buyScreen #buy_screen_box .buy_button_box .total_price {
+.buy_button_box .total_price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,11 +218,11 @@
   font-size: 1.5rem;
 }
 
-#buyScreen #buy_screen_box .buy_button_box .total_price span:nth-child(2) {
+.buy_button_box .total_price span:nth-child(2) {
   font-weight: 600;
 }
 
-#buyScreen #buy_screen_box .buy_button_box .total_delivery {
+.buy_button_box .total_delivery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,25 +240,25 @@
   padding: 5px 0 10px;
 }
 
-#buyScreen #buy_screen_box .buy_button_box .total_delivery span:nth-child(2) span {
+.buy_button_box .total_delivery span:nth-child(2) span {
   font-size: 1.5rem;
 }
 
-#buyScreen #buy_screen_box .buy_button_box .total_delivery span:nth-child(2) span span {
+.buy_button_box .total_delivery span:nth-child(2) span span {
   font-size: 1.2rem;
 }
 
-#buyScreen #buy_screen_box .buy_button_box .total_delivery span:nth-child(2) span span strong {
+.buy_button_box .total_delivery span:nth-child(2) span span strong {
   font-size: 1.5rem;
 }
 
-#buyScreen #buy_screen_box .buy_button_box .ec-base-help {
+.buy_button_box .ec-base-help {
   font-size: 1.3rem;
   text-align: center;
   padding-bottom: 15px;
 }
 
-#buyScreen #buy_screen_box .buy_button_box #NaverChk_Button {
+.buy_button_box #NaverChk_Button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,7 +268,7 @@
   margin-bottom: 15px;
 }
 
-#buyScreen #buy_screen_box .buy_button_box .product_action {
+.buy_button_box .product_action {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -282,11 +282,11 @@
   margin-left: -22px;
 }
 
-#buyScreen #buy_screen_box .buy_button_box .product_action div {
+.buy_button_box .product_action div {
   width: 50%;
 }
 
-#buyScreen #buy_screen_box .buy_button_box .product_action div a {
+.buy_button_box .product_action div a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,23 +302,23 @@
   font-size: 1.6rem;
 }
 
-#buyScreen #buy_screen_box .buy_button_box .product_action .btn_buy {
+.buy_button_box .product_action .btn_buy {
   background: #022CFF;
 }
 
-#buyScreen #buy_screen_box .buy_button_box .product_action .btn_buy a {
+.buy_button_box .product_action .btn_buy a {
   color: #ffffff;
 }
 
-#buyScreen #buy_screen_box .buy_button_box .product_action .btn_cart {
+.buy_button_box .product_action .btn_cart {
   background: #ffffff;
 }
 
-#buyScreen #buy_screen_box .buy_button_box .product_action .btn_cart a {
+.buy_button_box .product_action .btn_cart a {
   color: #292929;
 }
 
-#buyScreen #buy_screen_box .buy_button_box .product_action .select_none {
+.buy_button_box .product_action .select_none {
   width: 100%;
   font-size: 1.6rem;
   font-weight: 500;
@@ -344,10 +344,24 @@
 }
 
 .product {
+  width: 210px;
+  max-width: 250px;
+  min-width: 200px;
   color: #022CFF;
   font-size: 1.35rem;
   font-weight: 500;
   margin-bottom: 10px;
+  text-overflow: ellipsis;
+}
+
+.option_product > td p:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
 }
 
 #quantity,
@@ -369,10 +383,10 @@
   width: 35px;
   height: 35px;
   border: 1px solid #E2E2E2;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   background: var(--plus-icon) no-repeat;
   background-size: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
@@ -380,7 +394,7 @@
 
 .eProductQuantityUpClass > img,
 .up > img {
-  display: none;
+  visibility: hidden;
 }
 
 .eProductQuantityDownClass,
@@ -399,11 +413,15 @@
 
 .eProductQuantityDownClass > img,
 .down > img {
-  display: none;
+  visibility: hidden;
 }
 
 .mileage {
   display: none;
+}
+
+.price::after {
+  content: none;
 }
 
 .ec-front-product-item-price {
@@ -420,8 +438,8 @@
   height: 15px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.426' height='13.423'%3E%3Cpath data-name='Icon ionic-ios-close' d='m8.304 6.711 4.8-4.8A1.124 1.124 0 0 0 11.515.327l-4.8 4.8-4.8-4.8A1.124 1.124 0 1 0 .331 1.911l4.8 4.8-4.8 4.8a1.124 1.124 0 0 0 1.584 1.584l4.8-4.8 4.8 4.8a1.124 1.124 0 1 0 1.584-1.584Z' fill='%23707070'/%3E%3C/svg%3E") no-repeat;
   background-size: contain;
-  top: 20px;
-  right: 20px;
+  top: 12px;
+  right: 12px;
 }
 
 .delete > img {

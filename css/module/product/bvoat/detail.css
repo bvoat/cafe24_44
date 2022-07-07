@@ -6,7 +6,7 @@
 
 #productDetailTop {
   position: relative;
-  margin-top: -40px;
+  margin-top: 40px;
 }
 
 #productDetailTop .product_brand {
@@ -24,7 +24,7 @@
       -ms-flex-align: start;
           align-items: flex-start;
   width: 100%;
-  padding: 10px 0 15px 0;
+  padding: 10px 11px 15px;
 }
 
 #productDetailTop .product_brand h2,
@@ -69,7 +69,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  padding: 17px 0;
+  padding: 17px 11px;
   border-bottom: 1px solid #E2E2E2;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -135,12 +135,13 @@
   height: 35px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35'%3E%3Cg data-name='그룹 2024' transform='translate(-406 -606)'%3E%3Ccircle data-name='타원 717' cx='17.5' cy='17.5' r='17.5' transform='translate(406 606)' fill='%23f2f2f2'/%3E%3Cg data-name='Icon feather-share-2' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath data-name='패스 1743' d='M429.98 617.663a2.663 2.663 0 1 1-2.664-2.663 2.663 2.663 0 0 1 2.663 2.663Z'/%3E%3Cpath data-name='패스 1744' d='M419.327 623.877a2.663 2.663 0 1 1-2.664-2.663 2.663 2.663 0 0 1 2.664 2.663Z'/%3E%3Cpath data-name='패스 1745' d='M429.98 630.091a2.663 2.663 0 1 1-2.664-2.663 2.663 2.663 0 0 1 2.664 2.663Z'/%3E%3Cpath data-name='패스 1746' d='m418.962 625.218 6.063 3.535'/%3E%3Cpath data-name='패스 1747' d='m425.017 619.004-6.055 3.535'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat center;
   text-indent: -9999px;
-  top: calc(19%);
-  right: 0;
+  top: calc(50% - (35px / 2));
+  right: 11px;
 }
 
 #productDetailTop .delivery_wrap {
   width: 100%;
+  padding: 0 11px;
 }
 
 #productDetailTop .delivery_wrap .delivery_info {
@@ -173,9 +174,9 @@
 
 #productDetailTop .mileage_wrap {
   position: relative;
-  width: calc(100% + 22px);
-  margin-left: -11px;
-  background: #FAFAFE;
+  width: 100%;
+  background: url(/bvtIMG/page_image/common/top_wave_bg.svg) no-repeat;
+  background-size: 100%;
   padding: 35px 11px 0;
 }
 
@@ -280,6 +281,7 @@
 
 #productDetailTop .mileage_wrap #mileage .mileage_crew p {
   font-size: 1.35rem;
+  margin-right: -5px;
 }
 
 #productDetailTop .mileage_wrap #mileage .mileage_crew p:nth-child(1) {
@@ -298,7 +300,7 @@
           align-items: flex-end;
   position: inherit;
   top: 36px;
-  right: 0;
+  right: -3px;
   font-size: 1.2rem;
 }
 
@@ -373,8 +375,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: calc(100% + 22px);
-  margin-left: -11px;
+  width: 100%;
   background: #FAFAFE;
   padding: 35px 11px;
   -webkit-box-sizing: border-box;
@@ -481,7 +482,7 @@
           justify-content: start;
   width: 100%;
   border-bottom: 1px solid #E2E2E2;
-  padding: 52px 0 9px 0;
+  padding: 52px 11px 9px;
   margin-bottom: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -489,19 +490,19 @@
 }
 
 .detail_tab_wrap .tab_custom {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 20px;
-  background: transparent;
-  margin-right: 20px;
-  font-size: 1.45rem;
-  color: #292929;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  height: 20px  !important;
+  background: transparent  !important;
+  margin-right: 15px  !important;
+  font-size: 1.45rem  !important;
+  color: #707070;
   opacity: 1;
 }
 
 .detail_tab_wrap .swiper-pagination-bullet-active {
-  color: #4D4D4D;
+  color: #292929;
   font-weight: bold;
 }
 
@@ -518,7 +519,7 @@
 #productDetailBottom {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -531,6 +532,17 @@
   overflow: hidden;
 }
 
+#productDetailBottom .detail_swiper_wrap {
+  height: auto;
+}
+
+#productDetailBottom .detail_swiper_wrap > div {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0 11px;
+}
+
 #productDetailBottom .detail_swiper_wrap #tab0 img {
   position: relative;
   width: 100%;
@@ -538,6 +550,9 @@
   min-width: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  margin: 20px 0;
 }
 
 #productDetailBottom .detail_swiper_wrap #tab0 iframe {
@@ -836,8 +851,7 @@
 }
 
 #buyAction {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

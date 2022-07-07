@@ -8,38 +8,26 @@ if (buy_record_frame != null) {
     `https://${api_domain}.shop/buy_records?product_no={$product_no}`
   );
 }
-//가치소비기록 iframe 높이 조절
-const computedHeight = (idx) => {
-  const detailBottomWrap = document.getElementById("productDetailBottom");
-  const detailBottomContent = document.getElementById("detail_swiper_wrap");
-  const tabContent = document.getElementById(`tab${idx}`);
-  //함수 실행
-  if (document.readyState == "loading") {
-    document.addEventListener("DOMContentLoaded", () => {
-      let firstTab = getComputedStyle(detailBottomContent);
-      const firstControlContentWrapHeight = (firstTab) => {
-        detailBottomWrap.style.height = firstTab.height;
-        detailBottomContent.style.height = firstTab.height;
-        tabContent.style.height = firstTab.height;
-      };
-      firstControlContentWrapHeight();
-    });
-  } else {
-    let tab = getComputedStyle(tabContent);
-    const controlContentWrapHeight = () => {
-      detailBottomWrap.style.height = tab.height;
-      detailBottomContent.style.height = tab.height;
-      tabContent.style.height = tab.height;
-    };
-    controlContentWrapHeight();
-  }
-};
+//최초 탭 높이 조절
+const productDetailBottom = document.getElementById("productDetailBottom");
+const detail_swiper_wrap = document.getElementById("detail_swiper_wrap");
+let firstTab = getComputedStyle(productDetailBottom);
+
+window.addEventListener("DOMContentLoaded", (firstTab)=>{
+  const firstControlContentWrapHeight = (firstTab) => {
+    productDetailBottom.style.height = firstTab.height;
+    detail_swiper_wrap.style.height = firstTab.height;
+  };
+  firstControlContentWrapHeight(firstTab)
+})
+
 //상품 상세 하단 페이지 탭 슬라이더
 //node 값 받아서 Array
 const tab = [...document.querySelectorAll(".tab")];
 const tab_txt = tab.map((node) => node.innerHTML);
 const tab_hash = tab.map((node) => node.dataset.hash);
 var swiper = new Swiper("#productDetailBottom", {
+  autoHeight: true,
   observer: true,
   observeParents: true,
   slidesPerView: "auto",
@@ -64,9 +52,10 @@ var swiper = new Swiper("#productDetailBottom", {
     },
   },
   on: {
-    slideChangeTransitionEnd: function change() {
-      computedHeight(swiper.realIndex);
-    },
+    // slideChangeTransitionEnd: function change() {
+    //  //autoHeight가 가능해서 window load 때만 height 값 주고 나머지는 autoHeight 처리
+    //   computedHeight(swiper.realIndex);
+    // },
   },
 });
 
@@ -154,18 +143,21 @@ const goShrBtn = (type, _url) => {
 const shareBtn = document.querySelector("#shareBtn");
 
 //선물하기 / 구매하기 클릭
-const toggleBuyScreen = (type) => {
-  const buyScreen = document.getElementById("buyScreen");
-  const buyScreenBox = document.getElementById("buy_screen_box");
-  const bodyCont = document.querySelector("body");
-  const headerCont = document.querySelector("#header");
-  buyScreen.classList.toggle("displaynone");
-  buyScreenBox.classList.toggle("displaynone");
-  buyScreenBox.classList.toggle("screen_on");
-  //추가 스타일 처리
-  bodyCont.classList.toggle("overhidden");
-  headerCont.classList.toggle("zindexzero");
-};
+const purchase_button = document.querySelectorAll(".purchase_button")
+Array.from(purchase_button).forEach((btn)=>{
+  btn.addEventListener("click",(e)=>{
+    e.preventDefault();
+    let type = e.currentTarget.dataset.type;
+    console.log('type: ', type);
+    const buyScreen = document.getElementById("buyScreen");
+    classToggle(buyScreen, "displaynone");
+  })
+})
+const screen_close_btn = document.querySelector(".screen_close_btn");
+screen_close_btn.addEventListener("click", ()=>{
+  classToggle(buyScreen, "displaynone");
+})
+
 
 /* 가격 할인가 확인 표시 */
 /* 가격 -> 스탬프 */
@@ -330,89 +322,89 @@ const reciveTagDetail = (prd_no) => {
 
 /* 최종 함수 실행 */
 //소비기록 컨트롤
-// buyRecordFrameControl();
+buyRecordFrameControl();
 //크루 등급 마일리지 2배 변환
-// crewValueControl(2);
+crewValueControl(2);
 //공유 이벤트 클릭
-// shareBtn.addEventListener("click", (e) => {
-//   const url = window.location.href;
-//   goShrBtn(`link`, url);
-// });
+shareBtn.addEventListener("click", (e) => {
+  const url = window.location.href;
+  goShrBtn(`link`, url);
+});
 //Q&A heading 컨트롤
-// qnaControl();
+qnaControl();
 //스탬프 만들기
-// createStamp(createStampPcsFromPrice);
+createStamp(createStampPcsFromPrice);
 //가치태그 수신
 reciveTagDetail(prd_no);
 
-/* cafe24 default */
-// Tab event
-$('#tabProduct a').on('click', function(e){
-    var oTarget = $(this).attr('href');
-    $(this).parent('li').addClass('selected').siblings().removeClass('selected');
+// /* cafe24 default */
+// // Tab event
+// $('#tabProduct a').on('click', function(e){
+//     var oTarget = $(this).attr('href');
+//     $(this).parent('li').addClass('selected').siblings().removeClass('selected');
 
-    $('#tabProduct a').each(function(){
-        var oSiblings = $(this).attr('href');
-        if (oTarget != oSiblings) {
-            $(oSiblings).hide();
-        } else {
-            $(oTarget).show();
-        }
-    });
-    removePagingArea(oTarget);
-});
+//     $('#tabProduct a').each(function(){
+//         var oSiblings = $(this).attr('href');
+//         if (oTarget != oSiblings) {
+//             $(oSiblings).hide();
+//         } else {
+//             $(oTarget).show();
+//         }
+//     });
+//     removePagingArea(oTarget);
+// });
 
-function removePagingArea(oTarget)
-{
-    if ($(oTarget).length < 1 && (oTarget != '#prdReview' || oTarget != '#prdQna')) return;
+// function removePagingArea(oTarget)
+// {
+//     if ($(oTarget).length < 1 && (oTarget != '#prdReview' || oTarget != '#prdQna')) return;
 
-    if ($(oTarget).css('display') == 'block') {
-        if (oTarget == '#prdReview') {
-            //var record = $('#prdReview .xans-record-', '.xans-product-review').first();
-            var record = $('.xans-record-', '.xans-product-review').first();
-            if (record.length < 1 || record.is(':not(:visible)')) {
-                $('.xans-product-reviewpaging').remove();
-             }
-         } else if (oTarget == '#prdQnA') {
-             //var record = $('#prdQnA .xans-record-', 'xans-product-qna').first();
-             var record = $('.xans-record-', '.xans-product-qna').first();
-             if (record.length < 1 || record.is(':not(:visible)')) {
-                 $('.xans-product-qnapaging').remove();
-             }
-         }
-     }
-}
+//     if ($(oTarget).css('display') == 'block') {
+//         if (oTarget == '#prdReview') {
+//             //var record = $('#prdReview .xans-record-', '.xans-product-review').first();
+//             var record = $('.xans-record-', '.xans-product-review').first();
+//             if (record.length < 1 || record.is(':not(:visible)')) {
+//                 $('.xans-product-reviewpaging').remove();
+//              }
+//          } else if (oTarget == '#prdQnA') {
+//              //var record = $('#prdQnA .xans-record-', 'xans-product-qna').first();
+//              var record = $('.xans-record-', '.xans-product-qna').first();
+//              if (record.length < 1 || record.is(':not(:visible)')) {
+//                  $('.xans-product-qnapaging').remove();
+//              }
+//          }
+//      }
+// }
 
-$(function() {
+// $(function() {
 
-    $('#actionCartClone, #actionWishClone, #actionBuyClone, #actionWishSoldoutClone').off().on('click', function() {
-        try {
-            var id = $(this).attr('id').replace(/Clone/g, '');
-            if (typeof(id) !== 'undefined') $('#' + id).trigger('click');
-            else return false;
-        } catch(e) {
-            return false;
-        }
-    });
+//     $('#actionCartClone, #actionWishClone, #actionBuyClone, #actionWishSoldoutClone').off().on('click', function() {
+//         try {
+//             var id = $(this).attr('id').replace(/Clone/g, '');
+//             if (typeof(id) !== 'undefined') $('#' + id).trigger('click');
+//             else return false;
+//         } catch(e) {
+//             return false;
+//         }
+//     });
 
-    function productDetailOrigin(){
-        var imgChk = $('#prdDetailContent').find('img').length;
-        if(imgChk <= 0){
-            $('#prdDetailBtn').remove();
-        }
-    }
-    productDetailOrigin();
+//     function productDetailOrigin(){
+//         var imgChk = $('#prdDetailContent').find('img').length;
+//         if(imgChk <= 0){
+//             $('#prdDetailBtn').remove();
+//         }
+//     }
+//     productDetailOrigin();
 
-    // Add Image
-    var oTarget = $('.xans-product-mobileimage ul li');
-    var oAppend = oTarget.first().children('p').clone();
+//     // Add Image
+//     var oTarget = $('.xans-product-mobileimage ul li');
+//     var oAppend = oTarget.first().children('p').clone();
 
-    oTarget.slice(1).each(function() {
-        var listHtml = $(this).html();
-        $(this).children().wrap(function() {
-            return '<p class="thumbnail">' + oAppend.html() + listHtml + '</p>';
-        });
+//     oTarget.slice(1).each(function() {
+//         var listHtml = $(this).html();
+//         $(this).children().wrap(function() {
+//             return '<p class="thumbnail">' + oAppend.html() + listHtml + '</p>';
+//         });
 
-        $(this).children('p').children('img').first().remove();
-    });
-});
+//         $(this).children('p').children('img').first().remove();
+//     });
+// });

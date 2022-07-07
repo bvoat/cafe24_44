@@ -82,3 +82,33 @@ function monitoringPrice () {
 }
 window.addEventListener("DOMContentLoaded", ()=>{monitoringPrice()})
 
+
+
+//상단바 컨트롤
+/* nav 컨트롤 스크립트 */
+const controlTabNav = (page_path) => {
+  // nav 전체
+  console.log("page_path",page_path);
+  const top_nav = document.querySelector("#top_nav");
+  const default_nav = document.querySelector(".default_top_nav");
+  const comm_nav = document.querySelector(".community_top_nav");
+  //제외할 대표 path 단어
+  const expect_array = ['myshop/index', 'join', 'modify', 'detail', 'basket'];
+  //커뮤니티용 path 단어
+  const community_array = ['community', 'buy_records'];
+  //nav용 path 단어
+  const nav = ['crew', 'index', 'funding']
+  //디폴트 메뉴 사라지게
+  expect_array.forEach((path)=>{
+    page_path.includes(path) ? default_nav.classList.add("displaynone") : null;
+  })
+  community_array.forEach((path)=>{
+    if(page_path.includes(path)) {
+      default_nav.classList.add("displaynone");
+      comm_nav.classList.remove("displaynone");
+      document.querySelector(`#${path}`).classList.add("top_nav_active");
+    }
+  });
+
+}
+window.addEventListener("DOMContentLoaded", ()=>{controlTabNav(window.location.href)})

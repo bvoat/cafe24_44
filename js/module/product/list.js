@@ -28,16 +28,25 @@ const makeHeadingTwo = (category, description) => {
 };
 window.addEventListener("DOMContentLoaded",makeHeadingTwo(category, description))
 /* category description 추가 */
-
-/* 하위 카테고리 슬라이드 */
+/* 추천 카테고리 슬라이드 */
 var swiper = new Swiper("#productListrecommendList", {
   slidesPerView: 2,
-  spaceBetween: 11,
+  spaceBetween: 14,
   pagination: {
-      el: ".product_list_pagination",
-      clickable: true,
-      type: "progressbar",
+    el: ".product_list_pagination",
+    clickable: true,
+    type: "progressbar",
   },
 });
-
+/* 추천 카테고리 슬라이드 */
 /* 하위 카테고리 슬라이드 */
+var swiper = new Swiper("#subCategorySwiper", {
+  slidesPerView: 5,
+  spaceBetween: 15,
+});
+/* 하위 카테고리 슬라이드 */
+/* 하위 카테고리 숨김*/
+window.addEventListener("DOMContentLoaded", ()=>{
+  document.querySelector(".subcategory>li") == null ? document.querySelector("#subCategorySwiper").classList.add("displaynone") : null;
+})
+/* 하위 카테고리 숨김 */

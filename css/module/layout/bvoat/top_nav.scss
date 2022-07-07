@@ -4,28 +4,26 @@
 
 #topNav {
     border-bottom: $bvt-btn-border-gray;
-    backdrop-filter: blur(30%) brightness(50%) opacity(71%);
     // slider swiper zone
     .default_top_nav{
         width: 100%;
+        max-width: 450px;
         height: 40px;
         .top_nav_list{
-            width: 100%;
-            height: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 0 11px;
             .top_nav_item {
+                width: fit-content !important;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 1.5rem;
+                font-size: 1.45rem;
                 font-weight: normal;
                 >a{
                     display: block;
+                    word-break: keep-all;
                 }
             }
-            .crew{
+            #crew{
                 position: relative;
                 margin-left: 5px;
                 >a{color: $bvt-blue;}
@@ -41,13 +39,6 @@
                     right:0px;
                 }
             }
-            .crew, .store, .funding{
-                width: 70px !important;
-            }
-            .category{
-                width: 35px !important;
-            }
-
             .top_nav_active{
                 >a{color: $bvt-blue; font-weight: bold;}
                 &::after{
