@@ -9,7 +9,7 @@
     width: 100%;
     max-width: 450px;
     padding: 23px 11px;
-    margin-top: -40px; //top_nav hide
+    margin-top: 40px; //top_nav hide
 
     #BasketTitle {
         display: flex;
@@ -49,26 +49,25 @@
                 font-size: 1.5rem;
                 font-weight: 500;
             }
-
-            >button {
-                background: none;
-                font-size: 1.45rem;
-                font-weight: 600;
-            }
         }
+
         .empty {
             text-align: center;
             margin-top: 50px;
-            font-size: 1.5rem; font-weight: 500; color: $bvt-darkgray;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $bvt-darkgray;
         }
 
+        // 일반 상품 리스트
         #BasketList {
             width: 100%;
             max-width: 450px;
 
-            .basket_normal {
+            .boardList {
                 width: 100%;
                 max-width: 450px;
+
                 .basket_list {
                     width: 100%;
                     max-width: 450px;
@@ -133,29 +132,29 @@
                             display: flex;
                             flex-flow: row nowrap;
 
-                            .item_img {
-                                display: flex;
-                                flex-flow: column nowrap;
-                                justify-content: flex-start;
-
-                                .item_img_link {
-                                    position: relative;
-                                    display: block;
-                                    border-radius: 6px;
-                                    overflow: hidden;
+                            .item_img{
+                                .thumb {
+                                    display: flex;
+                                    flex-flow: column nowrap;
+                                    justify-content: flex-start;
                                     width: 85px;
-                                    height: 85px;
-
-                                    >img {
-                                        position: absolute;
-                                        width: 85px;
-                                        height: 85px;
-                                        object-fit: cover;
-                                        top: 0;
-                                        left: 0;
+    
+                                    >a {
+                                        display: block;
+                                        position: relative;
+                                        padding-top: calc(100% - 14.5px);
+                                        overflow: hidden;
+                                        border-radius: 4px;
+    
+                                        >img {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                        }
                                     }
                                 }
-
+    
                                 .order_btn {
                                     padding: 5px 0;
                                     background: $bvt-blue;
@@ -163,20 +162,22 @@
                                     color: $bvt-white;
                                     border-radius: 6px;
                                     margin-top: 4px;
-                                }
+                                }    
                             }
-
+                           
                             .item_info {
                                 display: flex;
                                 flex-flow: column nowrap;
                                 justify-content: space-between;
                                 width: calc(100% - 85px);
                                 padding: 0 12px;
+
                                 //상품명
                                 .item_name {
                                     font-size: 1.6rem;
                                     font-weight: 600;
                                     margin-bottom: 4px;
+
                                     >a {
                                         color: $bvt-blue;
                                     }
@@ -192,7 +193,7 @@
                                             justify-content: space-between;
                                             font-size: 1.3rem;
                                             color: $bvt-darkgray;
-                                            
+
                                         }
 
                                         >p>.title {
@@ -201,33 +202,37 @@
                                             color: $bvt-black;
                                         }
 
-                                        .mileage{
-                                            >img{
-                                                display:none;
+                                        .mileage {
+                                            >img {
+                                                display: none;
                                             }
                                         }
-                                        .quantity{
+
+                                        .quantity {
                                             display: flex;
                                             flex-flow: row nowrap;
                                             align-items: center;
 
-                                            .quantity_btn{
+                                            .quantity_btn {
                                                 display: flex;
                                                 flex-flow: row nowrap;
                                                 align-items: center;
                                                 cursor: pointer;
-                                                >img{
+
+                                                >img {
                                                     width: 14px;
                                                     height: 15px;
                                                     object-fit: cover;
                                                 }
-                                                >input{
+
+                                                >input {
                                                     margin: 0 4px;
                                                     border: none;
                                                     text-align: center;
                                                     font-size: 1.2rem;
                                                 }
-                                                >.quan_btn{
+
+                                                >.quan_btn {
                                                     background-color: $bvt-white;
                                                     font-size: 1.1rem;
                                                     margin-left: 10px;
@@ -237,8 +242,9 @@
                                         }
                                     }
                                 }
+
                                 //상품 총 가격
-                                .item_total{
+                                .item_total {
                                     width: 100%;
                                     padding: 4px 0;
                                     text-align: right;
@@ -253,12 +259,14 @@
 
                 }
             }
-            .basket_select_btn_wrap{
+
+            .basket_select_btn_wrap {
                 width: 100%;
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: flex-end;
-                >button{
+
+                >button {
                     padding: 10px 20px;
                     background: none;
                     border-radius: 6px;
@@ -269,12 +277,12 @@
             }
         }
 
-        .basket_total{
+        .basket_total {
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
 
-            >li{
+            >li {
                 display: flex;
                 flex-flow: column nowrap;
                 justify-content: center;
@@ -285,15 +293,18 @@
                 background: $bvt-bg-lightblue;
                 text-align: center;
                 margin: 14px 0;
-                >h3{
+
+                >h3 {
                     font-size: 1.4rem;
                     margin-bottom: 0.8rem;
                 }
-                >p{
+
+                >p {
                     font-size: 1.3rem;
                     font-weight: 300;
                 }
-                .total_order{
+
+                .total_order {
                     color: $bvt-blue;
                     font-size: 1.5rem;
                     font-weight: 600;
@@ -301,23 +312,26 @@
             }
         }
 
-        #orderFixItem{
+        #orderFixItem {
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
-            >button{
+
+            >button {
                 padding: 20px 45px;
                 border-radius: 60px;
                 font-weight: 500;
                 font-size: 1.6rem;
             }
-            .order_select{
+
+            .order_select {
                 background: $bvt-white;
                 border: $bvt-btn-border;
                 margin-right: 12px;
                 color: $bvt-blue;
             }
-            .order_all{
+
+            .order_all {
                 background: $bvt-blue;
                 color: $bvt-white;
             }
