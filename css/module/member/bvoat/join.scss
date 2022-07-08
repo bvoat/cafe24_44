@@ -1,6 +1,6 @@
 @charset "utf-8";
-@import "../../../../layout/basic/css/abstracts/mixin";
-@import "../../../../layout/basic/css/abstracts/variables";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
 :root{
     --result-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/result-back.png");
     --result-title-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/bvoat-logo-earthst.png");
@@ -10,7 +10,7 @@
     width: 100%;
     max-width: 450px;
     padding: 23px 11px 100px;
-    margin-top: -40px;//top_nav hide
+    margin-top: 80px;//top_nav hide
     #memberJoinTitle {
         margin-bottom: 18px;
         h2 {

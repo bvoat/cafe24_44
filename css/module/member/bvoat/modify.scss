@@ -1,6 +1,6 @@
 @charset "utf-8";
-@import "../../../../layout/basic/css/abstracts/mixin";
-@import "../../../../layout/basic/css/abstracts/variables";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
 
 #memberModify {
     display: flex;
@@ -9,7 +9,7 @@
     width: 100%;
     max-width: 450px;
     padding: 23px 11px;
-    margin-top: -40px;//top_nav hide
+    margin-top: 80px;//top_nav hide
     #memberModifyTitle {
         display: flex;
         flex-flow: column nowrap;

@@ -1,6 +1,6 @@
 @charset "utf-8";
-@import "../../../../layout/basic/css/abstracts/mixin";
-@import "../../../../layout/basic/css/abstracts/variables";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
 
 :root {
     --login-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/bvoat-logo-earthst.png")
@@ -10,7 +10,7 @@
     width: 100%;
     max-width: 450px;
     padding: 80px 11px;
-    margin-top: -40px; //top_nav hide
+    margin-top: 40px; //top_nav hide
 
     #memberLoginTitle {
         display: flex;
@@ -162,10 +162,10 @@
 
                             .login_util_tooltip {
                                 position: absolute;
-                                width: 190%;
+                                width: 160%;
                                 height: 24px;
                                 top: 27px;
-                                left: -23px;
+                                left: -15px;
                                 background: $bvt-black;
                                 font-size: 1.02rem;
                                 font-weight: 400;
