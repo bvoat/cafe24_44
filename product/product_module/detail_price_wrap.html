@@ -3,10 +3,11 @@
     <li class=" display_product">{$product_price|numberformat}</li>
 </ul> -->
 <ul class="price_wrap">
-    <li class="display_discount price" data-pricename="소비자가"
-    data-price="{$product_custom|numberformat}">{$product_custom|numberformat}</li>
-    <li class="display_product price" data-pricename="상품 가격"
+    <li class="discount displaynone" data-name="할인율" title="할인율"></li>
+    <li class="display_product price_item" data-name="상품 가격" title="상품 가격"
     data-price="{$product_price}">{$product_price|numberformat}</li>
+    <li class="display_discount price_item" data-name="소비자가" title="할인가"
+    data-price="{$product_custom}">{$product_custom|numberformat}</li>
 </ul>
 
 <!-- 

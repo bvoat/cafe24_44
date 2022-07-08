@@ -61,26 +61,44 @@ function monitoringPrice () {
   const price_content = document.querySelectorAll(".price_wrap");
 
   price_content.forEach((price)=>{
-    let custom_price = price.children[0];
-    let fixed_price = price.children[1];
+    let discount = price.children[0];
+    let display_product = price.children[1];
+    console.log('display_product: ', display_product);
+    let display_discount = price.children[2];
+    console.log('display_discount: ', display_discount);
+    // let product_name = price.previousElementSibling;
 
     //소비자가(할인가)가 내부에 가격이 있고 판매가에도 가격이 있고 소비자가의 숫자가 0이 아니면 (할인 중)
-    if(custom_price.hasChildNodes()  && fixed_price.hasChildNodes() && custom_price.dataset.price != '0'){
-      //판매가에 onpromotion class 붙이고
-      fixed_price.classList.add("onpromotion");
-      let discount = fixed_price.dataset.price-custom_price.dataset.price;
+    if(display_discount.hasChildNodes()  && display_product.hasChildNodes() && parseInt(display_discount.dataset.price)!= '0'){
+      //판매가에 strike_price class 붙이고
+      display_product.classList.add("strike_price");
+      //소비자가에 onpromotion class 붙이고
+      display_discount.classList.add("onpromotion");
+      //소비자가에 finalprice class 붙이기
+      display_discount.classList.add("finalprice");
+
+      //할인된 가격 계산
+      let discount_num = display_product.dataset.price-display_discount.dataset.price;
       //할인율 계산
-      let percentage = discount / fixed_price.dataset.price * 100;
-      console.log('percentage: ', percentage, "할인중");
+      let percentage = Math.floor(discount_num / display_product.dataset.price * 100);
+      //할인율 넣고 할인 부분 보이게 하기
+      discount.insertAdjacentText("beforeend", `${percentage}%`);
+      discount.classList.remove("displaynone");
+      
       //소비자가는 없고 판매가에 가격이 있고 소비자가의 가격이 0이면 (할인 안함)
-    }else if(!custom_price.hasChildNodes() && fixed_price.hasChildNodes() || custom_price.dataset.price == 0){
+    }else if(!display_discount.hasChildNodes() && display_product.hasChildNodes() || parseInt(display_discount.dataset.price) == 0 || display_discount.dataset.price == ""){
       //소비자가에 "원" 표시되지 않도록 삭제
-      custom_price.classList.add("displaynone");
+      display_discount.classList.add("displaynone");
+      
+      //판매가에 finalprice class 붙이기
+      display_product.classList.add("finalprice");
     }
-    
-  })
+  });
 }
+
 window.addEventListener("DOMContentLoaded", ()=>{monitoringPrice()})
+
+
 
 
 

@@ -303,7 +303,13 @@ div.layerProgress {
 .displaynone {
     display: none;
 }
-
+/* 비보트 추가 */
+.overhidden {
+    overflow: hidden !important;
+}
+.zindexzero {
+    z-index: 0 !important;
+}
 
 .dimmed {
     position: fixed;
@@ -332,53 +338,48 @@ div.layerProgress {
 }
 /* 가격 표시 */
 .price_wrap{
+    position: relative;
     display: flex;
     flex-flow: row nowrap;
 }
-.price_wrap>.price{
-    font-size: 1.4rem;
+.price_wrap>.discount{
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #FF7600;
+    margin-right: 0.88rem;
+}
+.price_wrap>.price_item{
+    font-size: 1.6rem;
     font-weight: bold;
     color: #022cff;
 }
-.price::after{
+.price_item::after{
     display: inline-block;
     content: "원";
-    font-size: 1.38rem;
+    font-size: 1.5rem;
     font-weight: normal;
     color: #292929;
+    margin-left: 1px;
 }
-.onpromotion{
+.strike_price{
+    position: absolute;
+    left: -4px;
+    bottom: 2.15rem;
     text-decoration: line-through !important;
     color: #ABABAB !important;
     font-size :
-    1.4rem !important;
+    1.1rem !important;
     font-weight: 400 !important;
     margin-left: 5px !important;
 }
+.strike_price::after{
+    color: #ABABAB !important;
+    font-size :
+    1.05rem !important;
+}
+.onpromotion{
+    color: #FF7600 !important;
+}
 .onpromotion::after{
-    color: #ABABAB !important;
-    font-size :
-    1.43rem !important;
+    color: #FF7600 !important;
 }
-/* .price_wrap>li>span, .price_wrap>li>span>span, .price_wrap>li>span>span>span{
-    font-size: 1.48rem !important;
-    font-weight: 600 !important;
-    color: #022cff !important;
-}
-
-.pricenonsale, .detail_product>span, .display_product>span>strong{
-    text-decoration: line-through !important;
-    color: #ABABAB !important;
-    font-size :
-    1.43rem !important;
-    margin-left: 5px !important;
-}
-.pricenonsale::after, .detail_product::after{
-    color: #ABABAB !important;
-}
-.overhidden {
-    overflow: hidden !important;
-}
-.zindexzero {
-    z-index: 0 !important;
-} */

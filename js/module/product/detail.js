@@ -159,7 +159,6 @@ screen_close_btn.addEventListener("click", ()=>{
 })
 
 
-/* 가격 할인가 확인 표시 */
 /* 가격 -> 스탬프 */
 //스탬프 갯수 변수 할당
 const createStampPcsFromPrice = (price) => {
@@ -209,24 +208,12 @@ const displayStampImg = (productStamp) => {
 };
 //스탬프 promise 진행
 const createStamp = (createStampPcsFromPrice) => {
-  let final_price_list = document.querySelectorAll(".price");
-  let sale = document.querySelector("#span_product_price_sale");
-  let origin = document.querySelector("#span_product_price_text");
-  let final_price = final_price_list[0].textContent;
-  if (sale != null && origin != null) {
-    console.log("sale != null && origin != null");
-    console.log("sale", sale.textContent, "origin", origin.textContent);
-  } else if (sale == null && origin != null) {
-    console.log("sale == null && origin != null");
-    console.log("origin", origin.textContent);
-    //상품 설명 안보이게
-    if (document.querySelector(".detail_product")) {
-      document.querySelector(".detail_product").classList.add("displaynone");
-    }
-  }
+  let final_price = parseInt(document.querySelector(".finalprice").dataset.price);
+  console.log('final_price: ', final_price);
+
 
   if (final_price < 1000) {
-    final_price = parseFloat(final_price_list[0].textContent) / 10000;
+    final_price = final_price / 10000;
     console.log('final_price1: ', final_price);
     //스탬프 총 갯수 변수에 할당
     createStampPcsFromPrice(final_price)
@@ -241,7 +228,7 @@ const createStamp = (createStampPcsFromPrice) => {
         displayStampTxt(0);
       });
   } else {
-    final_price = parseFloat(final_price_list[0].textContent) / 10;
+    final_price = final_price / 10000;
     console.log('final_price2: ', final_price);
     //스탬프 총 갯수 변수에 할당
     createStampPcsFromPrice(final_price)
@@ -256,38 +243,6 @@ const createStamp = (createStampPcsFromPrice) => {
         displayStampTxt(0);
       });
   }
-
-  // if(final_price_list){
-  //    console.log("sale",parseFloat(salePrice.textContent)/1000)
-  //     //스탬프 총 갯수 변수에 할당
-  //     // createStampPcsFromPrice(parseFloat(salePrice.textContent)/1000)
-  //     // .then((res)=>{
-  //     //     console.log("stamp", res, "개")
-  //     //     displayStampImg(res);
-  //     //     displayStampTxt(res);
-  //     // })
-  //     // .catch((reject)=>{
-  //     //     console.log("스탬프 에러", reject);
-  //     //     displayStampImg(0);
-  //     //     displayStampTxt(0);
-  //     // })
-  // } else {
-  //    console.log("productPrice",parseFloat(productPrice.textContent)/10)
-
-  //     //스탬프 총 갯수 변수에 할당
-  //     // createStampPcsFromPrice(parseFloat(productPrice.textContent)/1000)
-  //     // .then((res)=>{
-  //     //     console.log("stamp", res, "개")
-  //     //     displayStampImg(res);
-  //     //     displayStampTxt(res);
-  //     // })
-  //     // .catch((reject)=>{
-  //     //     console.log("스탬프 에러", reject);
-  //     //     displayStampImg(0);
-  //     //     displayStampTxt(0);
-  //     // })
-
-  // }
 };
 
 /* 가치태그 수신 */
@@ -333,7 +288,7 @@ shareBtn.addEventListener("click", (e) => {
 //Q&A heading 컨트롤
 qnaControl();
 //스탬프 만들기
-createStamp(createStampPcsFromPrice);
+window.addEventListener("DOMContentLoaded", ()=>{createStamp(createStampPcsFromPrice)})
 //가치태그 수신
 reciveTagDetail(prd_no);
 
