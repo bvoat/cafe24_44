@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #Basket {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,8 +12,8 @@
           align-items: center;
   width: 100%;
   max-width: 450px;
-  padding: 23px 11px;
-  margin-top: 40px;
+  padding: 23px 11px 150px;
+  margin: 40px auto 80px;
 }
 
 #Basket #BasketTitle {
@@ -45,9 +46,46 @@
 #Basket #BasketSection {
   width: 100%;
   max-width: 450px;
+  padding: 0 11px;
 }
 
-#Basket #BasketSection .basket_count {
+#Basket #BasketSection .empty {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #707070;
+}
+
+#BasketList {
+  width: 100%;
+  max-width: 450px;
+}
+
+#BasketList .boardList {
+  width: 100%;
+  max-width: 450px;
+}
+
+#BasketList .basket_list {
+  width: 100%;
+  max-width: 450px;
+}
+
+#BasketList .basket_list .basket_item {
+  border-radius: 15px;
+  border: 1px solid #E2E2E2;
+  padding: 3% 5%;
+  background: #ffffff;
+  -webkit-box-shadow: 3px 7px 11px #EDEFF5;
+          box-shadow: 3px 7px 11px #EDEFF5;
+  margin-bottom: 15px;
+}
+
+.basket_count {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,48 +103,15 @@
   border-radius: 12px;
   padding: 12px 23px;
   background: #F2F2F2;
+  margin-bottom: 18px;
 }
 
-#Basket #BasketSection .basket_count > p {
+.basket_count > p {
   font-size: 1.5rem;
   font-weight: 500;
 }
 
-#Basket #BasketSection .empty {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #707070;
-}
-
-#Basket #BasketSection #BasketList {
-  width: 100%;
-  max-width: 450px;
-}
-
-#Basket #BasketSection #BasketList .boardList {
-  width: 100%;
-  max-width: 450px;
-}
-
-#Basket #BasketSection #BasketList .boardList .basket_list {
-  width: 100%;
-  max-width: 450px;
-  padding: 11px;
-}
-
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item {
-  border-radius: 15px;
-  border: 1px solid #E2E2E2;
-  padding: 3% 5%;
-  background: #ffffff;
-  -webkit-box-shadow: 3px 7px 11px #EDEFF5;
-          box-shadow: 3px 7px 11px #EDEFF5;
-  margin-bottom: 12px;
-}
-
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_control {
+.item_control {
   width: 100%;
   height: 20px;
   display: -webkit-box;
@@ -125,41 +130,28 @@
   margin-bottom: 10px;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_control .item_check {
+.item_control > input {
   width: 18px;
   height: 18px;
   cursor: pointer;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_control .non_checkbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 140px;
-  height: 20px;
-}
-
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_control .non_checkbox > button {
-  height: 20px;
-  background: none;
-  font-size: 1.2rem;
-  font-weight: 500;
+.item_control .wish_btn {
   border: 1px solid #E2E2E2;
   border-radius: 30px;
+  padding: 3px 10px;
+  font-size: 1.05rem;
+  margin: 2px;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_control .non_checkbox .wish_btn {
-  width: 103px;
+.item_control .del_btn {
+  border: 1px solid #E2E2E2;
+  border-radius: 30px;
+  padding: 3px 10px;
+  font-size: 1.05rem;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_control .non_checkbox .del_btn {
-  width: 30px;
-}
-
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc {
+.item_desc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,7 +161,11 @@
           flex-flow: row nowrap;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_img .thumb {
+.item_desc .item_img {
+  width: 85px;
+}
+
+.item_desc .item_img .thumb {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,31 +179,41 @@
   width: 85px;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_img .thumb > a {
+.item_desc .item_img .thumb > a {
   display: block;
   position: relative;
-  padding-top: calc(100% - 14.5px);
+  padding-top: 100%;
   overflow: hidden;
   border-radius: 4px;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_img .thumb > a > img {
+.item_desc .item_img .thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_img .order_btn {
-  padding: 5px 0;
+.item_desc .item_img .order_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
   background: #022CFF;
-  font-size: 1.2rem;
+  font-size: 1.08rem;
   color: #ffffff;
   border-radius: 6px;
   margin-top: 4px;
+  padding: 4px 0;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_info {
+.item_desc .item_info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,42 +228,64 @@
   padding: 0 12px;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_info .item_name {
-  font-size: 1.6rem;
+.item_desc .item_info .item_name {
+  font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 4px;
-}
-
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_info .item_name > a {
-  color: #022CFF;
-}
-
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_info .item_txt_wrap .item_price > p {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: 1.3rem;
-  color: #707070;
+  -webkit-line-clamp: 2;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 2.1rem;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_info .item_txt_wrap .item_price > p > .title {
-  display: inline-block;
+.item_desc .item_info .option {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.6rem;
+}
+
+.item_desc .item_info .price_list {
+  margin-bottom: 8px;
+}
+
+.item_desc .item_info .price_list .display_product {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #292929;
+  margin-top: 5px;
+}
+
+.item_desc .item_info .price_list .display_discount {
+  font-size: 1.35rem;
   font-weight: 500;
   color: #292929;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_info .item_txt_wrap .item_price .mileage > img {
+.item_desc .item_info .mileage {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.item_desc .item_info .mileage > img {
   display: none;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_info .item_txt_wrap .item_price .quantity {
+.item_desc .item_info .quantity {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,44 +296,37 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 25px;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_info .item_txt_wrap .item_price .quantity .quantity_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
+.item_desc .item_info .quantity .quan_down {
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35'%3E%3Cg data-name='그룹 2025'%3E%3Cpath data-name='사각형 2328' fill='%23fff' d='M0 0h35v35H0z'/%3E%3Cpath data-name='Icon feather-minus' d='M11.5 17.5h13' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
+  background-position: center;
+  border: 1px solid #E2E2E2;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_info .item_txt_wrap .item_price .quantity .quantity_btn > img {
-  width: 14px;
-  height: 15px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_info .item_txt_wrap .item_price .quantity .quantity_btn > input {
-  margin: 0 4px;
-  border: none;
+.item_desc .item_info .quantity > input {
+  width: 60px;
+  height: 27px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  margin: 0 3px;
+  border: 1px solid #E2E2E2;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_info .item_txt_wrap .item_price .quantity .quantity_btn > .quan_btn {
-  background-color: #ffffff;
-  font-size: 1.1rem;
-  margin-left: 10px;
-  padding: 7px;
+.item_desc .item_info .quantity .quan_up {
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35'%3E%3Cg data-name='그룹 2025'%3E%3Cpath data-name='사각형 2328' fill='%23fff' d='M0 0h35v35H0z'/%3E%3Cg data-name='Icon feather-plus' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath data-name='패스 1754' d='M17.5 11v13'/%3E%3Cpath data-name='패스 1755' d='M11 17.5h13'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat;
+  background-position: center;
+  border: 1px solid #E2E2E2;
 }
 
-#Basket #BasketSection #BasketList .boardList .basket_list .basket_item .item_desc .item_info .item_total {
+.item_desc .item_info .total {
   width: 100%;
   padding: 4px 0;
   text-align: right;
@@ -314,8 +335,7 @@
   color: #022CFF;
 }
 
-#Basket #BasketSection #BasketList .basket_select_btn_wrap {
-  width: 100%;
+.basket_select_action_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,19 +346,25 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 35px;
 }
 
-#Basket #BasketSection #BasketList .basket_select_btn_wrap > button {
-  padding: 10px 20px;
-  background: none;
-  border-radius: 6px;
-  font-size: 1.4rem;
-  font-weight: 500;
+.prd_select_btn {
+  padding: 7px 16px;
   -webkit-box-shadow: 0px 3px 7px #70707027;
           box-shadow: 0px 3px 7px #70707027;
+  border: 1px solid #E2E2E2;
+  border-radius: 20px;
+  background: #ffffff;
 }
 
-#Basket #BasketSection .basket_total {
+.select_clear {
+  margin-left: 5px;
+}
+
+.basket_total {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,9 +375,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
+  max-width: 450px;
 }
 
-#Basket #BasketSection .basket_total > li {
+.basket_total > li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,31 +393,43 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 23px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 5px 5%;
   border: 1px solid #E2E2E2;
   border-radius: 12px;
   background: #FAFAFE;
   text-align: center;
-  margin: 14px 0;
+  margin: 14px 5px;
 }
 
-#Basket #BasketSection .basket_total > li > h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
-}
-
-#Basket #BasketSection .basket_total > li > p {
+.basket_total > li > h3 {
   font-size: 1.3rem;
-  font-weight: 300;
+  margin-bottom: 0.3rem;
 }
 
-#Basket #BasketSection .basket_total > li .total_order {
+.basket_total > li > p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.basket_total > li .total_order {
   color: #022CFF;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
-#Basket #BasketSection #orderFixItem {
+#orderFixItem {
+  position: relative;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -400,24 +440,59 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0 auto;
 }
 
-#Basket #BasketSection #orderFixItem > button {
-  padding: 20px 45px;
+#orderFixItem > button {
+  padding: 6% 12%;
   border-radius: 60px;
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
-#Basket #BasketSection #orderFixItem .order_select {
+#orderFixItem .order_select {
   background: #ffffff;
   border: 1px solid #022CFF;
-  margin-right: 12px;
   color: #022CFF;
 }
 
-#Basket #BasketSection #orderFixItem .order_all {
+#orderFixItem .order_all {
   background: #022CFF;
   color: #ffffff;
+  margin-left: 6px;
+}
+
+#orderFixItem .naver_checkout {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  top: 80px;
+  left: 50%;
+  -webkit-transform: translate(-107px, 0);
+          transform: translate(-107px, 0);
+}
+
+.basket_select_btn_wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.basket_select_btn_wrap > button {
+  padding: 10px 20px;
+  background: none;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  -webkit-box-shadow: 0px 3px 7px #70707027;
+          box-shadow: 0px 3px 7px #70707027;
 }
 /*# sourceMappingURL=basket.css.map */

@@ -363,14 +363,12 @@ div.layerProgress {
 }
 .strike_price{
     position: absolute;
-    left: -4px;
     bottom: 2.15rem;
     text-decoration: line-through !important;
     color: #ABABAB !important;
     font-size :
     1.1rem !important;
     font-weight: 400 !important;
-    margin-left: 5px !important;
 }
 .strike_price::after{
     color: #ABABAB !important;

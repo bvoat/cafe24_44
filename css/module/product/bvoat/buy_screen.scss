@@ -2,11 +2,7 @@
 @import "../../../abstracts/mixin";
 @import "../../../abstracts/variables";
 
-:root {
-    --plus-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35'%3E%3Cg data-name='그룹 2025'%3E%3Cpath data-name='사각형 2328' fill='%23fff' d='M0 0h35v35H0z'/%3E%3Cg data-name='Icon feather-plus' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath data-name='패스 1754' d='M17.5 11v13'/%3E%3Cpath data-name='패스 1755' d='M11 17.5h13'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
-    --minus-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35'%3E%3Cg data-name='그룹 2025'%3E%3Cpath data-name='사각형 2328' fill='%23fff' d='M0 0h35v35H0z'/%3E%3Cpath data-name='Icon feather-minus' d='M11.5 17.5h13' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
-}
 
 #buyScreen {
     position: fixed;
@@ -315,7 +311,7 @@
     width: 35px;
     height: 35px;
     border: $bvt-btn-border-gray;
-    background: var(--plus-icon) no-repeat;
+    background: $plus-icon no-repeat;
     background-size: cover;
     box-sizing: border-box;
     order: 3;
@@ -331,7 +327,7 @@
     height: 35px;
     border: $bvt-btn-border-gray;
     box-sizing: border-box;
-    background: var(--minus-icon) no-repeat;
+    background: $minus-icon no-repeat;
     background-size: cover;
     order: 1;
     >img{
