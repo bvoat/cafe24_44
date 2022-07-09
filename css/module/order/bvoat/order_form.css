@@ -12,7 +12,7 @@
   width: 100%;
   max-width: 450px;
   padding: 23px 11px;
-  margin-top: -40px;
+  margin-top: 40px;
 }
 
 #orderForm #orderFormTitle {
@@ -43,129 +43,76 @@
   line-height: 1.9rem;
 }
 
-#orderForm #frm_order_act {
-  position: relative;
-  width: 100%;
-  max-width: 450px;
-}
-
-#orderForm #orderFormSection .toggleArea {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  width: 100%;
-  max-width: 450px;
-}
-
-#orderForm #orderFormSection div > .title {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  max-width: 450px;
-  height: 40px;
-  margin: 0;
-  padding: 11px 35px 11px 14px;
-  cursor: pointer;
-  background: #8E8E8E;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  color: #ffffff;
-  font-size: 1.4rem;
-  font-weight: 500;
-}
-
-#orderForm #orderFormSection div > .title > h3 {
-  color: #ffffff;
-  font-size: 1.4rem;
-  font-weight: 500;
-}
-
-#orderForm #orderFormSection div > .contents {
-  position: relative;
-  width: 100%;
-  max-width: 450px;
-  margin: 0;
-  cursor: pointer;
-  background: #ffffff;
-  font-size: 1.3rem;
-  padding: 3px 0;
-}
-
-#orderForm #orderFormSection div > .contents h3, #orderForm #orderFormSection div > .contents h4 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 43px;
-  padding: 13px;
-  background: #F2F2F2;
+#orderForm #mCafe24Order .txtEm, #orderForm #mCafe24Order .txtStrong {
   color: #022CFF;
-  font-size: 1.4rem;
   font-weight: 500;
-  border-bottom: 1px solid #E2E2E2;
 }
 
-.xans-order-form .orderArea .prdInfo .description {
-  position: relative;
-  min-height: 90px;
-  padding: 10px 0 0 100px;
-}
-
-.xans-order-form .orderArea .prdInfo .description .prdImg {
-  width: 85px;
-  height: 85px;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.xans-order-form .orderArea .prdInfo .description .prdImg a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.xans-order-form .orderArea .prdInfo .description .prdImg a img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.xans-order-form .orderArea .prdInfo .description .prd_price {
-  padding: 7px 0 7px;
+#orderForm #mCafe24Order .ec-base-tab li a {
   font-size: 1.3rem;
-  color: #292929;
 }
 
-.btnNormal {
-  display: inline-block;
-  padding: 10px 15px;
-  background: #F2F2F2;
-  font-weight: 600;
+#orderForm #mCafe24Order .title > h2, #orderForm #mCafe24Order .title > h3 {
+  font-size: 1.4rem;
+}
+
+#orderForm #mCafe24Order .heading {
+  font-size: 1.5rem;
+}
+
+#orderForm #mCafe24Order .address {
+  font-size: 1.25rem;
+}
+
+#orderForm #mCafe24Order #omessage_select {
+  font-size: 1.25rem;
+}
+
+#orderForm #mCafe24Order .right {
+  font-size: 1.25rem;
+}
+
+#orderForm #mCafe24Order .payMethod > li.selected > label {
+  border-color: #F9F9FE;
+  font-size: 1.3rem;
+}
+
+#orderForm #mCafe24Order .payMethod > li.selected > .inner {
+  border: 1px solid #022CFF;
+  font-size: 1.25rem;
+}
+
+#orderForm #mCafe24Order .payMethod > li > label {
+  border-color: #F9F9FE;
+  font-size: 1.3rem;
+}
+
+#orderForm #mCafe24Order .receiptArea {
+  padding: 0 0 10px;
+}
+
+#orderForm #mCafe24Order #cashreceipt_display_area {
+  font-size: 1.3rem;
+}
+
+#orderForm #mCafe24Order #cashreceipt_display_area > label {
+  font-size: 1.3rem;
+}
+
+#orderForm #mCafe24Order #cashreceipt_regist0 {
+  margin: 20px 15px 9px;
+}
+
+#orderForm #mCafe24Order .allAgree label {
+  font-size: 1.5rem;
+}
+
+#orderForm #mCafe24Order #chk_purchase_agreement label {
+  padding-left: 25px;
+  font-size: 1.5rem;
+}
+
+#orderForm #mCafe24Order .helpArea > ul {
+  font-size: 1.23em;
 }
 /*# sourceMappingURL=order_form.css.map */

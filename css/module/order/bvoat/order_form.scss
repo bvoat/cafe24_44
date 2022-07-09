@@ -10,7 +10,7 @@
     width: 100%;
     max-width: 450px;
     padding: 23px 11px;
-    margin-top: -40px; //top_nav hide
+    margin-top: 40px; //top_nav hide
 
     #orderFormTitle {
         display: flex;
@@ -31,108 +31,84 @@
             line-height: 1.9rem;
         }
     }
-    #frm_order_act{
-        position: relative;
-        width: 100%;
-        max-width: 450px;
-    }
-    #orderFormSection{
-        //개별 높이
-        .toggleArea{
-            display: flex;
-            flex-flow: column nowrap;
-            width: 100%;
-            max-width: 450px;
-        }
-        // 토글 클릭
-        div>.title{
-            position: relative;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 450px;
-            height: 40px;
-            margin: 0;
-            padding: 11px 35px 11px 14px;
-            cursor: pointer;
-            background: $bvt-second-darkgray;
-            -webkit-tap-highlight-color: rgba(255,255,255,0);
-            color: $bvt-white;
-            font-size: 1.4rem;
+    #mCafe24Order{
+
+        //설정이 많아서 필요한 셀렉터만 선택해서 작업
+        // 강조 색상
+        .txtEm, .txtStrong{
+            color: $bvt-blue;
             font-weight: 500;
-            >h3{
-                color: $bvt-white;
-                font-size: 1.4rem;
-                font-weight: 500;
-            }
         }
-        div>.contents{
-            position: relative;
-            width: 100%;
-            max-width: 450px;
-            margin: 0;
-            cursor: pointer;
-            background: $bvt-white;
+        // a 폰트 사이즈
+        .ec-base-tab li a{
             font-size: 1.3rem;
-            padding: 3px 0;
-            
-            h3,h4{
-                display: flex;
-                flex-flow: row;
-                justify-content: flex-start;
-                align-items: center;
-                height: 43px;
-                padding: 13px;
-                background: $bvt-whitegray;
-                color: $bvt-blue;
+        }
+        //title
+        .title{
+            > h2, > h3{
                 font-size: 1.4rem;
-                font-weight: 500;
-                border-bottom: $bvt-btn-border-gray;
             }
         }
-    }
-}
+        //heading
+        .heading{
+            font-size: 1.5rem;
+        }
 
-//주문내역
-.xans-order-form .orderArea {
-    .prdInfo{
-        .description{
-            position: relative;
-            min-height: 90px;
-            padding: 10px 0 0 100px;
-            .prdImg{
-                width: 85px;
-                height: 85px;
-                border-radius: 6px;
-                overflow: hidden;
-                a{
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    img{
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        top: 0;
-                        left: 0;
-                    }
-                }
-            }
-            .prd_price{
-                padding:7px 0 7px; 
-                font-size:1.3rem; 
-                color:$bvt-black;
+        //주소
+        .address{
+            font-size: 1.25rem;
+        }
+        //셀렉터
+        #omessage_select{
+            font-size: 1.25rem;
+        }
+        //결제정보 내부 금액
+        .right{
+            font-size: 1.25rem;
+        }
+        //최근 결제 수단
+        .payMethod > li.selected > label {
+            border-color: $bvt-bg-blue;
+            font-size: 1.3rem;
+        }
+        .payMethod > li.selected > .inner{
+            border: $bvt-btn-border;
+            font-size: 1.25rem;
+        }
+        //다른 결제 수단
+        .payMethod > li > label{
+            border-color: $bvt-bg-blue;
+            font-size: 1.3rem;
+        }
+        //현금영수증
+        .receiptArea{
+            padding: 0 0 10px;
+        }
+        #cashreceipt_display_area{
+            font-size: 1.3rem;
+            >label{
+                font-size: 1.3rem;
             }
         }
+        #cashreceipt_regist0{
+            margin: 20px 15px 9px;
+        }
+        //모든 약관 동의
+        .allAgree{
+            label{
+                font-size: 1.5rem;
+            }
+        }
+        //구매조건 확인 및 결제진행 동의
+        #chk_purchase_agreement{
+            label{
+                padding-left: 25px;
+                font-size: 1.5rem;
+            }
+        }
+        //하단 설명
+        .helpArea{
+           >ul{ font-size: 1.23em;}
+        }
     }
-}
-
-//버튼 
-.btnNormal{
-    display: inline-block;
-    padding: 10px 15px;
-    background: $bvt-whitegray;
-    font-weight: 600;
 }
