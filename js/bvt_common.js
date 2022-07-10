@@ -59,47 +59,72 @@ document.querySelector(".no_btn").addEventListener("click", nofunc);
 //가격 감시 함수
 function monitoringPrice () {
   const price_content = document.querySelectorAll(".price_wrap");
+  console.log('price_content: ', price_content);
 
   price_content.forEach((price)=>{
+    //변경 여부를 discount에 저장
     let discount = price.children[0];
+    //판매가
     let display_product = price.children[1];
-    console.log('display_product: ', display_product);
+    //소비자가(할인가)
     let display_discount = price.children[2];
-    console.log('display_discount: ', display_discount);
+    //높이 조절을 위한 product_name
     // let product_name = price.previousElementSibling;
 
-    //소비자가(할인가)가 내부에 가격이 있고 판매가에도 가격이 있고 소비자가의 숫자가 0이 아니면 (할인 중)
-    if(display_discount.hasChildNodes()  && display_product.hasChildNodes() && parseInt(display_discount.dataset.price)!= '0'){
-      //판매가에 strike_price class 붙이고
-      display_product.classList.add("strike_price");
-      //소비자가에 onpromotion class 붙이고
-      display_discount.classList.add("onpromotion");
-      //소비자가에 finalprice class 붙이기
-      display_discount.classList.add("finalprice");
+    /* 이미 변경된 경우를 체크 */
+    //변경 안 되었으면 실행 if
+    if(!discount.classList.contains("price_check")){
+      //소비자가(할인가)가 내부에 가격이 있고 판매가에도 가격이 있고 (dataset에 변수를 통해 받아옴) 소비자가의 숫자가 0이 아니면 (할인 중)
+      if(display_discount.dataset.price  && display_product.dataset.price && parseInt(display_discount.dataset.price)!= '0'){
+        //판매가에 strike_price class 붙이고
+        display_product.classList.add("strike_price");
+        //소비자가에 onpromotion class 붙이고
+        display_discount.classList.add("onpromotion");
+        //소비자가에 finalprice class 붙이기
+        display_discount.classList.add("finalprice");
 
-      //할인된 가격 계산
-      let discount_num = display_product.dataset.price-display_discount.dataset.price;
-      //할인율 계산
-      let percentage = Math.floor(discount_num / display_product.dataset.price * 100);
-      //할인율 넣고 할인 부분 보이게 하기
-      discount.insertAdjacentText("beforeend", `${percentage}%`);
-      discount.classList.remove("displaynone");
-      
-      //소비자가는 없고 판매가에 가격이 있고 소비자가의 가격이 0이면 (할인 안함)
-    }else if(!display_discount.hasChildNodes() && display_product.hasChildNodes() || parseInt(display_discount.dataset.price) == 0 || display_discount.dataset.price == ""){
-      //소비자가에 "원" 표시되지 않도록 삭제
-      display_discount.classList.add("displaynone");
-      
-      //판매가에 finalprice class 붙이기
-      display_product.classList.add("finalprice");
+        //할인된 가격 계산
+        let discount_num = display_product.dataset.price-display_discount.dataset.price;
+        //할인율 계산
+        let percentage = Math.floor(discount_num / display_product.dataset.price * 100);
+        //할인율 넣고 할인 부분 보이게 하기
+        discount.insertAdjacentText("beforeend", `${percentage}%`);
+        discount.classList.remove("displaynone");
+
+        //가격 체크 여부 저장
+        discount.classList.add("price_check");
+        
+
+        //소비자가는 없고 판매가에 가격이 있고 소비자가의 가격이 0이면 (할인 안함) else if
+      } else if(!display_discount.dataset.price && display_product.dataset.price || parseInt(display_discount.dataset.price) == 0 || display_discount.dataset.price == ""){
+        //소비자가에 "원" 표시되지 않도록 삭제
+        display_discount.classList.add("displaynone");
+        
+        //판매가에 finalprice class 붙이기
+        display_product.classList.add("finalprice");
+
+        //가격 체크 여부 저장
+        discount.classList.add("price_check");
+      }
+    } else {
+      null;
     }
   });
 }
+window.addEventListener("load", ()=>{monitoringPrice()})
 
-window.addEventListener("DOMContentLoaded", ()=>{monitoringPrice()})
+const checkMoreView = () => {
+  let btn = document.querySelectorAll(".moreview_btn");
+  console.log('btn: ', btn);
+  Array.from(btn).forEach((btn)=>{
+    btn.addEventListener("click", ()=>{
+      setTimeout(()=>{monitoringPrice()}, 500)
+    })
+  })
+  
+}
 
-
-
+window.addEventListener("load", ()=>{checkMoreView()})
 
 
 //상단바 컨트롤
