@@ -209,8 +209,6 @@ const displayStampImg = (productStamp) => {
 //스탬프 promise 진행
 const createStamp = (createStampPcsFromPrice) => {
   let final_price = parseInt(document.querySelector(".finalprice").dataset.price);
-  console.log('final_price: ', final_price);
-
 
   if (final_price < 1000) {
     final_price = final_price / 10000;
@@ -288,7 +286,10 @@ shareBtn.addEventListener("click", (e) => {
 //Q&A heading 컨트롤
 qnaControl();
 //스탬프 만들기
-window.addEventListener("DOMContentLoaded", ()=>{createStamp(createStampPcsFromPrice)})
+//bvt_common.js 파일에서 가격 정보 받아온 후 실행해야 함
+window.addEventListener("load", ()=>{
+  createStamp(createStampPcsFromPrice)
+})
 //가치태그 수신
 reciveTagDetail(prd_no);
 

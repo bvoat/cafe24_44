@@ -58,9 +58,8 @@ document.querySelector(".no_btn").addEventListener("click", nofunc);
 
 //가격 감시 함수
 function monitoringPrice () {
+  console.log("price monitoring");
   const price_content = document.querySelectorAll(".price_wrap");
-  console.log('price_content: ', price_content);
-
   price_content.forEach((price)=>{
     //변경 여부를 discount에 저장
     let discount = price.children[0];
@@ -111,17 +110,15 @@ function monitoringPrice () {
     }
   });
 }
-window.addEventListener("load", ()=>{monitoringPrice()})
+window.addEventListener("DOMContentLoaded", ()=>{monitoringPrice()})
 
 const checkMoreView = () => {
   let btn = document.querySelectorAll(".moreview_btn");
-  console.log('btn: ', btn);
   Array.from(btn).forEach((btn)=>{
     btn.addEventListener("click", ()=>{
-      setTimeout(()=>{monitoringPrice()}, 500)
+      setTimeout(()=>{monitoringPrice()}, 400)
     })
   })
-  
 }
 
 window.addEventListener("load", ()=>{checkMoreView()})
