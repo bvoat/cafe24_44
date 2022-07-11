@@ -60,11 +60,7 @@
 .bvt-funding {
   width: 100%;
   max-width: 450px;
-  padding: 11px;
-}
-
-.bvt-funding li {
-  background-color: pink;
+  padding: 11px 0;
 }
 
 .bvt-funding li:hover {

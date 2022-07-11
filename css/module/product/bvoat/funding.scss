@@ -64,11 +64,10 @@
 .bvt-funding {
     width: 100%;
     max-width: 450px;
-    padding: 11px;
+    padding: 11px 0;
 
     //item 개별
     li {
-        background-color: pink;
         &:hover {
             border-radius: 10px;
             transition: all 0.3s;
