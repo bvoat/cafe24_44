@@ -10,7 +10,7 @@
     width: 100%;
     max-width: 450px;
     padding: 23px 11px;
-    margin-top: -40px;//top_nav hide
+    margin: 80px 0px 120px;//top_nav hide
     #wishListTitle {
         display: flex;
         flex-flow: column nowrap;
@@ -353,4 +353,79 @@
             }
         }
     }
+}
+
+// 옵션 선택
+body#popup{
+    width: 100% !important;
+    max-width: 450px !important;
+    margin: 0 auto !important;
+}
+.xans-product-optionselectlayer { 
+    width: 100% !important;
+    max-width: 450px !important; 
+    margin: 0 auto !important;
+}
+.ec-base-layer .header {
+    padding:7px 35px 7px 19px;
+    color: $bvt-blue !important;
+    background: $bvt-bg-lightblue !important; 
+}
+.content{
+    width: 100%;
+    max-width: 450px; 
+    .inner{
+        width: 100%;
+        max-width: 450px; 
+        padding: 11px;
+        .name{
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+        .productNormal{
+            tr, th{
+                font-size: 1.3rem;
+            }
+            //옵션 셀렉트
+            select{
+                padding: 4px 8px !important;
+                font-size: 1.3rem;
+            }
+
+        }
+        .product{
+            font-size: 1.3rem !important;
+        }
+        
+        //개별 금액
+        .ec-front-product-item-price{
+            font-size: 1.3rem !important;
+            color: $bvt-blue !important;
+        }
+        .mileage{
+            color: $bvt-black !important;
+        }
+        .total{
+            color: $bvt-blue !important;
+        }
+
+
+    }
+}
+//버튼
+.btnSubmitFix{
+    background: $bvt-blue !important;
+    color: $bvt-white !important;
+    font-size: 1.4rem !important;
+    font-weight: 500 !important;
+    padding: 8px 13px;
+    border-radius: 50px;
+}
+.btnNormalFix{
+    background: $bvt-white !important;
+    color: $bvt-blue !important;
+    font-size: 1.4rem !important;
+    font-weight: 500 !important;
+    padding: 8px 13px;
+    border-radius: 50px;
 }

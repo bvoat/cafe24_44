@@ -12,7 +12,7 @@
   width: 100%;
   max-width: 450px;
   padding: 23px 11px;
-  margin-top: -40px;
+  margin: 80px 0px 120px;
 }
 
 #wishList #wishListTitle {
@@ -474,5 +474,83 @@
 #wishList #wishListCardSection #wishListPaginate .paginate-box ol li .this {
   font-weight: 600;
   color: #022CFF;
+}
+
+body#popup {
+  width: 100% !important;
+  max-width: 450px !important;
+  margin: 0 auto !important;
+}
+
+.xans-product-optionselectlayer {
+  width: 100% !important;
+  max-width: 450px !important;
+  margin: 0 auto !important;
+}
+
+.ec-base-layer .header {
+  padding: 7px 35px 7px 19px;
+  color: #022CFF !important;
+  background: #FAFAFE !important;
+}
+
+.content {
+  width: 100%;
+  max-width: 450px;
+}
+
+.content .inner {
+  width: 100%;
+  max-width: 450px;
+  padding: 11px;
+}
+
+.content .inner .name {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.content .inner .productNormal tr, .content .inner .productNormal th {
+  font-size: 1.3rem;
+}
+
+.content .inner .productNormal select {
+  padding: 4px 8px !important;
+  font-size: 1.3rem;
+}
+
+.content .inner .product {
+  font-size: 1.3rem !important;
+}
+
+.content .inner .ec-front-product-item-price {
+  font-size: 1.3rem !important;
+  color: #022CFF !important;
+}
+
+.content .inner .mileage {
+  color: #292929 !important;
+}
+
+.content .inner .total {
+  color: #022CFF !important;
+}
+
+.btnSubmitFix {
+  background: #022CFF !important;
+  color: #ffffff !important;
+  font-size: 1.4rem !important;
+  font-weight: 500 !important;
+  padding: 8px 13px;
+  border-radius: 50px;
+}
+
+.btnNormalFix {
+  background: #ffffff !important;
+  color: #022CFF !important;
+  font-size: 1.4rem !important;
+  font-weight: 500 !important;
+  padding: 8px 13px;
+  border-radius: 50px;
 }
 /*# sourceMappingURL=wish_list.css.map */
