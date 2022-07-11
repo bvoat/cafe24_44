@@ -2,7 +2,10 @@
 @import "../../../abstracts/mixin";
 @import "../../../abstracts/variables";
 
-
+#mCafe24Order{
+    width: 100%;
+    max-width: 450px;
+}
 #orderForm {
     display: flex;
     flex-flow: column nowrap;

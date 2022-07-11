@@ -1,3 +1,8 @@
+#mCafe24Order {
+  width: 100%;
+  max-width: 450px;
+}
+
 #orderForm {
   display: -webkit-box;
   display: -ms-flexbox;
