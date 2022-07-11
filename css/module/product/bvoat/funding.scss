@@ -1,285 +1,339 @@
+@charset "utf-8";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
+
+#fundingIndex {
+    width: 100%;
+    max-width: 450px;
+    padding: 23px 11px;
+    margin: 80px 0 120px;
+}
+
+/* 펀딩 타이틀 */
+#fundingIndexPlayingTitle,
+#fundingIndexClosingTitle {
+    margin: 19px 0;
+    padding: 0 11px;
+
+    h2 {
+        font-size: 1.9rem;
+        font-weight: 700;
+        margin-bottom: 2px;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        font-weight: 300;
+        color: $bvt-lostfocus-gray;
+    }
+}
+
+
+/* 펀딩 배너*/
+.indextitle {
+    margin-top: 108px;
+}
+
+.fundingbanner {
+    border: #DDDDDD 1px solid;
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 45px;
+    font-size: 15px;
+    color: #707070;
+    text-align: center;
+}
+
+/* 펀딩 종료 배너*/
+
+.fundingendbanner {
+    border-radius: 10px;
+    width: 100%;
+    padding: 40px;
+    margin-bottom: 80px;
+    font-size: 15px;
+    color: #707070;
+    text-align: center;
+    box-shadow: 3px 7px 11px rgba(0, 0, 0, 0.16);
+}
+
 /* 펀딩 메인진열 */
 
-.normalBanner-swipe>.swiper-wrapper>.swiper-slide>a>.img-res>img {
+
+.bvt-funding {
     width: 100%;
-    box-shadow: 0px 10px 20px #0000000F;
-    border-radius: 5px;
+    max-width: 450px;
+    padding: 11px;
+
+    //item 개별
+    li {
+        background-color: pink;
+        &:hover {
+            border-radius: 10px;
+            transition: all 0.3s;
+            box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
+        }   
+
+        .msgBox {
+            background-color: #022CFF;
+            color: #ffffff;
+            font-size: 15px;
+            position: relative;
+            z-index: 1;
+            float: right;
+            border-radius: 100px;
+            top: 20px;
+            right: 15px;
+            margin-top: -20px;
+            height: 40px;
+            line-height: 8px;
+        }
+        //이미지
+        .box-img {
+            a {
+                display: block;
+                overflow: hidden;
+                position: relative;
+                border-radius: 10px;
+                padding-bottom: 56.25%;
+                height: 0;
+    
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: auto;
+                    width: 100%;
+                    left: 50%;
+                    transform: translate(-50%, -22%);
+                }
+            }
+        }
+        .ddayPrd {
+            position: relative;
+            z-index: 1;
+            float: right;
+            padding: 12px;
+            background-color: #022CFF;
+            color: #ffffff;
+            right: 15px;
+            bottom: 25px;
+            border-radius: 100px;
+        }
+        .iconPrd {
+            position: relative;
+            right: 30px;
+            float: right;
+            z-index: 10;
+            bottom: 25px;
+            height: 40px;
+            width: auto;
+        
+            >img {
+                height: 100%;
+            }
+        }
+    }
+ 
+
+}     
+
+
+
+
+
+.box-desc {
+    padding: 15px 13px 0px 13px;
+    min-height: 100px;
+    border-radius: 12px 12px 0 0;
+
+    .typePrd {
+        color: $bvt-blue;
+    }
+
+    .title {
+        margin-bottom: 15px;
+        width: 100%;
+        font-size: 20px !important;
+        color: #292929 !important;
+        font-weight: bold !important;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .desc,
+    .desc * {
+        font-size: 15px !important;
+        color: #292929 !important;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .price,
+    .price * {
+        font-size: 0.85em !important;
+        color: #022CFF !important;
+        font-weight: 700 !important;
+    }
+
+    .gradientline {
+        background: transparent linear-gradient(90deg, #022CFF 0%, #00F571 100%) 0% 0% no-repeat padding-box;
+        border-radius: 2px;
+        opacity: 1;
+        height: 3px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    >.box2 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 7px;
+
+        div {
+            &:nth-child(1) {
+                color: #022CFF;
+            }
+
+            &:nth-child(2) {
+                color: #01AF8A;
+            }
+        }
+    }
+
+
 }
 
-.bvt-listmain-box>.prdList {
-    display: table;
-    table-layout: fixed;
+.likePrd,
+.wish {
+    margin-top: 20px;
+    height: 41px;
+
+    .gdVote {
+        height: 41px;
+        width: 41px;
+        border-radius: 50%;
+        background-color: white;
+        border: 2px solid white;
+        outline: none;
+        padding: 0;
+        box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
+        vertical-align: middle;
+        margin-right: 13px;
+
+        img {
+            height: 22px;
+            width: auto;
+        }
+
+        &::hover {
+            border: 2px solid #022CFF;
+            -webkit-transition: ease-in 0.07s;
+            transition: ease-in 0.07s;
+            cursor: pointer;
+            box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
+        }
+    }
+
+    .ec-product-listwishicon {
+        height: 22px;
+        width: auto;
+    }
+
+}
+
+.dashline {
+    background: #E8E8E8;
+    border-radius: 2px;
+    opacity: 1;
+    height: 1px;
     width: 100%;
-    box-sizing: border-box;
-    font-size: 0;
-    line-height: 0;
-    min-width: 0;
+    margin: 30px 0 40px 0;
 }
 
-.bvt-listmain-box .box-img a img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
+
+
+/* 220105 펀딩 가격 추가 */
+.funding_price {
+    margin: 14px 0 22px 0;
 }
 
-.bvt-listmain-box .box-img {
-    width: 100%;
+.funding_price>.product_price {
+    font-size: 21px;
+    font-weight: 600;
+
 }
 
-.bvt-listmain-box .box-img>a {
-    position: relative;
-    padding-top: 100%;
-    /* 1:1 ratio */
-    overflow: hidden;
-    border-radius: 7px;
+.funding_price>.product_customer {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ABABAB;
+    text-decoration-line: line-through;
+    display: none;
 }
 
-.bvt-listmain-box .prdList>li {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 16px;
-    line-height: 1.4;
-    width: calc(50% - 3px);
-    position: relative;
-    margin: 0;
-}
-
-.bvt-listmain-box .prdList>li:nth-of-type(odd) {
-    margin-right: 6px;
-}
-
-.bvt-listmain-box .box-desc {
-    width: 100%;
-    margin-bottom: 30px;
-    padding-top: 10px;
-    margin-top: -30px;
-}
-
-.bvt-listmain-box .brand {
-    margin-bottom: 2px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #022CFF;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.bvt-listmain-box .title * {
-    margin-bottom: 18px;
-    width: 100%;
-    font-size: 14px;
-    font-weight: bold;
-    color: #292929;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-}
-
-.bvt-listmain-box .price {
-    display: inline-block;
-    font-size: 14px;
-    color: #292929;
-    font-weight: bold;
-    padding-right: 5px;
-}
-
-.bvt-listmain-box .price2 {
-    display: inline-block;
-    font-size: 13px;
-    text-decoration: line-through;
-    color: #C7C7C7;
-}
-
-/*listmain 좋아요,관심상품 */
-
-.bvt-listmain-box .likePrd, .bvt-listmain-box .wish {
-    position: relative;
-    left: 8px;
-    bottom: 37px;
-}
-
-.bvt-listmain-box .likePrd .gdVote, .bvt-listmain-box .wish .gdVote {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color: white;
-    border: 2px solid white;
-    outline: none;
-    padding: 0;
-    -webkit-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-    -moz-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-    box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-}
-
-.bvt-listmain-box .wish .ec-product-listwishicon {
-    height: 18px;
-    width: auto;
-}
-
-.bvt-listmain-box .likePrd .gdVote:hover {
-    border: 2px solid #022CFF;
-    -webkit-transition: ease-in 0.07s;
-    transition: ease-in 0.07s;
-    cursor: pointer;
-}
-
-.bvt-listmain-box .likePrd .gdVote img {
-    height: 18px;
-    width: auto;
-}
-
-/* listmain2*/
-
-.bvt-listmain2-box {
-    margin-bottom: 15px;
-}
-
-.bvt-listmain2-box>.prdList>div {
-    position: relative;
-}
-
-.bvt-listmain2-box .box-img>a {
-    overflow: hidden;
-    position: relative;
-    border-radius: 10px;
-    padding-bottom: 56.25%;
-    height: 0;
-}
-
-.bvt-listmain2-box .box-img>a>img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: auto;
-    width: 100%;
-    left: 50%;
-    transform: translate(-50%, -22%);
-}
-
-.bvt-listmain2-box .box-btns {
-    width: auto;
-    position: relative;
-    display: flex;
-    top: -20px;
-    justify-content: space-between;
-    z-index: 1;
-    padding: 0 12px;
-}
-
-.bvt-listmain2-box .box-icon {
-    height: 40px;
-    display: inline-block;
-}
-
-.bvt-listmain2-box .box-bottom {
-    padding: 35px 20px 25px 20px;
-    border-radius: 0 0 8px 8px;
-    background-color: #fff;
-}
-
-.bvt-listmain2-box .box-desc {
-    position: relative;
-    top: -40px;
-}
-
-.bvt-listmain2-box .box-icon>img {
-    height: 100%;
-    -webkit-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-    -moz-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-    box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-    border-radius: 30px;
-}
-
-.bvt-listmain2-box .brand {
-    margin-bottom: 2px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #022CFF;
-    white-space: nowrap;
-}
-
-.bvt-listmain2-box .title * {
-    margin-bottom: 8px;
-    width: 100%;
+.won {
     font-size: 20px;
-    color: #292929;
-    font-weight: bold;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
+    margin-right: 8px;
+    display: none;
 }
 
-.bvt-listmain2-box .price {
+
+/* 펀딩 index 종료 */
+
+.xans-product-listmain-26 .bvt-funding .box-img>a>Img {
+    -webkit-filter: opacity(50%);
+    filter: opacity(50%);
+}
+
+.xans-product-listmain-26 .bvt-funding .box-desc .title * {
+    color: #707070 !important;
+}
+
+.xans-product-listmain-26 .bvt-funding .box-desc .desc {
+    color: #707070 !important;
+}
+
+/*index_funding_swipe*/
+
+.bvt-funding .swiper-slide {
+    border-radius: 7px;
+    padding-bottom: 25px;
+}
+
+.swiper-container>.bvt-funding {
+    padding-bottom: 30px;
+}
+
+/*더보기버튼*/
+
+#product_listmore {
+    position: relative;
+    width: 100%;
     display: inline-block;
-    font-size: 15px;
-    color: #292929;
-    font-weight: bold;
-    padding-right: 5px;
-}
+    text-align: center;
+    margin: 40px 0 0 0;
 
-.bvt-listmain2-box .price2 {
-    display: inline-block;
-    font-weight: normal;
-    font-size: 13px;
-    text-decoration: line-through;
-    color: #C7C7C7;
-}
+    a {
+        display: block;
+        border: 1px solid #ddd;
+        background: $bvt-whitegray;
+        padding: 10px 13px;
+        font-size: 10pt;
+        text-align: center;
+        text-decoration: none;
 
-.bvt-listmain2-box .likePrd {
-    height: 41px;
-    display: flex;
-    align-items: center;
-}
+        &::hover {
+            background: #000;
+            color: #fff;
+        }
 
-.bvt-listmain2-box .likePrd .gdVote {
-    height: 41px;
-    width: 41px;
-    border-radius: 50%;
-    background-color: white;
-    border: 2px solid white;
-    outline: none;
-    padding: 0;
-    -webkit-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-    -moz-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-    box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-    vertical-align: middle;
-    margin-right: 13px;
-}
-
-.bvt-listmain2-box .likePrd .gdVote:hover {
-    border: 2px solid #022CFF;
-    -webkit-transition: ease-in 0.07s;
-    transition: ease-in 0.07s;
-    cursor: pointer;
-    -webkit-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-    -moz-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-    box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-}
-
-.bvt-listmain2-box .likePrd .gdVote img {
-    height: 22px;
-    width: auto;
-}
-
-.bvt-listmain2-box .likePrd .gdCount {
-    vertical-align: middle;
-    border-radius: 100px;
-    padding: 12px 17px;
-    -webkit-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-    -moz-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-    box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-    background-color: #ffffff;
-}
-
-.bvt-listmain2-box .discountPrd {
-    position: absolute;
-    font-size: 15px;
-    width: 48px;
-    height: 48px;
-    line-height: 48px;
+    }
 }

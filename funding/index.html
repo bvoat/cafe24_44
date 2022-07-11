@@ -1,17 +1,17 @@
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(/css/module/product/product_more.css)-->
-<!-- @css(/css/module/product/funding.css) -->
+<!--@css(/css/module/product/bvoat/funding.css)-->
 
 <section id="fundingIndex">
 
-<section id="fundingIndexPlayingTitle" class="padding2 indextitle m20 m108">
-    <h2>지금 진행 중이에요.</h2>
-    <h3>책임 있는 생산에 가치있는 한 표를 함께해요.</h3>
-</section>
+    <section id="fundingIndexPlayingTitle" class="padding2 indextitle m20 m108">
+        <h2>지금 진행 중이에요.</h2>
+        <h3>책임 있는 생산에 가치있는 한 표를 함께해요.</h3>
+    </section>
 
 
 
-<section class="padding2 listmain-18">
+<section id="fundingListmain" class="padding2 listmain-18">
     <div module="product_listmain_18">
         <!--펀딩 메인진열-->
         <!--
@@ -19,14 +19,14 @@
                 $basket_result = /product/add_basket.html
                 $basket_option = /product/basket_option.html
             -->
-        <!--@import(../funding/module/funding_listmain.html)-->
+        <!--@import(/funding/module/funding_listmain.html)-->
     </div>
 </section>
 
 
 <section id="fundingIndexClosingTitle" class="padding2 indextitle m20">
-    <h3 class="t14">종료된 펀딩·공구</h3>
-    <span class="t09">함께 가치를 더했던 상품들이에요.</span>
+    <h2>종료된 펀딩·공구</h2>
+    <h3>함께 가치를 더했던 상품들이에요.</h3>
 </section>
 
 <section class="padding2">
@@ -34,8 +34,7 @@
 </section>
 
 <div>
-    <div module="product_listmain_26">
-        <div class="padding2">
+    <section id="fundingEndListmain" module="product_listmain_26">
             <!--펀딩 종료진열-->
             <!--
                 $count = 3
@@ -43,8 +42,8 @@
                 $cache = yes
                 $type = moreview
             -->
-            <!--@import(../funding/module/funding_listmain.html)-->
-        </div>
+            
+            <!--@import(/funding/module/funding_listmain.html)-->
         <div id="product_listmore" module="product_listmore_26">
             <!--개행 주의-->
             <a id="fundingmore" class="moreview_btn" href="#none" onclick="{$more_action}">
@@ -76,13 +75,24 @@
             return false
         }
     };
-    if ($(".listmain-18").text().length==5) {
-        $(".listmain-18").append(`
-    <div class=" fundingendbanner" id="fundingendbanner"></div>
-`);
 
-        $("#fundingendbanner").append(`⏳<br><b>현재 진행 중인 펀딩·공구가 없어요!</b>`);
+    const now_funding = document.querySelector(".listmain-18");
+    console.log(document.querySelector(".listmain-18"));
+    if(now_funding.hasChildNodes()){
+        console.log("not empty");
+    }else if (!now_funding.hasChildNodes()){
+        console.log("empty");
+        now_funding.insertAdjacentHTML("beforeend", `<div class=" fundingendbanner">⏳<br><em>현재 진행 중인 펀딩·공구가 없어요!</em></div>`)
+    }else if(now_funding.textContent.length == 5){
+        now_funding.insertAdjacentHTML("beforeend", `<div class=" fundingendbanner" id="fundingendbanner"></div>`)
     }
+//     if ($(".listmain-18").text().length==5) {
+//         $(".listmain-18").append(`
+//     <div class=" fundingendbanner" id="fundingendbanner"></div>
+// `);
+
+//         $("#fundingendbanner").append(`⏳<br><b>현재 진행 중인 펀딩·공구가 없어요!</b>`);
+//     }
 
 </script>
 <script>
