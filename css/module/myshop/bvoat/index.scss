@@ -16,7 +16,7 @@
     width: 100%;
     max-width: 450px;
     padding: 0 11px;
-    margin-top: -40px;//top_nav hide
+    margin: 40px 0 110px;//top_nav hide
 
     .mypage_info_wrap{
         width: 100%;
@@ -327,8 +327,8 @@
         .mypage_logout{
             display: block;
             text-align: center;
-            font-size: 1.2rem;
-            font-weight: 300;
+            font-size: 1.25rem;
+            font-weight: normal;
             text-decoration: underline;
             color: $bvt-second-darkgray;
             transition: all .3s;

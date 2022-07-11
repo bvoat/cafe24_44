@@ -1,0 +1,636 @@
+#orderList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 450px;
+  padding: 23px 11px 150px;
+  margin: 80px auto 80px;
+}
+
+#orderList #orderListTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+#orderList #orderListTitle h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+#orderList #orderListTitle h2 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #ABABAB;
+}
+
+#orderList #orderListTitle h2 em {
+  font-weight: 500;
+}
+
+#orderList #orderListTab {
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 12px;
+}
+
+#orderList #orderListTab .myshop-type .myshop-type-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#orderList #orderListTab .myshop-type .myshop-type-box li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 12px 0;
+}
+
+#orderList #orderListTab .myshop-type .myshop-type-box li:nth-child(1) {
+  border: 1px solid #E2E2E2;
+}
+
+#orderList #orderListTab .myshop-type .myshop-type-box li:nth-child(2) {
+  border-top: 1px solid #E2E2E2;
+  border-right: 1px solid #E2E2E2;
+  border-bottom: 1px solid #E2E2E2;
+}
+
+#orderList #orderListTab .myshop-type .myshop-type-box li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#orderList #OrderHistoryForm {
+  width: 100%;
+  max-width: 450px;
+}
+
+#orderList #OrderHistoryForm #orderListSearch {
+  width: 100%;
+  max-width: 450px;
+}
+
+#orderList #OrderHistoryForm #orderListSearch fieldset {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+}
+
+#orderList #OrderHistoryForm #orderListSearch fieldset legend {
+  display: none;
+}
+
+#orderList #OrderHistoryForm #orderListSearch fieldset ul {
+  padding: 0 11px;
+  margin: 11px;
+}
+
+#orderList #OrderHistoryForm #orderListSearch fieldset ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 5px 9px;
+  margin: 0;
+}
+
+#orderList #OrderHistoryForm #orderListSearch fieldset ul li span {
+  font-size: 1.3rem;
+  margin-right: 12px;
+}
+
+#orderList #OrderHistoryForm #orderListSearch fieldset ul li select, #orderList #OrderHistoryForm #orderListSearch fieldset ul li input {
+  font-size: 1.35rem;
+  width: 80%;
+  padding: 8px;
+}
+
+#orderList #OrderHistoryForm #orderListSearch fieldset ul li a {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-right: 3px;
+  padding: 4px 2px;
+  border: 1px solid #E2E2E2;
+}
+
+#orderList #OrderHistoryForm #orderListSearch fieldset ul li #order_search_btn {
+  width: 39px;
+  height: 24px;
+  padding: 0;
+}
+
+#orderHistoryListitem {
+  width: 100%;
+  max-width: 450px;
+}
+
+#orderHistoryListitem #orderHistoryList {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.order {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  border-left: 1px solid #d5d5d5;
+  border-right: 1px solid #d5d5d5;
+  background-color: #fff;
+}
+
+.order h3 {
+  overflow: hidden;
+  margin: 7px 0 0;
+  padding: 0 0 0 14px;
+  line-height: 43px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: normal;
+  background-color: #707070;
+}
+
+.order h3 .date {
+  font-weight: bold;
+}
+
+.order h3 a {
+  color: #fff;
+}
+
+.order .ec-base-prdInfo {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 0 7px;
+  padding: 14px 14px 6px;
+  border: 1px solid #d5d5d5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+}
+
+.order .ec-base-prdInfo .prdCheck {
+  display: inline-block;
+  margin-bottom: 7px;
+}
+
+.order .ec-base-prdInfo .prdBox {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 90px;
+  margin-top: 7px;
+}
+
+.order .ec-base-prdInfo .thumbnail {
+  overflow: hidden;
+  width: 73px;
+  height: 73px;
+  margin-right: 15px;
+  border: 1px solid #d5d5d5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.order .ec-base-prdInfo .thumbnail img {
+  width: 100%;
+}
+
+.order .ec-base-prdInfo .description {
+  overflow: hidden;
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+          flex: 1;
+  overflow: hidden;
+}
+
+.order .ec-base-prdInfo .description .prdName {
+  display: block;
+  margin: 0 0 10px;
+  font-size: 13px;
+}
+
+.order .ec-base-prdInfo .description .prdName .ec-set-product-name {
+  display: block;
+  margin: 0 0 3px;
+}
+
+.order .ec-base-prdInfo .description .info {
+  margin: 0 0 14px;
+  /* gift > quantity */
+}
+
+.order .ec-base-prdInfo .description .info li {
+  margin: 0 0 7px;
+  font-size: 12px;
+  color: #757575;
+}
+
+.order .ec-base-prdInfo .description .info li .mileage {
+  display: inline-block;
+}
+
+.order .ec-base-prdInfo .description .info .price {
+  font-size: 13px;
+  color: #292929;
+}
+
+.order .ec-base-prdInfo .description .info .price .refer {
+  font-weight: normal;
+  font-size: 11px;
+}
+
+.order .ec-base-prdInfo .description .info .price .discount {
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+.order .ec-base-prdInfo .description .info .price .strike {
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+.order .ec-base-prdInfo .description .info .price .strike strong {
+  font-weight: normal;
+}
+
+.order .ec-base-prdInfo .description .info .price .quantity {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 0 10px;
+  padding: 0 0 0 14px;
+  font-size: 13px;
+}
+
+.order .ec-base-prdInfo .description .info .price .quantity::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 1px;
+  height: 13px;
+  background: #989899;
+}
+
+.order .ec-base-prdInfo .description .info input[type="number"] {
+  max-width: 51px;
+}
+
+.order .ec-base-prdInfo .description .info .amount button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.order .ec-base-prdInfo .description .info .amount {
+  width: 50px;
+}
+
+.order .ec-base-prdInfo .description .info input.amount {
+  text-align: right;
+}
+
+.order .ec-base-prdInfo .description input[type="tel"] {
+  text-align: right;
+}
+
+.order .ec-base-prdInfo .description .quantity input[type="tel"] {
+  width: 51px;
+}
+
+.order .ec-base-prdInfo p.option {
+  margin: 0 14px;
+  padding: 14px 0;
+  border-top: 1px solid #ececec;
+  font-size: 13px;
+}
+
+.order .ec-base-prdInfo .option {
+  padding: 0;
+  color: #353535;
+}
+
+.order .ec-base-prdInfo .option > li {
+  border-top: 1px solid #ececec;
+}
+
+.order .ec-base-prdInfo .option > li .name {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 29px;
+  margin: 7px 0;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.order .ec-base-prdInfo .option > li .optionDesc {
+  word-break: break-all;
+}
+
+.order .ec-base-prdInfo .option > li .change {
+  margin: 0 0 0 5px;
+  white-space: nowrap;
+}
+
+.order .ec-base-prdInfo .option .file a {
+  margin: 0 0 0 4px;
+  padding: 0 0 0 11px;
+  color: #80aeef;
+  text-decoration: underline;
+  background: url("//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_attach.png") no-repeat 0 0;
+  background-size: 8px 13px;
+}
+
+.order .ec-base-prdInfo .option .layerOptionModify {
+  display: none;
+  width: auto;
+  margin: 7px 0 14px;
+  padding: 14px;
+  border: 1px solid #d5d5d5;
+  background-color: #f1f1f1;
+}
+
+.order .ec-base-prdInfo .layerOptionModify .titleArea {
+  margin-top: 3px;
+  display: none;
+}
+
+.order .ec-base-prdInfo .layerOptionModify ul {
+  padding: 0;
+  font-size: 12px;
+}
+
+.order .ec-base-prdInfo .layerOptionModify ul li {
+  position: relative;
+  margin: 0 0 7px;
+  padding: 0 0 0 73px;
+}
+
+.order .ec-base-prdInfo .layerOptionModify ul li .optionItem {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 73px;
+  height: 29px;
+  font-size: 13px;
+  color: #757575;
+  line-height: 29px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.order .ec-base-prdInfo .layerOptionModify select,
+.order .ec-base-prdInfo .layerOptionModify input[type="text"] {
+  width: 100%;
+}
+
+.order .ec-base-prdInfo .layerOptionModify .ec-base-button.gCenter {
+  margin: 0;
+}
+
+.xans-myshop-orderhistorylistitem a.btnDetail {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 0 14px 0 0;
+  font-size: 11px;
+  color: #fff;
+  background: url(/bvtIMG/icon/icon_arrow_order.svg) right center no-repeat;
+}
+
+.prdFoot {
+  padding: 6px 12px;
+  line-height: 26px;
+  color: #022CFF;
+  text-align: center;
+  background: #f1f1f1;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.prdFoot::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.prdFoot .gLeft {
+  float: left;
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+.prdFoot .gRight {
+  float: right;
+  text-align: right;
+}
+
+.prdFoot .store {
+  color: #292929;
+  font-weight: normal;
+}
+
+.prdFoot .btnBasic {
+  font-weight: normal;
+  background-color: #fff;
+}
+
+.prdFoot span > span > span {
+  font-size: 11px;
+}
+
+.prdFoot span span.discount {
+  text-decoration: line-through;
+}
+
+.prdFoot span span.discount strong {
+  font-weight: normal;
+}
+
+.request {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 6px 12px;
+  line-height: 26px;
+  border-bottom: 1px solid #d5d5d5;
+  font-weight: bold;
+  color: #022cff;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.btnNormal {
+  color: #292929;
+  border: 1px solid #cfcfcf;
+  border-bottom-color: #b5b5b5;
+  background: #fff;
+  height: 29px;
+  line-height: 27px;
+  padding: 5px 10px;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+#OrderHistoryPagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#OrderHistoryPagination .paginate-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: 40px;
+  background: #FAFAFE;
+  border-radius: 30px;
+  padding: 0 15px;
+  font-size: 1.3rem;
+}
+
+#OrderHistoryPagination .paginate-box .btnPrev_wrap,
+#OrderHistoryPagination .paginate-box .btnNext_wrap,
+#OrderHistoryPagination .paginate-box .first, #OrderHistoryPagination .paginate-box .last {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 6px;
+}
+
+#OrderHistoryPagination .paginate-box .btnPrev_wrap a,
+#OrderHistoryPagination .paginate-box .btnNext_wrap a,
+#OrderHistoryPagination .paginate-box .first a, #OrderHistoryPagination .paginate-box .last a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #707070;
+  margin: 0 5px;
+}
+
+#OrderHistoryPagination .paginate-box ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#OrderHistoryPagination .paginate-box ol li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #707070;
+  margin: 0 5px;
+}
+
+#OrderHistoryPagination .paginate-box ol li .this {
+  font-weight: 600;
+  color: #022CFF;
+}
+
+/* order_history_list > ec-base-prdInfo  */
+/* order_result.html > orderArea > ec-base-prdInfo */
+/*# sourceMappingURL=order_list.css.map */

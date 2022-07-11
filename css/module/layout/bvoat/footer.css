@@ -1,8 +1,7 @@
 #footer {
   display: block;
-  width: calc(100% + 22px);
+  width: 100%;
   height: auto;
-  margin-left: -11px;
   padding: 33px 11px 93px 11px;
   background: #F9F9FE;
 }

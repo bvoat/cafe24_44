@@ -21,7 +21,7 @@
   width: 100%;
   max-width: 450px;
   padding: 0 11px;
-  margin-top: -40px;
+  margin: 40px 0 110px;
 }
 
 #mypageWrap .mypage_info_wrap {
@@ -464,8 +464,8 @@
 #mypageWrap .mypage_menu_wrap .mypage_logout {
   display: block;
   text-align: center;
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.25rem;
+  font-weight: normal;
   text-decoration: underline;
   color: #8E8E8E;
   -webkit-transition: all .3s;
