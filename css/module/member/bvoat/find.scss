@@ -2,12 +2,15 @@
 @import "../../../abstracts/mixin";
 @import "../../../abstracts/variables";
 
+#bvtContents{
+}
 .find_article {
     width: 100%;
     max-width: 450px;
-    padding: 23px 11px 100px;
+    padding: 23px 11px 100%;
     margin-top: 80px;//top_nav hide
     background: $bvt-bg-lightblue;
+
     .find_title {
         margin-bottom: 18px;
         h2 {

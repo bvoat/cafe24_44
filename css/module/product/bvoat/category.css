@@ -26,10 +26,9 @@
 }
 
 #category #categorySwiper {
-  width: calc(100% + 22px);
+  width: 100%;
   max-width: 450px;
   height: 100%;
-  margin-left: -11px;
   overflow: hidden;
 }
 
@@ -65,7 +64,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
+  width: 50% !important;
   height: 100%;
   border-radius: 25px 25px 0 0;
   background: #ffffff;

@@ -1,6 +1,6 @@
 @charset "utf-8";
-@import "../../../../layout/basic/css/abstracts/mixin";
-@import "../../../../layout/basic/css/abstracts/variables";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
 
 #bvtContents{
     background: $bvt-bg-blue;
@@ -27,10 +27,9 @@
     }
 
     #categorySwiper {
-        width: calc(100% + 22px);
+        width: 100%;
         max-width: 450px;
         height: 100%;
-        margin-left: -11px;
         overflow: hidden;
 
         .category_pagination {
@@ -47,7 +46,7 @@
                 flex-flow: column nowrap;
                 justify-content: center;
                 align-items: center;
-                width: 50%;
+                width: 50% !important;
                 height: 100%;
                 border-radius: 25px 25px 0 0;
                 background: $bvt-white;
