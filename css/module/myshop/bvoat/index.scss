@@ -1,6 +1,6 @@
 @charset "utf-8";
-@import "../../../../layout/basic/css/abstracts/mixin";
-@import "../../../../layout/basic/css/abstracts/variables";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
 
 :root{
     --modify-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10.627' height='10.627'%3E%3Cpath data-name='Icon open-pencil' d='M7.97 0 6.642 1.328 9.3 3.985l1.328-1.328ZM5.313 2.657 0 7.97v2.657h2.657L7.97 5.313Z' fill='%238e8e8e'/%3E%3C/svg%3E");

@@ -4,8 +4,7 @@
         $url = /member/login.html
     -->
 </div>
-
-<!--@css(../css/module/myshop/module/index.css)-->
+<!--@css(/css/module/myshop/bvoat/index.css)-->
 <article id="mypageWrap" class="mypage_wrap">
     <h1 class="displaynone">마이페이지</h1>
     <section class="mypage_info_wrap" module="myshop_benefit">
@@ -105,7 +104,7 @@ const reciveVoterStamp = (voter_level, voterID, displayStampImg) => {
     if(voter_identity != null && voter_level != null){
         if(voter_level.value == "일반 보터 "){    
             console.log('일반 보터 ');      
-            fetch(`https:///${api_domain}.shop/stamp?id=${voterID}`, {
+            fetch(`https:///${api_domain}.shop/myshop/stamp?id=${voterID}`, {
             method: 'GET', // 또는 'PUT'
             headers: {
                 'Content-Type': 'application/json',
