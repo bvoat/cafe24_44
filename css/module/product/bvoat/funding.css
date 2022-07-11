@@ -43,6 +43,10 @@
   text-align: center;
 }
 
+.fundingbanner span {
+  color: #022CFF;
+}
+
 /* 펀딩 종료 배너*/
 .fundingendbanner {
   border-radius: 10px;
@@ -54,6 +58,10 @@
   text-align: center;
   -webkit-box-shadow: 3px 7px 11px rgba(0, 0, 0, 0.16);
           box-shadow: 3px 7px 11px rgba(0, 0, 0, 0.16);
+}
+
+.fundingendbanner em {
+  font-weight: 500;
 }
 
 /* 펀딩 메인진열 */

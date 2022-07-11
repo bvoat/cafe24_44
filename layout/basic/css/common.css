@@ -310,6 +310,12 @@ div.layerProgress {
 .zindexzero {
     z-index: 0 !important;
 }
+.gradientline{background: transparent linear-gradient(90deg, #022CFF 0%, #00F571 100%) 0% 0% no-repeat padding-box;
+border-radius: 2px;
+opacity: 1;
+height: 3px;
+width: 100%;
+}
 
 .dimmed {
     position: fixed;

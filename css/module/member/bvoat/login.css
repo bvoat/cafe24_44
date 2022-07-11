@@ -1,13 +1,14 @@
+@charset "UTF-8";
 :root {
-  --login-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/bvoat-logo-earthst.png")
-;
+  --login-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/bvoat-logo-earthst.png");
+  --tooltip-black: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='26'%3E%3Cg data-name='그룹 1249'%3E%3Cg data-name='그룹 1248' fill='%23292929'%3E%3Crect data-name='사각형 2202' width='84' height='20' rx='3' transform='translate(0 6)'/%3E%3Cpath data-name='다각형 1' d='M41.5 0 51 13H32Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 #memberLogin {
   width: 100%;
   max-width: 450px;
-  padding: 80px 11px;
-  margin-top: 40px;
+  margin: 80px 0;
+  padding: 23px 11px;
 }
 
 #memberLogin #memberLoginTitle {
@@ -218,17 +219,17 @@
 
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_util .login_util_tooltip {
   position: absolute;
-  width: 160%;
-  height: 24px;
-  top: 27px;
-  left: -15px;
-  background: #292929;
+  width: 80px;
+  height: 30px;
+  top: 21px;
+  left: -12px;
+  background: var(--tooltip-black) no-repeat;
+  background-size: contain;
   font-size: 1.02rem;
   font-weight: 400;
   color: #ffffff;
   text-align: center;
-  line-height: 2.2em;
-  border-radius: 4px;
+  padding: 7px 0 0 0;
   cursor: default;
   -webkit-animation: up-and-down-item 1.2s ease-in-out infinite;
           animation: up-and-down-item 1.2s ease-in-out infinite;
@@ -236,15 +237,6 @@
 
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_util .login_util_tooltip::after {
   position: fixed;
-  display: block;
-  content: "";
-  width: 9px;
-  height: 9px;
-  background-color: #292929;
-  top: -10%;
-  left: calc(50% - 4px);
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
 }
 
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_sns {
@@ -336,11 +328,12 @@
   margin-top: 17px;
   color: rgba(112, 112, 112, 0.9);
   font-size: 1.2rem;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 #noMemberLogin {
-  padding: 20px 0 60%;
+  margin-top: 81px;
+  padding: 23px 0 60%;
 }
 
 #noMemberLogin #noMemberLoginTitle {

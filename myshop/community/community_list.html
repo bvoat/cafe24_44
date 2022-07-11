@@ -1,83 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<style>
-  #board_frame {
-    width: 100%;
-    border: none;
-    height: 1600px;
-  }
-
-  .margin-header {
-    background: #F4F5FB;
-  }
-
-  #bh_slide_frame,
-  #board_view_frame {
-    position: fixed;
-    top: 0px;
-    z-index: 999999;
-  }
-
-  #go_board_write_ico {
-    position: fixed;
-    bottom: 71px;
-    right: 10px;
-  }
-
-  #go_board_write_ico img {
-    width: 100px;
-    height: 100px;
-  }
-
-
-  .funding_box_wrap {
-    max-width: 450px;
-    padding: 0 13px;
-    margin-bottom: -48px;
-  }
-
-  .funding_box {
-    position: relative;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    width: 100%;
-    height: 57px;
-    background: #fff;
-    border: 1px solid #E2E2E2;
-    border-radius: 11px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #707070;
-    transform: rotate(0.04deg);
-    margin-bottom: 5px;
-    letter-spacing: -0.2px;
-  }
-
-  .discount {
-    color: #022cff;
-    margin-right: 17px;
-  }
-
-  .funding_box>.coap {
-    margin-right: 25px;
-  }
-
-  .title_emoji {
-    font-size: 16px;
-    margin-right: 5px;
-  }
-
-  .container.board_cont .container {
-    margin-top: 0 !important;
-  }
-
-  .funding_box_wrap a {
-    display: block;
-  }
-
-</style>
+<!--@css(/css/module/myshop/bvoat/community.css)-->
 
 <!-- 전체 글 리스트 보기 -->
 
@@ -88,17 +10,21 @@
   <a href="#"><img src="https://bvoat.shop/images/new_img/write_btn_2x.png"></a>
 </div>
 <script>
-  var load_div = "";   //뒤로가기여부
-
+  //뒤로가기여부
+  var load_div = "";
   window.onpageshow = function (event) {
     if (event.persisted || (window.performance && window.performance.navigation.type == 2)) {
       //뒤로가기 해서 왔을경우     
       load_div = "back";
     }
   }
-
+  //채널톡 버튼 일시 숨김
   window.channelPluginSettings = {
     "hideDefaultLauncher": true
   }
-
+  //레벨 체크
+  const frame = document.getElementsByTagName("iframe");
+  frame.onload = function() {
+        console.log("dis")
+    };
 </script>

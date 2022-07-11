@@ -1,0 +1,36 @@
+@charset "utf-8";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
+
+  #board_frame {
+    width: 100%;
+    border: none;
+    height: 1600px;
+    padding-top: 23px;
+  }
+
+  #bh_slide_frame,
+  #board_view_frame {
+    position: fixed;
+    top: 0px;
+    z-index: 999999;
+  }
+
+  #go_board_write_ico {
+    position: fixed;
+    bottom: 71px;
+    right: 10px;
+    img {
+        width: 100px;
+        height: 100px;
+      }
+  }
+
+  .title_emoji {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+
+  .container.board_cont .container {
+    margin-top: 0 !important;
+  }

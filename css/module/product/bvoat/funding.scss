@@ -43,6 +43,10 @@
     font-size: 15px;
     color: #707070;
     text-align: center;
+    span{
+        color: $bvt-blue;
+    }
+
 }
 
 /* 펀딩 종료 배너*/
@@ -56,6 +60,9 @@
     color: #707070;
     text-align: center;
     box-shadow: 3px 7px 11px rgba(0, 0, 0, 0.16);
+    em{
+        font-weight: 500;
+    }
 }
 
 /* 펀딩 메인진열 */

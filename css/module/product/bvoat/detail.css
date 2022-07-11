@@ -469,6 +469,180 @@
   margin-right: 5px;
 }
 
+.detail-aside-funding {
+  width: 100%;
+  float: right;
+  padding: 12px 0;
+}
+
+.detail-goods-info {
+  background-color: #F8F9FD;
+  border-radius: 7px;
+  padding: 17px;
+  margin: 35px 0;
+}
+
+/* 상품 정보 */
+.info_box {
+  /* border-radius: 12px;*/
+  position: relative;
+  background: white;
+  padding: 0 11px;
+}
+
+.info_box .title {
+  font-size: 1.34rem;
+  font-weight: 500;
+}
+
+.info_box .title span {
+  color: #022CFF;
+}
+
+.info_box .prd_name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  max-width: calc(100% - 50px);
+}
+
+.info_box #getdesc {
+  font-size: 1.34rem;
+  color: #ABABAB;
+}
+
+#funding-dday {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.gray2 {
+  margin-top: 2px;
+  font-size: 1.1rem;
+  color: #707070;
+}
+
+.info_box > img {
+  width: auto;
+  height: auto;
+  max-width: 75px;
+  margin-bottom: 15px;
+}
+
+.info_box-desc {
+  padding-top: 9px;
+}
+
+.info_box .product_custom {
+  text-decoration: line-through;
+  color: #ABABAB;
+  margin-right: 10px;
+}
+
+.info_box .price {
+  margin-top: 9px;
+  padding-right: 5px;
+}
+
+.info_box .price2 {
+  display: inline-block;
+  font-size: 13px;
+  text-decoration: line-through;
+  color: #C7C7C7;
+}
+
+.info_like {
+  height: auto;
+  position: absolute;
+  right: 13px;
+  top: 0;
+}
+
+.info_like .gdVote {
+  height: 37px;
+  width: 37px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid white;
+  outline: none;
+  padding: 0;
+  -webkit-box-shadow: 0px 3px 7px 0px #CBD3FF;
+  box-shadow: 0px 3px 7px 0px #CBD3FF;
+}
+
+.info_like .gdVote:hover {
+  border: 2px solid #022CFF;
+  -webkit-transition: ease-in 0.07s;
+  transition: ease-in 0.07s;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 3px 7px 0px #CBD3FF;
+  box-shadow: 0px 3px 7px 0px #CBD3FF;
+}
+
+.info_like .gdVote img {
+  height: 19px;
+  width: auto;
+}
+
+/* 펀딩 정보 */
+.funding_box {
+  padding: 0 11px;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 45px;
+}
+
+.funding_box > .gradientline {
+  margin: 17px 0;
+}
+
+.notice_box {
+  margin-top: 40px;
+}
+
+/* 펀딩 공지 */
+.notice_desc > div > div > img {
+  width: 100%;
+}
+
+/* 펀딩 커스텀 정보 */
+.custom_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.custom_box_1 {
+  background-color: #EFF7FF;
+  border-radius: 5px;
+  padding: 7px 10px;
+  color: #022CFF;
+}
+
+.custom_box_2 {
+  background-color: #E0FFEE;
+  border-radius: 5px;
+  padding: 7px 10px;
+  color: #01AF8A;
+}
+
+.custom_box_2 > div {
+  font-size: 1.14rem;
+}
+
+.custom_box_2 > span {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.custom_box_1 > img, .custom_box_2 > img {
+  margin-top: 8px;
+  margin-left: 7.5px;
+}
+
 .detail_tab_wrap {
   display: -webkit-box;
   display: -ms-flexbox;

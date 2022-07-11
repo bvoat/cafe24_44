@@ -9,7 +9,7 @@
 <!--@import(./product_module/buy_screen.html)-->
 <!-- 상품 정보 상단 -->
 <article id="productDetailTop" module="product_detail">
-        <!--
+    <!--
 		※ 옵션 선택시 품목의 할인가로 표시됩니다.
 		$use_item_sale_price = T
 	-->
@@ -81,13 +81,57 @@
         </ol>
         <p class="stamp_txt">가치 스탬프 5개를 모으면 <a href="/member/crew/crew.html"> 크루 등급</a>으로 등업됩니다.</p>
     </section>
+    <!-- 펀딩 -->
+    <div id="aside-funding" class="detail-aside-funding displaynone">
+        <div class="info_box padding2">
+            <div class="t08 title"><span class="blue2 b">From.</span> {$prd_brand}</div>
+            <div class="t12 b prd_name" id="gettitle">{$name}</div>
+            <div class="info_like {$disp_likeprd_class}">
+                <button class="gdVote" type="button">{$disp_likeprd_icon}</button>
+            </div>
+            <div class="t08 gray" id="getdesc">{$summary_desc}</div>
+            <div class="info_box-desc t08 gray2">{$simple_desc}</div>
+        </div>
+
+
+
+        <div class="funding_box padding2">
+            <div class="t13 b"><span id="funding-dday"></span></div>
+            <div class="t07 gray2">함께할수록 커지는 가치, 공유해보세요!</div>
+
+            <div class="gradientline"> </div>
+
+            <div class="custom_box">
+                <div class="custom_box_1" style="visibility: hidden">
+                    <div class="t07">참여 중인 보터</div>
+                    <span class="b t11" id="custom-voter"></span>
+                    <img src="/bvtIMG/icon/arrow-up.svg">
+                </div>
+                <div class="custom_box_2">
+
+                </div>
+            </div>
+            <div class="notice_box">
+                <div class="t08 notice_desc">
+                    <!--사이즈 가이드 활용 이미지 삽입-->
+                    <div module="Product_SizeGuide">
+                        <div class="userGuide {$size_guide_image_display|display}">
+                            {$size_guide_description}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 </article>
 <!-- 상품 정보 상단 -->
 <!-- 상품 정보 하단 선택 탭 -->
 <ul class="detail_tab_wrap" module="product_additional">
     <li class="tab1 tab" data-hash="prd_detail">상품정보
     </li>
-    <li class="tab2 tab" data-hash="prd_bh">소비기록 
+    <li class="tab2 tab" data-hash="prd_bh">소비기록
     </li>
     <li class="tab3 tab" data-hash="use_qna">Q&A({$qna_count})
     </li>
@@ -227,7 +271,7 @@
 <section id="buyAction" module="product_action">
     <button class="wish_btn" alt="찜" onclick="{$action_wishlist}">찜</button>
     <button class="gift_btn purchase_button" data-type="gift" alt="선물하기">선물하기</button>
-    <button class="buy_btn purchase_button" data-type="buy"  alt="구매하기">구매하기</button>
+    <button class="buy_btn purchase_button" data-type="buy" alt="구매하기">구매하기</button>
 </section>
 <!-- 상품 구매 탭 -->
 <!--@define(cmc_log)-->
