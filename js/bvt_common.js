@@ -74,12 +74,19 @@ function monitoringPrice() {
     /* 이미 변경된 경우를 체크 */
     //변경 안 되었으면 실행 if
     if (!discount.classList.contains("price_check")) {
-      //소비자가(할인가)가 내부에 가격이 있고 판매가에도 가격이 있고 (dataset에 변수를 통해 받아옴) 소비자가의 숫자가 0이 아니면 (할인 중)
+      //소비자가(할인가)가 판매가 둘 다 가격이 있어야 하고
+      //소비자가의 숫자가 0이 아니고 
+      //소비자가랑 판매가가 같지 않으면  
+      //할인 중
       if (
         display_discount.dataset.price &&
         display_product.dataset.price &&
         parseInt(display_discount.dataset.price) != "0"
+        &&
+        display_discount.dataset.price !=
+        display_product.dataset.price
       ) {
+        
         //판매가에 strike_price class 붙이고
         display_product.classList.add("strike_price");
         //소비자가에 onpromotion class 붙이고
@@ -101,11 +108,18 @@ function monitoringPrice() {
         //가격 체크 여부 저장
         discount.classList.add("price_check");
 
-        //소비자가는 없고 판매가에 가격이 있고 소비자가의 가격이 0이면 (할인 안함) else if
+        //소비자가는 없고 판매가에 가격이 있어야 하고
+        //소비자가의 가격이 0이거나
+        //소비자가의 가격이 비어있거나
+        //소비자가와 판매가가 같으면
+        // 할인 안함 else if
       } else if (
         (!display_discount.dataset.price && display_product.dataset.price) ||
         parseInt(display_discount.dataset.price) == 0 ||
         display_discount.dataset.price == ""
+        ||
+        display_discount.dataset.price ==
+        display_product.dataset.price
       ) {
         //소비자가에 "원" 표시되지 않도록 삭제
         display_discount.classList.add("displaynone");
