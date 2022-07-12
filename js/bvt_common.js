@@ -28,14 +28,14 @@ test_arr.forEach((path) => {
 
 //클래스 토글
 // 클래스가 들어갔다 나갔다 할 node를 element에, 클래스 이름을 className에 전달
-function classToggle (element, className) {
+function classToggle(element, className) {
   element.classList.toggle(className);
 }
 
-//모달 생성 함수 
+//모달 생성 함수
 //모달 필요 시 제목, 설명, ok버튼, no버튼, 각각의 실행 함수 전달
 //dialog가 웹뷰 환경에서 정상적으로 동작하지 않아 HTML 모달로 실행
-function createdModal (heading, text, okmsg, nomsg, okfunc, nofunc) {
+function createdModal(heading, text, okmsg, nomsg, okfunc, nofunc) {
   let modal_form = `
   <section id="bvtCommonModal">
       <div id="bvtCommonForm" method="dialog">
@@ -48,19 +48,20 @@ function createdModal (heading, text, okmsg, nomsg, okfunc, nofunc) {
       </div>
   </section>
   `;
-//화면 상단에 전달
-document.querySelector("#bvtContainer").insertAdjacentHTML("afterbegin", modal_form);
-// 버튼 클릭 시 발생할 이벤트 수신
-document.querySelector(".ok_btn").addEventListener("click", okfunc);
-document.querySelector(".no_btn").addEventListener("click", nofunc);
+  //화면 상단에 전달
+  document
+    .querySelector("#bvtContainer")
+    .insertAdjacentHTML("afterbegin", modal_form);
+  // 버튼 클릭 시 발생할 이벤트 수신
+  document.querySelector(".ok_btn").addEventListener("click", okfunc);
+  document.querySelector(".no_btn").addEventListener("click", nofunc);
 }
 
-
 //가격 감시 함수
-function monitoringPrice () {
+function monitoringPrice() {
   console.log("price monitoring");
   const price_content = document.querySelectorAll(".price_wrap");
-  price_content.forEach((price)=>{
+  price_content.forEach((price) => {
     //변경 여부를 discount에 저장
     let discount = price.children[0];
     //판매가
@@ -72,9 +73,13 @@ function monitoringPrice () {
 
     /* 이미 변경된 경우를 체크 */
     //변경 안 되었으면 실행 if
-    if(!discount.classList.contains("price_check")){
+    if (!discount.classList.contains("price_check")) {
       //소비자가(할인가)가 내부에 가격이 있고 판매가에도 가격이 있고 (dataset에 변수를 통해 받아옴) 소비자가의 숫자가 0이 아니면 (할인 중)
-      if(display_discount.dataset.price  && display_product.dataset.price && parseInt(display_discount.dataset.price)!= '0'){
+      if (
+        display_discount.dataset.price &&
+        display_product.dataset.price &&
+        parseInt(display_discount.dataset.price) != "0"
+      ) {
         //판매가에 strike_price class 붙이고
         display_product.classList.add("strike_price");
         //소비자가에 onpromotion class 붙이고
@@ -83,22 +88,28 @@ function monitoringPrice () {
         display_discount.classList.add("finalprice");
 
         //할인된 가격 계산
-        let discount_num = display_product.dataset.price-display_discount.dataset.price;
+        let discount_num =
+          parseInt(display_product.dataset.price) - parseInt(display_discount.dataset.price);
         //할인율 계산
-        let percentage = Math.floor(discount_num / display_product.dataset.price * 100);
+        let percentage = Math.floor(
+          (discount_num / parseInt(display_product.dataset.price)) * 100
+        );
         //할인율 넣고 할인 부분 보이게 하기
         discount.insertAdjacentText("beforeend", `${percentage}%`);
         discount.classList.remove("displaynone");
 
         //가격 체크 여부 저장
         discount.classList.add("price_check");
-        
 
         //소비자가는 없고 판매가에 가격이 있고 소비자가의 가격이 0이면 (할인 안함) else if
-      } else if(!display_discount.dataset.price && display_product.dataset.price || parseInt(display_discount.dataset.price) == 0 || display_discount.dataset.price == ""){
+      } else if (
+        (!display_discount.dataset.price && display_product.dataset.price) ||
+        parseInt(display_discount.dataset.price) == 0 ||
+        display_discount.dataset.price == ""
+      ) {
         //소비자가에 "원" 표시되지 않도록 삭제
         display_discount.classList.add("displaynone");
-        
+
         //판매가에 finalprice class 붙이기
         display_product.classList.add("finalprice");
 
@@ -110,45 +121,53 @@ function monitoringPrice () {
     }
   });
 }
-window.addEventListener("DOMContentLoaded", ()=>{monitoringPrice()})
+window.addEventListener("DOMContentLoaded", () => {
+  if (document.querySelector(".price_wrap")) {
+    monitoringPrice();
+  }
+});
 
 const checkMoreView = () => {
   let btn = document.querySelectorAll(".moreview_btn");
-  Array.from(btn).forEach((btn)=>{
-    btn.addEventListener("click", ()=>{
-      setTimeout(()=>{monitoringPrice()}, 400)
-    })
-  })
-}
+  Array.from(btn).forEach((btn) => {
+    btn.addEventListener("click", () => {
+      setTimeout(() => {
+        monitoringPrice();
+      }, 400);
+    });
+  });
+};
 
-window.addEventListener("load", ()=>{checkMoreView()})
-
+window.addEventListener("load", () => {
+  checkMoreView();
+});
 
 //상단바 컨트롤
 /* nav 컨트롤 스크립트 */
 const controlTabNav = (page_path) => {
   // nav 전체
-  console.log("page_path",page_path);
+  console.log("page_path", page_path);
   const top_nav = document.querySelector("#top_nav");
   const default_nav = document.querySelector(".default_top_nav");
   const comm_nav = document.querySelector(".community_top_nav");
   //제외할 대표 path 단어
-  const expect_array = ['myshop/index', 'join', 'modify', 'detail', 'basket'];
+  const expect_array = ["myshop/index", "join", "modify", "detail", "basket"];
   //커뮤니티용 path 단어
-  const community_array = ['community', 'buy_records'];
+  const community_array = ["community", "buy_records"];
   //nav용 path 단어
-  const nav = ['crew', 'index', 'funding']
+  const nav = ["crew", "index", "funding"];
   //디폴트 메뉴 사라지게
-  expect_array.forEach((path)=>{
+  expect_array.forEach((path) => {
     page_path.includes(path) ? default_nav.classList.add("displaynone") : null;
-  })
-  community_array.forEach((path)=>{
-    if(page_path.includes(path)) {
+  });
+  community_array.forEach((path) => {
+    if (page_path.includes(path)) {
       default_nav.classList.add("displaynone");
       comm_nav.classList.remove("displaynone");
       document.querySelector(`#${path}`).classList.add("top_nav_active");
     }
   });
-
-}
-window.addEventListener("DOMContentLoaded", ()=>{controlTabNav(window.location.href)})
+};
+window.addEventListener("DOMContentLoaded", () => {
+  controlTabNav(window.location.href);
+});

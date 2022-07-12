@@ -12,7 +12,7 @@
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  padding: 0 11px;
+  padding: 0 22px;
 }
 
 #searchModal #searchModalHeader {
@@ -32,7 +32,6 @@
   width: 100%;
   max-width: 450px;
   height: 40px;
-  padding: 9px 0;
 }
 
 #searchModal #searchModalHeader .search_close_btn {
@@ -86,8 +85,8 @@
 
 #searchModal #searchModalTitle {
   width: 100%;
-  max-width: 450px;
-  margin: 2.2rem 0;
+  margin: 19px 0;
+  padding: 0 11px;
 }
 
 #searchModal #searchModalTitle h2 {
