@@ -67,11 +67,9 @@ function monitoringPrice() {
     //공급가 = 정가 = '소비자가'
     let fixprice = price.children[1];
     let fixprice_data = fixprice.dataset.price;
-    console.log("fixprice: ", parseInt(fixprice_data));
     //실 판매가 = 할인가 = '판매가'
     let realprice = price.children[2];
     let realprice_data = realprice.dataset.price;
-    console.log("realprice: ", parseInt(realprice_data));
 
     /* 이미 변경된 경우를 체크 */
     //변경 안 되었으면 실행 if
@@ -128,14 +126,7 @@ function monitoringPrice() {
         discount.classList.add("price_check");
       }
     } else {
-      //소비자가에 "원" 표시되지 않도록 삭제
-      fixprice.classList.add("displaynone");
-
-      //판매가에 finalprice class 붙이기
-      realprice.classList.add("finalprice");
-
-      //가격 체크 여부 저장
-      discount.classList.add("price_check");
+      null;
     }
   });
 }

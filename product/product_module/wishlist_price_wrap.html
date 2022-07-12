@@ -1,0 +1,16 @@
+<!-- <ul class="price_wrap">
+    <li class="discount displaynone" data-name="할인율" title="할인율"></li>
+    <li class="fixprice price_item" data-name="정가" title="정가(소비자가)"
+    data-price="{$product_custom}">{$product_custom|numberformat}</li>
+    <li class="realprice price_item" data-name="판매가" title="판매가(할인가)"
+    data-price="{$product_price}">{$product_price|numberformat}</li>
+</ul> -->
+<ul class="price_wrap">
+    <!-- <li class="price_item wish_fixprice" data-price="{$product_price}">{$product_price}</li> -->
+    <li class=" price_item wish_saleprice" data-price="{$product_sale_price}">{$product_sale_price|numberformat}</li>
+</ul>
+<ul class="price_check displaynone">
+    <li class="product_sale_price">{$product_sale_price}</li>
+    <li class="product_custom">{$product_custom}</li>
+    <li class="origin_price">{$disp_product_price}"</li>
+</ul>
