@@ -242,6 +242,39 @@
                     background-size: cover;
                 }
             }
+            @media screen and (max-width: 403px) {
+                .mypage_stamp_list{
+                        width: 285px !important;
+                        height: 55px !important;
+    
+                    >li{
+                        width: 55px !important;
+                        height: 55px !important;
+                    }
+                }
+            }
+            @media screen and (max-width: 370px) {
+                .mypage_stamp_list{
+                    width: 250px !important;
+                    height: 48px !important;
+    
+                    >li{
+                        width: 48px !important;
+                        height: 48px !important;
+                    }
+                }
+            }
+            @media screen and (max-width: 330px) {
+                .mypage_stamp_list{
+                    width: 230px !important;
+                    height: 45px !important;
+    
+                    >li{
+                        width: 45px !important;
+                        height: 45px !important;
+                    }
+                }
+            }
         }
         .mypage_stamp_info{
             .voter_txt{
