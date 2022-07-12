@@ -1,4 +1,6 @@
 #topNav {
+  width: 100%;
+  max-width: 450px;
   border-bottom: 1px solid #E2E2E2;
 }
 
@@ -73,6 +75,7 @@
 
 #topNav > .community_top_nav {
   width: 100%;
+  max-width: 450px;
   height: 40px;
 }
 

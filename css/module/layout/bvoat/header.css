@@ -10,6 +10,12 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
@@ -23,16 +29,38 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  max-width: 450px;
   padding: 0 11px;
 }
 
-#header_wrap #header_logo_section .header_logo {
+#header_wrap #header_logo_section > .back_btn {
+  display: block;
+  width: 33%;
+  height: 40px;
+  background: none;
+}
+
+#header_wrap #header_logo_section > .back_btn button {
+  width: 35px;
+  height: 100%;
+  background: none;
+}
+
+#header_wrap #header_logo_section > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 33%;
+}
+
+#header_wrap #header_logo_section > a .header_logo {
   display: block;
   width: 73px;
   height: 40px;
@@ -42,8 +70,7 @@
 }
 
 #header_wrap #header_logo_section .header_menu {
-  position: absolute;
-  width: 60px;
+  width: 33%;
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,16 +79,23 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   right: 11px;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 
 #header_wrap #header_logo_section .header_menu li {
   position: relative;
+}
+
+#header_wrap #header_logo_section .header_menu .header_search {
+  margin-right: 9px;
 }
 
 #header_wrap #header_logo_section .header_menu .header_search > button {

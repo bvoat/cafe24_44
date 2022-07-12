@@ -15,7 +15,8 @@ body{
         margin: 0 auto;
         #bvtHeader{
             position: fixed;
-            display: block;
+            display: flex;
+            flex-flow: column nowrap;
             max-width: 450px;
             min-width: 200px;
             width: 100%;

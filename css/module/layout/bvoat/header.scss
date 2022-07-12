@@ -8,39 +8,62 @@
     position: relative;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
     overflow: hidden;
     backdrop-filter: blur(30px);
+
     #header_logo_section {
         display: flex;
         flex-flow: row nowrap;
-        justify-content: center;
         align-items: center;
-        padding: 0 11px;
-
-        .header_logo {
+        width: 100%;
+        max-width: 450px;
+        padding: 0 11px; 
+        >.back_btn{
             display: block;
-            width: 73px;
+            width: 33%;
             height: 40px;
-            background: $bvt-logo no-repeat center;
-            background-size: contain;
-            text-indent: -9999px;
+            background: none;
+            button{
+                width: 35px;
+                height: 100%;
+                background: none;
+            }
+        }
+        >a{
+            display: flex;
+            justify-content: center;
+            width: 33%;
+
+            .header_logo {
+                display: block;
+                width: 73px;
+                height: 40px;
+                background: $bvt-logo no-repeat center;
+                background-size: contain;
+                text-indent: -9999px;
+            }
         }
 
+
         .header_menu {
-            position: absolute;
-            width: 60px;
+            // position: absolute;
+            width: 33%;
             height: 40px;
             display: flex;
             flex-flow: row nowrap;
-            justify-content: space-around;
+            justify-content: flex-end;
             align-items: center;
             right: 11px;
+            flex-shrink: 1;
 
             li {
                 position: relative;
             }
 
             .header_search {
+                margin-right: 9px;
                 >button {
                     position: relative;
                     display: block;

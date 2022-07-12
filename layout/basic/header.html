@@ -1,10 +1,19 @@
-<!--@css(../../css/module/layout/bvoat/header.css)-->
+<!--@css(/css/module/layout/bvoat/header.css)-->
 <article id="header_wrap">
+
     <section id="header_logo_section">
+        <div class="back_btn visiblehidden">
+            <button class="move_back_btn" onclick="history.go(-1)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12.607" height="21.011" display="block">
+                    <path d="M12.607 1.274 11.25 0 0 10.506l11.25 10.505 1.359-1.267-9.882-9.238Z" />
+                </svg>
+            </button>
+        </div>
         <a href="/" title="비보트 메인으로" target="_self"><span class="header_logo">비보트 Bvoat</span></a>
         <ul class="header_menu">
             <li class="header_search">
-                <button type="button" class="search_btn" title="상품 검색" onclick="classToggle(document.querySelector('#searchModal'), 'displaynone')">검색</button>
+                <button type="button" class="search_btn" title="상품 검색"
+                    onclick="classToggle(document.querySelector('#searchModal'), 'displaynone')">검색</button>
             </li>
             <li class="header_cart" module="Layout_orderBasketcount">
                 <a href="/order/basket.html" title="장바구니">장바구니</a>
