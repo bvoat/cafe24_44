@@ -1,0 +1,17 @@
+#buy_records_frame {
+  width: 100%;
+  border: none;
+  height: 1600px;
+  margin: 40px 0;
+}
+
+.margin-header {
+  background: #F4F5FB;
+}
+
+#bh_slide_frame {
+  position: fixed;
+  top: 0px;
+  z-index: 999999;
+}
+/*# sourceMappingURL=buy_records.css.map */

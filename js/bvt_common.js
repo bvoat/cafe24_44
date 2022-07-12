@@ -165,7 +165,7 @@ const controlTabNav = (page_path) => {
   //제외할 대표 path 단어
   const expect_array = ["myshop/index", "join", "modify", "detail", "basket"];
   //커뮤니티용 path 단어
-  const community_array = ["community", "buy_records"];
+  const community_array = ["community", "list_all"];
   //nav용 path 단어
   const nav = ["crew", "index", "funding"];
   //디폴트 메뉴 사라지게
