@@ -64,40 +64,41 @@ function monitoringPrice() {
   price_content.forEach((price) => {
     //변경 여부를 discount에 저장
     let discount = price.children[0];
-    //판매가
-    let display_product = price.children[1];
-    //소비자가(할인가)
-    let display_discount = price.children[2];
+    //공급가 = 정가 = '소비자가'
+    let fixprice = price.children[1];
+    let fixprice_data = fixprice.dataset.price;
+    console.log("fixprice: ", parseInt(fixprice_data));
+    //실 판매가 = 할인가 = '판매가'
+    let realprice = price.children[2];
+    let realprice_data = realprice.dataset.price;
+    console.log("realprice: ", parseInt(realprice_data));
 
     /* 이미 변경된 경우를 체크 */
     //변경 안 되었으면 실행 if
     if (!discount.classList.contains("price_check")) {
-      //소비자가(할인가)가 판매가 둘 다 가격이 있어야 하고
-      //소비자가의 숫자가 0이 아니어야 하고 
-      //소비자가랑 판매가가 같지 않으면  
+      //소비자가(정가) 데이터가 있고
+      //판매가(할인가) 데이터가 있고
+      //소비자가의 숫자가 0이 아니어야 하고
+      //소비자가랑 판매가가 같지 않으면
       //할인 중
       if (
-        display_discount.dataset.price &&
-        display_product.dataset.price &&
-        parseInt(display_discount.dataset.price) != "0"
-        &&
-        (parseInt(display_discount.dataset.price) !=
-        parseInt(display_product.dataset.price))
+        fixprice_data &&
+        realprice_data &&
+        parseInt(fixprice_data) != "0" &&
+        parseInt(fixprice_data) != parseInt(realprice_data)
       ) {
-
-        //판매가에 strike_price class 붙이고
-        display_product.classList.add("strike_price");
-        //소비자가에 onpromotion class 붙이고
-        display_discount.classList.add("onpromotion");
-        //소비자가에 finalprice class 붙이기
-        display_discount.classList.add("finalprice");
+        //소비자가(정가)에 strike_price class 붙이고
+        fixprice.classList.add("strike_price");
+        //판매가(할인가)에 onpromotion class 붙이고
+        realprice.classList.add("onpromotion");
+        //판매가(할인가)에 finalprice class 붙이기
+        realprice.classList.add("finalprice");
 
         //할인된 가격 계산
-        let discount_num =
-          parseInt(display_product.dataset.price) - parseInt(display_discount.dataset.price);
+        let discount_num = parseInt(fixprice_data) - parseInt(realprice_data);
         //할인율 계산
         let percentage = Math.floor(
-          (discount_num / parseInt(display_product.dataset.price)) * 100
+          (discount_num / parseInt(fixprice_data)) * 100
         );
         //할인율 넣고 할인 부분 보이게 하기
         discount.insertAdjacentText("beforeend", `${percentage}%`);
@@ -106,30 +107,35 @@ function monitoringPrice() {
         //가격 체크 여부 저장
         discount.classList.add("price_check");
 
-        //소비자가는 없고 판매가에 가격이 있어야 하고
-        //소비자가의 가격이 0이거나
-        //소비자가의 가격이 비어있거나
-        //소비자가와 판매가가 같으면
+        //소비자가(정가)는 없고 판매가(실판매가)에 가격이 있어야 하고
+        //소비자가(정가)의 가격이 0이거나
+        //소비자가(정가)의 가격이 비어있거나
+        //소비자가(정가)와 판매가(실판매가)가 같으면
         // 할인 안함 else if
       } else if (
-        (!display_discount.dataset.price && display_product.dataset.price) ||
-        parseInt(display_discount.dataset.price) == 0 ||
-        display_discount.dataset.price == ""
-        ||
-        (parseInt(display_discount.dataset.price) ==
-        parseInt(display_product.dataset.price))
+        (!fixprice_data && realprice_data) ||
+        parseInt(fixprice_data) == 0 ||
+        fixprice_data == "" ||
+        parseInt(fixprice_data) == parseInt(realprice_data)
       ) {
         //소비자가에 "원" 표시되지 않도록 삭제
-        display_discount.classList.add("displaynone");
+        fixprice.classList.add("displaynone");
 
         //판매가에 finalprice class 붙이기
-        display_product.classList.add("finalprice");
+        realprice.classList.add("finalprice");
 
         //가격 체크 여부 저장
         discount.classList.add("price_check");
       }
     } else {
-      null;
+      //소비자가에 "원" 표시되지 않도록 삭제
+      fixprice.classList.add("displaynone");
+
+      //판매가에 finalprice class 붙이기
+      realprice.classList.add("finalprice");
+
+      //가격 체크 여부 저장
+      discount.classList.add("price_check");
     }
   });
 }
@@ -165,7 +171,7 @@ const controlTabNav = (page_path) => {
   //제외할 대표 path 단어
   const expect_array = ["myshop/index", "join", "modify", "detail", "basket"];
   //커뮤니티용 path 단어
-  const community_array = ["community", "list_all"];
+  const community_array = ["community", "buy_records"];
   //nav용 path 단어
   const nav = ["crew", "index", "funding"];
   //디폴트 메뉴 사라지게
@@ -176,7 +182,7 @@ const controlTabNav = (page_path) => {
     if (page_path.includes(path)) {
       default_nav.classList.add("displaynone");
       comm_nav.classList.remove("displaynone");
-      document.querySelector(`#${path}`).classList.add("top_nav_active");
+      document.querySelector(`#${path}_nav`).classList.add("top_nav_active");
     }
   });
 };

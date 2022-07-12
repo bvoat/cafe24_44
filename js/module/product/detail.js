@@ -11,13 +11,14 @@ if (buy_record_frame != null) {
 //최초 탭 높이 조절
 
 
-window.addEventListener("DOMContentLoaded", ()=>{
+window.addEventListener("load", ()=>{
   const productDetailBottom = document.getElementById("productDetailBottom");
-const detail_swiper_wrap = document.getElementById("detail_swiper_wrap");
-let firstTab = getComputedStyle(productDetailBottom);
+  const detail_swiper_wrap = document.getElementById("detail_swiper_wrap");
+  let firstTab = getComputedStyle(productDetailBottom);
+  console.log('firstTab: ', firstTab.height);
   const firstControlContentWrapHeight = (firstTab) => {
-    productDetailBottom.style.height = firstTab.height;
-    detail_swiper_wrap.style.height = firstTab.height;
+    productDetailBottom.style.height = (firstTab.height + 100 + 'px');
+    detail_swiper_wrap.style.height = (firstTab.height + 100 + 'px');
   };
   firstControlContentWrapHeight(firstTab)
 })
@@ -55,6 +56,13 @@ var swiper = new Swiper("#productDetailBottom", {
   on: {
     // slideChangeTransitionEnd: function change() {
     //  //autoHeight가 가능해서 window load 때만 height 값 주고 나머지는 autoHeight 처리
+    //   const productDetailBottom = document.getElementById("productDetailBottom");
+    //   const detail_swiper_wrap = document.getElementById("detail_swiper_wrap");
+    //   const computedHeight = (idx) => {
+    //   let pre_tab = getComputedStyle(document.querySelector(`#tab${idx}`));
+    //     productDetailBottom.style.height = (pre_tab.height + 100 + 'px');
+    //     detail_swiper_wrap.style.height = (pre_tab.height + 100 + 'px');
+    //   };
     //   computedHeight(swiper.realIndex);
     // },
   },

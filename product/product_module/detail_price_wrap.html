@@ -4,10 +4,10 @@
 </ul> -->
 <ul class="price_wrap">
     <li class="discount displaynone" data-name="할인율" title="할인율"></li>
-    <li class="display_product price_item" data-name="상품 가격" title="상품 가격"
-    data-price="{$product_price}">{$product_price|numberformat}</li>
-    <li class="display_discount price_item {$product_custom|display}" data-name="소비자가" title="할인가"
+    <li class="fixprice price_item" data-name="정가" title="정가(소비자가)"
     data-price="{$product_custom}">{$product_custom|numberformat}</li>
+    <li class="realprice price_item" data-name="판매가" title="판매가(할인가)"
+    data-price="{$product_price}">{$product_price|numberformat}</li>
 </ul>
 
 <!-- 
