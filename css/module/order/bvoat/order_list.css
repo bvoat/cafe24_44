@@ -532,7 +532,7 @@
   font-size: 13px;
 }
 
-#OrderHistoryPagination {
+.page-pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -546,9 +546,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 100px;
 }
 
-#OrderHistoryPagination .paginate-box {
+.page-pagination .paginate-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -565,13 +566,11 @@
   height: 40px;
   background: #FAFAFE;
   border-radius: 30px;
-  padding: 0 15px;
+  padding: 1% 5%;
   font-size: 1.3rem;
 }
 
-#OrderHistoryPagination .paginate-box .btnPrev_wrap,
-#OrderHistoryPagination .paginate-box .btnNext_wrap,
-#OrderHistoryPagination .paginate-box .first, #OrderHistoryPagination .paginate-box .last {
+.page-pagination .btnPrev_wrap, .page-pagination .btnNext_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -582,26 +581,27 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 60px;
+}
+
+.page-pagination .first, .page-pagination .last, .page-pagination .btnPrev, .page-pagination .btnNext {
+  width: 30px;
   height: 30px;
   background: #ffffff;
   border-radius: 50%;
   line-height: 30px;
   text-align: center;
-  margin: 0 6px;
-}
-
-#OrderHistoryPagination .paginate-box .btnPrev_wrap a,
-#OrderHistoryPagination .paginate-box .btnNext_wrap a,
-#OrderHistoryPagination .paginate-box .first a, #OrderHistoryPagination .paginate-box .last a {
-  display: block;
-  width: 100%;
-  height: 100%;
+  margin: 0 2px;
   color: #707070;
-  margin: 0 5px;
+  font-size: 1.1rem;
 }
 
-#OrderHistoryPagination .paginate-box ol {
+.page-pagination .first:hover, .page-pagination .last:hover, .page-pagination .btnPrev:hover, .page-pagination .btnNext:hover {
+  font-weight: 700;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.page-pagination ol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -613,9 +613,14 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin: 0 5px;
 }
 
-#OrderHistoryPagination .paginate-box ol li a {
+.page-pagination ol li {
+  margin: 0 11px;
+}
+
+.page-pagination ol li a {
   display: block;
   width: 100%;
   height: 100%;
@@ -623,10 +628,9 @@
   font-size: 1.3rem;
   font-weight: 500;
   color: #707070;
-  margin: 0 5px;
 }
 
-#OrderHistoryPagination .paginate-box ol li .this {
+.page-pagination ol li .this {
   font-weight: 600;
   color: #022CFF;
 }

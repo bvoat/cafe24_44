@@ -9,7 +9,7 @@
     width: 100%;
     max-width: 450px;
     padding: 23px 11px;
-    margin-top: 80px; 
+    margin: 40px 0; 
     #memberModifyTitle {
         display: flex;
         flex-flow: column nowrap;
@@ -243,16 +243,15 @@
     }
 
     .modify_btn {
-        position: sticky;
+        position: fixed;
         display: flex;
         bottom: 0;
         width: 100%;
         max-width: 450px;
-        height: 61px;
+        height: 63px;
         align-items: center;
         justify-content: center;
         border-radius: 8px;
-        margin-left: -11px;
         z-index: 99;
         background-color: $bvt-blue;
         border: none;
@@ -265,15 +264,17 @@
     .member_delete_btn {
         display: block;
         background: transparentize($bvt-black, 1);
+        font-size: 15px;
+        font-weight: 600;
         text-align: center;
         text-decoration: underline;
-        margin: 20px 0;
+        margin: 20px 0 50px;
         color: $bvt-darkgray;
         transition: all .5s;
         &:hover{
             font-weight: 600;
             color: $bvt-lightgray;
-            transition: all .5s;
+            transition: all .3s;
         }
     }
 }

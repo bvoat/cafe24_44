@@ -20,7 +20,7 @@
           align-items: flex-start;
   width: 100%;
   max-width: 450px;
-  padding: 0 11px;
+  padding: 23px 0;
   margin: 40px 0 110px;
 }
 
@@ -220,7 +220,7 @@
 }
 
 #mypageWrap .mypage_benefit_wrap {
-  width: calc(100% + 22px);
+  width: 100%;
   padding: 43px 14px 55px;
   background: #FAFAFE;
 }
@@ -464,7 +464,8 @@
 #mypageWrap .mypage_menu_wrap .mypage_logout {
   display: block;
   text-align: center;
-  font-size: 1.25rem;
+  font-weight: 600;
+  font-size: 13px;
   font-weight: normal;
   text-decoration: underline;
   color: #8E8E8E;
@@ -472,7 +473,7 @@
   transition: all .3s;
 }
 
-#mypageWrap .mypage_menu_wrap .mypage_logout::hover {
+#mypageWrap .mypage_menu_wrap .mypage_logout:hover {
   font-weight: 600;
   color: #707070;
   -webkit-transition: all .3s;

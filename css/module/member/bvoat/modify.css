@@ -12,7 +12,7 @@
   width: 100%;
   max-width: 450px;
   padding: 23px 11px;
-  margin-top: 80px;
+  margin: 40px 0;
 }
 
 #memberModify #memberModifyTitle {
@@ -309,15 +309,14 @@
 }
 
 #memberModify .modify_btn {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   bottom: 0;
   width: 100%;
   max-width: 450px;
-  height: 61px;
+  height: 63px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -325,7 +324,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 8px;
-  margin-left: -11px;
   z-index: 99;
   background-color: #022CFF;
   border: none;
@@ -338,9 +336,11 @@
 #memberModify .member_delete_btn {
   display: block;
   background: rgba(41, 41, 41, 0);
+  font-size: 15px;
+  font-weight: 600;
   text-align: center;
   text-decoration: underline;
-  margin: 20px 0;
+  margin: 20px 0 50px;
   color: #707070;
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -349,7 +349,7 @@
 #memberModify .member_delete_btn:hover {
   font-weight: 600;
   color: #C4C4C4;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 /*# sourceMappingURL=modify.css.map */

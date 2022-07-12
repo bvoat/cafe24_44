@@ -470,7 +470,7 @@
   margin-bottom: 18px;
 }
 
-.xans-search-paging {
+.page-pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -487,7 +487,7 @@
   margin-bottom: 100px;
 }
 
-.xans-search-paging .paginate-box {
+.page-pagination .paginate-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -508,7 +508,7 @@
   font-size: 1.3rem;
 }
 
-.xans-search-paging .btnPrev_wrap, .xans-search-paging .btnNext_wrap {
+.page-pagination .btnPrev_wrap, .page-pagination .btnNext_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,7 +521,7 @@
           align-items: center;
 }
 
-.xans-search-paging .first, .xans-search-paging .last, .xans-search-paging .btnPrev, .xans-search-paging .btnNext {
+.page-pagination .first, .page-pagination .last, .page-pagination .btnPrev, .page-pagination .btnNext {
   width: 30px;
   height: 30px;
   background: #ffffff;
@@ -533,13 +533,13 @@
   font-size: 1.1rem;
 }
 
-.xans-search-paging .first:hover, .xans-search-paging .last:hover, .xans-search-paging .btnPrev:hover, .xans-search-paging .btnNext:hover {
+.page-pagination .first:hover, .page-pagination .last:hover, .page-pagination .btnPrev:hover, .page-pagination .btnNext:hover {
   font-weight: 700;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 
-.xans-search-paging ol {
+.page-pagination ol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -554,11 +554,11 @@
   margin: 0 5px;
 }
 
-.xans-search-paging ol li {
+.page-pagination ol li {
   margin: 0 11px;
 }
 
-.xans-search-paging ol li a {
+.page-pagination ol li a {
   display: block;
   width: 100%;
   height: 100%;
@@ -568,7 +568,7 @@
   color: #707070;
 }
 
-.xans-search-paging ol li .this {
+.page-pagination ol li .this {
   font-weight: 600;
   color: #022CFF;
 }

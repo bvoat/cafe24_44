@@ -205,21 +205,22 @@
             </div>
             <button onclick="{$action_order_all}" id="order_all">전체상품주문</button>
         </section>
-        <section id="wishListPaginate" class="ec-base-paginate typeList" module="myshop_wishlistpaging">
+        <section id="wishListPaginate" class="ec-base-paginate typeList page-pagination" module="myshop_wishlistpaging">
             <!--@css(/css/module/myshop/wishlistpaging.css)-->
             <div class="paginate-box">
-            <span class="btnPrev_wrap">
-                <a href="{$param_before}" class="btnPrev">이전</a>
-            </span>
-            <ol>
-                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-            </ol>
-            <span class="btnNext_wrap">
-                <a href="{$param_next}" class="btnNext">다음</a>
-            </span>
+                <span class="btnPrev_wrap">
+                    <a href="{$param_first}" class="first">처음</a>
+                        <a href="{$param_before}" class="btnPrev">이전</a>
+                    </span>
+                <ol>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                </ol>
+                <span class="btnNext_wrap">
+                    <a href="{$param_next}" class="btnNext">다음</a>
+                    <a href="{$param_last}" class="last">끝</a>
+                </span>
             </div>
         </section>
     </section>

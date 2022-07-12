@@ -206,7 +206,7 @@
 
 //페이지 하단 페이지네이션
 @mixin page-pagination {
-    .xans-search-paging{
+    .page-pagination{
         display: flex;
         flex-flow: row;
         align-items: center;

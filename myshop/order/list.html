@@ -188,17 +188,21 @@
     </section>
 
 
-    <div id="OrderHistoryPagination" class="paginate" module="Myshop_OrderHistoryPaging">
+    <div id="OrderHistoryPagination" class="paginate page-pagination" module="Myshop_OrderHistoryPaging">
         <div class="paginate-box">
-            <a href="{$param_first}" class="first">처음</a>
-            <a class="btnPrev_wrap" href="{$param_before}">이전</a>
+            <span class="btnPrev_wrap">
+                <a href="{$param_first}" class="first">처음</a>
+                    <a href="{$param_before}" class="btnPrev">이전</a>
+                </span>
             <ol>
                 <li><a href="{$param}" class="{$param_class}">{$num}</a></li>
                 <li><a href="{$param}" class="{$param_class}">{$num}</a></li>
                 <li><a href="{$param}" class="{$param_class}">{$num}</a></li>
             </ol>
-            <a class="btnNext_wrap" href="{$param_next}">다음</a>
-            <a href="{$param_last}" class="last">끝</a>
+            <span class="btnNext_wrap">
+                <a href="{$param_next}" class="btnNext">다음</a>
+                <a href="{$param_last}" class="last">끝</a>
+            </span>
         </div>
     </div>
 
