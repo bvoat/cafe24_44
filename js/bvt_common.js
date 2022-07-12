@@ -75,7 +75,7 @@ function monitoringPrice() {
     //변경 안 되었으면 실행 if
     if (!discount.classList.contains("price_check")) {
       //소비자가(할인가)가 판매가 둘 다 가격이 있어야 하고
-      //소비자가의 숫자가 0이 아니고 
+      //소비자가의 숫자가 0이 아니어야 하고 
       //소비자가랑 판매가가 같지 않으면  
       //할인 중
       if (
@@ -86,7 +86,7 @@ function monitoringPrice() {
         display_discount.dataset.price !=
         display_product.dataset.price
       ) {
-        
+
         //판매가에 strike_price class 붙이고
         display_product.classList.add("strike_price");
         //소비자가에 onpromotion class 붙이고
