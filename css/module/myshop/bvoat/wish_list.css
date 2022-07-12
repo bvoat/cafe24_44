@@ -127,17 +127,27 @@
   color: #707070;
 }
 
-#wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box .description .info .price {
+#wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box .description .info .price_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.45rem;
   font-weight: 500;
-  color: #707070;
+  color: #022CFF;
 }
 
-#wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box .description .info .price .strike {
+#wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box .description .info .price_wrap .strike {
   font-size: 1.2rem;
   text-decoration: line-through;
   color: #C4C4C4;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_option .option_info {

@@ -98,15 +98,18 @@
                                 
                             }
                            } 
-                           .price{
+                           .price_wrap{
+                            display: flex;
+                            flex-flow: row nowrap;
+                            align-items: center;
                             font-size: 1.45rem;
                             font-weight: 500;
-                            color: $bvt-darkgray;
+                            color: $bvt-blue;
                             .strike{
                                 font-size: 1.2rem;
                                 text-decoration: line-through;
                                 color: $bvt-lightgray;
-                                margin-right: 5px;
+                                margin-left: 5px;
                             }
                            }
                         }
