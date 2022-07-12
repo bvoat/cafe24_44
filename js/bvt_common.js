@@ -68,8 +68,6 @@ function monitoringPrice() {
     let display_product = price.children[1];
     //소비자가(할인가)
     let display_discount = price.children[2];
-    //높이 조절을 위한 product_name
-    // let product_name = price.previousElementSibling;
 
     /* 이미 변경된 경우를 체크 */
     //변경 안 되었으면 실행 if
@@ -83,8 +81,8 @@ function monitoringPrice() {
         display_product.dataset.price &&
         parseInt(display_discount.dataset.price) != "0"
         &&
-        display_discount.dataset.price !=
-        display_product.dataset.price
+        (parseInt(display_discount.dataset.price) !=
+        parseInt(display_product.dataset.price))
       ) {
 
         //판매가에 strike_price class 붙이고
@@ -118,8 +116,8 @@ function monitoringPrice() {
         parseInt(display_discount.dataset.price) == 0 ||
         display_discount.dataset.price == ""
         ||
-        display_discount.dataset.price ==
-        display_product.dataset.price
+        (parseInt(display_discount.dataset.price) ==
+        parseInt(display_product.dataset.price))
       ) {
         //소비자가에 "원" 표시되지 않도록 삭제
         display_discount.classList.add("displaynone");
