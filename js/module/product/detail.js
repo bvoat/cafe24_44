@@ -9,16 +9,19 @@ if (buy_record_frame != null) {
   );
 }
 //최초 탭 높이 조절
-const productDetailBottom = document.getElementById("productDetailBottom");
-const detail_swiper_wrap = document.getElementById("detail_swiper_wrap");
-let firstTab = getComputedStyle(productDetailBottom);
 
-window.addEventListener("DOMContentLoaded", (firstTab)=>{
-  const firstControlContentWrapHeight = (firstTab) => {
-    productDetailBottom.style.height = firstTab.height;
-    detail_swiper_wrap.style.height = firstTab.height;
-  };
-  firstControlContentWrapHeight(firstTab)
+
+window.addEventListener("DOMContentLoaded", ()=>{
+  const productDetailBottom = document.getElementById("productDetailBottom");
+  if(productDetailBottom){
+    const detail_swiper_wrap = document.getElementById("detail_swiper_wrap");
+    let firstTab = getComputedStyle(productDetailBottom);
+    const firstControlContentWrapHeight = (firstTab) => {
+      productDetailBottom.style.height = firstTab.height;
+      detail_swiper_wrap.style.height = firstTab.height;
+    };
+    firstControlContentWrapHeight(firstTab);
+  }
 })
 
 //상품 상세 하단 페이지 탭 슬라이더
@@ -153,10 +156,12 @@ Array.from(purchase_button).forEach((btn)=>{
     classToggle(buyScreen, "displaynone");
   })
 })
-const screen_close_btn = document.querySelector(".screen_close_btn");
+if(document.querySelector(".screen_close_btn")){
+  const screen_close_btn = document.querySelector(".screen_close_btn");
 screen_close_btn.addEventListener("click", ()=>{
   classToggle(buyScreen, "displaynone");
 })
+}
 
 
 /* 가격 -> 스탬프 */
@@ -279,10 +284,10 @@ buyRecordFrameControl();
 //크루 등급 마일리지 2배 변환
 crewValueControl(2);
 //공유 이벤트 클릭
-shareBtn.addEventListener("click", (e) => {
+if(document.querySelector("#shareBtn")){shareBtn.addEventListener("click", (e) => {
   const url = window.location.href;
   goShrBtn(`link`, url);
-});
+});}
 //Q&A heading 컨트롤
 qnaControl();
 //스탬프 만들기
