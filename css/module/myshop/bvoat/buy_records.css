@@ -2,11 +2,7 @@
   width: 100%;
   border: none;
   height: 1600px;
-  margin: 40px 0;
-}
-
-.margin-header {
-  background: #F4F5FB;
+  padding: 23px 0;
 }
 
 #bh_slide_frame {

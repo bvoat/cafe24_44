@@ -31,4 +31,14 @@
 .container.board_cont .container {
   margin-top: 0 !important;
 }
+
+#save_btn {
+  color: #B7B7B7;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.modified {
+  color: #022CFF !important;
+}
 /*# sourceMappingURL=community.css.map */
