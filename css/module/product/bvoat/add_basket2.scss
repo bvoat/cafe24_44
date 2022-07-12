@@ -1,6 +1,6 @@
 @charset "utf-8";
-@import "../../../../layout/basic/css/abstracts/mixin";
-@import "../../../../layout/basic/css/abstracts/variables";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
 
 #basketLayer {
     position: fixed;
@@ -24,7 +24,6 @@
         bottom: 0;
         width: 100%;
         max-width: 450px;
-        height: 340px;
         border: 0;
         background: $bvt-white;
         overflow: hidden;
@@ -40,85 +39,100 @@
         }
 
         .basket_wrap {
-            width: 450px;
-            height: 190px;
+            width: 100%;       
+            max-width: 450px;
 
             >ul {
-                width: 100%;
-                max-width: 450px;
-                height: 180px;
-
-                .basket_item {
+                padding: 5px 11px 10px;
+                >li{
                     display: flex;
-                    flex-flow: column nowrap;
-                    align-items: center;
-                    justify-content: space-evenly;
-                    height: 100%;
-                    >a{
-                        display: block;
-                        border-radius: 6px;
-                        overflow: hidden;
-                    }
-
-                    >ul{
-                        text-align: center;
-                        .name{
-                            font-size: 1.2rem;
-                            font-weight: 500;
-                        }
-                        .option{
-                            font-size: 1.2rem;
-                            font-weight: 300;
-                            color: $bvt-darkgray;
-                        }
-                        .price{
-                            font-size: 1.2rem;
-                            font-weight: 500;
-                            margin-top: 5px;
-                        }
-
-                    }
+                    flex-flow: row nowrap;
+                    height: calc(50% - 5px) !important;
                 }
             }
-            .progressbar{
-                width: 100%;
-                height: 5px;
-                bottom: 61px;
-                left: 0;
-            }
+
         }
 
-        .layer_basket_btn {
+    }
+}
+
+//내부 이미지
+//상품 이미지 구역
+    .thumb {
+        position: relative;
+        width: 95px;
+        height: 95px;
+
+        >a {
+            display: block;
             position: relative;
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-            bottom: 0;
             width: 100%;
-            max-width: 450px;
-            height: 61px;
-            padding: 0;
+            height:100%;
+            overflow: hidden;
+            border-radius: 4px;
 
-            >a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 50%;
-                height: 100%;
-                font-weight: 500;
-                font-size: 1.4rem;
-                cursor: pointer;
-            }
-
-            .move_basket_btn {
-                background: $bvt-white;
-                color: $bvt-black;
-            }
-
-            .stay_btn {
-                background: $bvt-blue;
-                color: $bvt-white;
+            >img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
             }
         }
+    }
+//내부 설명
+.desc{
+    padding: 1%;
+    .basket_name{
+        font-size: 1.3rem;
+        font-weight: 600;
+        @include ellipsis(1, 1.6rem);
+        color: $bvt-darkgray;
+    }
+    .basket_option{
+        font-size: 1.2rem;
+        color: $bvt-darkgray;
+    }
+    .basket_quantity{
+        font-size: 1.2rem;
+        color: $bvt-darkgray;
+        margin-top: 12px;
+    }
+}
+.progressbar{
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: 61px;
+}
+.layer_basket_btn {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    max-width: 450px;
+    height: 61px;
+    padding: 0;
+
+    >a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        font-weight: 500;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+
+    .move_basket_btn {
+        background: $bvt-white;
+        color: $bvt-black;
+    }
+
+    .stay_btn {
+        background: $bvt-blue;
+        color: $bvt-white;
     }
 }
