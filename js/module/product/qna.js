@@ -2,7 +2,7 @@
  * 상품상세 Q&A
  */
 $(function(){
-    $('.xans-product-qna a').on('click', function(e) {
+    $('.xans-product-qna a').click(function(e){
         e.preventDefault();
 
         var no = $(this).attr('href').replace(/(\S*)[?&]no=(\d+)(\S*)/g, '$2');
