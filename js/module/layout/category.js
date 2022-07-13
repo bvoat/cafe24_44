@@ -3,7 +3,7 @@
  * 카테고리 대분류 설정
  */
 
- jQuery3_5_1(document).ready(function () {
+ $(document).ready(function () {
     var methods = {
         aCategory: [],
         aSubCategory: {}, 
@@ -130,7 +130,7 @@
         var click_tmp = $(this);
         var segment_array = click_tmp.attr("class").split('-');
         var last_segment = segment_array.pop();
-
+        
         $(`div[class^="middle-category"]`).next(`.middle-small`).remove();
         $(`div[class^="middle-category"]`).children(`.middle-title`).removeClass("active");
     
