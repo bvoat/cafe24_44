@@ -126,7 +126,7 @@
         }
     }, 100);
 
-    $(document).on("click", `div[class^="middle-category"]`, function () {
+    $(`div[class^="middle-category"]`).click(function () {
         var click_tmp = $(this);
         var segment_array = click_tmp.attr("class").split('-');
         var last_segment = segment_array.pop();
@@ -163,7 +163,7 @@
     
     })
     
-    $(document).on("click", `div[class^="middle-tag-category"]`, function () {
+    $(`div[class^="middle-tag-category"]`).click(function () {
         var click_tmp = $(this);
         var segment_array = click_tmp.attr("class").split('-');
         var last_segment = segment_array.pop();
