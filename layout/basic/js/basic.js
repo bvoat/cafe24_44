@@ -61,7 +61,7 @@ $(window).on('load', function() {
  * 문서 구동후 시작
  */
 $(function(){
-    $('#banner:visible, #quick:visible').floatBanner();
+    // $('#banner:visible, #quick:visible').floatBanner();
 
     //placeholder
     $(".ePlaceholder input, .ePlaceholder textarea").each(function(i){

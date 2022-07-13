@@ -80,6 +80,7 @@
                 width: 25px;
                 height: 23px;
                 a {
+                    position: relative;
                     display: block;
                     width: 25px;
                     height: 23px;
@@ -87,18 +88,24 @@
                     background-size: contain;
                     text-indent: -9999px;
                 }
-
                 .count {
-                    position: absolute;
+                    position: relative;
+                    display: block;
                     width: 15px;
                     height: 15px;
                     background: $bvt-blue;
-                    font-weight: 700;
-                    color: $bvt-white;
                     border-radius: 50%;
                     text-align: center;
-                    top: -3px;
-                    right: -7px;
+                    top: -18px;
+                    right: -17px;
+                    >em{
+                        position: relative;
+                        display: block;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        color: $bvt-white;
+                        text-indent: 0;
+                    }
                 }
             }
 

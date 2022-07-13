@@ -115,6 +115,7 @@
 }
 
 #header_wrap #header_logo_section .header_menu .header_cart a {
+  position: relative;
   display: block;
   width: 25px;
   height: 23px;
@@ -124,15 +125,23 @@
 }
 
 #header_wrap #header_logo_section .header_menu .header_cart .count {
-  position: absolute;
+  position: relative;
+  display: block;
   width: 15px;
   height: 15px;
   background: #022CFF;
-  font-weight: 700;
-  color: #ffffff;
   border-radius: 50%;
   text-align: center;
-  top: -3px;
-  right: -7px;
+  top: -18px;
+  right: -17px;
+}
+
+#header_wrap #header_logo_section .header_menu .header_cart .count > em {
+  position: relative;
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-indent: 0;
 }
 /*# sourceMappingURL=header.css.map */
