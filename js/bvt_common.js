@@ -158,20 +158,18 @@ function controlTabNav (page_path) {
   const default_nav = document.querySelector(".default_top_nav");
   const comm_nav = document.querySelector(".community_top_nav");
   //제외할 path
-  const expect_array = ["order/basket","order/orderform", "product/detail","/product/category","/myshop/wish_list","/member/login","/myshop/index", "member/modify"];
+  const expect_array = ["order/basket","order/orderform", "product/detail","product/category","myshop/wish_list","member/login","myshop/index", "member/modify"];
   //커뮤니티용 path
   const community_array = ["community", "buy_records"];
   //뒤로가기 path
-  const back_array = ["product/detail", "order/basket", "order/orderform", "community_view", "community_write", "/buy_records/view.html", "/buy_records/write.html", "order/basket", "id/find_id", "passwd/find_passwd_info", "member/login", "member/modify"];
+  const back_array = ["product/detail", "order/basket", "order/orderform", "community_view", "community_write", "buy_records/view.html", "buy_records/write.html", "order/basket", "id/find_id", "passwd/find_passwd_info", "member/login", "member/modify"];
 
   //디폴트 메뉴 사라지게
-  if(default_nav){
-     expect_array.forEach((path) => {
+  expect_array.forEach((path) => {
     page_path.includes(path) ? default_nav.classList.add("displaynone") : null;
   });
-  }
+
   //커뮤니티 하단바로
-  if(default_nav){
     community_array.forEach((path) => {
       if (page_path.includes(path)) {
         default_nav.classList.add("displaynone");
@@ -179,7 +177,7 @@ function controlTabNav (page_path) {
         document.querySelector(`#${path}_nav`).classList.add("top_nav_active");
       }
     });
-  }
+  
   //뒤로가기 표시
   back_array.forEach((path)=>{
     if (page_path.includes(path)) {
