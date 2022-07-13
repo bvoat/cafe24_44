@@ -142,7 +142,7 @@
             }
 
             .segment_info {
-                padding: 22px 0 25px 25px;
+                padding: 22px 25px 25px;
                 border-top: $bvt-btn-border-gray;
 
                 .ec-base-table {
@@ -151,7 +151,11 @@
                         font-weight: 300;
                         color: $bvt-darkgray;
                         line-height: 1.8rem;
-
+                        span{
+                            font-size: 1.24rem;
+                            font-weight: normal;
+                            word-break: keep-all;
+                        }
                         &:nth-child(3) {
                             margin-top: 20px;
 
@@ -171,6 +175,13 @@
                                     transition: all .3s;
                                 }
                             }
+                        }
+                    }
+                    .segment_sort{
+                        margin-bottom: 6px;
+
+                        span{
+                            font-weight: 600;
                         }
                     }
                 }
@@ -261,7 +272,7 @@
                                     font-size: 1.35rem;
                                     font-weight: 500;
                                     color: $bvt-darkgray;
-                                    @include only-ellipsis(1, 1.2rem);
+                                    @include only-ellipsis(1, 1.5rem);
                                 }
                             }
 

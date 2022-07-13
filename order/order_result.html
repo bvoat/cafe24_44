@@ -56,9 +56,9 @@
         <details class="order_product_details">
             <summary>주문 상품</summary>
             <!-- 국내배송상품 주문내역 -->
-            <div class="order_info" nspace="normal">
+            <div class="order_info {$normal_display|display}" nspace="normal">
                 <!-- 주문 상품 리스트 -->
-                <ul module="Order_normalresultlist" class="product_list_box">
+                <ul module="Order_normalresultlist" class="product_list_box orderArea">
                     <!-- 주문 상품 리스트 반복 1 -->
                     <li class="product_list">
                         <!-- 상품 이미지 -->
@@ -78,7 +78,7 @@
                                 <li title="옵션">
                                     <p class="option">
                                         <!-- 상품 옵션 선택내용 -->
-                                        [옵션 : {$option_detail_str}]
+                                        {$option_str}
                                     </p>
                                 </li>
                                 <!-- 상품구매금액*수량 -->
@@ -112,7 +112,7 @@
                                 <li title="옵션">
                                     <p class="option">
                                         <!-- 상품 옵션 선택내용 -->
-                                        [옵션 : {$option_detail_str}]
+                                        {$option_str}
                                     </p>
                                 </li>
                                 <!-- 상품구매금액*수량 -->
@@ -129,17 +129,101 @@
                     </li>
                 </ul>
                 <!-- 주문 상품 합계/금액 -->
-                <div class="product_total">
+                <div class="prdTotal product_total">
                     <p class="total_price">합계</p>
                     <p
-                        class="price_num">{$normal_total_price_front_head}{$normal_total_price_front}{$normal_total_price_front_tail}
-                        <span
-                            class="refer {$normal_total_price_ref_display|display}">({$normal_total_price_back_head}{$normal_total_price_back}{$normal_total_price_back_tail})
-                        </span>
+                    class="price_num">
+                    {$normal_total_price_front_head}{$normal_total_price_front}{$normal_total_price_front_tail}
                     </p>
                 </div>
             </div>
-        </div>
+            <!-- 국내배송상품 주문내역 -->
+            <!-- 개별배송상품 주문내역 -->
+            <div class="order_info {$individual_display|display}" nspace="individual">
+                <!-- 주문 상품 리스트 -->
+                <ul module="Order_individualresultlist" class="product_list_box orderArea">
+                    <!-- 주문 상품 리스트 반복 1 -->
+                    <li class="product_list">
+                        <!-- 상품 이미지 -->
+                        <div class="thumbnail">
+                            <a href="/product/detail.html{$param}">
+                                <img class="thumbnail_img" src="{$product_image}" alt="
+                                        {$product_name}">
+                            </a>
+                        </div>
+                        <!-- 상품 설명 -->
+                        <div class="description">
+                            <p class="prdName" title="상품명">
+                                {$product_name_link}
+                            </p>
+                            <ul class="info">
+                                <!-- 옵션 -->
+                                <li title="옵션">
+                                    <p class="option">
+                                        <!-- 상품 옵션 선택내용 -->
+                                        {$option_str}
+                                    </p>
+                                </li>
+                                <!-- 상품구매금액*수량 -->
+                                <li title="상품 구매수량">
+                                    <span id="{$product_purchase_price_div_id}">
+                                        {$product_purchase_price_front_head}{$product_purchase_price_front}{$product_purchase_price_front_tail}원
+                                        * {$product_quantity}개
+                                    </span>
+                                </li>
+                                <li title="배송">기본 배송
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 주문 상품 리스트 반복 2 -->
+                    <li class="product_list">
+                        <!-- 상품 이미지 -->
+                        <div class="thumbnail">
+                            <a href="/product/detail.html{$param}">
+                                <img class="thumbnail_img" src="{$product_image}" alt="
+                                        {$product_name}">
+                            </a>
+                        </div>
+                        <!-- 상품 설명 -->
+                        <div class="description">
+                            <p class="prdName" title="상품명">
+                                {$product_name_link}
+                            </p>
+                            <ul class="info">
+                                <!-- 옵션 -->
+                                <li title="옵션">
+                                    <p class="option">
+                                        <!-- 상품 옵션 선택내용 -->
+                                        {$option_str}
+                                    </p>
+                                </li>
+                                <!-- 상품구매금액*수량 -->
+                                <li title="상품 구매수량">
+                                    <span id="{$product_purchase_price_div_id}">
+                                        {$product_purchase_price_front_head}{$product_purchase_price_front}{$product_purchase_price_front_tail}원
+                                        * {$product_quantity}개
+                                    </span>
+                                </li>
+                                <li title="배송">기본 배송
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 주문 상품 합계/금액 -->
+                <div class="prdTotal product_total">
+                    <div class="prdTotal product_total">
+                        <p class="total_price">합계</p>
+                        <p
+                        class="price_num">
+                        {$individual_total_price_front_head}{$individual_total_price_front}{$individual_total_price_front_tail}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 개별배송상품 주문내역 -->
+        </details>
     </section>
 
     <!-- 하단 버튼 -->

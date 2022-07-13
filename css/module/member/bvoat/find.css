@@ -190,4 +190,12 @@
   border-radius: 100px;
   margin: 14px auto;
 }
+
+.find_btn {
+  width: 100%;
+  padding: 4%;
+  background: #022CFF;
+  color: #ffffff;
+  margin-top: 30px;
+}
 /*# sourceMappingURL=find.css.map */

@@ -211,7 +211,7 @@
 }
 
 #mCafe24Order .segment_section .segment_details .segment_info {
-  padding: 22px 0 25px 25px;
+  padding: 22px 25px 25px;
   border-top: 1px solid #E2E2E2;
 }
 
@@ -220,6 +220,12 @@
   font-weight: 300;
   color: #707070;
   line-height: 1.8rem;
+}
+
+#mCafe24Order .segment_section .segment_details .segment_info .ec-base-table li span {
+  font-size: 1.24rem;
+  font-weight: normal;
+  word-break: keep-all;
 }
 
 #mCafe24Order .segment_section .segment_details .segment_info .ec-base-table li:nth-child(3) {
@@ -243,6 +249,14 @@
   color: #292929;
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+#mCafe24Order .segment_section .segment_details .segment_info .ec-base-table .segment_sort {
+  margin-bottom: 6px;
+}
+
+#mCafe24Order .segment_section .segment_details .segment_info .ec-base-table .segment_sort span {
+  font-weight: 600;
 }
 
 #mCafe24Order .order_product_section {
@@ -368,7 +382,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
 }
 
 #mCafe24Order .order_product_section .order_product_details .order_info .product_list_box .product_list .description .info {
