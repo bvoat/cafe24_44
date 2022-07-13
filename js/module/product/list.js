@@ -50,3 +50,9 @@ window.addEventListener("DOMContentLoaded", ()=>{
   document.querySelector(".subcategory>li") == null ? document.querySelector("#subCategorySwiper").classList.add("displaynone") : null;
 })
 /* 하위 카테고리 숨김 */
+/* 하위 카테고리 뒤로가기 표시 */
+window.addEventListener("load", ()=>{
+  const parent = document.querySelector("#topNavControl").dataset.parent;
+  let params = document.location.search;
+  parent != params ? document.querySelector(".back_btn").classList.remove("visiblehidden") : null;
+})

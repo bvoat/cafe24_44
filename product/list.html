@@ -3,7 +3,7 @@
 <article id="productList">
     <!-- 카테고리 타이틀 -->
     <section id="productListTitle" module="product_headcategory">
-        <input type="hidden" id="topNavControl" name="{$name_1}" value="{$name_1}" class="displaynone">
+        <input type="hidden" id="topNavControl" name="{$name_1}" value="{$name_1}" class="displaynone" data-parent="{$param_1}">
         <h1 class="category_title" data-category="{$title_text}" data-main="{$name_1}">가치소비 {$title_text} 추천</h1>
         <h2></h2>
     </section>
@@ -44,5 +44,5 @@
     <!-- 더보기 버튼 -->
 </article>
 
-<!-- heading2 title 변경, 하위카테고리 슬라이드, customProductPrice -->
+<!-- heading2 title 변경, 하위카테고리 슬라이드, 하위카테고리 뒤로가기, customProductPrice -->
 <script src="/js/module/product/list.js"></script>
