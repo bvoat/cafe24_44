@@ -15,7 +15,6 @@ window.addEventListener("load", ()=>{
   const productDetailBottom = document.getElementById("productDetailBottom");
   const detail_swiper_wrap = document.getElementById("detail_swiper_wrap");
   let firstTab = getComputedStyle(productDetailBottom);
-  console.log('firstTab: ', firstTab.height);
   const firstControlContentWrapHeight = (firstTab) => {
     productDetailBottom.style.height = (firstTab.height + 100 + 'px');
     detail_swiper_wrap.style.height = (firstTab.height + 100 + 'px');
