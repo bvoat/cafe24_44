@@ -6,7 +6,7 @@
  $(document).ready(function () {
     var methods = {
         aCategory: [],
-        aSubCategory: {},
+        aSubCategory: {}, 
         parent: [],
         parent_tag: [],
         get: function () {
