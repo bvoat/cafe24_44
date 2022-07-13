@@ -130,12 +130,9 @@
         var click_tmp = $(this);
         var segment_array = click_tmp.attr("class").split('-');
         var last_segment = segment_array.pop();
-    
-    
+        
         $(`div[class^="middle-category"]`).next(`.middle-small`).remove();
         $(`div[class^="middle-category"]`).children(`.middle-title`).removeClass("active");
-    
-    
     
         clickable_prd = false;
         if (methods.aSubCategory[last_segment]) {
