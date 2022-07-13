@@ -26,10 +26,6 @@ test_arr.forEach((path) => {
     : (api_domain = "bvoat");
 });
 
-/* 모바일 기기 체크 */
-const mobileCheck = () => {
-	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
 /* 클래스 토글 */
 // 클래스가 들어갔다 나갔다 할 node를 element에, 클래스 이름을 className에 전달
 function classToggle(element, className) {

@@ -259,6 +259,12 @@
     })
 
     /* 아이디 중복 확인 팝업 제한 */
+
+        /* 모바일 기기 체크 */
+        const mobileCheck = () => {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        };
+
     const id_overlap_btn = document.querySelector(".id_overlap_btn");
     let mobile_bool = mobileCheck();
     console.log('mobile_bool: ', mobile_bool);
