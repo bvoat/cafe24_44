@@ -10,12 +10,13 @@
 
 <script>
 
-   //헤더 디자인 변경 테스트
-   $(".margin-header").html(`<img src="/bvtIMG/title_gradient.svg">`)
-   $(".hd-logo").css(`width`, `initial`);
-   $(".hd-logo").html(`<div style="color:#022CFF; font-size:17px; font-weight:bold;">게시글</div>`);
-   $(".btnBasket").css(`visibility`, `hidden`);
-   $(".count").css(`visibility`, `hidden`);
+window.addEventListener("load", ()=>{
+        document.querySelector("#header_logo_section a span").classList.add("displaynone")
+        document.querySelector("#header_logo_section a").insertAdjacentHTML("beforeend", `<div style="color:#022CFF; font-size:16px; font-weight:bold;">게시글</div>`)
+        document.querySelector(".header_search").classList.add("displaynone");
+        document.querySelector(".header_menu > .header_cart > a").classList.add("displaynone");
+      })
+
    //iframe 높이 조절
    setInterval(function () {
       $("#board_wrap").height($(".wrapper2").height());
