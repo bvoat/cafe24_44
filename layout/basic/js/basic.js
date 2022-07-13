@@ -43,6 +43,18 @@
         'delay'    : 500
     };
 
+    /**
+ *  썸네일 이미지 엑박일경우 기본값 설정
+ */
+$(window).on('load', function() {
+    $("img.thumb,img.ThumbImage,img.BigImage").each(function($i,$item){
+        var $img = new Image();
+        $img.onerror = function () {
+            $item.src="//img.echosting.cafe24.com/thumb/img_product_big.gif";
+        }
+        $img.src = this.src;
+    });
+});
 })(jQuery);
 
 /**
@@ -121,18 +133,7 @@ $(function(){
     }
 });
 
-/**
- *  썸네일 이미지 엑박일경우 기본값 설정
- */
-$(window).on('load', function() {
-    $("img.thumb,img.ThumbImage,img.BigImage").each(function($i,$item){
-        var $img = new Image();
-        $img.onerror = function () {
-            $item.src="//img.echosting.cafe24.com/thumb/img_product_big.gif";
-        }
-        $img.src = this.src;
-    });
-});
+
 
 /**
  *  tooltip
