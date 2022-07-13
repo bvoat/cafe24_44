@@ -41,49 +41,5 @@
         },
         },
     });
-    // const createdParentCategory = () => {
-    //     let parentCategoryArray = [];
-    //     let allCategory = [];
-
-    //     fetch(`/exec/front/Product/SubCategory`, {
-    //     method: 'GET', // 또는 'PUT'
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //         'Content-Type': 'application/x-www-form-urlencoded',
-    //     },
-    //     })
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //         if (data === null || data === 'undefined') return false;
-    //         data.forEach((el) => {
-    //             if(!parentCategoryArray.includes(el.parent_cate_no)) {
-    //                 parentCategoryArray.push(el.parent_cate_no);
-    //             };
-    //         });
-    //         parentCategoryArray.forEach((el)=>{
-    //             let tmpCateInfo = {
-    //                 parent : '',
-    //                 cate : []
-    //             }
-    //             tmpCateInfo.parent = el;
-    //             allCategory.push(tmpCateInfo)
-    //         });
-    //         data.forEach((el,i)=>{
-    //             allCategory.forEach((cate)=>{
-    //                 if(cate.parent === el.parent_cate_no){
-    //                     cate.cate.push(el)
-    //                 }
-    //             })
-    //         })
-    //     })
-    //     return allCategory;
-    // }
-    // let resultParentCategory = createdParentCategory();
-    // console.log("resultParentCategory",resultParentCategory)
-    
-    // const category_product = document.querySelector(".category_product");
-    // const category_tag = document.querySelector(".category_tag");
-
-
-    // console.log(resultParentCategory.length);
+   
 </script>
