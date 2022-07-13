@@ -128,7 +128,9 @@
 
     $(`div[class^="middle-category"]`).click(function () {
         var click_tmp = $(this);
+        console.log('click_tmp: ', click_tmp);
         var segment_array = click_tmp.attr("class").split('-');
+        console.log('segment_array: ', segment_array);
         var last_segment = segment_array.pop();
         
         $(`div[class^="middle-category"]`).next(`.middle-small`).remove();
