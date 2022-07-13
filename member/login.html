@@ -52,17 +52,16 @@
                             <h4>SNS 계정으로 로그인하기</h4>
                             <section class="login_sns_icon_wrap">
                                 <li><a href="#none" class="btnKakao 1"
-                                        onclick="MemberAction.kakaosyncLogin('8d06e7b36f8d0b4e7496c6380453ff15')" title="카카오 로그인"><span>카카오
+                                    onclick="{$kakao_func_login}" title="카카오 로그인"><span>카카오
                                             로그인</span></a></li>
                                 <li><a href="#none" class="btnNaver 1"
-                                        onclick="MemberAction.snsLogin('naver', '%2Findex.html')" title="네이버 로그인"><span>네이버
+                                    onclick="{$naver_func_login}" title="네이버 로그인"><span>네이버
                                             로그인</span></a>
                                 </li>
-                                <li><a href="#none" class="btnFacebook 1"
-                                        onclick="MemberAction.snsLogin('facebook', '%2Findex.html')" title="페이스북 로그인"><span>Facebook
+                                <li><a href="#none" onclick="{$facebook_func_login}" title="페이스북 로그인"><span>Facebook
                                             로그인</span></a></li>
                                 <li><a href="#none" class="btnApple 1"
-                                        onclick="MemberAction.snsLogin('apple', '%2Findex.html')" title="애플 로그인"><span>Apple
+                                    onclick="{$apple_func_login}" title="애플 로그인"><span>Apple
                                             로그인</span></a>
                                 </li>
                             </section>
