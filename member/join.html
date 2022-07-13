@@ -242,10 +242,8 @@
     }
     //return URL check code
     let params = decodeURIComponent(location.search);
-    console.log("params", decodeURIComponent(params))
     let returnUrl = document.querySelector("#returnUrl");
-    // const next_btn = document.querySelector(".btnSubmit");
-    console.log("next returnUrl", returnUrl.value)
+    console.log("return", returnUrl.value)
 
     if (params != undefined) {
         returnUrl.value = `/member/join_result.html${params}`;

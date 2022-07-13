@@ -200,6 +200,7 @@
                                 font-weight: bold;
                                 font-size: 1.35rem;
                                 color: $bvt-blue;
+                                cursor: pointer;
                             }
 
                             input {
@@ -364,9 +365,8 @@
                         .agereeArea_marketing_list {
                             display: flex;
                             flex-flow: row nowrap;
-                            margin-left: 50px;
                             align-items: center;
-
+                            margin: 14px 0 0 46px;
                             li {
                                 display: flex;
                                 flex-flow: row nowrap;

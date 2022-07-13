@@ -268,6 +268,7 @@
   font-weight: bold;
   font-size: 1.35rem;
   color: #022CFF;
+  cursor: pointer;
 }
 
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeAll .agreeArea_title input {
@@ -439,10 +440,10 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  margin-left: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 14px 0 0 46px;
 }
 
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_marketing .agereeArea_marketing_list li {
