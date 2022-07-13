@@ -43,7 +43,7 @@
 }
 
 #bvtCommonModal #bvtCommonForm .bvt_modal_title {
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   font-weight: 600;
   text-align: center;
 }
@@ -74,10 +74,10 @@
 
 #bvtCommonModal #bvtCommonForm .bvt_modal_btn > button {
   width: calc(50% - 5px);
-  height: 59px;
+  height: 58px;
   border-radius: 42px;
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 #bvtCommonModal #bvtCommonForm .bvt_modal_btn .ok_btn {
