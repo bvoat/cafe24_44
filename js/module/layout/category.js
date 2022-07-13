@@ -108,7 +108,7 @@
 
         });
 
-    }, 350);
+    }, 600);
 
     //가치별 카테고리
     setTimeout(() => {
@@ -124,7 +124,7 @@
                 }
             })
         }
-    }, 100);
+    }, 500);
 
     $(document).on("click", `div[class^="middle-category"]`, function () {
         var click_tmp = $(this);
