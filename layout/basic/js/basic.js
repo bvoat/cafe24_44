@@ -55,7 +55,7 @@ $(window).on('load', function() {
         $img.src = this.src;
     });
 });
-})(jQuery);
+}(jQuery1_11_3));
 
 /**
  * 문서 구동후 시작
@@ -180,5 +180,5 @@ $("body").on("click", ".eTab a", function(e){
 
 
 
-})(jQuery);
+}(jQuery1_11_3));
 
