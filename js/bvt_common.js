@@ -5,7 +5,8 @@
  * layout.html에 script 태그로 삽입
  */
 
-//path 체크
+
+/* 환경변수 확인 */
 //환경변수 세팅
 let api_domain;
 const cafe_host = window.location.host;
@@ -25,13 +26,17 @@ test_arr.forEach((path) => {
     : (api_domain = "bvoat");
 });
 
-//클래스 토글
+/* 모바일 기기 체크 */
+const isMobile = () => {
+	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+/* 클래스 토글 */
 // 클래스가 들어갔다 나갔다 할 node를 element에, 클래스 이름을 className에 전달
 function classToggle(element, className) {
   element.classList.toggle(className);
 }
 
-//모달 생성 함수
+/* 모달 생성 함수 */
 //모달 필요 시 제목, 설명, ok버튼, no버튼, 각각의 실행 함수 전달
 //dialog가 웹뷰 환경에서 정상적으로 동작하지 않아 HTML 모달로 실행
 function createdModal(heading, text, okmsg, nomsg, okfunc, nofunc) {
@@ -56,7 +61,7 @@ function createdModal(heading, text, okmsg, nomsg, okfunc, nofunc) {
   document.querySelector(".no_btn").addEventListener("click", nofunc);
 }
 
-//가격 감시 함수
+/* 가격 감시 함수 */
 function monitoringPrice() {
   console.log("price monitoring");
   const price_content = document.querySelectorAll(".price_wrap");
@@ -151,9 +156,8 @@ window.addEventListener("load", () => {
 });
 //상단바 컨트롤
 /* nav 컨트롤 스크립트 */
-const controlTabNav = (page_path) => {
+function controlTabNav (page_path) {
   // nav 전체
-  console.log("page_path", page_path);
   const back_btn = document.querySelector(".back_btn");
   const default_nav = document.querySelector(".default_top_nav");
   const comm_nav = document.querySelector(".community_top_nav");

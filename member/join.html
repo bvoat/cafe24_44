@@ -262,7 +262,22 @@
 
     /* 아이디 중복 확인 팝업 제한 */
     const id_overlap_btn = document.querySelector(".id_overlap_btn");
+    let mobile_bool = isMobile();
+    console.log('mobile_bool: ', mobile_bool);
+
     id_overlap_btn.addEventListener("click", ()=>{
-        checkId('/member/check_id.html')
+        const id_value = document.querySelector("#member_id").value;
+        if(id_value == "" || id_value == null){
+            alert("아이디를 입력해주세요")
+            return false;
+        } else {
+            if(mobile_bool){
+                checkId('/member/check_id.html');
+                return false;
+            } else {
+                return false;
+            }
+        }
+        
     })
 </script>
