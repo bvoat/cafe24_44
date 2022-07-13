@@ -12,22 +12,19 @@
             <legend class="displaynone">회원가입</legend>
             <!-- xans-member-join -->
             <div module="member_join">
-                <section class="member_join_section">
-                    <ul>
                         <!--
                         $returnUrl = /member/join_result.html
+                        $checkIdUrl = /member/check_id.html
                         $personalName = 이름
                         -->
 
+                <ul class="member_join_section">
                         <!-- 아이디 시작 -->
                         <li class="member_join_list">
                             <label class="input_label" for="member_id">아이디</label>
                             <p class="member_join_input_wrap">
-                                <input id="member_id" name="member_id" title="아이디"
-                                    fw-filter="isFill&amp;isFill&amp;isMin[4]&amp;isMax[16]&amp;isIdentity"
-                                    fw-label="아이디" fw-msg="" class="inputTypeText input_box small_mobile_input" placeholder="" value=""
-                                    type="text" autofocus autocapitalize="off" required>
-                                <button type="button" class="btnBasic input_btn" onclick="checkId('')">중복 확인</button>
+                                {$form.member_id}
+                                <button type="button" class="btnBasic input_btn id_overlap_btn">중복 확인</button>
                             <p id="idMsg" class="val_check_msg"></p>
                             </p>
                         </li>
@@ -112,8 +109,7 @@
                                 <input id="email1" class="input_box" name="email" title="이메일"
                                     fw-filter="isFill&amp;isEmail" fw-label="이메일" fw-alone="N" fw-msg="" value=""
                                     type="email" autocomplete="on" autocapitalize="off" required>
-                                <button type="button" class="btnNormal input_btn" onclick="checkEmail('')">중복
-                                    확인</button>
+                                
                             <p id="emailMsg" class="val_check_msg"></p>
                             </p>
                         </li>
@@ -141,8 +137,7 @@
                         <!-- 추천인아이디 종료 -->
 
 
-                    </ul>
-                </section>
+                </ul>
                 <section class="member_agree_section">
                     <!-- 전체 동의 시작 -->
                     <div class="agreeAll">
@@ -264,4 +259,5 @@
     mobile_left.addEventListener("keyup", (e)=>{
         e.currentTarget.value.length === 4 ? mobile_right.focus() : null;
     })
+
 </script>
