@@ -12,7 +12,7 @@
         <fieldset>
             <legend class="displaynone">회원로그인</legend>
             <!-- xans-member-login -->
-            <div module="member_login" id="{$member_login_module_id}">
+            <div id="{$member_login_module_id}" module="member_login">
                     <!--
                         $defaultReturnUrl = /index.html
                     -->
@@ -51,9 +51,9 @@
                         <ul class="login_sns">
                             <h4>SNS 계정으로 로그인하기</h4>
                             <section class="login_sns_icon_wrap">
-                                <li><a href="#none" class="btnKakao 1"
+                                <li><button class="btnKakao 1"
                                     onclick="{$kakao_func_login}" title="카카오 로그인"><span>카카오
-                                            로그인</span></a></li>
+                                            로그인</span></button></li>
                                 <li><a href="#none" class="btnNaver 1"
                                     onclick="{$naver_func_login}" title="네이버 로그인"><span>네이버
                                             로그인</span></a>
