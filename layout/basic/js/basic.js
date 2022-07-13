@@ -131,9 +131,7 @@ $(function(){
             return false;
         }
     }
-});
-
-
+    
 
 /**
  *  tooltip
@@ -180,4 +178,7 @@ $("body").on("click", ".eTab a", function(e){
     e.preventDefault();
 });
 
+
+
+})(jQuery);
 
