@@ -17,13 +17,12 @@
     </div>
 </div>
 <script>
-    //헤더 디자인 변경 테스트    
-    $(".hd-logo").css(`width`, `initial`);
-    $(".hd-logo").html(`<div style="color:#022CFF; font-size:17px; font-weight:bold;">게시글 작성</div>`);
-    $("#header ul").html(`<div id="save_btn" onclick='iframe.postMessage({ run_script : "board_save()"}, "*");'>등록</div>`)
-    $(".btnBasket").css(`visibility`, `hidden`);
-    $(".count").css(`visibility`, `hidden`);
-    $(".footerMenu").hide();
-
+    window.addEventListener("load", ()=>{
+        document.querySelector("#header_logo_section a span").classList.add("displaynone")
+        document.querySelector("#header_logo_section a").insertAdjacentHTML("beforeend", `<div style="color:#022CFF; font-size:16px; font-weight:bold;">게시글 작성</div>`)
+        document.querySelector(".header_search").classList.add("displaynone");
+        document.querySelector(".header_menu > .header_cart > a").classList.add("displaynone");
+        document.querySelector(".header_menu > .header_cart").insertAdjacentHTML("beforeend", `<div id="save_btn" style="font-size: 15px" onclick='iframe.postMessage({ run_script : "board_save()"}, "*");'>등록</div>`)
+    })
 
 </script>
