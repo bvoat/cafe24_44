@@ -5,43 +5,43 @@
 
 (function($){
 
-    $.fn.floatBanner = function(options) {
-        options = $.extend({}, $.fn.floatBanner.defaults , options);
+    // $.fn.floatBanner = function(options) {
+    //     options = $.extend({}, $.fn.floatBanner.defaults , options);
 
-        return this.each(function() {
-            var aPosition = $(this).position();
-            var jbOffset = $(this).offset();
-            var node = this;
+    //     return this.each(function() {
+    //         var aPosition = $(this).position();
+    //         var jbOffset = $(this).offset();
+    //         var node = this;
 
-            $(window).on('scroll', function() {
-                var _top = $(document).scrollTop();
-                _top = (aPosition.top < _top) ? _top : aPosition.top;
+    //         $(window).on('scroll', function() {
+    //             var _top = $(document).scrollTop();
+    //             _top = (aPosition.top < _top) ? _top : aPosition.top;
 
-                setTimeout(function () {
-                    var newinit = $(document).scrollTop();
+    //             setTimeout(function () {
+    //                 var newinit = $(document).scrollTop();
 
-                    if ( newinit > jbOffset.top ) {
-                        _top -= jbOffset.top;
-                        var container_height = $("#wrap").height();
-                        var quick_height = $(node).height();
-                        var cul = container_height - quick_height;
-                        if(_top > cul){
-                            _top = cul;
-                        }
-                    } else {
-                        _top = 0;
-                    }
+    //                 if ( newinit > jbOffset.top ) {
+    //                     _top -= jbOffset.top;
+    //                     var container_height = $("#wrap").height();
+    //                     var quick_height = $(node).height();
+    //                     var cul = container_height - quick_height;
+    //                     if(_top > cul){
+    //                         _top = cul;
+    //                     }
+    //                 } else {
+    //                     _top = 0;
+    //                 }
 
-                    $(node).stop().animate({top: _top}, options.animate);
-                }, options.delay);
-            });
-        });
-    };
+    //                 $(node).stop().animate({top: _top}, options.animate);
+    //             }, options.delay);
+    //         });
+    //     });
+    // };
 
-    $.fn.floatBanner.defaults = {
-        'animate'  : 500,
-        'delay'    : 500
-    };
+    // $.fn.floatBanner.defaults = {
+    //     'animate'  : 500,
+    //     'delay'    : 500
+    // };
 
     /**
  *  썸네일 이미지 엑박일경우 기본값 설정
