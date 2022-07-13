@@ -260,7 +260,7 @@
 
     /* 아이디 중복 확인 팝업 제한 */
     const id_overlap_btn = document.querySelector(".id_overlap_btn");
-    let mobile_bool = isMobile();
+    let mobile_bool = mobileCheck();
     console.log('mobile_bool: ', mobile_bool);
 
     id_overlap_btn.addEventListener("click", ()=>{

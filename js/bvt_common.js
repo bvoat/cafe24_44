@@ -27,7 +27,7 @@ test_arr.forEach((path) => {
 });
 
 /* 모바일 기기 체크 */
-const isMobile = () => {
+const mobileCheck = () => {
 	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 /* 클래스 토글 */
