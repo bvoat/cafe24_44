@@ -1,0 +1,296 @@
+#myshopCoupon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 450px;
+  padding: 23px 11px;
+  margin: 81px 0px 24px;
+}
+
+#myshopCoupon #myshopCouponTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+#myshopCoupon #myshopCouponTitle h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+#myshopCoupon #myshopCouponTitle h3 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #ABABAB;
+}
+
+#myshopCoupon .coupon_use {
+  width: 100%;
+  text-align: center;
+  padding: 11px 11px 24px;
+}
+
+#myshopCoupon .page-pagination {
+  margin-bottom: 0;
+}
+
+#myshopCouponTable {
+  width: 100%;
+  max-width: 450px;
+}
+
+#myshopCouponTable > ul {
+  width: 100%;
+  padding: 0 11px;
+}
+
+.coupon_item {
+  border: 1px solid #E2E2E2;
+  border-radius: 24px;
+  margin-bottom: 15px;
+  padding: 6%;
+}
+
+.coupon_item .name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.coupon_item > ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.coupon_item > ul .date {
+  position: relative;
+  padding: 0 0 16px 0;
+}
+
+.coupon_item > ul .date::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  border-bottom: 3px dotted #F2F2F2;
+  bottom: 0;
+}
+
+.coupon_item > ul .paymethod {
+  margin-top: 12px;
+}
+
+.coupon_item > ul .tag {
+  display: inline-block;
+  width: 20%;
+  max-width: 105px;
+  min-width: 70px;
+  overflow: hidden;
+  font-size: 1.23rem;
+  font-weight: 500;
+  padding: 3px 0;
+}
+
+.coupon_item > ul .content {
+  display: inline-block;
+  width: 80%;
+  font-size: 1.2rem;
+  font-weight: normal;
+  padding: 3px 3px 3px 8px;
+}
+
+.btnSubmit {
+  display: block;
+  padding: 24px;
+  background: #022CFF;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+#myshopCouponSerial {
+  width: 100%;
+  max-width: 450px;
+  padding: 0 11px;
+  margin-bottom: 100px;
+}
+
+#myshopCouponSerial h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+#myshopCouponSerial fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  padding: 5px 0;
+}
+
+#myshopCouponSerial fieldset label {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#myshopCouponSerial fieldset input {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #C4C4C4;
+  border-radius: 90px;
+  padding: 5px 12px;
+  font-size: 1.3rem;
+  margin: 12px 0;
+}
+
+#myshopCouponSerial fieldset .tips {
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: normal;
+  color: #707070;
+}
+
+#myshopCouponSerial #myshopCouponHelp {
+  width: 100%;
+  padding: 11px 0;
+}
+
+#myshopCouponSerial #myshopCouponHelp li {
+  font-size: 1.1rem;
+}
+
+.page-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 100px;
+}
+
+.page-pagination .paginate-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: 40px;
+  background: #FAFAFE;
+  border-radius: 30px;
+  padding: 1% 5%;
+  font-size: 1.3rem;
+}
+
+.page-pagination .btnPrev_wrap, .page-pagination .btnNext_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-pagination .first, .page-pagination .last, .page-pagination .btnPrev, .page-pagination .btnNext {
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 2px;
+  color: #707070;
+  font-size: 1.1rem;
+}
+
+.page-pagination .first:hover, .page-pagination .last:hover, .page-pagination .btnPrev:hover, .page-pagination .btnNext:hover {
+  font-weight: 700;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.page-pagination ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0 5px;
+}
+
+.page-pagination ol li {
+  margin: 0 11px;
+}
+
+.page-pagination ol li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #707070;
+}
+
+.page-pagination ol li .this {
+  font-weight: 600;
+  color: #022CFF;
+}
+/*# sourceMappingURL=coupon.css.map */
