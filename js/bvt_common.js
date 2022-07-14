@@ -9,7 +9,7 @@
 /* 환경변수 확인 */
 //환경변수 세팅
 let api_domain;
-let checkCafeHost = window.location.host;
+let check_cafe_host_location = window.location.host;
 const live_arr = [
   "bvoat.com",
   "m.bvoat.com",
@@ -21,7 +21,7 @@ const live_arr = [
 const test_arr = ["skin44", "mobile9"];
 //테스트용 스킨이 아니면 실서버 도메인이 api_domain에 부여됨
 test_arr.forEach((path) => {
-  checkCafeHost.includes(path)
+  check_cafe_host_location.includes(path)
     ? (api_domain = "bvoat-test")
     : (api_domain = "bvoat");
 });
