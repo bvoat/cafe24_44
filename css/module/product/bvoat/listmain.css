@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* listmain_double_mid */
-.doublemid .list_item {
+.doublemid > ul .list_item {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,7 +20,7 @@
   margin-bottom: 27px;
 }
 
-.doublemid .list_item .wish {
+.doublemid > ul .list_item .wish {
   position: absolute;
   width: 33px;
   height: 33px;
@@ -29,7 +29,7 @@
   left: 7.9px;
 }
 
-.doublemid .list_item .wish button {
+.doublemid > ul .list_item .wish button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,7 +49,7 @@
   cursor: pointer;
 }
 
-.doublemid .list_item .wish button img {
+.doublemid > ul .list_item .wish button img {
   position: relative;
   width: 60%;
   height: 53%;
@@ -57,7 +57,7 @@
 }
 
 /* listmain_small_big */
-.singlebig > .list_item {
+.singlebig > ul .list_item {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,7 +77,7 @@
   margin-bottom: 27px;
 }
 
-.singlebig > .list_item .wish {
+.singlebig > ul .list_item .wish {
   position: absolute;
   width: 41px;
   height: 41px;
@@ -86,7 +86,7 @@
   left: 9.6px;
 }
 
-.singlebig > .list_item .wish button {
+.singlebig > ul .list_item .wish button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,7 +106,7 @@
   cursor: pointer;
 }
 
-.singlebig > .list_item .wish button img {
+.singlebig > ul .list_item .wish button img {
   position: relative;
   width: 60%;
   height: 53%;
@@ -114,7 +114,7 @@
 }
 
 /* listmain_double_small */
-.doublesmall > .list_item {
+.doublesmall > ul .list_item {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -134,7 +134,7 @@
   margin-bottom: 27px;
 }
 
-.doublesmall > .list_item .wish {
+.doublesmall > ul .list_item .wish {
   position: absolute;
   width: 25px;
   height: 25px;
@@ -143,7 +143,7 @@
   left: 5.7px;
 }
 
-.doublesmall > .list_item .wish button {
+.doublesmall > ul .list_item .wish button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,7 +163,7 @@
   cursor: pointer;
 }
 
-.doublesmall > .list_item .wish button img {
+.doublesmall > ul .list_item .wish button img {
   position: relative;
   width: 60%;
   height: 53%;
@@ -171,7 +171,7 @@
 }
 
 /* listmain_double_small */
-.singlemid > .list_item {
+.singlemid > ul .list_item {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,7 +191,7 @@
   margin-bottom: 27px;
 }
 
-.singlemid > .list_item .wish {
+.singlemid > ul .list_item .wish {
   position: absolute;
   width: 33px;
   height: 33px;
@@ -200,7 +200,7 @@
   left: 7.9px;
 }
 
-.singlemid > .list_item .wish button {
+.singlemid > ul .list_item .wish button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,14 +220,14 @@
   cursor: pointer;
 }
 
-.singlemid > .list_item .wish button img {
+.singlemid > ul .list_item .wish button img {
   position: relative;
   width: 60%;
   height: 53%;
   margin-top: 1.5px;
 }
 
-.moreview {
+.moreview > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,7 +240,7 @@
           align-items: center;
 }
 
-.moreview > .list_item {
+.moreview > ul .list_item {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -260,7 +260,7 @@
   margin-bottom: 27px;
 }
 
-.moreview > .list_item .wish {
+.moreview > ul .list_item .wish {
   position: absolute;
   width: 38px;
   height: 38px;
@@ -269,7 +269,7 @@
   left: 10px;
 }
 
-.moreview > .list_item .wish button {
+.moreview > ul .list_item .wish button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -289,14 +289,14 @@
   cursor: pointer;
 }
 
-.moreview > .list_item .wish button img {
+.moreview > ul .list_item .wish button img {
   position: relative;
   width: 60%;
   height: 53%;
   margin-top: 1.5px;
 }
 
-.moreview > li:nth-child(2n-1) {
+.moreview > ul > li:nth-child(2n-1) {
   margin-right: 13.8px;
 }
 

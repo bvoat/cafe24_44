@@ -6,19 +6,21 @@
 .doublemid {
     // 이미지 182px
     //spaceBetween: 12,
-    .list_item {
-        position: relative;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: calc(50% - 12px);
-        max-width: 182px;
-        margin-bottom: 27px;
-
-        //위시버튼
-        @include wish-button(33px, 33px, 9.9px, 7.9px);
-
+    >ul{
+        .list_item {
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: calc(50% - 12px);
+            max-width: 182px;
+            margin-bottom: 27px;
+    
+            //위시버튼
+            @include wish-button(33px, 33px, 9.9px, 7.9px);
+    
+        }
     }
 }
 
@@ -26,19 +28,21 @@
 .singlebig {
     // 이미지 222.5px
     //spaceBetween: 15,
-    >.list_item {
-        position: relative;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: calc(50% - 15px);
-        max-width: 222.5px;
-        margin-bottom: 27px;
-
-        //위시버튼
-        @include wish-button(41px, 41px, 13.1px, 9.6px);
-
+    >ul{
+        .list_item {
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: calc(50% - 15px);
+            max-width: 222.5px;
+            margin-bottom: 27px;
+    
+            //위시버튼
+            @include wish-button(41px, 41px, 13.1px, 9.6px);
+    
+        }
     }
 }
 
@@ -46,18 +50,20 @@
 .doublesmall {
     // 이미지 135.5px
     //spaceBetween: 10.9,
-    >.list_item {
-        position: relative;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: calc(50% - 10.9px);
-        max-width: 135.5px;
-        margin-bottom: 27px;
-
-        //위시버튼
-        @include wish-button(25px, 25px, 8px, 5.7px);
+    >ul{
+        .list_item {
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: calc(50% - 10.9px);
+            max-width: 135.5px;
+            margin-bottom: 27px;
+    
+            //위시버튼
+            @include wish-button(25px, 25px, 8px, 5.7px);
+        }
     }
 }
 
@@ -66,41 +72,45 @@
 .singlemid {
     // 이미지 182px
     //spaceBetween: 13,
-    >.list_item {
-        position: relative;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: calc(50% - 13px);
-        max-width: 182px;
-        margin-bottom: 27px;
-        //위시버튼
-        @include wish-button(33px, 33px, 9.9px, 7.9px);
+    >ul{
+        .list_item {
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: calc(50% - 13px);
+            max-width: 182px;
+            margin-bottom: 27px;
+            //위시버튼
+            @include wish-button(33px, 33px, 9.9px, 7.9px);
+        }
     }
 }
 
 // moreview
 .moreview {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
     // 이미지 207px
-    >.list_item {
-        position: relative;
+    >ul{
         display: flex;
-        flex-flow: column nowrap;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: calc(50% - 10px);
-        max-width: 207px;
-        margin-bottom: 27px;
-
-        //위시버튼
-        @include wish-button(38px, 38px, 10px, 10px);
-    }
-    >li:nth-child(2n-1) {
-        margin-right: 13.8px;
+        flex-flow: row wrap;
+        align-items: center;
+        .list_item {
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: calc(50% - 10px);
+            max-width: 207px;
+            margin-bottom: 27px;
+    
+            //위시버튼
+            @include wish-button(38px, 38px, 10px, 10px);
+        }
+        >li:nth-child(2n-1) {
+            margin-right: 13.8px;
+        }
     }
 }
 
