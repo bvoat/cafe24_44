@@ -9,7 +9,7 @@
 /* 환경변수 확인 */
 //환경변수 세팅
 let api_domain;
-const cafe_host = window.location.host;
+let cafe_host = window.location.host;
 const live_arr = [
   "bvoat.com",
   "m.bvoat.com",
