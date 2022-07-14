@@ -179,23 +179,7 @@
 <!--@define(cmc_log)-->
 
 <script>
-    console.log("params", window.location.search);
-    const code = new URLSearchParams(window.location.search).get('code')
     
-    console.log("promo_params", promo_params);
-    console.log("promo_code",promo_code);
-    const createIndexPromoMain = (code) => {
-        console.log('code: ', code);
-        let list_arr = promo_code[code]
-        console.log('list_arr: ', list_arr);
-
-    const indexPromoMainlist = document.getElementById("#indexPromoMainlist");
-
-        list_arr.forEach(module_no => {
-            console.log('promo_params[module_no].title: ', promo_params[module_no].title);
-        });
-    }
-    createIndexPromoMain(code)
 var swiper = new Swiper(".doublemid", {
         spaceBetween: 12,
         slidesPerView: "auto",
