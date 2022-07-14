@@ -60,7 +60,7 @@ $(window).on('load', function() {
 /**
  * 문서 구동후 시작
  */
-$(function(){
+ (function($){
     // $('#banner:visible, #quick:visible').floatBanner();
 
     //placeholder
