@@ -135,28 +135,34 @@
 
 .buy_button_box {
     position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
     width: 100%;
     max-width: 450px;
-    height: 32%;
+    height: 40%;
     bottom: 0;
-    padding: 0;
+    padding: 7px 11px 25px;
     box-sizing: border-box;
     background: $bvt-bg-lightblue;
 
     h1 {
+        width: 100%;
+        text-align: left;
         font-size: 1.4rem;
         font-weight: 600;
         color: $bvt-black;
-        padding: 3px 0 10px 11px;
+        margin-bottom: 7px;
     }
 
     .total_price {
+        width: 100%;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
         font-size: 1.35rem;
-        margin:  0 11px;
+        margin-bottom: 3px;
         span {
             &:nth-child(1) {
                 font-size: 1.3rem;
@@ -168,12 +174,13 @@
     }
 
     .total_delivery {
+        width: 100%;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
         font-size: 1.5rem;
-        margin:  0 11px;
+        margin-bottom: 7px;
         span {
             &:nth-child(1) {
                 font-size: 1.3rem;
@@ -203,7 +210,6 @@
     #NaverChk_Button {
         display: flex;
         justify-content: center;
-        margin-bottom: 15px;
     }
 
     .product_action {

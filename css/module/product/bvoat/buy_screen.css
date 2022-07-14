@@ -182,24 +182,37 @@
 
 .buy_button_box {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   max-width: 450px;
-  height: 32%;
+  height: 40%;
   bottom: 0;
-  padding: 0;
+  padding: 7px 11px 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #FAFAFE;
 }
 
 .buy_button_box h1 {
+  width: 100%;
+  text-align: left;
   font-size: 1.4rem;
   font-weight: 600;
   color: #292929;
-  padding: 3px 0 10px 11px;
+  margin-bottom: 7px;
 }
 
 .buy_button_box .total_price {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,7 +227,7 @@
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.35rem;
-  margin: 0 11px;
+  margin-bottom: 3px;
 }
 
 .buy_button_box .total_price span:nth-child(1) {
@@ -226,6 +239,7 @@
 }
 
 .buy_button_box .total_delivery {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,7 +254,7 @@
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.5rem;
-  margin: 0 11px;
+  margin-bottom: 7px;
 }
 
 .buy_button_box .total_delivery span:nth-child(1) {
@@ -272,7 +286,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 15px;
 }
 
 .buy_button_box .product_action {
