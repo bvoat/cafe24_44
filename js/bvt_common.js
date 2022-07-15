@@ -9,22 +9,15 @@
 /* 환경변수 확인 */
 //환경변수 세팅
 let api_domain;
-let check_cafe_host_location = window.location.host;
-const live_arr = [
-  "bvoat.com",
-  "m.bvoat.com",
-  "mobile21",
-  "skin38",
-  "mobile10",
-  "skin21",
-];
-const test_arr = ["skin44", "mobile9"];
-//테스트용 스킨이 아니면 실서버 도메인이 api_domain에 부여됨
-test_arr.forEach((path) => {
-  check_cafe_host_location.includes(path)
-    ? (api_domain = "bvoat-test")
-    : (api_domain = "bvoat");
-});
+let now_path = window.location.href;
+if(now_path.includes("skin-skin44") || now_path.includes("skin-mobile9")){
+  api_domain = 'bvoat-test';
+}else if(now_path.includes("https://")){
+  api_domain = 'bvoat';
+}else{
+  api_domain = 'bvoat';
+}
+console.log('api_domain: ', api_domain);
 
 /* 클래스 토글 */
 // 클래스가 들어갔다 나갔다 할 node를 element에, 클래스 이름을 className에 전달
