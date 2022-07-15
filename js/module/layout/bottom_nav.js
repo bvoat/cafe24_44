@@ -1,5 +1,5 @@
       let page_path = window.location.pathname;
-      const exclude_path = ["join.html", "detail"];
+      const exclude_path = ["join.html", "product/detail.html"];
 
       //bottom nav 아이콘 변경 함수
       const bottomIconControl = () => {
