@@ -1,6 +1,6 @@
 $(function(){
-    // 상품리스트 전체선택
-    $('#product_select_all').on('click', function() {
+    // 상품리스트 전체선택 기존에 .on 이었는 .bind로 변경
+    $('#product_select_all').bind('click', function() {
         var _status = $(this).data('status');
 
         $('[id^="basket_chk_id_"]').each(function(){
