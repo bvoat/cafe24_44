@@ -81,8 +81,11 @@
                     margin-bottom: 5px;
 
                     th {
-                        width: 15%;
+                        width: 10%;
+                        max-width: 60px;
+                        min-width: 38px;
                         font-size: 1.45rem;
+                        text-align: left;
                     }
 
                     td {
@@ -93,7 +96,6 @@
                             width: 100%;
                             height: 40px;
                             font-size: 1.45rem;
-                            padding: 5px 12px;
                             cursor: pointer;
                         }
                     }

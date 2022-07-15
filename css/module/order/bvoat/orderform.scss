@@ -48,7 +48,7 @@ body{
 
     //설정이 많아서 필요한 셀렉터만 선택해서 작업
     //fontsize값 1.3 이상으로 (글자값 통일)
-    span,p,a,dd,dt,dl,button,tr,th,tbody,strong,em,label,input,select {
+    span,p,a,dd,dt,dl,ul>li,button,tr,th,tbody,strong,em,label,input,select {
         font-size: 1.3rem;
     }
     //선물하기

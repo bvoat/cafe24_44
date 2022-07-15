@@ -53,8 +53,8 @@
   height: 5px;
   border-radius: 50%;
   background: #022CFF;
-  top: 5px;
-  right: 0px;
+  top: 8px;
+  right: -5px;
 }
 
 #topNav .default_top_nav .top_nav_list .top_nav_active > a {

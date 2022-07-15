@@ -132,8 +132,11 @@
 }
 
 .buy_screen_payment #totalSelects table tbody tr th {
-  width: 15%;
+  width: 10%;
+  max-width: 60px;
+  min-width: 38px;
   font-size: 1.45rem;
+  text-align: left;
 }
 
 .buy_screen_payment #totalSelects table tbody tr td {
@@ -145,7 +148,6 @@
   width: 100%;
   height: 40px;
   font-size: 1.45rem;
-  padding: 5px 12px;
   cursor: pointer;
 }
 

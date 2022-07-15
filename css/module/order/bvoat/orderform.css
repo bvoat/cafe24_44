@@ -54,7 +54,7 @@ body {
   font-size: 1.3rem !important;
 }
 
-#mCafe24Order span, #mCafe24Order p, #mCafe24Order a, #mCafe24Order dd, #mCafe24Order dt, #mCafe24Order dl, #mCafe24Order button, #mCafe24Order tr, #mCafe24Order th, #mCafe24Order tbody, #mCafe24Order strong, #mCafe24Order em, #mCafe24Order label, #mCafe24Order input, #mCafe24Order select {
+#mCafe24Order span, #mCafe24Order p, #mCafe24Order a, #mCafe24Order dd, #mCafe24Order dt, #mCafe24Order dl, #mCafe24Order ul > li, #mCafe24Order button, #mCafe24Order tr, #mCafe24Order th, #mCafe24Order tbody, #mCafe24Order strong, #mCafe24Order em, #mCafe24Order label, #mCafe24Order input, #mCafe24Order select {
   font-size: 1.3rem;
 }
 
