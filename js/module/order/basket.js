@@ -1,5 +1,5 @@
 $(function(){
-    // 상품리스트 전체선택 기존에 .on 이었는 .bind로 변경
+    // 상품리스트 전체선택 기존 .on 을 .bind로 변경
     $('#product_select_all').bind('click', function() {
         var _status = $(this).data('status');
 
@@ -51,8 +51,8 @@ $(function(){
 
     fixLayerPriceRest();
 
-    // 장바구니 체크박스 체크시 상품총합계, 체크한 숫자 구하기
-    $('[id^="basket_chk_id_"]').on('click', function(e) {
+    // 장바구니 체크박스 체크시 상품총합계, 체크한 숫자 구하기 기존 .on 을 .bind로 변경
+    $('[id^="basket_chk_id_"]').bind('click', function(e) {
         fixedLayerPriceSet();
     });
 });
