@@ -12,8 +12,6 @@ let api_domain;
 let now_path = window.location.href;
 if(now_path.includes("skin-skin44") || now_path.includes("skin-mobile9")){
   api_domain = 'bvoat-test';
-}else if(now_path.includes("https://")){
-  api_domain = 'bvoat';
 }else{
   api_domain = 'bvoat';
 }
