@@ -1,6 +1,6 @@
 $(function(){
-    // 상품리스트 전체선택 기존 .on 을 .bind로 변경
-    $('#product_select_all').bind('click', function() {
+    // 상품리스트 전체선택
+    $('#product_select_all').on('click', function() {
         var _status = $(this).data('status');
 
         $('[id^="basket_chk_id_"]').each(function(){
@@ -51,18 +51,19 @@ $(function(){
 
     fixLayerPriceRest();
 
-    // 장바구니 체크박스 체크시 상품총합계, 체크한 숫자 구하기 기존 .on 을 .bind로 변경
-    $('[id^="basket_chk_id_"]').bind('click', function(e) {
+    // 장바구니 체크박스 체크시 상품총합계, 체크한 숫자 구하기
+    $('[id^="basket_chk_id_"]').on('click', function(e) {
         fixedLayerPriceSet();
     });
-});
+    // 장바구니 선택상품 삭제
+    function selBasketDel(id) {
+        $('[id^="'+BASKET_CHK_ID_PREFIX+'"]').prop('checked', false);
+        $('[id="'+id+'"]').prop('checked', true);
+        Basket.deleteBasket();
+    }
+}(jQuery1_11_3));
 
-// 장바구니 선택상품 삭제
-function selBasketDel(id) {
-    $('[id^="'+BASKET_CHK_ID_PREFIX+'"]').prop('checked', false);
-    $('[id="'+id+'"]').prop('checked', true);
-    Basket.deleteBasket();
-}
+
 
 //장바구니 상품이 없을 때 전체선택 버튼 없애기
 
