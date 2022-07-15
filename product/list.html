@@ -19,13 +19,10 @@
     <!-- 하위 카테고리 -->
 
     <!-- 상품 정렬 select-->
-    <section id="product_normalmenu">
+    <section id="product_normalmenu" module="product_normalmenu">
         <select id="selArray" name="selArray" module="product_Orderby">
-            <option value="?cate_no=102&amp;sort_method=5#Product_ListMenu">신상품 순</option>
-            <option value="?cate_no=102&amp;sort_method=1#Product_ListMenu">상품명 순</option>
-            <option value="?cate_no=102&amp;sort_method=3#Product_ListMenu">낮은가격 순</option>
-            <option value="?cate_no=102&amp;sort_method=4#Product_ListMenu">높은가격 순</option>
-            <option value="?cate_no=102&amp;sort_method=6#Product_ListMenu">인기상품 순</option>
+            <option value="{$param}">{$sort_name}</option>
+            <option value="{$param}">{$sort_name}</option>
         </select>
         <label for="selArray">▾</label>
     </section>
