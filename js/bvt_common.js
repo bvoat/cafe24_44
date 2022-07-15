@@ -9,8 +9,8 @@
 /* 환경변수 확인 */
 //환경변수 세팅
 let api_domain;
-let now_path = window.location.href;
-if(now_path.includes("skin-skin44") || now_path.includes("skin-mobile9")){
+let now_cafe_href = window.location.href;
+if(now_cafe_href.includes("skin-skin44") || now_cafe_href.includes("skin-mobile9")){
   api_domain = 'bvoat-test';
 }else{
   api_domain = 'bvoat';
