@@ -1,10 +1,10 @@
 @charset "utf-8";
-@import "./abstracts/_variables";
-@import "./abstracts/_mixin";
+@import "../../../abstracts/_variables";
+@import "../../../abstracts/_mixin";
 
 :root{
     --text-width: 40px;
-    --icon-width: 28.5px;
+    --icon-width: 30px;
     --icon-height: 26px;
 }
 
@@ -56,6 +56,9 @@
                             object-fit: cover;
                             fill: $bvt-lostfocus-gray;
                         }
+                    }
+                    .like_icon{
+                        width: 29px;
                     }
                     span{
                         color: $bvt-lostfocus-gray;

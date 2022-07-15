@@ -1,6 +1,6 @@
 :root {
   --text-width: 40px;
-  --icon-width: 28.5px;
+  --icon-width: 30px;
   --icon-height: 26px;
 }
 
@@ -91,6 +91,10 @@
   -o-object-fit: cover;
      object-fit: cover;
   fill: #ABABAB;
+}
+
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .like_icon {
+  width: 29px;
 }
 
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu span {
