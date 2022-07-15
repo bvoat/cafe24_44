@@ -1,4 +1,4 @@
-$(function(){
+(function($){
     // 상품리스트 전체선택
     $('#product_select_all').on('click', function() {
         var _status = $(this).data('status');
