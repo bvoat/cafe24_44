@@ -98,6 +98,7 @@
                     text-align: center;
                     top: -3px;
                     right: -7px;
+                    z-index: 100;
                     >em{
                         position: relative;
                         display: block;
@@ -105,6 +106,7 @@
                         font-weight: 600;
                         color: $bvt-white;
                         text-indent: 0;
+                        z-index: 100;
                     }
                 }
             }

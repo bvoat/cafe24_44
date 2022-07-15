@@ -134,6 +134,7 @@
   text-align: center;
   top: -3px;
   right: -7px;
+  z-index: 100;
 }
 
 #header_wrap #header_logo_section .header_menu .header_cart .count > em {
@@ -143,5 +144,6 @@
   font-weight: 600;
   color: #ffffff;
   text-indent: 0;
+  z-index: 100;
 }
 /*# sourceMappingURL=header.css.map */
