@@ -19,26 +19,27 @@ const recommend = document.querySelector("#reco_id");
 
 //가입한지 30일 지나거나 이미 정보가 있으면 추천인 readonly
 const recommendControl = (type) => {
-    console.log(type)
     let sentence = {
         "notnull": "추천인을 이미 입력하셨습니다 😄",
         "overdate": "추천인은 가입일 이후 30일 동안 입력할 수 있습니다 😅"
     }
     recommend.setAttribute("readonly", true)
     recommend.parentNode.insertAdjacentHTML('afterend', `<p class="input_info_txt">${sentence[type]}</p>`)
-    recommend.style.background = "#22222008";
+    recommend.style.background = "repeating-linear-gradient(45deg, #00000015, #00000015 10px, #00000001 0, #00000001 20px)";
     recommend.style.cursor = "not-allowed";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    if (recommend.value != undefined || recommend.value != "" || recommend.value != null) {
+    if (recommend.value !== '') {
+        console.log('추천인 입력', recommend.value);
         recommendControl('notnull');
         return false;
     } else if (diff_date > 30) { 
+        console.log('30일 지남', diff_date);
         recommendControl('overdate');
         return false;
      } else { 
-        return false 
+        null;
     };
 })
 
@@ -58,3 +59,10 @@ submit_btn.addEventListener("click", (e) => {
         return false;
     }
 })
+
+
+/* SMS 수신여부 label 변경 */
+const label_arr = [document.querySelector("label[for='is_sms0']"), document.querySelector("label[for='is_news_mail0']")]
+for (const node of label_arr) {
+    node.innerHTML = "받아볼래요";
+}
