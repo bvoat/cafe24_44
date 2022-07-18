@@ -14,21 +14,21 @@
 		$use_item_sale_price = T
 	-->
     <!-- 브랜드 -->
-    <section class="product_brand">
+    <section id="productBrand" class="product_brand">
         <h1 class="displaynone">브랜드 소개</h1>
         <h2>From. <em>{$prd_brand}</em></h2>
         <h3 class="summary_desc {$summary_desc_display}">{$summary_desc}</h3>
     </section>
     <!-- 브랜드 -->
     <!-- 썸네일 -->
-    <section class="product_thumnail_wrap" module="product_image">
+    <section id="productThumnail" class="product_thumnail_wrap" module="product_image">
         <h1 class="displaynone">이미지</h1>
         <em class="product_icon">{$soldout_icon}{$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</em>
         <img src="{$big_img}" alt="{$seo_alt_tag}" class="{$big_img_class}" />
     </section>
     <!-- 썸네일 -->
     <!-- 상품명, 가격정보, 태그 -->
-    <section class="product_info_wrap">
+    <section id="productInfo" class="product_info_wrap">
         <h1 class="displaynone">상품 정보</h1>
         <h2 class="product_name">{$name}</h2>
         <!--@import(./product_module/detail_price_wrap.html)-->
@@ -39,7 +39,7 @@
     </section>
     <!-- 상품명, 가격정보, 태그 -->
     <!-- 상품 배송 안내 -->
-    <section class="delivery_wrap">
+    <section id="productDelivery" class="delivery_wrap">
         <h1 class="displaynone">배송 안내</h1>
         <ul class="delivery_info">
             <li>
@@ -54,7 +54,7 @@
     </section>
     <!-- 상품 배송 안내 -->
     <!-- 마일리지 -->
-    <section class="mileage_wrap">
+    <section id="productmileage" class="mileage_wrap">
         <h1>마일리지</h1>
         <ul id="mileage">
             <li class="mileage_voter">
@@ -70,7 +70,8 @@
         </ul>
     </section>
     <!-- 마일리지 -->
-    <section id="stamp_cont" class="stamp_wrap">
+    <!-- 스탬프 -->
+    <section id="productStamp" class="stamp_wrap">
         <h1 class="stamp_title">가치 스탬프<span><em class="stamp_pcs"></em> 지급</span></h1>
         <ol class="stamp_list">
             <li><span class="stamp_node stamp0">1개</span></li>
@@ -81,8 +82,9 @@
         </ol>
         <p class="stamp_txt">가치 스탬프 5개를 모으면 <a href="/member/crew/crew.html"> 크루 등급</a>으로 등업됩니다.</p>
     </section>
+    <!-- 스탬프 -->
     <!-- 펀딩 -->
-    <div id="aside-funding" class="detail-aside-funding displaynone">
+    <section id="aside-funding" class="detail-aside-funding displaynone">
         <div class="info_box padding2">
             <div class="t08 title"><span class="blue2 b">From.</span> {$prd_brand}</div>
             <div class="t12 b prd_name" id="gettitle">{$name}</div>
@@ -92,15 +94,10 @@
             <div class="t08 gray" id="getdesc">{$summary_desc}</div>
             <div class="info_box-desc t08 gray2">{$simple_desc}</div>
         </div>
-
-
-
         <div class="funding_box padding2">
             <div class="t13 b"><span id="funding-dday"></span></div>
             <div class="t07 gray2">함께할수록 커지는 가치, 공유해보세요!</div>
-
             <div class="gradientline"> </div>
-
             <div class="custom_box">
                 <div class="custom_box_1" style="visibility: hidden">
                     <div class="t07">참여 중인 보터</div>
@@ -108,7 +105,6 @@
                     <img src="/bvtIMG/icon/arrow-up.svg">
                 </div>
                 <div class="custom_box_2">
-
                 </div>
             </div>
             <div class="notice_box">
@@ -120,11 +116,16 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
-    </div>
+    </section>
+    <!-- 연관 상품 -->
+    <section id="productRelation" class="product_relation_wrap" module="product_relation">
+        <h2>설렘이 배가 되는 상품,</h2>
+        <h3>이런 건 어때요?</h3>
+        <!--@import(./product_module/listproduct/relation_list.html)-->
+    </section>
+    <!-- 연관 상품 -->
 </article>
 <!-- 상품 정보 상단 -->
 <!-- 상품 정보 하단 선택 탭 -->

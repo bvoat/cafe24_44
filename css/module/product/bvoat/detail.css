@@ -24,7 +24,7 @@
       -ms-flex-align: start;
           align-items: flex-start;
   width: 100%;
-  padding: 10px 11px 15px;
+  padding: 16px 11px 15px;
 }
 
 #productDetailTop .product_brand h2,
@@ -467,6 +467,60 @@
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.625' height='14.625'%3E%3Cpath data-name='Icon ionic-md-information-circle' d='M7.313 0a7.313 7.313 0 1 0 7.312 7.313A7.316 7.316 0 0 0 7.313 0Zm.738 10.969H6.574V6.574h1.477Zm0-5.836H6.574V3.656h1.477Z' fill='%23707070'/%3E%3C/svg%3E");
   background-size: contain;
   margin-right: 5px;
+}
+
+#productDetailTop .product_relation_wrap {
+  width: 100%;
+  max-width: 450px;
+  margin-top: 25px;
+  padding: 0 11px;
+}
+
+#productDetailTop .product_relation_wrap > h2 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #707070;
+}
+
+#productDetailTop .product_relation_wrap > h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+#productDetailTop .product_relation_wrap .product_relation_list {
+  width: 100%;
+}
+
+#productDetailTop .product_relation_wrap .product_relation_list > ul {
+  width: 100%;
+}
+
+#productDetailTop .product_relation_wrap .product_relation_list > ul img {
+  height: 100%;
+}
+
+#productDetailTop .product_relation_wrap .product_name, #productDetailTop .product_relation_wrap .product_name span {
+  color: #292929;
+  font-size: 1.25rem;
+  font-weight: normal;
+  word-wrap: break-word;
+  word-break: keep-all;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.8rem;
+  height: 3.8rem;
+  margin-bottom: 18px;
+}
+
+#productDetailTop .product_relation_wrap .price {
+  font-size: 1.24rem;
+  font-weight: 500;
 }
 
 .detail-aside-funding {
