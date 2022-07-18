@@ -50,7 +50,7 @@
                         </ul>
                         <ul class="login_sns">
                             <h4>SNS 계정으로 로그인하기</h4>
-                            <section class="login_sns_icon_wrap">
+                            <ul class="login_sns_icon_wrap">
                                 <li><a href="#none" class="btnKakao 1"
                                     onclick="{$kakao_func_login}" title="카카오 로그인"><span>카카오
                                             로그인</span></a></li>
@@ -64,18 +64,19 @@
                                     onclick="{$apple_func_login}" title="애플 로그인"><span>Apple
                                             로그인</span></a>
                                 </li>
-                            </section>
+                            </ul>
                         </ul>
                     </div>
                     <a href="/member/login_nomember.html?noMemberOrder&returnUrl=%2Fmyshop%2Forder%2Flist.html"
-                        class="nomember_order">비회원 주문 조회</a>
+                        class="nomember_order" title="비회원 주문 조회">비회원 주문 조회</a>
                 </section>
             </div>
         </fieldset>
     </section>
 </article>
 <script>
-    //로그인폼 placeholder 추가
+(function($){
+        //로그인폼 placeholder 추가
 if ($('.xans-member-login').val() != undefined) {
     var login_id_type_text = $('#member_id').parent().attr('title');
     $('#member_id').attr('placeholder', login_id_type_text);
@@ -113,4 +114,5 @@ $('body').delegate('.ec-base-tab a', 'click', function(e){
     }
     e.preventDefault();
 });
+}(jQuery1_11_3))
 </script>
