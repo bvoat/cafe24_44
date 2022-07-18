@@ -129,8 +129,8 @@
                         border: none;
                         border-radius: 90px;
                         color: $bvt-white;
-                        font-weight: 400;
-                        font-size: 1.3rem;
+                        font-weight: normal;
+                        font-size: 1.4rem;
                         cursor: pointer;
                     }
 
@@ -169,7 +169,7 @@
                                 left: -12px;
                                 background: var(--tooltip-black) no-repeat;
                                 background-size: contain;
-                                font-size: 1.02rem;
+                                font-size: 10px;
                                 font-weight: 400;
                                 color: $bvt-white;
                                 text-align: center;
@@ -257,7 +257,7 @@
                         border-radius: 7px;
                         margin-top: 17px;
                         color: transparentize($bvt-darkgray, 0.1);
-                        font-size: 1.2rem;
+                        font-size: 1.3rem;
                         font-weight: 400;
                     }
                 }
