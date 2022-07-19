@@ -570,3 +570,19 @@
         </section>
     </div>
 </section>
+<script>
+    //품절 상품 선택 불가
+    if(document.querySelectorAll("select")){
+        Array.from(document.querySelectorAll("select")).forEach((select)=>{
+        select.addEventListener("click", ()=>{
+            document.querySelectorAll("option").forEach((opt)=>{
+                if(opt.innerHTML.includes('품절')){
+                    opt.setAttribute("disabled","true")
+                } else{
+                    null;
+                }
+            })
+        })
+    })
+    }
+</script>
