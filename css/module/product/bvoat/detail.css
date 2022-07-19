@@ -1141,17 +1141,17 @@
 }
 
 #buyAction > ul li:nth-child(1) {
-  width: 15%;
+  width: 80px;
   background: #ffffff;
 }
 
 #buyAction > ul li:nth-child(2) {
-  width: 15%;
+  width: 80px;
   background: #292929;
 }
 
 #buyAction > ul li:nth-child(3) {
-  width: 70%;
+  width: calc(100% - 160px);
   background: #022CFF;
 }
 
