@@ -382,4 +382,4 @@ function removePagingArea(oTarget)
 
         $(this).children('p').children('img').first().remove();
     });
-}(jQuery1_11_3));
+}(jQuery));
