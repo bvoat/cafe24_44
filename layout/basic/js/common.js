@@ -1,6 +1,5 @@
 // 썸네일 이미지 엑박일경우 기본값 설정
-$(window).on('load', function() {
-
+$(window).load(function() {
     $(".thumbnail img, img.thumbImage, img.bigImage").each(function($i,$item){
         var $img = new Image();
         $img.onerror = function () {
@@ -8,19 +7,18 @@ $(window).on('load', function() {
         }
         $img.src = this.src;
     });
-
 });
 
-$(function(){
+$(document).ready(function(){
     // 토글
-    $('div.eToggle .title').off('click').on('click', function(){
+    $('div.eToggle .title').click(function(){
         var toggle = $(this).parent('.eToggle');
-        if(toggle.hasClass('disable') === false){
+        if(toggle.hasClass('disable') == false){
             $(this).parent('.eToggle').toggleClass('selected')
         }
     });
 
-    $('dl.eToggle dt').on('click', function(){
+    $('dl.eToggle dt').click(function(){
         $(this).toggleClass('selected');
         $(this).next('dd').toggleClass('selected');
     });
@@ -37,28 +35,16 @@ $(function(){
     /**
      *  메인카테고리 toggle
      */
-    $('.xans-product-listmain h2').on('click', function() {
-        var bClosed = !!$(this).data('is_closed');
-        var sUrl;
-        if (bClosed) {
-            sUrl = "//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_title_close.gif";
-        } else {
-            sUrl = "//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_title_open.gif";
-        }
-        $(this).css('background-image', 'url("'+ sUrl +'")');
-        $(this).siblings().toggle();
-        $(this).parent().find('div.ec-base-paginate').toggle();
-        $(this).parent().next('div.xans-product-listmore').toggle();
-        $(this).data('is_closed', !bClosed);
-    });
-
-    /* base header 검색 레이어 */
-    $('#layout .header').find('.search .btnSearch').on('click', function(){
-        var $baseHeader = $('#layout .header');
-        $baseHeader.addClass('open');
-        $('#dimmedSlider').one('click', function(){
-            $baseHeader.removeClass('open');
-        });
+    $('.xans-product-listmain h2').toggle(function(){
+        $(this).css('background-image', 'url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_title_open.gif")');
+        $(this).siblings().hide();
+        $(this).parent().find('div.ec-base-paginate').hide();
+        $(this).parent().next('div.xans-product-listmore').hide();
+    }, function() {
+        $(this).css('background-image', 'url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_title_close.gif")');
+        $(this).siblings().show();
+        $(this).parent().find('div.ec-base-paginate').show();
+        $(this).parent().next('div.xans-product-listmore').show();
     });
 
     /**
@@ -68,7 +54,7 @@ $(function(){
         // 탑버튼 관련변수
         var $btnTop = $('#btnTop');
 
-        $(window).on('scroll', function() {
+        $(window).scroll(function() {
             try {
                 var iCurScrollPos = $(this).scrollTop();
 
@@ -90,9 +76,9 @@ $(function(){
             $area = $('#orderFixArea'),
             $item = $('#' + sFixId + '').not($area);
 
-        $(window).on('scroll', function(){
+        $(window).scroll(function(){
             try {
-                // 구매버튼 관련변수
+                 // 구매버튼 관련변수
                 var iCurrentHeightPos = $(this).scrollTop() + $(this).height(),
                     iButtonHeightPos = $item.offset().top;
 
@@ -161,7 +147,7 @@ var globalLayerCloseFunc = function() {
     this.layerId = 'ec_temp_mobile_layer';
 
     if (window.parent === window)
-        self.close();
+        self.clse();
     else {
         parent.$('html, body').css({'overflowY': 'auto', height: 'auto', width: '100%'});
         parent.$('html, body').scrollTop(parent.window.ecScrollTop);
@@ -209,49 +195,26 @@ var isPCver = function() {
 };
 
 /* 도움말 */
-$('body').on('click', '.ec-base-tooltip-area .eTip', function(e){
+$('body').delegate('.ec-base-tooltip-area .eTip', 'click', function(e){
     var findArea = $($(this).parents('.ec-base-tooltip-area'));
     var findTarget = $($(this).siblings('.ec-base-tooltip'));
     var findTooltip = $('.ec-base-tooltip');
     $('.ec-base-tooltip-area').removeClass('show');
-    $(this).parents('.ec-base-tooltip-area').first().addClass('show');
+    $(this).parents('.ec-base-tooltip-area:first').addClass('show');
     findTooltip.hide();
     findTarget.show();
     e.preventDefault();
 });
 
-$('body').on('click', '.ec-base-tooltip-area .eClose', function(e){
-    var findTarget = $(this).parents('.ec-base-tooltip').first();
+$('body').delegate('.ec-base-tooltip-area .eClose', 'click', function(e){
+    var findTarget = $(this).parents('.ec-base-tooltip:first');
     $('.ec-base-tooltip-area').removeClass('show');
     findTarget.hide();
     e.preventDefault();
 });
 
-$('.ec-base-tooltip-area').find('input').on('focusout', function() {
+$('.ec-base-tooltip-area').find('input').focusout(function() {
     var findTarget = $(this).parents('.ec-base-tooltip-area').find('.ec-base-tooltip');
     $('.ec-base-tooltip-area').removeClass('show');
     findTarget.hide();
-});
-
-/**
- * 팝업창에 리사이즈 관련
- */
-
-function setResizePopup() {
-
-    if(!$('#popup').length) return;
-
-    var iWrapWidth    = $('#popup').width();
-    var iWrapHeight   = $('#popup').height();
-
-    var iWindowWidth  = $(window).width();
-    var iWindowHeight = $(window).height();
-
-    window.resizeBy(iWrapWidth - iWindowWidth, iWrapHeight - iWindowHeight);
-}
-setResizePopup();
-
-// 팝업 페이지 로드가 완료된 후에 리사이징 함수를 다시 호출
-$( window ).on('load', function() {
-    setResizePopup();
 });
