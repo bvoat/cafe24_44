@@ -10,7 +10,7 @@ body{
     padding-bottom: 0;
     padding-bottom: calc(constant(safe-area-inset-bottom) + 34pt);
     padding-bottom: calc(env(safe-area-inset-bottom) + 34pt);
-    
+
     #bvtContainer{
         position: relative;
         max-width: 450px;
@@ -50,6 +50,9 @@ body{
             background: $bvt-white;   
             box-shadow: $bvt-top-shadow;
             z-index: 9; 
+            padding-bottom: 0;
+            padding-bottom: calc(constant(safe-area-inset-bottom) + 34pt);
+            padding-bottom: calc(env(safe-area-inset-bottom) + 34pt);
         }
     }
     
