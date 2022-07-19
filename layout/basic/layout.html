@@ -32,7 +32,7 @@
   <!-- script -->
   <script src="/js/swiper_min.js"></script>
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-  <script src="/layout/basic/js/KaKao.js"></script>  
+  <script src="/layout/basic/js/KaKao.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>
     window.jQuery1_11_3 = jQuery.noConflict(true);
@@ -61,18 +61,32 @@
       <!--@import(/layout/nav/bottom_nav.html)-->
     </footer>
   </section>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W7RM67F');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7RM67F" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <!-- 뷰저블 태그 삽입 -->
   <script type="text/javascript">
-    (function(w, d, a){
-        w.__beusablerumclient__ = {
-            load : function(src){
-                var b = d.createElement("script");
-                b.src = src; b.async=true; b.type = "text/javascript";
-                d.getElementsByTagName("head")[0].appendChild(b);
-            }
-        };w.__beusablerumclient__.load(a);
+    (function (w, d, a) {
+      w.__beusablerumclient__ = {
+        load: function (src) {
+          var b = d.createElement("script");
+          b.src = src; b.async = true; b.type = "text/javascript";
+          d.getElementsByTagName("head")[0].appendChild(b);
+        }
+      }; w.__beusablerumclient__.load(a);
     })(window, document, "//rum.beusable.net/script/b220718e144339u045/b000ab431c");
-    </script>
+  </script>
   <!-- 뷰저블 태그 삽입 -->
 </body>
 
