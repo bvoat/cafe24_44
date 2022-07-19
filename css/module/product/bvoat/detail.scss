@@ -870,9 +870,6 @@
     z-index: 100;
     margin-left: -11px;
     bottom: 0;
-    padding-bottom: 0;
-    padding-bottom: calc(constant(safe-area-inset-bottom) + 34pt);
-    padding-bottom: calc(env(safe-area-inset-bottom) + 34pt);
     button{
         font-weight: 600;
         font-size: 1.5rem;

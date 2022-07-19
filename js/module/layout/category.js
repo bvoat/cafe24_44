@@ -214,5 +214,5 @@
         $(this).removeClass('on');
         methods.close();
     });
-}(jQuery1_11_3));
+}(jQuery));
 

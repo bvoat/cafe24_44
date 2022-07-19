@@ -61,7 +61,7 @@
         $('[id="'+id+'"]').prop('checked', true);
         Basket.deleteBasket();
     }
-}(jQuery1_11_3));
+}(jQuery));
 
 
 
