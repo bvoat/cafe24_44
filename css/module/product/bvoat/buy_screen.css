@@ -300,7 +300,7 @@
           justify-content: space-between;
   width: 100%;
   max-width: 450px;
-  height: 60px;
+  min-height: 60px;
   bottom: 0;
 }
 
@@ -309,8 +309,8 @@
   padding-top: calc(constant(safe-area-inset-bottom) - 15px);
   padding-top: calc(env(safe-area-inset-bottom) - 15px);
   padding-bottom: 0;
-  padding-bottom: calc(constant(safe-area-inset-bottom) - 15px);
-  padding-bottom: calc(env(safe-area-inset-bottom) - 15px);
+  padding-bottom: calc(constant(safe-area-inset-bottom) - 7px);
+  padding-bottom: calc(env(safe-area-inset-bottom) - 7px);
 }
 
 .buy_button_box .product_action div a {
