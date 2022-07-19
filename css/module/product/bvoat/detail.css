@@ -1097,9 +1097,9 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1110,80 +1110,79 @@
   height: max-content;
   z-index: 100;
   bottom: 0;
+  overflow: hidden;
 }
 
 #buyAction button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 600;
   font-size: 1.5rem;
   min-height: 64px;
   max-height: -webkit-max-content;
   max-height: -moz-max-content;
   max-height: max-content;
+  bottom: 0;
 }
 
 #buyAction .wish_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 15%;
   background: #ffffff;
   color: #292929;
   font-size: 1.15rem;
+  padding-bottom: 0;
+  padding-bottom: calc(constant(safe-area-inset-bottom));
+  padding-bottom: calc(env(safe-area-inset-bottom));
 }
 
 #buyAction .wish_btn::before {
   display: block;
   content: "";
-  width: 22px;
-  height: 22px;
+  width: 21px;
+  height: 21px;
   background: var(--like-icon-bk) no-repeat;
   background-size: contain;
-  padding-bottom: 7px;
+  margin-bottom: 4px;
 }
 
 #buyAction .gift_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 15%;
   background: #292929;
   color: #ffffff;
   font-size: 1.15rem;
+  padding-bottom: 0;
+  padding-bottom: calc(constant(safe-area-inset-bottom));
+  padding-bottom: calc(env(safe-area-inset-bottom));
 }
 
 #buyAction .gift_btn::before {
   display: block;
   content: "";
-  width: 22px;
-  height: 22px;
+  width: 21px;
+  height: 21px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24.011' height='24.011'%3E%3Cg data-name='Icon feather-gift' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath data-name='패스 1738' d='M20.81 12.006v11.006H3.201V12.006'/%3E%3Cpath data-name='패스 1739' d='M1 6.503h22.011v5.5H1Z'/%3E%3Cpath data-name='패스 1740' d='M12.006 23.011V6.503'/%3E%3Cpath data-name='패스 1741' d='M12.002 6.5H7.053a2.751 2.751 0 0 1 0-5.5c3.849 0 4.949 5.5 4.949 5.5Z'/%3E%3Cpath data-name='패스 1742' d='M12.006 6.5h4.953a2.751 2.751 0 1 0 0-5.5c-3.853 0-4.953 5.5-4.953 5.5Z'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
   background-size: contain;
-  padding-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 #buyAction .buy_btn {
   width: 70%;
   background: #022CFF;
   color: #ffffff;
+  padding-bottom: 0;
+  padding-bottom: calc(constant(safe-area-inset-bottom) + 2px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 2px);
 }
 /*# sourceMappingURL=detail.css.map */
