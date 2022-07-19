@@ -182,7 +182,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 // disable touchmove event when height is smaller than screen height 
-document.body.addEventListener("touchmove",
-function(event) {
-        event.preventDefault();
+document.body.addEventListener("touchmove", (event)=>{
+  event.preventDefault();
 }, false);
