@@ -572,9 +572,9 @@
 </section>
 <script>
     //품절 상품 선택 불가
-    if(document.querySelectorAll("select")){
+    if(document.querySelector("#totalProducts")){
         Array.from(document.querySelectorAll("select")).forEach((select)=>{
-        select.addEventListener("click", ()=>{
+        select.addEventListener("mouseover", ()=>{
             document.querySelectorAll("option").forEach((opt)=>{
                 if(opt.innerHTML.includes('품절')){
                     opt.setAttribute("disabled","true")
