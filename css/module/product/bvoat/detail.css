@@ -42,8 +42,6 @@
 
 #productDetailTop .product_thumnail_wrap {
   position: relative;
-  width: calc(100% + 22px);
-  margin-left: -11px;
   max-width: 450px;
   /* 1:1 ratio */
   padding-top: 100%;
