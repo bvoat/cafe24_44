@@ -1116,11 +1116,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: calc(constant(safe-area-inset-bottom) - 15px);
-  padding-top: calc(env(safe-area-inset-bottom) - 15px);
-  padding-bottom: 0;
-  padding-bottom: calc(constant(safe-area-inset-bottom) - 15px);
-  padding-bottom: calc(env(safe-area-inset-bottom) - 15px);
 }
 
 #buyAction > ul li {
@@ -1141,6 +1136,11 @@
   max-height: -webkit-max-content;
   max-height: -moz-max-content;
   max-height: max-content;
+  padding-top: calc(constant(safe-area-inset-bottom) - 15px);
+  padding-top: calc(env(safe-area-inset-bottom) - 15px);
+  padding-bottom: 0;
+  padding-bottom: calc(constant(safe-area-inset-bottom) - 15px);
+  padding-bottom: calc(env(safe-area-inset-bottom) - 15px);
 }
 
 #buyAction > ul li:nth-child(1) {
