@@ -1103,20 +1103,22 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: calc(100% + 22px);
+  width: 100%;
   max-width: 450px;
-  height: 64px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   z-index: 100;
-  margin-left: -11px;
   bottom: 0;
-  padding-bottom: 0;
-  padding-bottom: constant(safe-area-inset-bottom);
-  padding-bottom: env(safe-area-inset-bottom);
 }
 
 #buyAction button {
   font-weight: 600;
   font-size: 1.5rem;
+  min-height: 64px;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
 }
 
 #buyAction .wish_btn {
@@ -1134,7 +1136,6 @@
       -ms-flex-align: center;
           align-items: center;
   width: 15%;
-  height: 100%;
   background: #ffffff;
   color: #292929;
   font-size: 1.15rem;
@@ -1165,7 +1166,6 @@
       -ms-flex-align: center;
           align-items: center;
   width: 15%;
-  height: 100%;
   background: #292929;
   color: #ffffff;
   font-size: 1.15rem;
@@ -1183,7 +1183,6 @@
 
 #buyAction .buy_btn {
   width: 70%;
-  height: 100%;
   background: #022CFF;
   color: #ffffff;
 }
