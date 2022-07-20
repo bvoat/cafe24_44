@@ -138,7 +138,7 @@ const checkMoreView = () => {
     btn.addEventListener("click", () => {
       setTimeout(() => {
         monitoringPrice();
-      }, 100);
+      }, 770);
     });
   });
 };

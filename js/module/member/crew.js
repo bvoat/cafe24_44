@@ -76,13 +76,13 @@ const copyBtnClick = (e) => {
 >${voter_id.value}
 (추천인 코드 : ${voter_id.dataset.id})`;
 
-    const ifsuccess = () => {
-      alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
-    };
-    const iferror = () => {
-      alert("복사 실패😢 다시 한 번 시도해주세요");
-    };
-    clipboardCopy('.crew_link_copy', copy_text, ifsuccess, iferror)
+  const ifsuccess = () => {
+    alert("복사 성공! 초대 링크를 친구에게 공유해보세요");
+  };
+  const iferror = () => {
+    alert("복사 실패😢 다시 한 번 시도해주세요");
+  };
+  clipboardCopy('.crew_link_copy', copy_text, ifsuccess, iferror);
   }
 };
 const shareBtnClick = (e) => {
