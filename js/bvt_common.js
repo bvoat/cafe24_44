@@ -16,12 +16,15 @@ if(now_cafe_href.includes("skin-skin44") || now_cafe_href.includes("skin-mobile9
   api_domain = 'bvoat';
 }
 console.log('api_domain: ', api_domain);
+/* 환경변수 확인 */
 
 /* 클래스 토글 */
 // 클래스가 들어갔다 나갔다 할 node를 element에, 클래스 이름을 className에 전달
 function classToggle(element, className) {
   element.classList.toggle(className);
 }
+/* 클래스 토글 */
+
 
 /* 모달 생성 함수 */
 //모달 필요 시 제목, 설명, ok버튼, no버튼, 각각의 실행 함수 전달
@@ -47,6 +50,7 @@ function createdModal(heading, text, okmsg, nomsg, okfunc, nofunc) {
   document.querySelector(".ok_btn").addEventListener("click", okfunc);
   document.querySelector(".no_btn").addEventListener("click", nofunc);
 }
+/* 모달 생성 함수 */
 
 /* 가격 감시 함수 */
 function monitoringPrice() {
@@ -127,22 +131,25 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+//더보기 시 실행
 const checkMoreView = () => {
   let btn = document.querySelectorAll(".moreview_btn");
   Array.from(btn).forEach((btn) => {
     btn.addEventListener("click", () => {
       setTimeout(() => {
         monitoringPrice();
-      }, 400);
+      }, 100);
     });
   });
 };
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   checkMoreView();
 });
-//상단바 컨트롤
+
+
 /* nav 컨트롤 스크립트 */
+//상단바 컨트롤
 function controlTabNav (page_path) {
   // nav 전체
   const back_btn = document.querySelector(".back_btn");
@@ -179,11 +186,31 @@ function controlTabNav (page_path) {
 window.addEventListener("DOMContentLoaded", () => {
   controlTabNav(window.location.href);
 });
+/* nav 컨트롤 스크립트 */
 
-
+/* 아이폰 스크롤 시 튕김 현상 prevent */
 // disable touchmove event when height is smaller than screen height 
 window.addEventListener("DOMContentLoaded", ()=>{
   document.body.addEventListener("touchmove", (event)=>{
     event.preventDefault();
   }, false);
 })
+/* 아이폰 스크롤 시 튕김 현상 prevent */
+
+
+/* clipboardJS */
+const clipboardCopy = (element, txt, ok, no) => {
+  let clipboardinit = new ClipboardJS(`${element}`, { text: () => txt });
+  clipboardinit.on("success", (e) => {
+    console.log("Action:", e.action);
+    ok();
+    e.clearSelection();
+    clipboardinit.destroy();
+  });
+  clipboardinit.on('error', function(e) {
+    console.error('Action:', e.action);
+    no();
+    clipboardinit.destroy();
+  });
+}
+/* clipboardJS */
