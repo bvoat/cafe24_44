@@ -224,4 +224,4 @@
         'opacity'    : false
     };
 
-})(jQuery);
+});
