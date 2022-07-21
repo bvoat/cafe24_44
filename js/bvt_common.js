@@ -5,17 +5,19 @@
  * layout.html에 script 태그로 삽입
  */
 
-
 /* 환경변수 확인 */
 //환경변수 세팅
 let api_domain;
 let now_cafe_href = window.location.href;
-if(now_cafe_href.includes("skin-skin44") || now_cafe_href.includes("skin-mobile9")){
-  api_domain = 'bvoat-test';
-}else{
-  api_domain = 'bvoat';
+if (
+  now_cafe_href.includes("skin-skin44") ||
+  now_cafe_href.includes("skin-mobile9")
+) {
+  api_domain = "bvoat-test";
+} else {
+  api_domain = "bvoat";
 }
-console.log('api_domain: ', api_domain);
+console.log("api_domain: ", api_domain);
 /* 환경변수 확인 */
 
 /* 클래스 토글 */
@@ -24,7 +26,6 @@ function classToggle(element, className) {
   element.classList.toggle(className);
 }
 /* 클래스 토글 */
-
 
 /* 모달 생성 함수 */
 //모달 필요 시 제목, 설명, ok버튼, no버튼, 각각의 실행 함수 전달
@@ -143,60 +144,23 @@ const checkMoreView = () => {
   });
 };
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   checkMoreView();
 });
 
 
-/* nav 컨트롤 스크립트 */
-//상단바 컨트롤
-function controlTabNav (page_path) {
-  // nav 전체
-  const back_btn = document.querySelector(".back_btn");
-  const default_nav = document.querySelector(".default_top_nav");
-  const comm_nav = document.querySelector(".community_top_nav");
-  //제외할 path
-  const expect_array = ["order/basket","order/orderform", "product/detail","product/category","myshop/wish_list","member/login","myshop/index", "member/modify"];
-  //커뮤니티용 path
-  const community_array = ["community", "buy_records"];
-  //뒤로가기 path
-  const back_array = ["product/detail", "order/basket", "order/orderform", "community_view", "community_write", "buy_records/view.html", "buy_records/write.html", "order/basket", "id/find_id", "passwd/find_passwd_info", "member/login", "member/modify"];
-
-  //디폴트 메뉴 사라지게
-  expect_array.forEach((path) => {
-    page_path.includes(path) ? default_nav.classList.add("displaynone") : null;
-  });
-
-  //커뮤니티 하단바로
-    community_array.forEach((path) => {
-      if (page_path.includes(path)) {
-        default_nav.classList.add("displaynone");
-        comm_nav.classList.remove("displaynone");
-        document.querySelector(`#${path}_nav`).classList.add("top_nav_active");
-      }
-    });
-  
-  //뒤로가기 표시
-  back_array.forEach((path)=>{
-    if (page_path.includes(path)) {
-      back_btn.classList.remove("visiblehidden");
-    }
-  })
-};
+/* 아이폰 스크롤 시 튕김 현상 prevent */
+// disable touchmove event when height is smaller than screen height
 window.addEventListener("DOMContentLoaded", () => {
-  controlTabNav(window.location.href);
+  document.body.addEventListener(
+    "touchmove",
+    (event) => {
+      event.preventDefault();
+    },
+    false
+  );
 });
-/* nav 컨트롤 스크립트 */
-
 /* 아이폰 스크롤 시 튕김 현상 prevent */
-// disable touchmove event when height is smaller than screen height 
-window.addEventListener("DOMContentLoaded", ()=>{
-  document.body.addEventListener("touchmove", (event)=>{
-    event.preventDefault();
-  }, false);
-})
-/* 아이폰 스크롤 시 튕김 현상 prevent */
-
 
 /* clipboardJS */
 const clipboardCopy = (element, txt, ok, no) => {
@@ -207,10 +171,10 @@ const clipboardCopy = (element, txt, ok, no) => {
     e.clearSelection();
     clipboardinit.destroy();
   });
-  clipboardinit.on('error', function(e) {
-    console.error('Action:', e.action);
+  clipboardinit.on("error", function (e) {
+    console.error("Action:", e.action);
     no();
     clipboardinit.destroy();
   });
-}
+};
 /* clipboardJS */

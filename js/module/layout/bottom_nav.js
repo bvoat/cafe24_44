@@ -3,7 +3,6 @@
 
       //bottom nav 아이콘 변경 함수
       const bottomIconControl = () => {
-        console.log('page_path: ', page_path);
         if(page_path.includes("community") || page_path.includes("buy_records")){
           document.querySelector(".bottom_feed").classList.add("bottomactive");
         } else if (page_path.includes("product/category")){
