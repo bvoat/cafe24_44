@@ -52,12 +52,12 @@
 }
 
 #footer #footer_wrap .company_contact .company_app_down .google_down {
-  background: url(../../../images/icon/icon-playstore.png) no-repeat center;
+  background: url(/public/images/icon/icon-playstore.png) no-repeat center;
   background-size: contain;
 }
 
 #footer #footer_wrap .company_contact .company_app_down .appstore_down {
-  background: url(../../../images/icon/icon-appstore.png) no-repeat center;
+  background: url(/public/images/icon/icon-appstore.png) no-repeat center;
   background-size: contain;
 }
 
@@ -110,7 +110,7 @@
   width: 17px;
   height: 9px;
   margin-left: 5px;
-  background: url(../../../images/icon/icon-details-arrow.png) no-repeat center;
+  background: url(/public/images/icon/icon-details-arrow.png) no-repeat center;
   background-size: contain;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -123,7 +123,7 @@
   width: 17px;
   height: 9px;
   margin-left: 5px;
-  background: url(../../../images/icon/icon-details-arrow-on.png) no-repeat center;
+  background: url(/public/images/icon/icon-details-arrow-on.png) no-repeat center;
   background-size: contain;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
