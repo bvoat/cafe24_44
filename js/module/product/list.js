@@ -11,7 +11,7 @@ const description = {
   식품: "공장식 축산업 문제, 기후 위기 해결에 투표하세요.",
   뷰티: "식물성으로 만든 순하디 순한 비건 뷰티로 갈아탈 때",
   리빙: "오히려 좋아, 오히려 편해! 친환경 리빙 가보자고!",
-  All: "발견해요, 가치있게 대체할 것"
+  ALL: "발견해요, 가치있게 대체할 것"
 };
 
 //카테고리 별로 h2 변경
@@ -59,3 +59,20 @@ window.addEventListener("load", ()=>{
   let params = document.location.search;
   parent != params ? document.querySelector(".back_btn").classList.remove("visiblehidden") : null;
 })
+/* 하위 카테고리 뒤로가기 표시 */
+/* 하위 카테고리 active 표시 */
+
+const subCateActive = (url) => {
+  //hash
+  const cate_hash = decodeURI(url.split('#')[1]);
+  const active_cate = document.querySelector(`.subcategory_list > a[title='${cate_hash}']`)
+  if(active_cate){
+    active_cate.parentNode.classList.add("subcate_active")
+  } else {
+    document.querySelector(`.subcategory_list > a[title='전체보기']`).parentNode.classList.add("subcate_active");
+  }
+}
+
+window.addEventListener("DOMContentLoaded", subCateActive(window.location.hash))
+/* 하위 카테고리 active 표시 */
+
