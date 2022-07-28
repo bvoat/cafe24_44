@@ -8,42 +8,40 @@
         <h2>지금 진행 중이에요.</h2>
         <h3>책임 있는 생산에 가치있는 한 표를 함께해요.</h3>
     </section>
-
-
-
-<section id="fundingListmain" class="padding2 listmain-18">
-    <div module="product_listmain_18">
-        <!--펀딩 메인진열-->
-        <!--
+    <section id="fundingListmain" class="funding_now">
+        <div class="funding_list listmain_18" module="product_listmain_18">
+            <!--펀딩 메인진열-->
+            <!--
                 $count = 10
                 $basket_result = /product/add_basket.html
                 $basket_option = /product/basket_option.html
             -->
-        <!--@import(/funding/module/funding_listmain.html)-->
-    </div>
-</section>
+            <!--@import(/funding/module/funding_listmain.html)-->
+            <!-- 주의! 판매 상품이 품절 상태면 18번 모듈에 진열되지 않습니다. -->
+        </div>
+    </section>
 
 
-<section id="fundingIndexClosingTitle" class="padding2 indextitle m20">
-    <h2>종료된 펀딩·공구</h2>
-    <h3>함께 가치를 더했던 상품들이에요.</h3>
-</section>
+    <section id="fundingIndexClosingTitle" class="padding2 indextitle m20">
+        <h2>종료된 펀딩·공구</h2>
+        <h3>함께 가치를 더했던 상품들이에요.</h3>
+    </section>
 
-<section class="padding2">
-    <div class=" fundingbanner" id="fundingbanner"></div>
-</section>
+    <section class="funding_list funding_end_banner padding2">
+        <div class="fundingbanner" id="fundingbanner"></div>
+    </section>
 
-<div>
-    <section id="fundingEndListmain" module="product_listmain_26">
+    <section id="fundingEndListmain" class="funding_end">
+        <div class="funding_list listmain_26" module="product_listmain_26">
             <!--펀딩 종료진열-->
             <!--
                 $count = 3
                 $moreview = yes
                 $cache = yes
-                $type = moreview
             -->
-            
             <!--@import(/funding/module/funding_listmain.html)-->
+            <!-- 주의! 판매 상품이 품절 상태면 26번 모듈에 진열되지 않습니다. -->
+        </div>
         <div id="product_listmore" module="product_listmore_26">
             <!--개행 주의-->
             <a id="fundingmore" class="moreview_btn" href="#none" onclick="{$more_action}">
@@ -51,12 +49,7 @@
                     id="more_total_page_{$display_group}">{$total_page}</span>)
             </a>
         </div>
-
-    </div>
-
-
-</div>
-
+    </section>
 </section>
 
 <!--setting-->
@@ -76,26 +69,10 @@
         }
     };
 
-    const now_funding = document.querySelector(".listmain-18");
-    if(now_funding.hasChildNodes()){
+    if (!isEmpty(document.querySelector(".listmain_18"))) {
         console.log("not empty");
-    }else if (!now_funding.hasChildNodes()){
+    } else{
         console.log("empty");
-        now_funding.insertAdjacentHTML("beforeend", `<div class=" fundingendbanner">⏳<br><em>현재 진행 중인 펀딩·공구가 없어요!</em></div>`)
-    }else if(now_funding.textContent.length == 5){
-        now_funding.insertAdjacentHTML("beforeend", `<div class=" fundingendbanner" id="fundingendbanner"></div>`)
+        document.querySelector("#fundingListmain").insertAdjacentHTML("beforeend", `<div class="fundingendbanner">⏳<br><em>현재 진행 중인 펀딩·공구가 없어요!</em></div>`)
     }
-//     if ($(".listmain-18").text().length==5) {
-//         $(".listmain-18").append(`
-//     <div class=" fundingendbanner" id="fundingendbanner"></div>
-// `);
-
-//         $("#fundingendbanner").append(`⏳<br><b>현재 진행 중인 펀딩·공구가 없어요!</b>`);
-//     }
-
-</script>
-<script>
-
-    
-    
 </script>

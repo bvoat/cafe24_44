@@ -65,21 +65,48 @@
 }
 
 /* 펀딩 메인진열 */
+.funding_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .bvt-funding {
   width: 100%;
   max-width: 450px;
+  margin: 0 auto;
   padding: 11px 0;
 }
 
-.bvt-funding li:hover {
+.bvt-funding > li {
+  position: relative;
+  border-bottom: 1px solid #E2E2E2;
+  margin-bottom: 35px;
   border-radius: 10px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  overflow: hidden;
+}
+
+.bvt-funding > li:hover {
+  border-radius: 10px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   -webkit-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
           box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
 }
 
-.bvt-funding li .msgBox {
+.bvt-funding > li .msgBox {
   background-color: #022CFF;
   color: #ffffff;
   font-size: 15px;
@@ -94,16 +121,20 @@
   line-height: 8px;
 }
 
-.bvt-funding li .box-img a {
-  display: block;
-  overflow: hidden;
+.bvt-funding > li .thumb {
   position: relative;
-  border-radius: 10px;
-  padding-bottom: 56.25%;
-  height: 0;
+  width: 100%;
 }
 
-.bvt-funding li .box-img a img {
+.bvt-funding > li .thumb > a {
+  display: block;
+  position: relative;
+  padding-top: 55%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.bvt-funding > li .thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -114,209 +145,135 @@
           transform: translate(-50%, -22%);
 }
 
-.bvt-funding li .ddayPrd {
-  position: relative;
-  z-index: 1;
-  float: right;
-  padding: 12px;
-  background-color: #022CFF;
+.bvt-funding > li .thumb .icon {
+  position: absolute;
+  width: 50px;
+  height: 20.5px;
+  border-radius: 4px;
+  top: 4.6px;
+  left: 4.6px;
+}
+
+.bvt-funding > li .ddayPrd {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #022CFF;
   color: #ffffff;
-  right: 15px;
-  bottom: 25px;
-  border-radius: 100px;
+  font-size: 1.45rem;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  z-index: 9;
+  right: 10px;
+  top: 225px;
 }
 
-.bvt-funding li .iconPrd {
-  position: relative;
-  right: 30px;
-  float: right;
-  z-index: 10;
-  bottom: 25px;
-  height: 40px;
-  width: auto;
+.bvt-funding > li .desc {
+  width: 100%;
+  padding: 11px 11px 60px;
 }
 
-.bvt-funding li .iconPrd > img {
-  height: 100%;
-}
-
-.box-desc {
-  padding: 15px 13px 0px 13px;
-  min-height: 100px;
-  border-radius: 12px 12px 0 0;
-}
-
-.box-desc .typePrd {
+.bvt-funding > li .desc .typePrd {
+  font-size: 1.5rem;
+  font-weight: bold;
   color: #022CFF;
+  margin-bottom: 11px;
 }
 
-.box-desc .title {
-  margin-bottom: 15px;
-  width: 100%;
-  font-size: 20px !important;
-  color: #292929 !important;
-  font-weight: bold !important;
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.bvt-funding > li .desc .title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 11px;
+}
+
+.bvt-funding > li .desc .summary {
+  font-size: 1.5rem;
+  margin-bottom: 11px;
+  display: block;
   overflow: hidden;
-}
-
-.box-desc .desc,
-.box-desc .desc * {
-  font-size: 15px !important;
-  color: #292929 !important;
-  word-break: keep-all;
-  overflow-wrap: break-word;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 2.1rem;
 }
 
-.box-desc .price,
-.box-desc .price * {
-  font-size: 0.85em !important;
-  color: #022CFF !important;
-  font-weight: 700 !important;
-}
-
-.box-desc .gradientline {
-  background: transparent -webkit-gradient(linear, left top, right top, from(#022CFF), to(#00F571)) 0% 0% no-repeat padding-box;
-  background: transparent linear-gradient(90deg, #022CFF 0%, #00F571 100%) 0% 0% no-repeat padding-box;
-  border-radius: 2px;
-  opacity: 1;
-  height: 3px;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.box-desc > .box2 {
+.bvt-funding > li .desc .custom_voter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 7px;
+  margin: 7px 0;
 }
 
-.box-desc > .box2 div:nth-child(1) {
+.bvt-funding > li .desc .custom_voter div:nth-child(1) {
+  font-size: 1.25rem;
   color: #022CFF;
-  font-size: 1.28rem;
 }
 
-.box-desc > .box2 div:nth-child(2) {
+.bvt-funding > li .desc .custom_voter div:nth-child(2) {
   color: #01AF8A;
 }
 
-.likePrd,
-.wish {
-  margin-top: 20px;
-  height: 41px;
-}
-
-.likePrd .gdVote,
-.wish .gdVote {
-  height: 41px;
+.bvt-funding > li .desc .wish {
+  position: absolute;
   width: 41px;
+  height: 41px;
+  cursor: pointer;
+  bottom: 11px;
+  left: 11px;
+}
+
+.bvt-funding > li .desc .wish button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0;
   border-radius: 50%;
-  background-color: white;
-  border: 2px solid white;
-  outline: none;
-  padding: 0;
-  -webkit-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-          box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-  vertical-align: middle;
-  margin-right: 13px;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
   cursor: pointer;
 }
 
-.likePrd .gdVote img,
-.wish .gdVote img {
-  height: 22px;
-  width: auto;
+.bvt-funding > li .desc .wish button img {
+  position: relative;
+  width: 60%;
+  height: 53%;
+  margin-top: 1.5px;
 }
 
-.likePrd .gdVote::hover,
-.wish .gdVote::hover {
-  border: 2px solid #022CFF;
-  -webkit-transition: ease-in 0.07s;
-  transition: ease-in 0.07s;
-  cursor: pointer;
-  -webkit-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-          box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
+.listmain_26 > .bvt-funding > li > .thumb > a > img {
+  -webkit-filter: opacity(50%) !important;
+  filter: opacity(50%) !important;
 }
 
-.likePrd .ec-product-listwishicon,
-.wish .ec-product-listwishicon {
-  height: 22px;
-  width: auto;
-}
-
-.dashline {
-  background: #E8E8E8;
-  border-radius: 2px;
-  opacity: 1;
-  height: 1px;
-  width: 100%;
-  margin: 30px 0 40px 0;
-}
-
-/* 220105 펀딩 가격 추가 */
-.funding_price {
-  margin: 14px 0 22px 0;
-}
-
-.funding_price > .product_price {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.funding_price > .product_customer {
-  font-size: 15px;
-  font-weight: 600;
-  color: #ABABAB;
-  -webkit-text-decoration-line: line-through;
-          text-decoration-line: line-through;
-  display: none;
-}
-
-.won {
-  font-size: 20px;
-  margin-right: 8px;
-  display: none;
-}
-
-/* 펀딩 index 종료 */
-.xans-product-listmain-26 .bvt-funding .box-img > a > Img {
-  -webkit-filter: opacity(50%);
-  filter: opacity(50%);
-}
-
-.xans-product-listmain-26 .bvt-funding .box-desc .title * {
+.listmain_26 > .bvt-funding > li > .desc > .title > a, .listmain_26 > .bvt-funding > li > .desc > .summary {
   color: #707070 !important;
 }
 
-.xans-product-listmain-26 .bvt-funding .box-desc .desc {
-  color: #707070 !important;
-}
-
-.xans-product-listmain-26 .bvt-funding .box-desc .funding_price .product_price {
-  font-size: 1.4rem !important;
-  color: #70707000 !important;
-}
-
-/*index_funding_swipe*/
-.bvt-funding .swiper-slide {
-  border-radius: 7px;
-  padding-bottom: 25px;
-}
-
-.swiper-container > .bvt-funding {
-  padding-bottom: 30px;
-}
-
+/* 펀딩 가격 */
+/* 펀딩 가격 */
 /*더보기버튼*/
 #product_listmore {
   position: relative;
