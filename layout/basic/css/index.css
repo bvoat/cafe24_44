@@ -50,6 +50,7 @@
 #bvtHome .paginate_moreview {
   width: 100%;
   height: 42px;
+  padding-right: 11px;
 }
 
 #bvtHome .paginate_moreview .moreview_btn {
