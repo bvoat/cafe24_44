@@ -3,176 +3,208 @@
 /* **************************** //필수 CSS 수정 및 삭제 불가 **************************** */
 
 /* font-family 선언*/
-/* noto-sans-kr-100 - latin_korean */
+/* Pretendard subset woff, woff2 */ 
 @font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 100;
-    src: url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-100.eot'); /* IE9 Compat Modes */
-    src: local(''),
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-100.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-100.woff') format('woff'), /* Modern Browsers */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-100.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-100.svg#NotoSansKR') format('svg'); /* Legacy iOS */
-  }
-  /* noto-sans-kr-regular - latin_korean */
-  @font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-regular.eot'); /* IE9 Compat Modes */
-    src: local(''),
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-regular.woff') format('woff'), /* Modern Browsers */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-regular.svg#NotoSansKR') format('svg'); /* Legacy iOS */
-  }
-  /* noto-sans-kr-300 - latin_korean */
-  @font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 300;
-    src: url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-300.eot'); /* IE9 Compat Modes */
-    src: local(''),
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-300.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-300.woff') format('woff'), /* Modern Browsers */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-300.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-300.svg#NotoSansKR') format('svg'); /* Legacy iOS */
-  }
-  /* noto-sans-kr-500 - latin_korean */
-  @font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 500;
-    src: url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-500.eot'); /* IE9 Compat Modes */
-    src: local(''),
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-500.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-500.woff') format('woff'), /* Modern Browsers */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-500.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-500.svg#NotoSansKR') format('svg'); /* Legacy iOS */
-  }
-  /* noto-sans-kr-700 - latin_korean */
-  @font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-700.eot'); /* IE9 Compat Modes */
-    src: local(''),
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-700.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-700.woff') format('woff'), /* Modern Browsers */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-700.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-700.svg#NotoSansKR') format('svg'); /* Legacy iOS */
-  }
-  /* noto-sans-kr-900 - latin_korean */
-  @font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
+    font-family: 'Pretendard';
     font-weight: 900;
-    src: url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-900.eot'); /* IE9 Compat Modes */
-    src: local(''),
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-900.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-900.woff') format('woff'), /* Modern Browsers */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-900.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('/public/fonts/notosanskr/noto-sans-kr-v27-latin_korean-900.svg#NotoSansKR') format('svg'); /* Legacy iOS */
-  }
+    font-display: swap;
+    src: local('Pretendard Black'), url('/public/fonts/pretendard-subset/woff2/Pretendard-Black.subset.woff2') format('woff2'), url('/public/fonts/pretendard-subset/woff/Pretendard-Black.subset.woff') format('woff');
+}
 
-  /* jost-regular - latin */
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 800;
+    font-display: swap;
+    src: local('Pretendard ExtraBold'), url('/public/fonts/pretendard-subset/woff2/Pretendard-ExtraBold.subset.woff2') format('woff2'), url('/public/fonts/pretendard-subset/woff/Pretendard-ExtraBold.subset.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'), url('/public/fonts/pretendard-subset/woff2/Pretendard-Bold.subset.woff2') format('woff2'), url('/public/fonts/pretendard-subset/woff/Pretendard-Bold.subset.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-display: swap;
+    src: local('Pretendard SemiBold'), url('/public/fonts/pretendard-subset/woff2/Pretendard-SemiBold.subset.woff2') format('woff2'), url('/public/fonts/pretendard-subset/woff/Pretendard-SemiBold.subset.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-display: swap;
+    src: local('Pretendard Medium'), url('/public/fonts/pretendard-subset/woff2/Pretendard-Medium.subset.woff2') format('woff2'), url('/public/fonts/pretendard-subset/woff/Pretendard-Medium.subset.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url('/public/fonts/pretendard-subset/woff2/Pretendard-Regular.subset.woff2') format('woff2'), url('/public/fonts/pretendard-subset/woff/Pretendard-Regular.subset.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-display: swap;
+    src: local('Pretendard Light'), url('/public/fonts/pretendard-subset/woff2/Pretendard-Light.subset.woff2') format('woff2'), url('/public/fonts/pretendard-subset/woff/Pretendard-Light.subset.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-display: swap;
+    src: local('Pretendard ExtraLight'), url('./woff2-subset/Pretendard-ExtraLight.subset.woff2') format('woff2'), url('./woff-subset/Pretendard-ExtraLight.subset.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 100;
+    font-display: swap;
+    src: local('Pretendard Thin'), url('/public/fonts/pretendard-subset/woff2/Pretendard-Thin.subset.woff2') format('woff2'), url('/public/fonts/pretendard-subset/woff/Pretendard-Thin.subset.woff') format('woff');
+}
+
+/* jost-regular - latin */
 @font-face {
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
-    src: url('/public/fonts/jost/jost-v14-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('/public/fonts/jost/jost-v14-latin-regular.eot');
+    /* IE9 Compat Modes */
     src: local(''),
-         url('/public/fonts/jost/jost-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/public/fonts/jost/jost-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/public/fonts/jost/jost-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
-         url('/public/fonts/jost/jost-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('/public/fonts/jost/jost-v14-latin-regular.svg#Jost') format('svg'); /* Legacy iOS */
-  }
-  /* jost-300 - latin */
-  @font-face {
+        url('/public/fonts/jost/jost-v14-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('/public/fonts/jost/jost-v14-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('/public/fonts/jost/jost-v14-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('/public/fonts/jost/jost-v14-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('/public/fonts/jost/jost-v14-latin-regular.svg#Jost') format('svg');
+    /* Legacy iOS */
+}
+
+/* jost-300 - latin */
+@font-face {
     font-family: 'Jost';
     font-style: normal;
     font-weight: 300;
-    src: url('/public/fonts/jost/jost-v14-latin-300.eot'); /* IE9 Compat Modes */
+    src: url('/public/fonts/jost/jost-v14-latin-300.eot');
+    /* IE9 Compat Modes */
     src: local(''),
-         url('/public/fonts/jost/jost-v14-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/public/fonts/jost/jost-v14-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/public/fonts/jost/jost-v14-latin-300.woff') format('woff'), /* Modern Browsers */
-         url('/public/fonts/jost/jost-v14-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('/public/fonts/jost/jost-v14-latin-300.svg#Jost') format('svg'); /* Legacy iOS */
-  }
-  /* jost-500 - latin */
-  @font-face {
+        url('/public/fonts/jost/jost-v14-latin-300.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('/public/fonts/jost/jost-v14-latin-300.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('/public/fonts/jost/jost-v14-latin-300.woff') format('woff'),
+        /* Modern Browsers */
+        url('/public/fonts/jost/jost-v14-latin-300.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('/public/fonts/jost/jost-v14-latin-300.svg#Jost') format('svg');
+    /* Legacy iOS */
+}
+
+/* jost-500 - latin */
+@font-face {
     font-family: 'Jost';
     font-style: normal;
     font-weight: 500;
-    src: url('/public/fonts/jost/jost-v14-latin-500.eot'); /* IE9 Compat Modes */
+    src: url('/public/fonts/jost/jost-v14-latin-500.eot');
+    /* IE9 Compat Modes */
     src: local(''),
-         url('/public/fonts/jost/jost-v14-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/public/fonts/jost/jost-v14-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/public/fonts/jost/jost-v14-latin-500.woff') format('woff'), /* Modern Browsers */
-         url('/public/fonts/jost/jost-v14-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('/public/fonts/jost/jost-v14-latin-500.svg#Jost') format('svg'); /* Legacy iOS */
-  }
-  /* jost-600 - latin */
-  @font-face {
+        url('/public/fonts/jost/jost-v14-latin-500.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('/public/fonts/jost/jost-v14-latin-500.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('/public/fonts/jost/jost-v14-latin-500.woff') format('woff'),
+        /* Modern Browsers */
+        url('/public/fonts/jost/jost-v14-latin-500.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('/public/fonts/jost/jost-v14-latin-500.svg#Jost') format('svg');
+    /* Legacy iOS */
+}
+
+/* jost-600 - latin */
+@font-face {
     font-family: 'Jost';
     font-style: normal;
     font-weight: 600;
-    src: url('/public/fonts/jost/jost-v14-latin-600.eot'); /* IE9 Compat Modes */
+    src: url('/public/fonts/jost/jost-v14-latin-600.eot');
+    /* IE9 Compat Modes */
     src: local(''),
-         url('/public/fonts/jost/jost-v14-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/public/fonts/jost/jost-v14-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/public/fonts/jost/jost-v14-latin-600.woff') format('woff'), /* Modern Browsers */
-         url('/public/fonts/jost/jost-v14-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('/public/fonts/jost/jost-v14-latin-600.svg#Jost') format('svg'); /* Legacy iOS */
-  }
-  /* jost-700 - latin */
-  @font-face {
+        url('/public/fonts/jost/jost-v14-latin-600.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('/public/fonts/jost/jost-v14-latin-600.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('/public/fonts/jost/jost-v14-latin-600.woff') format('woff'),
+        /* Modern Browsers */
+        url('/public/fonts/jost/jost-v14-latin-600.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('/public/fonts/jost/jost-v14-latin-600.svg#Jost') format('svg');
+    /* Legacy iOS */
+}
+
+/* jost-700 - latin */
+@font-face {
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
-    src: url('/public/fonts/jost/jost-v14-latin-700.eot'); /* IE9 Compat Modes */
+    src: url('/public/fonts/jost/jost-v14-latin-700.eot');
+    /* IE9 Compat Modes */
     src: local(''),
-         url('/public/fonts/jost/jost-v14-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/public/fonts/jost/jost-v14-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/public/fonts/jost/jost-v14-latin-700.woff') format('woff'), /* Modern Browsers */
-         url('/public/fonts/jost/jost-v14-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('/public/fonts/jost/jost-v14-latin-700.svg#Jost') format('svg'); /* Legacy iOS */
-  }
-  /* jost-800 - latin */
-  @font-face {
+        url('/public/fonts/jost/jost-v14-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('/public/fonts/jost/jost-v14-latin-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('/public/fonts/jost/jost-v14-latin-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('/public/fonts/jost/jost-v14-latin-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('/public/fonts/jost/jost-v14-latin-700.svg#Jost') format('svg');
+    /* Legacy iOS */
+}
+
+/* jost-800 - latin */
+@font-face {
     font-family: 'Jost';
     font-style: normal;
     font-weight: 800;
-    src: url('/public/fonts/jost/jost-v14-latin-800.eot'); /* IE9 Compat Modes */
+    src: url('/public/fonts/jost/jost-v14-latin-800.eot');
+    /* IE9 Compat Modes */
     src: local(''),
-         url('/public/fonts/jost/jost-v14-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/public/fonts/jost/jost-v14-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/public/fonts/jost/jost-v14-latin-800.woff') format('woff'), /* Modern Browsers */
-         url('/public/fonts/jost/jost-v14-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('/public/fonts/jost/jost-v14-latin-800.svg#Jost') format('svg'); /* Legacy iOS */
-  }
-  /* jost-900 - latin */
-  @font-face {
+        url('/public/fonts/jost/jost-v14-latin-800.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('/public/fonts/jost/jost-v14-latin-800.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('/public/fonts/jost/jost-v14-latin-800.woff') format('woff'),
+        /* Modern Browsers */
+        url('/public/fonts/jost/jost-v14-latin-800.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('/public/fonts/jost/jost-v14-latin-800.svg#Jost') format('svg');
+    /* Legacy iOS */
+}
+/* jost-900 - latin */
+@font-face {
     font-family: 'Jost';
     font-style: normal;
     font-weight: 900;
-    src: url('/public/fonts/jost/jost-v14-latin-900.eot'); /* IE9 Compat Modes */
+    src: url('/public/fonts/jost/jost-v14-latin-900.eot');
+    /* IE9 Compat Modes */
     src: local(''),
-         url('/public/fonts/jost/jost-v14-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/public/fonts/jost/jost-v14-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/public/fonts/jost/jost-v14-latin-900.woff') format('woff'), /* Modern Browsers */
-         url('/public/fonts/jost/jost-v14-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('/public/fonts/jost/jost-v14-latin-900.svg#Jost') format('svg'); /* Legacy iOS */
-  }
+        url('/public/fonts/jost/jost-v14-latin-900.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('/public/fonts/jost/jost-v14-latin-900.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('/public/fonts/jost/jost-v14-latin-900.woff') format('woff'),
+        /* Modern Browsers */
+        url('/public/fonts/jost/jost-v14-latin-900.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('/public/fonts/jost/jost-v14-latin-900.svg#Jost') format('svg');
+    /* Legacy iOS */
+}
 
 /* font-family 선언*/
 
@@ -209,7 +241,7 @@ img,
 
 select,
 section,
-article{
+article {
     margin: 0;
     padding: 0;
     /* 비보트 추가 */
@@ -238,10 +270,10 @@ code {
     background: #fff; */
     /* 비보트 추가 */
     font-size: 10px;
-    font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', Nanum Gothic,'나눔고딕','맑은 고딕', 'Malgun Gothic','돋움', dotum, Verdana, AppleGothic, sans-serif;
+    font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif;
     color: #292929;
     font-weight: normal;
-    letter-spacing: -0.1px;    
+    letter-spacing: -0.1px;
     font-variant: tabular-nums;
     font-feature-settings: "tnum";
 }
@@ -249,10 +281,11 @@ code {
 /* body {
     min-width: 1480px;
 } */
- 
+
 body#popup {
     min-width: 0;
 }
+ 
 /* 비보트 추가 */
 ul,
 ol,
@@ -273,25 +306,29 @@ fieldset {
     image-rendering: -webkit-optimize-contrast;
     backface-visibility: hidden;
 }
+
 /* 비보트 추가 */
 detail,
-summary{
+summary {
     padding: 0;
     box-sizing: border-box;
 }
+
 /* 비보트 추가 */
-summary{
+summary {
     cursor: pointer;
     list-style: none;
 }
+
 /* 비보트 추가 */
-iframe{
+iframe {
     width: 100%;
     height: auto;
-    border: none;   
+    border: none;
 }
+
 /* 비보트 추가 */
-fieldset{
+fieldset {
     min-inline-size: 0 !important;
 }
 
@@ -332,12 +369,24 @@ a {
     color: #292929;
     cursor: pointer;
 }
+
 /* 비보트 추가 */
-a, h1, h2, h3, h4, h5, h6, p, span, em, i {
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+em,
+i {
     transform: rotate(0.04deg);
-} 
+}
+
 /* 비보트 추가 */
-em{
+em {
     font-style: normal;
 }
 
@@ -478,21 +527,26 @@ div.layerProgress {
 .displaynone {
     display: none;
 }
+
 /* 비보트 추가 */
 .overhidden {
     overflow: hidden !important;
 }
+
 .zindexzero {
     z-index: 0 !important;
 }
-.visiblehidden{
+
+.visiblehidden {
     visibility: hidden;
 }
-.gradientline{background: transparent linear-gradient(90deg, #022CFF 0%, #00F571 100%) 0% 0% no-repeat padding-box;
-border-radius: 2px;
-opacity: 1;
-height: 3px;
-width: 100%;
+
+.gradientline {
+    background: transparent linear-gradient(90deg, #022CFF 0%, #00F571 100%) 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;
+    height: 3px;
+    width: 100%;
 }
 
 .dimmed {
@@ -520,24 +574,28 @@ width: 100%;
     background-color: #fff239;
     color: #292929;
 }
+
 /* 가격 표시 */
-.price_wrap{
+.price_wrap {
     position: relative;
     display: flex;
     flex-flow: row nowrap;
 }
-.price_wrap>.discount{
+
+.price_wrap>.discount {
     font-size: 1.6rem;
     font-weight: bold;
     color: #FF7600;
     margin-right: 0.88rem;
 }
-.price_wrap>.price_item{
+
+.price_wrap>.price_item {
     font-size: 1.6rem;
     font-weight: bold;
     color: #022cff;
 }
-.price_item::after{
+
+.price_item::after {
     display: inline-block;
     content: "원";
     font-size: 1.5rem;
@@ -545,23 +603,27 @@ width: 100%;
     color: #292929;
     margin-left: 1px;
 }
-.strike_price{
+
+.strike_price {
     position: absolute;
     bottom: 2.15rem;
     text-decoration: line-through !important;
     color: #ABABAB !important;
-    font-size :
-    1.1rem !important;
+    font-size:
+        1.1rem !important;
     font-weight: 400 !important;
 }
-.strike_price::after{
+
+.strike_price::after {
     color: #ABABAB !important;
-    font-size :
-    1.05rem !important;
+    font-size:
+        1.05rem !important;
 }
-.onpromotion{
+
+.onpromotion {
     color: #FF7600 !important;
 }
-.onpromotion::after{
+
+.onpromotion::after {
     color: #FF7600 !important;
 }
