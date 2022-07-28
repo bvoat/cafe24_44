@@ -91,11 +91,10 @@
 .bvt-funding > li {
   position: relative;
   border-bottom: 1px solid #E2E2E2;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
   border-radius: 10px;
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
-  overflow: hidden;
 }
 
 .bvt-funding > li:hover {
@@ -171,7 +170,6 @@
   border-radius: 50%;
   width: 45px;
   height: 45px;
-  z-index: 9;
   right: 10px;
   top: 225px;
 }

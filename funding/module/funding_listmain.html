@@ -1,9 +1,9 @@
-
 <ul class="prdList bvt-funding">
     <li id="anchorBoxId_{$product_no}">
         <span class="msgBox"></span>
         <div class="thumb box-img">
-            <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}" data-title="{$product_name_tag|striptag}">
+            <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"
+                data-title="{$product_name_tag|striptag}">
                 <img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}">
             </a>
             <div class="iconPrd icon">
@@ -13,12 +13,13 @@
         <div class="ddayPrd"><span id="funding-dday-{$product_no}"></span></div>
         <div class="box-desc desc">
             <div class="typePrd"><span id="funding-type-{$product_no}"></span></div>
-            <div class="title"><a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}" data-title="{$product_name_tag|striptag}">{$prd_model}</a></div>
+            <div class="title"><a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"
+                    data-title="{$product_name_tag|striptag}">{$prd_model}</a></div>
             <div class="summary">{$summary_desc}</div>
             <div id="price-{$product_no}" class="funding_price">
-            <span class="product_price">{$disp_product_price}</span>
+                <span class="product_price">{$disp_product_price}</span>
                 <!--<span class="won">원</span>-->
-            <span class="product_customer">{$disp_product_custom}</span>
+                <span class="product_customer">{$disp_product_custom}</span>
             </div>
             <div class="gradientline"> </div>
             <div class="custom_voter box2 t08">
@@ -37,7 +38,8 @@
     <li id="anchorBoxId_{$product_no}">
         <span class="msgBox"></span>
         <div class="thumb box-img">
-            <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}" data-title="{$product_name_tag|striptag}">
+            <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"
+                data-title="{$product_name_tag|striptag}">
                 <img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}">
             </a>
             <div class="iconPrd icon">
@@ -47,12 +49,13 @@
         <div class="ddayPrd"><span id="funding-dday-{$product_no}"></span></div>
         <div class="box-desc desc">
             <div class="typePrd"><span id="funding-type-{$product_no}"></span></div>
-            <div class="title"><a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}" data-title="{$product_name_tag|striptag}">{$prd_model}</a></div>
+            <div class="title"><a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"
+                    data-title="{$product_name_tag|striptag}">{$prd_model}</a></div>
             <div class="summary">{$summary_desc}</div>
             <div id="price-{$product_no}" class="funding_price">
-            <span class="product_price">{$disp_product_price}</span>
+                <span class="product_price">{$disp_product_price}</span>
                 <!--<span class="won">원</span>-->
-            <span class="product_customer">{$disp_product_custom}</span>
+                <span class="product_customer">{$disp_product_custom}</span>
             </div>
             <div class="gradientline"> </div>
             <div class="custom_voter box2 t08">
@@ -73,17 +76,17 @@
 <script>
 
     var price = document.querySelectorAll(".product_price");
-        price.forEach((v, i)=>{
-            var minus = v.innerText.slice(0, 6)
-            v.innerText = minus;
-        }
+    price.forEach((v, i) => {
+        var minus = v.innerText.slice(0, 6)
+        v.innerText = minus;
+    }
     )
-    
-        var customer = document.querySelectorAll(".product_customer");
-        customer.forEach((v, i)=>{
-            var minuscustomer = v.innerText.slice(0, 7)
-            v.innerText = minuscustomer;
-        }
+
+    var customer = document.querySelectorAll(".product_customer");
+    customer.forEach((v, i) => {
+        var minuscustomer = v.innerText.slice(0, 7)
+        v.innerText = minuscustomer;
+    }
     )
-    
+
 </script>

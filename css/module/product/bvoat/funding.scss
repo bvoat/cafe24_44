@@ -78,14 +78,12 @@
     max-width: 450px;
     margin: 0 auto;
     padding: 11px 0;
-
     >li{
         position: relative;
         border-bottom: $bvt-btn-border-gray;
-        margin-bottom: 35px;
+        margin-bottom: 45px;
         border-radius: 10px;
         transition: all 0.6s;
-        overflow: hidden;
         &:hover {
             border-radius: 10px;
             transition: all 0.4s;
@@ -114,7 +112,6 @@
                 padding-top: 55%;
                 overflow: hidden;
                 border-radius: 4px;
-    
                 >img {
                     position: absolute;
                     top: 0;
@@ -145,7 +142,6 @@
             border-radius: 50%;
             width: 45px;
             height: 45px;
-            z-index: 9;
             right: 10px;
             top: 225px;
         }
