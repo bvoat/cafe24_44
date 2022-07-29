@@ -263,6 +263,7 @@ const createStamp = (createStampPcsFromPrice) => {
 };
 
 /* 가치태그 수신 */
+
 let prd_no = new URLSearchParams(location.search).get("product_no");
 
 const reciveTagDetail = (prd_no) => {
