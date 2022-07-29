@@ -222,6 +222,7 @@
 }
 
 .bvt-funding > li .desc .custom_voter div:nth-child(2) {
+  font-size: 1.25rem;
   color: #01AF8A;
 }
 
@@ -261,6 +262,8 @@
   margin-top: 1.5px;
 }
 
+/* 진행 펀딩 */
+/* 종료 펀딩 */
 .listmain_26 > .bvt-funding > li > .thumb > a > img {
   -webkit-filter: opacity(50%) !important;
   filter: opacity(50%) !important;
@@ -271,6 +274,10 @@
 }
 
 /* 펀딩 가격 */
+.funding_price {
+  margin-bottom: 11px;
+}
+
 /* 펀딩 가격 */
 /*더보기버튼*/
 #product_listmore {

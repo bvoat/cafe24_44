@@ -4,7 +4,7 @@
 
 <section id="fundingIndex">
 
-    <section id="fundingIndexPlayingTitle" class="padding2 indextitle m20 m108">
+    <section id="fundingIndexPlayingTitle" class="indextitle">
         <h2>지금 진행 중이에요.</h2>
         <h3>책임 있는 생산에 가치있는 한 표를 함께해요.</h3>
     </section>
@@ -22,12 +22,12 @@
     </section>
 
 
-    <section id="fundingIndexClosingTitle" class="padding2 indextitle m20">
+    <section id="fundingIndexClosingTitle" class="indextitle">
         <h2>종료된 펀딩·공구</h2>
         <h3>함께 가치를 더했던 상품들이에요.</h3>
     </section>
 
-    <section class="funding_list funding_end_banner padding2">
+    <section class="funding_list funding_end_banner">
         <div class="fundingbanner" id="fundingbanner"></div>
     </section>
 
@@ -57,19 +57,7 @@
 
 
 <script>
-    // 넘어온 값이 빈값인지 체크합니다.
-    // !value 하면 생기는 논리적 오류를 제거하기 위해
-    // 명시적으로 value == 사용
-    // [], {} 도 빈값으로 처리
-    var isEmpty = function (value) {
-        if (value == "" || value == null || value == undefined || (value != null && typeof value == "object" && !Object.keys(value).length)) {
-            return true
-        } else {
-            return false
-        }
-    };
-
-    if (!isEmpty(document.querySelector(".listmain_18"))) {
+    if (document.querySelector(".listmain_18>ul").hasChildNodes()) {
         console.log("not empty");
     } else{
         console.log("empty");

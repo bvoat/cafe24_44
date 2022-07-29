@@ -16,11 +16,13 @@
             <div class="title"><a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"
                     data-title="{$product_name_tag|striptag}">{$prd_model}</a></div>
             <div class="summary">{$summary_desc}</div>
-            <div id="price-{$product_no}" class="funding_price">
-                <span class="product_price">{$disp_product_price}</span>
-                <!--<span class="won">원</span>-->
-                <span class="product_customer">{$disp_product_custom}</span>
-            </div>
+            <ul id="price-{$product_no}" class="funding_price price_wrap">
+                <li class="discount displaynone" data-name="할인율" title="할인율"></li>
+                <li class="fixprice price_item" data-name="정가" title="정가(소비자가)"
+                data-price="{$product_custom}">{$disp_product_custom}</li>
+                <li class="realprice price_item" data-name="판매가" title="판매가(할인가)"
+                data-price="{$product_price}">{$disp_product_price}</li>
+            </ul>
             <div class="gradientline"> </div>
             <div class="custom_voter box2 t08">
                 <div id="custom-voter-{$product_no}"></div>
@@ -52,11 +54,13 @@
             <div class="title"><a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"
                     data-title="{$product_name_tag|striptag}">{$prd_model}</a></div>
             <div class="summary">{$summary_desc}</div>
-            <div id="price-{$product_no}" class="funding_price">
-                <span class="product_price">{$disp_product_price}</span>
-                <!--<span class="won">원</span>-->
-                <span class="product_customer">{$disp_product_custom}</span>
-            </div>
+            <ul id="price-{$product_no}" class="funding_price price_wrap">
+                <li class="discount displaynone" data-name="할인율" title="할인율"></li>
+                <li class="fixprice price_item" data-name="정가" title="정가(소비자가)"
+                data-price="{$product_custom}">{$disp_product_custom}</li>
+                <li class="realprice price_item" data-name="판매가" title="판매가(할인가)"
+                data-price="{$product_price}">{$disp_product_price}</li>
+            </ul>
             <div class="gradientline"> </div>
             <div class="custom_voter box2 t08">
                 <div id="custom-voter-{$product_no}"></div>
@@ -72,21 +76,3 @@
         </div>
     </li>
 </ul>
-
-<script>
-
-    var price = document.querySelectorAll(".product_price");
-    price.forEach((v, i) => {
-        var minus = v.innerText.slice(0, 6)
-        v.innerText = minus;
-    }
-    )
-
-    var customer = document.querySelectorAll(".product_customer");
-    customer.forEach((v, i) => {
-        var minuscustomer = v.innerText.slice(0, 7)
-        v.innerText = minuscustomer;
-    }
-    )
-
-</script>

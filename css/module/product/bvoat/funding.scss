@@ -170,10 +170,13 @@
                 margin: 7px 0;
                 div{
                     &:nth-child(1){
+                        //구매 인원
                         font-size: 1.25rem;
                         color: $bvt-blue;
                     }
                     &:nth-child(2) {
+                        //현재 할인율
+                        font-size: 1.25rem;
                         color: #01AF8A;
                     }
                 }
@@ -182,12 +185,12 @@
         }
     }
 }
-//진행 펀딩
+/* 진행 펀딩 */
 // .listmain_18{
 
 // }
 
-//종료 펀딩
+/* 종료 펀딩 */
 .listmain_26 > .bvt-funding > li > {
     .thumb > a > img{
         -webkit-filter: opacity(50%) !important;
@@ -206,6 +209,9 @@
 //         color: #022CFF !important;
 //         font-weight: 700 !important;
 //     }
+.funding_price{
+    margin-bottom: 11px;
+}
 /* 펀딩 가격 */
 
 
