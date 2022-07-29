@@ -1,12 +1,21 @@
 <!--@layout(/layout/basic/layout.html)-->
 <style>
     #error{
-        margin-top: 120px;
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
     }
     .error_heading {
         text-align: center;
         font-size: 2.3rem;
         color: #022CFF;
+    }
+    .error_heading>span{
+        font-size: 6rem;
     }
     #error>img {
         width: 100%;
@@ -26,19 +35,25 @@
     .error_msg {
         text-align: center;
         font-size: 1.5rem;
+        font-weight: normal;
         color: #022CFF;
         padding: 1rem 0;
+    }
+    .error_msg>a{
+        color:#022CFF;
+        text-decoration: underline;
+        font-weight: bold;
     }
 </style>
 
 <article id="error">
 
     <h1 class="error_heading">
-        😵<br><br>
+        <span>😵</span>
+        <br><br>
         찾을 수 없는 페이지를<br>
         요청하셨습니다.
     </h1>
-    <img src="/bvtIMG/error.png" alt="비보트 에러 404">
 
     <ul class="error_summary">
         <li>
@@ -50,7 +65,8 @@
     </ul>
 
     <h3 class="error_msg">
-        궁금한 점이 있으시면 <br> 고객센터를 통해
+        궁금한 점이 있으시면 <br> 
+        <a href="https://bvoat.channel.io/lounge" title="비보트 고객센터">고객센터</a>를 통해
         문의해 주시기 바랍니다.<br>감사합니다.
     </h3>
 </article>
