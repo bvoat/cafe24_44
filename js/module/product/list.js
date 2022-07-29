@@ -63,7 +63,6 @@ window.addEventListener("load", ()=>{
 /* 하위 카테고리 active 표시 */
 
 const subCateActive = (url) => {
-  console.log('url: ', url);
   //hash
   const cate_hash = decodeURI(url.split('#')[1]);
   const active_cate = document.querySelector(`.subcategory_list > a[title='${cate_hash}']`)

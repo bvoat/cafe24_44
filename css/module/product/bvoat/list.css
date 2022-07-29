@@ -69,6 +69,18 @@
   color: #ffffff;
   word-break: keep-all;
   word-wrap: break-word;
+  margin-top: -4px;
+}
+
+#subCategorySwiper .subcategory .subcate_active a::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 103%;
+  height: 3px;
+  border-radius: 2px;
+  background: #ffffff;
+  bottom: -4px;
 }
 
 #product_normalmenu {
