@@ -174,6 +174,10 @@
   top: 225px;
 }
 
+.bvt-funding > li .ddayPrd > span {
+  font-weight: 500;
+}
+
 .bvt-funding > li .desc {
   width: 100%;
   padding: 11px 11px 60px;
