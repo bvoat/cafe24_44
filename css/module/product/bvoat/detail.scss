@@ -73,15 +73,14 @@
             margin-bottom: 25px;
         }
 
-        .tag-box {
+        #categoryTagBox {
             display: flex;
             flex-flow: row wrap;
             justify-content: first baseline;
             align-items: center;
             width: 100%;
             margin: 20px 0 0 0;
-
-            >div {
+            .cate_item {
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: center;
@@ -93,8 +92,10 @@
                 border: $bvt-btn-border-gray;
                 border-radius: 14px;
                 margin: 0 6px 6px 0;
-                font-size: 1.2rem;
-                font-weight: 400;
+                >a{
+                    font-size: 1.2rem;
+                    font-weight: normal;
+                }
             }
         }
 
@@ -105,7 +106,7 @@
             height: 35px;
             background: $share-btn no-repeat center;
             text-indent: -9999px;
-            top: calc(50% - (35px / 2));
+            top: calc(50% - 30px);
             right: 11px;
         }
     }

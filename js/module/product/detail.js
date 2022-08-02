@@ -263,6 +263,7 @@ const createStamp = (createStampPcsFromPrice) => {
 };
 
 /* 가치태그 수신 */
+
 let prd_no = new URLSearchParams(location.search).get("product_no");
 
 const reciveTagDetail = (prd_no) => {
@@ -275,16 +276,14 @@ const reciveTagDetail = (prd_no) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      data.forEach((tag) => {
-        console.log("tag", tag);
-        if(tag.tag_type != "brand"){
+      data.forEach((category) => {
           document
-          .querySelector("#tag-box")
+          .querySelector("#categoryTagBox")
           .insertAdjacentHTML(
             "beforeend",
-            `<div>${tag.emoji} ${tag.tag_name}</div>`
+            `<li class="cate_item"><a href="/product/list.html?cate_no=${category.category_no}#${category.category_name}">${category.category_name}</a></li>`
           );
-        }
+        
       });
     })
     .catch((error) => {

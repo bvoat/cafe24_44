@@ -272,7 +272,7 @@
   font-size: 1.1rem;
 }
 
-#searchModal #searchBarForm .dimmed {
+.dimmed {
   display: none;
 }
 

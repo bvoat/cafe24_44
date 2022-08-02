@@ -23,7 +23,7 @@ const makeHeadingTwo = (category, description) => {
     } else if(category == '가치별 카테고리'){
       category_title.insertAdjacentHTML('beforeend',`<h2>${description['All']}</h2>`)
     } else {
-      category_title.insertAdjacentHTML('beforeend',`<h2>${find}</h2>`)
+      category_title.insertAdjacentHTML('beforeend',`<h2>비보트에서 엄선한 가치소비 제품들을 만나보세요.</h2>`)
     }
   } else {
     category_title.insertAdjacentHTML('beforeend',`<h2>${description['All']}</h2>`)

@@ -206,21 +206,38 @@ function controlTopNav(page_path) {
     }
   });
 }
+//상단바 active 표시
 function controlTopNavActive(page_path){
-    //active 표시
+    //path가 list(카테고리-상품리스트)일 때
     if(page_path.includes("product/list.html")){
+      //받아온 카테고리 네임 변수화
       const name = document.querySelector("#topNavControl").name;
-      document.querySelector(`#cate${name}`).classList.add("top_nav_active")
+      //가치태그 카테고리면
+      if(name.includes('카테고리')){
+        //스토어 홈에 active
+        document.querySelector("#index").classList.add("top_nav_active");
+        //아니면 각각의 name 에 맞는 nav에 active
+      }else{
+        document.querySelector(`#cate${name}`).classList.add("top_nav_active");
+      }
+      //path가 크루면
     } else if (page_path.includes("crew/crew.html")){
-      document.querySelector("#crew").classList.add("top_nav_active")
+      //크루에 active
+      document.querySelector("#crew").classList.add("top_nav_active");
+      //path가 펀딩이면
     }else if (page_path.includes("funding")){
-      document.querySelector("#funding").classList.add("top_nav_active")
+      //펀딩에 active
+      document.querySelector("#funding").classList.add("top_nav_active");
+      //아무것도 확인되지 않으면
     }else{
+      //스토어 홈에 active
       document.querySelector("#index").classList.add("top_nav_active")
     }
 }
 window.addEventListener("DOMContentLoaded", () => {
+  //top nav 숨기기 함수
   controlTopNav(window.location.href);
+  //top nav active 함수
   controlTopNavActive(window.location.href);
 });
 /* nav 컨트롤 스크립트 */
