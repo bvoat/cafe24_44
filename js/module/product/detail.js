@@ -290,7 +290,7 @@ const reciveTagDetail = (prd_no) => {
       console.error("실패:", error);
     });
 };
-
+ 
 /* 최종 함수 실행 */
 //소비기록 컨트롤
 buyRecordFrameControl();
