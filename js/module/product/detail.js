@@ -275,16 +275,26 @@ const reciveTagDetail = (prd_no) => {
     },
   })
     .then((response) => response.json())
-    .then((data) => {
-      data.forEach((category) => {
-          document
-          .querySelector("#categoryTagBox")
-          .insertAdjacentHTML(
-            "beforeend",
-            `<li class="cate_item"><a href="/product/list.html?cate_no=${category.category_no}#${category.category_name}">${category.category_name}</a></li>`
-          );
-        
-      });
+    .then((response) => {
+      try{
+        console.log('data: ', response);
+        if(response.status == 200 && response.success){
+          response.data.forEach((category) => {
+              document
+              .querySelector("#categoryTagBox")
+              .insertAdjacentHTML(
+                "beforeend",
+                `<li class="cate_item"><a href="/product/list.html?cate_no=${category.category_no}#${category.category_name}">${category.category_name}</a></li>`
+              );
+            
+          });
+        }else{
+          console.log("error : ", response.status, response.message);
+        }
+      } catch(error) {
+        console.log("error : ", error,  response.status, response.message);
+      }
+      return false;
     })
     .catch((error) => {
       console.error("실패:", error);
