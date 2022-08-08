@@ -213,7 +213,7 @@ function controlTopNavActive(page_path){
       //받아온 카테고리 네임 변수화
       const name = document.querySelector("#topNavControl").name;
       //가치태그 카테고리면
-      if(name.includes('카테고리')){
+      if(name.includes('별')){
         //스토어 홈에 active
         document.querySelector("#index").classList.add("top_nav_active");
         //아니면 각각의 name 에 맞는 nav에 active

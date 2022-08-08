@@ -39,7 +39,20 @@
         }
     }
 }
+// 위에서 아래로 내려가기 애니메이션
+@mixin fadeindown-item-keyframe {
+    @keyframes fadeindown-item {
+        from {
+            opacity: 0;
+            transform: translate3d(0, -100%, 0);
+        }
 
+        to {
+            opacity: 1;
+            transform: translateZ(0);
+        }
+    }
+}
 // 위 아래 툴팁 애니메이션
 @mixin up-and-down-keyframe($start, $end) {
     @keyframes up-and-down-item {
