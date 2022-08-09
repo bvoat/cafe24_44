@@ -31,7 +31,6 @@ let methods = {
         //parentCategoryArray로 반복하여 productCategoryArray,tagCategoryArray 배열에 각각 push (207은 All카테고리 570은 패션 카테고리 번호로 상품별과 가치태그 카테고리 구분점으로 지정)
         parentCategoryArray.forEach((parent) => {
           if (207 < parent.cate_no && parent.cate_no < 570) {
-            console.log("tag", parent.cate_no);
             methods.tagCategoryArray.push(parent);
           } 
           else if (parent.cate_no >= 570) {
@@ -190,11 +189,13 @@ let methods = {
 /* 0. 통신 실행 / ul 아래 대, 중, 소 카테고리 생성 */
 const createdCategoryObjResult = methods.createdCategoryObj();
 
-// window.addEventListener("load", ()=>{
-//     const first = document.querySelector(".middle_category_142");
-//     first.classList.add("sub_active");
-//     first.childNodes[3].classList.remove("displaynone")
-// })
+/* 1. 상품별, 가치태그별 카테고리의 첫 번째 카테고리 열림으로 시작 */
+window.addEventListener("load", ()=>{
+    document.querySelector(".middle_category_571").classList.add("sub_active");
+    document.querySelector(".middle_category_571").childNodes[3].classList.remove("displaynone");
+    document.querySelector(".middle_category_477").classList.add("sub_active");
+    document.querySelector(".small_main_category_477").classList.remove("displaynone")
+})
 
 /* 클릭 이벤트 */
 window.addEventListener("load", () => {
