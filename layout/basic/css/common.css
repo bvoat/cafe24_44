@@ -323,7 +323,7 @@ summary {
 /* 비보트 추가 */
 iframe {
     width: 100%;
-    height: auto;
+    height: 100% !important;
     border: none;
 }
 
