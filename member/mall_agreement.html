@@ -1,0 +1,62 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+
+<style>
+    #mallTerm{
+        width: 100%;
+        max-width: 450px;
+        margin-top: 81px;
+    }
+    #mallTermTitle{
+        width: 100%;
+        padding: 20px 11px;
+    }
+    #mallTermTitle h1{
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+    #mallTermContent{
+        border: 30px solid #ececec;
+    }
+    #mallTermContent>.privacy{
+        border: 1px solid #707070;
+    }
+    .fr-view{
+        color: #707070;
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+    .fr-view > p:not([class]) {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+</style>
+
+<article id="mallTerm">
+    <section id="mallTermTitle">
+        <h1>📄 비보트 이용약관</h1>
+        <hr/>
+    </section>
+
+
+    <section id="mallTermContent" module="mall_term">
+        <!--@css(/css/module/mall/privacy.css)-->
+        <!--@css(/cssbvt/module/mall/privacy.css)-->
+
+        <div class="ec-base-box typeThinBg">
+            <strong class="date {$displayEnforce|display}">{$enforce_date}</strong>
+            <div class="agree">
+                {$mall_agreement}
+            </div>
+        </div>
+        <!-- <div class="ec-base-button {$displayBeforeEnforce|display}">
+            <span class="gRight">
+                <a href="{$before_enforce_link}" class="btnLink" target="_blank">{$before_enforce_date}</a>
+            </span>
+        </div> -->
+    </section>
+</article>
+
+
+<!--footer-->
+<!--@import(/layout/basic/footer.html)-->

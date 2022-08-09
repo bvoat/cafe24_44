@@ -1,0 +1,51 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<style>
+    #mallPrivacy{
+        width: 100%;
+        max-width: 450px;
+        margin-top: 81px;
+    }
+    #mallPrivacyTitle{
+        width: 100%;
+        padding: 20px 11px;
+    }
+    #mallPrivacyTitle h1{
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+    #mallPrivacyContent{
+        border: 30px solid #ececec;
+    }
+    #mallPrivacyContent>.privacy{
+        border: 1px solid #707070;
+    }
+    .fr-view{
+        font-size: 1.5rem;
+        color: #707070;
+        padding: 10px;
+    }
+    .fr-view > p:not([class]) {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+</style>
+
+
+<article id="mallPrivacy">
+    <section id="mallPrivacyTitle">
+        <h1>📄 개인정보취급방침</h1>
+        <hr/>
+    </section>
+
+    <section id="mallPrivacyContent" module="mall_privacy">
+        <h1 class="displaynone">비보트 개인정보취급방침</h1>
+        <!--@css(/css/module/mall/privacy.css)-->
+        <div class="privacy">
+            {$privacy_agreement}
+        </div>
+    </section>
+
+</article>
+<!--footer-->
+<!--@import(/layout/basic/footer.html)-->
