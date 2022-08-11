@@ -139,7 +139,7 @@ const checkMoreView = () => {
     btn.addEventListener("click", () => {
       setTimeout(() => {
         monitoringPrice();
-      }, 770);
+      }, 850);
     });
   });
 };
@@ -147,7 +147,6 @@ const checkMoreView = () => {
 window.addEventListener("load", () => {
   checkMoreView();
 });
-
 
 /* nav 컨트롤 스크립트 */
 //상단바 컨트롤
@@ -207,32 +206,32 @@ function controlTopNav(page_path) {
   });
 }
 //상단바 active 표시
-function controlTopNavActive(page_path){
-    //path가 list(카테고리-상품리스트)일 때
-    if(page_path.includes("product/list.html")){
-      //받아온 카테고리 네임 변수화
-      const name = document.querySelector("#topNavControl").name;
-      //가치태그 카테고리면
-      if(name.includes('별')){
-        //스토어 홈에 active
-        document.querySelector("#index").classList.add("top_nav_active");
-        //아니면 각각의 name 에 맞는 nav에 active
-      }else{
-        document.querySelector(`#cate${name}`).classList.add("top_nav_active");
-      }
-      //path가 크루면
-    } else if (page_path.includes("crew/crew.html")){
-      //크루에 active
-      document.querySelector("#crew").classList.add("top_nav_active");
-      //path가 펀딩이면
-    }else if (page_path.includes("funding")){
-      //펀딩에 active
-      document.querySelector("#funding").classList.add("top_nav_active");
-      //아무것도 확인되지 않으면
-    }else{
+function controlTopNavActive(page_path) {
+  //path가 list(카테고리-상품리스트)일 때
+  if (page_path.includes("product/list.html")) {
+    //받아온 카테고리 네임 변수화
+    const name = document.querySelector("#topNavControl").name;
+    //가치태그 카테고리면
+    if (name.includes("별")) {
       //스토어 홈에 active
-      document.querySelector("#index").classList.add("top_nav_active")
+      document.querySelector("#index").classList.add("top_nav_active");
+      //아니면 각각의 name 에 맞는 nav에 active
+    } else {
+      document.querySelector(`#cate${name}`).classList.add("top_nav_active");
     }
+    //path가 크루면
+  } else if (page_path.includes("crew/crew.html")) {
+    //크루에 active
+    document.querySelector("#crew").classList.add("top_nav_active");
+    //path가 펀딩이면
+  } else if (page_path.includes("funding")) {
+    //펀딩에 active
+    document.querySelector("#funding").classList.add("top_nav_active");
+    //아무것도 확인되지 않으면
+  } else {
+    //스토어 홈에 active
+    document.querySelector("#index").classList.add("top_nav_active");
+  }
 }
 window.addEventListener("DOMContentLoaded", () => {
   //top nav 숨기기 함수
@@ -257,6 +256,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 /* clipboardJS */
 const clipboardCopy = (element, txt, ok, no) => {
+  console.log('txt: ', txt);
   let clipboardinit = new ClipboardJS(`${element}`, { text: () => txt });
   clipboardinit.on("success", (e) => {
     console.log("Action:", e.action);
@@ -271,3 +271,102 @@ const clipboardCopy = (element, txt, ok, no) => {
   });
 };
 /* clipboardJS */
+
+/* 공유 기능 */
+
+window.addEventListener("load", () => {
+  let shareBtn = document.querySelector(".share_btn");
+  if (shareBtn) {
+    shareBtn.addEventListener("click", (e) => {
+      commonShareBtn(e);
+    });
+  }
+});
+
+const commonShareBtn = (e) => {
+  let modal_form = `
+  <section id="bvtCommonModal">
+      <div id="bvtCommonShareForm" method="dialog">
+          <h1 class="bvt_modal_title">친구에게 공유하기</h1>    
+          <div class="bvt_modal_btn">
+              <button class="facebook_share share_action" data-type="facebook" title="페이스북으로 공유하기"><span>페이스북</span></button>
+              <button class="kakaotalk_share share_action" data-type="kakao" title="카카오톡으로 공유하기"><span>카카오톡</span></button>
+              <button class="link_copy share_action" data-type="clipboard" title="상품 링크 클립보드로 복사하기"><span>링크복사</span></button>
+          </div>
+      </div>
+      <button class="share_close_btn">닫기</button>
+  </section>
+  `;
+  //화면 상단에 전달
+  document
+    .querySelector("#bvtContainer")
+    .insertAdjacentHTML("afterbegin", modal_form);
+  //버튼별 액션
+  [...document.querySelectorAll(".share_action")].forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      let share_type = e.currentTarget.dataset.type;
+      bvoatShare(share_type, window.location.href)
+    });
+  });
+  //닫기 버튼 클릭
+  document.querySelector(".share_close_btn").addEventListener("click", () => {
+    document.querySelector("#bvtCommonModal").remove();
+  });
+};
+
+const bvoatShare = (type, _url) => {
+  console.log('type: ', type);
+  if (type === "clipboard") {
+    console.log("clipboard")
+    const ifsuccess = () => {
+      // alert("URL 복사가 완료 되었습니다.");
+      let okmsg = `<div class="share_link_ok_msg">URL 복사가 완료되었습니다.</div>`
+      document.querySelector("#bvtContainer").insertAdjacentHTML("beforeend",okmsg);
+      document.querySelector("#bvtCommonModal").remove();
+      //사라지는 애니메이션 all 0.5s ease-in-out;
+      setTimeout(()=>{
+        document.querySelector(".share_link_ok_msg").classList.add("disappear");
+        //완전 node 삭제
+        setTimeout(()=>{document.querySelector(".share_link_ok_msg").remove();}, 1101)
+      }, 600)
+    };
+    const iferror = () => {
+      alert("복사 실패😢 다시 한 번 시도해주세요");
+    };
+    clipboardCopy(".link_copy", _url, ifsuccess, iferror);
+  } else if (type == "kakao") {
+    let share_title = document.querySelector("meta[property=\'og:title\']").getAttribute("content");
+    Kakao.Link.sendDefault({
+      objectType: "feed",
+      content: {
+        title: `${share_title}`,
+        description: `${share_title}`,
+        imageUrl:
+          "https://bvoat.com/web/upload/share-image-1-7415ca0886cec14f1fbbe5c28cbccec1.png",
+        link: {
+          mobileWebUrl:
+            _url +
+            "/?utm_source=kakaotalk&utm_medium=sharelink&utm_campaign=sharebykakao",
+          webUrl:
+            _url +
+            "/?utm_source=kakaotalk&utm_medium=sharelink&utm_campaign=sharebykakao",
+        },
+      },
+      buttons: [
+        {
+          title: "바로가기",
+          link: {
+            mobileWebUrl:
+              _url +
+              "/?utm_source=kakaotalk&utm_medium=sharelink&utm_campaign=sharebykakao",
+            webUrl:
+              _url +
+              "/?utm_source=kakaotalk&utm_medium=sharelink&utm_campaign=sharebykakao",
+          },
+        },
+      ],
+    });
+  } else if (type == "facebook") {
+    window.open(`http://www.facebook.com/sharer.php?u=${_url}`)
+  }
+};

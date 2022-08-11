@@ -142,24 +142,6 @@ const crewValueControl = (multiple) => {
   voterValue ? (crewValue.innerHTML = voterValue.innerHTML * multiple) : null;
 };
 
-//공유 이벤트
-const goShrBtn = (type, _url) => {
-  console.log("type", type, _url)
-  if (type == "link") {
-    if (navigator.share) {
-      navigator.share({
-        title:
-          `[비보트]` +
-          document.getElementsByClassName("product_name").innerText,
-        text: document.getElementsByClassName("product_name").innerText,
-        url:
-          _url +
-          "/?utm_source=webshareapi&utm_medium=link&utm_campaign=sharebylink&utm_content=funding_link",
-      });
-    }
-  } 
-};
-const shareBtn = document.querySelector("#shareBtn");
 
 //선물하기 / 구매하기 클릭
 const purchase_button = document.querySelectorAll(".purchase_button")
@@ -307,10 +289,7 @@ buyRecordFrameControl();
 //크루 등급 마일리지 2배 변환
 crewValueControl(2);
 //공유 이벤트 클릭
-shareBtn.addEventListener("click", (e) => {
-  const url = window.location.href;
-  goShrBtn(`link`, url);
-});
+
 //Q&A heading 컨트롤
 qnaControl();
 //스탬프 만들기

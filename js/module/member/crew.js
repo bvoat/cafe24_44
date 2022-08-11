@@ -86,7 +86,6 @@ const copyBtnClick = (e) => {
   }
 };
 const shareBtnClick = (e) => {
-  console.log("share", e);
   e.preventDefault();
   if (voter_id == null) {
     alert("공유를 위해서는 로그인이 필요해요");
