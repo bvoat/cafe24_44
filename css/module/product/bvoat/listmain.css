@@ -392,8 +392,8 @@
 }
 
 .desc .product_name, .desc .product_name span {
-  color: #292929;
-  font-size: 1.3rem;
+  color: #292929 !important;
+  font-size: 1.3rem !important;
   font-weight: bold;
   word-wrap: break-word;
   word-break: keep-all;

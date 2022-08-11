@@ -192,8 +192,8 @@
     }
 
     .product_name, .product_name span {
-        color: $bvt-black;
-        font-size: 1.3rem;
+        color: $bvt-black !important;
+        font-size: 1.3rem !important;
         font-weight: bold;
         word-wrap: break-word;
         word-break: keep-all;
