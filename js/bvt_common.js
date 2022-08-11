@@ -276,6 +276,7 @@ const clipboardCopy = (element, txt, ok, no) => {
 
 window.addEventListener("load", () => {
   let shareBtn = document.querySelector(".share_btn");
+  console.log('shareBtn: ', shareBtn);
   if (shareBtn) {
     shareBtn.addEventListener("click", (e) => {
       commonShareBtn(e);
