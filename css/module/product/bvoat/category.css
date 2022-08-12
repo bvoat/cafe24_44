@@ -505,7 +505,7 @@
 
 #category #categoryOfTag #categoryOfTagList li[class^='middle_main_category'] .middle_main_category_list li[class^='middle_category'].sub_active {
   position: relative;
-  border: 1px solid transparent;
+  border: none;
   padding: 5px 11px;
   border-radius: 50px;
   background: linear-gradient(113.76deg, #2045FF 27.71%, rgba(66, 0, 255, 0) 146.41%);
