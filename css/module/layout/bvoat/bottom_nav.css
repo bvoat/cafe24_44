@@ -1,9 +1,3 @@
-:root {
-  --text-width: 40px;
-  --icon-width: 30px;
-  --icon-height: 26px;
-}
-
 #bottom_nav {
   position: relative;
   width: 100%;
@@ -45,18 +39,6 @@
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li {
   width: calc((100% - 20px) / 5);
   height: 64px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   cursor: pointer;
 }
 
@@ -75,26 +57,45 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: var(--text-width);
+  width: 100%;
   height: 58px;
   text-align: center;
   font-size: 1.1rem;
   font-weight: 700;
 }
 
-#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .nav_icon {
-  width: var(--icon-width);
-  height: var(--icon-height);
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .nav_icon path {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -o-object-fit: contain;
+     object-fit: contain;
+  fill: #ABABAB;
 }
 
-#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .nav_icon path {
-  -o-object-fit: cover;
-     object-fit: cover;
-  fill: #ABABAB;
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .feed_icon {
+  width: 26px;
+  height: 26px;
+}
+
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .cate_icon {
+  width: 26px;
+  height: 26px;
+}
+
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .store_icon {
+  width: 28px;
+  height: 26px;
 }
 
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .like_icon {
   width: 29px;
+  height: 26px;
+}
+
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .myp_icon {
+  width: 25px;
+  height: 26px;
 }
 
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu span {
