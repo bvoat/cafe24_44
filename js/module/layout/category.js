@@ -59,7 +59,7 @@ let methods = {
                 tagcategory.cate_no
               }" data-cateno="${tagcategory.cate_no}"><span>${tagcategory.name}</span><a href="/${
                 tagcategory.design_page_url + tagcategory.param
-              }" title="${tagcategory.name}"></a></li>`
+              }#${tagcategory.name}" title="${tagcategory.name}"></a></li>`
             );
         });
       })
@@ -173,7 +173,7 @@ let methods = {
       categoryListNodeArray.push(`
             <li class="small_category_${el.cate_no}" data-cateno="${el.cate_no}">
                 <div class="category_link_wrap">
-                    <a href="/${el.design_page_url}${el.param}">
+                    <a href="/${el.design_page_url}${el.param}#${el.name}">
                     ${el.name}
                     </a>
                 </div>
