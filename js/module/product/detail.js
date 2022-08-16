@@ -1,5 +1,6 @@
 /* ------------------------------------------------------------------------------------ */
 /* bvt */
+
 // relation list 스와이퍼
 var swiper = new Swiper(".product_relation_list", {
   spaceBetween: 8,
@@ -14,9 +15,12 @@ var swiper = new Swiper(".product_relation_list", {
 // 소비기록 수신
 const buy_record_frame = document.querySelector("#buy_records_detail > iframe");
 if (buy_record_frame != null) {
+  //상품 번호 수신
+  let product_no = new URLSearchParams(location.search).get("product_no")
+  console.log('product_no: ', product_no);
   buy_record_frame.setAttribute(
     "src",
-    `https://${api_domain}.shop/buy_records?product_no={$product_no}`
+    `https://${api_domain}.shop/buy_records?product_no=${product_no}`
   );
 }
 //최초 탭 높이 조절
