@@ -242,7 +242,7 @@
             } else {
                 //display none이 남지 않은 접기 상태에서의 이벤트
                 // 스크롤 올리기
-                window.scroll({
+                window.scrollTo({
                     behavior: 'smooth',
                     left: 0,
                     top: document.getElementById(`tagRank${e.currentTarget.dataset.rank}`).offsetTop - 110
