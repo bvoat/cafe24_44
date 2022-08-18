@@ -27,7 +27,26 @@
     }
 
     #realTimeOrderListContents{
-        
+        .purchaser{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: $bvt-btn-border;
+            border-radius: 20px;
+            background: $bvt-white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: $bvt-blue;
+            letter-spacing: -0.02em;
+            padding: 7px 16px;
+            z-index: 9;
+            top: -15px;
+            left: 11px;
+            >span{
+                margin-left: 4px;
+            }
+        }
     }
 
     #realTimeOrderListMsg{

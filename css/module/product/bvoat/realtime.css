@@ -24,6 +24,34 @@
   color: #ABABAB;
 }
 
+#realTimeOrderList #realTimeOrderListContents .purchaser {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #022CFF;
+  border-radius: 20px;
+  background: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #022CFF;
+  letter-spacing: -0.02em;
+  padding: 7px 16px;
+  z-index: 9;
+  top: -15px;
+  left: 11px;
+}
+
+#realTimeOrderList #realTimeOrderListContents .purchaser > span {
+  margin-left: 4px;
+}
+
 #realTimeOrderList #realTimeOrderListMsg {
   width: 100%;
   max-width: 450px;
