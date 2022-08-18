@@ -133,6 +133,12 @@
 
 #footer #footer_wrap details summary::marker {
   content: "  ";
+  display: none;
+}
+
+#footer #footer_wrap details summary::-webkit-details-marker {
+  content: "";
+  display: none;
 }
 
 #footer #footer_wrap details .company_name::after {
@@ -159,5 +165,11 @@
 
 #footer #footer_wrap details[open] summary::marker {
   content: "";
+  display: none;
+}
+
+#footer #footer_wrap details[open] summary::-webkit-details-marker {
+  content: "";
+  display: none;
 }
 /*# sourceMappingURL=footer.css.map */
