@@ -620,7 +620,7 @@
       -ms-flex-align: center;
           align-items: center;
   max-width: calc(100% - 22px);
-  padding: 0 11px;
+  padding: 25px 11px 0;
 }
 
 .realtime > ul .list_item {
@@ -640,7 +640,7 @@
           justify-content: space-between;
   width: calc(50% - 4px);
   max-width: 210px;
-  margin-bottom: 27px;
+  margin-bottom: 40px;
 }
 
 .realtime > ul .list_item .wish {
