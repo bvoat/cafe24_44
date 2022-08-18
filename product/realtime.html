@@ -28,3 +28,11 @@
             </a>
     </div>
 </article>
+<script>
+    const list = document.querySelectorAll(".realtime>ul>.list_item");
+    [...list].forEach((product)=>{
+        let voterName = "김*영"
+        product.insertAdjacentHTML("afterbegin", `<div class="purchaser">보터<span class="voter_name">${voterName}</span>님</div>`)
+    })
+    console.log('list: ', list);
+</script>
