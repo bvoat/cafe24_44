@@ -1,0 +1,237 @@
+@charset "utf-8";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
+
+:root{
+    --num1: 120;
+    --num2: 150;
+    --num3: 300;
+}
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+} 
+
+  
+
+#weekSocialOrderList {
+    width: 100%;
+    max-width: 450px;
+    padding: 37px 0;
+    margin: 80px 0 43px;
+}
+
+//한 주간 가장
+#weekTotalBestList {
+    margin-bottom: 60px;
+    padding: 0 11px;
+    #weekTotalBestListTitle {
+        width: 100%;
+        max-width: 450px;
+        margin-bottom: 18px;
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: $bvt-lostfocus-gray;
+        }
+    }
+    #weekTotalBestListContents {
+        .weekbest{
+            >ul{
+                .list_item{
+                    //순위 표시
+                    //1,2위 배경
+                    &:nth-child(1),&:nth-child(2){
+                        &::before{
+                            position: absolute;
+                            display: flex;
+                            box-align: start;
+                            align-items: center;
+                            -moz-box-pack: center;
+                            -webkit-box-pack: center;
+                            justify-content: center;
+                            content: "";
+                            width: 32px;
+                            height: 28px;
+                            background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 37 37'%3E%3Cg filter='url(%23a)'%3E%3Cpath d='M31 6H6v25l12.5-5L31 31V6Z' fill='%23FF7600'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='a' x='0' y='0' width='37' height='37' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset/%3E%3CfeGaussianBlur stdDeviation='3'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0'/%3E%3CfeBlend in2='BackgroundImageFix' result='effect1_dropShadow_302_304'/%3E%3CfeBlend in='SourceGraphic' in2='effect1_dropShadow_302_304' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E") no-repeat center;
+                            background-size: cover;
+                            font-size: 1.55rem;
+                            font-weight: 600;
+                            z-index: 9;
+                            top: -8px;
+                            left: 7px;
+                            padding: 0 0 4px 0;
+                        }
+                    }
+                    //3,4,5위 배경
+                    &:nth-child(n+3):nth-child(-n+5){
+                        &::before{
+                            position: absolute;
+                            display: flex;
+                            box-align: start;
+                            align-items: center;
+                            -moz-box-pack: center;
+                            -webkit-box-pack: center;
+                            justify-content: center;
+                            content: "";
+                            width: 30px;
+                            height: 28px;
+                            background: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_302_305)'%3E%3Cpath d='M26 6H6V26L16 22L26 26V6Z' fill='%23FF7600'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_302_305' x='0' y='0' width='32' height='32' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset/%3E%3CfeGaussianBlur stdDeviation='3'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_302_305'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_302_305' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat center;
+                            background-size: cover;
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                            z-index: 9;
+                            top: -8px;
+                            left: 7px;
+                            padding: 0 0 4px 0;
+                        }  
+                    }
+                    //6-20위 배경
+                    &:nth-child(n+6):nth-child(-n+20){
+                        &::before{
+                            position: absolute;
+                            display: flex;
+                            box-align: start;
+                            align-items: center;
+                            -moz-box-pack: center;
+                            -webkit-box-pack: center;
+                            justify-content: center;
+                            content: "";
+                            width: 30px;
+                            height: 28px;
+                            background: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_302_305)'%3E%3Cpath d='M26 6H6V26L16 22L26 26V6Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_302_305' x='0' y='0' width='32' height='32' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset/%3E%3CfeGaussianBlur stdDeviation='3'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_302_305'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_302_305' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat center;
+                            background-size: cover;
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                            z-index: 9;
+                            top: -8px;
+                            left: 7px;
+                            padding: 0 0 4px 0;
+                        }
+                    }
+                    //숫자 삽입
+                    &:nth-child(1){&::before{content: "1"!important;}}
+                    &:nth-child(2){&::before{content: "2"!important;}}
+                    &:nth-child(3){&::before{content: "3"!important;}}
+                    &:nth-child(4){&::before{content: "4"!important;}}
+                    &:nth-child(5){&::before{content: "5"!important;}}
+                    &:nth-child(6){&::before{content: "6"!important;}}
+                    &:nth-child(7){&::before{content: "7"!important;}}
+                    &:nth-child(8){&::before{content: "8"!important;}}
+                    &:nth-child(9){&::before{content: "9"!important;}}
+                    &:nth-child(10){&::before{content: "10"!important;}}
+                    &:nth-child(11){&::before{content: "11"!important;}}
+                    &:nth-child(12){&::before{content: "12"!important;}}
+                    &:nth-child(13){&::before{content: "13"!important;}}
+                    &:nth-child(14){&::before{content: "14"!important;}}
+                    &:nth-child(15){&::before{content: "15"!important;}}
+                    &:nth-child(16){&::before{content: "16"!important;}}
+                    &:nth-child(17){&::before{content: "17"!important;}}
+                    &:nth-child(18){&::before{content: "18"!important;}}
+                    &:nth-child(19){&::before{content: "19"!important;}}
+                    &:nth-child(20){&::before{content: "20"!important;}}
+                }
+            }
+        }
+    }
+}
+
+// 가치태그
+// 지난 한 달간
+#weekTagBestList {
+    background: #F5F6FA;
+    padding: 37px 11px;
+    //지난 한 달간
+    #weekTagBestListTitle {
+        width: 100%;
+        max-width: 450px;
+        margin-bottom: 18px;
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: $bvt-lostfocus-gray;
+        }
+    }
+    //모듈 묶음
+    #weekTagBestListContents {
+        width: 100%;
+        max-width: 450px;
+        //개별 가치태그 모듈
+        .weektag{
+            background: $bvt-white;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            overflow-x: hidden;
+            box-shadow: 0px 3px 4px 0px #0000000D;
+
+            #weekTagTitle{
+                width: 100%;
+                .tag_title{
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    letter-spacing: -2%;
+                    padding: 15px;
+                    border-bottom: 1px solid #EDEDED;
+                //화살표
+                    >.move_arrow{  
+                        position: relative;
+                        display: inline-block;
+                        width: 9px;
+                        height: 16px;
+                        background: url("data:image/svg+xml,%3Csvg width='9' height='16' viewBox='0 0 9 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 15L7.5 8L4.25 4.5L0.999999 1' stroke='%239A9A9A' stroke-linecap='square'/%3E%3C/svg%3E%0A") no-repeat center;
+                        background-size: contain;
+                        top: 4px;
+                        float: right;
+                    }
+                }
+
+                .tag_subtitle{
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    letter-spacing: -0.5px;
+                    color: $bvt-darkgray;
+                    padding: 20px 15px 15px;
+                    .purchasers{
+                        font-weight: 700;
+                        color: $bvt-blue;
+                    }
+
+                    .cate_item {
+                        display: inline-flex;
+                        flex-flow: row nowrap;
+                        justify-content: center;
+                        align-items: center;
+                        width: fit-content;
+                        height: 28px;
+                        padding: 0 11px;
+                        box-sizing: border-box;
+                        border: $bvt-btn-border-gray;
+                        border-radius: 14px;
+                        margin: 0 2px;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        letter-spacing: -2%;
+                        color: $bvt-black;
+                        >a{
+                            font-size: 1.4rem;
+                            font-weight: 400;
+                            color: $bvt-black;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

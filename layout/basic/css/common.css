@@ -3,7 +3,7 @@
 /* **************************** //필수 CSS 수정 및 삭제 불가 **************************** */
 
 /* font-family 선언*/
-/* Pretendard subset woff, woff2 */ 
+/* Pretendard subset woff, woff2 */
 @font-face {
     font-family: 'Pretendard';
     font-weight: 900;
@@ -186,6 +186,7 @@
         url('/public/fonts/jost/jost-v14-latin-800.svg#Jost') format('svg');
     /* Legacy iOS */
 }
+
 /* jost-900 - latin */
 @font-face {
     font-family: 'Jost';
@@ -285,7 +286,7 @@ code {
 body#popup {
     min-width: 0;
 }
- 
+
 /* 비보트 추가 */
 ul,
 ol,
@@ -624,4 +625,28 @@ div.layerProgress {
 
 .onpromotion::after {
     color: #FF7600 !important;
+}
+
+@media (max-width: 344px) {
+    .product_name>a>span{
+        font-size: 1.35rem!important;
+    }
+    /* 가격 표시 */
+    .price_wrap>.discount {
+        font-size: 1.3rem;
+    }
+    .price_wrap>.price_item {
+        font-size: 1.3rem;
+    }
+    .price_item::after {
+        font-size: 1.3rem;
+    }
+    .strike_price {
+        bottom: 1.6rem;
+        font-size: 1rem !important;
+        font-weight: 400 !important;
+    }
+    .strike_price::after {
+        font-size: 1rem !important;
+    }
 }

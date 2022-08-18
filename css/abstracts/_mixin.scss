@@ -209,9 +209,9 @@
             cursor: pointer;
             img {
                 position: relative;
-                width: 60%;
-                height: 53%;
-                margin-top: 1.5px;
+                width: 57.4%;
+                height: 52.7%;
+                margin-top: 2.5px;
             }
         }
     }
@@ -289,4 +289,16 @@
             }
         }
     }
+}
+
+// 숫자 올라가는 애니메이션
+@mixin num-counter {
+    @keyframes counter($final) {
+        from {
+          --num: 0;
+        }
+        to {
+          --num: $final;
+        }
+      }
 }

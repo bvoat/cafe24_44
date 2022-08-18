@@ -17,51 +17,74 @@
         align-items: flex-start;
         width: 100%;
         margin-bottom: 18px;
+
         h1 {
             font-size: 1.9rem;
             font-weight: 700;
             margin-bottom: 2px;
         }
+
         h2 {
             font-size: 1.3rem;
             font-weight: 300;
             color: $bvt-lostfocus-gray;
         }
-        em{
+
+        em {
             font-weight: 500;
         }
     }
-    
+
     //설정이 많아서 필요한 셀렉터만 선택해서 작업
     //fontsize값 1.3 이상으로 (글자값 통일)
-    span,p,a,dd,dt,dl,ul>li,button,tr,th,tbody,strong,em,label,input,select {
+    span,
+    p,
+    a,
+    dd,
+    dt,
+    dl,
+    ul>li,
+    button,
+    tr,
+    th,
+    tbody,
+    strong,
+    em,
+    label,
+    input,
+    select {
         font-size: 1.3rem !important;
     }
 
-    h2{
+    h2 {
         font-size: 1.4rem;
     }
-    .boardTotal strong{
-        color: $bvt-blue !important;
+
+    .boardTotal strong {
+        color: $bvt-blue  !important;
     }
-    .boardTotal td{
+
+    .boardTotal td {
         padding: 14px 14px 14px 0;
     }
-    .cancel_btn{
+
+    .cancel_btn {
         padding: 6px 10px;
         background: $bvt-white;
         border: $bvt-btn-border-gray;
         box-shadow: $bvt-btn-shadow;
         font-size: 1.3rem;
     }
-    .tax_btn{
+
+    .tax_btn {
         padding: 3px 5px;
         background: $bvt-white;
         border: $bvt-btn-border-gray;
         box-shadow: $bvt-btn-shadow;
         font-size: 1.3rem;
     }
-    .list_btn{
+
+    .list_btn {
         display: block;
         width: 100%;
         background: $bvt-blue;
@@ -72,4 +95,368 @@
         text-align: center;
     }
 
+}
+
+
+//취소 신청
+#orderCancel {
+    width: 100%;
+    max-width: 450px;
+    padding: 23px 11px;
+    margin: 80px 0 120px;
+
+    #orderCancelTitle {
+        width: 100%;
+        max-width: 450px;
+        margin-bottom: 18px;
+
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: $bvt-lostfocus-gray;
+        }
+    }
+
+    #orderCancelTable {
+        width: 100%;
+        max-width: 450px;
+        margin: 20px 0;
+
+        .ec-base-fold {
+            width: 100%;
+
+            //주문일자+주문번호
+            .title {
+                position: relative;
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                justify-content: flex-start;
+                height: 45px;
+                margin: 0;
+                overflow: hidden;
+                background: $bvt-lightgray;
+                color: $bvt-white;
+                padding: 0 11px;
+                cursor: pointer;
+
+                h2,
+                h3,
+                p {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+
+                //화살표
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 40px;
+                    height: 100%;
+                    background: url("//img.echosting.cafe24.com/skin/mobile/layout/ico_arrow_white.png") no-repeat 50% 50%;
+                    background-size: 20px auto;
+                    -webkit-transition: .3s ease-out;
+                    transition: .3s ease-out;
+                }
+            }
+
+            //상품 목록
+            .contents {
+                // 클릭 시 접기
+                display: none;
+                background: $bvt-bg-lightblue;
+
+                .product {
+                    width: 100%;
+                    padding: 11px;
+
+                    //체크박스
+                    .chk {
+                        display: block;
+                        margin-bottom: 11px;
+                        input {
+                            width: 22px;
+                            height: 22px;
+                            border-width: 2px ;
+                            cursor: pointer;
+                        }
+                    }
+
+                    //상품상세
+                    .description {
+                        width: 100%;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        //상품 이미지 구역
+                        .thumbnail {
+                            position: relative;
+                            display: inline-block;
+                            width: 120px;
+                            margin-right: 11px;
+                            
+                            >a {
+                                display: block;
+                                position: relative;
+                                padding-top: calc(100%);
+                                overflow: hidden;
+                                border-radius: 4px;
+                                width: 120px;
+
+                                >img {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 130%;
+                                }
+                            }
+                        }
+                        //상품 이름
+                        .name{
+                            display: block;
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                            margin-bottom: 10px;
+                        }
+                        .info{
+                            display: block;
+                            li{
+                                font-size: 1.4rem;
+                                font-weight: 400;
+                                .price{
+                                    &::after{
+                                        content: "원";
+                                    }
+                                }
+                                >.quantity{
+                                    &::before{
+                                        position: relative;
+                                        content: "|";
+                                        margin: 0 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //옵션
+                .option{
+                    font-size: 1.4rem;
+                    font-weight: normal;
+                    margin: 11px;
+                }
+
+                //신청수량
+                .updown_quantity{
+                    width: 100%;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    padding: 11px;
+                    span{
+                        display: block;
+                        &:nth-child(1){
+                            //신청수량
+                            font-size: 1.5rem;
+                            font-weight: 500;
+                            margin-bottom: 10px;
+                        }
+                        &:nth-child(2){
+                            //input
+                            >img{
+                                cursor: pointer;
+                            }
+                            >input{
+                                width: 33px;
+                                height: 29px;
+                                text-align: center;
+                                font-size: 1.3rem;
+                            }
+                            >a{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 66px;
+                                height: 30px;
+                                background: $bvt-blue;
+                                color: $bvt-white;
+                                font-size: 1.4rem;
+                                font-weight: 500;
+                                float: right;
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+
+                }
+
+                //주문 상태
+                .status{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 100%;
+                    height: 50px;
+                    padding: 0 11px;
+                    background: $bvt-whitegray;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: $bvt-blue;
+                }
+
+            }
+
+
+        }
+        .ec-base-fold dt.selected:after {
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+        //클릭 시 화살표 변화
+        .ec-base-fold.selected>.title:after {
+            transform: rotate(180deg);
+        }
+
+        .ec-base-fold.selected>.contents {
+            display: block;
+        }
+        .ec-base-help{
+            font-size: 1.3rem;
+            color: $bvt-darkgray;
+            margin: 11px;
+        }
+    }
+    .boardViewCS{
+        width: 100%;
+
+        //주문일자+주문번호
+        .title {
+            position: relative;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: flex-start;
+            height: 45px;
+            margin: 0;
+            overflow: hidden;
+            background: $bvt-lightgray;
+            color: $bvt-white;
+            padding: 0 11px;
+            cursor: pointer;
+
+            h2,
+            h3,
+            p {
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: $bvt-white;
+            }
+
+            //화살표
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 40px;
+                height: 100%;
+                background: url("//img.echosting.cafe24.com/skin/mobile/layout/ico_arrow_white.png") no-repeat 50% 50%;
+                background-size: 20px auto;
+                -webkit-transition: .3s ease-out;
+                transition: .3s ease-out;
+            }
+        }
+
+        .typeWrite{
+            width: 100%;
+            padding: 11px;
+        }
+        table{
+            width: 100%;
+            max-width: 450px;
+            padding: 11px;
+            tbody, tr{
+                display: block;
+                width: 100%;
+                padding: 5px;
+            }
+            tr>th{
+                display: inline-block;
+                font-size: 1.5rem;
+                margin: 11px 0;
+            }
+            tr>td{
+                width: 100%;
+                max-width: 450px;
+                font-size: 1.3rem;
+            }
+            tr>td>div{
+                display: inline-block;
+                width: 100%;
+                max-width: 350px;
+            }
+            tr>td>textarea{
+                width: 0;
+                width: 300px !important;
+                height: 100px;
+                max-width: 450px;
+                font-size: 1.4rem;
+                padding: 5px;
+            }
+            .ec-base-label{
+                display: inline-flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5rem;
+                >input{
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 5px;
+                    cursor: pointer;
+                }
+                >label{
+                    font-size: 1.4rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .ec-base-button{
+        width: 100%;
+        max-width: 450px;
+        padding: 23px 11px;
+        text-align: center;
+        >a{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            height: 55px;
+            border: $bvt-btn-border;
+            border-radius: 40px;
+
+            &:nth-child(1){
+                background: $bvt-blue;
+                color: $bvt-white;
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+            &:nth-child(2){
+                background: $bvt-white;
+                color: $bvt-blue;
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+        }
+    }
 }

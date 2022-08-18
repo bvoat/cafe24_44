@@ -51,9 +51,9 @@
 
 .doublemid > ul .list_item .wish button img {
   position: relative;
-  width: 60%;
-  height: 53%;
-  margin-top: 1.5px;
+  width: 57.4%;
+  height: 52.7%;
+  margin-top: 2.5px;
 }
 
 /* listmain_small_big */
@@ -108,9 +108,9 @@
 
 .singlebig > ul .list_item .wish button img {
   position: relative;
-  width: 60%;
-  height: 53%;
-  margin-top: 1.5px;
+  width: 57.4%;
+  height: 52.7%;
+  margin-top: 2.5px;
 }
 
 /* listmain_double_small */
@@ -165,9 +165,9 @@
 
 .doublesmall > ul .list_item .wish button img {
   position: relative;
-  width: 60%;
-  height: 53%;
-  margin-top: 1.5px;
+  width: 57.4%;
+  height: 52.7%;
+  margin-top: 2.5px;
 }
 
 /* listmain_double_small */
@@ -222,9 +222,9 @@
 
 .singlemid > ul .list_item .wish button img {
   position: relative;
-  width: 60%;
-  height: 53%;
-  margin-top: 1.5px;
+  width: 57.4%;
+  height: 52.7%;
+  margin-top: 2.5px;
 }
 
 .moreview > ul {
@@ -291,13 +291,392 @@
 
 .moreview > ul .list_item .wish button img {
   position: relative;
-  width: 60%;
-  height: 53%;
-  margin-top: 1.5px;
+  width: 57.4%;
+  height: 52.7%;
+  margin-top: 2.5px;
 }
 
 .moreview > ul > li:nth-child(2n-1) {
   margin-right: 13.8px;
+}
+
+.weekbest {
+  width: 100%;
+}
+
+.weekbest > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: calc(100% - 20px);
+  padding: 0 10px;
+}
+
+.weekbest > ul .list_item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 31.9%;
+  max-width: 130px;
+  margin-bottom: 27px;
+}
+
+.weekbest > ul .list_item:nth-child(1), .weekbest > ul .list_item:nth-child(2) {
+  width: calc(50% - 5px);
+  max-width: 200px;
+  margin-bottom: 27px;
+}
+
+.weekbest > ul .list_item:nth-child(1) .wish, .weekbest > ul .list_item:nth-child(2) .wish {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  bottom: 11px;
+  left: 13px;
+}
+
+.weekbest > ul .list_item:nth-child(1) .wish button, .weekbest > ul .list_item:nth-child(2) .wish button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  cursor: pointer;
+}
+
+.weekbest > ul .list_item:nth-child(1) .wish button img, .weekbest > ul .list_item:nth-child(2) .wish button img {
+  position: relative;
+  width: 57.4%;
+  height: 52.7%;
+  margin-top: 2.5px;
+}
+
+.weekbest > ul .list_item:nth-child(n+9) {
+  display: none;
+}
+
+.weekbest > ul .list_item .wish {
+  position: absolute;
+  width: 27.68px;
+  height: 27.68px;
+  cursor: pointer;
+  bottom: 9.43px;
+  left: 9.13px;
+}
+
+.weekbest > ul .list_item .wish button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  cursor: pointer;
+}
+
+.weekbest > ul .list_item .wish button img {
+  position: relative;
+  width: 57.4%;
+  height: 52.7%;
+  margin-top: 2.5px;
+}
+
+@media (max-width: 420px) {
+  .weekbest ul {
+    max-width: 100%;
+    padding: 0;
+  }
+  .weekbest .desc {
+    padding: 7px 0 0 0;
+  }
+  .weekbest .price_wrap > .discount {
+    font-size: 1.4rem;
+  }
+  .weekbest .price_wrap > .price_item {
+    font-size: 1.4rem;
+  }
+  .weekbest .price_wrap > .price_item::after {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 379px) {
+  .weekbest ul {
+    max-width: 100%;
+    padding: 0;
+  }
+  .weekbest .desc {
+    padding: 7px 0 0 0;
+  }
+  .weekbest .price_wrap > .discount {
+    font-size: 1.25rem;
+  }
+  .weekbest .price_wrap > .price_item {
+    font-size: 1.25rem;
+  }
+  .weekbest .price_wrap > .price_item::after {
+    font-size: 1.25rem;
+  }
+  .weekbest .price_wrap .strike_price {
+    bottom: 1.5rem;
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .weekbest ul {
+    max-width: 100%;
+    padding: 0;
+  }
+  .weekbest .desc {
+    padding: 7px 0 0 0;
+  }
+  .weekbest .price_wrap > .discount {
+    font-size: 1.1rem;
+  }
+  .weekbest .price_wrap > .price_item {
+    font-size: 1.1rem;
+  }
+  .weekbest .price_wrap > .price_item::after {
+    font-size: 1.1rem;
+  }
+  .weekbest .price_wrap .strike_price {
+    bottom: 1.5rem;
+    font-size: 0.9px !important;
+  }
+}
+
+.weektag {
+  width: 100%;
+  /* 더보기 버튼 커스텀 */
+}
+
+.weektag > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: calc(100% - 30px);
+  padding: 0 15px;
+}
+
+.weektag > ul .list_item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(50% - 9px);
+  max-width: 190px;
+  margin-bottom: 27px;
+}
+
+.weektag > ul .list_item .wish {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  cursor: pointer;
+  bottom: 11px;
+  left: 13px;
+}
+
+.weektag > ul .list_item .wish button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  cursor: pointer;
+}
+
+.weektag > ul .list_item .wish button img {
+  position: relative;
+  width: 57.4%;
+  height: 52.7%;
+  margin-top: 2.5px;
+}
+
+.weektag > ul .list_item:nth-child(n+5) {
+  display: none;
+}
+
+.weektag > .paginate_moreview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: inherit;
+}
+
+.weektag > .paginate_moreview .moreview_btn {
+  width: 100%;
+  max-width: inherit;
+  height: 42px;
+  background: #FAFAFB;
+  border-radius: 0;
+  border: none;
+  color: #292929;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.weektag > .paginate_moreview .moreview_btn svg {
+  margin: 3px 0 0 2px;
+}
+
+.realtime {
+  width: 100%;
+}
+
+.realtime > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: calc(100% - 22px);
+  padding: 0 11px;
+}
+
+.realtime > ul .list_item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(50% - 4px);
+  max-width: 210px;
+  margin-bottom: 27px;
+}
+
+.realtime > ul .list_item .wish {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  cursor: pointer;
+  bottom: 11px;
+  left: 13px;
+}
+
+.realtime > ul .list_item .wish button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  cursor: pointer;
+}
+
+.realtime > ul .list_item .wish button img {
+  position: relative;
+  width: 57.4%;
+  height: 52.7%;
+  margin-top: 2.5px;
 }
 
 .thumb {
@@ -409,6 +788,37 @@
   height: 3.8rem;
   margin-bottom: 2.1rem;
   height: 3.5rem;
+}
+
+/* 더보기 버튼 */
+.paginate_moreview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 450px;
+  height: 42px;
+}
+
+.paginate_moreview .moreview_btn {
+  width: 100%;
+  max-width: 360px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #022CFF;
+  border-radius: 5px;
+  color: #022CFF;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.paginate_moreview .moreview_btn svg {
+  margin: 2px 0 0 6px;
 }
 
 /* swiper progress 공통 */

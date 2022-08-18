@@ -114,6 +114,193 @@
     }
 }
 
+// 주간 베스트 (best.html)
+.weekbest{
+    width: 100%;
+    // 이미지 200px / 130px
+    >ul{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: calc(100% - 20px);
+        padding: 0 10px;
+
+        .list_item {
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 31.9%;
+            max-width: 130px;
+            margin-bottom: 27px;
+            
+            &:nth-child(1), &:nth-child(2){
+                width: calc(50% - 5px);
+                max-width: 200px;
+                margin-bottom: 27px;
+                //위시버튼
+                @include wish-button(40px, 40px, 11px, 13px);
+            }
+            &:nth-child(n+9){
+                display: none;
+            }
+            //위시버튼
+            @include wish-button(27.68px, 27.68px, 9.43px, 9.13px);
+        }
+    }
+    @media (max-width: 420px){
+
+        ul{
+            max-width: 100%;
+            padding: 0;
+        }
+        .desc{
+            padding: 7px 0 0 0;
+        }
+        
+        .price_wrap{
+            >.discount {
+                font-size: 1.4rem;
+            }
+            >.price_item {
+                font-size: 1.4rem;
+                &::after {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    } 
+    @media (max-width: 379px) {
+
+        ul{
+            max-width: 100%;
+            padding: 0;
+        }
+        .desc{
+            padding: 7px 0 0 0;
+        }
+        
+        .price_wrap{
+            >.discount {
+                font-size: 1.25rem;
+            }
+            >.price_item {
+                font-size: 1.25rem;
+                &::after {
+                    font-size: 1.25rem;
+                }
+            }
+            .strike_price {
+                bottom: 1.5rem;
+                font-size: 1rem !important;
+            }
+        }
+    }
+    @media (max-width: 350px) {
+
+        ul{
+            max-width: 100%;
+            padding: 0;
+        }
+        .desc{
+            padding: 7px 0 0 0;
+        }
+        
+        .price_wrap{
+            >.discount {
+                font-size: 1.1rem;
+            }
+            >.price_item {
+                font-size: 1.1rem;
+                &::after {
+                    font-size: 1.1rem;
+                }
+            }
+            .strike_price {
+                bottom: 1.5rem;
+                font-size:0.9px !important;
+            }
+        }
+    }
+}
+
+//주간 가치태그 베스트
+.weektag{
+    width: 100%;
+    // 이미지 200px / 130px
+    >ul{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: calc(100% - 30px);
+        padding: 0 15px;
+        .list_item {
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: calc(50% - 9px);
+            max-width: 190px;
+            margin-bottom: 27px;
+            //위시버튼
+            @include wish-button(41px, 41px, 11px, 13px);
+            &:nth-child(n+5){
+                display: none;
+            }
+        }
+    }
+    /* 더보기 버튼 커스텀 */
+    >.paginate_moreview {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: inherit;
+        .moreview_btn{
+            width: 100%;
+            max-width: inherit;
+            height: 42px;
+            background: #FAFAFB;
+            border-radius: 0;
+            border: none;
+            color: $bvt-black;
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin: 0 auto;
+            cursor: pointer;
+            svg{
+                margin: 3px 0 0 2px;
+            }
+        }
+    }
+}
+//지금 구매 중
+.realtime{
+    width: 100%;
+    >ul{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: calc(100% - 22px);
+        padding: 0 11px;
+        .list_item {
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: calc(50% - 4px);
+            max-width: 210px;
+            margin-bottom: 27px;
+            //위시버튼
+            @include wish-button(41px, 41px, 11px, 13px);
+        }
+    }
+}
 
 // 이미지 정사각형 공통
 // 부모에게 w 정해줘야 함
@@ -201,7 +388,31 @@
         margin-bottom: 2.1rem;
         height: 3.5rem;
     }
+}
 
+/* 더보기 버튼 */
+.paginate_moreview {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    height: 42px;
+    .moreview_btn{
+        width: 100%;
+        max-width: 360px;
+        height: 40px;
+        background: $bvt-white;
+        border: $bvt-btn-border;
+        border-radius: 5px;
+        color: $bvt-blue;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 0 auto;
+        cursor: pointer;
+        svg{
+            margin: 2px 0 0 6px;
+        }
+    }
 }
 
 /* swiper progress 공통 */
