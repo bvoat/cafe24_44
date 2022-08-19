@@ -142,7 +142,7 @@
     align-items: center;
     width: 100%;
     max-width: 450px;
-    height: 40%;
+    height: auto;
     bottom: 0;
     padding: 7px 11px 25px;
     box-sizing: border-box;
@@ -211,7 +211,9 @@
 
     #NaverChk_Button {
         display: flex;
+        flex-flow: column-reverse nowrap;
         justify-content: center;
+        align-items: center;
     }
     .naver_msg{
         text-align: center;
