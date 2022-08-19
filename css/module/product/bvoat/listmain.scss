@@ -121,7 +121,7 @@
     >ul{
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         max-width: calc(100% - 20px);
         padding: 0 10px;
@@ -145,6 +145,13 @@
             }
             &:nth-child(n+9){
                 display: none;
+            }
+            //간격 조정
+            &:nth-child(1){
+                margin-right: 8px;
+            }
+            &:nth-child(3n),&:nth-child(4),&:nth-child(7),&:nth-child(10),&:nth-child(13),&:nth-child(16),&:nth-child(19){
+                margin-right: 8px;
             }
             //위시버튼
             @include wish-button(27.68px, 27.68px, 9.43px, 9.13px);
