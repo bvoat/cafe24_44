@@ -211,7 +211,7 @@
 
     #NaverChk_Button {
         display: flex;
-        flex-flow: column-reverse nowrap;
+        flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
     }
@@ -220,7 +220,7 @@
         font-size: 1em;
         font-weight: 300;
         color: $bvt-darkgray;
-        margin-top: 10px;
+        margin-bottom: 5px;
     }
 
     .product_action {
