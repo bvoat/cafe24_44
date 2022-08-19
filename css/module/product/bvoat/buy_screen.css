@@ -290,6 +290,14 @@
           justify-content: center;
 }
 
+.buy_button_box .naver_msg {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 300;
+  color: #707070;
+  margin-top: 10px;
+}
+
 .buy_button_box .product_action {
   position: fixed;
   display: -webkit-box;

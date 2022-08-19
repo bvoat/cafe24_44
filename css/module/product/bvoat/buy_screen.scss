@@ -213,6 +213,13 @@
         display: flex;
         justify-content: center;
     }
+    .naver_msg{
+        text-align: center;
+        font-size: 1em;
+        font-weight: 300;
+        color: $bvt-darkgray;
+        margin-top: 10px;
+    }
 
     .product_action {
         position: fixed;
