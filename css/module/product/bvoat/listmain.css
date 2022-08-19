@@ -389,11 +389,11 @@
 }
 
 .weekbest > ul .list_item:nth-child(1) {
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 .weekbest > ul .list_item:nth-child(3n), .weekbest > ul .list_item:nth-child(4), .weekbest > ul .list_item:nth-child(7), .weekbest > ul .list_item:nth-child(10), .weekbest > ul .list_item:nth-child(13), .weekbest > ul .list_item:nth-child(16), .weekbest > ul .list_item:nth-child(19) {
-  margin-right: 8px;
+  margin-right: 8.5px;
 }
 
 .weekbest > ul .list_item .wish {
