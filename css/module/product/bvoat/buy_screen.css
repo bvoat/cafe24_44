@@ -196,7 +196,7 @@
           align-items: center;
   width: 100%;
   max-width: 450px;
-  height: auto;
+  height: calc(100% - 38%);
   bottom: 0;
   padding: 7px 11px 25px;
   -webkit-box-sizing: border-box;
