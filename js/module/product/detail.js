@@ -299,7 +299,11 @@ qnaControl();
 //스탬프 만들기
 //bvt_common.js 파일에서 가격 정보 받아온 후 실행해야 함
 window.addEventListener("load", ()=>{
-  createStamp(createStampPcsFromPrice)
+  if(document.querySelector(".finalprice")){
+    createStamp(createStampPcsFromPrice)
+  }else{
+    setTimeout(()=>{createStamp(createStampPcsFromPrice)}, 1000)
+  }
 })
 //가치태그 수신
 reciveTagDetail(prd_no);

@@ -56,7 +56,7 @@ function createdModal(heading, text, okmsg, nomsg, okfunc, nofunc) {
 /* 가격 감시 함수 */
 function monitoringPrice() {
   console.log("price monitoring");
-  const price_content = document.querySelectorAll(".price_wrap");
+  let price_content = document.querySelectorAll(".price_wrap");
   price_content.forEach((price) => {
     //변경 여부를 discount에 저장
     let discount = price.children[0];
@@ -126,9 +126,9 @@ function monitoringPrice() {
     }
   });
 }
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   if (document.querySelector(".price_wrap")) {
-    monitoringPrice();
+    setTimeout(monitoringPrice,100)
   }
 });
 
@@ -139,7 +139,7 @@ const checkMoreView = () => {
     btn.addEventListener("click", () => {
       setTimeout(() => {
         monitoringPrice();
-      }, 850);
+      }, 1000);
     });
   });
 };
@@ -207,6 +207,7 @@ function controlTopNav(page_path) {
 }
 //상단바 active 표시
 function controlTopNavActive(page_path) {
+  console.log('page_path: ', page_path);
   //path가 list(카테고리-상품리스트)일 때
   if (page_path.includes("product/list.html")) {
     //받아온 카테고리 네임 변수화
@@ -227,8 +228,16 @@ function controlTopNavActive(page_path) {
   } else if (page_path.includes("funding")) {
     //펀딩에 active
     document.querySelector("#funding").classList.add("top_nav_active");
+    //path가 best면
+  } else if (page_path.includes("product/best.html")) {
+    //베스트 active
+    document.querySelector("#best").classList.add("top_nav_active");
+    //path가 realtime
+  } else if (page_path.includes("product/realtime.html")) {
+    //방금 구매한 active
+    document.querySelector("#realtime").classList.add("top_nav_active");
     //아무것도 확인되지 않으면
-  } else {
+  }else {
     //스토어 홈에 active
     document.querySelector("#index").classList.add("top_nav_active");
   }

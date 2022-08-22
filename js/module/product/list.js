@@ -75,4 +75,3 @@ const subCateActive = (url) => {
 
 window.addEventListener("DOMContentLoaded", subCateActive(window.location.hash))
 /* 하위 카테고리 active 표시 */
-
