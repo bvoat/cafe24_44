@@ -7,7 +7,7 @@
         <h2>지금 보터가 구매하고있어요!</h2>
     </section>
     <div id="realTimeOrderListContents">
-        <div class="realtime" module="product_listmain_54">
+        <div class="realtime" module="product_listmain_72">
             <!--
                 $count = 50
                 $basket_result = /product/add_basket.html
@@ -17,8 +17,8 @@
         </div>
     </div>
     <div id="realTimeOrderListMsg">
-        <p>실시간 구매 리스트는 50개씩 보여드려요.</p>
-        <a href="#" title="유저들이 작성한 리뷰 바로가기">유저들이 작성한 리뷰 바로가기 <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <p>실시간 구매 리스트는 최대 50개까지 보여드려요.</p>
+        <a href="#" class="visiblehidden" title="유저들이 작성한 리뷰 바로가기">유저들이 작성한 리뷰 바로가기 <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="path-1-inside-1_147_1205" fill="white">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5887 6.25034L9.57067 11.1217L10 11.7194L16 5.84329L10 0L9.57 0.596907L14.5893 5.46905H0V6.25034H14.5887Z"/>
             </mask>
@@ -28,11 +28,4 @@
             </a>
     </div>
 </article>
-<script>
-    const list = document.querySelectorAll(".realtime>ul>.list_item");
-    [...list].forEach((product)=>{
-        let voterName = "김*영"
-        product.insertAdjacentHTML("afterbegin", `<div class="purchaser">보터<span class="voter_name">${voterName}</span>님</div>`)
-    })
-    console.log('list: ', list);
-</script>
+<script src="/js/module/product/realtime.js"></script>

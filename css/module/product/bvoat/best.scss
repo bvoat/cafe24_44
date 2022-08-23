@@ -2,19 +2,6 @@
 @import "../../../abstracts/mixin";
 @import "../../../abstracts/variables";
 
-:root{
-    --num1: 120;
-    --num2: 150;
-    --num3: 300;
-}
-@property --num {
-    syntax: "<integer>";
-    initial-value: 0;
-    inherits: false;
-} 
-
-  
-
 #weekSocialOrderList {
     width: 100%;
     max-width: 450px;

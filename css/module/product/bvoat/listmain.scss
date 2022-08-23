@@ -151,7 +151,7 @@
                 margin-right: 10px;
             }
             &:nth-child(3n),&:nth-child(4),&:nth-child(7),&:nth-child(10),&:nth-child(13),&:nth-child(16),&:nth-child(19){
-                margin-right: 8.5px;
+                margin-right: 2.1%;
             }
             //위시버튼
             @include wish-button(27.68px, 27.68px, 9.43px, 9.13px);
@@ -166,7 +166,6 @@
         .desc{
             padding: 7px 0 0 0;
         }
-        
         .price_wrap{
             >.discount {
                 font-size: 1.4rem;
@@ -180,7 +179,6 @@
         }
     } 
     @media (max-width: 379px) {
-
         ul{
             max-width: 100%;
             padding: 0;
