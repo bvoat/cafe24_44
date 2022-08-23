@@ -65,7 +65,7 @@
 
 #topNav .default_top_nav .top_nav_list .top_nav_active > a {
   color: #022CFF;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 #topNav .default_top_nav .top_nav_list .top_nav_active::after {

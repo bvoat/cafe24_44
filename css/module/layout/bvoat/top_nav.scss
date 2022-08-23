@@ -44,7 +44,10 @@
                 }
             }
             .top_nav_active{
-                >a{color: $bvt-blue; font-weight: bold;}
+                >a{
+                    color: $bvt-blue;
+                    font-weight: 600;
+                }
                 &::after{
                     position: absolute;
                     display: block;
