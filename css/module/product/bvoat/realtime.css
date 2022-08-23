@@ -49,7 +49,7 @@
 }
 
 #realTimeOrderList #realTimeOrderListContents .purchaser > span {
-  margin: 0 4px;
+  margin-left: 4px;
 }
 
 #realTimeOrderList #realTimeOrderListMsg {

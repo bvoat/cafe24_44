@@ -1,6 +1,5 @@
 //가치태그 베스트 카테고리 불러오기
  const reciveRealtimeOrder = () => {    
-    console.log("불러오는중")
     fetch(`https://${api_domain}.shop/banner/recent-purchases`, {
     method: 'GET',
     headers: {
@@ -10,7 +9,8 @@
     .then((response) => response.json())
     .then((response) => {
         if(response.success){
-            const productList = document.querySelectorAll(".realtime>ul>.list_item");
+            const productList = document.querySelectorAll(".realtime_order_list>ul>li");
+            console.log('productList: ', productList);
             [...productList].forEach((product)=>{
                 response.data.forEach((data)=>{
                     if(product.dataset.productno == data.product_no){

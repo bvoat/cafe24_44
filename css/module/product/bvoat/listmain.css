@@ -721,7 +721,7 @@
      object-fit: cover;
 }
 
-.name {
+.purchaser {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -740,16 +740,13 @@
   font-size: 13px;
   font-weight: bold;
   color: #022CFF;
-  top: -25px;
-  left: calc(100% - 102px);
+  top: 16px;
+  left: 9.71px;
+  z-index: 10;
 }
 
-.name .customer {
-  display: inline-block;
-  width: 31px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0 2px;
+.purchaser > span {
+  margin-left: 4px;
 }
 
 .desc {

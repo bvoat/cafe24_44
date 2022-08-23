@@ -181,29 +181,40 @@
     <!-- 메인진열 섹션 -->
 
     <!-- 메인진열H indexMainSingleMid -->
-    <section id="indexProductBvtH" class="index_list listmain46">
+    <section id="indexProductBvtH" class="index_list listmain72">
         <section id="indexProductListTitle" class="index_list_title">
             <h3 class="list_title_h2">가치소비 하신 걸 축하합니다!</h3>
             <h4 class="list_title_h3">지금 보터들이 구매하고 있어요.</h4>
         </section>
         <section id="indexMainSingleMid" class="index_main_single_mid small_single_list">
             <h4 class="displaynone">지금 구매 중 리스트</h4>
-            <div class="singlemid swiper_container" module="product_listmain_46">
+            <div class="singlemid swiper_container realtime_order_list" module="product_listmain_72">
                 <!--
-                $count = 12
+                $count = 20
                 $basket_result = /product/add_basket.html
                 $basket_option = /product/basket_option.html
                 -->
                 <!--@import(/product/product_module/listmain/listmain.html)-->
             </div>
         </section>
+        <div class="paginate_movelist">
+            <button class="movelist_btn" onclick="window.location.href='/product/realtime.html'">
+                더 보러가기 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.114 11.113" width="12" height="12">
+                    <g data-name="Icon feather-arrow-down-right" fill="none" stroke="#707070" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path data-name="패스 1591" d="M1 5.557h9.113" />
+                        <path data-name="패스 1592" d="m5.557 1 4.556 4.557-4.556 4.557" />
+                    </g>
+                </svg>
+            </button>
+        </div>
     </section>
     <!-- 메인진열H indexMainSingleMid -->
 
 </article>
 <!--@import(/layout/basic/footer.html)-->
 <!--@define(cmc_log)-->
-<!-- <script src="/js/data/promotion.js"></script> -->
+<!--@js(js/module/product/realtime.js)-->
 <script>
     var swiper = new Swiper(".doublemid", {
         spaceBetween: 12,
@@ -249,5 +260,4 @@
             type: "progressbar",
         },
     });
-
 </script>

@@ -341,8 +341,31 @@
     }
 }
 
-//보터 이름
-.name {
+//보터 이름 (index.html 기존)
+// .name {
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 102px;
+//     height: 30px;
+//     border-radius: 20px;
+//     background: $bvt-white;
+//     border: $bvt-btn-border;
+//     font-size: 13px;
+//     font-weight: bold;
+//     color: $bvt-blue;
+//     top: -25px;
+//     left: calc(100% - 102px);
+//     .customer {
+//         display: inline-block;
+//         width: 31px;
+//         overflow: hidden;
+//         text-overflow: ellipsis;
+//         margin: 0 2px;
+//     }
+// }
+.purchaser {
     position: relative;
     display: flex;
     justify-content: center;
@@ -355,16 +378,15 @@
     font-size: 13px;
     font-weight: bold;
     color: $bvt-blue;
-    top: -25px;
-    left: calc(100% - 102px);
-    .customer {
-        display: inline-block;
-        width: 31px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        margin: 0 2px;
+    top: 16px;
+    left: 9.71px;
+    z-index: 10;
+    >span{
+        margin-left: 4px;
     }
 }
+    
+
 
 //상품 설명
 .desc {
