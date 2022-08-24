@@ -1,23 +1,14 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div module="board_writePackage_4">
-    <!--@css(/css/module/board/writePackage.css)-->
-    <div module="board_title_4">
-        <div class="path">
-            <span>현재 위치</span>
-            <ol>
-                <li><a href="/">홈</a></li>
-                <li><a href="/board/index.html">게시판</a></li>
-                <li title="현재 위치"><strong>{$board_name}</strong></li>
-            </ol>
-        </div>
+<!--@css(/css/module/board/writePackage.css)-->
+<!--@css(/css/module/board/bvoat/write.css)-->
 
-        <div class="titleArea">
-            <h2>{$board_title}</h2>
-            <p>{$board_info}</p>
-        </div>
-    </div>
+<article id="productBoardWrite" module="board_writePackage_4">
+    <section id="productBoardWriteTitle" module="board_title_4">
+            <h1>{$board_title}</h1>
+            <h2>{$board_info}</h2>
+    </section>
 
-    <div module="board_write_4">
+    <section id="productBoardWriteSection" module="board_write_4">
         <!--
             $write_success_url = /board/product/list.html
             $product_select_url = /product/search_board_list.html
@@ -27,24 +18,29 @@
         -->
 
         <div class="ec-base-box typeProduct {$display_product|display}">
-            <p class="thumbnail"><a href="{$link_product_detail}"><img id="{$product_img_id}" src="{$url_product_img}" onerror="this.src='//img.echosting.cafe24.com/thumb/75x75.gif'" alt="" /></a></p>
-            <div class="information">
-                {$product_icon}
-                <h3><a href="/product/detail.html{$param_product}" id="{$product_name_link_id}">{$product_name}</a></h3>
-                <p class="price">{$product_price} {$product_tax_type_text}</p>
-                <p class="button">
+            <div class="product_info">
+            <p class="thumb">
+                <a href="{$link_product_detail}">
+                <img id="{$product_img_id}" src="{$url_product_img}" onerror="this.src='//img.echosting.cafe24.com/thumb/75x75.gif'" alt="" />
+            </a>
+            </p>
+            <ul class="information">
+                <li><a href="/product/detail.html{$param_product}" id="{$product_name_link_id}">{$product_name}</a></li>
+                <li class="product_price">{$product_price}</li>
+                <li class="button">
                     <span id="{$product_view_id}" class="{$display_product_info|display}"><a href="/product/detail.html{$param_product}" id="{$product_link_id}" class="btnEm" target="_blank" >상품상세보기</a></span>
-                    <span class="{$display_product_select|display}"><a href="#none" class="btnNormal" onclick="{$action_product_select}">상품정보선택</a></span>
-                    <span class="{$display_order_select|display}"><a href="#none" class="btnNormal" onclick="{$action_order_select}">주문상품선택</a></span>
-                </p>
-            </div>
+                    <!-- <span class="{$display_product_select|display}"><a href="#none" class="btnNormal" onclick="{$action_product_select}">상품정보선택</a></span>
+                    <span class="{$display_order_select|display}"><a href="#none" class="btnNormal" onclick="{$action_order_select}">주문상품선택</a></span> -->
+                    </li>
+            </ul>
+        </div>
         </div>
 
-        <div class="ec-base-table typeWrite">
+        <div id="productBoardWriteTable" class="ec-base-table typeWrite">
             <table border="1" summary="">
             <caption>글쓰기 폼</caption>
             <colgroup>
-                <col style="width:130px;" />
+                <col style="width:auto;" />
                 <col style="width:auto;" />
             </colgroup>
             <tbody>
@@ -136,4 +132,4 @@
             </span>
         </div>
     </div>
-</div>
+</article>
