@@ -655,7 +655,9 @@
         #tab0 {
             img {
                 position: relative;
-                width: 100%;
+                //220824 이미지 태그 내 inline으로 width 1924 height 설정 들어가서 (원인 모름) important 삽입
+                width: 100% !important; 
+                height: auto !important;
                 max-width: 450px;
                 min-width: 200px;
                 object-fit: cover;

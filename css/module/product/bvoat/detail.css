@@ -776,7 +776,8 @@
 
 #productDetailBottom .detail_swiper_wrap #tab0 img {
   position: relative;
-  width: 100%;
+  width: 100% !important;
+  height: auto !important;
   max-width: 450px;
   min-width: 200px;
   -o-object-fit: cover;
