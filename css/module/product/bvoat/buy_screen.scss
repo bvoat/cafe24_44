@@ -30,13 +30,13 @@
         width: 100%;
         max-width: 450px;
         height: 75%;
-        margin: 0 auto;
+        margin: 20px auto 0;
         background-color: $bvt-white;
         box-shadow: $bvt-btn-shadow;
         bottom: 0;
         z-index: 9999;
         overflow: hidden;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 300;
         .buy_screen_title {
             display: flex;
@@ -76,7 +76,7 @@
                     display: flex;
                     flex-flow: row nowrap;
                     justify-content: space-between;
-                    align-items: center;
+                    align-items: flex-start;
                     height: 40px;
                     margin-bottom: 5px;
 
@@ -87,16 +87,35 @@
                         font-size: 1.45rem;
                         text-align: left;
                     }
-
+                    //셀렉트 박스, 라디오 버튼 등 선택 관련 버튼
                     td {
                         width: 85%;
-                        font-size: 1.45rem;
-
+                            font-size: 1.45rem;
+                        //셀렉트 박스 일 때
                         select {
                             width: 100%;
                             height: 40px;
                             font-size: 1.45rem;
                             cursor: pointer;
+                        }
+                        ul{
+                            display: flex;
+                            flex-flow: column nowrap;
+                            li{
+                                font-size: 1.3rem;
+                                font-weight: 600;
+                                margin-bottom: 5px;
+                                input{
+                                    width: 15px;
+                                    height: 15px;
+                                    margin-right: 6px;
+                                    cursor: pointer;
+                                }
+                                label{
+                                cursor: pointer;
+
+                                }
+                            }
                         }
                     }
                 }
@@ -106,11 +125,11 @@
 
     #totalProducts {
         .select-tip {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 300;
             color: $bvt-darkgray;
             text-align: center;
-            padding: 5px 0 10px;
+            margin: 20px 0 10px;
         }
 
     }
