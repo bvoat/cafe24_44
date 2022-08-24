@@ -233,7 +233,7 @@
 }
 
 #productBoardRead #productBoardReadTable table tbody tr td .detail p {
-  font-size: 1.15rem;
+  font-size: 1.15rem !important;
 }
 
 #productBoardRead #productBoardReadTable > .ec-base-button {
