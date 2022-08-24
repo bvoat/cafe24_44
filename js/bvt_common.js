@@ -186,11 +186,10 @@ function controlTopNav(page_path) {
     "member/modify",
   ];
 
-  //디폴트 메뉴 사라지게
+  //top 메뉴 사라지게
   expect_array.forEach((path) => {
     page_path.includes(path) ? default_nav.classList.add("displaynone") : null;
   });
-
   //커뮤니티 하단바로
   community_array.forEach((path) => {
     if (page_path.includes(path)) {

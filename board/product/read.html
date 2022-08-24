@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<!--@css(/css/module/product/bvoat/read.css)-->
+<!--@css(/css/module/board/bvoat/read.css)-->
 <!-- 상품 관련 게시판 전체 -->
 <article id="productBoardRead" module="board_ReadPackage_4">
     <section id="productBoardReadTitle" module="board_title_4">
@@ -11,14 +11,14 @@
         <h2>문의 상품 정보</h2>
         <div class="product_info">
             <div class="thumb">
-                <a href="{$link_product_detail}" title="{$product_name}">
+                <a href="/product/detail.html{$param_product}" title="{$product_name}">
                     <img src="{$product_img}" alt="{$product_name}" onerror="this.src='//img.echosting.cafe24.com/thumb/75x75.gif'" />
                 </a>
             </div>
             <ul class="information">
-                <li><a href="{$link_product_detail}" title="{$product_name}">{$product_name}</a></li>
+                <li><a href="/product/detail.html{$param_product}" title="{$product_name}">{$product_name}</a></li>
                 <li class="price">{$product_price} {$product_tax_type_text}원</li>
-                <li class="button"><a href="{$link_product_detail}" class="btnEm" title="상품 상세보기 새 창으로 이동" target="_blank">상품 상세보기</a></li>
+                <li class="button"><a href="/product/detail.html{$param_product}" class="btnEm" title="상품 상세보기 새 창으로 이동" target="_blank">상품 상세보기</a></li>
             </ul>
         </div>
     </section>

@@ -1,0 +1,121 @@
+@charset "utf-8";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
+
+#productBoardList{
+    width: 100%;
+    max-width: 450px;
+    padding: 37px 0px;
+    margin: 80px 0 60px;
+
+    #productBoardListTitle {
+        width: 100%;
+        max-width: 450px;
+        margin-bottom: 18px;
+        padding: 0 11px;
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: $bvt-lostfocus-gray;
+        }
+    }
+    #productBoardListTable{
+        width: 100%;
+        max-width: 450px;
+        margin: 20px 0;
+        padding: 0 11px;
+        table{
+            width: 100%;
+            thead{
+                width: 100%;
+                background: $bvt-lightblue;
+                tr{
+                    th{
+                        padding: 2% 0;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        &:nth-child(1){
+                            text-align: start;
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr td{
+                font-size: 1.1rem !important;
+                color: $bvt-darkgray;
+                }
+                td{
+                    margin-right: 8px;
+                }
+                .subject{
+                    @include only-ellipsis(2, 1.3rem);
+                    display: table-cell;
+                    font-weight: 600;
+                }
+                .txtNum{
+                    font-size: 0.9px;
+                }
+            }
+        }
+        @include product-thumb(0px, 0px, 0px, 0px);
+        .thumb{
+            display: flex;
+            flex-flow: row nowrap;
+                >a{
+                    display: inline-block;
+                    width: 50px;
+                }
+                >span{
+                    display: inline-block;
+                    width: 38px;
+                    @include ellipsis(2, 1.3rem);
+                }
+        }
+        //글 관련 버튼 (글쓰기 ...)
+        >.ec-base-button {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 25px;
+            span{
+                &:nth-child(1){
+                    width: 60%;
+                    a{
+                        display: inline-block;
+                        font-size: 1.1rem;
+                        border: $bvt-btn-border-gray;
+                        border-radius: 12px;
+                        padding: 1.5% 4%;
+                    }
+                }
+                &:nth-child(2){
+                    width: 35%;
+                    a{
+                        display: inline-block;
+                        font-size: 1.1rem;
+                        background: $bvt-blue;
+                        border-radius: 12px;
+                        padding: 2% 6%;
+                        color: $bvt-white;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+
+    }
+        //페이지네이션
+    @include page-pagination;
+    .page-pagination{
+        margin: 20px 0;
+    }
+
+}

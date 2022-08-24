@@ -1,41 +1,31 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div module="Board_ListPackage_4">
-    <!--@css(/css/module/board/listPackage.css)-->
-    <div module="board_title_4">
-        <div class="path">
-            <span>현재 위치</span>
-            <ol>
-                <li><a href="/">홈</a></li>
-                <li><a href="/board/index.html">게시판</a></li>
-                <li title="현재 위치"><strong>{$board_name}</strong></li>
-            </ol>
-        </div>
+<!--@css(/css/module/board/bvoat/list.css)-->
 
-        <div class="titleArea">
-            <h2>{$board_title} {$board_adult_icon}</h2>
-            <p>{$board_info}</p>
-        </div>
-        <p class="imgArea">{$board_top_image}</p>
-    </div>
+<article id="productBoardList" module="Board_ListPackage_4">
+    <section id="productBoardListTitle" module="board_title_4">
+        <h1>{$board_title} {$board_adult_icon}</h1>
+        <h2>{$board_info}</h2>
+    </section>
 
     <div class="boardSort">
         <span module="board_category_4">{$form.board_category}</span>
         <span module="board_ReplySort_4">{$reply_sort}</span>
     </div>
 
-    <div class="ec-base-table typeList gBorder">
-        <table border="1" summary="">
+    <section id="productBoardListTable" class="ec-base-table typeList gBorder">
+        <h2 class="displaynone">상품 게시판 목록 테이블</h2>
+        <table border="0" summary="">
         <caption>상품 게시판 목록</caption>
         <colgroup module="board_listheader_4">
-            <col style="width:70px;" />
-            <col style="width:150px;" />
-            <col style="width:130px;" class="{$config.is_category|display}" />
+            <col style="width:12%;" />
             <col style="width:auto;" />
-            <col style="width:84px;" />
-            <col style="width:77px;" class="{$config.use_date|display}" />
-            <col style="width:55px;" class="{$config.use_cnt|display}" />
-            <col style="width:55px;" class="{$config.is_use_recom|display}" />
-            <col style="width:80px;" class="{$config.is_use_point|display}" />
+            <col style="width:auto;" class="{$config.is_category|display}" />
+            <col style="width:auto;" />
+            <col style="width:auto;" />
+            <col style="width:auto;" class="{$config.use_date|display}" />
+            <col style="width:auto;" class="{$config.use_cnt|display}" />
+            <col style="width:auto;" class="{$config.is_use_recom|display}" />
+            <col style="width:auto;" class="{$config.is_use_point|display}" />
         </colgroup>
         <thead module="board_listheader_4">
             <tr style="{$list_bg_color} {$list_char_color}">
@@ -59,7 +49,7 @@
             -->
             <tr style="{$list_bg_color} {$list_char_color}">
                 <td>{$checkbox} {$notice_icon}</td>
-                <td class="thumb left"><a href="{$link_product_detail}">{$product_img}<span>{$product_name}</span></a></td>
+                <td class="thumb left"><a href="/product/detail.html{$param_product}">{$product_img}</a><span>{$product_name}</span></td>
                 <td class="{$category_display|display}">{$category_name}</td>
                 <td class="subject left txtBreak">
                     <span class="{$spread_display|display}">
@@ -75,7 +65,7 @@
             </tr>
             <tr style="{$list_bg_color} {$list_char_color}">
                 <td>{$checkbox} {$notice_icon}</td>
-                <td class="thumb left"><a href="{$link_product_detail}">{$product_img}<span>{$product_name}</span></a></td>
+                <td class="thumb left"><a href="/product/detail.html{$param_product}">{$product_img}</a><span>{$product_name}</span></td>
                 <td class="{$category_display|display}">{$category_name}</td>
                 <td class="subject left txtBreak">
                     <span class="{$spread_display|display}">
@@ -98,7 +88,7 @@
             -->
             <tr style="{$list_bg_color} {$list_char_color}">
                 <td>{$checkbox} {$fixed_icon}</td>
-                <td class="thumb left"><a href="{$link_product_detail}">{$product_img}<span>{$product_name}</span></a></td>
+                <td class="thumb left"><a href="/product/detail.html{$param_product}">{$product_img}</a><span>{$product_name}</span></td>
                 <td class="{$category_display|display}">{$category_name}</td>
                 <td class="subject left txtBreak">
                     <span class="{$spread_display|display}">
@@ -114,7 +104,7 @@
             </tr>
             <tr style="{$list_bg_color} {$list_char_color}">
                 <td>{$checkbox} {$fixed_icon}</td>
-                <td class="thumb left"><a href="{$link_product_detail}">{$product_img}<span>{$product_name}</span></a></td>
+                <td class="thumb left"><a href="/product/detail.html{$param_product}">{$product_img}</a><span>{$product_name}</span></td>
                 <td class="{$category_display|display}">{$category_name}</td>
                 <td class="subject left txtBreak">
                     <span class="{$spread_display|display}">
@@ -137,7 +127,7 @@
             -->
             <tr style="{$list_bg_color} {$list_char_color}">
                 <td>{$checkbox} {$no}</td>
-                <td class="thumb left"><a href="{$link_product_detail}">{$product_img}<span>{$product_name}</span></a></td>
+                <td class="thumb left"><a href="/product/detail.html{$param_product}">{$product_img}</a><span>{$product_name}</span></td>
                 <td class="{$category_display|display}">{$category_name}</td>
                 <td class="subject left txtBreak">
                     <span class="{$spread_display|display}">
@@ -153,7 +143,7 @@
             </tr>
             <tr style="{$list_bg_color} {$list_char_color}">
                 <td>{$checkbox} {$no}</td>
-                <td class="thumb left"><a href="{$link_product_detail}">{$product_img}<span>{$product_name}</span></a></td>
+                <td class="thumb left"><a href="/product/detail.html{$param_product}">{$product_img}</a><span>{$product_name}</span></td>
                 <td class="{$category_display|display}">{$category_name}</td>
                 <td class="subject left txtBreak">
                     <span class="{$spread_display|display}">
@@ -176,9 +166,8 @@
             <a href="/board/product/write.html{$param_write}" class="btnSubmitFix sizeS {$write_display|display}">글쓰기</a>
         </span>
     </div>
-</div>
-
-<div module="board_paging_4" class="ec-base-paginate">
+    
+<div module="board_paging_4" class="ec-base-paginate page-pagination">
     <a href="{$param_prev}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
     <ol>
         <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
@@ -215,3 +204,4 @@
     </p>
 </div>
 <!-- // 관리자 전용 메뉴 -->
+</article>
