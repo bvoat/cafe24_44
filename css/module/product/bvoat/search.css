@@ -83,6 +83,17 @@
   right: -7px;
 }
 
+#searchModal #searchModalHeader .header_cart .count > em {
+  position: relative;
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-indent: 0;
+  z-index: 100;
+  top: 1.5px;
+}
+
 #searchModal #searchModalTitle {
   width: 100%;
   margin: 19px 0;

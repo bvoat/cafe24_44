@@ -67,6 +67,16 @@
                     text-align: center;
                     top: -3px;
                     right: -7px;
+                    >em{
+                        position: relative;
+                        display: block;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        color: $bvt-white;
+                        text-indent: 0;
+                        z-index: 100;
+                        top: 1.5px;
+                    }
                 }
         }
     }
