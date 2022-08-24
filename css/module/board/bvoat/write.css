@@ -25,6 +25,10 @@
   color: #ABABAB;
 }
 
+#productBoardWrite #productBoardWriteSection .ec-base-box {
+  padding: 0 11px;
+}
+
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info {
   width: 100%;
   display: -webkit-box;
