@@ -1,44 +1,36 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div module="board_ReadPackage_4">
-    <!--@css(/css/module/board/readPackage.css)-->
-    <div module="board_title_4">
-        <div class="path">
-            <span>현재 위치</span>
-            <ol>
-                <li><a href="/">홈</a></li>
-                <li><a href="/board/index.html">게시판</a></li>
-                <li title="현재 위치"><strong>{$board_name}</strong></li>
-            </ol>
-        </div>
+<!--@css(/css/module/product/bvoat/read.css)-->
+<!-- 상품 관련 게시판 전체 -->
+<article id="productBoardRead" module="board_ReadPackage_4">
+    <section id="productBoardReadTitle" module="board_title_4">
+        <h1>{$board_title} {$board_adult_icon}</h1>
+        <h2>{$board_info}</h2>
+    </section>
 
-        <div class="titleArea">
-            <h2>{$board_title} {$board_adult_icon}</h2>
-            <p>{$board_info}</p>
+    <section id="productBoardReadTableHead" module="board_Product_4" class="ec-base-box typeProduct">
+        <h2>문의 상품 정보</h2>
+        <div class="product_info">
+            <div class="thumb">
+                <a href="{$link_product_detail}" title="{$product_name}">
+                    <img src="{$product_img}" alt="{$product_name}" onerror="this.src='//img.echosting.cafe24.com/thumb/75x75.gif'" />
+                </a>
+            </div>
+            <ul class="information">
+                <li><a href="{$link_product_detail}" title="{$product_name}">{$product_name}</a></li>
+                <li class="price">{$product_price} {$product_tax_type_text}원</li>
+                <li class="button"><a href="{$link_product_detail}" class="btnEm" title="상품 상세보기 새 창으로 이동" target="_blank">상품 상세보기</a></li>
+            </ul>
         </div>
-    </div>
+    </section>
 
-    <div module="board_Product_4" class="ec-base-box typeProduct">
-        <p class="thumbnail"><a href="{$link_product_detail}"><img src="{$product_img}" alt="" onerror="this.src='//img.echosting.cafe24.com/thumb/75x75.gif'" /></a></p>
-        <div class="information">
-            {$user_icon}{$new_icon}{$recommend_icon}{$soldout_icon}{$mileage_icon}
-            <h3><a href="{$link_product_detail}">{$product_name}</a></h3>
-            <p class="price">{$product_price} {$product_tax_type_text}</p>
-            <p class="button"><a href="{$link_product_detail}" class="btnEm" title="새창으로 이동">상품 상세보기</a></p>
-        </div>
-    </div>
-
-    <div module="board_read_4">
+    <section id="productBoardReadTable"  module="board_read_4">
         <!--
             $login_page_url = /member/login.html
             $deny_access_url = /board/product/list.html
         -->
         <div class="ec-base-table typeWrite">
-            <table border="1" summary="">
+            <table border="0" summary="">
             <caption>상품 게시판 상세</caption>
-            <colgroup>
-                <col style="width:130px;" />
-                <col style="width:auto;" />
-            </colgroup>
             <tbody>
                 <tr>
                     <th scope="row">제목</th>
@@ -101,9 +93,8 @@
                 <a href="/board/product/reply.html{$param_reply}" class="btnSubmitFix sizeS {$reply_button_auth|display}">답변</a>
             </span>
         </div>
-    </div>
-</div>
-
+    </section>
+    
 <div module="board_CommentPackage_4">
     <!--@css(/css/module/board/commentPackage.css)-->
     <div module="board_commentlist_4">
@@ -304,7 +295,6 @@
         </table>
     </div>
 </div>
-
 <!-- 관리자 전용 메뉴 -->
 <div module="board_function_4">
     <!--@css(/css/module/board/function.css)-->
@@ -319,4 +309,7 @@
     </p>
 </div>
 <!-- // 관리자 전용 메뉴 -->
+</article>
+
+
 <!--@define(cmc_log)-->
