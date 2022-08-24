@@ -921,14 +921,18 @@
 }
 
 #productDetailBottom .detail_swiper_wrap #tab2 div .tab-tips-btns {
+  display: block;
   width: 100%;
+  max-width: 450px;
+  height: 50px;
   padding: 0 22px;
+  margin: 11px 0;
 }
 
 #productDetailBottom .detail_swiper_wrap #tab2 div .tab-tips-btns .noAccess {
   text-align: center;
   font-size: 1.6rem;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 #productDetailBottom .detail_swiper_wrap #tab2 div .tab-tips-btns .qna_btn {

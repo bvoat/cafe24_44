@@ -178,7 +178,7 @@
                 </div>
                 <div class="product_detail_qna" module="product_qna">
                     <!--@css(/css/module/product/qna.css)-->
-                    <!--@js(/js/module/product/qna.js)-->
+                    <!-- @js(/js/module/product/qna.js ) -->
                     <!--
                             $count = 6
                         -->
@@ -186,8 +186,7 @@
                     <ul class="tab-board-table {$list_display|display}">
                         <li class="descriptions">
                             <a class="description_link" title="{$subject}" href="/board/product/read.html{$param_read}"
-                                target="_top">
-
+                                target="_self">
                                 <h1> {$icon_re} {$icon_lock} {$icon_mobile} {$subject} </h1>
                                 <p>
                                     {$member_icon}
@@ -198,8 +197,7 @@
                         </li>
                         <li class="descriptions">
                             <a class="description_link" title="{$subject}" href="/board/product/read.html{$param_read}"
-                                target="_top">
-
+                                target="_self">
                                 <h1> {$icon_re} {$icon_lock} {$icon_mobile} {$subject} </h1>
                                 <p>
                                     {$member_icon}
@@ -211,10 +209,10 @@
                     </ul>
                 </div>
                 <div class="tab-tips-btns">
-                    <div class="qna_btn"><a href="{$qna_write}">물어보기</a>
+                    <div class="qna_btn"><a href="{$qna_write}" target="_self">물어보기</a>
                     </div>
                 </div>
-                <div class="product_detail_paginate" module="product_qnapaging">
+                <div class="product_detail_paginate page-pagination" module="product_qnapaging">
                     <div class="paginate-box">
                         <span class="btnPrev_wrap">
                         <a href="{$param_first}" class="first">처음</a>
