@@ -498,12 +498,13 @@
   display: block;
   text-align: center;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 1.4rem;
   font-weight: normal;
   text-decoration: underline;
   color: #8E8E8E;
   -webkit-transition: all .3s;
   transition: all .3s;
+  margin-top: 50px;
 }
 
 #mypageWrap .mypage_menu_wrap .mypage_logout:hover {
