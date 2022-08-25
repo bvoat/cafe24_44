@@ -45,7 +45,7 @@
             el.style.display = "flex"
         })
         // 더보기 버튼 삭제
-        total_moreview.classList.add("displaynone");
+        document.querySelector("#weekTotalBestListContents > .paginate_moreview").classList.add("displaynone");
     }
     total_moreview.addEventListener("click", totalBestShow);
     /* 주간 베스트 더보기 클릭 */

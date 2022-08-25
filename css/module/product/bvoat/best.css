@@ -6,7 +6,7 @@
 }
 
 #weekTotalBestList {
-  margin-bottom: 60px;
+  margin-bottom: 33px;
   padding: 0 11px;
 }
 
@@ -185,7 +185,7 @@
 
 #weekTagBestList {
   background: #F5F6FA;
-  padding: 37px 11px;
+  padding: 60px 11px 37px;
 }
 
 #weekTagBestList #weekTagBestListTitle {
