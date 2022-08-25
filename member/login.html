@@ -67,8 +67,16 @@
                             </ul>
                         </ul>
                     </div>
+                    
                     <a href="/member/login_nomember.html?noMemberOrder&returnUrl=%2Fmyshop%2Forder%2Flist.html"
-                        class="nomember_order" title="비회원 주문 조회">비회원 주문 조회</a>
+                        class="nomember_order_invoice" title="비회원 주문 조회">
+                        비회원 주문 조회
+                    </a>
+                    <div class="nomember_order {$display_nomember|display}" id="noMemberWrap">
+                        <p>비회원 구매 시 <br/>
+                        비보트의 쿠폰, 마일리지 혜택을 받으실 수 없습니다.</p>
+                        <a href="{$returnUrl}" class="nomember_order_btn" onclick="{$action_nomember_order}" title="비회원 구매하기">비회원 구매</a>
+                    </div>
                 </section>
             </div>
         </fieldset>
