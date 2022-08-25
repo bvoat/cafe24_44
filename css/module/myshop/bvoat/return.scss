@@ -1,0 +1,394 @@
+@charset "utf-8";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
+
+
+
+
+#orderReturn {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    padding: 23px 11px;
+    margin: 81px 0px 60px;
+    #orderReturnTitle {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 18px;
+
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: $bvt-lostfocus-gray;
+        }
+    }
+    #applyForm{
+        width: 100%;
+        max-width: 450px;
+        #orderReturnTable{
+            width: 100%;
+            max-width: 450px;
+            div{
+                width: 100%;
+            }
+            .title{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                height: 40px;
+                padding: 0 11px;
+                background: $bvt-darkgray;
+                h2,h3{
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    color: $bvt-white;
+                }
+            }
+            .contents, .typeWrite{
+                width: 100%;
+                max-width: 450px;
+                padding: 11px;
+    
+            }
+            .chk>input{
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+            }
+            .description{
+                width: 100%;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 11px 0;
+                @include product-thumb(0px, 0px, 0px, 0px);
+                .thumb{
+                    width: 25%;
+                    min-width: 75px;
+                    margin-right: 10px;
+                    >a{
+                        padding-top: 100%;
+                    }
+                }
+                .info{
+                    .name{
+                        font-size: 1.5rem;
+                        margin-bottom: 5px;
+                    }
+                    .price_quantity{
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    span>strong, span, strong{
+                        font-size: 1.3rem;
+                    }
+                }
+    
+    
+            }
+            .quantity{
+                font-size: 1.3rem;
+                margin: 11px 0;
+                input{
+                    height: 29px;
+                    text-align: center;
+                    font-size: 1.5rem;
+                }
+                a{
+                    border: $bvt-btn-border-gray;
+                    border-radius: 18px;
+                    padding: 5px 12px;
+                }
+            }
+            .status{
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: $bvt-blue;
+            }
+            .ec-base-help{
+                margin: 11px 0;
+                text-align: center;
+            }
+            //최초 메시지
+            .message{
+                font-size: 1.3rem;
+            }
+            //교환 상품
+            .xans-myshop-orderhistoryexchangeproduct>table{
+                .xans-myshop-selectedproduct{
+                    border: 0;
+                    padding: 8px;
+                }
+                .ec-product-name{
+                    width: 93px;
+                    font-size: 1.3rem;
+                    @include only-ellipsis(1, 1.5rem)
+                }
+                thead>tr{
+                    height: 25px;
+                }
+                th{
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    vertical-align: middle;
+                }
+                td{
+                    font-size: 1.3rem;
+                    vertical-align: middle;
+                    padding: 0 5px;
+                    .ec-base-qty{
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 12px;
+                        a{
+                            &:nth-child(1){
+                                order: 0;
+                            }
+                            &:nth-child(2){
+                                order: 2;
+                            }
+                            >img{
+                                width: 25px;
+                                height: 25px;
+                            }
+                        }
+                        >input{
+                            order: 1;
+                            width: 25px;
+                            height: 25px;
+                            font-size: 1.2rem;
+                        }
+                    }
+                    a[class="btnNormal gBlank5"], a[class="btnNormal"]{
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                        border: $bvt-btn-border-gray;
+                        border-radius: 18px;
+                        padding: 5px 12px;
+                    }
+                }
+            
+            }
+    
+            //사유선택
+            .return_reason{
+                background: $bvt-bg-lightblue;
+                tr{
+                    height: 55px;
+                }
+                th{
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                }
+                td{
+                    span{
+                        display: flex;
+                        flex-flow: row nowrap;
+                        align-items: center;
+                        margin-bottom: 8px;
+                    }
+                    label{
+                        font-size: 1.3rem;
+                        cursor: pointer;
+                    }
+                    input[type="radio"]{
+                        width: 15px;
+                        height: 15px;
+                        margin: 0 5px;
+                        cursor: pointer;
+                    }
+                    textarea{
+                        width: 95%;font-size: 1.3rem;
+                        padding: 4px;
+                    }
+                }
+            }
+            //수거신청
+            .return_parcel{
+                background: $bvt-bg-lightblue;
+                padding: 11px;
+                tr{
+                    height: 55px;
+                }
+                th{
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                }
+                td{
+                    span{
+                        display: flex;
+                        flex-flow: row nowrap;
+                        align-items: center;
+                        margin-bottom: 8px;
+                    }
+                    label{
+                        font-size: 1.3rem;
+                        cursor: pointer;
+                    }
+                    input[type="radio"]{
+                        width: 15px;
+                        height: 15px;
+                        margin: 0 5px 0 15px;
+                        cursor: pointer;
+                    }
+                    #direct{
+                        width: 100%;
+                        margin: 11px;
+                        input[type="text"]{
+                            width: 100%;
+                            height: 30px;
+                            font-size: 1.3rem;
+                            margin-bottom: 5px;
+                        }
+                        input[type="checkbox"]{
+                            width: 13px;
+                            height: 13px;
+                            margin-right: 5px;
+                            cursor: pointer;
+                        }
+                    }
+                    .help{
+                        margin-top: 11px;
+                    }
+                }
+            }
+            //수거지 정보
+            .return_addr{
+                padding: 11px 0;
+                tr{
+                    height: 55px;
+                }
+                th{
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                }
+                td{
+                    font-size: 1.3rem;
+                    span{
+                        display: flex;
+                        flex-flow: row nowrap;
+                        align-items: center;
+                        margin-bottom: 8px;
+                    }
+                    label{
+                        font-size: 1.3rem;
+                        cursor: pointer;
+                    }
+                    input[type="radio"]{
+                        width: 15px;
+                        height: 15px;
+                        margin: 0 5px 0 15px;
+                        cursor: pointer;
+                    }
+                    input[type="text"]{
+                        width: 100%;
+                        height: 30px;
+                        font-size: 1.3rem;
+                        margin-bottom: 5px;
+                    }
+                    //휴대폰 입력 별도
+                    #pickup_phone2_1,#pickup_phone2_2,#pickup_phone2_3{
+                        width: 24%;
+                        height: 30px;
+                        font-size: 1.3rem;
+                    }
+                }
+                a, #btn_search_rzipcode{
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    border: $bvt-btn-border-gray;
+                    border-radius: 18px;
+                    padding: 5px 12px;
+                }
+            }
+            //환불정보
+            .refund_info{
+                padding: 11px 0;
+                tr{
+                    height: 55px;
+                }
+                th{
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                }
+                a{
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    border: $bvt-btn-border-gray;
+                    border-radius: 18px;
+                    padding: 5px 12px;
+                }
+            }
+        }
+           // 버튼들
+           .ec-base-button{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            a{
+                font-size: 1.3rem;
+                font-weight: 500;
+                border: $bvt-btn-border-gray;
+                border-radius: 18px;
+                padding: 5px 12px;
+            }
+        }
+        //최종 버튼 묶음
+    
+        .apply_btn_wrap{
+        width: 100%;
+        justify-content: center !important;
+        .back{
+            width: 28%;
+            text-align: center;
+            margin-right: 8px;
+            padding: 9px 15px !important;
+        }
+        .apply{
+            width: 28%;
+            text-align: center;
+            background: $bvt-blue;
+            color: $bvt-white;
+            font-weight: 600;
+            padding: 9px 15px !important;
+        }
+        }
+        //옵션 레이어{
+            .optionModify{
+                width: 100%;
+                max-width: 350px;
+                .header{
+                    padding: 0;
+                    height: 30px;
+                }
+            }
+        
+        
+        //우편번호 검색
+        #zipcodeLayer #layerZipcode{
+            width: 100%;
+            max-width: 350px !important;
+        }
+    }
+    
+}
+
