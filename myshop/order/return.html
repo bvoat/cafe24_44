@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="path">
+<div class="path" style="margin-top: 81px;">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
@@ -12,7 +12,7 @@
     <h2>반품신청</h2>
 </div>
 
-<div module="Myshop_OrderHistoryApplyReturn">
+<div module="Myshop_OrderHistoryApplyReturn" style="margin-bottom: 120px;"></div>>
     <!--@css(/css/module/myshop/orderHistoryApplyReturn.css)-->
     <!--
         $isRuleBasedAddrForm = T
@@ -334,7 +334,7 @@
         <p class="ec-base-help txtWarn {$refund_account_display|display}">현금환불 발생시 등록된 환불계좌로 환불 처리 됩니다.</p>
     </div>
     <div class="ec-base-button">
-        <a href="#none" class="btnSubmitFix sizeM" onclick="OrderApply.apply(); return false;">반품신청</a>
+        <a href="#none" class="btnSubmitFix sizeM" onclick="OrderApply.apply(); return false;" style="width: 30%; font-size: 1.5rem;"></a>>반품신청</a>
         <a href="/myshop/order/list.html{$back_page_param}" class="btnNormalFix sizeM">이전페이지</a>
     </div>
 </div>
