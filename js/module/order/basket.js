@@ -2,20 +2,20 @@
     // 상품리스트 전체선택
     $('#product_select_all').on('click', function() {
         var _status = $(this).data('status');
-
+    
         $('[id^="basket_chk_id_"]').each(function(){
             var bChecked = $(this).is(":checked");
-
             if (_status == 'off') {
                 if (bChecked === false) $(this).prop('checked', true);
             } else {
                 $(this).prop('checked', false);
             }
         });
-
+    
         $(this).data('status', _status == 'off' ? 'on' : 'off');
         fixedLayerPriceSet();
     });
+
 
     // 고정영역에 상품정보 세팅
     var fixedLayerPriceSet = function() {
@@ -61,9 +61,7 @@
         $('[id="'+id+'"]').prop('checked', true);
         Basket.deleteBasket();
     }
-});
-
-
+}(jQuery1_11_2));
 
 //장바구니 상품이 없을 때 전체선택 버튼 없애기
 

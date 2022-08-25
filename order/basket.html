@@ -11,7 +11,8 @@
     <section id="BasketSection" module="Order_BasketPackage">
         <div class="basket_count" module="Order_TabInfo">
             <p>장바구니 상품 {$basket_count}개</p>
-            <button id="product_select_all" class="prd_select_btn">전체선택</button>
+            <button id="product_select_all" class="prd_select_btn" data-status="off">전체선택</button>
+            
         </div>
         <!-- empty -->
         <div class="empty" module="Order_Empty">
@@ -714,4 +715,9 @@
 
     </section>
 </article>
-<!--@js(/js/module/order/basket.js)-->
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+window.jQuery1_11_2 = jQuery.noConflict(true);
+</script>
+<script src="/js/module/order/basket.js"></script>
