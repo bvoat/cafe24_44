@@ -428,8 +428,8 @@
     background-color: #F8F9FD;
     border-radius: 7px;
     padding: 17px;
-    margin:35px 0;
-    }
+    margin: 35px 0;
+}
 /* 상품 정보 */
 
 .info_box {
@@ -535,9 +535,8 @@
 /* 펀딩 정보 */
 
 .funding_box {
-    padding: 0 11px;
+    padding: 22px 11px 0;
     border-radius: 0 0 12px 12px;
-    margin-bottom: 45px;
 }
 
 .funding_box>.gradientline {
@@ -545,7 +544,7 @@
 }
 
 .notice_box {
-    margin-top: 40px;
+    // margin-top: 40px;
 }
 
 /* 펀딩 공지 */

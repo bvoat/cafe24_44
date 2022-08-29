@@ -166,7 +166,7 @@
           align-items: center;
   background: #022CFF;
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 1.22rem;
   border-radius: 50%;
   width: 55px;
   height: 55px;
@@ -174,10 +174,11 @@
   right: 11px;
   float: right;
   padding: 0 !important;
+  text-align: center;
 }
 
 .bvt-funding > li .ddayPrd > span {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .bvt-funding > li .desc {
