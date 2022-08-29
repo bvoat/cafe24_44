@@ -154,7 +154,7 @@
 }
 
 .bvt-funding > li .ddayPrd {
-  position: absolute;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,12 +166,14 @@
           align-items: center;
   background: #022CFF;
   color: #ffffff;
-  font-size: 1.45rem;
+  font-size: 1.25rem;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  right: 10px;
-  top: 225px;
+  width: 55px;
+  height: 55px;
+  top: -30px;
+  right: 11px;
+  float: right;
+  padding: 0 !important;
 }
 
 .bvt-funding > li .ddayPrd > span {

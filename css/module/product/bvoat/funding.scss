@@ -132,18 +132,20 @@
             }
         }
         .ddayPrd {
-            position: absolute;
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             background: $bvt-blue;
             color: $bvt-white;
-            font-size: 1.45rem;
+            font-size: 1.25rem;
             border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            right: 10px;
-            top: 225px;
+            width: 55px;
+            height: 55px;
+            top: -30px;
+            right: 11px;
+            float: right;
+            padding: 0 !important;
             >span{
                 font-weight: 500;
             }
