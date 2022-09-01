@@ -1,0 +1,233 @@
+@charset "utf-8";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
+
+#specialProject {
+    width: 100%;
+    max-width: 450px;
+    margin: 81px 0 100px;
+
+    #specialProjectTitle {
+        width: 100%;
+        max-width: 450px;
+        margin-bottom: 18px;
+        padding: 0 11px;
+
+        // 내부 점선
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            max-width: 450px;
+            height: 2px;
+            margin: 47px 0 54px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='428' height='1'%3E%3Cpath data-name='선 328' fill='none' stroke='%23707070' stroke-dasharray='3 7' d='M0 .5h428'/%3E%3C/svg%3E") no-repeat center;
+        }
+        
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            border: none;
+        }
+
+        h3 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: $bvt-darkgray;
+
+            span {
+                display: inline-block;
+
+                &:nth-child(1) {
+                    margin-bottom: 14px;
+                }
+            }
+        }
+        .banner{
+            width: 100%;
+            margin: 0 0 29px;
+            >img{
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .project_productlist_wrap {
+        width: 100%;
+        max-width: 450px;
+        padding: 0 11px;
+
+
+        .project_coupon_wrap {
+            width: 100%;
+            max-width: 450px;
+
+            .coupon_title {
+                font-size: 2.2rem;
+                font-weight: 700;
+                text-align: left;
+            }
+
+            .coupon_list {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 23px;
+
+                >li {
+                    position: relative;
+                    width: 48.5%;
+                    height: 87px;
+                    border: $bvt-btn-border;
+                    border-radius: 10px;
+                    background: $bvt-bg-skyblue;
+
+
+                    a {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: center;
+                        align-items: flex-start;
+                        width: 100%;
+                        height: 100%;
+                        box-sizing: border-box;
+                        border-radius: 10px;
+                        padding: 0 7.4%;
+                        &::after{
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            width: 24px;
+                            height: 24px;
+                            background: url('/bvtIMG/icon/coupon_down_arr.png') no-repeat center;
+                            background-size: contain;
+                            right: 7.6%;
+                        }
+                        >p {
+                            color: $bvt-blue;
+                            &:nth-child(1) {
+                                font-size: 1.4rem;
+                                font-weight: 400;
+
+                            }
+
+                            &:nth-child(2) {
+                                font-size: 1.9rem;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    //쿠폰 글자 미디어쿼리 반응형 대응
+                    @media (max-width: 430px) {
+                        a{
+                            &::after{
+                                content: "";
+                                width: 22px;
+                                height: 22px;
+                            }
+                            >p {
+                                &:nth-child(1) {
+                                    font-size: 1.38rem;
+                                }
+
+                                &:nth-child(2) {
+                                    font-size: 1.82rem;
+                                }
+                            }
+                        }
+                    }
+                    @media (max-width: 400px) {
+                        a{
+                            &::after{
+                                content: "";
+                                width: 20px;
+                                height: 20px;
+                            }
+                            >p {
+                                &:nth-child(1) {
+                                    font-size: 1.32rem;
+                                }
+
+                                &:nth-child(2) {
+                                    font-size: 1.7rem;
+                                }
+                            }
+                        }
+                    }
+                    @media (max-width: 370px) {
+                        a{
+                            &::after{
+                                content: "";
+                                width: 16px;
+                                height: 16px;
+                            }
+                            >p {
+                                &:nth-child(1) {
+                                    font-size: 1.23rem;
+                                }
+
+                                &:nth-child(2) {
+                                    font-size: 1.55rem;
+                                }
+                            }
+                        }
+                    }
+                    @media (max-width: 350px) {
+                        a{
+                            &::after{
+                                content: "";
+                                width: 13px;
+                                height: 13px;
+                            }
+                            >p {
+                                &:nth-child(1) {
+                                    font-size: 1.2rem;
+                                }
+
+                                &:nth-child(2) {
+                                    font-size: 1.5rem;
+                                }
+                            }
+                        }
+                    }
+                    @media (max-width: 330px) {
+                        a{
+                            &::after{
+                                content: "";
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .project_productlist {
+            margin-bottom: 50px;
+            >ul {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+
+                >li {
+                    width: 48.2%;
+                    margin-bottom: 28.7px;
+                }
+            }
+        }
+
+
+        @include wish-button(38px, 38px, 8.7px, 12.2px)
+    }
+}

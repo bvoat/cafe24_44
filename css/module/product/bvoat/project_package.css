@@ -1,0 +1,210 @@
+@charset "UTF-8";
+#specialProject {
+  width: 100%;
+  max-width: 450px;
+  margin: 81px 0 100px;
+}
+#specialProject #specialProjectTitle {
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 18px;
+  padding: 0 11px;
+}
+#specialProject #specialProjectTitle::after {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  height: 2px;
+  margin: 47px 0 54px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='428' height='1'%3E%3Cpath data-name='선 328' fill='none' stroke='%23707070' stroke-dasharray='3 7' d='M0 .5h428'/%3E%3C/svg%3E") no-repeat center;
+}
+#specialProject #specialProjectTitle h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+}
+#specialProject #specialProjectTitle h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+#specialProject #specialProjectTitle h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #707070;
+}
+#specialProject #specialProjectTitle h4 span {
+  display: inline-block;
+}
+#specialProject #specialProjectTitle h4 span:nth-child(1) {
+  margin-bottom: 14px;
+}
+#specialProject #specialProjectTitle .banner {
+  width: 100%;
+  margin: 0 0 29px;
+}
+#specialProject #specialProjectTitle .banner > img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#specialProject .project_productlist_wrap {
+  width: 100%;
+  max-width: 450px;
+  padding: 0 11px;
+}
+#specialProject .project_productlist_wrap .project_coupon_wrap {
+  width: 100%;
+  max-width: 450px;
+}
+#specialProject .project_productlist_wrap .project_coupon_wrap .coupon_title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: left;
+}
+#specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 23px;
+}
+#specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li {
+  position: relative;
+  width: 48.5%;
+  height: 87px;
+  border: 1px solid #022CFF;
+  border-radius: 10px;
+  background: #F5F6FC;
+}
+#specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 0 7.4%;
+}
+#specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: url("/bvtIMG/icon/coupon_down_arr.png") no-repeat center;
+  background-size: contain;
+  right: 7.6%;
+}
+#specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a > p {
+  color: #022CFF;
+}
+#specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a > p:nth-child(1) {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+#specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a > p:nth-child(2) {
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+@media (max-width: 430px) {
+  #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a::after {
+    content: "";
+    width: 22px;
+    height: 22px;
+  }
+  #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a > p:nth-child(1) {
+    font-size: 1.38rem;
+  }
+  #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a > p:nth-child(2) {
+    font-size: 1.82rem;
+  }
+}
+@media (max-width: 400px) {
+  #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+  }
+  #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a > p:nth-child(1) {
+    font-size: 1.32rem;
+  }
+  #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a > p:nth-child(2) {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 370px) {
+  #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+  }
+  #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a > p:nth-child(1) {
+    font-size: 1.23rem;
+  }
+  #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a > p:nth-child(2) {
+    font-size: 1.55rem;
+  }
+}
+@media (max-width: 350px) {
+  #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a::after {
+    content: "";
+    width: 13px;
+    height: 13px;
+  }
+  #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a > p:nth-child(1) {
+    font-size: 1.2rem;
+  }
+  #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a > p:nth-child(2) {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 330px) {
+  #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a::after {
+    content: "";
+    display: none;
+  }
+}
+#specialProject .project_productlist_wrap .project_productlist {
+  margin-bottom: 50px;
+}
+#specialProject .project_productlist_wrap .project_productlist > ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#specialProject .project_productlist_wrap .project_productlist > ul > li {
+  width: 48.2%;
+  margin-bottom: 28.7px;
+}
+#specialProject .project_productlist_wrap .wish {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  bottom: 8.7px;
+  left: 12.2px;
+}
+#specialProject .project_productlist_wrap .wish button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  cursor: pointer;
+}
+#specialProject .project_productlist_wrap .wish button img {
+  position: relative;
+  width: 57.4%;
+  height: 52.7%;
+  margin-top: 2.5px;
+}/*# sourceMappingURL=project_package.css.map */

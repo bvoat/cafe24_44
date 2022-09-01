@@ -1,81 +1,134 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div module="Project_Package">
-    <!--@css(/css/module/product/project_package.css)-->
-    <div class="path" module="project_head">
-        <span>현재 위치</span>
-        <ol>
-            <li><a href="/">홈</a></li>
-            <li title="현재 위치"><strong>기획전</strong></li>
-        </ol>
-    </div>
+<!--@css(/css/module/product/project_package.css)-->
+<!--@css(/css/module/product/bvoat/project_package.css)-->
 
-    <div class="title" module="product_headcategory">
+<article id="specialProject" module="Project_Package">
+
+    <section id="specialProjectTitle" class="title" module="product_headcategory">
         <p class="banner">{$top_image_tag}</p>
-        <h2>{$title_text_or_image}</h2>
-    </div>
+        <h2 class="displaynone"><span>{$title_text_or_image}</span></h2>
+        <h3></h3>
+        <h4>
+            <span>
+            </span>
+            <span>
+            </span>
+        </h4>
+    </section>
 
-
-    <ul class="menuCategory">
-        <li module="product_projectcategory" style="display:{$display};">
-            <a href="#{$cate_id}">{$category_name} <span class="count {$product_count_display|display}">({$product_count})</span></a>
+    <!-- 아래 ul 주석처리시 오류 발생 -->
+    <ul class="displaynone">
+        <li module="product_projectcategory" class="displaynone">
+            <a href="#{$cate_id}">{$category_name} <span
+                    class="count {$product_count_display|display}">({$product_count})</span></a>
         </li>
     </ul>
 
-    <div module="project_list">
+
+    <section class="project_productlist_wrap" module="project_list">
         <!--
             $basket_result = /product/add_basket.html
             $basket_option = /product/basket_option.html
         -->
-        <h3><span id="{$cate_id}">{$category_name}</span></h3>
-
-
-        <div module="project_productlist" class="ec-base-product">
-            <ul class="prdList grid4">
-                <li id="anchorBoxId_{$product_no}">
-                    <div class="thumbnail">
-                        <div class="prdImg">
-                            <a href="{$link_product_detail}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" alt="{$seo_alt_tag}" /><span module="project_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
-                            <span class="wish">{$list_wish_icon}</span>
-                        </div>
-                        <div class="icon">
-                            <div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon}</div>
-                            <div class="button">
-                               <div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon} <strong>{$disp_likeprd_count}</strong></button></div>
-                               <div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}
-                           </div>
-                        </div>
-                    </div>
-                    <div class="description">
-                        <strong class="name"><a href="{$link_product_detail}">{$product_name}</a></strong>
-                        <ul module="project_ListItem" class="spec">
-                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
-                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
-                        </ul>
-                    </div>
-                </li>
-                <li id="anchorBoxId_{$product_no}">
-                    <div class="thumbnail">
-                        <div class="prdImg">
-                            <a href="{$link_product_detail}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" alt="{$seo_alt_tag}" /><span module="project_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
-                            <span class="wish">{$list_wish_icon}</span>
-                        </div>
-                        <div class="icon">
-                            <div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon}</div>
-                            <div class="button">
-                               <div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon} <strong>{$disp_likeprd_count}</strong></button></div>
-                               <div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}
-                           </div>
-                        </div>
-                    </div>
-                    <div class="description">
-                        <strong class="name"><a href="{$link_product_detail}">{$product_name}</a></strong>
-                        <ul module="project_ListItem" class="spec">
-                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
-                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
-                        </ul>
-                    </div>
-                </li>
+        <h3 id="{$cate_id}" class="displaynone" data-brand="{$category_name}"></h3>
+        <!-- 개별 기획전 및 쿠폰 -->
+        <div class="project_coupon_wrap">
+            <h3 class="coupon_title">
+            </h3>
+            <ul class="coupon_list">
             </ul>
         </div>
-    </div>
-</div>
+
+        <div class="project_productlist {$cate_id}" module="project_productlist">
+            <!--@import(/product/product_module/listmain/listmain.html)-->
+        </div>
+    </section>
+</article>
+<script>
+    /* 기획전 타이틀 정보 JSON */
+    /* 기획전이 추가되면 아래에 cate_no 와 title 정보를 객체로 작성하고 하단 반복문을 통해 붙입니다. */
+    const specialProjectTitleData = [
+        {
+            page_cate_no: 736,
+            data: {
+                title: `그냥 예뻐서 골라도<br />
+            기부로 착한 소비가 됩니다.`,
+                sub_title: `<span>가치소비, 예쁘고 의미 있는 액세서리로 하는 법.
+            </span>
+            <span>
+                비보트가 내 돈의 가치가 어디에 가는지<br />
+                투명하게 공개하는 가치 있는 브랜드를 엄선해 소개합니다.
+            </span>`
+            }
+        }
+    ];
+
+    /* 기획전 타이틀 삽입 */
+    window.addEventListener("load",()=>{
+        //타이틀 node 찾기
+    const specialProjectTitle = document.querySelector("#specialProjectTitle");
+    //URL에서 cate_no 받기
+    let searchObj = new URLSearchParams(location.search);
+    let cateNoParam = searchObj.get("cate_no");
+    //반복문 돌려서 붙이기
+    specialProjectTitleData.forEach((cateinfo) => {
+        if (cateinfo.page_cate_no == cateNoParam) {
+            specialProjectTitle.children[2].insertAdjacentHTML("afterbegin", cateinfo.data.title);
+            specialProjectTitle.children[3].insertAdjacentHTML("afterbegin", cateinfo.data.sub_title);
+        }
+    })
+    })
+    /* 개별 기획전 타이틀 정보 JSON */
+    /* 하위 기획전이 추가되면 아래에 cate_name으로 타이틀과 쿠폰 정보를 객체로 작성하고 하단 반복문을 통해 붙입니다. */
+
+    const specialProjectSubListData ={
+            '뽀뚜빠뚜 ':
+            {
+                title: `🐶 유기견, 유기묘에게<br/>사료와 간식을 후원하는 ‘뽀뚜빠뚜’`,
+                coupon: `
+                <li class="coupon"><a href="#"><p>19,000원 이상 구매 시</p><p>1,000원 할인쿠폰</p></a></li><li><a herf="#"><p>29,000원 이상 구매 시</p><p>1,500원 할인쿠폰</p></a></li>`
+            },
+        
+            'FFM13': 
+            {
+                title: `🌳 한반도 우리 숲에<br/> 나무 심기를 동참하는 ‘FFM13’`,
+                coupon: `<li class="coupon"><a href="#"><p>29,000원 이상 구매 시</p><p>1,500원 할인쿠폰</p></a></li>`
+            },
+        
+            '119레오': 
+            {
+                title: `🧑‍🚒 암 투병 소방관에게<br/>지원금을 전달하는 ‘110REO’`,
+                coupon: `<li class="coupon"><a href="#"><p>119REO 전용</p><p>5% 할인 쿠폰</p></a></li>`
+            },
+
+            '88하다': 
+            {
+                title: `🐋 WWF 해양 동물<br/>보존에 기부하는 ‘88하다’`,
+                coupon: `
+                <li class="coupon"><a href="#"><p>4만 원 이상 구매 시</p><p>2,000원 할인 쿠폰</p></a></li>`
+            },
+    
+            '스모어웨이브' :
+            {
+                title: `👩‍🦰 네팔 취약 계층 여성의<br/>자립을 지원하는 ‘스모어웨이브’`,
+                coupon: `<li class="coupon"><a href="#"><p>19,000원 이상 구매 시</p><p>1,000원 할인쿠폰</p></a></li><li><a herf="#"><p>29,000원 이상 구매 시</p><p>1,500원 할인쿠폰</p></a></li>`
+            }
+     }
+
+ 
+    //반복문 돌려서 붙이기
+    window.addEventListener("load", ()=>{
+           //타이틀 node 찾기
+            const specialProjectList = document.querySelectorAll(".project_productlist_wrap");
+
+            for(let i=0; i<specialProjectList.length; i++){
+            let brand = specialProjectList[i].children[0].dataset.brand;
+            let brandData = specialProjectSubListData[brand];
+
+            //브랜드 제목
+            specialProjectList[i].children[1].children[0].insertAdjacentHTML("afterbegin",brandData.title);
+            //브랜드 쿠폰
+            specialProjectList[i].children[1].children[1].insertAdjacentHTML("afterbegin",brandData.coupon);
+        }
+    });
+</script>

@@ -83,16 +83,6 @@
     }
 }
 
-/* 지금 구매중 배경 */
-#indexProductBvtH{
-    padding: 46px 0 60px 11px;
-    background: $bvt-main-bg;
-/* 지금 구매중 이미지 - head 사이 간격 */
-    .thumb{
-        margin-bottom: 12px;
-    }
-}
-
 /* 메인진열  공통 */
 .index_list{
     position: relative;
@@ -127,10 +117,41 @@
 
 }
 
-
-
 #indexListmain{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
 }
+
+/* 개별 메인 진열 */
+
+/* 기획전 */
+#indexProductBvt73{
+    #indexProductListTitle{
+        position: relative;
+        >img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            image-rendering: auto;
+            padding-right: 11px;
+        }
+        >h3{
+            position: absolute;
+            top: calc(50% - 40px);
+            left: 15.5px;
+        }
+    }
+   
+}
+
+/* 지금 구매중 배경 */
+#indexProductBvt72{
+    padding: 46px 0 60px 11px;
+    background: $bvt-main-bg;
+/* 지금 구매중 이미지 - head 사이 간격 */
+    .thumb{
+        margin-bottom: 12px;
+    }
+}
+

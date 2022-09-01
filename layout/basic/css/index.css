@@ -6,63 +6,41 @@
   /* 인덱스 보터 카운트 */
   /* 더보기 버튼 */
   /* 더 보러가기 버튼 */
-  /* 지금 구매중 배경 */
   /* 메인진열  공통 */
   /* heading과 간격 조절 (single line or small size (23px/15px) */
 }
-
 #bvtHome #indexUserCnt {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   padding: 21.5px 0;
   background: #F5F6FA;
   margin: 54px 0 43px 0;
 }
-
 #bvtHome #indexUserCnt #indexUserCntTitle h3 {
   font-size: 1.4rem;
   color: #707070;
   font-weight: normal;
 }
-
 #bvtHome #indexUserCnt #indexUserCntBanner #joinbanner {
   border: 0;
   font-size: 21px;
   font-weight: bold;
   margin: 6px 0 0 0;
 }
-
 #bvtHome #indexUserCnt #indexUserCntBanner #joinbanner em {
   color: #022CFF;
 }
-
 #bvtHome .paginate_moreview {
   width: 100%;
   height: 42px;
   padding-right: 11px;
 }
-
 #bvtHome .paginate_moreview .moreview_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 42px;
   background: #ffffff;
@@ -73,28 +51,19 @@
   font-weight: bold;
   cursor: pointer;
 }
-
 #bvtHome .paginate_moreview .moreview_btn svg {
   margin: 2px 0 0 6px;
 }
-
 #bvtHome .paginate_movelist {
   width: 100%;
   height: 42px;
   margin-top: 27px;
   padding-right: 11px;
 }
-
 #bvtHome .paginate_movelist .movelist_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 42px;
   background: none;
@@ -104,21 +73,9 @@
   font-weight: normal;
   cursor: pointer;
 }
-
 #bvtHome .paginate_movelist .movelist_btn svg {
   margin-left: 6px;
 }
-
-#bvtHome #indexProductBvtH {
-  padding: 46px 0 60px 11px;
-  background: #F5F6FA;
-  /* 지금 구매중 이미지 - head 사이 간격 */
-}
-
-#bvtHome #indexProductBvtH .thumb {
-  margin-bottom: 12px;
-}
-
 #bvtHome .index_list {
   position: relative;
   display: block;
@@ -127,42 +84,58 @@
   padding: 0 0 0 11px;
   margin-bottom: 96px;
 }
-
 #bvtHome .index_list .index_list_title {
   margin-bottom: 22px;
 }
-
 #bvtHome .index_list .index_list_title h3 {
   font-size: 2.28rem;
   font-weight: bold;
   margin-bottom: 3px;
   letter-spacing: -0.3px;
 }
-
 #bvtHome .index_list .index_list_title h4 {
   font-size: 1.3rem;
   font-weight: normal;
   color: #707070;
 }
-
 #bvtHome .small_single_list {
   margin-top: -8px;
 }
-
 #bvtHome .swiper_container {
   overflow: hidden;
 }
 
 #indexListmain {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  align-items: center;
 }
-/*# sourceMappingURL=index.css.map */
+
+/* 개별 메인 진열 */
+/* 기획전 */
+#indexProductBvt73 #indexProductListTitle {
+  position: relative;
+}
+#indexProductBvt73 #indexProductListTitle > img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  image-rendering: auto;
+  padding-right: 11px;
+}
+#indexProductBvt73 #indexProductListTitle > h3 {
+  position: absolute;
+  top: calc(50% - 40px);
+  left: 15.5px;
+}
+
+/* 지금 구매중 배경 */
+#indexProductBvt72 {
+  padding: 46px 0 60px 11px;
+  background: #F5F6FA;
+  /* 지금 구매중 이미지 - head 사이 간격 */
+}
+#indexProductBvt72 .thumb {
+  margin-bottom: 12px;
+}/*# sourceMappingURL=index.css.map */

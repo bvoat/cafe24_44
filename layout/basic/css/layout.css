@@ -7,7 +7,6 @@ body {
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
 }
-
 body #bvtContainer {
   position: relative;
   max-width: 450px;
@@ -15,16 +14,10 @@ body #bvtContainer {
   height: auto;
   margin: 0 auto;
 }
-
 body #bvtContainer #bvtHeader {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  flex-flow: column nowrap;
   max-width: 450px;
   min-width: 200px;
   width: 100%;
@@ -36,7 +29,6 @@ body #bvtContainer #bvtHeader {
   margin: 0 auto;
   z-index: 9;
 }
-
 body #bvtContainer #bvtContents {
   width: 100%;
   max-width: 450px;
@@ -45,7 +37,6 @@ body #bvtContainer #bvtContents {
   z-index: 0;
   overflow: hidden;
 }
-
 body #bvtContainer #bvtBottom {
   position: fixed;
   display: block;
@@ -56,8 +47,7 @@ body #bvtContainer #bvtBottom {
   bottom: 0;
   margin: 0 auto;
   background: #ffffff;
-  -webkit-box-shadow: 0px -3px 11px #CBCBCB66;
-          box-shadow: 0px -3px 11px #CBCBCB66;
+  box-shadow: 0px -3px 11px rgba(203, 203, 203, 0.4);
   z-index: 9;
   padding-bottom: 0;
   padding-bottom: constant(safe-area-inset-bottom);
@@ -68,13 +58,10 @@ body #bvtContainer #bvtBottom {
   .small_mobile_hide {
     display: none;
   }
-  .small_mobile_input::-webkit-input-placeholder {
+  .small_mobile_input::-moz-placeholder {
     font-size: 8px !important;
   }
   .small_mobile_input:-ms-input-placeholder {
-    font-size: 8px !important;
-  }
-  .small_mobile_input::-ms-input-placeholder {
     font-size: 8px !important;
   }
   .small_mobile_input::placeholder {
@@ -85,7 +72,6 @@ body #bvtContainer #bvtBottom {
     font-size: 7px !important;
   }
 }
-
 .whole_stamp {
   display: block;
   width: 100%;
@@ -100,5 +86,4 @@ body #bvtContainer #bvtBottom {
   height: 100%;
   background: url("https://bvoatofficial.cafe24.com/bvtIMG/icon/half-stamp.png") no-repeat;
   background-size: contain;
-}
-/*# sourceMappingURL=layout.css.map */
+}/*# sourceMappingURL=layout.css.map */

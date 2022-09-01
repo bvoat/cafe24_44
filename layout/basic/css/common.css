@@ -584,14 +584,14 @@ div.layerProgress {
 .price_wrap>.discount {
     font-size: 1.6rem;
     font-weight: bold;
-    color: #FF7600;
+    color: #F94D4D;
     margin-right: 0.88rem;
 }
 
 .price_wrap>.price_item {
     font-size: 1.6rem;
     font-weight: bold;
-    color: #022cff;
+    color: #292929;
 }
 
 .price_item::after {
@@ -620,11 +620,11 @@ div.layerProgress {
 }
 
 .onpromotion {
-    color: #FF7600 !important;
+    color: #292929 !important;
 }
 
 .onpromotion::after {
-    color: #FF7600 !important;
+    color: #292929 !important;
 }
 
 @media (max-width: 344px) {
