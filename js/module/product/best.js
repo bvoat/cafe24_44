@@ -9,21 +9,24 @@
         })
         .then((response) => response.json())
         .then((response) => {
-            if(response.success){
+            if(response.success){             
                 const tag_title = document.querySelectorAll(".tag_title")
                 const cate_item = document.querySelectorAll(".cate_item");
-                const purchasers_num = document.querySelectorAll(".purchasers_num")
-                response.data.map((rank, i)=>{
+                const purchasers_num = document.querySelectorAll(".purchasers_num");
+                console.log('length check -> listmain : ', tag_title.length, ' data : ', response.data.length);   
+
+                //listmain 갯수만큼 반복하기
+                for(let i=0; i<tag_title.length; i++){
+                    let data = response.data[i];
                     tag_title[i].insertAdjacentHTML("afterbegin", 
-                    `${rank.middle_category_name}
-                    <a class="move_arrow" href="/product/list.html?cate_no=${rank.middle_category_no}#${rank.middle_category_name}" title="${rank.middle_category_name}"></a>`);
+                    `${data.middle_category_name}
+                    <a class="move_arrow" href="/product/list.html?cate_no=${data.middle_category_no}#${data.middle_category_name}" title="${data.middle_category_name}"></a>`);
 
-                    cate_item[i].insertAdjacentHTML("afterbegin", `<a href="/product/list.html?cate_no=${rank.small_category_no}#${rank.small_category_name}">${rank.small_category_name}</a>`);
+                    cate_item[i].insertAdjacentHTML("afterbegin", `<a href="/product/list.html?cate_no=${data.small_category_no}#${data.small_category_name}">${data.small_category_name}</a>`);
 
-                    purchasers_num[i].setAttribute("data-num-ani-end", `${rank.salesvolume}`);
-                    purchasers_num[i].setAttribute("data-num-ani-stride", '1')
-
-                })
+                    purchasers_num[i].setAttribute("data-num-ani-end", `${data.salesvolume}`);
+                    purchasers_num[i].setAttribute("data-num-ani-stride", '1');
+                }
             }
         })
         .then(()=>{
