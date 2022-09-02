@@ -12,7 +12,7 @@ var swiper = new Swiper(".product_relation_list", {
   },
 });
 
-// 소비기록 수신
+// 리뷰 수신
 const buy_record_frame = document.querySelector("#buy_records_detail > iframe");
 if (buy_record_frame != null) {
   //상품 번호 수신
@@ -97,9 +97,9 @@ const qnaControl = () => {
   }
 };
 
-//소비기록 컨트롤
+//리뷰 컨트롤
 const buyRecordFrameControl = () => {
-  // 가치소비기록 iframe 높이 조절
+  // 리뷰 iframe 높이 조절
   let bh_frame = document.querySelectorAll("#buy_record_frame");
   let bh_detail = document.querySelectorAll("#buy_records_detail");
 
@@ -288,7 +288,7 @@ const reciveTagDetail = (prd_no) => {
 };
  
 /* 최종 함수 실행 */
-//소비기록 컨트롤
+//리뷰 컨트롤
 buyRecordFrameControl();
 //크루 등급 마일리지 2배 변환
 crewValueControl(2);
