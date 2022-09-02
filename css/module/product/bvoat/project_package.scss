@@ -11,7 +11,6 @@
         width: 100%;
         max-width: 450px;
         margin-bottom: 18px;
-        padding: 0 11px;
 
         // 내부 점선
         &::after {
@@ -24,7 +23,7 @@
             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='428' height='1'%3E%3Cpath data-name='선 328' fill='none' stroke='%23707070' stroke-dasharray='3 7' d='M0 .5h428'/%3E%3C/svg%3E") no-repeat center;
         }
         
-
+//기획전 이미지 or 카테고리 네임
         h2 {
             font-size: 1.8rem;
             font-weight: 700;
@@ -35,12 +34,14 @@
             font-size: 2.4rem;
             font-weight: 700;
             margin-bottom: 20px;
+            padding: 0 11px;
         }
 
         h4 {
             font-size: 1.5rem;
             font-weight: 400;
             color: $bvt-darkgray;
+            padding: 0 11px;
 
             span {
                 display: inline-block;
@@ -131,8 +132,8 @@
                         a{
                             &::after{
                                 content: "";
-                                width: 22px;
-                                height: 22px;
+                                width: 20.5px;
+                                height: 20.5px;
                             }
                             >p {
                                 &:nth-child(1) {
@@ -149,8 +150,8 @@
                         a{
                             &::after{
                                 content: "";
-                                width: 20px;
-                                height: 20px;
+                                width: 17.5px;
+                                height: 17.5px;
                             }
                             >p {
                                 &:nth-child(1) {

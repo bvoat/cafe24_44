@@ -8,7 +8,6 @@
   width: 100%;
   max-width: 450px;
   margin-bottom: 18px;
-  padding: 0 11px;
 }
 #specialProject #specialProjectTitle::after {
   content: "";
@@ -28,11 +27,13 @@
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 20px;
+  padding: 0 11px;
 }
 #specialProject #specialProjectTitle h4 {
   font-size: 1.5rem;
   font-weight: 400;
   color: #707070;
+  padding: 0 11px;
 }
 #specialProject #specialProjectTitle h4 span {
   display: inline-block;
@@ -113,8 +114,8 @@
 @media (max-width: 430px) {
   #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a::after {
     content: "";
-    width: 22px;
-    height: 22px;
+    width: 20.5px;
+    height: 20.5px;
   }
   #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a > p:nth-child(1) {
     font-size: 1.38rem;
@@ -126,8 +127,8 @@
 @media (max-width: 400px) {
   #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a::after {
     content: "";
-    width: 20px;
-    height: 20px;
+    width: 17.5px;
+    height: 17.5px;
   }
   #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a > p:nth-child(1) {
     font-size: 1.32rem;
