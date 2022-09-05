@@ -1,11 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAIA,AAAA,kBAAkB,CAAC;EACf,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,MAAM;EACd,OAAO,EAAE,MAAM;CAClB;;AACD,AAAA,eAAe,CAAC;EACZ,QAAQ,EAAE,KAAK;EACf,GAAG,EAAE,GAAG;EACR,OAAO,EAAE,MAAM;CAClB",
-    "sources": [
-        "buy_records.scss",
-        "../../../abstracts/_mixin.scss",
-        "../../../abstracts/_variables.scss"
-    ],
-    "names": [],
-    "file": "buy_records.css"
-}
+{"version":3,"sources":["buy_records.scss","buy_records.css"],"names":[],"mappings":"AAKA;EACI,WAAA;EACA,gBAAA;EACA,iBAAA;EACA,mBAAA;ACJJ;ADMI;EACI,WAAA;ACJR;;ADUA;EACI,eAAA;EACA,aAAA;EACA,wBAAA;EACA,uBAAA;EACA,mBAAA;EACA,QAAA;EACA,aAAA;ACPJ","file":"buy_records.css"}
