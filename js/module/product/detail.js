@@ -1,9 +1,14 @@
 /* ------------------------------------------------------------------------------------ */
 /* bvt */
-document.querySelector(".btnHelp").innerHTML("");
-document.querySelector(".btnClose").innerHTML("");
+window.addEventListener("load", ()=>{
+  setTimeout(()=>{
+    document.querySelector(".differentialShipping").style.display = "none";
+    document.querySelector(".btnHelp").innerHTML="";
+    document.querySelector(".btnClose").innerHTML="";
+    
+  }, 1000)
 
-
+})
 
 // relation list 스와이퍼
 var swiper = new Swiper(".product_relation_list", {
