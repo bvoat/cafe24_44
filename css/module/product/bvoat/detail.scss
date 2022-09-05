@@ -149,20 +149,17 @@
 
                 >div{
                     position: absolute;
-                    left: -7px;
+                    left: 142px;
                     z-index: 9;
-                    img{
-                        display: none;
-                    }
+                    
                     >a{ 
-                            display: block;
-                            width: 5px;
-                            height: 6px;
-                            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 5'%3E%3Ccircle cx='2.5' cy='2.5' r='2.5' fill='%23022cff' data-name='타원 711'/%3E%3C/svg%3E") no-repeat center;   
+                            display: block; 
                     }
 
                     >div{
-                        background: $bvt-bg-skyblue;
+                        background: $bvt-white;
+                        border: $bvt-btn-border-gray;
+                        border-radius: 3px;
                         padding: 9px;
                     }
                     .title, p{
@@ -183,12 +180,20 @@
                             }
                         }
                     }
-                    .close>a,.btnClose{
+                    .close,.btnClose{
                         display: block;
-                            width: 10px;
-                            height: 10px;
-                            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.43 13.42'%3E%3Cpath fill='%23022cff' d='m8.3 6.71 4.8-4.8A1.12 1.12 0 0 0 11.52.33l-4.8 4.8-4.8-4.8A1.12 1.12 0 1 0 .33 1.9l4.8 4.8-4.8 4.8a1.12 1.12 0 0 0 1.58 1.59l4.8-4.8 4.8 4.8a1.12 1.12 0 1 0 1.59-1.59Z' data-name='Icon ionic-ios-close'/%3E%3C/svg%3E") no-repeat center;  
-                            margin-top: 5px;
+                        margin-top: 5px;
+                    }
+                    .close{
+                        a{
+                            display: block;
+                        width: 10px;
+                        height: 10px;
+                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.43 13.42'%3E%3Cpath fill='%23022cff' d='m8.3 6.71 4.8-4.8A1.12 1.12 0 0 0 11.52.33l-4.8 4.8-4.8-4.8A1.12 1.12 0 1 0 .33 1.9l4.8 4.8-4.8 4.8a1.12 1.12 0 0 0 1.58 1.59l4.8-4.8 4.8 4.8a1.12 1.12 0 1 0 1.59-1.59Z' data-name='Icon ionic-ios-close'/%3E%3C/svg%3E") no-repeat center;
+                        }
+                        >img{
+                            display: none;
+                        }
                     }
                 }
 
