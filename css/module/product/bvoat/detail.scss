@@ -143,53 +143,55 @@
                         color: $bvt-blue;
                     }
                 }
-                .btnTooltip{
-                    position: absolute;
-                    width: auto;
-                    z-index: 9;
-                    top: 0;
-                    left: 145px;
-                    background: $bvt-white;
-                    >a{
-                        display: block;
-                        width: 6.21px;
-                        height: 10px;
-                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6.21 10'%3E%3Cpath fill='%23022cff' d='M3.09 0A3.23 3.23 0 0 0 .74.82 2.73 2.73 0 0 0 0 2.42l1.25.17a1.51 1.51 0 0 1 .39-.87 1.86 1.86 0 0 1 1.45-.47 2.2 2.2 0 0 1 1.52.42 1.04 1.04 0 0 1 .35.83c0 1.04-.42 1.32-1.05 1.87A3.56 3.56 0 0 0 2.46 7.2v.31h1.25V7.2a2.08 2.08 0 0 1 1.01-1.9 3.58 3.58 0 0 0 1.5-2.81A2.4 2.4 0 0 0 5.46.74 3.46 3.46 0 0 0 3.1 0Zm-.63 8.75V10h1.25V8.75Z' data-name='Icon open-question-mark'/%3E%3C/svg%3E") no-repeat center;
-                        >img{
-                            display: none;
-                        }
-                    }
-                    .title{
-                        font-size: 1.2rem;
-                        color: $bvt-darkgray;
-                        margin-bottom: 0.5rem;
+                .delv_price_B{
+                    font-weight: 700 !important;
+                }
 
+                >div{
+                    position: absolute;
+                    left: -7px;
+                    z-index: 9;
+                    .btnHelp,img{
+                        display: none;
                     }
-                    .content{
-                        ul>li{
+                    >a{ 
+                            display: block;
+                            width: 5px;
+                            height: 6px;
+                            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 5'%3E%3Ccircle cx='2.5' cy='2.5' r='2.5' fill='%23022cff' data-name='타원 711'/%3E%3C/svg%3E") no-repeat center;   
+                    }
+
+                    >div{
+                        background: $bvt-bg-skyblue;
+                        padding: 9px;
+                    }
+                    .title, p{
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                        margin-bottom: 3px;
+                    }
+                    ul{
+                        li{
                             margin: 0;
-                            font-size: 1rem;
-                            >span{
-                                margin-left: 3px;
+                            font-size: 1.1rem;
+                            strong{
+                                margin-right: 5px;
+                            }
+                            span{
+                                font-weight: 600;
+                                color: $bvt-blue;
                             }
                         }
                     }
-                    >.differentialShipping{
-                        padding: 12px;
-                        .close{
-                            margin-top: 9px;
-                            >a{
-                                img{
-                                    display: none;
-                                }
-                                display: block;
-                                width: 10px;
-                                height: 10px;
-                                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 9 9'%3E%3Cpath stroke='%2300F' stroke-linejoin='round' stroke-width='.7' d='m1 1 7 7M1 8l7-7'/%3E%3C/svg%3E") no-repeat center;
-                            }
-                        }
+                    .close>a,.btnClose{
+                        display: block;
+                            width: 10px;
+                            height: 10px;
+                            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.43 13.42'%3E%3Cpath fill='%23022cff' d='m8.3 6.71 4.8-4.8A1.12 1.12 0 0 0 11.52.33l-4.8 4.8-4.8-4.8A1.12 1.12 0 1 0 .33 1.9l4.8 4.8-4.8 4.8a1.12 1.12 0 0 0 1.58 1.59l4.8-4.8 4.8 4.8a1.12 1.12 0 1 0 1.59-1.59Z' data-name='Icon ionic-ios-close'/%3E%3C/svg%3E") no-repeat center;  
+                            margin-top: 5px;
                     }
                 }
+
             }
         }
     }
