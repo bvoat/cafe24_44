@@ -287,6 +287,10 @@ const reciveTagDetail = (prd_no) => {
     });
 };
  
+
+//tooltip 최초 로딩 시 display none (배송비 관련)
+document.querySelector(".layerTheme").style.display = 'none'
+console.log('document.querySelector(".layerTheme"): ', document.querySelector(".layerTheme"));
 /* 최종 함수 실행 */
 //리뷰 컨트롤
 buyRecordFrameControl();
@@ -304,6 +308,7 @@ window.addEventListener("load", ()=>{
   }else{
     setTimeout(()=>{createStamp(createStampPcsFromPrice)}, 1200)
   }
+
 })
 //가치태그 수신
 reciveTagDetail(prd_no);
@@ -379,3 +384,4 @@ function removePagingArea(oTarget)
         $(this).children('p').children('img').first().remove();
     });
 });
+
