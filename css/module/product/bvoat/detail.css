@@ -137,7 +137,7 @@
   left: -7px;
   z-index: 9;
 }
-#productDetailTop .delivery_wrap .delivery_info li > div .btnHelp, #productDetailTop .delivery_wrap .delivery_info li > div img {
+#productDetailTop .delivery_wrap .delivery_info li > div img {
   display: none;
 }
 #productDetailTop .delivery_wrap .delivery_info li > div > a {
