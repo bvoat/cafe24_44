@@ -1,5 +1,9 @@
 /* ------------------------------------------------------------------------------------ */
 /* bvt */
+document.querySelector(".btnHelp").innerHTML("");
+document.querySelector(".btnClose").innerHTML("");
+
+
 
 // relation list 스와이퍼
 var swiper = new Swiper(".product_relation_list", {
