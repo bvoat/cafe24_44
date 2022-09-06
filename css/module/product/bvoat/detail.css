@@ -162,6 +162,16 @@
   width: -moz-max-content;
   width: max-content;
 }
+#productDetailTop .delivery_wrap .delivery_info li .differentialShipping .btnHelp {
+  color: #022CFF;
+  position: absolute;
+}
+#productDetailTop .delivery_wrap .delivery_info li .differentialShipping .btnHelp::after {
+  display: block;
+  content: "*";
+  font-size: 13px;
+  color: #022CFF;
+}
 #productDetailTop .delivery_wrap .delivery_info li .differentialShipping ul {
   width: -webkit-max-content;
   width: -moz-max-content;
