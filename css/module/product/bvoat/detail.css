@@ -143,11 +143,27 @@
   display: block;
   content: "*";
   font-size: 13px;
+  color: #022CFF;
 }
 #productDetailTop .delivery_wrap .delivery_info li > .btnTooltip img[alt=도움말] {
   display: none;
 }
 #productDetailTop .delivery_wrap .delivery_info li .differentialShipping {
+  position: absolute;
+  left: 140px;
+  z-index: 9;
+  top: -12px;
+}
+#productDetailTop .delivery_wrap .delivery_info li .differentialShipping h3 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+#productDetailTop .delivery_wrap .delivery_info li .differentialShipping ul {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: block;
   background: #FAFAFE;
   border: 1px solid #E2E2E2;
   padding: 9px;
@@ -174,8 +190,9 @@
 }
 #productDetailTop .delivery_wrap .delivery_info li .differentialShipping .close > a::before {
   display: block;
-  content: "x";
-  font-size: 11px;
+  content: "✕";
+  font-size: 12px;
+  color: #022CFF;
 }
 #productDetailTop .mileage_wrap {
   position: relative;

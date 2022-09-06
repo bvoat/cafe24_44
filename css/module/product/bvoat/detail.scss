@@ -156,6 +156,7 @@
                             display: block;
                             content: "*";
                             font-size: 13px;
+                            color: $bvt-blue;
                         }
                     }
                     img[alt="도움말"]{
@@ -165,11 +166,21 @@
                 }
 
                 .differentialShipping{
+                    position: absolute;
+                    left: 140px;
+                    z-index: 9;
+                    top: -12px;
+                    h3{
+                        width: max-content;
+                    }
+                
+                    ul{
+                        width: max-content;
+                        display: block;
                     background: $bvt-bg-lightblue;
                     border: $bvt-btn-border-gray;
                     padding: 9px;
                     border-radius: 8px;
-                    ul{
                         li{
                             margin: 0;
                             font-size: 9px;
@@ -193,8 +204,9 @@
                             display: block;
                             &::before{
                                 display: block;
-                                content: "x";
-                                font-size: 11px;
+                                content: "✕";
+                                font-size: 12px;
+                                color: $bvt-blue;
                             }
                         }
                     }
