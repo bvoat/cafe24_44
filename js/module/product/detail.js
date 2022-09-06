@@ -1,15 +1,6 @@
 /* ------------------------------------------------------------------------------------ */
 /* bvt */
 
-//배송비 관련 문제 해결 (수량에 따른 차등 부과 시 striptag 줄글로 표시되는 문제 해결)
-const delivery_txt = [`<strong>1장 구매 시 <span>3,000원</span></strong>`, `<strong>2장 이상 구매 시 <span>무료배송</span></strong>`,`<strong>1장 구매 시 <span>3,000원</span></strong>`, `<strong>2장 이상 구매 시 <span>무료배송</span></strong>`]
-window.addEventListener("load", () => {
-  const delivery_arr = [...document.querySelectorAll(".differentialShipping ul li")];
-  delivery_arr.forEach((el,i) => {
-    el.innerHTML = delivery_txt[i];
-  });
-});
-
 // relation list 스와이퍼
 var swiper = new Swiper(".product_relation_list", {
   spaceBetween: 8,
