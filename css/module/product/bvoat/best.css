@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #weekSocialOrderList {
   width: 100%;
   max-width: 450px;
@@ -9,37 +10,27 @@
   margin-bottom: 33px;
   padding: 0 11px;
 }
-
 #weekTotalBestList #weekTotalBestListTitle {
   width: 100%;
   max-width: 450px;
   margin-bottom: 18px;
 }
-
 #weekTotalBestList #weekTotalBestListTitle h1 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 2px;
 }
-
 #weekTotalBestList #weekTotalBestListTitle h2 {
   font-size: 1.3rem;
   font-weight: 300;
   color: #ABABAB;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(1)::before, #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(2)::before {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   box-align: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  align-items: center;
+  justify-content: center;
   content: "";
   width: 32px;
   height: 28px;
@@ -52,19 +43,12 @@
   left: 7px;
   padding: 0 0 4px 0;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+3):nth-child(-n+5)::before {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   box-align: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  align-items: center;
+  justify-content: center;
   content: "";
   width: 30px;
   height: 28px;
@@ -77,19 +61,12 @@
   left: 7px;
   padding: 0 0 4px 0;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+6):nth-child(-n+20)::before {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   box-align: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  align-items: center;
+  justify-content: center;
   content: "";
   width: 30px;
   height: 28px;
@@ -102,128 +79,125 @@
   left: 7px;
   padding: 0 0 4px 0;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(1)::before {
   content: "1" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(2)::before {
   content: "2" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(3)::before {
   content: "3" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(4)::before {
   content: "4" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(5)::before {
   content: "5" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(6)::before {
   content: "6" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(7)::before {
   content: "7" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(8)::before {
   content: "8" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(9)::before {
   content: "9" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(10)::before {
   content: "10" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(11)::before {
   content: "11" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(12)::before {
   content: "12" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(13)::before {
   content: "13" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(14)::before {
   content: "14" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(15)::before {
   content: "15" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(16)::before {
   content: "16" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(17)::before {
   content: "17" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(18)::before {
   content: "18" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(19)::before {
   content: "19" !important;
 }
-
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(20)::before {
   content: "20" !important;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item .summary {
+  display: block;
+  font-size: 1.15rem;
+  color: #707070;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.3rem;
+  min-height: 11px;
+  margin-bottom: 7px;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item .thumb a > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #weekTagBestList {
   background: #F5F6FA;
   padding: 60px 11px 37px;
 }
-
 #weekTagBestList #weekTagBestListTitle {
   width: 100%;
   max-width: 450px;
   margin-bottom: 18px;
 }
-
 #weekTagBestList #weekTagBestListTitle h1 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 2px;
 }
-
 #weekTagBestList #weekTagBestListTitle h2 {
   font-size: 1.3rem;
   font-weight: 300;
   color: #ABABAB;
 }
-
 #weekTagBestList #weekTagBestListContents {
   width: 100%;
   max-width: 450px;
 }
-
 #weekTagBestList #weekTagBestListContents .weektag {
   background: #ffffff;
   border-radius: 10px;
   margin-bottom: 40px;
   overflow-x: hidden;
-  -webkit-box-shadow: 0px 3px 4px 0px #0000000D;
-          box-shadow: 0px 3px 4px 0px #0000000D;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.0509803922);
 }
-
 #weekTagBestList #weekTagBestListContents .weektag #weekTagTitle {
   width: 100%;
 }
-
 #weekTagBestList #weekTagBestListContents .weektag #weekTagTitle .tag_title {
   font-size: 1.8rem;
   font-weight: 700;
@@ -231,7 +205,6 @@
   padding: 15px;
   border-bottom: 1px solid #EDEDED;
 }
-
 #weekTagBestList #weekTagBestListContents .weektag #weekTagTitle .tag_title > .move_arrow {
   position: relative;
   display: inline-block;
@@ -242,7 +215,6 @@
   top: 4px;
   float: right;
 }
-
 #weekTagBestList #weekTagBestListContents .weektag #weekTagTitle .tag_subtitle {
   font-size: 1.6rem;
   font-weight: 500;
@@ -250,33 +222,21 @@
   color: #707070;
   padding: 20px 15px 15px;
 }
-
 #weekTagBestList #weekTagBestListContents .weektag #weekTagTitle .tag_subtitle .purchasers {
   font-weight: 700;
   color: #022CFF;
 }
-
 #weekTagBestList #weekTagBestListContents .weektag #weekTagTitle .tag_subtitle .cate_item {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 28px;
   padding: 0 11px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: 1px solid #E2E2E2;
   border-radius: 14px;
   margin: 0 2px;
@@ -285,10 +245,8 @@
   letter-spacing: -0.02em;
   color: #292929;
 }
-
 #weekTagBestList #weekTagBestListContents .weektag #weekTagTitle .tag_subtitle .cate_item > a {
   font-size: 1.4rem;
   font-weight: 400;
   color: #292929;
-}
-/*# sourceMappingURL=best.css.map */
+}/*# sourceMappingURL=best.css.map */
