@@ -177,9 +177,12 @@
                         width: max-content;
                     }
                     .btnHelp{
-                            color: $bvt-blue;
+                            color: #00000000;
                             position: absolute;
                         &::after{
+                            position: absolute;
+                            top: 5px;
+                            left: -168px;
                             display: block;
                             content: "*";
                             font-size: 13px;

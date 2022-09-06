@@ -163,10 +163,13 @@
   width: max-content;
 }
 #productDetailTop .delivery_wrap .delivery_info li .differentialShipping .btnHelp {
-  color: #022CFF;
+  color: rgba(0, 0, 0, 0);
   position: absolute;
 }
 #productDetailTop .delivery_wrap .delivery_info li .differentialShipping .btnHelp::after {
+  position: absolute;
+  top: 5px;
+  left: -168px;
   display: block;
   content: "*";
   font-size: 13px;
