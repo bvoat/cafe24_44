@@ -153,9 +153,12 @@
 }
 #productDetailTop .delivery_wrap .delivery_info li .differentialShipping {
   position: absolute;
-  right: -11px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   z-index: 9;
   top: -12px;
+  right: 0;
 }
 #productDetailTop .delivery_wrap .delivery_info li .differentialShipping h3 {
   width: -webkit-max-content;
@@ -169,11 +172,15 @@
 #productDetailTop .delivery_wrap .delivery_info li .differentialShipping .btnHelp::after {
   position: absolute;
   top: 5px;
-  left: -168px;
+  left: -299px;
   display: block;
   content: "*";
   font-size: 13px;
   color: #022CFF;
+}
+#productDetailTop .delivery_wrap .delivery_info li .differentialShipping .layerShipping {
+  position: absolute;
+  right: 0;
 }
 #productDetailTop .delivery_wrap .delivery_info li .differentialShipping ul {
   width: -webkit-max-content;

@@ -169,10 +169,11 @@
                 }
 
                 .differentialShipping{
-                    position: absolute;
-                    right: -11px;
+                    position: absolute;                        
+                    width: max-content;
                     z-index: 9;
                     top: -12px;
+                    right: 0;
                     h3{
                         width: max-content;
                     }
@@ -182,12 +183,17 @@
                         &::after{
                             position: absolute;
                             top: 5px;
-                            left: -168px;
+                            left: -299px;
                             display: block;
                             content: "*";
                             font-size: 13px;
                             color: $bvt-blue;
                         }
+                    }
+                    .layerShipping{
+                        position: absolute;
+                            right: 0;
+                        
                     }
                 
                     ul{
