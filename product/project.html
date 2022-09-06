@@ -5,7 +5,7 @@
 <article id="specialProject" module="Project_Package">
 
     <section id="specialProjectTitle" class="title" module="product_headcategory">
-        <p class="banner"></p>
+        <p class="banner">{$top_image_tag}</p>
         <h2 class="displaynone"><span>{$title_text_or_image}</span></h2>
         <h3></h3>
         <h4>
@@ -148,12 +148,11 @@
     
 
     const urlParams = new URLSearchParams(window.location.search).get("cate_no");
-    const banner = document.querySelector(".banner");
     if(urlParams === '736'){
-        banner.insertAdjacentHTML("afterbegin", `<img class="banner_img" src="/web/upload/category/shop1_736_top_786894.png" title="기부 악세사리 기획전 배너" alt="기부 악세사리 기획전 - 유기견, 유기묘 사료 간식 후원 / 한반도 숲 나무 심기 동참 / 암 투병 소방관 지원금 전달 / 해양 동물 보존 기부">`);
         window.addEventListener("load", ()=>{
            //타이틀 node 찾기
             const specialProjectList = document.querySelectorAll(".project_productlist_wrap");
+            console.log('specialProjectList: ', specialProjectList);
 
             for(let i=0; i<specialProjectList.length; i++){
             let brand = specialProjectList[i].children[0].dataset.brand;
@@ -165,9 +164,5 @@
             specialProjectList[i].children[1].children[1].insertAdjacentHTML("afterbegin",brandData.coupon);
         }
     });
-    }else if(urlParams == '747'){
-        banner.insertAdjacentHTML("afterbegin", `<img class="banner_img" src="/bvtIMG/banner/2209_projectlist_tshirt.png" title="티셔츠 기획전 배너" alt="티셔츠 기획전">`)
-    }else if(urlParams == '749'){
-        banner.insertAdjacentHTML("afterbegin", `<img class="banner_img" src="/bvtIMG/banner/2209_projectlist_wallet.png" title="지갑 기획전 배너" alt="지갑 기획전">`)
     }
 </script>
