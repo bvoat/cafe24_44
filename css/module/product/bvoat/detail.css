@@ -110,6 +110,7 @@
   position: relative;
   display: flex;
   flex-flow: row nowrap;
+  width: 100%;
   margin-bottom: 6px;
 }
 #productDetailTop .delivery_wrap .delivery_info li > p {
@@ -119,61 +120,62 @@
 #productDetailTop .delivery_wrap .delivery_info li .delivery_title {
   position: relative;
   font-weight: 600;
+  width: 81px;
 }
 #productDetailTop .delivery_wrap .delivery_info li .delivery_detail {
-  position: absolute;
-  left: 80px;
+  position: relative;
+  width: calc(100% - 81px);
   font-weight: 300;
 }
 #productDetailTop .delivery_wrap .delivery_info li .delivery_detail > em {
   font-weight: 600;
   color: #022CFF;
 }
-#productDetailTop .delivery_wrap .delivery_info li .delv_price_B {
-  font-weight: 700 !important;
-}
-#productDetailTop .delivery_wrap .delivery_info li > div {
+#productDetailTop .delivery_wrap .delivery_info li > .btnTooltip {
   position: absolute;
-  left: 142px;
+  left: 140px;
   z-index: 9;
 }
-#productDetailTop .delivery_wrap .delivery_info li > div > a {
+#productDetailTop .delivery_wrap .delivery_info li > .btnTooltip a {
   display: block;
 }
-#productDetailTop .delivery_wrap .delivery_info li > div > div {
-  background: #ffffff;
+#productDetailTop .delivery_wrap .delivery_info li > .btnTooltip a::before {
+  display: block;
+  content: "*";
+  font-size: 13px;
+}
+#productDetailTop .delivery_wrap .delivery_info li > .btnTooltip img[alt=도움말] {
+  display: none;
+}
+#productDetailTop .delivery_wrap .delivery_info li .differentialShipping {
+  background: #FAFAFE;
   border: 1px solid #E2E2E2;
-  border-radius: 3px;
   padding: 9px;
+  border-radius: 8px;
 }
-#productDetailTop .delivery_wrap .delivery_info li > div .title, #productDetailTop .delivery_wrap .delivery_info li > div p {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 3px;
-}
-#productDetailTop .delivery_wrap .delivery_info li > div ul li {
+#productDetailTop .delivery_wrap .delivery_info li .differentialShipping ul li {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 9px;
 }
-#productDetailTop .delivery_wrap .delivery_info li > div ul li strong {
-  margin-right: 5px;
-}
-#productDetailTop .delivery_wrap .delivery_info li > div ul li span {
-  font-weight: 600;
+#productDetailTop .delivery_wrap .delivery_info li .differentialShipping ul span {
+  font-weight: 700;
+  margin-left: 5px;
   color: #022CFF;
 }
-#productDetailTop .delivery_wrap .delivery_info li > div .close, #productDetailTop .delivery_wrap .delivery_info li > div .btnClose {
-  display: block;
-  margin-top: 5px;
+#productDetailTop .delivery_wrap .delivery_info li .differentialShipping .title {
+  margin-bottom: 5px;
+  font-size: 11px;
 }
-#productDetailTop .delivery_wrap .delivery_info li > div .close a {
-  display: block;
-  width: 10px;
-  height: 10px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.43 13.42'%3E%3Cpath fill='%23022cff' d='m8.3 6.71 4.8-4.8A1.12 1.12 0 0 0 11.52.33l-4.8 4.8-4.8-4.8A1.12 1.12 0 1 0 .33 1.9l4.8 4.8-4.8 4.8a1.12 1.12 0 0 0 1.58 1.59l4.8-4.8 4.8 4.8a1.12 1.12 0 1 0 1.59-1.59Z' data-name='Icon ionic-ios-close'/%3E%3C/svg%3E") no-repeat center;
-}
-#productDetailTop .delivery_wrap .delivery_info li > div .close > img {
+#productDetailTop .delivery_wrap .delivery_info li .differentialShipping .close img {
   display: none;
+}
+#productDetailTop .delivery_wrap .delivery_info li .differentialShipping .close > a {
+  display: block;
+}
+#productDetailTop .delivery_wrap .delivery_info li .differentialShipping .close > a::before {
+  display: block;
+  content: "x";
+  font-size: 11px;
 }
 #productDetailTop .mileage_wrap {
   position: relative;

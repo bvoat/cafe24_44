@@ -1,15 +1,5 @@
 /* ------------------------------------------------------------------------------------ */
 /* bvt */
-window.addEventListener("load", ()=>{
-  setTimeout(()=>{
-    document.querySelector(".differentialShipping").style.display = "none";
-    document.querySelector(".btnHelp").innerHTML="";
-    document.querySelector(".btnClose").innerHTML="";
-    
-  }, 1000)
-
-})
-
 // relation list 스와이퍼
 var swiper = new Swiper(".product_relation_list", {
   spaceBetween: 8,
@@ -25,8 +15,7 @@ var swiper = new Swiper(".product_relation_list", {
 const buy_record_frame = document.querySelector("#buy_records_detail > iframe");
 if (buy_record_frame != null) {
   //상품 번호 수신
-  let product_no = new URLSearchParams(location.search).get("product_no")
-  console.log('product_no: ', product_no);
+  let product_no = new URLSearchParams(location.search).get("product_no");
   buy_record_frame.setAttribute(
     "src",
     `https://${api_domain}.shop/buy_records?product_no=${product_no}`
@@ -157,20 +146,19 @@ const crewValueControl = (multiple) => {
 
 
 //선물하기 / 구매하기 클릭
-const purchase_button = document.querySelectorAll(".purchase_button")
-Array.from(purchase_button).forEach((btn)=>{
-  btn.addEventListener("click",(e)=>{
-    e.preventDefault();
-    let type = e.currentTarget.dataset.type;
-    console.log('type: ', type);
-    const buyScreen = document.getElementById("buyScreen");
-    classToggle(buyScreen, "displaynone");
-  })
-})
-const screen_close_btn = document.querySelector(".screen_close_btn");
-screen_close_btn.addEventListener("click", ()=>{
-  classToggle(buyScreen, "displaynone");
-})
+// const purchase_button = document.querySelectorAll(".purchase_button")
+// Array.from(purchase_button).forEach((btn)=>{
+//   btn.addEventListener("click",(e)=>{
+//     e.preventDefault();
+//     let type = e.currentTarget.dataset.type;
+//     const buyScreen = document.getElementById("buyScreen");
+//     classToggle(buyScreen, "displaynone");
+//   })
+// })
+// const screen_close_btn = document.querySelector(".screen_close_btn");
+// screen_close_btn.addEventListener("click", ()=>{
+//   classToggle(buyScreen, "displaynone");
+// })
 
 
 /* 가격 -> 스탬프 */
@@ -226,7 +214,6 @@ const createStamp = (createStampPcsFromPrice) => {
 
   if (final_price < 1000) {
     final_price = final_price / 10000;
-    console.log('final_price1: ', final_price);
     //스탬프 총 갯수 변수에 할당
     createStampPcsFromPrice(final_price)
       .then((res) => {
@@ -241,7 +228,6 @@ const createStamp = (createStampPcsFromPrice) => {
       });
   } else {
     final_price = final_price / 10000;
-    console.log('final_price2: ', final_price);
     //스탬프 총 갯수 변수에 할당
     createStampPcsFromPrice(final_price)
       .then((res) => {
@@ -272,7 +258,6 @@ const reciveTagDetail = (prd_no) => {
     .then((response) => response.json())
     .then((response) => {
       try{
-        console.log('data: ', response);
         if(response.status == 200 && response.success){
           response.data.forEach((category) => {
               document
@@ -309,11 +294,10 @@ qnaControl();
 //bvt_common.js 파일에서 가격 정보 받아온 후 실행해야 함
 window.addEventListener("load", ()=>{
   if(document.querySelector(".finalprice")){
-    setTimeout(()=>{createStamp(createStampPcsFromPrice)}, 500)
+    setTimeout(()=>{createStamp(createStampPcsFromPrice)}, 300)
   }else{
-    setTimeout(()=>{createStamp(createStampPcsFromPrice)}, 1200)
+    setTimeout(()=>{createStamp(createStampPcsFromPrice)}, 800)
   }
-
 })
 //가치태그 수신
 reciveTagDetail(prd_no);
