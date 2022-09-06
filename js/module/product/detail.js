@@ -6,9 +6,9 @@ var swiper = new Swiper(".product_relation_list", {
   spaceBetween: 8,
   slidesPerView: "3",
   pagination: {
-    el: ".list_item_progress",
-    clickable: true,
-    type: "progressbar",
+      el: ".list_item_progress",
+      clickable: true,
+      type: "progressbar",
   },
 });
 
@@ -16,7 +16,8 @@ var swiper = new Swiper(".product_relation_list", {
 const buy_record_frame = document.querySelector("#buy_records_detail > iframe");
 if (buy_record_frame != null) {
   //상품 번호 수신
-  let product_no = new URLSearchParams(location.search).get("product_no");
+  let product_no = new URLSearchParams(location.search).get("product_no")
+  console.log('product_no: ', product_no);
   buy_record_frame.setAttribute(
     "src",
     `https://${api_domain}.shop/buy_records?product_no=${product_no}`
@@ -24,16 +25,17 @@ if (buy_record_frame != null) {
 }
 //최초 탭 높이 조절
 
-window.addEventListener("load", () => {
+
+window.addEventListener("load", ()=>{
   const productDetailBottom = document.getElementById("productDetailBottom");
   const detail_swiper_wrap = document.getElementById("detail_swiper_wrap");
   let firstTab = getComputedStyle(productDetailBottom);
   const firstControlContentWrapHeight = (firstTab) => {
-    productDetailBottom.style.height = firstTab.height + 100 + "px";
-    detail_swiper_wrap.style.height = firstTab.height + 100 + "px";
+    productDetailBottom.style.height = (firstTab.height + 100 + 'px');
+    detail_swiper_wrap.style.height = (firstTab.height + 100 + 'px');
   };
-  firstControlContentWrapHeight(firstTab);
-});
+  firstControlContentWrapHeight(firstTab)
+})
 
 //상품 상세 하단 페이지 탭 슬라이더
 //node 값 받아서 Array
@@ -144,20 +146,23 @@ const crewValueControl = (multiple) => {
   voterValue ? (crewValue.innerHTML = voterValue.innerHTML * multiple) : null;
 };
 
+
 //선물하기 / 구매하기 클릭
-// const purchase_button = document.querySelectorAll(".purchase_button")
-// Array.from(purchase_button).forEach((btn)=>{
-//   btn.addEventListener("click",(e)=>{
-//     e.preventDefault();
-//     let type = e.currentTarget.dataset.type;
-//     const buyScreen = document.getElementById("buyScreen");
-//     classToggle(buyScreen, "displaynone");
-//   })
-// })
-// const screen_close_btn = document.querySelector(".screen_close_btn");
-// screen_close_btn.addEventListener("click", ()=>{
-//   classToggle(buyScreen, "displaynone");
-// })
+const purchase_button = document.querySelectorAll(".purchase_button")
+Array.from(purchase_button).forEach((btn)=>{
+  btn.addEventListener("click",(e)=>{
+    e.preventDefault();
+    let type = e.currentTarget.dataset.type;
+    console.log('type: ', type);
+    const buyScreen = document.getElementById("buyScreen");
+    classToggle(buyScreen, "displaynone");
+  })
+})
+const screen_close_btn = document.querySelector(".screen_close_btn");
+screen_close_btn.addEventListener("click", ()=>{
+  classToggle(buyScreen, "displaynone");
+})
+
 
 /* 가격 -> 스탬프 */
 //스탬프 갯수 변수 할당
@@ -208,12 +213,11 @@ const displayStampImg = (productStamp) => {
 };
 //스탬프 promise 진행
 const createStamp = (createStampPcsFromPrice) => {
-  let final_price = parseInt(
-    document.querySelector(".finalprice").dataset.price
-  );
+  let final_price = parseInt(document.querySelector(".finalprice").dataset.price);
 
   if (final_price < 1000) {
     final_price = final_price / 10000;
+    console.log('final_price1: ', final_price);
     //스탬프 총 갯수 변수에 할당
     createStampPcsFromPrice(final_price)
       .then((res) => {
@@ -228,6 +232,7 @@ const createStamp = (createStampPcsFromPrice) => {
       });
   } else {
     final_price = final_price / 10000;
+    console.log('final_price2: ', final_price);
     //스탬프 총 갯수 변수에 할당
     createStampPcsFromPrice(final_price)
       .then((res) => {
@@ -257,21 +262,23 @@ const reciveTagDetail = (prd_no) => {
   })
     .then((response) => response.json())
     .then((response) => {
-      try {
-        if (response.status == 200 && response.success) {
+      try{
+        console.log('data: ', response);
+        if(response.status == 200 && response.success){
           response.data.forEach((category) => {
-            document
+              document
               .querySelector("#categoryTagBox")
               .insertAdjacentHTML(
                 "beforeend",
                 `<li class="cate_item"><a href="/product/list.html?cate_no=${category.category_no}#${category.category_name}">${category.category_name}</a></li>`
               );
+            
           });
-        } else {
+        }else{
           console.log("error : ", response.status, response.message);
         }
-      } catch (error) {
-        console.log("error : ", error, response.status, response.message);
+      } catch(error) {
+        console.log("error : ", error,  response.status, response.message);
       }
       return false;
     })
@@ -279,7 +286,7 @@ const reciveTagDetail = (prd_no) => {
       console.error("실패:", error);
     });
 };
-
+ 
 /* 최종 함수 실행 */
 //리뷰 컨트롤
 buyRecordFrameControl();
@@ -291,17 +298,13 @@ crewValueControl(2);
 qnaControl();
 //스탬프 만들기
 //bvt_common.js 파일에서 가격 정보 받아온 후 실행해야 함
-window.addEventListener("load", () => {
-  if (document.querySelector(".finalprice")) {
-    setTimeout(() => {
-      createStamp(createStampPcsFromPrice);
-    }, 300);
-  } else {
-    setTimeout(() => {
-      createStamp(createStampPcsFromPrice);
-    }, 800);
+window.addEventListener("load", ()=>{
+  if(document.querySelector(".finalprice")){
+    setTimeout(()=>{createStamp(createStampPcsFromPrice)}, 500)
+  }else{
+    setTimeout(()=>{createStamp(createStampPcsFromPrice)}, 1200)
   }
-});
+})
 //가치태그 수신
 reciveTagDetail(prd_no);
 
@@ -322,65 +325,57 @@ reciveTagDetail(prd_no);
 //     removePagingArea(oTarget);
 // });
 
-(function ($) {
-  function removePagingArea(oTarget) {
-    if (
-      $(oTarget).length < 1 &&
-      (oTarget != "#prdReview" || oTarget != "#prdQna")
-    )
-      return;
+(function($) {
 
-    if ($(oTarget).css("display") == "block") {
-      if (oTarget == "#prdReview") {
-        //var record = $('#prdReview .xans-record-', '.xans-product-review').first();
-        var record = $(".xans-record-", ".xans-product-review").first();
-        if (record.length < 1 || record.is(":not(:visible)")) {
-          $(".xans-product-reviewpaging").remove();
-        }
-      } else if (oTarget == "#prdQnA") {
-        //var record = $('#prdQnA .xans-record-', 'xans-product-qna').first();
-        var record = $(".xans-record-", ".xans-product-qna").first();
-        if (record.length < 1 || record.is(":not(:visible)")) {
-          $(".xans-product-qnapaging").remove();
-        }
-      }
-    }
-  }
+function removePagingArea(oTarget)
+{
+    if ($(oTarget).length < 1 && (oTarget != '#prdReview' || oTarget != '#prdQna')) return;
 
-  $(
-    "#actionCartClone, #actionWishClone, #actionBuyClone, #actionWishSoldoutClone"
-  )
-    .off()
-    .on("click", function () {
-      try {
-        var id = $(this).attr("id").replace(/Clone/g, "");
-        if (typeof id !== "undefined") $("#" + id).trigger("click");
-        else return false;
-      } catch (e) {
-        return false;
-      }
+    if ($(oTarget).css('display') == 'block') {
+        if (oTarget == '#prdReview') {
+            //var record = $('#prdReview .xans-record-', '.xans-product-review').first();
+            var record = $('.xans-record-', '.xans-product-review').first();
+            if (record.length < 1 || record.is(':not(:visible)')) {
+                $('.xans-product-reviewpaging').remove();
+             }
+         } else if (oTarget == '#prdQnA') {
+             //var record = $('#prdQnA .xans-record-', 'xans-product-qna').first();
+             var record = $('.xans-record-', '.xans-product-qna').first();
+             if (record.length < 1 || record.is(':not(:visible)')) {
+                 $('.xans-product-qnapaging').remove();
+             }
+         }
+     }
+}
+
+    $('#actionCartClone, #actionWishClone, #actionBuyClone, #actionWishSoldoutClone').off().on('click', function() {
+        try {
+            var id = $(this).attr('id').replace(/Clone/g, '');
+            if (typeof(id) !== 'undefined') $('#' + id).trigger('click');
+            else return false;
+        } catch(e) {
+            return false;
+        }
     });
 
-  function productDetailOrigin() {
-    var imgChk = $("#prdDetailContent").find("img").length;
-    if (imgChk <= 0) {
-      $("#prdDetailBtn").remove();
+    function productDetailOrigin(){
+        var imgChk = $('#prdDetailContent').find('img').length;
+        if(imgChk <= 0){
+            $('#prdDetailBtn').remove();
+        }
     }
-  }
-  productDetailOrigin();
+    productDetailOrigin();
 
-  // Add Image
-  var oTarget = $(".xans-product-mobileimage ul li");
-  var oAppend = oTarget.first().children("p").clone();
+    // Add Image
+    var oTarget = $('.xans-product-mobileimage ul li');
+    var oAppend = oTarget.first().children('p').clone();
 
-  oTarget.slice(1).each(function () {
-    var listHtml = $(this).html();
-    $(this)
-      .children()
-      .wrap(function () {
-        return '<p class="thumbnail">' + oAppend.html() + listHtml + "</p>";
-      });
+    oTarget.slice(1).each(function() {
+        var listHtml = $(this).html();
+        $(this).children().wrap(function() {
+            return '<p class="thumbnail">' + oAppend.html() + listHtml + '</p>';
+        });
 
-    $(this).children("p").children("img").first().remove();
-  });
+        $(this).children('p').children('img').first().remove();
+    });
 });
