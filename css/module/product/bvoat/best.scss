@@ -123,7 +123,9 @@
                     &:nth-child(18){&::before{content: "18"!important;}}
                     &:nth-child(19){&::before{content: "19"!important;}}
                     &:nth-child(20){&::before{content: "20"!important;}}
-
+                    .brand{
+                        @include only-ellipsis(1, 1rem);
+                    }
                     .summary {
                         display: block;
                         font-size: 1.15rem;
