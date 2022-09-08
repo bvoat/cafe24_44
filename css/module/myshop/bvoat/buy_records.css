@@ -1,14 +1,14 @@
-#buyRecords {
+#reviewsFrameWrap {
   width: 100%;
   max-width: 450px;
   padding: 81px 0 0;
   margin-bottom: 64px;
 }
-#buyRecords #buyRecordsFrame {
+#reviewsFrameWrap #reviewsFrame {
   width: 100%;
 }
 
-#buySlideFrame {
+#reviewsSlideFrame {
   position: fixed;
   display: flex;
   flex-flow: column nowrap;
