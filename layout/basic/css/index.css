@@ -113,10 +113,10 @@
 
 /* 개별 메인 진열 */
 /* 기획전 */
-#indexProductBvt73 #indexProductListTitle {
+.index_list_project #indexProductListTitle {
   position: relative;
 }
-#indexProductBvt73 #indexProductListTitle > img {
+.index_list_project #indexProductListTitle > img {
   width: 100%;
   height: auto;
   -o-object-fit: contain;
@@ -124,7 +124,7 @@
   image-rendering: auto;
   padding-right: 11px;
 }
-#indexProductBvt73 #indexProductListTitle > h3 {
+.index_list_project #indexProductListTitle > h3 {
   position: absolute;
   top: calc(50% - 40px);
   left: 15.5px;
