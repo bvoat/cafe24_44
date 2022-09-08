@@ -13,12 +13,11 @@ var swiper = new Swiper(".product_relation_list", {
 });
 
 // 리뷰 수신
-const buy_record_frame = document.querySelector("#buy_records_detail > iframe");
-if (buy_record_frame != null) {
+const review_frame = document.querySelector("#reviewsDetail > iframe");
+if (review_frame != null) {
   //상품 번호 수신
-  let product_no = new URLSearchParams(location.search).get("product_no")
-  console.log('product_no: ', product_no);
-  buy_record_frame.setAttribute(
+  let product_no = new URLSearchParams(location.search).get("product_no");
+  review_frame.setAttribute(
     "src",
     `https://${api_domain}.shop/buy_records?product_no=${product_no}`
   );
@@ -100,8 +99,8 @@ const qnaControl = () => {
 //리뷰 컨트롤
 const buyRecordFrameControl = () => {
   // 리뷰 iframe 높이 조절
-  let bh_frame = document.querySelectorAll("#buy_record_frame");
-  let bh_detail = document.querySelectorAll("#buy_records_detail");
+  let bh_frame = document.querySelectorAll("#reviewsDetailFrame");
+  let bh_detail = document.querySelectorAll("#reviewsDetail");
 
   window.addEventListener("message", function (e) {
     let message = e.data;

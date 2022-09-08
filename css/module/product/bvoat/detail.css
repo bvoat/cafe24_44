@@ -692,7 +692,13 @@
      object-fit: cover;
 }
 #productDetailBottom .detail_swiper_wrap #tab1 iframe {
-  margin-top: -50px;
+  width: 100%;
+  max-width: 450px;
+  min-width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 #productDetailBottom .detail_swiper_wrap #tab2 div .tab-tip {
   text-align: center;

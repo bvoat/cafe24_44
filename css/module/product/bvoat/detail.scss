@@ -769,9 +769,11 @@
         }
         #tab1{
             iframe{
-
-                //소비기록 상단 마진값 제하기
-                margin-top: -50px;
+                width: 100%;
+                max-width: 450px;
+                min-width: 200px;
+                object-fit: cover;
+                object-position: 50% 50%;
             }
         }
         #tab2 {
