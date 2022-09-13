@@ -10,30 +10,18 @@
   z-index: 999;
   top: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
   padding: 0 22px;
 }
-
 #searchModal #searchModalHeader {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   max-width: 450px;
   height: 40px;
 }
-
 #searchModal #searchModalHeader .search_close_btn {
   width: 18px;
   height: 18px;
@@ -41,7 +29,6 @@
   background-size: cover;
   text-indent: -9999px;
 }
-
 #searchModal #searchModalHeader .header_logo {
   display: block;
   width: 73px;
@@ -50,17 +37,14 @@
   background-size: contain;
   text-indent: -9999px;
 }
-
 #searchModal #searchModalHeader .header_logo > span {
   text-indent: -9999px;
 }
-
 #searchModal #searchModalHeader .header_cart {
   position: relative;
   width: 25px;
   height: 23px;
 }
-
 #searchModal #searchModalHeader .header_cart a {
   display: block;
   width: 25px;
@@ -69,7 +53,6 @@
   background-size: contain;
   text-indent: -9999px;
 }
-
 #searchModal #searchModalHeader .header_cart .count {
   position: absolute;
   width: 15px;
@@ -82,7 +65,6 @@
   top: -3px;
   right: -7px;
 }
-
 #searchModal #searchModalHeader .header_cart .count > em {
   position: relative;
   display: block;
@@ -93,50 +75,36 @@
   z-index: 100;
   top: 1.5px;
 }
-
 #searchModal #searchModalTitle {
   width: 100%;
   margin: 19px 0;
   padding: 0 11px;
 }
-
 #searchModal #searchModalTitle h2 {
   font-weight: 700;
   font-size: 2.5rem;
-  font-family: 'Jost', 'Noto Sans KR';
+  font-family: "Jost", "Noto Sans KR";
 }
-
 #searchModal #searchModalTitle h3 {
   font-weight: 300;
   font-size: 1.4rem;
   color: #707070;
 }
-
 #searchModal #searchBarForm {
   width: 100%;
   max-width: 450px;
 }
-
 #searchModal #searchBarForm .search_input_box {
   width: 100%;
   max-width: 450px;
   padding: 0 11px;
 }
-
 #searchModal #searchBarForm .search_input_box .search_input {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  align-items: center;
 }
-
 #searchModal #searchBarForm .search_input_box .search_input #keyword {
   display: block;
   width: 100%;
@@ -148,7 +116,6 @@
   color: #707070;
   padding-left: 20px;
 }
-
 #searchModal #searchBarForm .search_input_box .search_input .search_btn {
   position: absolute;
   width: 21px;
@@ -158,52 +125,32 @@
   background-size: cover;
   text-indent: -9999px;
 }
-
 #searchModal #searchBarForm .search_input_box .recent_keyword {
   width: 100%;
   max-width: 450px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
   margin: 18px 0;
 }
-
 #searchModal #searchBarForm .search_input_box .recent_keyword .search_title {
   font-weight: 700;
   font-size: 1.6rem;
-  font-family: 'Jost', 'Noto Sans KR';
+  font-family: "Jost", "Noto Sans KR";
 }
-
 #searchModal #searchBarForm .search_input_box .recent_keyword .search_recent {
   margin: 14px 0;
 }
-
 #searchModal #searchBarForm .search_input_box .recent_keyword .search_recent .empty {
   text-align: center;
   margin-top: 50px;
   font-size: 1.6rem;
 }
-
 #searchModal #searchBarForm .search_input_box .recent_keyword .search_recent .recent_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
-
 #searchModal #searchBarForm .search_input_box .recent_keyword .search_recent .recent_list > li {
   background: #ffffff;
   border-radius: 6px;
@@ -212,7 +159,6 @@
   font-weight: 500;
   margin: 0 3px 3px 0;
 }
-
 #searchModal #searchBarForm .search_input_box .recent_keyword .search_recent .recent_list > li > button {
   width: 27px;
   height: 22px;
@@ -220,52 +166,32 @@
   color: #ffffff;
   font-size: 1.1rem;
 }
-
 #searchModal #searchBarForm .search_input_box .hot_keyword {
   width: 100%;
   max-width: 450px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
   margin: 18px 0;
 }
-
 #searchModal #searchBarForm .search_input_box .hot_keyword .search_title {
   font-weight: 700;
   font-size: 1.6rem;
-  font-family: 'Jost', 'Noto Sans KR';
+  font-family: "Jost", "Noto Sans KR";
 }
-
 #searchModal #searchBarForm .search_input_box .hot_keyword .search_hot {
   margin: 14px 0;
 }
-
 #searchModal #searchBarForm .search_input_box .hot_keyword .search_hot .empty {
   text-align: center;
   margin-top: 50px;
   font-size: 1.6rem;
 }
-
 #searchModal #searchBarForm .search_input_box .hot_keyword .search_hot .hot_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
-
 #searchModal #searchBarForm .search_input_box .hot_keyword .search_hot .hot_list > li {
   background: #ffffff;
   border-radius: 6px;
@@ -274,7 +200,6 @@
   font-weight: 500;
   margin: 0 3px 3px 0;
 }
-
 #searchModal #searchBarForm .search_input_box .hot_keyword .search_hot .hot_list > li > button {
   width: 27px;
   height: 22px;
@@ -293,99 +218,74 @@
   padding: 23px 11px;
   margin: 81px 0 100px;
 }
-
 #searchResult #searchResultTitle {
   margin-bottom: 18px;
 }
-
 #searchResult #searchResultTitle h2 {
   font-weight: 600;
   font-size: 2.2rem;
 }
-
 #searchResult #searchResultTitle h3 {
   font-weight: 300;
   font-size: 1.4rem;
   color: #707070;
 }
-
 #searchResult #searchResultEmpty {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  align-items: center;
 }
-
 #searchResult #searchResultEmpty .empty {
   text-align: center;
   margin: 50px;
   font-size: 1.8rem;
   font-weight: 500;
 }
-
 #searchResult #searchResultEmpty .empty_info > li {
   font-size: 1.4rem;
 }
 
-#searchResult #searchResultProductList {
+#searchResultProductList {
   width: 100%;
   padding: 0 11px;
+  margin-top: -100px;
 }
-
-#searchResult #searchResultProductList .product_listnormal_list_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#searchResultProductList .product_listnormal_list_wrap {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: space-between;
   width: 100%;
   height: auto;
 }
-
-#searchResult #searchResultProductList .product_listnormal_list_wrap .listnormal_list {
+#searchResultProductList .product_listnormal_list_wrap .listnormal_list {
   width: 49%;
   height: auto;
   padding-bottom: 30px;
 }
-
-#searchResult #searchResultProductList .product_listnormal_list_wrap .listnormal_list .normal_product {
+#searchResultProductList .product_listnormal_list_wrap .listnormal_list .normal_product {
   position: relative;
   display: inline;
   padding-bottom: 30px;
 }
 
-#searchResult .thumb {
+.thumb {
   position: relative;
   width: 100%;
 }
-
-#searchResult .thumb > a {
+.thumb > a {
   display: block;
   position: relative;
   padding-top: calc(100% - 14.5px);
   overflow: hidden;
   border-radius: 4px;
 }
-
-#searchResult .thumb > a > img {
+.thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
-
-#searchResult .thumb .icon {
+.thumb .icon {
   position: absolute;
   width: 50px;
   height: 20.5px;
@@ -393,13 +293,11 @@
   top: 4.6px;
   left: 4.6px;
 }
-
-#searchResult .thumb .icon img {
+.thumb .icon img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-#searchResult .thumb .wish {
+.thumb .wish {
   position: absolute;
   width: 32px;
   height: 32px;
@@ -407,45 +305,34 @@
   bottom: 9.7px;
   left: 8.7px;
 }
-
-#searchResult .thumb .wish button {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.thumb .wish button {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: inherit;
   height: inherit;
   border: 0;
   border-radius: 50%;
   background: #fff;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
-          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
   cursor: pointer;
 }
-
-#searchResult .thumb .wish button img {
+.thumb .wish button img {
   position: relative;
   width: 57.4%;
   height: 52.7%;
   margin-top: 2.5px;
 }
 
-#searchResult .desc {
+.desc {
   padding: 7px 0 0 0;
 }
-
-#searchResult .desc .brand {
+.desc .brand {
   font-size: 1rem;
   color: #707070;
   margin-bottom: 3px;
 }
-
-#searchResult .desc .summary {
+.desc .summary {
   display: block;
   font-size: 1.15rem;
   color: #707070;
@@ -460,9 +347,8 @@
   line-height: 1.45rem;
   margin-bottom: 7px;
 }
-
-#searchResult .desc .product_name,
-#searchResult .desc .product_name span {
+.desc .product_name,
+.desc .product_name span {
   color: #292929 !important;
   font-size: 1.3rem !important;
   font-weight: bold;
@@ -482,35 +368,17 @@
 }
 
 .page-pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 100px;
 }
-
 .page-pagination .paginate-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
   width: auto;
   height: 40px;
   background: #FAFAFE;
@@ -518,20 +386,11 @@
   padding: 1% 5%;
   font-size: 1.3rem;
 }
-
 .page-pagination .btnPrev_wrap, .page-pagination .btnNext_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  align-items: center;
 }
-
 .page-pagination .first, .page-pagination .last, .page-pagination .btnPrev, .page-pagination .btnNext {
   width: 30px;
   height: 30px;
@@ -543,32 +402,20 @@
   color: #707070;
   font-size: 1.1rem;
 }
-
 .page-pagination .first:hover, .page-pagination .last:hover, .page-pagination .btnPrev:hover, .page-pagination .btnNext:hover {
   font-weight: 700;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-
 .page-pagination ol {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
   width: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   margin: 0 5px;
 }
-
 .page-pagination ol li {
   margin: 0 11px;
 }
-
 .page-pagination ol li a {
   display: block;
   width: 100%;
@@ -578,9 +425,7 @@
   font-weight: 500;
   color: #707070;
 }
-
 .page-pagination ol li .this {
   font-weight: 600;
   color: #022CFF;
-}
-/*# sourceMappingURL=search.css.map */
+}/*# sourceMappingURL=search.css.map */
