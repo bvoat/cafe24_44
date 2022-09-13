@@ -72,6 +72,22 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            #crewinfo_nav{
+                position: relative;
+                margin-left: 5px;
+                >a{color: $bvt-blue;}
+                &::before{
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background: $bvt-blue;
+                    top: 8px;
+                    right: -5px;
+                }
+            }
             .top_nav_item {
                 display: flex;
                 justify-content: center;

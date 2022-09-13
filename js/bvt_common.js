@@ -169,7 +169,7 @@ function controlTopNav(page_path) {
     "member/modify",
   ];
   //커뮤니티용 path
-  const community_array = ["community", "buy_records"];
+  const community_array = ["community", "buy_records", "crewinfo"];
   //뒤로가기 path
   const back_array = [
     "product/detail",
@@ -193,6 +193,7 @@ function controlTopNav(page_path) {
   //커뮤니티 하단바로
   community_array.forEach((path) => {
     if (page_path.includes(path)) {
+      console.log('path: ', path);
       default_nav.classList.add("displaynone");
       comm_nav.classList.remove("displaynone");
       document.querySelector(`#${path}_nav`).classList.add("top_nav_active");
@@ -222,7 +223,7 @@ function controlTopNavActive(page_path) {
       document.querySelector(`#cate${name}`).classList.add("top_nav_active");
     }
     //path가 크루면
-  } else if (page_path.includes("crew/crew.html")) {
+  } else if (page_path.includes("crew/crew.html") || page_path.includes("crew/crewinfo.html")) {
     //크루에 active
     document.querySelector("#crew").classList.add("top_nav_active");
     //path가 펀딩이면

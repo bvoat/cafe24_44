@@ -3,54 +3,37 @@
   max-width: 450px;
   border-bottom: 1px solid #E2E2E2;
 }
-
 #topNav .default_top_nav {
   width: 100%;
   max-width: 450px;
   height: 40px;
 }
-
 #topNav .default_top_nav .top_nav_list {
   padding: 0 11px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
 }
-
 #topNav .default_top_nav .top_nav_list .top_nav_item {
   width: -webkit-fit-content !important;
   width: -moz-fit-content !important;
   width: fit-content !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-size: 1.45rem;
   font-weight: normal;
 }
-
 #topNav .default_top_nav .top_nav_list .top_nav_item > a {
   display: block;
   word-break: keep-all;
 }
-
 #topNav .default_top_nav .top_nav_list #crew {
   position: relative;
   margin-left: 5px;
 }
-
 #topNav .default_top_nav .top_nav_list #crew > a {
   color: #022CFF;
 }
-
 #topNav .default_top_nav .top_nav_list #crew::before {
   position: absolute;
   display: block;
@@ -62,12 +45,10 @@
   top: 8px;
   right: -5px;
 }
-
 #topNav .default_top_nav .top_nav_list .top_nav_active > a {
   color: #022CFF;
   font-weight: 600;
 }
-
 #topNav .default_top_nav .top_nav_list .top_nav_active::after {
   position: absolute;
   display: block;
@@ -78,37 +59,40 @@
   border-radius: 50px;
   bottom: 0px;
 }
-
 #topNav > .community_top_nav {
   width: 100%;
   max-width: 450px;
   height: 40px;
 }
-
 #topNav > .community_top_nav .top_nav_list {
   width: 100%;
   height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
+#topNav > .community_top_nav .top_nav_list #crewinfo_nav {
+  position: relative;
+  margin-left: 5px;
+}
+#topNav > .community_top_nav .top_nav_list #crewinfo_nav > a {
+  color: #022CFF;
+}
+#topNav > .community_top_nav .top_nav_list #crewinfo_nav::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #022CFF;
+  top: 8px;
+  right: -5px;
+}
 #topNav > .community_top_nav .top_nav_list .top_nav_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-size: 1.45rem;
   font-weight: 500;
   margin: 0 15px;
@@ -120,16 +104,13 @@
   max-width: max-content !important;
   height: inherit;
 }
-
 #topNav > .community_top_nav .top_nav_list .top_nav_item > a {
   display: block;
 }
-
 #topNav > .community_top_nav .top_nav_list .top_nav_active > a {
   color: #022CFF;
   font-weight: bold;
 }
-
 #topNav > .community_top_nav .top_nav_list .top_nav_active::after {
   position: absolute;
   display: block;
@@ -139,5 +120,4 @@
   background: #022CFF;
   border-radius: 50px;
   bottom: 0px;
-}
-/*# sourceMappingURL=top_nav.css.map */
+}/*# sourceMappingURL=top_nav.css.map */
