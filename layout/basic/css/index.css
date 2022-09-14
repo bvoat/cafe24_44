@@ -132,7 +132,7 @@
 
 /* 지금 구매중 배경 */
 #indexProductBvt72 {
-  padding: 46px 0 60px 11px;
+  padding: 46px 0 60px 11px !important;
   background: #F5F6FA;
   /* 지금 구매중 이미지 - head 사이 간격 */
 }
