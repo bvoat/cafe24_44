@@ -1,40 +1,60 @@
+@charset "UTF-8";
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 #realTimeOrderList {
   width: 100%;
   max-width: 450px;
   padding: 37px 0px;
   margin: 80px 0 60px;
 }
-
 #realTimeOrderList #realTimeOrderListTitle {
   width: 100%;
   max-width: 450px;
   margin-bottom: 18px;
   padding: 0 11px;
 }
-
 #realTimeOrderList #realTimeOrderListTitle h1 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 2px;
 }
-
 #realTimeOrderList #realTimeOrderListTitle h2 {
   font-size: 1.3rem;
   font-weight: 300;
   color: #ABABAB;
 }
-
+#realTimeOrderList #realTimeOrderListContents .realtime {
+  width: 100%;
+}
+#realTimeOrderList #realTimeOrderListContents .realtime > ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: calc(100% - 22px);
+  padding: 25px 11px 0;
+}
+#realTimeOrderList #realTimeOrderListContents .realtime > ul .list_item {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: calc(50% - 4px);
+  max-width: 210px;
+  margin-bottom: 40px;
+}
 #realTimeOrderList #realTimeOrderListContents .purchaser {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #022CFF;
   border-radius: 20px;
   background: #ffffff;
@@ -47,52 +67,30 @@
   top: -15px;
   left: 11px;
 }
-
 #realTimeOrderList #realTimeOrderListContents .purchaser > span {
   margin-left: 4px;
 }
-
 #realTimeOrderList #realTimeOrderListMsg {
   width: 100%;
   max-width: 450px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
   padding-bottom: 40px;
   margin-top: 14px;
 }
-
 #realTimeOrderList #realTimeOrderListMsg p {
   font-size: 1.3rem;
   font-weight: 400;
   color: #C4C4C4;
   margin-bottom: 8px;
 }
-
 #realTimeOrderList #realTimeOrderListMsg a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 360px;
   height: 40px;
@@ -102,8 +100,6 @@
   font-size: 1.6rem;
   font-weight: 500;
 }
-
 #realTimeOrderList #realTimeOrderListMsg a svg {
   margin: 0 0 0 4px;
-}
-/*# sourceMappingURL=realtime.css.map */
+}/*# sourceMappingURL=realtime.css.map */

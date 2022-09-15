@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 #productList {
   width: 100%;
   max-width: 450px;
@@ -9,13 +17,11 @@
   margin: 19px 0;
   padding: 0 11px;
 }
-
 #productListTitle h1 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 2px;
 }
-
 #productListTitle h2 {
   font-size: 1.3rem;
   font-weight: 300;
@@ -23,44 +29,26 @@
 }
 
 #subCategorySwiper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 50px;
   background: #292929;
 }
-
 #subCategorySwiper .subcategory {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  align-items: center;
   padding: 0 11px;
 }
-
 #subCategorySwiper .subcategory .subcategory_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: -webkit-fit-content !important;
   width: -moz-fit-content !important;
   width: fit-content !important;
 }
-
 #subCategorySwiper .subcategory .subcategory_list a {
   display: block;
   font-weight: 300;
@@ -71,7 +59,6 @@
   word-wrap: break-word;
   margin-top: -4px;
 }
-
 #subCategorySwiper .subcategory .subcate_active a::after {
   position: absolute;
   display: block;
@@ -85,21 +72,13 @@
 
 #product_normalmenu {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  align-items: center;
+  flex-flow: row nowrap;
   width: 100%;
   height: 50px;
   padding: 11px 0;
 }
-
 #product_normalmenu > select {
   display: block;
   position: absolute;
@@ -115,7 +94,6 @@
   font-size: 1.2rem;
   cursor: pointer;
 }
-
 #product_normalmenu > label {
   display: block;
   position: absolute;
@@ -130,20 +108,31 @@
   display: block;
   width: 100%;
   height: 50px;
+  /* 더보기 버튼 */
 }
-
+#product_listmore .moreview, #product_listmore .paginate_moreview {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
 #product_listmore .moreview_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 50px;
-  text-align: center;
-  vertical-align: middle;
   background: #F2F2F2;
+  color: #707070;
+  border: none;
+  border-radius: 0;
   font-size: 1.38rem;
   font-weight: normal;
-  letter-spacing: -0.3px;
-  color: #707070;
+  cursor: pointer;
 }
-
+#product_listmore .moreview_btn svg {
+  margin: 2px 0 0 6px;
+}
 #product_listmore .moreview_btn::after {
   display: inline-block;
   content: "〉";
@@ -152,7 +141,5 @@
   top: 50%;
   left: 50%;
   margin-left: 15px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-/*# sourceMappingURL=list.css.map */
+  transform: rotate(90deg);
+}/*# sourceMappingURL=list.css.map */

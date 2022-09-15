@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 #weekSocialOrderList {
   width: 100%;
   max-width: 450px;
@@ -25,6 +33,99 @@
   font-weight: 300;
   color: #ABABAB;
 }
+#weekTotalBestList #weekTotalBestListContents .weekbest {
+  width: 100%;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: calc(100% - 20px);
+  padding: 0 10px;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 31.9%;
+  max-width: 130px;
+  margin-bottom: 27px;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(1) {
+  margin-right: 10px;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(3n), #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(4), #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(7), #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(10), #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(13), #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(16), #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(19) {
+  margin-right: 2.1%;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+9) {
+  display: none;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(1), #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(2) {
+  width: calc(50% - 5px);
+  max-width: 200px;
+  margin-bottom: 27px;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(1) .thumb, #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(2) .thumb {
+  position: relative;
+  width: 100%;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(1) .thumb > a, #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(2) .thumb > a {
+  display: block;
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(1) .thumb > a > img, #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(2) .thumb > a > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(1) .thumb .icon, #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(2) .thumb .icon {
+  position: absolute;
+  width: 50px;
+  height: 20.5px;
+  border-radius: 4px;
+  top: 4.6px;
+  left: 4.6px;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(1) .thumb .icon img, #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(2) .thumb .icon img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(1) .thumb .wish, #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(2) .thumb .wish {
+  position: absolute;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  bottom: 11px;
+  right: 13px;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(1) .thumb .wish button, #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(2) .thumb .wish button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  border: 0;
+  background: none;
+  bottom: 11px;
+  cursor: pointer;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(1) .thumb .wish button img, #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(2) .thumb .wish button img {
+  position: relative;
+  width: 37px;
+  height: 35px;
+  padding: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(1)::before, #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(2)::before {
   position: absolute;
   display: flex;
@@ -43,6 +144,64 @@
   left: 7px;
   padding: 0 0 4px 0;
 }
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+3):nth-child(-n+5) .thumb {
+  position: relative;
+  width: 100%;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+3):nth-child(-n+5) .thumb > a {
+  display: block;
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+3):nth-child(-n+5) .thumb > a > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+3):nth-child(-n+5) .thumb .icon {
+  position: absolute;
+  width: 50px;
+  height: 20.5px;
+  border-radius: 4px;
+  top: 4.6px;
+  left: 4.6px;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+3):nth-child(-n+5) .thumb .icon img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+3):nth-child(-n+5) .thumb .wish {
+  position: absolute;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  bottom: 11px;
+  right: 13px;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+3):nth-child(-n+5) .thumb .wish button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  border: 0;
+  background: none;
+  bottom: 11px;
+  cursor: pointer;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+3):nth-child(-n+5) .thumb .wish button img {
+  position: relative;
+  width: 37px;
+  height: 35px;
+  padding: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+3):nth-child(-n+5)::before {
   position: absolute;
   display: flex;
@@ -60,6 +219,64 @@
   top: -8px;
   left: 7px;
   padding: 0 0 4px 0;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+6):nth-child(-n+20) .thumb {
+  position: relative;
+  width: 100%;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+6):nth-child(-n+20) .thumb > a {
+  display: block;
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+6):nth-child(-n+20) .thumb > a > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+6):nth-child(-n+20) .thumb .icon {
+  position: absolute;
+  width: 50px;
+  height: 20.5px;
+  border-radius: 4px;
+  top: 4.6px;
+  left: 4.6px;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+6):nth-child(-n+20) .thumb .icon img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+6):nth-child(-n+20) .thumb .wish {
+  position: absolute;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  bottom: 11px;
+  right: 13px;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+6):nth-child(-n+20) .thumb .wish button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  border: 0;
+  background: none;
+  bottom: 11px;
+  cursor: pointer;
+}
+#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+6):nth-child(-n+20) .thumb .wish button img {
+  position: relative;
+  width: 37px;
+  height: 35px;
+  padding: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(n+6):nth-child(-n+20)::before {
   position: absolute;
@@ -139,41 +356,67 @@
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item:nth-child(20)::before {
   content: "20" !important;
 }
-#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item .brand {
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
-  line-height: 1.3rem;
+@media (max-width: 420px) {
+  #weekTotalBestList #weekTotalBestListContents ul {
+    max-width: 100%;
+    padding: 0;
+  }
+  #weekTotalBestList #weekTotalBestListContents .desc {
+    padding: 7px 0 0 0;
+  }
+  #weekTotalBestList #weekTotalBestListContents .price_wrap > .discount {
+    font-size: 1.4rem;
+  }
+  #weekTotalBestList #weekTotalBestListContents .price_wrap > .price_item {
+    font-size: 1.4rem;
+  }
+  #weekTotalBestList #weekTotalBestListContents .price_wrap > .price_item::after {
+    font-size: 1.4rem;
+  }
 }
-#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item .summary {
-  display: block;
-  font-size: 1.15rem;
-  color: #707070;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
-  line-height: 1.3rem;
-  min-height: 11px;
-  margin-bottom: 7px;
+@media (max-width: 379px) {
+  #weekTotalBestList #weekTotalBestListContents ul {
+    max-width: 100%;
+    padding: 0;
+  }
+  #weekTotalBestList #weekTotalBestListContents .desc {
+    padding: 7px 0 0 0;
+  }
+  #weekTotalBestList #weekTotalBestListContents .price_wrap > .discount {
+    font-size: 1.25rem;
+  }
+  #weekTotalBestList #weekTotalBestListContents .price_wrap > .price_item {
+    font-size: 1.25rem;
+  }
+  #weekTotalBestList #weekTotalBestListContents .price_wrap > .price_item::after {
+    font-size: 1.25rem;
+  }
+  #weekTotalBestList #weekTotalBestListContents .price_wrap .strike_price {
+    bottom: 1.5rem;
+    font-size: 1rem !important;
+  }
 }
-#weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item .thumb a > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+@media (max-width: 350px) {
+  #weekTotalBestList #weekTotalBestListContents ul {
+    max-width: 100%;
+    padding: 0;
+  }
+  #weekTotalBestList #weekTotalBestListContents .desc {
+    padding: 7px 0 0 0;
+  }
+  #weekTotalBestList #weekTotalBestListContents .price_wrap > .discount {
+    font-size: 1.1rem;
+  }
+  #weekTotalBestList #weekTotalBestListContents .price_wrap > .price_item {
+    font-size: 1.1rem;
+  }
+  #weekTotalBestList #weekTotalBestListContents .price_wrap > .price_item::after {
+    font-size: 1.1rem;
+  }
+  #weekTotalBestList #weekTotalBestListContents .price_wrap .strike_price {
+    bottom: 1.5rem;
+    font-size: 0.9px !important;
+  }
 }
 
 #weekTagBestList {
@@ -200,11 +443,13 @@
   max-width: 450px;
 }
 #weekTagBestList #weekTagBestListContents .weektag {
+  width: 100%;
   background: #ffffff;
   border-radius: 10px;
   margin-bottom: 40px;
   overflow-x: hidden;
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.0509803922);
+  /* 더보기 버튼 커스텀 */
 }
 #weekTagBestList #weekTagBestListContents .weektag #weekTagTitle {
   width: 100%;
@@ -260,4 +505,105 @@
   font-size: 1.4rem;
   font-weight: 400;
   color: #292929;
+}
+#weekTagBestList #weekTagBestListContents .weektag > ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: calc(100% - 30px);
+  padding: 0 15px;
+}
+#weekTagBestList #weekTagBestListContents .weektag > ul .list_item {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: calc(50% - 9px);
+  max-width: 190px;
+  margin-bottom: 27px;
+}
+#weekTagBestList #weekTagBestListContents .weektag > ul .list_item .thumb {
+  position: relative;
+  width: 100%;
+}
+#weekTagBestList #weekTagBestListContents .weektag > ul .list_item .thumb > a {
+  display: block;
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+#weekTagBestList #weekTagBestListContents .weektag > ul .list_item .thumb > a > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#weekTagBestList #weekTagBestListContents .weektag > ul .list_item .thumb .icon {
+  position: absolute;
+  width: 50px;
+  height: 20.5px;
+  border-radius: 4px;
+  top: 4.6px;
+  left: 4.6px;
+}
+#weekTagBestList #weekTagBestListContents .weektag > ul .list_item .thumb .icon img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#weekTagBestList #weekTagBestListContents .weektag > ul .list_item .thumb .wish {
+  position: absolute;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  bottom: 11px;
+  right: 13px;
+}
+#weekTagBestList #weekTagBestListContents .weektag > ul .list_item .thumb .wish button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  border: 0;
+  background: none;
+  bottom: 11px;
+  cursor: pointer;
+}
+#weekTagBestList #weekTagBestListContents .weektag > ul .list_item .thumb .wish button img {
+  position: relative;
+  width: 37px;
+  height: 35px;
+  padding: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#weekTagBestList #weekTagBestListContents .weektag > ul .list_item:nth-child(n+5) {
+  display: none;
+}
+#weekTagBestList #weekTagBestListContents .weektag > .paginate_moreview {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: inherit;
+}
+#weekTagBestList #weekTagBestListContents .weektag > .paginate_moreview .moreview_btn {
+  width: 100%;
+  max-width: inherit;
+  height: 42px;
+  background: #FAFAFB;
+  border-radius: 0;
+  border: none;
+  color: #292929;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0 auto;
+  cursor: pointer;
+}
+#weekTagBestList #weekTagBestListContents .weektag > .paginate_moreview .moreview_btn svg {
+  margin: 3px 0 0 2px;
 }/*# sourceMappingURL=best.css.map */
