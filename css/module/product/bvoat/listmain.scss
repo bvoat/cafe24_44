@@ -2,47 +2,125 @@
 @import "../../../abstracts/mixin";
 @import "../../../abstracts/variables";
 
-
-
-//상품 설명
-@include product-thumb(17px, 15px, 10px, 9.7px, 8.7px);
-
-@include product-desc(7px, 1rem, 1.15rem, 1.3rem);
-
-
-/* 더보기 버튼 */
-.paginate_moreview {
+#productListnormalList {
     display: flex;
-    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
     width: 100%;
-    max-width: 450px;
-    height: 42px;
-    .moreview_btn{
-        width: 100%;
-        max-width: 360px;
-        height: 40px;
-        background: $bvt-white;
-        border: $bvt-btn-border;
-        border-radius: 5px;
-        color: $bvt-blue;
-        font-size: 1.5rem;
-        font-weight: 500;
-        margin: 0 auto;
-        cursor: pointer;
-        svg{
-            margin: 2px 0 0 6px;
+    height: auto;
+
+    // 상품 개별
+    .listnormal_list {
+
+        width: 49%;
+        height: auto;
+        padding-bottom: 30px;
+
+        .normal_product {
+            position: relative;
+            display: inline;
+            padding-bottom: 30px;
         }
     }
 }
 
-/* swiper progress 공통 */
 
-.list_item_progress {
-    width: calc(100% - 22px);
-    margin-left: -11px;
-    height: 3px;
-}
+            //상품 이미지 구역
+            .normal_img_wrap {
+                position: relative;
+                width: 100%;
 
-.swiper-pagination-progressbar {
-    background: #E7ECEF;
-}
+                .normal_img_box {
+                    display: block;
+                    position: relative;
+                    margin-bottom: 6.9px;
+                    padding-top: calc(100% - 15px);
+                    overflow: hidden;
+                    border-radius: 4px;
+
+                    .normal_img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+
+                .product_select_icon {
+                    position: absolute;
+                    width: 71px;
+                    height: 30px;
+                    border-radius: 4px;
+                    top: 7.2px;
+                    left: 5.6px;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .product_wish {
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 32px;
+                    height: 32px;
+                    bottom: 9.2px;
+                    left: 8.7px;
+                    background: $bvt-white;
+                    border-radius: 50%;
+                    box-shadow: $bvt-btn-shadow;
+                    padding-top: 2px;
+
+                    img {
+                        display: block;
+                        box-shadow: none;
+                        width: 20px;
+                        height: 18px;
+                    }
+                }
+            }
+
+            //상품 브랜드 구역
+            .normal_product_brand {
+                width: 100%;
+                height: 32px;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+
+                .brand {
+                    font-size: 1rem !important;
+                    color: $bvt-darkgray;
+                }
+
+                .summary_desc {
+                    font-size: 1rem;
+                    color: $bvt-darkgray;
+                    @include ellipsis(2, 2.2rem);
+                }
+            }
+
+            //상품 정보 구역
+            .normal_product_info {
+                margin-top: 10px;
+
+                .normal_product_name {
+                    display: block;
+                    width: 100%;
+                    font-size: 1.35rem;
+                    font-weight: 600;
+                    margin-bottom: 9px;
+                    vertical-align: top;
+                    @include ellipsis(2, 1.3rem);
+
+                    >span {
+                        //더보기 할 때 size, color 적용되지 않는 오류 수정
+                        font-size: 1.3rem !important;
+                        color: $bvt-black  !important;
+                    }
+                }
+            }
