@@ -1,12 +1,3 @@
-@charset "UTF-8";
-/* 공통 디자인 */
-/* ellipsis*/
-/* ellipsis*/
-/* 공통 디자인 */
-/* 애니메이션 */
-/* 애니메이션 */
-/* 미디어쿼리 */
-/* 미디어쿼리 */
 #board_frame {
   width: 100%;
   border: none;
@@ -26,6 +17,7 @@
   bottom: 71px;
   right: 10px;
 }
+
 #go_board_write_ico img {
   width: 100px;
   height: 100px;
@@ -48,4 +40,5 @@
 
 .modified {
   color: #022CFF !important;
-}/*# sourceMappingURL=community.css.map */
+}
+/*# sourceMappingURL=community.css.map */

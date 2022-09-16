@@ -1,12 +1,3 @@
-@charset "UTF-8";
-/* 공통 디자인 */
-/* ellipsis*/
-/* ellipsis*/
-/* 공통 디자인 */
-/* 애니메이션 */
-/* 애니메이션 */
-/* 미디어쿼리 */
-/* 미디어쿼리 */
 #footer {
   display: block;
   width: 100%;
@@ -14,54 +5,81 @@
   padding: 33px 11px 93px 11px;
   background: #F5F6FB;
 }
+
 #footer #footer_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
 }
+
 #footer #footer_wrap .company_contact {
-  order: 2;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
+
 #footer #footer_wrap .company_contact h4 {
   font-size: 1.8rem;
   font-weight: 400;
   margin-bottom: 21px;
 }
+
 #footer #footer_wrap .company_contact .company_app_down {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 235px;
   height: auto;
   margin-bottom: 14px;
 }
+
 #footer #footer_wrap .company_contact .company_app_down a {
   width: 114px;
   height: 36px;
   text-indent: -9999px;
   overflow: hidden;
 }
+
 #footer #footer_wrap .company_contact .company_app_down .google_down {
   background: url(/public/images/icon/icon-playstore.png) no-repeat center;
   background-size: contain;
 }
+
 #footer #footer_wrap .company_contact .company_app_down .appstore_down {
   background: url(/public/images/icon/icon-appstore.png) no-repeat center;
   background-size: contain;
 }
+
 #footer #footer_wrap .company_contact p {
   font-size: 1.2rem;
 }
+
 #footer #footer_wrap .company_contact p > a:active, #footer #footer_wrap .company_contact p > a:hover, #footer #footer_wrap .company_contact p > a:focus {
   text-decoration: underline;
 }
+
 #footer #footer_wrap .company_info_link {
   width: auto;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin-bottom: 24px;
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
+
 #footer #footer_wrap .company_info_link li {
   display: inline-block;
   margin-right: 10px;
@@ -69,19 +87,24 @@
   font-weight: 400;
   letter-spacing: -0.6px;
 }
+
 #footer #footer_wrap details {
-  order: 3;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
   margin-top: 40px;
   width: auto;
   height: auto;
   font-size: 1.3rem;
 }
+
 #footer #footer_wrap details summary {
   font-size: 1.3rem;
   font-weight: 700;
   color: #8E8E8E;
   margin-bottom: 20px;
 }
+
 #footer #footer_wrap details summary .summary_marker_off {
   display: inline-block;
   width: 17px;
@@ -89,10 +112,12 @@
   margin-left: 5px;
   background: url(/public/images/icon/icon-details-arrow.png) no-repeat center;
   background-size: contain;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   text-indent: -9999px;
   overflow: hidden;
 }
+
 #footer #footer_wrap details summary .summary_marker_on {
   display: inline-block;
   width: 17px;
@@ -100,40 +125,51 @@
   margin-left: 5px;
   background: url(/public/images/icon/icon-details-arrow-on.png) no-repeat center;
   background-size: contain;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   text-indent: -9999px;
   overflow: hidden;
 }
+
 #footer #footer_wrap details summary::marker {
   content: "  ";
   display: none;
 }
+
 #footer #footer_wrap details summary::-webkit-details-marker {
   content: "";
   display: none;
 }
+
 #footer #footer_wrap details .company_name::after {
   display: inline-block;
   content: "|";
   font-size: 1.3rem;
 }
+
 #footer #footer_wrap details .company_addr {
   display: block;
 }
+
 #footer #footer_wrap details .company_regno {
   display: block;
 }
+
 #footer #footer_wrap details .company_network {
   display: block;
 }
+
 #footer #footer_wrap details .company_cpo {
   display: block;
 }
+
 #footer #footer_wrap details[open] summary::marker {
   content: "";
   display: none;
 }
+
 #footer #footer_wrap details[open] summary::-webkit-details-marker {
   content: "";
   display: none;
-}/*# sourceMappingURL=footer.css.map */
+}
+/*# sourceMappingURL=footer.css.map */

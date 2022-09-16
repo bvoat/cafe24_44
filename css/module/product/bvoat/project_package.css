@@ -1,12 +1,4 @@
 @charset "UTF-8";
-/* 공통 디자인 */
-/* ellipsis*/
-/* ellipsis*/
-/* 공통 디자인 */
-/* 애니메이션 */
-/* 애니메이션 */
-/* 미디어쿼리 */
-/* 미디어쿼리 */
 #specialProject {
   width: 100%;
   max-width: 450px;
@@ -193,12 +185,11 @@
 }
 #specialProject .project_productlist_wrap .wish {
   position: absolute;
-  width: auto;
-  height: auto;
+  width: 38px;
+  height: 38px;
   cursor: pointer;
   bottom: 8.7px;
   left: 12.2px;
-  background: #fff;
 }
 #specialProject .project_productlist_wrap .wish button {
   display: flex;
@@ -206,14 +197,15 @@
   align-items: center;
   width: inherit;
   height: inherit;
-  padding: 10px;
   border: 0;
-  bottom: pink;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
   cursor: pointer;
 }
 #specialProject .project_productlist_wrap .wish button img {
   position: relative;
-  width: 38px;
-  height: 38px;
+  width: 57.4%;
+  height: 52.7%;
   margin-top: 2.5px;
 }/*# sourceMappingURL=project_package.css.map */

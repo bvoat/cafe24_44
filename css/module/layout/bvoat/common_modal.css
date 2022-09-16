@@ -1,18 +1,18 @@
-@charset "UTF-8";
-/* 공통 디자인 */
-/* ellipsis*/
-/* ellipsis*/
-/* 공통 디자인 */
-/* 애니메이션 */
-/* 애니메이션 */
-/* 미디어쿼리 */
-/* 미디어쿼리 */
 #bvtCommonModal {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   max-width: 450px;
   height: 100%;
@@ -21,11 +21,21 @@
   overflow: hidden;
   border: 0;
 }
+
 #bvtCommonModal #bvtCommonForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   max-width: 425px;
   height: 344px;
@@ -35,25 +45,37 @@
   padding: 30px 11px;
   overflow: hidden;
 }
+
 #bvtCommonModal #bvtCommonForm .bvt_modal_title {
   font-size: 2.1rem;
   font-weight: 600;
   text-align: center;
 }
+
 #bvtCommonModal #bvtCommonForm .bvt_modal_text {
   font-size: 1.3rem;
   font-weight: 300;
   color: #707070;
   text-align: center;
 }
+
 #bvtCommonModal #bvtCommonForm .bvt_modal_btn {
   width: 100%;
   max-width: 425px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #bvtCommonModal #bvtCommonForm .bvt_modal_btn > button {
   width: calc(50% - 5px);
   height: 58px;
@@ -61,17 +83,29 @@
   color: #ffffff;
   font-size: 1.4rem;
 }
+
 #bvtCommonModal #bvtCommonForm .bvt_modal_btn .ok_btn {
   background: #022CFF;
 }
+
 #bvtCommonModal #bvtCommonForm .bvt_modal_btn .no_btn {
   background: #C4C4C4;
 }
+
 #bvtCommonModal #bvtCommonShareForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   max-width: 320px;
   height: 216px;
@@ -82,6 +116,7 @@
   padding: 20px 0 0 0;
   overflow: hidden;
 }
+
 #bvtCommonModal #bvtCommonShareForm .bvt_modal_title {
   width: 100%;
   font-size: 1.8rem;
@@ -92,31 +127,54 @@
   margin-bottom: 28px;
   border-bottom: 1px solid #E2E2E2;
 }
+
 #bvtCommonModal #bvtCommonShareForm .bvt_modal_btn {
   width: 100%;
   max-width: 425px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #bvtCommonModal #bvtCommonShareForm .bvt_modal_btn > button {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   font-size: 1.1rem;
 }
+
 #bvtCommonModal #bvtCommonShareForm .bvt_modal_btn > button:nth-child(1), #bvtCommonModal #bvtCommonShareForm .bvt_modal_btn > button:nth-child(2) {
   margin-right: 17px;
 }
+
 #bvtCommonModal #bvtCommonShareForm .bvt_modal_btn > button:nth-child(1) {
   background: #3962AA;
 }
+
 #bvtCommonModal #bvtCommonShareForm .bvt_modal_btn > button:nth-child(1)::after {
   display: block;
   content: "";
@@ -124,9 +182,11 @@
   height: 28.67px;
   background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 30'%3E%3Cpath d='M10.222 29.332V16.25h4.389l.662-5.095h-5.051V7.898c0-1.474.405-2.478 2.52-2.478h2.702V.86c-.47-.064-2.072-.203-3.93-.203-3.888 0-6.558 2.37-6.558 6.739v3.76h-4.4v5.094h4.4v13.082h5.266Z' fill='%23fff'/%3E%3C/svg%3E") no-repeat center;
 }
+
 #bvtCommonModal #bvtCommonShareForm .bvt_modal_btn > button:nth-child(2) {
   background: #F6D973;
 }
+
 #bvtCommonModal #bvtCommonShareForm .bvt_modal_btn > button:nth-child(2)::after {
   display: block;
   content: "";
@@ -134,9 +194,11 @@
   height: 28.64px;
   background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 30'%3E%3Cpath d='M16 .678C7.435.678.493 6.157.493 12.928c0 4.347 2.873 8.16 7.198 10.338l-1.463 5.458a.478.478 0 0 0 .107.47.435.435 0 0 0 .32.128.446.446 0 0 0 .267-.107l6.28-4.24a20.04 20.04 0 0 0 2.787.203c8.566 0 15.508-5.479 15.508-12.25S24.555.678 15.989.678' fill='%23381E1E'/%3E%3C/svg%3E") no-repeat center;
 }
+
 #bvtCommonModal #bvtCommonShareForm .bvt_modal_btn > button:nth-child(3) {
   background: #F4F4F4;
 }
+
 #bvtCommonModal #bvtCommonShareForm .bvt_modal_btn > button:nth-child(3)::after {
   display: block;
   content: "";
@@ -144,10 +206,12 @@
   height: 22.8px;
   background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='m16.482 19.622-2.467 2.584c-2.703 2.83-7.199 2.937-10.029.235s-2.937-7.198-.235-10.028L6.186 9.86M9.358 6.539l2.617-2.745c2.702-2.83 7.198-2.937 10.028-.235s2.937 7.198.235 10.028l-2.606 2.724' stroke='%23381E1E' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='m15.006 8.885-6.344 6.344a1.452 1.452 0 1 0 2.054 2.054l6.344-6.344a1.453 1.453 0 0 0-2.054-2.054Z' fill='%23381E1E'/%3E%3C/svg%3E") no-repeat center;
 }
+
 #bvtCommonModal #bvtCommonShareForm .bvt_modal_btn > button span {
   position: absolute;
   bottom: -23px;
 }
+
 #bvtCommonModal .share_close_btn {
   width: 90px;
   height: 40px;
@@ -157,14 +221,20 @@
   font-size: 1.5rem;
   font-weight: 400;
   margin-top: 20px;
-  letter-spacing: -0.25%;
+  letter-spacing: -.25%;
 }
 
 .share_link_ok_msg {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 383px;
   height: 33px;
   border-radius: 5px;
@@ -181,5 +251,7 @@
 .share_link_ok_msg.disappear {
   background: rgba(0, 0, 0, 0);
   color: rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-}/*# sourceMappingURL=common_modal.css.map */
+}
+/*# sourceMappingURL=common_modal.css.map */

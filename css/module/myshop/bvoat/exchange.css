@@ -1,87 +1,121 @@
 @charset "UTF-8";
-/* 공통 디자인 */
-/* ellipsis*/
-/* ellipsis*/
-/* 공통 디자인 */
-/* 애니메이션 */
-/* 애니메이션 */
-/* 미디어쿼리 */
-/* 미디어쿼리 */
 #orderExchange {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   max-width: 450px;
   padding: 23px 11px;
   margin: 81px 0px 60px;
 }
+
 #orderExchange #orderExchangeTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
   margin-bottom: 18px;
 }
+
 #orderExchange #orderExchangeTitle h1 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 2px;
 }
+
 #orderExchange #orderExchangeTitle h2 {
   font-size: 1.3rem;
   font-weight: 300;
   color: #ABABAB;
 }
+
 #orderExchange #orderExchangeTable {
   width: 100%;
   max-width: 450px;
 }
+
 #orderExchange #orderExchangeTable .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 40px;
   padding: 0 11px;
   background: #707070;
 }
+
 #orderExchange #orderExchangeTable .title h3 {
   font-size: 1.3rem;
   font-weight: 500;
 }
+
 #orderExchange #orderExchangeTable .chk > input {
   width: 16px;
   height: 16px;
   cursor: pointer;
 }
+
 #orderExchange #orderExchangeTable .description {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 11px 0;
 }
+
 #orderExchange #orderExchangeTable .description .thumb {
   position: relative;
   width: 100%;
 }
+
 #orderExchange #orderExchangeTable .description .thumb > a {
   display: block;
   position: relative;
-  padding-top: 100%;
+  padding-top: calc(100% - 14.5px);
   overflow: hidden;
   border-radius: 4px;
 }
+
 #orderExchange #orderExchangeTable .description .thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100%;
 }
+
 #orderExchange #orderExchangeTable .description .thumb .icon {
   position: absolute;
   width: 50px;
@@ -90,76 +124,106 @@
   top: 4.6px;
   left: 4.6px;
 }
+
 #orderExchange #orderExchangeTable .description .thumb .icon img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
 #orderExchange #orderExchangeTable .description .thumb .wish {
   position: absolute;
-  width: auto;
-  height: auto;
+  width: 0px;
+  height: 0px;
   cursor: pointer;
   bottom: 0px;
   left: 0px;
-  background: #fff;
 }
+
 #orderExchange #orderExchangeTable .description .thumb .wish button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: inherit;
   height: inherit;
-  padding: 10px;
   border: 0;
-  bottom: pink;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
   cursor: pointer;
 }
+
 #orderExchange #orderExchangeTable .description .thumb .wish button img {
   position: relative;
-  width: 0px;
-  height: 0px;
+  width: 57.4%;
+  height: 52.7%;
   margin-top: 2.5px;
 }
+
 #orderExchange #orderExchangeTable .description .thumb {
   width: 25%;
   min-width: 75px;
   margin-right: 10px;
 }
+
 #orderExchange #orderExchangeTable .description .thumb > a {
   padding-top: 100%;
 }
+
 #orderExchange #orderExchangeTable .description .info .name {
   font-size: 1.5rem;
   margin-bottom: 5px;
 }
+
 #orderExchange #orderExchangeTable .description .info .price_quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #orderExchange #orderExchangeTable .quantity input {
   height: 29px;
   text-align: center;
   font-size: 1.5rem;
 }
+
 #orderExchange #orderExchangeTable .quantity a {
   border: 1px solid #E2E2E2;
   border-radius: 18px;
   padding: 5px 12px;
 }
+
 #orderExchange #orderExchangeTable .status {
   font-size: 1.5rem;
   font-weight: 600;
   color: #022CFF;
 }
+
 #orderExchange #orderExchangeTable .message {
   font-size: 1.3rem;
 }
+
 #orderExchange #orderExchangeTable .xans-myshop-orderhistoryexchangeproduct > table .xans-myshop-selectedproduct {
   border: 0;
   padding: 8px;
 }
+
 #orderExchange #orderExchangeTable .xans-myshop-orderhistoryexchangeproduct > table .ec-product-name {
   width: 93px;
   font-size: 1.3rem;
@@ -173,158 +237,228 @@
   word-wrap: break-word;
   line-height: 1.8rem;
 }
+
 #orderExchange #orderExchangeTable .xans-myshop-orderhistoryexchangeproduct > table thead > tr {
   height: 25px;
 }
+
 #orderExchange #orderExchangeTable .xans-myshop-orderhistoryexchangeproduct > table th {
   font-size: 1.3rem;
   font-weight: 600;
   vertical-align: middle;
 }
+
 #orderExchange #orderExchangeTable .xans-myshop-orderhistoryexchangeproduct > table td {
   font-size: 1.3rem;
   vertical-align: middle;
   padding: 0 5px;
 }
+
 #orderExchange #orderExchangeTable .xans-myshop-orderhistoryexchangeproduct > table td .ec-base-qty {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 12px;
 }
+
 #orderExchange #orderExchangeTable .xans-myshop-orderhistoryexchangeproduct > table td .ec-base-qty a:nth-child(1) {
-  order: 0;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
 }
+
 #orderExchange #orderExchangeTable .xans-myshop-orderhistoryexchangeproduct > table td .ec-base-qty a:nth-child(2) {
-  order: 2;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
+
 #orderExchange #orderExchangeTable .xans-myshop-orderhistoryexchangeproduct > table td .ec-base-qty a > img {
   width: 25px;
   height: 25px;
 }
+
 #orderExchange #orderExchangeTable .xans-myshop-orderhistoryexchangeproduct > table td .ec-base-qty > input {
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   width: 25px;
   height: 25px;
   font-size: 1.2rem;
 }
-#orderExchange #orderExchangeTable .xans-myshop-orderhistoryexchangeproduct > table td a[class="btnNormal gBlank5"], #orderExchange #orderExchangeTable .xans-myshop-orderhistoryexchangeproduct > table td a[class=btnNormal] {
+
+#orderExchange #orderExchangeTable .xans-myshop-orderhistoryexchangeproduct > table td a[class="btnNormal gBlank5"], #orderExchange #orderExchangeTable .xans-myshop-orderhistoryexchangeproduct > table td a[class="btnNormal"] {
   font-size: 1.3rem;
   font-weight: 500;
   border: 1px solid #E2E2E2;
   border-radius: 18px;
   padding: 5px 12px;
 }
+
 #orderExchange #orderExchangeTable .exchange_reason {
   background: #FAFAFE;
   padding: 11px;
 }
+
 #orderExchange #orderExchangeTable .exchange_reason tr {
   height: 55px;
 }
+
 #orderExchange #orderExchangeTable .exchange_reason th {
   font-size: 1.4rem;
   font-weight: 600;
 }
+
 #orderExchange #orderExchangeTable .exchange_reason td span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 8px;
 }
+
 #orderExchange #orderExchangeTable .exchange_reason td label {
   font-size: 1.3rem;
   cursor: pointer;
 }
-#orderExchange #orderExchangeTable .exchange_reason td input[type=radio] {
+
+#orderExchange #orderExchangeTable .exchange_reason td input[type="radio"] {
   width: 15px;
   height: 15px;
   margin-right: 5px;
   cursor: pointer;
 }
+
 #orderExchange #orderExchangeTable .return_parcel {
   background: #FAFAFE;
   padding: 11px;
 }
+
 #orderExchange #orderExchangeTable .return_parcel tr {
   height: 55px;
 }
+
 #orderExchange #orderExchangeTable .return_parcel th {
   font-size: 1.4rem;
   font-weight: 600;
 }
+
 #orderExchange #orderExchangeTable .return_parcel td span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 8px;
 }
+
 #orderExchange #orderExchangeTable .return_parcel td label {
   font-size: 1.3rem;
   cursor: pointer;
 }
-#orderExchange #orderExchangeTable .return_parcel td input[type=radio] {
+
+#orderExchange #orderExchangeTable .return_parcel td input[type="radio"] {
   width: 15px;
   height: 15px;
   margin: 0 5px 0 15px;
   cursor: pointer;
 }
+
 #orderExchange #orderExchangeTable .return_parcel td #direct {
   margin: 11px 0;
 }
-#orderExchange #orderExchangeTable .return_parcel td #direct input[type=text] {
+
+#orderExchange #orderExchangeTable .return_parcel td #direct input[type="text"] {
   width: 100%;
   height: 30px;
   font-size: 1.3rem;
   margin-bottom: 5px;
 }
-#orderExchange #orderExchangeTable .return_parcel td #direct input[type=checkbox] {
+
+#orderExchange #orderExchangeTable .return_parcel td #direct input[type="checkbox"] {
   width: 13px;
   height: 13px;
   margin-right: 5px;
   cursor: pointer;
 }
+
 #orderExchange #orderExchangeTable .return_addr {
   padding: 11px 0;
 }
+
 #orderExchange #orderExchangeTable .return_addr tr {
   height: 55px;
 }
+
 #orderExchange #orderExchangeTable .return_addr th {
   font-size: 1.4rem;
   font-weight: 600;
 }
+
 #orderExchange #orderExchangeTable .return_addr td {
   font-size: 1.3rem;
 }
+
 #orderExchange #orderExchangeTable .return_addr td span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 8px;
 }
+
 #orderExchange #orderExchangeTable .return_addr td label {
   font-size: 1.3rem;
   cursor: pointer;
 }
-#orderExchange #orderExchangeTable .return_addr td input[type=radio] {
+
+#orderExchange #orderExchangeTable .return_addr td input[type="radio"] {
   width: 15px;
   height: 15px;
   margin: 0 5px 0 15px;
   cursor: pointer;
 }
-#orderExchange #orderExchangeTable .return_addr td input[type=text] {
+
+#orderExchange #orderExchangeTable .return_addr td input[type="text"] {
   width: 100%;
   height: 30px;
   font-size: 1.3rem;
   margin-bottom: 5px;
 }
+
 #orderExchange #orderExchangeTable .return_addr td #pickup_phone2_1, #orderExchange #orderExchangeTable .return_addr td #pickup_phone2_2, #orderExchange #orderExchangeTable .return_addr td #pickup_phone2_3 {
   width: 24%;
   height: 30px;
   font-size: 1.3rem;
 }
+
 #orderExchange #orderExchangeTable .return_addr a, #orderExchange #orderExchangeTable .return_addr #btn_search_rzipcode {
   font-size: 1.3rem;
   font-weight: 500;
@@ -332,16 +466,20 @@
   border-radius: 18px;
   padding: 5px 12px;
 }
+
 #orderExchange #orderExchangeTable .refund_info {
   padding: 11px 0;
 }
+
 #orderExchange #orderExchangeTable .refund_info tr {
   height: 55px;
 }
+
 #orderExchange #orderExchangeTable .refund_info th {
   font-size: 1.4rem;
   font-weight: 600;
 }
+
 #orderExchange #orderExchangeTable .refund_info a {
   font-size: 1.3rem;
   font-weight: 500;
@@ -349,14 +487,25 @@
   border-radius: 18px;
   padding: 5px 12px;
 }
+
 #orderExchange .ec-base-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 50px;
 }
+
 #orderExchange .ec-base-button a {
   font-size: 1.3rem;
   font-weight: 500;
@@ -364,16 +513,21 @@
   border-radius: 18px;
   padding: 5px 12px;
 }
+
 #orderExchange .apply_btn_wrap {
   width: 100%;
-  justify-content: center !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
 }
+
 #orderExchange .apply_btn_wrap .back {
   width: 28%;
   text-align: center;
   margin-right: 8px;
   padding: 9px 15px !important;
 }
+
 #orderExchange .apply_btn_wrap .apply {
   width: 28%;
   text-align: center;
@@ -387,6 +541,7 @@
   width: 100%;
   max-width: 350px;
 }
+
 .optionModify .header {
   padding: 0;
   height: 30px;
@@ -395,4 +550,5 @@
 #zipcodeLayer #layerZipcode {
   width: 100%;
   max-width: 350px !important;
-}/*# sourceMappingURL=exchange.css.map */
+}
+/*# sourceMappingURL=exchange.css.map */

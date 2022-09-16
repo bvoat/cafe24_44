@@ -1,12 +1,3 @@
-@charset "UTF-8";
-/* 공통 디자인 */
-/* ellipsis*/
-/* ellipsis*/
-/* 공통 디자인 */
-/* 애니메이션 */
-/* 애니메이션 */
-/* 미디어쿼리 */
-/* 미디어쿼리 */
 body {
   position: relative;
   width: 100%;
@@ -65,7 +56,7 @@ body #bvtContainer #bvtBottom {
 
 @media (max-width: 320px) {
   .small_mobile_hide {
-    display: none !important;
+    display: none;
   }
   .small_mobile_input::-moz-placeholder {
     font-size: 8px !important;

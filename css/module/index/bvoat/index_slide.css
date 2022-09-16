@@ -1,23 +1,17 @@
 @charset "UTF-8";
-/* 공통 디자인 */
-/* ellipsis*/
-/* ellipsis*/
-/* 공통 디자인 */
-/* 애니메이션 */
-/* 애니메이션 */
-/* 미디어쿼리 */
-/* 미디어쿼리 */
 /* 인덱스 배너 */
 #indexBanner {
   position: relative;
   width: 100%;
   max-width: 450px;
 }
+
 #indexBanner ul li {
   width: 100%;
   background: url("/bvtIMG/banner/220706_slide_banner_crew.png") no-repeat;
   background-size: cover;
 }
+
 #indexBanner ul li a {
   position: relative;
   width: 100%;
@@ -30,4 +24,5 @@
 
 .banner_item_bullet {
   top: 14.5px !important;
-}/*# sourceMappingURL=index_slide.css.map */
+}
+/*# sourceMappingURL=index_slide.css.map */

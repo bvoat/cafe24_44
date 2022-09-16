@@ -1,12 +1,4 @@
 @charset "UTF-8";
-/* 공통 디자인 */
-/* ellipsis*/
-/* ellipsis*/
-/* 공통 디자인 */
-/* 애니메이션 */
-/* 애니메이션 */
-/* 미디어쿼리 */
-/* 미디어쿼리 */
 #searchModal {
   position: fixed;
   width: 100%;
@@ -275,26 +267,25 @@
   display: inline;
   padding-bottom: 30px;
 }
-#searchResultProductList .thumb {
+
+.thumb {
   position: relative;
   width: 100%;
 }
-#searchResultProductList .thumb > a {
+.thumb > a {
   display: block;
   position: relative;
-  padding-top: 100%;
+  padding-top: calc(100% - 14.5px);
   overflow: hidden;
   border-radius: 4px;
 }
-#searchResultProductList .thumb > a > img {
+.thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100%;
 }
-#searchResultProductList .thumb .icon {
+.thumb .icon {
   position: absolute;
   width: 50px;
   height: 20.5px;
@@ -302,45 +293,46 @@
   top: 4.6px;
   left: 4.6px;
 }
-#searchResultProductList .thumb .icon img {
+.thumb .icon img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#searchResultProductList .thumb .wish {
+.thumb .wish {
   position: absolute;
-  width: auto;
-  height: auto;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
   bottom: 9.7px;
   left: 8.7px;
-  background: #fff;
 }
-#searchResultProductList .thumb .wish button {
+.thumb .wish button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: inherit;
   height: inherit;
-  padding: 10px;
   border: 0;
-  bottom: pink;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
   cursor: pointer;
 }
-#searchResultProductList .thumb .wish button img {
+.thumb .wish button img {
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 57.4%;
+  height: 52.7%;
   margin-top: 2.5px;
 }
-#searchResultProductList .desc {
+
+.desc {
   padding: 7px 0 0 0;
 }
-#searchResultProductList .desc .brand {
+.desc .brand {
   font-size: 1rem;
   color: #707070;
   margin-bottom: 3px;
 }
-#searchResultProductList .desc .summary {
+.desc .summary {
   display: block;
   font-size: 1.15rem;
   color: #707070;
@@ -355,8 +347,8 @@
   line-height: 1.45rem;
   margin-bottom: 7px;
 }
-#searchResultProductList .desc .product_name,
-#searchResultProductList .desc .product_name span {
+.desc .product_name,
+.desc .product_name span {
   color: #292929 !important;
   font-size: 1.3rem !important;
   font-weight: bold;
@@ -374,14 +366,15 @@
   height: 3.4rem;
   margin-bottom: 18px;
 }
-#searchResultProductList .page-pagination {
+
+.page-pagination {
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;
 }
-#searchResultProductList .page-pagination .paginate-box {
+.page-pagination .paginate-box {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -393,12 +386,12 @@
   padding: 1% 5%;
   font-size: 1.3rem;
 }
-#searchResultProductList .page-pagination .btnPrev_wrap, #searchResultProductList .page-pagination .btnNext_wrap {
+.page-pagination .btnPrev_wrap, .page-pagination .btnNext_wrap {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
-#searchResultProductList .page-pagination .first, #searchResultProductList .page-pagination .last, #searchResultProductList .page-pagination .btnPrev, #searchResultProductList .page-pagination .btnNext {
+.page-pagination .first, .page-pagination .last, .page-pagination .btnPrev, .page-pagination .btnNext {
   width: 30px;
   height: 30px;
   background: #ffffff;
@@ -409,21 +402,21 @@
   color: #707070;
   font-size: 1.1rem;
 }
-#searchResultProductList .page-pagination .first:hover, #searchResultProductList .page-pagination .last:hover, #searchResultProductList .page-pagination .btnPrev:hover, #searchResultProductList .page-pagination .btnNext:hover {
+.page-pagination .first:hover, .page-pagination .last:hover, .page-pagination .btnPrev:hover, .page-pagination .btnNext:hover {
   font-weight: 700;
   transition: all 0.3s;
 }
-#searchResultProductList .page-pagination ol {
+.page-pagination ol {
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
   justify-content: space-evenly;
   margin: 0 5px;
 }
-#searchResultProductList .page-pagination ol li {
+.page-pagination ol li {
   margin: 0 11px;
 }
-#searchResultProductList .page-pagination ol li a {
+.page-pagination ol li a {
   display: block;
   width: 100%;
   height: 100%;
@@ -432,7 +425,7 @@
   font-weight: 500;
   color: #707070;
 }
-#searchResultProductList .page-pagination ol li .this {
+.page-pagination ol li .this {
   font-weight: 600;
   color: #022CFF;
 }/*# sourceMappingURL=search.css.map */

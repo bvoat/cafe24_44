@@ -1,100 +1,137 @@
 @charset "UTF-8";
-/* 공통 디자인 */
-/* ellipsis*/
-/* ellipsis*/
-/* 공통 디자인 */
-/* 애니메이션 */
-/* 애니메이션 */
-/* 미디어쿼리 */
-/* 미디어쿼리 */
 #orderReturn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   max-width: 450px;
   padding: 23px 11px;
   margin: 81px 0px 60px;
 }
+
 #orderReturn #orderReturnTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
   margin-bottom: 18px;
 }
+
 #orderReturn #orderReturnTitle h1 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 2px;
 }
+
 #orderReturn #orderReturnTitle h2 {
   font-size: 1.3rem;
   font-weight: 300;
   color: #ABABAB;
 }
+
 #orderReturn #applyForm {
   width: 100%;
   max-width: 450px;
 }
+
 #orderReturn #applyForm #orderReturnTable {
   width: 100%;
   max-width: 450px;
 }
+
 #orderReturn #applyForm #orderReturnTable div {
   width: 100%;
 }
+
 #orderReturn #applyForm #orderReturnTable .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 40px;
   padding: 0 11px;
   background: #707070;
 }
+
 #orderReturn #applyForm #orderReturnTable .title h2, #orderReturn #applyForm #orderReturnTable .title h3 {
   font-size: 1.3rem;
   font-weight: 500;
   color: #ffffff;
 }
+
 #orderReturn #applyForm #orderReturnTable .contents, #orderReturn #applyForm #orderReturnTable .typeWrite {
   width: 100%;
   max-width: 450px;
   padding: 11px;
 }
+
 #orderReturn #applyForm #orderReturnTable .chk > input {
   width: 16px;
   height: 16px;
   cursor: pointer;
 }
+
 #orderReturn #applyForm #orderReturnTable .description {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 11px 0;
 }
+
 #orderReturn #applyForm #orderReturnTable .description .thumb {
   position: relative;
   width: 100%;
 }
+
 #orderReturn #applyForm #orderReturnTable .description .thumb > a {
   display: block;
   position: relative;
-  padding-top: 100%;
+  padding-top: calc(100% - 14.5px);
   overflow: hidden;
   border-radius: 4px;
 }
+
 #orderReturn #applyForm #orderReturnTable .description .thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100%;
 }
+
 #orderReturn #applyForm #orderReturnTable .description .thumb .icon {
   position: absolute;
   width: 50px;
@@ -103,87 +140,120 @@
   top: 4.6px;
   left: 4.6px;
 }
+
 #orderReturn #applyForm #orderReturnTable .description .thumb .icon img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
 #orderReturn #applyForm #orderReturnTable .description .thumb .wish {
   position: absolute;
-  width: auto;
-  height: auto;
+  width: 0px;
+  height: 0px;
   cursor: pointer;
   bottom: 0px;
   left: 0px;
-  background: #fff;
 }
+
 #orderReturn #applyForm #orderReturnTable .description .thumb .wish button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: inherit;
   height: inherit;
-  padding: 10px;
   border: 0;
-  bottom: pink;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
   cursor: pointer;
 }
+
 #orderReturn #applyForm #orderReturnTable .description .thumb .wish button img {
   position: relative;
-  width: 0px;
-  height: 0px;
+  width: 57.4%;
+  height: 52.7%;
   margin-top: 2.5px;
 }
+
 #orderReturn #applyForm #orderReturnTable .description .thumb {
   width: 25%;
   min-width: 75px;
   margin-right: 10px;
 }
+
 #orderReturn #applyForm #orderReturnTable .description .thumb > a {
   padding-top: 100%;
 }
+
 #orderReturn #applyForm #orderReturnTable .description .info .name {
   font-size: 1.5rem;
   margin-bottom: 5px;
 }
+
 #orderReturn #applyForm #orderReturnTable .description .info .price_quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #orderReturn #applyForm #orderReturnTable .description .info span > strong, #orderReturn #applyForm #orderReturnTable .description .info span, #orderReturn #applyForm #orderReturnTable .description .info strong {
   font-size: 1.3rem;
 }
+
 #orderReturn #applyForm #orderReturnTable .quantity {
   font-size: 1.3rem;
   margin: 11px 0;
 }
+
 #orderReturn #applyForm #orderReturnTable .quantity input {
   height: 29px;
   text-align: center;
   font-size: 1.5rem;
 }
+
 #orderReturn #applyForm #orderReturnTable .quantity a {
   border: 1px solid #E2E2E2;
   border-radius: 18px;
   padding: 5px 12px;
 }
+
 #orderReturn #applyForm #orderReturnTable .status {
   font-size: 1.5rem;
   font-weight: 600;
   color: #022CFF;
 }
+
 #orderReturn #applyForm #orderReturnTable .ec-base-help {
   margin: 11px 0;
   text-align: center;
 }
+
 #orderReturn #applyForm #orderReturnTable .message {
   font-size: 1.3rem;
 }
+
 #orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table .xans-myshop-selectedproduct {
   border: 0;
   padding: 8px;
 }
+
 #orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table .ec-product-name {
   width: 93px;
   font-size: 1.3rem;
@@ -197,166 +267,238 @@
   word-wrap: break-word;
   line-height: 1.8rem;
 }
+
 #orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table thead > tr {
   height: 25px;
 }
+
 #orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table th {
   font-size: 1.3rem;
   font-weight: 600;
   vertical-align: middle;
 }
+
 #orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table td {
   font-size: 1.3rem;
   vertical-align: middle;
   padding: 0 5px;
 }
+
 #orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table td .ec-base-qty {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 12px;
 }
+
 #orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table td .ec-base-qty a:nth-child(1) {
-  order: 0;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
 }
+
 #orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table td .ec-base-qty a:nth-child(2) {
-  order: 2;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
+
 #orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table td .ec-base-qty a > img {
   width: 25px;
   height: 25px;
 }
+
 #orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table td .ec-base-qty > input {
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   width: 25px;
   height: 25px;
   font-size: 1.2rem;
 }
-#orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table td a[class="btnNormal gBlank5"], #orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table td a[class=btnNormal] {
+
+#orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table td a[class="btnNormal gBlank5"], #orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table td a[class="btnNormal"] {
   font-size: 1.3rem;
   font-weight: 500;
   border: 1px solid #E2E2E2;
   border-radius: 18px;
   padding: 5px 12px;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_reason {
   background: #FAFAFE;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_reason tr {
   height: 55px;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_reason th {
   font-size: 1.4rem;
   font-weight: 600;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_reason td span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 8px;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_reason td label {
   font-size: 1.3rem;
   cursor: pointer;
 }
-#orderReturn #applyForm #orderReturnTable .return_reason td input[type=radio] {
+
+#orderReturn #applyForm #orderReturnTable .return_reason td input[type="radio"] {
   width: 15px;
   height: 15px;
   margin: 0 5px;
   cursor: pointer;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_reason td textarea {
   width: 95%;
   font-size: 1.3rem;
   padding: 4px;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_parcel {
   background: #FAFAFE;
   padding: 11px;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_parcel tr {
   height: 55px;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_parcel th {
   font-size: 1.4rem;
   font-weight: 600;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_parcel td span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 8px;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_parcel td label {
   font-size: 1.3rem;
   cursor: pointer;
 }
-#orderReturn #applyForm #orderReturnTable .return_parcel td input[type=radio] {
+
+#orderReturn #applyForm #orderReturnTable .return_parcel td input[type="radio"] {
   width: 15px;
   height: 15px;
   margin: 0 5px 0 15px;
   cursor: pointer;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_parcel td #direct {
   width: 100%;
   margin: 11px;
 }
-#orderReturn #applyForm #orderReturnTable .return_parcel td #direct input[type=text] {
+
+#orderReturn #applyForm #orderReturnTable .return_parcel td #direct input[type="text"] {
   width: 100%;
   height: 30px;
   font-size: 1.3rem;
   margin-bottom: 5px;
 }
-#orderReturn #applyForm #orderReturnTable .return_parcel td #direct input[type=checkbox] {
+
+#orderReturn #applyForm #orderReturnTable .return_parcel td #direct input[type="checkbox"] {
   width: 13px;
   height: 13px;
   margin-right: 5px;
   cursor: pointer;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_parcel td .help {
   margin-top: 11px;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_addr {
   padding: 11px 0;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_addr tr {
   height: 55px;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_addr th {
   font-size: 1.4rem;
   font-weight: 600;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_addr td {
   font-size: 1.3rem;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_addr td span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 8px;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_addr td label {
   font-size: 1.3rem;
   cursor: pointer;
 }
-#orderReturn #applyForm #orderReturnTable .return_addr td input[type=radio] {
+
+#orderReturn #applyForm #orderReturnTable .return_addr td input[type="radio"] {
   width: 15px;
   height: 15px;
   margin: 0 5px 0 15px;
   cursor: pointer;
 }
-#orderReturn #applyForm #orderReturnTable .return_addr td input[type=text] {
+
+#orderReturn #applyForm #orderReturnTable .return_addr td input[type="text"] {
   width: 100%;
   height: 30px;
   font-size: 1.3rem;
   margin-bottom: 5px;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_addr td #pickup_phone2_1, #orderReturn #applyForm #orderReturnTable .return_addr td #pickup_phone2_2, #orderReturn #applyForm #orderReturnTable .return_addr td #pickup_phone2_3 {
   width: 24%;
   height: 30px;
   font-size: 1.3rem;
 }
+
 #orderReturn #applyForm #orderReturnTable .return_addr a, #orderReturn #applyForm #orderReturnTable .return_addr #btn_search_rzipcode {
   font-size: 1.3rem;
   font-weight: 500;
@@ -364,16 +506,20 @@
   border-radius: 18px;
   padding: 5px 12px;
 }
+
 #orderReturn #applyForm #orderReturnTable .refund_info {
   padding: 11px 0;
 }
+
 #orderReturn #applyForm #orderReturnTable .refund_info tr {
   height: 55px;
 }
+
 #orderReturn #applyForm #orderReturnTable .refund_info th {
   font-size: 1.4rem;
   font-weight: 600;
 }
+
 #orderReturn #applyForm #orderReturnTable .refund_info a {
   font-size: 1.3rem;
   font-weight: 500;
@@ -381,14 +527,25 @@
   border-radius: 18px;
   padding: 5px 12px;
 }
+
 #orderReturn #applyForm .ec-base-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 50px;
 }
+
 #orderReturn #applyForm .ec-base-button a {
   font-size: 1.3rem;
   font-weight: 500;
@@ -396,16 +553,21 @@
   border-radius: 18px;
   padding: 5px 12px;
 }
+
 #orderReturn #applyForm .apply_btn_wrap {
   width: 100%;
-  justify-content: center !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
 }
+
 #orderReturn #applyForm .apply_btn_wrap .back {
   width: 28%;
   text-align: center;
   margin-right: 8px;
   padding: 9px 15px !important;
 }
+
 #orderReturn #applyForm .apply_btn_wrap .apply {
   width: 28%;
   text-align: center;
@@ -414,15 +576,19 @@
   font-weight: 600;
   padding: 9px 15px !important;
 }
+
 #orderReturn #applyForm .optionModify {
   width: 100%;
   max-width: 350px;
 }
+
 #orderReturn #applyForm .optionModify .header {
   padding: 0;
   height: 30px;
 }
+
 #orderReturn #applyForm #zipcodeLayer #layerZipcode {
   width: 100%;
   max-width: 350px !important;
-}/*# sourceMappingURL=return.css.map */
+}
+/*# sourceMappingURL=return.css.map */
