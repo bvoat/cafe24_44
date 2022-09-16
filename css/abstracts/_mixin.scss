@@ -1,3 +1,4 @@
+/* 공통 스타일 */
 // 높이 동일하게 맞춘 ellipsis
 @mixin ellipsis($line-cnt, $line-height) {
     display: block;
@@ -24,7 +25,10 @@
     word-wrap: break-word;
     line-height: $line-height + 0.3rem;
 }
+/* 공통 스타일 */
 
+
+/* 애니메이션 */
 // 떠오르기 애니메이션
 @mixin rise-item-keyframe {
     @keyframes rise-item {
@@ -69,8 +73,10 @@
         }
     }
 }
+/* 애니메이션 */
 
 
+/* 멤버십 관련 */
 //스탬프
 @mixin stamp-variation {
     .whole_stamp {
@@ -90,32 +96,12 @@
         background-size: contain;
     }
 }
+/* 멤버십 관련 */
 
-
-//미디어쿼리
-// 320px 아래의 기기 
-@mixin query-small-mobile {
-    @media (max-width: 320px) {
-        .small_mobile_hide {
-            display: none;
-        }
-
-        .small_mobile_input {
-            &::placeholder {
-                font-size: 8px !important;
-            }
-        }
-
-        select {
-            padding: 3px !important;
-            font-size: 7px !important;
-        }
-    }
-}
-
+/* 상품 목록 list 관련 공통 스타일 */
 
 //상품 목록 이미지 구역 thumb공통 처리
-@mixin product-thumb($width, $height, $bottom, $left) {
+@mixin product-thumb($width, $height, $bottom, $right) {
 
     //상품 이미지 구역
     .thumb {
@@ -127,13 +113,15 @@
             position: relative;
             padding-top: calc(100% - 14.5px);
             overflow: hidden;
-            border-radius: 4px;
+            border-radius: 2px;
 
             >img {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100%;
+                width: auto;
+                height: 100%;
+                object-fit: cover;
             }
         }
 
@@ -150,10 +138,9 @@
                 object-fit: cover;
             }
         }
-        @include wish-button($width, $height, $bottom, $left)
+        @include wish-button($width, $height, $bottom, $right)
     }
 }
-
 //상품 목록 하단 정보
 //필요시에만 사용
 @mixin product-desc($top-padding, $brand-ftsz, $summary-ftsz, $name-ftsz) {
@@ -186,16 +173,15 @@
         }
     }
 }
-
 //위시 버튼
-@mixin wish-button($width, $height, $bottom, $left) {
+@mixin wish-button($width, $height, $bottom, $right) {
     .wish {
         position: absolute;
-        width: $width;
-        height: $height;
+        width: auto;
+        height: auto;
         cursor: pointer;
         bottom: $bottom;
-        left: $left;
+        right: $right;
         button {
             display: flex;
             justify-content: center;
@@ -203,20 +189,18 @@
             width: inherit;
             height: inherit;
             border: 0;
-            border-radius: 50%;
-            background: #fff;
-            box-shadow: 0px 3px 7px 0px transparentize($bvt-darkgray, 0.73);
+            background: none;
             cursor: pointer;
             img {
                 position: relative;
-                width: 57.4%;
-                height: 52.7%;
+                width: calc($width + 20px);
+                height: calc($height + 20px);
+                padding: 10px;
                 margin-top: 2.5px;
             }
         }
     }
 }
-
 //페이지 하단 페이지네이션
 @mixin page-pagination {
     .page-pagination{
@@ -290,4 +274,28 @@
         }
     }
 }
+/* 상품 목록 list 관련 공통 스타일 */
+/* 미디어쿼리 */
+// 320px 아래의 기기 
+@mixin query-small-mobile {
+    @media (max-width: 320px) {
+        .small_mobile_hide {
+            display: none;
+        }
+
+        .small_mobile_input {
+            &::placeholder {
+                font-size: 8px !important;
+            }
+        }
+
+        select {
+            padding: 3px !important;
+            font-size: 7px !important;
+        }
+    }
+}
+/* 미디어쿼리 */
+
+
 

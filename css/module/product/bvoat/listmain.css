@@ -1,301 +1,202 @@
 @charset "UTF-8";
+/* 공통 스타일 */
+/* 공통 스타일 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 멤버십 관련 */
+/* 멤버십 관련 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 /* listmain_double_mid */
 .doublemid > ul .list_item {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
   width: calc(50% - 12px);
   max-width: 182px;
   margin-bottom: 27px;
 }
-
 .doublemid > ul .list_item .wish {
   position: absolute;
-  width: 33px;
-  height: 33px;
+  width: auto;
+  height: auto;
   cursor: pointer;
-  bottom: 9.9px;
-  left: 7.9px;
+  bottom: 0;
+  right: 0;
 }
-
 .doublemid > ul .list_item .wish button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: inherit;
   height: inherit;
   border: 0;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
-          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  background: none;
   cursor: pointer;
 }
-
 .doublemid > ul .list_item .wish button img {
   position: relative;
-  width: 57.4%;
-  height: 52.7%;
+  width: 41px;
+  height: 38.98px;
+  padding: 10px;
   margin-top: 2.5px;
 }
 
 /* listmain_small_big */
 .singlebig > ul .list_item {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
   width: calc(50% - 15px);
   max-width: 222.5px;
   margin-bottom: 27px;
 }
-
 .singlebig > ul .list_item .wish {
   position: absolute;
-  width: 41px;
-  height: 41px;
+  width: auto;
+  height: auto;
   cursor: pointer;
-  bottom: 13.1px;
-  left: 9.6px;
+  bottom: 0;
+  right: 0;
 }
-
 .singlebig > ul .list_item .wish button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: inherit;
   height: inherit;
   border: 0;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
-          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  background: none;
   cursor: pointer;
 }
-
 .singlebig > ul .list_item .wish button img {
   position: relative;
-  width: 57.4%;
-  height: 52.7%;
+  width: 41px;
+  height: 38.98px;
+  padding: 10px;
   margin-top: 2.5px;
 }
 
 /* listmain_double_small */
 .doublesmall > ul .list_item {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
   width: calc(50% - 10.9px);
   max-width: 135.5px;
   margin-bottom: 27px;
 }
-
 .doublesmall > ul .list_item .wish {
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: auto;
+  height: auto;
   cursor: pointer;
-  bottom: 8px;
-  left: 5.7px;
+  bottom: 0;
+  right: 0;
 }
-
 .doublesmall > ul .list_item .wish button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: inherit;
   height: inherit;
   border: 0;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
-          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  background: none;
   cursor: pointer;
 }
-
 .doublesmall > ul .list_item .wish button img {
   position: relative;
-  width: 57.4%;
-  height: 52.7%;
+  width: 37px;
+  height: 35px;
+  padding: 10px;
   margin-top: 2.5px;
 }
 
 /* listmain_double_small */
 .singlemid > ul .list_item {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
   width: calc(50% - 13px);
   max-width: 182px;
   margin-bottom: 27px;
 }
-
 .singlemid > ul .list_item .wish {
   position: absolute;
-  width: 33px;
-  height: 33px;
+  width: auto;
+  height: auto;
   cursor: pointer;
-  bottom: 9.9px;
-  left: 7.9px;
+  bottom: 0;
+  right: 0;
 }
-
 .singlemid > ul .list_item .wish button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: inherit;
   height: inherit;
   border: 0;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
-          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  background: none;
   cursor: pointer;
 }
-
 .singlemid > ul .list_item .wish button img {
   position: relative;
-  width: 57.4%;
-  height: 52.7%;
+  width: 41px;
+  height: 38.98px;
+  padding: 10px;
   margin-top: 2.5px;
 }
 
 .moreview > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  align-items: center;
 }
-
 .moreview > ul .list_item {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
   width: calc(50% - 10px);
   max-width: 207px;
   margin-bottom: 27px;
 }
-
 .moreview > ul .list_item .wish {
   position: absolute;
-  width: 38px;
-  height: 38px;
+  width: auto;
+  height: auto;
   cursor: pointer;
-  bottom: 10px;
-  left: 10px;
+  bottom: 0;
+  right: 0;
 }
-
 .moreview > ul .list_item .wish button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: inherit;
   height: inherit;
   border: 0;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
-          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  background: none;
   cursor: pointer;
 }
-
 .moreview > ul .list_item .wish button img {
   position: relative;
-  width: 57.4%;
-  height: 52.7%;
+  width: 41px;
+  height: 38.98px;
+  padding: 10px;
   margin-top: 2.5px;
 }
-
 .moreview > ul > li:nth-child(2n-1) {
   margin-right: 13.8px;
 }
@@ -303,135 +204,88 @@
 .weekbest {
   width: 100%;
 }
-
 .weekbest > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
   max-width: calc(100% - 20px);
   padding: 0 10px;
 }
-
 .weekbest > ul .list_item {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 31.9%;
   max-width: 130px;
   margin-bottom: 27px;
 }
-
 .weekbest > ul .list_item:nth-child(1), .weekbest > ul .list_item:nth-child(2) {
   width: calc(50% - 5px);
   max-width: 200px;
   margin-bottom: 27px;
 }
-
 .weekbest > ul .list_item:nth-child(1) .wish, .weekbest > ul .list_item:nth-child(2) .wish {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: auto;
+  height: auto;
   cursor: pointer;
-  bottom: 11px;
-  left: 13px;
+  bottom: 0;
+  right: 0;
 }
-
 .weekbest > ul .list_item:nth-child(1) .wish button, .weekbest > ul .list_item:nth-child(2) .wish button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: inherit;
   height: inherit;
   border: 0;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
-          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  background: none;
   cursor: pointer;
 }
-
 .weekbest > ul .list_item:nth-child(1) .wish button img, .weekbest > ul .list_item:nth-child(2) .wish button img {
   position: relative;
-  width: 57.4%;
-  height: 52.7%;
+  width: 41px;
+  height: 38.98px;
+  padding: 10px;
   margin-top: 2.5px;
 }
-
 .weekbest > ul .list_item:nth-child(n+9) {
   display: none;
 }
-
 .weekbest > ul .list_item:nth-child(1) {
   margin-right: 10px;
 }
-
 .weekbest > ul .list_item:nth-child(3n), .weekbest > ul .list_item:nth-child(4), .weekbest > ul .list_item:nth-child(7), .weekbest > ul .list_item:nth-child(10), .weekbest > ul .list_item:nth-child(13), .weekbest > ul .list_item:nth-child(16), .weekbest > ul .list_item:nth-child(19) {
   margin-right: 2.1%;
 }
-
 .weekbest > ul .list_item .wish {
   position: absolute;
-  width: 27.68px;
-  height: 27.68px;
+  width: auto;
+  height: auto;
   cursor: pointer;
-  bottom: 9.43px;
-  left: 9.13px;
+  bottom: 0;
+  right: 0;
 }
-
 .weekbest > ul .list_item .wish button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: inherit;
   height: inherit;
   border: 0;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
-          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  background: none;
   cursor: pointer;
 }
-
 .weekbest > ul .list_item .wish button img {
   position: relative;
-  width: 57.4%;
-  height: 52.7%;
+  width: 41px;
+  height: 38.98px;
+  padding: 10px;
   margin-top: 2.5px;
 }
-
 @media (max-width: 420px) {
   .weekbest ul {
     max-width: 100%;
@@ -450,7 +304,6 @@
     font-size: 1.4rem;
   }
 }
-
 @media (max-width: 379px) {
   .weekbest ul {
     max-width: 100%;
@@ -473,7 +326,6 @@
     font-size: 1rem !important;
   }
 }
-
 @media (max-width: 350px) {
   .weekbest ul {
     max-width: 100%;
@@ -501,96 +353,58 @@
   width: 100%;
   /* 더보기 버튼 커스텀 */
 }
-
 .weektag > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
   max-width: calc(100% - 30px);
   padding: 0 15px;
 }
-
 .weektag > ul .list_item {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
   width: calc(50% - 9px);
   max-width: 190px;
   margin-bottom: 27px;
 }
-
 .weektag > ul .list_item .wish {
   position: absolute;
-  width: 41px;
-  height: 41px;
+  width: auto;
+  height: auto;
   cursor: pointer;
-  bottom: 11px;
-  left: 13px;
+  bottom: 0;
+  right: 0;
 }
-
 .weektag > ul .list_item .wish button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: inherit;
   height: inherit;
   border: 0;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
-          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  background: none;
   cursor: pointer;
 }
-
 .weektag > ul .list_item .wish button img {
   position: relative;
-  width: 57.4%;
-  height: 52.7%;
+  width: 41px;
+  height: 38.98px;
+  padding: 10px;
   margin-top: 2.5px;
 }
-
 .weektag > ul .list_item:nth-child(n+5) {
   display: none;
 }
-
 .weektag > .paginate_moreview {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
   max-width: inherit;
 }
-
 .weektag > .paginate_moreview .moreview_btn {
   width: 100%;
   max-width: inherit;
@@ -604,7 +418,6 @@
   margin: 0 auto;
   cursor: pointer;
 }
-
 .weektag > .paginate_moreview .moreview_btn svg {
   margin: 3px 0 0 2px;
 }
@@ -612,78 +425,47 @@
 .realtime {
   width: 100%;
 }
-
 .realtime > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
   max-width: calc(100% - 22px);
   padding: 25px 11px 0;
 }
-
 .realtime > ul .list_item {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
   width: calc(50% - 4px);
   max-width: 210px;
   margin-bottom: 40px;
 }
-
 .realtime > ul .list_item .wish {
   position: absolute;
-  width: 41px;
-  height: 41px;
+  width: auto;
+  height: auto;
   cursor: pointer;
-  bottom: 11px;
-  left: 13px;
+  bottom: 0;
+  right: 0;
 }
-
 .realtime > ul .list_item .wish button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: inherit;
   height: inherit;
   border: 0;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
-          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  background: none;
   cursor: pointer;
 }
-
 .realtime > ul .list_item .wish button img {
   position: relative;
-  width: 57.4%;
-  height: 52.7%;
+  width: 41px;
+  height: 38.98px;
+  padding: 10px;
   margin-top: 2.5px;
 }
 
@@ -691,7 +473,6 @@
   position: relative;
   width: 100%;
 }
-
 .thumb a {
   display: block;
   position: relative;
@@ -699,7 +480,6 @@
   overflow: hidden;
   border-radius: 4px;
 }
-
 .thumb a > img {
   position: absolute;
   top: 0;
@@ -715,7 +495,6 @@
   top: 4.6px;
   left: 4.6px;
 }
-
 .icon img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -723,15 +502,9 @@
 
 .purchaser {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 102px;
   height: 30px;
   border-radius: 20px;
@@ -744,7 +517,6 @@
   left: 9.71px;
   z-index: 10;
 }
-
 .purchaser > span {
   margin-left: 4px;
 }
@@ -752,13 +524,11 @@
 .desc {
   padding: 7px 0 0 0;
 }
-
 .desc .brand {
   font-size: 1rem;
   color: #707070;
   margin-bottom: 3px;
 }
-
 .desc .summary {
   display: block;
   font-size: 1.15rem;
@@ -774,7 +544,6 @@
   line-height: 1.6rem;
   margin-bottom: 7px;
 }
-
 .desc .product_name, .desc .product_name span {
   color: #292929 !important;
   font-size: 1.3rem !important;
@@ -797,17 +566,12 @@
 
 /* 더보기 버튼 */
 .paginate_moreview {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
   max-width: 450px;
   height: 42px;
 }
-
 .paginate_moreview .moreview_btn {
   width: 100%;
   max-width: 360px;
@@ -821,7 +585,6 @@
   margin: 0 auto;
   cursor: pointer;
 }
-
 .paginate_moreview .moreview_btn svg {
   margin: 2px 0 0 6px;
 }
@@ -835,5 +598,4 @@
 
 .swiper-pagination-progressbar {
   background: #E7ECEF;
-}
-/*# sourceMappingURL=listmain.css.map */
+}/*# sourceMappingURL=listmain.css.map */

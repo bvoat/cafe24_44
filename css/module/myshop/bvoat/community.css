@@ -1,3 +1,14 @@
+@charset "UTF-8";
+/* 공통 스타일 */
+/* 공통 스타일 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 멤버십 관련 */
+/* 멤버십 관련 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 #board_frame {
   width: 100%;
   border: none;
@@ -17,7 +28,6 @@
   bottom: 71px;
   right: 10px;
 }
-
 #go_board_write_ico img {
   width: 100px;
   height: 100px;
@@ -40,5 +50,4 @@
 
 .modified {
   color: #022CFF !important;
-}
-/*# sourceMappingURL=community.css.map */
+}/*# sourceMappingURL=community.css.map */

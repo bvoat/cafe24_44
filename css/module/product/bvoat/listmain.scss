@@ -18,7 +18,7 @@
             margin-bottom: 27px;
     
             //위시버튼
-            @include wish-button(33px, 33px, 9.9px, 7.9px);
+            @include wish-button(21px, 18.98px, 0, 0);
     
         }
     }
@@ -40,7 +40,7 @@
             margin-bottom: 27px;
     
             //위시버튼
-            @include wish-button(41px, 41px, 13.1px, 9.6px);
+            @include wish-button(21px, 18.98px, 0, 0);
     
         }
     }
@@ -62,7 +62,7 @@
             margin-bottom: 27px;
     
             //위시버튼
-            @include wish-button(25px, 25px, 8px, 5.7px);
+            @include wish-button(17px, 15px, 0, 0);
         }
     }
 }
@@ -83,7 +83,7 @@
             max-width: 182px;
             margin-bottom: 27px;
             //위시버튼
-            @include wish-button(33px, 33px, 9.9px, 7.9px);
+            @include wish-button(21px, 18.98px, 0, 0);
         }
     }
 }
@@ -106,7 +106,7 @@
             margin-bottom: 27px;
     
             //위시버튼
-            @include wish-button(38px, 38px, 10px, 10px);
+            @include wish-button(21px, 18.98px, 0, 0);
         }
         >li:nth-child(2n-1) {
             margin-right: 13.8px;
@@ -141,7 +141,7 @@
                 max-width: 200px;
                 margin-bottom: 27px;
                 //위시버튼
-                @include wish-button(40px, 40px, 11px, 13px);
+                @include wish-button(21px, 18.98px, 0, 0);
             }
             &:nth-child(n+9){
                 display: none;
@@ -154,7 +154,7 @@
                 margin-right: 2.1%;
             }
             //위시버튼
-            @include wish-button(27.68px, 27.68px, 9.43px, 9.13px);
+            @include wish-button(21px, 18.98px, 0, 0);
         }
     }
     @media (max-width: 420px){
@@ -252,7 +252,7 @@
             max-width: 190px;
             margin-bottom: 27px;
             //위시버튼
-            @include wish-button(41px, 41px, 11px, 13px);
+            @include wish-button(21px, 18.98px, 0, 0);
             &:nth-child(n+5){
                 display: none;
             }
@@ -302,7 +302,7 @@
             max-width: 210px;
             margin-bottom: 40px;
             //위시버튼
-            @include wish-button(41px, 41px, 11px, 13px);
+            @include wish-button(21px, 18.98px, 0, 0);
         }
     }
 }

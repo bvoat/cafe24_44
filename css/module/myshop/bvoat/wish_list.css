@@ -1,103 +1,80 @@
+@charset "UTF-8";
+/* 공통 스타일 */
+/* 공통 스타일 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 멤버십 관련 */
+/* 멤버십 관련 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 #wishList {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  align-items: center;
   width: 100%;
   max-width: 450px;
   padding: 23px 11px;
   margin: 81px 0px 120px;
 }
-
 #wishList #wishListTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: column nowrap;
+  align-items: flex-start;
   width: 100%;
   margin-bottom: 18px;
 }
-
 #wishList #wishListTitle h1 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 2px;
 }
-
 #wishList #wishListTitle h2 {
   font-size: 1.3rem;
   font-weight: 300;
   color: #ABABAB;
 }
-
 #wishList #wishListCardSection {
   width: 100%;
   max-width: 450px;
 }
-
 #wishList #wishListCardSection .empty {
   text-align: center;
   margin-top: 50px;
   font-size: 1.6rem;
 }
-
 #wishList #wishListCardSection #wishListList {
   width: 100%;
   max-width: 450px;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item {
   padding: 15px;
   border-radius: 16px;
-  -webkit-box-shadow: 3px 7px 11px #EDEFF5;
-          box-shadow: 3px 7px 11px #EDEFF5;
+  box-shadow: 3px 7px 11px #EDEFF5;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item input[type=checkbox] {
   width: 18px;
   height: 18px;
   border: 1px solid #E2E2E2;
   margin: 14px auto;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  align-items: center;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box .thumbnail {
   height: 100px;
   border-radius: 6px;
   overflow: hidden;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box .thumbnail > a {
   position: relative;
   display: block;
   width: 100px;
   height: 100px;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box .thumbnail > a > img {
   position: absolute;
   top: 0;
@@ -105,96 +82,57 @@
   width: 100%;
   height: 100%;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box .description {
   width: calc(100% - 115px);
   margin-left: 12px;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box .description .product_name {
   font-size: 1.5rem;
   font-weight: 600;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box .description .info .delivery {
   font-size: 1.3rem;
   font-weight: 300;
   color: #707070;
   margin-bottom: 12px;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box .description .info .delivery .delivery_price {
   color: #707070;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box .description .info .price_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  align-items: center;
   font-size: 1.45rem;
   font-weight: 500;
   color: #022CFF;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box .description .info .price_wrap .strike {
   font-size: 1.2rem;
   text-decoration: line-through;
   color: #C4C4C4;
   margin-left: 5px;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_option .option_info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column nowrap;
+  justify-content: space-between;
   margin: 12px 0;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_option .option_info .option_name {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_option .option_info .option_name .optionDesc {
   font-size: 1.3rem;
   font-weight: 300;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_option .option_info .option_name .option_change {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 70px;
   height: 30px;
   font-size: 1.2rem;
@@ -202,50 +140,29 @@
   border-radius: 100px;
   color: #022CFF;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_option .option_info .layerOptionModify {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  align-items: center;
   width: 98%;
   padding: 12px;
   margin: 5px auto;
   border-radius: 12px;
   background: #FAFAFE;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_option .option_info .layerOptionModify > ul {
   width: 100%;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_option .option_info .layerOptionModify > ul > li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_option .option_info .layerOptionModify > ul > li .optionItem {
   font-size: 1.3rem;
   font-weight: 500;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_option .option_info .layerOptionModify > ul > li > select {
   width: 80%;
   height: 35px;
@@ -254,11 +171,9 @@
   color: #707070;
   cursor: pointer;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_option .option_info .layerOptionModify .option_btn {
   margin-top: 12px;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_option .option_info .layerOptionModify .option_btn > button {
   width: 50px;
   height: 30px;
@@ -266,17 +181,14 @@
   background: #ffffff;
   font-weight: 500;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_option .option_info .layerOptionModify .option_btn > button:nth-child(1) {
   border: 1px solid #022CFF;
   color: #022CFF;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_option .option_info .layerOptionModify .option_btn > button:nth-child(2) {
   border: 1px solid #E2E2E2;
   color: #707070;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_option_total {
   text-align: right;
   font-size: 1.6rem;
@@ -285,35 +197,18 @@
   padding: 9px;
   border-top: 1px solid #C4C4C4;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   height: 35px;
   margin: 10px 0;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_btn .item_del {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #C4C4C4;
   border-radius: 100px;
   color: #707070;
@@ -321,46 +216,34 @@
   width: 72px;
   height: 100%;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_btn > p {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
   height: 100%;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_btn > p > button {
   width: 100px;
   height: 100%;
   font-size: 1.2rem;
   border-radius: 100px;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_btn > p .item_cart {
   background: #ffffff;
   border: 1px solid #022CFF;
   color: #022CFF;
   margin-right: 6px;
 }
-
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_btn > p .item_order {
   background: #022CFF;
   border: 1px solid #022CFF;
   color: #ffffff;
 }
-
 #wishList #wishListCardSection #wishListBtn {
   padding: 15px;
 }
-
 #wishList #wishListCardSection #wishListBtn .select {
   margin-bottom: 20px;
 }
-
 #wishList #wishListCardSection #wishListBtn .select > button {
   display: inline-block;
   width: 70px;
@@ -370,11 +253,9 @@
   color: #707070;
   background: rgba(41, 41, 41, 0);
   border-radius: 60px;
-  -webkit-box-shadow: 3px 7px 11px #EDEFF5;
-          box-shadow: 3px 7px 11px #EDEFF5;
+  box-shadow: 3px 7px 11px #EDEFF5;
   margin-right: 12px;
 }
-
 #wishList #wishListCardSection #wishListBtn #order_all {
   width: 100%;
   height: 55px;
@@ -386,35 +267,17 @@
 }
 
 .page-pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 100px;
 }
-
 .page-pagination .paginate-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
   width: auto;
   height: 40px;
   background: #FAFAFE;
@@ -422,20 +285,11 @@
   padding: 1% 5%;
   font-size: 1.3rem;
 }
-
 .page-pagination .btnPrev_wrap, .page-pagination .btnNext_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  align-items: center;
 }
-
 .page-pagination .first, .page-pagination .last, .page-pagination .btnPrev, .page-pagination .btnNext {
   width: 30px;
   height: 30px;
@@ -447,32 +301,20 @@
   color: #707070;
   font-size: 1.1rem;
 }
-
 .page-pagination .first:hover, .page-pagination .last:hover, .page-pagination .btnPrev:hover, .page-pagination .btnNext:hover {
   font-weight: 700;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-
 .page-pagination ol {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
   width: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   margin: 0 5px;
 }
-
 .page-pagination ol li {
   margin: 0 11px;
 }
-
 .page-pagination ol li a {
   display: block;
   width: 100%;
@@ -482,7 +324,6 @@
   font-weight: 500;
   color: #707070;
 }
-
 .page-pagination ol li .this {
   font-weight: 600;
   color: #022CFF;
@@ -510,40 +351,32 @@ body#popup {
   width: 100%;
   max-width: 450px;
 }
-
 .content .inner {
   width: 100%;
   max-width: 450px;
   padding: 11px;
 }
-
 .content .inner .name {
   font-size: 1.4rem;
   font-weight: 500;
 }
-
 .content .inner .productNormal tr, .content .inner .productNormal th {
   font-size: 1.3rem;
 }
-
 .content .inner .productNormal select {
   padding: 4px 8px !important;
   font-size: 1.3rem;
 }
-
 .content .inner .product {
   font-size: 1.3rem !important;
 }
-
 .content .inner .ec-front-product-item-price {
   font-size: 1.3rem !important;
   color: #022CFF !important;
 }
-
 .content .inner .mileage {
   color: #292929 !important;
 }
-
 .content .inner .total {
   color: #022CFF !important;
 }
@@ -564,5 +397,4 @@ body#popup {
   font-weight: 500 !important;
   padding: 8px 13px;
   border-radius: 50px;
-}
-/*# sourceMappingURL=wish_list.css.map */
+}/*# sourceMappingURL=wish_list.css.map */

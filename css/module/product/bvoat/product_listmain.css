@@ -1,25 +1,26 @@
 @charset "UTF-8";
+/* 공통 스타일 */
+/* 공통 스타일 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 멤버십 관련 */
+/* 멤버십 관련 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 #productListnormalList {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: space-between;
   width: 100%;
   height: auto;
 }
-
 #productListnormalList .listnormal_list {
   width: 49%;
   height: auto;
   padding-bottom: 30px;
 }
-
 #productListnormalList .listnormal_list .normal_product {
   position: relative;
   display: inline;
@@ -30,7 +31,6 @@
   position: relative;
   width: 100%;
 }
-
 .normal_img_wrap .normal_img_box {
   display: block;
   position: relative;
@@ -39,14 +39,12 @@
   overflow: hidden;
   border-radius: 4px;
 }
-
 .normal_img_wrap .normal_img_box .normal_img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
-
 .normal_img_wrap .product_select_icon {
   position: absolute;
   width: 71px;
@@ -56,38 +54,27 @@
   left: 5.6px;
   overflow: hidden;
 }
-
 .normal_img_wrap .product_select_icon img {
   width: 100%;
   height: 100%;
 }
-
 .normal_img_wrap .product_wish {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 32px;
   height: 32px;
   bottom: 9.2px;
   left: 8.7px;
   background: #ffffff;
   border-radius: 50%;
-  -webkit-box-shadow: 0px 3px 7px #70707027;
-          box-shadow: 0px 3px 7px #70707027;
+  box-shadow: 0px 3px 7px rgba(112, 112, 112, 0.1529411765);
   padding-top: 2px;
 }
-
 .normal_img_wrap .product_wish img {
   display: block;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   width: 20px;
   height: 18px;
 }
@@ -95,23 +82,14 @@
 .normal_product_brand {
   width: 100%;
   height: 32px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column nowrap;
+  justify-content: space-between;
 }
-
 .normal_product_brand .brand {
   font-size: 1rem !important;
   color: #707070;
 }
-
 .normal_product_brand .summary_desc {
   font-size: 1rem;
   color: #707070;
@@ -130,7 +108,6 @@
 .normal_product_info {
   margin-top: 10px;
 }
-
 .normal_product_info .normal_product_name {
   display: block;
   width: 100%;
@@ -149,9 +126,7 @@
   line-height: 1.6rem;
   height: 3.4rem;
 }
-
 .normal_product_info .normal_product_name > span {
   font-size: 1.3rem !important;
   color: #292929 !important;
-}
-/*# sourceMappingURL=product_listmain.css.map */
+}/*# sourceMappingURL=product_listmain.css.map */

@@ -1,88 +1,62 @@
+@charset "UTF-8";
+/* 공통 스타일 */
+/* 공통 스타일 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 멤버십 관련 */
+/* 멤버십 관련 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 #memberModify {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  align-items: center;
   width: 100%;
   max-width: 450px;
   padding: 23px 11px;
   margin: 40px 0;
 }
-
 #memberModify #memberModifyTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: column nowrap;
+  align-items: flex-start;
   width: 100%;
   margin-bottom: 18px;
 }
-
 #memberModify #memberModifyTitle h2 {
   font-weight: 600;
   font-size: 2.2rem;
 }
-
 #memberModify #memberModifyField {
   position: relative;
   width: 100%;
   max-width: 450px;
 }
-
 #memberModify #memberModifyField fieldset {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
 }
-
 #memberModify #memberModifyField fieldset .modify_form {
   position: relative;
   width: 100%;
   max-width: 450px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
+  flex-flow: column nowrap;
+  flex-basis: auto;
   width: 100%;
   max-width: 450px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list {
   margin-bottom: 18px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .input_label {
   display: block;
   font-weight: bold;
@@ -90,26 +64,15 @@
   color: #707070;
   margin-bottom: 6px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
   max-width: 450px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap input {
   width: 100%;
   height: 44px;
@@ -118,42 +81,29 @@
   border: 1px solid #C4C4C4;
   font-size: 1.35rem;
   color: #707070;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap input::-webkit-input-placeholder {
+#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap input::-moz-placeholder {
   font-size: 1.2rem;
   font-weight: lighter;
   color: #C4C4C4;
   letter-spacing: -0.3px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap input:-ms-input-placeholder {
   font-size: 1.2rem;
   font-weight: lighter;
   color: #C4C4C4;
   letter-spacing: -0.3px;
 }
-
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap input::-ms-input-placeholder {
-  font-size: 1.2rem;
-  font-weight: lighter;
-  color: #C4C4C4;
-  letter-spacing: -0.3px;
-}
-
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap input::placeholder {
   font-size: 1.2rem;
   font-weight: lighter;
   color: #C4C4C4;
   letter-spacing: -0.3px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap #user_passwd_confirm {
   margin-top: 6px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap > select {
   width: calc((100% - 44px) / 3);
   height: 44px;
@@ -170,7 +120,6 @@
   background-position: 85%;
   cursor: pointer;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap #mobile2,
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap #mobile3 {
   width: calc((100% - 44px) / 3);
@@ -180,11 +129,9 @@
   color: #707070;
   border: 1px solid #C4C4C4;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap #confirm_verify_mobile {
   margin-top: 6px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap #expiryTime {
   position: fixed;
   right: 7%;
@@ -192,17 +139,10 @@
   font-weight: bold;
   color: #022CFF;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap .input_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 123px;
   height: 44px;
   margin-left: 6px;
@@ -215,7 +155,6 @@
   word-break: keep-all;
   cursor: pointer;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .val_check_msg {
   word-wrap: break-word;
   word-break: keep-all;
@@ -224,32 +163,22 @@
   color: #C4C4C4;
   margin: 3px 0 0 3px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .input_info_txt {
   font-size: 1.25rem;
   color: #022CFF;
   letter-spacing: -0.3px;
   margin: 3px 0 6px 1px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
+  flex-flow: column nowrap;
+  flex-basis: auto;
   width: 100%;
   max-width: 450px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list {
   margin-bottom: 18px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list .input_label {
   display: block;
   font-weight: bold;
@@ -257,27 +186,16 @@
   color: #707070;
   margin-bottom: 6px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list .member_modify_input_wrap {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
   max-width: 450px;
   padding: 6px 20px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list .member_modify_input_wrap > label {
   font-weight: bold;
   font-size: 1.25rem;
@@ -285,13 +203,11 @@
   color: #707070;
   cursor: pointer;
 }
-
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list .member_modify_input_wrap input[type="radio"] {
+#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list .member_modify_input_wrap input[type=radio] {
   width: 18px;
   height: 18px;
   cursor: pointer;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list .val_check_msg {
   word-wrap: break-word;
   word-break: keep-all;
@@ -300,29 +216,21 @@
   color: #C4C4C4;
   margin: 3px 0 0 3px;
 }
-
 #memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list .input_info_txt {
   font-size: 1.25rem;
   color: #022CFF;
   letter-spacing: -0.3px;
   margin: -5px 0 6px 1px;
 }
-
 #memberModify .modify_btn {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   bottom: 0;
   width: 100%;
   max-width: 450px;
   height: 63px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
   z-index: 99;
   background-color: #022CFF;
@@ -332,7 +240,6 @@
   font-weight: 500;
   cursor: pointer;
 }
-
 #memberModify .member_delete_btn {
   display: block;
   background: rgba(41, 41, 41, 0);
@@ -342,14 +249,10 @@
   text-decoration: underline;
   margin: 20px 0 50px;
   color: #707070;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  transition: all 0.5s;
 }
-
 #memberModify .member_delete_btn:hover {
   font-weight: 600;
   color: #C4C4C4;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-/*# sourceMappingURL=modify.css.map */
+  transition: all 0.3s;
+}/*# sourceMappingURL=modify.css.map */

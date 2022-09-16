@@ -1,4 +1,14 @@
 @charset "UTF-8";
+/* 공통 스타일 */
+/* 공통 스타일 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 멤버십 관련 */
+/* 멤버십 관련 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 #fundingIndex {
   width: 100%;
   max-width: 450px;
@@ -12,14 +22,12 @@
   margin: 19px 0;
   padding: 0 11px;
 }
-
 #fundingIndexPlayingTitle h2,
 #fundingIndexClosingTitle h2 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 2px;
 }
-
 #fundingIndexPlayingTitle h3,
 #fundingIndexClosingTitle h3 {
   font-size: 1.3rem;
@@ -42,7 +50,6 @@
   color: #707070;
   text-align: center;
 }
-
 .fundingbanner span {
   color: #022CFF;
 }
@@ -56,29 +63,18 @@
   font-size: 15px;
   color: #707070;
   text-align: center;
-  -webkit-box-shadow: 3px 7px 11px rgba(0, 0, 0, 0.16);
-          box-shadow: 3px 7px 11px rgba(0, 0, 0, 0.16);
+  box-shadow: 3px 7px 11px rgba(0, 0, 0, 0.16);
 }
-
 .fundingendbanner em {
   font-weight: 500;
 }
 
 /* 펀딩 메인진열 */
 .funding_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .bvt-funding {
@@ -87,24 +83,18 @@
   margin: 0 auto;
   padding: 11px 0;
 }
-
 .bvt-funding > li {
   position: relative;
   border-bottom: 1px solid #E2E2E2;
   margin-bottom: 45px;
   border-radius: 10px;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
-
 .bvt-funding > li:hover {
   border-radius: 10px;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  -webkit-box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-          box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
 }
-
 .bvt-funding > li .msgBox {
   background-color: #022CFF;
   color: #ffffff;
@@ -119,12 +109,10 @@
   height: 40px;
   line-height: 8px;
 }
-
 .bvt-funding > li .thumb {
   position: relative;
   width: 100%;
 }
-
 .bvt-funding > li .thumb > a {
   display: block;
   position: relative;
@@ -132,7 +120,6 @@
   overflow: hidden;
   border-radius: 4px;
 }
-
 .bvt-funding > li .thumb > a > img {
   position: absolute;
   top: 0;
@@ -140,10 +127,8 @@
   height: auto;
   width: 100%;
   left: 50%;
-  -webkit-transform: translate(-50%, -22%);
-          transform: translate(-50%, -22%);
+  transform: translate(-50%, -22%);
 }
-
 .bvt-funding > li .thumb .icon {
   position: absolute;
   width: 50px;
@@ -152,18 +137,11 @@
   top: 4.6px;
   left: 4.6px;
 }
-
 .bvt-funding > li .ddayPrd {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background: #022CFF;
   color: #ffffff;
   font-size: 1.22rem;
@@ -176,29 +154,24 @@
   padding: 0 !important;
   text-align: center;
 }
-
 .bvt-funding > li .ddayPrd > span {
   font-weight: 600;
 }
-
 .bvt-funding > li .desc {
   width: 100%;
   padding: 11px 11px 60px;
 }
-
 .bvt-funding > li .desc .typePrd {
   font-size: 1.5rem;
   font-weight: bold;
   color: #022CFF;
   margin-bottom: 11px;
 }
-
 .bvt-funding > li .desc .title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 11px;
 }
-
 .bvt-funding > li .desc .summary {
   font-size: 1.5rem;
   margin-bottom: 11px;
@@ -212,70 +185,50 @@
   word-wrap: break-word;
   line-height: 2.1rem;
 }
-
 .bvt-funding > li .desc .custom_voter {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin: 7px 0;
 }
-
 .bvt-funding > li .desc .custom_voter div:nth-child(1) {
   font-size: 1.25rem;
   color: #022CFF;
 }
-
 .bvt-funding > li .desc .custom_voter div:nth-child(2) {
   font-size: 1.25rem;
   color: #01AF8A;
 }
-
 .bvt-funding > li .desc .wish {
   position: absolute;
-  width: 41px;
-  height: 41px;
+  width: auto;
+  height: auto;
   cursor: pointer;
-  bottom: 11px;
-  left: 11px;
+  bottom: 0;
+  right: 0;
 }
-
 .bvt-funding > li .desc .wish button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: inherit;
   height: inherit;
   border: 0;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
-          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  background: none;
   cursor: pointer;
 }
-
 .bvt-funding > li .desc .wish button img {
   position: relative;
-  width: 57.4%;
-  height: 52.7%;
+  width: 41px;
+  height: 38.98px;
+  padding: 10px;
   margin-top: 2.5px;
 }
 
 /* 진행 펀딩 */
 /* 종료 펀딩 */
 .listmain_26 > .bvt-funding > li > .thumb > a > img {
-  -webkit-filter: opacity(50%) !important;
   filter: opacity(50%) !important;
 }
-
 .listmain_26 > .bvt-funding > li > .desc > .title > a, .listmain_26 > .bvt-funding > li > .desc > .summary {
   color: #707070 !important;
 }
@@ -294,7 +247,6 @@
   text-align: center;
   margin: 40px 0 0 0;
 }
-
 #product_listmore a {
   display: block;
   border: 1px solid #ddd;
@@ -304,9 +256,7 @@
   text-align: center;
   text-decoration: none;
 }
-
 #product_listmore a::hover {
   background: #000;
   color: #fff;
-}
-/*# sourceMappingURL=funding.css.map */
+}/*# sourceMappingURL=funding.css.map */

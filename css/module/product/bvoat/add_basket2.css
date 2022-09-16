@@ -1,15 +1,19 @@
 @charset "UTF-8";
+/* 공통 스타일 */
+/* 공통 스타일 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 멤버십 관련 */
+/* 멤버십 관련 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 #basketLayer {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  justify-content: center;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -18,22 +22,12 @@
   background: rgba(41, 41, 41, 0.3);
   z-index: 100000;
 }
-
 #basketLayer .layer_basket {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
   bottom: 0;
   width: 100%;
   max-width: 450px;
@@ -41,41 +35,26 @@
   background: #ffffff;
   overflow: hidden;
 }
-
 #basketLayer .layer_basket h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 60px;
   font-size: 1.6rem;
   font-weight: 400;
   background: #FAFAFE;
 }
-
 #basketLayer .layer_basket .basket_wrap {
   width: 100%;
   max-width: 450px;
 }
-
 #basketLayer .layer_basket .basket_wrap > ul {
   padding: 5px 11px 10px;
 }
-
 #basketLayer .layer_basket .basket_wrap > ul > li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
   height: calc(50% - 5px) !important;
 }
 
@@ -84,7 +63,6 @@
   width: 95px;
   height: 95px;
 }
-
 .thumb > a {
   display: block;
   position: relative;
@@ -93,7 +71,6 @@
   overflow: hidden;
   border-radius: 4px;
 }
-
 .thumb > a > img {
   position: absolute;
   top: 0;
@@ -104,7 +81,6 @@
 .desc {
   padding: 1%;
 }
-
 .desc .basket_name {
   font-size: 1.3rem;
   font-weight: 600;
@@ -120,12 +96,10 @@
   height: 2.4rem;
   color: #707070;
 }
-
 .desc .basket_option {
   font-size: 1.2rem;
   color: #707070;
 }
-
 .desc .basket_quantity {
   font-size: 1.2rem;
   color: #707070;
@@ -141,47 +115,30 @@
 
 .layer_basket_btn {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  align-items: center;
   bottom: 0;
   width: 100%;
   max-width: 450px;
   height: 61px;
   padding: 0;
 }
-
 .layer_basket_btn > a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   height: 100%;
   font-weight: 500;
   font-size: 1.4rem;
   cursor: pointer;
 }
-
 .layer_basket_btn .move_basket_btn {
   background: #ffffff;
   color: #292929;
 }
-
 .layer_basket_btn .stay_btn {
   background: #022CFF;
   color: #ffffff;
-}
-/*# sourceMappingURL=add_basket2.css.map */
+}/*# sourceMappingURL=add_basket2.css.map */

@@ -1,52 +1,43 @@
 @charset "UTF-8";
+/* 공통 스타일 */
+/* 공통 스타일 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 멤버십 관련 */
+/* 멤버십 관련 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 #orderDetail {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  align-items: center;
   width: 100%;
   max-width: 450px;
   padding: 23px 11px 150px;
   margin: 80px auto;
 }
-
 #orderDetail #orderDetailTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: column nowrap;
+  align-items: flex-start;
   width: 100%;
   margin-bottom: 18px;
 }
-
 #orderDetail #orderDetailTitle h1 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 2px;
 }
-
 #orderDetail #orderDetailTitle h2 {
   font-size: 1.3rem;
   font-weight: 300;
   color: #ABABAB;
 }
-
 #orderDetail #orderDetailTitle em {
   font-weight: 500;
 }
-
 #orderDetail span,
 #orderDetail p,
 #orderDetail a,
@@ -65,37 +56,29 @@
 #orderDetail select {
   font-size: 1.3rem !important;
 }
-
 #orderDetail h2 {
   font-size: 1.4rem;
 }
-
 #orderDetail .boardTotal strong {
   color: #022CFF !important;
 }
-
 #orderDetail .boardTotal td {
   padding: 14px 14px 14px 0;
 }
-
 #orderDetail .cancel_btn {
   padding: 6px 10px;
   background: #ffffff;
   border: 1px solid #E2E2E2;
-  -webkit-box-shadow: 0px 3px 7px #70707027;
-          box-shadow: 0px 3px 7px #70707027;
+  box-shadow: 0px 3px 7px rgba(112, 112, 112, 0.1529411765);
   font-size: 1.3rem;
 }
-
 #orderDetail .tax_btn {
   padding: 3px 5px;
   background: #ffffff;
   border: 1px solid #E2E2E2;
-  -webkit-box-shadow: 0px 3px 7px #70707027;
-          box-shadow: 0px 3px 7px #70707027;
+  box-shadow: 0px 3px 7px rgba(112, 112, 112, 0.1529411765);
   font-size: 1.3rem;
 }
-
 #orderDetail .list_btn {
   display: block;
   width: 100%;
@@ -113,50 +96,35 @@
   padding: 23px 11px;
   margin: 80px 0 120px;
 }
-
 #orderCancel #orderCancelTitle {
   width: 100%;
   max-width: 450px;
   margin-bottom: 18px;
 }
-
 #orderCancel #orderCancelTitle h1 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 2px;
 }
-
 #orderCancel #orderCancelTitle h2 {
   font-size: 1.3rem;
   font-weight: 300;
   color: #ABABAB;
 }
-
 #orderCancel #orderCancelTable {
   width: 100%;
   max-width: 450px;
   margin: 20px 0;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold {
   width: 100%;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .title {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
   height: 45px;
   margin: 0;
   overflow: hidden;
@@ -165,14 +133,12 @@
   padding: 0 11px;
   cursor: pointer;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .title h2,
 #orderCancel #orderCancelTable .ec-base-fold .title h3,
 #orderCancel #orderCancelTable .ec-base-fold .title p {
   font-size: 1.5rem;
   font-weight: 500;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .title::after {
   content: "";
   position: absolute;
@@ -182,141 +148,104 @@
   height: 100%;
   background: url("//img.echosting.cafe24.com/skin/mobile/layout/ico_arrow_white.png") no-repeat 50% 50%;
   background-size: 20px auto;
-  -webkit-transition: .3s ease-out;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents {
   display: none;
   background: #FAFAFE;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .product {
   width: 100%;
   padding: 11px;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .product .chk {
   display: block;
   margin-bottom: 11px;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .product .chk input {
   width: 22px;
   height: 22px;
   border-width: 2px;
   cursor: pointer;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .product .description {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .product .description .thumbnail {
   position: relative;
   display: inline-block;
   width: 120px;
   margin-right: 11px;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .product .description .thumbnail > a {
   display: block;
   position: relative;
-  padding-top: calc(100%);
+  padding-top: 100%;
   overflow: hidden;
   border-radius: 4px;
   width: 120px;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .product .description .thumbnail > a > img {
   position: absolute;
   top: 0;
   left: 0;
   width: 130%;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .product .description .name {
   display: block;
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .product .description .info {
   display: block;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .product .description .info li {
   font-size: 1.4rem;
   font-weight: 400;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .product .description .info li .price::after {
   content: "원";
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .product .description .info li > .quantity::before {
   position: relative;
   content: "|";
   margin: 0 5px;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .option {
   font-size: 1.4rem;
   font-weight: normal;
   margin: 11px;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .updown_quantity {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  flex-flow: column nowrap;
   padding: 11px;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .updown_quantity span {
   display: block;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .updown_quantity span:nth-child(1) {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 10px;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .updown_quantity span:nth-child(2) > img {
   cursor: pointer;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .updown_quantity span:nth-child(2) > input {
   width: 33px;
   height: 29px;
   text-align: center;
   font-size: 1.3rem;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .updown_quantity span:nth-child(2) > a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 66px;
   height: 30px;
   background: #022CFF;
@@ -326,17 +255,10 @@
   float: right;
   border-radius: 4px;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold .contents .status {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
   height: 50px;
   padding: 0 11px;
@@ -345,46 +267,29 @@
   font-weight: 500;
   color: #022CFF;
 }
-
 #orderCancel #orderCancelTable .ec-base-fold dt.selected:after {
-  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-
 #orderCancel #orderCancelTable .ec-base-fold.selected > .title:after {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-
 #orderCancel #orderCancelTable .ec-base-fold.selected > .contents {
   display: block;
 }
-
 #orderCancel #orderCancelTable .ec-base-help {
   font-size: 1.3rem;
   color: #707070;
   margin: 11px;
 }
-
 #orderCancel .boardViewCS {
   width: 100%;
 }
-
 #orderCancel .boardViewCS .title {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
   height: 45px;
   margin: 0;
   overflow: hidden;
@@ -393,7 +298,6 @@
   padding: 0 11px;
   cursor: pointer;
 }
-
 #orderCancel .boardViewCS .title h2,
 #orderCancel .boardViewCS .title h3,
 #orderCancel .boardViewCS .title p {
@@ -401,7 +305,6 @@
   font-weight: 500;
   color: #ffffff;
 }
-
 #orderCancel .boardViewCS .title::after {
   content: "";
   position: absolute;
@@ -411,45 +314,37 @@
   height: 100%;
   background: url("//img.echosting.cafe24.com/skin/mobile/layout/ico_arrow_white.png") no-repeat 50% 50%;
   background-size: 20px auto;
-  -webkit-transition: .3s ease-out;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
 }
-
 #orderCancel .boardViewCS .typeWrite {
   width: 100%;
   padding: 11px;
 }
-
 #orderCancel .boardViewCS table {
   width: 100%;
   max-width: 450px;
   padding: 11px;
 }
-
 #orderCancel .boardViewCS table tbody, #orderCancel .boardViewCS table tr {
   display: block;
   width: 100%;
   padding: 5px;
 }
-
 #orderCancel .boardViewCS table tr > th {
   display: inline-block;
   font-size: 1.5rem;
   margin: 11px 0;
 }
-
 #orderCancel .boardViewCS table tr > td {
   width: 100%;
   max-width: 450px;
   font-size: 1.3rem;
 }
-
 #orderCancel .boardViewCS table tr > td > div {
   display: inline-block;
   width: 100%;
   max-width: 350px;
 }
-
 #orderCancel .boardViewCS table tr > td > textarea {
   width: 0;
   width: 300px !important;
@@ -458,70 +353,47 @@
   font-size: 1.4rem;
   padding: 5px;
 }
-
 #orderCancel .boardViewCS table .ec-base-label {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   font-size: 1.5rem;
 }
-
 #orderCancel .boardViewCS table .ec-base-label > input {
   width: 18px;
   height: 18px;
   margin-right: 5px;
   cursor: pointer;
 }
-
 #orderCancel .boardViewCS table .ec-base-label > label {
   font-size: 1.4rem;
   cursor: pointer;
 }
-
 #orderCancel .ec-base-button {
   width: 100%;
   max-width: 450px;
   padding: 23px 11px;
   text-align: center;
 }
-
 #orderCancel .ec-base-button > a {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 40%;
   height: 55px;
   border: 1px solid #022CFF;
   border-radius: 40px;
 }
-
 #orderCancel .ec-base-button > a:nth-child(1) {
   background: #022CFF;
   color: #ffffff;
   font-size: 1.6rem;
   font-weight: 600;
 }
-
 #orderCancel .ec-base-button > a:nth-child(2) {
   background: #ffffff;
   color: #022CFF;
   font-size: 1.6rem;
   font-weight: 600;
-}
-/*# sourceMappingURL=order_detail.css.map */
+}/*# sourceMappingURL=order_detail.css.map */

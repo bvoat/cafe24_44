@@ -1,64 +1,56 @@
 @charset "UTF-8";
+/* 공통 스타일 */
+/* 공통 스타일 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 멤버십 관련 */
+/* 멤버십 관련 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 #buyScreen {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
   overflow: hidden;
   background: rgba(41, 41, 41, 0.5);
   z-index: 9999;
 }
-
 #buyScreen .screen_on {
   -webkit-animation: rise-item 0.25s;
           animation: rise-item 0.25s;
-  -webkit-animation-delay: .12s;
-          animation-delay: .12s;
+  -webkit-animation-delay: 0.12s;
+          animation-delay: 0.12s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-
 @-webkit-keyframes rise-item {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-
 @keyframes rise-item {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-
 #buyScreen .buy_screen_box {
   position: relative;
   width: 100%;
@@ -66,40 +58,27 @@
   height: 75%;
   margin: 20px auto 0;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 3px 7px #70707027;
-          box-shadow: 0px 3px 7px #70707027;
+  box-shadow: 0px 3px 7px rgba(112, 112, 112, 0.1529411765);
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
   font-size: 1.2rem;
   font-weight: 300;
 }
-
 #buyScreen .buy_screen_box .buy_screen_title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 55px;
   border-bottom: 1px solid #E2E2E2;
 }
-
 #buyScreen .buy_screen_box .buy_screen_title h1 {
   font-size: 1.5rem;
   font-weight: 500;
   margin-left: calc(50% - 25px);
 }
-
 #buyScreen .buy_screen_box .buy_screen_title .screen_close_btn {
   width: 30px;
   height: 15px;
@@ -112,25 +91,14 @@
   padding: 20px 11px;
   overflow-y: auto;
 }
-
 .buy_screen_payment #totalSelects table tbody tr {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
   height: 40px;
   margin-bottom: 5px;
 }
-
 .buy_screen_payment #totalSelects table tbody tr th {
   width: 10%;
   max-width: 60px;
@@ -138,46 +106,34 @@
   font-size: 1.45rem;
   text-align: left;
 }
-
 .buy_screen_payment #totalSelects table tbody tr td {
   width: 85%;
   font-size: 1.45rem;
 }
-
 .buy_screen_payment #totalSelects table tbody tr td select {
   width: 100%;
   height: 40px;
   font-size: 1.45rem;
   cursor: pointer;
 }
-
 .buy_screen_payment #totalSelects table tbody tr td ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  flex-flow: column nowrap;
 }
-
 .buy_screen_payment #totalSelects table tbody tr td ul li {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 5px;
 }
-
 .buy_screen_payment #totalSelects table tbody tr td ul li input {
   width: 15px;
   height: 15px;
   margin-right: 6px;
   cursor: pointer;
 }
-
 .buy_screen_payment #totalSelects table tbody tr td ul li label {
   cursor: pointer;
 }
-
 .buy_screen_payment #totalProducts .select-tip {
   font-size: 1.2rem;
   font-weight: 300;
@@ -185,23 +141,13 @@
   text-align: center;
   margin: 20px 0 10px;
 }
-
 .buy_screen_payment .option_products tr,
 .buy_screen_payment .option_direct tr {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
   height: 100px;
   background: #FAFAFE;
   border-radius: 3px;
@@ -211,26 +157,17 @@
 
 .buy_button_box {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  align-items: center;
   width: 100%;
   max-width: 450px;
-  height: calc(100% - 38%);
+  height: 62%;
   bottom: 0;
   padding: 7px 11px 25px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background: #FAFAFE;
 }
-
 .buy_button_box h1 {
   width: 100%;
   text-align: left;
@@ -239,91 +176,53 @@
   color: #292929;
   margin-bottom: 7px;
 }
-
 .buy_button_box .total_price {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   font-size: 1.35rem;
   margin-bottom: 3px;
 }
-
 .buy_button_box .total_price span:nth-child(1) {
   font-size: 1.3rem;
 }
-
 .buy_button_box .total_price span:nth-child(2) {
   font-weight: 600;
 }
-
 .buy_button_box .total_delivery {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   font-size: 1.5rem;
   margin-bottom: 7px;
 }
-
 .buy_button_box .total_delivery span:nth-child(1) {
   font-size: 1.3rem;
 }
-
 .buy_button_box .total_delivery span:nth-child(2) span {
   font-size: 1.35rem;
 }
-
 .buy_button_box .total_delivery span:nth-child(2) span span {
   font-size: 1.3rem;
 }
-
 .buy_button_box .total_delivery span:nth-child(2) span span strong {
   font-size: 1.35rem;
 }
-
 .buy_button_box .ec-base-help {
   font-size: 1.3rem;
   text-align: center;
   padding-bottom: 15px;
 }
-
 .buy_button_box #NaverChk_Button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
-
 .buy_button_box .naver_msg {
   text-align: center;
   font-size: 1em;
@@ -331,21 +230,15 @@
   color: #707070;
   margin-bottom: 5px;
 }
-
 .buy_button_box .product_action {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 100%;
   max-width: 450px;
   min-height: 60px;
   bottom: 0;
 }
-
 .buy_button_box .product_action div {
   width: 50%;
   padding-top: calc(constant(safe-area-inset-bottom) - 20px);
@@ -353,39 +246,27 @@
   padding-bottom: calc(constant(safe-area-inset-bottom));
   padding-bottom: calc(env(safe-area-inset-bottom));
 }
-
 .buy_button_box .product_action div a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   font-weight: 500;
   font-size: 1.6rem;
 }
-
 .buy_button_box .product_action .btn_buy {
   background: #022CFF;
 }
-
 .buy_button_box .product_action .btn_buy a {
   color: #ffffff;
 }
-
 .buy_button_box .product_action .btn_cart {
   background: #ffffff;
 }
-
 .buy_button_box .product_action .btn_cart a {
   color: #292929;
 }
-
 .buy_button_box .product_action .select_none {
   width: 100%;
   font-size: 1.6rem;
@@ -398,13 +279,8 @@
 .quantity,
 .quant {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
   width: auto !important;
   height: auto;
   bottom: 20px;
@@ -423,13 +299,8 @@
 }
 
 .option_product > td p:nth-child(3) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
 }
 
 #quantity,
@@ -437,9 +308,7 @@
   width: 60px;
   height: 35px;
   text-align: center;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  order: 2;
   border: none;
   border-top: 1px solid #E2E2E2;
   border-bottom: 1px solid #E2E2E2;
@@ -453,13 +322,9 @@
   border: 1px solid #E2E2E2;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35'%3E%3Cg data-name='그룹 2025'%3E%3Cpath data-name='사각형 2328' fill='%23fff' d='M0 0h35v35H0z'/%3E%3Cg data-name='Icon feather-plus' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath data-name='패스 1754' d='M17.5 11v13'/%3E%3Cpath data-name='패스 1755' d='M11 17.5h13'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat;
   background-size: cover;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+  box-sizing: border-box;
+  order: 3;
 }
-
 .eProductQuantityUpClass > img,
 .up > img {
   visibility: hidden;
@@ -470,15 +335,11 @@
   width: 35px;
   height: 35px;
   border: 1px solid #E2E2E2;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35'%3E%3Cg data-name='그룹 2025'%3E%3Cpath data-name='사각형 2328' fill='%23fff' d='M0 0h35v35H0z'/%3E%3Cpath data-name='Icon feather-minus' d='M11.5 17.5h13' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
   background-size: cover;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  order: 1;
 }
-
 .eProductQuantityDownClass > img,
 .down > img {
   visibility: hidden;
@@ -509,8 +370,6 @@
   top: 12px;
   right: 12px;
 }
-
 .delete > img {
   visibility: hidden;
-}
-/*# sourceMappingURL=buy_screen.css.map */
+}/*# sourceMappingURL=buy_screen.css.map */

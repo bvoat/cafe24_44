@@ -1,30 +1,30 @@
 @charset "UTF-8";
+/* 공통 스타일 */
+/* 공통 스타일 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 멤버십 관련 */
+/* 멤버십 관련 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 #productListnormalList {
   width: 100%;
   padding: 0 11px;
 }
-
 #productListnormalList .product_listnormal_list_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: space-between;
   width: 100%;
   height: auto;
 }
-
 #productListnormalList .product_listnormal_list_wrap .listnormal_list {
   width: 49%;
   height: auto;
   padding-bottom: 30px;
 }
-
 #productListnormalList .product_listnormal_list_wrap .listnormal_list .normal_product {
   position: relative;
   display: inline;
@@ -35,22 +35,22 @@
   position: relative;
   width: 100%;
 }
-
 .thumb > a {
   display: block;
   position: relative;
   padding-top: calc(100% - 14.5px);
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 2px;
 }
-
 .thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
 .thumb .icon {
   position: absolute;
   width: 50px;
@@ -59,58 +59,44 @@
   top: 4.6px;
   left: 4.6px;
 }
-
 .thumb .icon img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .thumb .wish {
   position: absolute;
-  width: 32px;
-  height: 32px;
+  width: auto;
+  height: auto;
   cursor: pointer;
   bottom: 9.7px;
-  left: 8.7px;
+  right: 8.7px;
 }
-
 .thumb .wish button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: inherit;
   height: inherit;
   border: 0;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
-          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  background: none;
   cursor: pointer;
 }
-
 .thumb .wish button img {
   position: relative;
-  width: 57.4%;
-  height: 52.7%;
+  width: 52px;
+  height: 52px;
+  padding: 10px;
   margin-top: 2.5px;
 }
 
 .desc {
   padding: 7px 0 0 0;
 }
-
 .desc .brand {
   font-size: 1rem;
   color: #707070;
   margin-bottom: 3px;
 }
-
 .desc .summary {
   display: block;
   font-size: 1.15rem;
@@ -126,7 +112,6 @@
   line-height: 1.6rem;
   margin-bottom: 7px;
 }
-
 .desc .product_name, .desc .product_name span {
   color: #292929;
   font-size: 1.3rem;
@@ -144,5 +129,4 @@
   line-height: 1.8rem;
   height: 3.8rem;
   margin-bottom: 18px;
-}
-/*# sourceMappingURL=product_list.css.map */
+}/*# sourceMappingURL=product_list.css.map */
