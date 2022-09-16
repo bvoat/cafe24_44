@@ -2,6 +2,29 @@
 @import "../../../abstracts/mixin";
 @import "../../../abstracts/variables";
 
+
+// 이미지 정사각형 공통
+// 부모에게 w 정해줘야 함
+// .thumb {
+//     position: relative;
+//     width: 100%;
+//     a {
+//         display: block;
+//         position: relative;
+//         padding-top: calc(100% - 14.5px);
+//         overflow: hidden;
+//         border-radius: 4px;
+//         >img {
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             width: 100%;
+//         }
+//     }
+// }
+@include product-thumb(21px, 18.98px, 0, 0);
+
+
 /* listmain_double_mid */
 .doublemid {
     // 이미지 182px
@@ -303,26 +326,6 @@
             margin-bottom: 40px;
             //위시버튼
             @include wish-button(21px, 18.98px, 0, 0);
-        }
-    }
-}
-
-// 이미지 정사각형 공통
-// 부모에게 w 정해줘야 함
-.thumb {
-    position: relative;
-    width: 100%;
-    a {
-        display: block;
-        position: relative;
-        padding-top: calc(100% - 14.5px);
-        overflow: hidden;
-        border-radius: 4px;
-        >img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
         }
     }
 }
