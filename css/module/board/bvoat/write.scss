@@ -34,7 +34,7 @@
                 display: flex;
                 flex-flow: row nowrap;
                 margin-bottom: 20px;
-                @include product-thumb(32px, 32px, 9.7px, 8.7px);   
+                @include product-thumb(21px, 18.98px, 0, 0);   
                 .thumb{
                     width: 30%;
                     margin-right: 20px;

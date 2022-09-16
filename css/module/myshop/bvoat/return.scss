@@ -73,7 +73,7 @@
                 justify-content: flex-start;
                 align-items: center;
                 padding: 11px 0;
-                @include product-thumb(0px, 0px, 0px, 0px);
+                @include product-thumb(21px, 18.98px, 0, 0);
                 .thumb{
                     width: 25%;
                     min-width: 75px;

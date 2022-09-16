@@ -115,8 +115,8 @@
   width: auto;
   height: auto;
   cursor: pointer;
-  bottom: 0px;
-  right: 0px;
+  bottom: 0;
+  right: 0;
 }
 #orderReturn #applyForm #orderReturnTable .description .thumb .wish button {
   display: flex;
@@ -130,8 +130,8 @@
 }
 #orderReturn #applyForm #orderReturnTable .description .thumb .wish button img {
   position: relative;
-  width: 20px;
-  height: 20px;
+  width: 41px;
+  height: 38.98px;
   padding: 10px;
   margin-top: 2.5px;
 }
