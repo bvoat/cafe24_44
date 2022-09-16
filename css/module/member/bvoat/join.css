@@ -1,3 +1,12 @@
+@charset "UTF-8";
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 :root {
   --result-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/result-back.png");
   --result-title-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/bvoat-logo-earthst.png");
@@ -9,70 +18,46 @@
   padding: 23px 11px 100px;
   margin-top: 80px;
 }
-
 #memberJoin #memberJoinTitle {
   margin-bottom: 18px;
 }
-
 #memberJoin #memberJoinTitle h2 {
   font-weight: 600;
   font-size: 2.2rem;
 }
-
 #memberJoin #memberJoinTitle h3 {
   font-weight: 300;
   font-size: 1.4rem;
   color: #707070;
 }
-
 #memberJoin #memberJoinField {
   position: relative;
   width: 100%;
   max-width: 450px;
 }
-
 #memberJoin #memberJoinField fieldset {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm {
   position: relative;
   width: 100%;
   max-width: 450px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
+  flex-flow: column nowrap;
+  flex-basis: auto;
   width: 100%;
   max-width: 450px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list {
   margin-bottom: 18px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .input_label {
   display: block;
   font-weight: bold;
@@ -80,26 +65,15 @@
   color: #707070;
   margin-bottom: 6px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .member_join_input_wrap {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
   max-width: 450px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .member_join_input_wrap input {
   width: 100%;
   height: 44px;
@@ -108,42 +82,29 @@
   border: 1px solid #C4C4C4;
   font-size: 1.35rem;
   color: #707070;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
-#memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .member_join_input_wrap input::-webkit-input-placeholder {
+#memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .member_join_input_wrap input::-moz-placeholder {
   font-size: 1.2rem;
   font-weight: lighter;
   color: #C4C4C4;
   letter-spacing: -0.3px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .member_join_input_wrap input:-ms-input-placeholder {
   font-size: 1.2rem;
   font-weight: lighter;
   color: #C4C4C4;
   letter-spacing: -0.3px;
 }
-
-#memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .member_join_input_wrap input::-ms-input-placeholder {
-  font-size: 1.2rem;
-  font-weight: lighter;
-  color: #C4C4C4;
-  letter-spacing: -0.3px;
-}
-
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .member_join_input_wrap input::placeholder {
   font-size: 1.2rem;
   font-weight: lighter;
   color: #C4C4C4;
   letter-spacing: -0.3px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .member_join_input_wrap #user_passwd_confirm {
   margin-top: 6px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .member_join_input_wrap > select {
   padding: 0 21px;
   -webkit-appearance: none;
@@ -154,7 +115,6 @@
   background-position: 85%;
   cursor: pointer;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .member_join_input_wrap .mobile_input_box {
   width: calc((100% - 44px) / 3);
   height: 44px;
@@ -163,11 +123,9 @@
   color: #707070;
   border: 1px solid #C4C4C4;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .member_join_input_wrap #confirm_verify_mobile {
   margin-top: 6px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .member_join_input_wrap #expiryTime {
   position: fixed;
   right: 7%;
@@ -175,17 +133,10 @@
   font-weight: bold;
   color: #022CFF;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .member_join_input_wrap .input_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 123px;
   height: 44px;
   border: 1px solid #022CFF;
@@ -198,7 +149,6 @@
   cursor: pointer;
   margin-left: 3px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .val_check_msg {
   word-wrap: break-word;
   word-break: keep-all;
@@ -207,59 +157,34 @@
   color: #C4C4C4;
   margin: 3px 0 0 3px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .input_info_txt {
   font-size: 1.2rem;
   color: #022CFF;
   letter-spacing: -1px;
   margin: 3px 0 4px 1px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
   width: 100%;
   vertical-align: middle;
   font-size: 1.35rem;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeAll {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  align-items: center;
   width: 100%;
   height: 52px;
   background-color: #F2F2F2;
   padding: 15px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeAll .agreeArea_title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeAll .agreeArea_title label {
   display: block;
   width: 350px;
@@ -270,27 +195,19 @@
   color: #022CFF;
   cursor: pointer;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeAll .agreeArea_title input {
   width: 18px;
   height: 18px;
   cursor: pointer;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_control {
   width: 100%;
-  -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_control .agreeArea_title {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   vertical-align: middle;
   height: 52px;
   padding: 15px;
@@ -299,12 +216,10 @@
   border-right: 1px solid #E2E2E2;
   border-bottom: 1px solid #E2E2E2;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_control .agreeArea_title::-webkit-details-marker {
   font-size: 20px;
   margin-right: 5px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_control .agreeArea_title > label {
   display: inline-block;
   height: 19px;
@@ -313,31 +228,25 @@
   font-size: 14px;
   color: #707070;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_control .agreeArea_title > label > span {
   font-weight: lighter;
   color: #022CFF;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_control .agreeArea_title > input {
   width: 18px;
   height: 18px;
   cursor: pointer;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_control > .contents {
   width: 100%;
   height: 0;
   color: #C4C4C4;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  transition: all 0.5s;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_control:not([open]) .agreeArea_title::-webkit-details-marker {
   font-size: 20px;
   margin-right: 5px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_control:not([open]) .agreeArea_title .agreeArea_arr {
   position: absolute;
   display: inline-block;
@@ -348,7 +257,6 @@
   right: 20px;
   cursor: pointer;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_control:not([open]) .contents {
   width: 100%;
   height: 0;
@@ -357,10 +265,8 @@
   color: #C4C4C4;
   border-left: 1px solid #E2E2E2;
   border-right: 1px solid #E2E2E2;
-  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_control[open] .agreeArea_title .agreeArea_arr {
   position: absolute;
   display: inline-block;
@@ -371,7 +277,6 @@
   right: 20px;
   cursor: pointer;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_control[open] .contents {
   width: 100%;
   height: 250px;
@@ -381,10 +286,8 @@
   border-left: 1px solid #E2E2E2;
   border-right: 1px solid #E2E2E2;
   overflow: scroll;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  transition: all 0.5s;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_marketing {
   width: 100%;
   border-left: 1px solid #E2E2E2;
@@ -392,19 +295,13 @@
   border-bottom: 1px solid #E2E2E2;
   padding-bottom: 30px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_marketing .agreeArea_title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   vertical-align: middle;
   height: 52px;
   padding: 15px 15px 5px 15px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_marketing .agreeArea_title label {
   display: inline-block;
   height: 19px;
@@ -413,56 +310,34 @@
   font-size: 14px;
   color: #707070;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_marketing .agreeArea_title label > span {
   font-weight: lighter;
   color: #707070;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_marketing .agreeArea_title label > p {
   margin-top: 3px;
   color: #C4C4C4;
   font-weight: 300;
   font-size: 1.2rem;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_marketing .agreeArea_title input {
   width: 18px;
   height: 18px;
   cursor: pointer;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_marketing .agereeArea_marketing_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  align-items: center;
   margin: 14px 0 0 46px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_marketing .agereeArea_marketing_list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   font-size: 12px;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_marketing .agereeArea_marketing_list li input {
   display: inline-block;
   width: 15px;
@@ -470,7 +345,6 @@
   margin: 20px 6px 0 0;
   cursor: pointer;
 }
-
 #memberJoin #memberJoinField fieldset #joinForm .member_agree_section .agreeArea_marketing .agereeArea_marketing_list li label {
   display: inline-block;
   margin: 20px 20px 0 0;
@@ -482,26 +356,19 @@
 
 .join_btn {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   bottom: 0;
   width: calc(100% + 22px);
   max-width: 450px;
   height: 61px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-left: -11px;
   z-index: 99;
   background-color: #022CFF;
   border: none;
   cursor: pointer;
 }
-
 .join_btn > p {
   color: #ffffff;
   font-size: 1.45rem;
@@ -513,18 +380,10 @@
   max-width: 450px;
   margin-top: -40px;
 }
-
 #memberResult #memberResultTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  align-items: center;
   width: 100%;
   max-width: 450px;
   height: 475px;
@@ -534,11 +393,9 @@
   background: var(--result-bg) no-repeat;
   background-size: cover;
 }
-
 #memberResult #memberResultTitle h1 {
   display: none;
 }
-
 #memberResult #memberResultTitle h2 {
   width: 100%;
   max-width: 450px;
@@ -552,104 +409,66 @@
   background: var(--result-title-bg) no-repeat center;
   background-position-y: 19px;
 }
-
 #memberResult #memberResultTitle .member_result_card {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
   height: 151px;
   border-radius: 14px;
-  -webkit-box-shadow: 3px 7px 11px #EDEFF5;
-          box-shadow: 3px 7px 11px #EDEFF5;
+  box-shadow: 3px 7px 11px #EDEFF5;
   color: #292929;
   background: #ffffff;
 }
-
 #memberResult #memberResultTitle .member_result_card .profile_img {
   width: 68px;
   height: 68px;
 }
-
 #memberResult #memberResultTitle .member_result_card .profile_img > img {
   width: 68px;
   height: 68px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 #memberResult #memberResultTitle .member_result_card .profile_group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
   width: calc(100% - 110px);
 }
-
 #memberResult #memberResultTitle .member_result_card .profile_group .group_name {
   margin-top: 6px;
   font-size: 15px;
   font-weight: 400;
   color: #707070;
 }
-
 #memberResult #memberResultTitle .member_result_card .profile_group .profile_name {
   font-size: 23px;
   font-weight: 600;
 }
-
 #memberResult #memberResultTitle .member_result_card .profile_group .profile_txt {
   font-size: 13px;
   font-weight: 300;
   margin-top: 10px;
 }
-
 #memberResult #memberResultTxt {
   padding-bottom: 100px;
 }
-
 #memberResult #memberResultTxt .result_welcome_txt {
   width: 100%;
   max-width: 450px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
-
 #memberResult #memberResultTxt .result_welcome_txt h3 {
   font-size: 17px;
   color: #292929;
 }
-
 #memberResult #memberResultTxt .result_welcome_txt p {
   margin-top: 6px;
   font-size: 14px;
@@ -659,19 +478,13 @@
 
 .result_btn {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   bottom: 0;
   width: calc(100% + 22px);
   max-width: 450px;
   height: 61px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-left: -11px;
   z-index: 99;
   background-color: #022CFF;
@@ -680,5 +493,4 @@
   font-size: 1.45rem;
   font-weight: 500;
   cursor: pointer;
-}
-/*# sourceMappingURL=join.css.map */
+}/*# sourceMappingURL=join.css.map */

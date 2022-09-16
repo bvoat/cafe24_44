@@ -1,65 +1,62 @@
 @charset "UTF-8";
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 #productBoardList {
   width: 100%;
   max-width: 450px;
   padding: 37px 0px;
   margin: 80px 0 60px;
 }
-
 #productBoardList #productBoardListTitle {
   width: 100%;
   max-width: 450px;
   margin-bottom: 18px;
   padding: 0 11px;
 }
-
 #productBoardList #productBoardListTitle h1 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 2px;
 }
-
 #productBoardList #productBoardListTitle h2 {
   font-size: 1.3rem;
   font-weight: 300;
   color: #ABABAB;
 }
-
 #productBoardList #productBoardListTable {
   width: 100%;
   max-width: 450px;
   margin: 20px 0;
   padding: 0 11px;
 }
-
 #productBoardList #productBoardListTable table {
   width: 100%;
 }
-
 #productBoardList #productBoardListTable table thead {
   width: 100%;
   background: #ECECF4;
 }
-
 #productBoardList #productBoardListTable table thead tr th {
   padding: 2% 0;
   font-size: 1.2rem;
   font-weight: 600;
 }
-
 #productBoardList #productBoardListTable table thead tr th:nth-child(1) {
   text-align: start;
 }
-
 #productBoardList #productBoardListTable table tbody tr td {
   font-size: 1.1rem !important;
   color: #707070;
 }
-
 #productBoardList #productBoardListTable table tbody td {
   margin-right: 8px;
 }
-
 #productBoardList #productBoardListTable table tbody .subject {
   display: block;
   overflow: hidden;
@@ -73,31 +70,28 @@
   display: table-cell;
   font-weight: 600;
 }
-
 #productBoardList #productBoardListTable table tbody .txtNum {
   font-size: 0.9px;
 }
-
 #productBoardList #productBoardListTable .thumb {
   position: relative;
   width: 100%;
 }
-
 #productBoardList #productBoardListTable .thumb > a {
   display: block;
   position: relative;
-  padding-top: calc(100% - 14.5px);
+  padding-top: 100%;
   overflow: hidden;
   border-radius: 4px;
 }
-
 #productBoardList #productBoardListTable .thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
 #productBoardList #productBoardListTable .thumb .icon {
   position: absolute;
   width: 50px;
@@ -106,63 +100,44 @@
   top: 4.6px;
   left: 4.6px;
 }
-
 #productBoardList #productBoardListTable .thumb .icon img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 #productBoardList #productBoardListTable .thumb .wish {
   position: absolute;
-  width: 0px;
-  height: 0px;
+  width: auto;
+  height: auto;
   cursor: pointer;
   bottom: 0px;
   left: 0px;
+  background: #fff;
 }
-
 #productBoardList #productBoardListTable .thumb .wish button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: inherit;
   height: inherit;
+  padding: 10px;
   border: 0;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
-          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+  bottom: pink;
   cursor: pointer;
 }
-
 #productBoardList #productBoardListTable .thumb .wish button img {
   position: relative;
-  width: 57.4%;
-  height: 52.7%;
+  width: 0px;
+  height: 0px;
   margin-top: 2.5px;
 }
-
 #productBoardList #productBoardListTable .thumb {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
 }
-
 #productBoardList #productBoardListTable .thumb > a {
   display: inline-block;
   width: 50px;
 }
-
 #productBoardList #productBoardListTable .thumb > span {
   display: inline-block;
   width: 38px;
@@ -177,29 +152,17 @@
   line-height: 1.6rem;
   height: 3.4rem;
 }
-
 #productBoardList #productBoardListTable > .ec-base-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 25px;
 }
-
 #productBoardList #productBoardListTable > .ec-base-button span:nth-child(1) {
   width: 60%;
 }
-
 #productBoardList #productBoardListTable > .ec-base-button span:nth-child(1) a {
   display: inline-block;
   font-size: 1.1rem;
@@ -207,11 +170,9 @@
   border-radius: 12px;
   padding: 1.5% 4%;
 }
-
 #productBoardList #productBoardListTable > .ec-base-button span:nth-child(2) {
   width: 35%;
 }
-
 #productBoardList #productBoardListTable > .ec-base-button span:nth-child(2) a {
   display: inline-block;
   font-size: 1.1rem;
@@ -221,37 +182,18 @@
   color: #ffffff;
   font-weight: 500;
 }
-
 #productBoardList .page-pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 100px;
 }
-
 #productBoardList .page-pagination .paginate-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
   width: auto;
   height: 40px;
   background: #FAFAFE;
@@ -259,20 +201,11 @@
   padding: 1% 5%;
   font-size: 1.3rem;
 }
-
 #productBoardList .page-pagination .btnPrev_wrap, #productBoardList .page-pagination .btnNext_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  align-items: center;
 }
-
 #productBoardList .page-pagination .first, #productBoardList .page-pagination .last, #productBoardList .page-pagination .btnPrev, #productBoardList .page-pagination .btnNext {
   width: 30px;
   height: 30px;
@@ -284,32 +217,20 @@
   color: #707070;
   font-size: 1.1rem;
 }
-
 #productBoardList .page-pagination .first:hover, #productBoardList .page-pagination .last:hover, #productBoardList .page-pagination .btnPrev:hover, #productBoardList .page-pagination .btnNext:hover {
   font-weight: 700;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-
 #productBoardList .page-pagination ol {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
   width: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   margin: 0 5px;
 }
-
 #productBoardList .page-pagination ol li {
   margin: 0 11px;
 }
-
 #productBoardList .page-pagination ol li a {
   display: block;
   width: 100%;
@@ -319,13 +240,10 @@
   font-weight: 500;
   color: #707070;
 }
-
 #productBoardList .page-pagination ol li .this {
   font-weight: 600;
   color: #022CFF;
 }
-
 #productBoardList .page-pagination {
   margin: 20px 0;
-}
-/*# sourceMappingURL=list.css.map */
+}/*# sourceMappingURL=list.css.map */

@@ -37,7 +37,7 @@
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 #productListnormalList .thumb > a > img {
   position: absolute;
@@ -64,8 +64,8 @@
   width: auto;
   height: auto;
   cursor: pointer;
-  bottom: 0px;
-  right: 0px;
+  bottom: 9.7px;
+  right: 8.7px;
 }
 #productListnormalList .thumb .wish button {
   display: flex;
@@ -75,13 +75,13 @@
   height: auto;
   border: 0;
   background: none;
-  bottom: 0px;
+  bottom: 9.7px;
   cursor: pointer;
 }
 #productListnormalList .thumb .wish button img {
   position: relative;
-  width: 41px;
-  height: 39px;
+  width: 37px;
+  height: 35px;
   padding: 10px;
   -o-object-fit: contain;
      object-fit: contain;

@@ -25,7 +25,7 @@
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 #productListrecommendList .thumb > a > img {
   position: absolute;

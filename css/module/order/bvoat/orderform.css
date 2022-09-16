@@ -1,18 +1,20 @@
+@charset "UTF-8";
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 body {
   background: none !important;
 }
 
 #orderForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  align-items: center;
   width: 100%;
   max-width: 450px;
   padding: 23px 11px;
@@ -20,26 +22,17 @@ body {
 }
 
 #orderFormTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: column nowrap;
+  align-items: flex-start;
   width: 100%;
   margin-bottom: 18px;
 }
-
 #orderFormTitle h2 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 15px;
 }
-
 #orderFormTitle h3 {
   font-size: 1.3rem;
   font-weight: 300;
@@ -54,154 +47,115 @@ body {
   font-size: 1.3rem !important;
   margin-bottom: 41px;
 }
-
 #mCafe24Order span, #mCafe24Order p, #mCafe24Order a, #mCafe24Order dd, #mCafe24Order dt, #mCafe24Order dl, #mCafe24Order ul > li, #mCafe24Order button, #mCafe24Order tr, #mCafe24Order th, #mCafe24Order tbody, #mCafe24Order strong, #mCafe24Order em, #mCafe24Order label, #mCafe24Order input, #mCafe24Order select {
   font-size: 1.3rem;
 }
-
 #mCafe24Order .webnmobile_order_html > label {
   font-size: 1.4rem;
   font-weight: 500;
   color: #707070;
 }
-
 #mCafe24Order .txtEm,
 #mCafe24Order .txtStrong {
   color: #022CFF !important;
   font-weight: 500;
 }
-
 #mCafe24Order .icoRequired {
   position: relative;
   display: block;
   font-size: 8px !important;
   top: 1.4rem;
 }
-
 #mCafe24Order .title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   background: #FAFAFE;
   border: none;
 }
-
 #mCafe24Order .title h2,
 #mCafe24Order .title h3 {
   font-size: 1.45rem;
 }
-
 #mCafe24Order .heading {
   font-size: 1.5rem !important;
 }
-
 #mCafe24Order #ec-shop-deliveryInfoAddress {
   display: block;
 }
-
 #mCafe24Order #ec-shop-deliveryInfoCell {
   padding-left: 11px;
 }
-
 #mCafe24Order .xans-order-deliverylist dd {
   padding-left: 11px;
 }
-
 #mCafe24Order #omessage_select {
   font-size: 1.25rem;
 }
-
 #mCafe24Order #omessage {
   font-size: 1.3rem;
 }
-
 #mCafe24Order .prdBox {
   height: auto;
 }
-
 #mCafe24Order .prdBox .thumbnail {
   border: none;
   border-radius: 4px;
 }
-
 #mCafe24Order .prdBox .description .prdName {
   font-weight: 600;
   margin-bottom: 6px;
 }
-
 #mCafe24Order .prdBox .description .info li, #mCafe24Order .prdBox .description .info p, #mCafe24Order .prdBox .description .info span {
   font-size: 1.15rem !important;
   margin-bottom: 3.5px;
 }
-
 #mCafe24Order .right {
   font-size: 1.25rem;
 }
-
 #mCafe24Order .payMethod > li.selected > label {
   border-color: #F5F6FB;
   font-size: 1.3rem;
 }
-
 #mCafe24Order .payMethod > li.selected > .inner {
   border: 1px solid #022CFF;
   font-size: 1.25rem;
 }
-
 #mCafe24Order .payMethod > li > label {
   border-color: #F5F6FB;
   font-size: 1.3rem;
 }
-
 #mCafe24Order .receiptArea .title {
   padding: 11px 15px 10px;
 }
-
 #mCafe24Order #cashreceipt_display_area {
   font-size: 1.3rem;
 }
-
 #mCafe24Order #cashreceipt_display_area > label {
   font-size: 1.3rem;
 }
-
 #mCafe24Order #cashreceipt_regist0 {
   margin: 20px 15px 9px;
 }
-
 #mCafe24Order #ec-jigsaw-heading-benefit {
   font-size: 1.4rem !important;
 }
-
 #mCafe24Order .allAgree label {
   font-size: 1.5rem;
 }
-
 #mCafe24Order .ec-base-button.gFull {
   margin: 11px 0;
 }
-
 #mCafe24Order #btn_payment {
   width: 100%;
   max-width: 450px;
   background: #022CFF;
 }
-
 #mCafe24Order #btn_payment #total_order_sale_price_view {
   font-size: 1.65rem !important;
   font-weight: 700;
 }
-
 #mCafe24Order .helpArea > ul {
   font-size: 1.23em;
 }
@@ -212,62 +166,44 @@ body {
   font-size: 1.2rem !important;
   margin: 0 auto;
 }
-
 .xans-coupon-selectnew h1 {
   font-size: 1.4rem !important;
   font-weight: 600 !important;
   background: #022CFF !important;
   color: #ffffff !important;
 }
-
 .xans-coupon-selectnew .wrap .pannelArea .title h2, .xans-coupon-selectnew .wrap .pannelArea .title h3 {
   font-size: 1.3rem !important;
 }
-
 .xans-coupon-selectnew .wrap .pannelArea .content .segment ul select {
   font-size: 1.3rem !important;
 }
-
 .xans-coupon-selectnew .wrap .ec-base-fold {
   font-size: 1.3rem !important;
 }
-
 .xans-coupon-selectnew .wrap .ec-base-fold .title h2, .xans-coupon-selectnew .wrap .ec-base-fold .title h3 {
-  font-size: 1.2rem  !important;
+  font-size: 1.2rem !important;
 }
-
 .xans-coupon-selectnew .wrap .ec-base-fold .contents th, .xans-coupon-selectnew .wrap .ec-base-fold .contents td {
-  font-size: 1.15rem  !important;
+  font-size: 1.15rem !important;
 }
-
 .xans-coupon-selectnew .wrap .ec-base-fold .helpArea li {
-  font-size: 1rem  !important;
+  font-size: 1rem !important;
 }
-
 .xans-coupon-selectnew .ec-base-button.gFull {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  align-items: center;
   padding: 15px auto !important;
 }
-
 .xans-coupon-selectnew .ec-base-button.gFull .btnSubmit {
   width: 48%;
   background: #022CFF !important;
-  border: none  !important;
+  border: none !important;
   font-weight: 500;
 }
-
 .xans-coupon-selectnew .ec-base-button.gFull .btnEm {
   width: 48%;
-  border: none  !important;
+  border: none !important;
   font-weight: 600;
-}
-/*# sourceMappingURL=orderform.css.map */
+}/*# sourceMappingURL=orderform.css.map */

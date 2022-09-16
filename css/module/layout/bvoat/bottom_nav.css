@@ -1,69 +1,50 @@
+@charset "UTF-8";
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
 #bottom_nav {
   position: relative;
   width: 100%;
   height: 64px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  align-items: center;
+  box-sizing: border-box;
   overflow: hidden;
 }
-
 #bottom_nav #bottom_nav_wrap {
   width: 100%;
   height: 64px;
 }
-
 #bottom_nav #bottom_nav_wrap .bottom_nav_list {
   width: 100%;
   height: 64px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
-
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li {
   width: calc((100% - 20px) / 5);
   height: 64px;
   cursor: pointer;
 }
-
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100%;
   height: 58px;
   text-align: center;
   font-size: 1.1rem;
   font-weight: 700;
 }
-
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .nav_icon path {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -72,41 +53,32 @@
      object-fit: contain;
   fill: #ABABAB;
 }
-
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .feed_icon {
   width: 26px;
   height: 26px;
 }
-
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .cate_icon {
   width: 26px;
   height: 26px;
 }
-
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .store_icon {
   width: 28px;
   height: 26px;
 }
-
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .like_icon {
   width: 29px;
   height: 26px;
 }
-
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .myp_icon {
   width: 25px;
   height: 26px;
 }
-
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu span {
   color: #ABABAB;
 }
-
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottomactive .nav_icon path {
   fill: #022CFF;
 }
-
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottomactive span {
   color: #022CFF;
-}
-/*# sourceMappingURL=bottom_nav.css.map */
+}/*# sourceMappingURL=bottom_nav.css.map */
