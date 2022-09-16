@@ -1,53 +1,57 @@
 @charset "UTF-8";
-/* 공통 디자인 */
-/* ellipsis*/
-/* ellipsis*/
-/* 공통 디자인 */
-/* 애니메이션 */
-/* 애니메이션 */
-/* 미디어쿼리 */
-/* 미디어쿼리 */
 #productListnormalList {
   width: 100%;
   padding: 0 11px;
 }
+
 #productListnormalList .product_listnormal_list_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   height: auto;
 }
+
 #productListnormalList .product_listnormal_list_wrap .listnormal_list {
   width: 49%;
   height: auto;
   padding-bottom: 30px;
 }
+
 #productListnormalList .product_listnormal_list_wrap .listnormal_list .normal_product {
   position: relative;
   display: inline;
   padding-bottom: 30px;
 }
-#productListnormalList .thumb {
+
+.thumb {
   position: relative;
   width: 100%;
 }
-#productListnormalList .thumb > a {
+
+.thumb > a {
   display: block;
   position: relative;
-  padding-top: 100%;
+  padding-top: calc(100% - 14.5px);
   overflow: hidden;
   border-radius: 4px;
 }
-#productListnormalList .thumb > a > img {
+
+.thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100%;
 }
-#productListnormalList .thumb .icon {
+
+.thumb .icon {
   position: absolute;
   width: 50px;
   height: 20.5px;
@@ -55,46 +59,59 @@
   top: 4.6px;
   left: 4.6px;
 }
-#productListnormalList .thumb .icon img {
+
+.thumb .icon img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#productListnormalList .thumb .wish {
+
+.thumb .wish {
   position: absolute;
-  width: auto;
-  height: auto;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
-  bottom: 0px;
-  right: 0px;
+  bottom: 9.7px;
+  left: 8.7px;
 }
-#productListnormalList .thumb .wish button {
+
+.thumb .wish button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: inherit;
+  height: inherit;
   border: 0;
-  background: none;
-  bottom: 0px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
   cursor: pointer;
 }
-#productListnormalList .thumb .wish button img {
+
+.thumb .wish button img {
   position: relative;
-  width: 41px;
-  height: 39px;
-  padding: 10px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: 57.4%;
+  height: 52.7%;
+  margin-top: 2.5px;
 }
-#productListnormalList .desc {
+
+.desc {
   padding: 7px 0 0 0;
 }
-#productListnormalList .desc .brand {
+
+.desc .brand {
   font-size: 1rem;
   color: #707070;
   margin-bottom: 3px;
 }
-#productListnormalList .desc .summary {
+
+.desc .summary {
   display: block;
   font-size: 1.15rem;
   color: #707070;
@@ -106,13 +123,13 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.45rem;
+  line-height: 1.6rem;
   margin-bottom: 7px;
 }
-#productListnormalList .desc .product_name,
-#productListnormalList .desc .product_name span {
-  color: #292929 !important;
-  font-size: 1.3rem !important;
+
+.desc .product_name, .desc .product_name span {
+  color: #292929;
+  font-size: 1.3rem;
   font-weight: bold;
   word-wrap: break-word;
   word-break: keep-all;
@@ -124,7 +141,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.6rem;
-  height: 3.4rem;
+  line-height: 1.8rem;
+  height: 3.8rem;
   margin-bottom: 18px;
-}/*# sourceMappingURL=product_list.css.map */
+}
+/*# sourceMappingURL=product_list.css.map */

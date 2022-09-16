@@ -1,41 +1,37 @@
 @charset "UTF-8";
-/* 공통 디자인 */
-/* ellipsis*/
-/* ellipsis*/
-/* 공통 디자인 */
-/* 애니메이션 */
-/* 애니메이션 */
-/* 미디어쿼리 */
-/* 미디어쿼리 */
 #productListrecommendList {
   padding: 0 11px 37px;
 }
+
 #productListrecommendList .listrecommend_list {
   padding-bottom: 27.5px;
 }
+
 #productListrecommendList .listrecommend_list .recommend_product {
   position: relative;
 }
-#productListrecommendList .thumb {
+
+.thumb {
   position: relative;
   width: 100%;
 }
-#productListrecommendList .thumb > a {
+
+.thumb > a {
   display: block;
   position: relative;
-  padding-top: 100%;
+  padding-top: calc(100% - 14.5px);
   overflow: hidden;
   border-radius: 4px;
 }
-#productListrecommendList .thumb > a > img {
+
+.thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100%;
 }
-#productListrecommendList .thumb .icon {
+
+.thumb .icon {
   position: absolute;
   width: 50px;
   height: 20.5px;
@@ -43,46 +39,94 @@
   top: 4.6px;
   left: 4.6px;
 }
-#productListrecommendList .thumb .icon img {
+
+.thumb .icon img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#productListrecommendList .thumb .wish {
+
+.thumb .wish {
   position: absolute;
-  width: auto;
-  height: auto;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
-  bottom: 0px;
-  right: 0px;
+  bottom: 9.7px;
+  left: 8.7px;
 }
-#productListrecommendList .thumb .wish button {
+
+.thumb .wish button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: inherit;
+  height: inherit;
   border: 0;
-  background: none;
-  bottom: 0px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
+          box-shadow: 0px 3px 7px 0px rgba(112, 112, 112, 0.27);
   cursor: pointer;
 }
-#productListrecommendList .thumb .wish button img {
+
+.thumb .wish button img {
   position: relative;
-  width: 41px;
-  height: 39px;
-  padding: 10px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: 57.4%;
+  height: 52.7%;
+  margin-top: 2.5px;
 }
-#productListrecommendList .desc {
+
+.recommend_product_brand {
+  width: 100%;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.recommend_product_brand .brand {
+  font-size: 1rem !important;
+  color: #707070;
+}
+
+.recommend_product_brand .summary_desc {
+  font-size: 1rem;
+  color: #707070;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 2.5rem;
+  height: 5.2rem;
+}
+
+.desc {
   padding: 7px 0 0 0;
 }
-#productListrecommendList .desc .brand {
+
+.desc .brand {
   font-size: 1rem;
   color: #707070;
   margin-bottom: 3px;
 }
-#productListrecommendList .desc .summary {
+
+.desc .summary {
   display: block;
   font-size: 1.15rem;
   color: #707070;
@@ -94,13 +138,13 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.45rem;
+  line-height: 1.6rem;
   margin-bottom: 7px;
 }
-#productListrecommendList .desc .product_name,
-#productListrecommendList .desc .product_name span {
-  color: #292929 !important;
-  font-size: 1.3rem !important;
+
+.desc .product_name, .desc .product_name span {
+  color: #292929;
+  font-size: 1.3rem;
   font-weight: bold;
   word-wrap: break-word;
   word-break: keep-all;
@@ -112,19 +156,12 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.6rem;
-  height: 3.4rem;
-  margin-bottom: 18px;
-}
-
-.recommend_product_brand {
-  width: 100%;
-  height: 32px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
+  line-height: 1.8rem;
+  height: 3.8rem;
+  margin-bottom: 7px;
 }
 
 .product_list_pagination {
   height: 3px;
-}/*# sourceMappingURL=product_listrecommend.css.map */
+}
+/*# sourceMappingURL=product_listrecommend.css.map */

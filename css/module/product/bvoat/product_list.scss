@@ -28,12 +28,37 @@
             }
         }
     }
-
-//상품 이미지 구역
-@include product-thumb(21px, 19px, 10px, 0px, 0px);
-//상품 설명 desc
-@include product-desc(7px, 1rem, 1.15rem, 1.3rem);
-
 }
 
+//상품 이미지 구역
+@include product-thumb(32px, 32px, 9.7px, 8.7px);
 
+
+//상품 설명
+.desc {
+    padding: 7px 0 0 0;
+    .brand {
+        font-size: 1rem;
+        color: $bvt-darkgray;
+        margin-bottom: 3px;
+    }
+
+    .summary {
+        display: block;
+        font-size: 1.15rem;
+        color: $bvt-darkgray;
+        @include only-ellipsis(1, 1.3rem);
+        margin-bottom: 7px;
+    }
+
+    .product_name, .product_name span {
+        color: $bvt-black;
+        font-size: 1.3rem;
+        font-weight: bold;
+        word-wrap: break-word;
+        word-break: keep-all;
+        @include ellipsis(2, 1.5rem);
+        margin-bottom: 18px;
+    }
+
+}
