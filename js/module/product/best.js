@@ -1,4 +1,10 @@
-
+    //슬라이드 숨김
+    window.addEventListener("load", ()=>{
+        [...document.querySelectorAll(".list_item_progress")].forEach((el)=>{
+            el.classList.add("displaynone")
+        })
+    })
+    
     //가치태그 베스트 카테고리 불러오기
     const reciveTagBest = () => {    
         fetch(`https://${api_domain}.shop/banner/category/ranking`, {
