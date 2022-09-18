@@ -116,7 +116,13 @@
   word-wrap: break-word;
   line-height: 1.8rem;
   height: 3.8rem;
-  margin-bottom: 7px;
+  margin-bottom: 20px;
+}
+.listrecommend_list .desc li:nth-child(1) {
+  font-size: 10px !important;
+}
+.listrecommend_list .desc li:nth-child(2) {
+  font-size: 11.5px !important;
 }
 
 .product_list_pagination {

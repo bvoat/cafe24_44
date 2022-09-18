@@ -24,6 +24,7 @@
 .listrecommend_list{
     .desc {
         padding: 7px 0 0 0;
+
         .brand {
             font-size: 10px !important;
             color: $bvt-darkgray;
@@ -45,7 +46,16 @@
             word-wrap: break-word;
             word-break: keep-all;
             @include ellipsis(2, 1.5rem);
-            margin-bottom: 7px;
+            margin-bottom: 20px;
+        }
+
+        li{
+            &:nth-child(1){
+                font-size: 10px !important;
+            }
+            &:nth-child(2){
+                font-size: 11.5px !important;
+            }
         }
     
     }
