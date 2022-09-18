@@ -77,43 +77,17 @@
   margin-top: 2.5px;
 }
 
-.recommend_product_brand {
-  width: 100%;
-  height: 32px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-}
-.recommend_product_brand .brand {
-  font-size: 1rem !important;
-  color: #707070;
-}
-.recommend_product_brand .summary_desc {
-  font-size: 1rem;
-  color: #707070;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
-  line-height: 2.5rem;
-  height: 5.2rem;
-}
-
-.desc {
+.listrecommend_list .desc {
   padding: 7px 0 0 0;
 }
-.desc .brand {
-  font-size: 1rem;
+.listrecommend_list .desc .brand {
+  font-size: 10px !important;
   color: #707070;
   margin-bottom: 3px;
 }
-.desc .summary {
+.listrecommend_list .desc .summary {
   display: block;
-  font-size: 1.15rem;
+  font-size: 11.5px !important;
   color: #707070;
   display: block;
   overflow: hidden;
@@ -126,9 +100,9 @@
   line-height: 1.6rem;
   margin-bottom: 7px;
 }
-.desc .product_name, .desc .product_name span {
-  color: #292929;
-  font-size: 1.3rem;
+.listrecommend_list .desc .product_name, .listrecommend_list .desc .product_name span {
+  color: #292929 !important;
+  font-size: 1.3rem !important;
   font-weight: bold;
   word-wrap: break-word;
   word-break: keep-all;
