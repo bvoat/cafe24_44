@@ -13,6 +13,7 @@
   padding: 0 11px 37px;
 }
 #productListrecommendList .listrecommend_list {
+  width: 50%;
   padding-bottom: 27.5px;
 }
 #productListrecommendList .listrecommend_list .recommend_product {
