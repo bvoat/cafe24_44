@@ -55,9 +55,10 @@
     /* 가치태그 베스트 더보기 상품 갯수 확인 */
     // 가치태그 베스트의 경우 20개 이하로 떨어질 경우 더보기 삭제
     [...document.querySelectorAll(".weektag")].forEach((el) => {
+        // console.log("el.children[1].", el.children[1], "el.children[2]", el.children[2]);
         // 각 weektag 내에 list_item의 갯수가 4개 이하면 더보기 삭제
         if([...el.children[1].children].length < 4){
-            el.children[3].remove();
+            el.children[2].remove();
         }
     })
 

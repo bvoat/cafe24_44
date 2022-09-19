@@ -2,32 +2,73 @@
 @import "../../../abstracts/mixin";
 @import "../../../abstracts/variables";
 
-#realTimeOrderList{
+#realTimeOrderList {
     width: 100%;
     max-width: 450px;
     padding: 37px 0px;
     margin: 80px 0 60px;
 
-    // 지금 구매 중
+    //공통
+    //상품 설명 (mixin)
+    @include product-desc(7px, 1rem, 1.1rem, 1.29rem);
+
+    // 이미지 정사각형 공통 (mixin)
+    // thumb 부모에게 width 정해줘야 함!
+    @include product-thumb(21px, 18.98px, 0, 0);
+
+
+    // 지금 구매 중 제목 
+    // 가치소비 하신 걸 ...
     #realTimeOrderListTitle {
         width: 100%;
         max-width: 450px;
         margin-bottom: 18px;
         padding: 0 11px;
+
         h1 {
             font-size: 1.9rem;
             font-weight: 700;
             margin-bottom: 2px;
         }
+
         h2 {
             font-size: 1.3rem;
             font-weight: 300;
             color: $bvt-lostfocus-gray;
         }
     }
+    //메인진열
+    #realTimeOrderListContents {
+        //메인 모듈
 
-    #realTimeOrderListContents{
-        .purchaser{
+        //지금 구매 중
+        .realtime {
+            width: 100%;
+
+            >ul {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: center;
+                max-width: calc(100% - 22px);
+                padding: 25px 11px 0;
+
+                .list_item {
+                    position: relative;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    width: calc(50% - 4px);
+                    max-width: 210px;
+                    margin-bottom: 40px;
+                    //위시버튼
+                    @include wish-button(21px, 18.98px, 0, 0);
+                }
+            }
+        }
+
+        .purchaser {
             position: absolute;
             display: flex;
             justify-content: center;
@@ -39,17 +80,18 @@
             font-weight: 700;
             color: $bvt-blue;
             letter-spacing: -0.02em;
-            padding: 7px 16px;
+            padding: 7px 5%;
             z-index: 9;
             top: -15px;
             left: 11px;
-            >span{
+
+            >span {
                 margin-left: 4px;
             }
         }
     }
-
-    #realTimeOrderListMsg{
+    //가치소비는 50개
+    #realTimeOrderListMsg {
         width: 100%;
         max-width: 450px;
         display: flex;
@@ -58,13 +100,15 @@
         align-items: center;
         padding-bottom: 40px;
         margin-top: 14px;
-        p{
+
+        p {
             font-size: 1.3rem;
             font-weight: 400;
             color: $bvt-lightgray;
             margin-bottom: 8px;
         }
-        a{
+
+        a {
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
@@ -77,7 +121,8 @@
             color: $bvt-white;
             font-size: 1.6rem;
             font-weight: 500;
-            svg{
+
+            svg {
                 margin: 0 0 0 4px;
             }
         }

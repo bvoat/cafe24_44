@@ -560,6 +560,8 @@ div.layerProgress {
     filter: alpha(opacity=80);
 }
 
+
+
 /* **************************** 필수 CSS 수정 및 삭제 불가 **************************** */
 /* **************************** 비보트 공통 css **************************** */
 /* 드래그 시 노란색 표시 */
@@ -606,7 +608,7 @@ div.layerProgress {
 
 .strike_price {
     position: absolute;
-    bottom: 1.8rem;
+    bottom: 1.6rem;
     text-decoration: line-through !important;
     color: #ABABAB !important;
     font-size:
@@ -630,17 +632,17 @@ div.layerProgress {
 
 @media (max-width: 344px) {
     .product_name>a>span{
-        font-size: 1.35rem!important;
+        font-size: 1.25rem!important;
     }
     /* 가격 표시 */
     .price_wrap>.discount {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     .price_wrap>.price_item {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     .price_item::after {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     .strike_price {
         bottom: 1.6rem;
