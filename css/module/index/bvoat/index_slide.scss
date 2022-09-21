@@ -9,9 +9,24 @@
     max-width: 450px;
     ul {
         li {
-            width: 100%;
-            background: url("/bvtIMG/banner/220706_slide_banner_crew.png") no-repeat;
-            background-size: cover;
+
+            &:nth-child(1){
+                background: url("/bvtIMG/banner/220706_slide_banner_crew.png") no-repeat;            
+                width: 100%;
+                background-size: contain;
+            }
+            &:nth-child(2){
+                background: url("/bvtIMG/banner/220921_slide_banner_wallet.png") no-repeat;
+                width: 100%;
+                background-size: contain;
+            }
+            &:nth-child(3){
+                background: url("/bvtIMG/banner/220921_slide_banner_zblack.png") no-repeat;
+                width: 100%;
+                background-size: contain;
+            }
+
+
             a {
                 position: relative;
                 width: 100%;

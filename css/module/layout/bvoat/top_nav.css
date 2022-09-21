@@ -31,12 +31,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.45rem;
+  font-size: 1.6rem;
   font-weight: normal;
 }
 #topNav .default_top_nav .top_nav_list .top_nav_item > a {
   display: block;
   word-break: keep-all;
+  color: #797979;
 }
 #topNav .default_top_nav .top_nav_list #crew {
   position: relative;

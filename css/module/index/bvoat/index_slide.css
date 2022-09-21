@@ -15,10 +15,20 @@
   width: 100%;
   max-width: 450px;
 }
-#indexBanner ul li {
-  width: 100%;
+#indexBanner ul li:nth-child(1) {
   background: url("/bvtIMG/banner/220706_slide_banner_crew.png") no-repeat;
-  background-size: cover;
+  width: 100%;
+  background-size: contain;
+}
+#indexBanner ul li:nth-child(2) {
+  background: url("/bvtIMG/banner/220921_slide_banner_wallet.png") no-repeat;
+  width: 100%;
+  background-size: contain;
+}
+#indexBanner ul li:nth-child(3) {
+  background: url("/bvtIMG/banner/220921_slide_banner_zblack.png") no-repeat;
+  width: 100%;
+  background-size: contain;
 }
 #indexBanner ul li a {
   position: relative;

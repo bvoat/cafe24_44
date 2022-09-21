@@ -109,46 +109,63 @@
     /* 개별 기획전 타이틀 정보 JSON */
     /* 하위 기획전이 추가되면 아래에 cate_name으로 타이틀과 쿠폰 정보를 객체로 작성하고 하단 반복문을 통해 붙입니다. */
 
-    const specialProjectSubListData ={
-            '뽀뚜빠뚜 ':
-            {
-                title: `🐶 유기견, 유기묘에게<br/>사료와 간식을 후원하는 ‘뽀뚜빠뚜’`,
-                coupon: `
-                <li class="coupon"><a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073512830000000638" title="19,000원 이상 구매 시 1,000원 할인쿠폰 받기"><p>19,000원 이상 구매 시</p><p>1,000원 할인쿠폰</p></a></li><li><a herf="/exec/front/newcoupon/IssueDownload?coupon_no=6073512762700000637" title="29,000원 이상 구매 시 1,500원 할인쿠폰 받기"><p>29,000원 이상 구매 시</p><p>1,500원 할인쿠폰</p></a></li>`
-            },
-        
-            'FFM13': 
-            {
-                title: `🌳 한반도 우리 숲에<br/> 나무 심기를 동참하는 ‘FFM13’`,
-                coupon: `<li class="coupon"><a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073512837600000639" title="29,000원 이상 구매 시 1,500원 할인쿠폰 받기"><p>29,000원 이상 구매 시</p><p>1,500원 할인쿠폰</p></a></li>`
-            },
-        
-            '119레오': 
-            {
-                title: `🧑‍🚒 암 투병 소방관에게<br/>지원금을 전달하는 ‘110REO’`,
-                coupon: `<li class="coupon"><a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073512845700000640" title="119REO 전용 5% 할인 쿠폰"><p>119REO 전용</p><p>5% 할인 쿠폰</p></a></li>`
-            },
+const projectSubListData = {
+    '뽀뚜빠뚜 ':
+    {
+        title: `🐶 유기견, 유기묘에게<br>사료와 간식을 후원하는 ‘뽀뚜빠뚜’`,
+        coupon: `
+        <li class="coupon"><a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073512830000000638" title="19,000원 이상 구매 시 1,000원 할인쿠폰 받기"><p>19,000원 이상 구매 시</p><p>1,000원 할인쿠폰</p></a></li><li><a herf="/exec/front/newcoupon/IssueDownload?coupon_no=6073512762700000637" title="29,000원 이상 구매 시 1,500원 할인쿠폰 받기"><p>29,000원 이상 구매 시</p><p>1,500원 할인쿠폰</p></a></li>`
+    },
 
-            '88하다': 
-            {
-                title: `🐋 WWF 해양 동물<br/>보존에 기부하는 ‘88하다’`,
-                coupon: `
-                <li class="coupon"><a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073512853400000641" title="40,000원 이상 구매 시 2,000원 할인쿠폰 받기"><p>4만 원 이상 구매 시</p><p>2,000원 할인 쿠폰</p></a></li>`
-            },
-    
-            '스모어웨이브' :
-            {
-                title: `👩‍🦰 네팔 취약 계층 여성의<br/>자립을 지원하는 ‘스모어웨이브’`,
-                coupon: `<li class="coupon"><a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073512860000000642" title="19,000원 이상 구매 시 1,000원 할인쿠폰 받기"><p>19,000원 이상 구매 시</p><p>1,000원 할인쿠폰</p></a></li><li><a herf="/exec/front/newcoupon/IssueDownload?coupon_no=6073512866500000643" title="29,000원 이상 구매 시 1,500원 할인쿠폰 받기"><p>29,000원 이상 구매 시</p><p>1,500원 할인쿠폰</p></a></li>`
-            }
-     }
+    'FFM13': 
+    {
+        title: `🌳 한반도 우리 숲에<br> 나무 심기를 동참하는 ‘FFM13’`,
+        coupon: `<li class="coupon"><a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073512837600000639" title="29,000원 이상 구매 시 1,500원 할인쿠폰 받기"><p>29,000원 이상 구매 시</p><p>1,500원 할인쿠폰</p></a></li>`
+    },
+
+    '119레오': 
+    {
+        title: `🧑‍🚒 암 투병 소방관에게<br>지원금을 전달하는 ‘110REO’`,
+        coupon: `<li class="coupon"><a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073512845700000640" title="119REO 전용 5% 할인 쿠폰"><p>119REO 전용</p><p>5% 할인 쿠폰</p></a></li>`
+    },
+
+    '88하다': 
+    {
+        title: `🐋 WWF 해양 동물<br>보존에 기부하는 ‘88하다’`,
+        coupon: `
+        <li class="coupon"><a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073512853400000641" title="40,000원 이상 구매 시 2,000원 할인쿠폰 받기"><p>4만 원 이상 구매 시</p><p>2,000원 할인 쿠폰</p></a></li>`
+    },
+
+    '스모어웨이브' :
+    {
+        title: `👩‍🦰 네팔 취약 계층 여성의<br>자립을 지원하는 ‘스모어웨이브’`,
+        coupon: `<li class="coupon"><a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073512860000000642" title="19,000원 이상 구매 시 1,000원 할인쿠폰 받기"><p>19,000원 이상 구매 시</p><p>1,000원 할인쿠폰</p></a></li><li><a herf="/exec/front/newcoupon/IssueDownload?coupon_no=6073512866500000643" title="29,000원 이상 구매 시 1,500원 할인쿠폰 받기"><p>29,000원 이상 구매 시</p><p>1,500원 할인쿠폰</p></a></li>`
+    },
+    '쌀':
+    {
+        title: `🍚 한국인의 밥심, 쌀의 변신은 무죄!<br>#우리쌀 #현미 #찹쌀`,
+        coupon: ``
+    },
+
+    '콩': 
+    {
+        title: `👍 건강 인기 재료! 작은 콩이 만든 모든 것<br>#토종콩 #밤콩 #약콩`,
+        coupon: ``
+    },
+
+    '견과류': 
+    {
+        title: `🥜 필수 영양소 가득, 통곡물 견과 듬뿍 Nut<br>#아몬드 #땅콩 #캐슈넛`,
+        coupon: ``
+    }
+}
 
  
     //반복문 돌려서 붙이기
     
 
     const urlParams = new URLSearchParams(window.location.search).get("cate_no");
-    if(urlParams === '736'){
+    if(urlParams === '736' || urlParams === '752'){
         window.addEventListener("load", ()=>{
            //타이틀 node 찾기
             const specialProjectList = document.querySelectorAll(".project_productlist_wrap");
@@ -156,7 +173,9 @@
 
             for(let i=0; i<specialProjectList.length; i++){
             let brand = specialProjectList[i].children[0].dataset.brand;
-            let brandData = specialProjectSubListData[brand];
+            console.log('brand: ', brand);
+            let brandData = projectSubListData[brand];
+            console.log('brandData: ', brandData);
 
             //브랜드 제목
             specialProjectList[i].children[1].children[0].insertAdjacentHTML("afterbegin",brandData.title);

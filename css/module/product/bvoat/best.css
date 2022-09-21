@@ -55,7 +55,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.59rem;
-  height: 2.88rem;
+  height: 3.38rem;
   margin-bottom: 20px;
 }
 
@@ -66,7 +66,7 @@
 .thumb > a {
   display: block;
   position: relative;
-  padding-top: calc(100% - 14.5px);
+  padding-top: calc(100% - 12px);
   overflow: hidden;
   border-radius: 2px;
 }

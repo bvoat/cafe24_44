@@ -1,157 +1,210 @@
 @charset "utf-8";
 @import "../../../css/abstracts/mixin";
 @import "../../../css/abstracts/variables";
+// 개별 메인진열(구좌) 설정은 listmain.css에서 작업
+// 해당 css는 index에서만 쓰는 메인진열 혹은 메뉴 등에 한해서만 작성
 
 #bvtHome {
     width: 100%;
     max-width: 450px;
     margin: 81px auto;
-    
-/* 인덱스 보터 카운트 */
-#indexUserCnt{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center; 
-    padding: 21.5px 0;
-    background: $bvt-main-bg;
-    margin: 54px 0 43px 0;
 
-    #indexUserCntTitle h3{
-        font-size: 1.4rem;
-        color: $bvt-darkgray;
-        font-weight: normal;
-    }
-        #indexUserCntBanner #joinbanner{
-            border: 0;
-            font-size: 21px;
-            font-weight: bold;
-            margin: 6px 0 0 0;
-            em{
-                color: $bvt-blue;
+    /* 스프링 메뉴 */
+    #indexSpringMenu{
+        width: 100%;
+        max-width: 450px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        padding: 0 9.34%;
+
+        li{
+            width: 82px;
+            min-width: 82px;
+            height: 82px;
+            
+            &:nth-child(-n+3){
+                margin-right: 12px;
+            }
+
+            a{
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                    margin-bottom: 7px;
+                }
+                p{
+                    font-size: 1.35rem;
+                    font-weight: 400;
+                    color: $bvt-darkgray;
+                }
             }
         }
+
+        @media (max-width: 375px) {
+            li{
+                width: 70px;
+                min-width: 70px;
+                height: 70px;
+                &:nth-child(-n+3){
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
     
-}
+    /* 인덱스 보터 카운트 */
+    #indexUserCnt{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center; 
+        padding: 21.5px 0;
+        background: $bvt-main-bg;
+        margin: 54px 0 43px 0;
+
+        h3{
+            font-size: 1.4rem;
+            color: $bvt-darkgray;
+            font-weight: normal;
+        }
+        #joinbanner{
+                border: 0;
+                font-size: 21px;
+                font-weight: bold;
+                margin: 6px 0 0 0;
+                em{
+                    color: $bvt-blue;
+                }
+            }
+        
+    }
 
 /* 더보기 버튼 */
-.paginate_moreview {
-    width: 100%;
-    height: 42px;
-    padding-right: 11px;
-    .moreview_btn{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 42px;
-        background: $bvt-white;
-        border: $bvt-btn-border;
-        border-radius: 22px;
-        color: $bvt-blue;
-        font-size: 1.3rem;
-        font-weight: bold;
-        cursor: pointer;
-        svg{
-            margin: 2px 0 0 6px;
-        }
-    }
-}
+// .paginate_moreview {
+//     width: 100%;
+//     height: 42px;
+//     padding-right: 11px;
+//     .moreview_btn{
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         width: 100%;
+//         height: 42px;
+//         background: $bvt-white;
+//         border: $bvt-btn-border;
+//         border-radius: 22px;
+//         color: $bvt-blue;
+//         font-size: 1.3rem;
+//         font-weight: bold;
+//         cursor: pointer;
+//         svg{
+//             margin: 2px 0 0 6px;
+//         }
+//     }
+// }
 
 /* 더 보러가기 버튼 */
-.paginate_movelist {
-    width: 100%;
-    height: 42px;
-    margin-top: 27px;
-    padding-right: 11px;
-    .movelist_btn{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 42px;
-        background: none;
-        border: $bvt-input-border;
-        // border-radius: 22px;
-        color: $bvt-darkgray;
-        font-size: 1.45rem;
-        font-weight: normal;
-        cursor: pointer;
-        svg{
-            margin-left: 6px;
-        }
-    }
-}
+// .paginate_movelist {
+//     width: 100%;
+//     height: 42px;
+//     margin-top: 27px;
+//     padding-right: 11px;
+//     .movelist_btn{
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         width: 100%;
+//         height: 42px;
+//         background: none;
+//         border: $bvt-input-border;
+//         // border-radius: 22px;
+//         color: $bvt-darkgray;
+//         font-size: 1.45rem;
+//         font-weight: normal;
+//         cursor: pointer;
+//         svg{
+//             margin-left: 6px;
+//         }
+//     }
+// }
 
 /* 메인진열  공통 */
-.index_list{
-    position: relative;
-    display: block;
-    width: 100%;
-    max-width: 450px;
-    padding: 0 0 0 11px;
-    margin-bottom: 96px;
-    .index_list_title{
-        margin-bottom: 22px;
-        h3{
-            font-size: 2.28rem;
-            font-weight: bold;
-            margin-bottom: 3px;
-            letter-spacing: -0.3px;
-        }
-        h4{
-            font-size: 1.3rem;
-            font-weight: normal;
-            color: $bvt-darkgray;
-        }
-    }
-}
+// .index_list{
+//     position: relative;
+//     display: block;
+//     width: 100%;
+//     max-width: 450px;
+//     padding: 0 0 0 11px;
+//     margin-bottom: 96px;
+//     .index_list_title{
+//         margin-bottom: 22px;
+//         h3{
+//             font-size: 2.28rem;
+//             font-weight: bold;
+//             margin-bottom: 3px;
+//             letter-spacing: -0.3px;
+//         }
+//         h4{
+//             font-size: 1.3rem;
+//             font-weight: normal;
+//             color: $bvt-darkgray;
+//         }
+//     }
+// }
 
 /* heading과 간격 조절 (single line or small size (23px/15px) */
-.small_single_list{
-    margin-top: -8px;
-}
-.swiper_container{
-    overflow: hidden;
-}
+// .small_single_list{
+//     margin-top: -8px;
+// }
+// .swiper_container{
+//     overflow: hidden;
+// }
 
 }
 
-#indexListmain{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-}
+// #indexListmain{
+//     display: flex;
+//     flex-flow: column nowrap;
+//     align-items: center;
+// }
 
 /* 개별 메인 진열 */
 
 /* 기획전 */
-.index_list_project{
-    #indexProductListTitle{
-        position: relative;
-        >img{
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            image-rendering: auto;
-            padding-right: 11px;
-        }
-        >h3{
-            position: absolute;
-            top: calc(50% - 40px);
-            left: 15.5px;
-        }
-    }
+// .index_list_project{
+//     #indexProductListTitle{
+//         position: relative;
+//         >img{
+//             width: 100%;
+//             height: auto;
+//             object-fit: contain;
+//             image-rendering: auto;
+//             padding-right: 11px;
+//         }
+//         >h3{
+//             position: absolute;
+//             top: calc(50% - 40px);
+//             left: 15.5px;
+//         }
+//     }
    
-}
+// }
 
 /* 지금 구매중 배경 */
-#indexProductBvt72{
-    padding: 46px 0 60px 11px !important;
-    background: $bvt-main-bg;
-/* 지금 구매중 이미지 - head 사이 간격 */
-    .thumb{
-        margin-bottom: 12px;
-    }
-}
-
+// #indexProductBvt72{
+//     padding: 46px 0 60px 11px !important;
+//     background: $bvt-main-bg;
+// /* 지금 구매중 이미지 - head 사이 간격 */
+//     .thumb{
+//         margin-bottom: 12px;
+//     }
+// }

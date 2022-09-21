@@ -10,7 +10,7 @@
     -webkit-box-orient: vertical;
     word-wrap: break-word;
     line-height: $line-height + 0.3rem;
-    height: (($line-height) * $line-cnt) + 0.3rem;
+    height: (($line-height) * $line-cnt) + 0.8rem;
 }
 
 // ellipsis 처리만
@@ -111,7 +111,7 @@
         >a {
             display: block;
             position: relative;
-            padding-top: calc(100% - 14.5px);
+            padding-top: calc(100% - 12px);
             overflow: hidden;
             border-radius: 2px;
 
@@ -205,7 +205,7 @@
 @mixin page-pagination {
     .page-pagination{
         display: flex;
-        flex-flow: row;
+        flex-flow: row nowrap;
         align-items: center;
         justify-content: center;
         margin-bottom: 100px;

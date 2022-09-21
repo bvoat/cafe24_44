@@ -268,7 +268,7 @@
 
 .page-pagination {
   display: flex;
-  flex-flow: row;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;

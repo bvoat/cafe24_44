@@ -57,28 +57,15 @@
 }
 
 //내부 이미지
-//상품 이미지 구역
-    .thumb {
-        position: relative;
-        width: 95px;
-        height: 95px;
+//별도로 크기 고정
 
-        >a {
-            display: block;
-            position: relative;
-            width: 100%;
-            height:100%;
-            overflow: hidden;
-            border-radius: 4px;
+@include product-thumb(17px, 15px, 0, 0);
+.thumb {
+    position: relative;
+    width: 95px !important;
+    height: 95px !important;
+}
 
-            >img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-            }
-        }
-    }
 //내부 설명
 .desc{
     padding: 1%;

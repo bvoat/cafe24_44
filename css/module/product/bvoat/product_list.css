@@ -38,7 +38,7 @@
 .thumb > a {
   display: block;
   position: relative;
-  padding-top: calc(100% - 14.5px);
+  padding-top: calc(100% - 12px);
   overflow: hidden;
   border-radius: 2px;
 }
