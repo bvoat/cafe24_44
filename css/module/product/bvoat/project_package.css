@@ -235,6 +235,12 @@
   height: 3.4rem;
   margin-bottom: 20px;
 }
+#specialProject .project_productlist_wrap .desc > li:nth-child(1) {
+  font-size: 10px !important;
+}
+#specialProject .project_productlist_wrap .desc > li:nth-child(2) {
+  font-size: 11.5px !important;
+}
 #specialProject .project_productlist_wrap .thumb {
   position: relative;
   width: 100%;

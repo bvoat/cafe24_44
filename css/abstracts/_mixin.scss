@@ -172,6 +172,15 @@
             @include ellipsis(2, $name-ftsz);
             margin-bottom: 20px;
         }
+
+        >li{
+            &:nth-child(1){
+                font-size: 10px !important;
+            }
+            &:nth-child(2){
+                font-size: 11.5px !important;
+            }
+        }
     }
 }
 //위시 버튼

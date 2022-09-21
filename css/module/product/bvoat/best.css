@@ -58,6 +58,12 @@
   height: 3.38rem;
   margin-bottom: 20px;
 }
+.desc > li:nth-child(1) {
+  font-size: 10px !important;
+}
+.desc > li:nth-child(2) {
+  font-size: 11.5px !important;
+}
 
 .thumb {
   position: relative;
