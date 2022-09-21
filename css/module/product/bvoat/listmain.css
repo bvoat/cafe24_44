@@ -519,6 +519,7 @@
   min-height: 83px;
 }
 #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .thumb {
+  width: 83px;
   max-width: 83px;
   margin-right: 17px;
 }
