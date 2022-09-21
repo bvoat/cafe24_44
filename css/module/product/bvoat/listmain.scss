@@ -292,7 +292,6 @@
                         .list_item{
                             display: flex;
                             flex-flow: row nowrap;
-                            background: #add7e650;
                             width: 100%;
                             min-height: 83px;
                             margin-bottom: 15px;
@@ -302,7 +301,7 @@
                                 height: inherit !important;
                                 margin-right: 17px;
                                 a{
-                                    padding-top: calc(100% - 5px) !important;
+                                    padding-top: 100% !important;
                                 }
                             }
                             
@@ -313,7 +312,6 @@
                             .desc{
                                 width: 100%;
                                 padding: 0;
-                                background: #f0808060;
                                 .product_name{
                                     margin-bottom: 18%;
                                 }
