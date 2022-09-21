@@ -512,6 +512,7 @@
 #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .thumb a {
   border: 1px solid red;
   background: gainsboro;
+  padding-top: 100% !important;
 }
 #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .thumb img {
   width: 100% !important;
