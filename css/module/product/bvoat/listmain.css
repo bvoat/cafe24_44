@@ -286,14 +286,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 @media (max-width: 375px) {
   .index_list .thumb > a {
     display: block;
     position: relative;
-    padding-top: calc(100% - 5px);
+    padding-top: calc(100% - 12px);
     overflow: hidden;
     border-radius: 2px;
   }
@@ -303,8 +301,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 .index_list .thumb .icon {
@@ -519,27 +515,10 @@
   min-height: 83px;
 }
 #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .thumb {
-  width: 83px;
+  width: 83px !important;
   max-width: 83px;
+  height: 83px !important;
   margin-right: 17px;
-}
-@media (max-width: 414px) {
-  #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .thumb > a {
-    display: block;
-    position: relative;
-    padding-top: calc(100% - 5px);
-    overflow: hidden;
-    border-radius: 2px;
-  }
-  #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .thumb > a > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
 }
 #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .brand, #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .summary, #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .wish {
   display: none;
