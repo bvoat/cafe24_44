@@ -149,14 +149,14 @@
     .desc {
         padding: $top-padding 0 0 0;
         .brand {
-            font-size: $brand-ftsz;
+            font-size: $brand-ftsz !important;
             color: $bvt-darkgray;
             margin-bottom: 3px;
         }
 
         .summary {
             display: block;
-            font-size: $summary-ftsz;
+            font-size: $summary-ftsz !important;
             color: $bvt-darkgray;
             @include only-ellipsis(1, $summary-ftsz);
             margin-bottom: 7px;
@@ -175,7 +175,7 @@
 
         >li{
             &:nth-child(1){
-                font-size: 10px !important;
+                font-size: 1em !important;
             }
             &:nth-child(2){
                 font-size: 11.5px !important;
