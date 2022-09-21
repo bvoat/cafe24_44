@@ -82,7 +82,7 @@
   .thumb > a {
     display: block;
     position: relative;
-    padding-top: 100%;
+    padding-top: calc(100% - 5px);
     overflow: hidden;
     border-radius: 2px;
   }

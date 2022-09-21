@@ -187,10 +187,8 @@
                         flex-flow: column nowrap;
                         align-items: flex-start;
                         justify-content: space-between;
-                        width: calc(50% - 12px);
+                        width: 100%;
                         max-width: 183px;
-                        margin-bottom: 27px;
-                
                         //위시버튼
                         @include wish-button(21px, 18.98px, 0, 0);
                     }
@@ -295,16 +293,11 @@
                             display: flex;
                             flex-flow: row nowrap;
                             width: 100%;
-                            height: auto;
                             margin-bottom: 15px;
+                            min-height: 83px;
                             .thumb{
-                                width: 83px;
-                                height: 83px;
-                                margin-right: 12px;
-            
-                                a{
-                                    width: 100%;
-                                }
+                                max-width: 83px;
+                                margin-right: 17px;
                             }
                             .brand, .summary, .wish {
                                 //Trend Story에서 brand, summary, wish 사용 x

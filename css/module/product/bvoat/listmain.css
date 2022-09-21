@@ -293,7 +293,7 @@
   .index_list .thumb > a {
     display: block;
     position: relative;
-    padding-top: 100%;
+    padding-top: calc(100% - 5px);
     overflow: hidden;
     border-radius: 2px;
   }
@@ -368,9 +368,8 @@
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: space-between;
-  width: calc(50% - 12px);
+  width: 100%;
   max-width: 183px;
-  margin-bottom: 27px;
 }
 #indexListmainWeekly ul .listmain_weekly_1 .listmain_1 ul .list_item .wish {
   position: absolute;
@@ -516,16 +515,12 @@
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
-  height: auto;
   margin-bottom: 15px;
+  min-height: 83px;
 }
 #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .thumb {
-  width: 83px;
-  height: 83px;
-  margin-right: 12px;
-}
-#indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .thumb a {
-  width: 100%;
+  max-width: 83px;
+  margin-right: 17px;
 }
 #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .brand, #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .summary, #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .wish {
   display: none;
