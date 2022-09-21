@@ -236,10 +236,12 @@
   margin-bottom: 20px;
 }
 #specialProject .project_productlist_wrap .desc > li:nth-child(1) {
-  font-size: 10px !important;
+  font-size: 1rem !important;
+  color: #707070;
 }
 #specialProject .project_productlist_wrap .desc > li:nth-child(2) {
-  font-size: 11.5px !important;
+  font-size: 1.1rem !important;
+  color: #707070;
 }
 #specialProject .project_productlist_wrap .thumb {
   position: relative;

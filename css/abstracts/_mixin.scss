@@ -175,10 +175,12 @@
 
         >li{
             &:nth-child(1){
-                font-size: 10px !important;
+                font-size: $brand-ftsz !important;
+                color: $bvt-darkgray;
             }
             &:nth-child(2){
-                font-size: 11.5px !important;
+                font-size: $summary-ftsz !important;
+                color: $bvt-darkgray;
             }
         }
     }

@@ -154,7 +154,16 @@
 /* 메인 진열 개별 */
 // 추천 상품 : 가치소비 입문 어때요?
 #indexListmainRecommend{
-
+    .desc{
+        width: 100%;
+        padding: 0;
+        .brand{
+            font-size: 10px !important;
+        }
+        .summary{
+            font-size: 11.5px !important;
+        }
+    }
 }
 
 // 주간 상품 : Weekly Special
@@ -314,6 +323,7 @@
                                 padding: 0;
                                 .product_name{
                                     margin-bottom: 18%;
+                                    height: 3.1rem;
                                 }
                             }
                         }
