@@ -507,6 +507,13 @@
   height: inherit !important;
   min-height: 83px;
   margin-right: 17px;
+  border: 1px solid rgba(238, 130, 238, 0.3764705882);
+}
+#indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .thumb a {
+  background: gainsboro;
+}
+#indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .thumb img {
+  border: 1px solid rgba(0, 0, 255, 0.3764705882);
 }
 #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .brand, #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .summary, #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .wish {
   display: none;

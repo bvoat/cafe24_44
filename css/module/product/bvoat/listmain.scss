@@ -302,6 +302,14 @@
                                 height: inherit !important;
                                 min-height: 83px;
                                 margin-right: 17px;
+                                border: 1px solid #ee82ee60;
+                                a{
+                                    background: gainsboro;
+                                }
+                                img{
+                                border: 1px solid #0000ff60;
+
+                                }
                             }
                             
                             .brand, .summary, .wish {
