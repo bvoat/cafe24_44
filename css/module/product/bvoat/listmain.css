@@ -522,6 +522,7 @@
   max-width: 83px;
   height: 100%;
   margin-right: 17px;
+  background: gray;
 }
 #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .brand, #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .summary, #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .wish {
   display: none;
