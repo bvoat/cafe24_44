@@ -293,13 +293,15 @@
                             display: flex;
                             flex-flow: row nowrap;
                             background: #add7e650;
+                            width: 100%;
+                            min-height: 83px;
                             margin-bottom: 15px;
                             .thumb{
-                                width: 83px !important;
+                                width: 100% !important;
                                 max-width: 83px;
-                                height: 100%;
+                                height: inherit !important;
+                                min-height: 83px;
                                 margin-right: 17px;
-                                background: gray;
                             }
                             
                             .brand, .summary, .wish {
@@ -307,10 +309,10 @@
                                 display: none;
                             }
                             .desc{
-                                width: calc(100% - 83px);
+                                width: 100%;
                                 padding: 0;
                                 .product_name{
-                                    margin-bottom: 21px;
+                                    margin-bottom: 18%;
                                 }
                             }
                         }
