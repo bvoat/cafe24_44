@@ -340,7 +340,7 @@
 /* 메인 진열 개별 */
 #indexListmainRecommend .desc {
   width: 100%;
-  padding: 0;
+  padding: 7px 0 0 0;
 }
 #indexListmainRecommend .desc .brand {
   font-size: 10px !important;
