@@ -512,10 +512,8 @@
 #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item {
   display: flex;
   flex-flow: row nowrap;
-  width: 100%;
+  background: rgba(173, 215, 230, 0.3137254902);
   margin-bottom: 15px;
-  height: 100%;
-  min-height: 83px;
 }
 #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .thumb {
   width: 83px !important;
