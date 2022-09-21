@@ -294,11 +294,12 @@
                             flex-flow: row nowrap;
                             width: 100%;
                             margin-bottom: 15px;
+                            height: 100%;
                             min-height: 83px;
                             .thumb{
                                 width: 83px !important;
                                 max-width: 83px;
-                                height: 83px !important;
+                                height: 100%;
                                 margin-right: 17px;
                             }
                             
