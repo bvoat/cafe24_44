@@ -82,6 +82,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  scale: 1.1;
 }
 @media (max-width: 375px) {
   #orderExchange #orderExchangeTable .description .thumb > a {
@@ -97,6 +98,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    scale: 1.1;
   }
 }
 #orderExchange #orderExchangeTable .description .thumb .icon {

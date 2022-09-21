@@ -57,6 +57,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  scale: 1.1;
 }
 @media (max-width: 375px) {
   #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb > a {
@@ -72,6 +73,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    scale: 1.1;
   }
 }
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb .icon {

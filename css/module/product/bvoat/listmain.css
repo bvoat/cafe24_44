@@ -286,6 +286,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  scale: 1.1;
 }
 @media (max-width: 375px) {
   .index_list .thumb > a {
@@ -301,6 +302,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    scale: 1.1;
   }
 }
 .index_list .thumb .icon {
