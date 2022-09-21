@@ -514,6 +514,7 @@
 #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .desc {
   width: 100%;
   padding: 0;
+  background: rgba(240, 128, 128, 0.3764705882);
 }
 #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .desc .product_name {
   margin-bottom: 18%;
