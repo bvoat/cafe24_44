@@ -77,6 +77,24 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 375px) {
+  #realTimeOrderList .thumb > a {
+    display: block;
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+  #realTimeOrderList .thumb > a > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 #realTimeOrderList .thumb .icon {
   position: absolute;
   width: 50px;

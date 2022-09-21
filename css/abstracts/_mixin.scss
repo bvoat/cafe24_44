@@ -124,6 +124,24 @@
                 object-fit: cover;
             }
         }
+        @media (max-width: 375px) {
+            >a {
+                display: block;
+                position: relative;
+                padding-top: 100%;
+                overflow: hidden;
+                border-radius: 2px;
+    
+                >img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
 
         //상품 안내 아이콘
         .icon {
@@ -138,7 +156,7 @@
                 object-fit: cover;
             }
         }
-        @include wish-button($width, $height, $bottom, $right)
+        @include wish-button($width, $height, $bottom, $right);
     }
 }
 //상품 목록 하단 정보
