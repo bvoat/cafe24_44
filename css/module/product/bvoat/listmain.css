@@ -276,9 +276,10 @@
 .index_list .thumb > a {
   display: block;
   position: relative;
-  padding-top: calc(100% - 12px);
+  padding-top: 100%;
   overflow: hidden;
   border-radius: 2px;
+  font-size: 0;
 }
 .index_list .thumb > a > img {
   position: absolute;
@@ -505,9 +506,6 @@
   max-width: 83px;
   height: inherit !important;
   margin-right: 17px;
-}
-#indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .thumb a {
-  padding-top: 100% !important;
 }
 #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .brand, #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .summary, #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain .prdList .list_item .wish {
   display: none;

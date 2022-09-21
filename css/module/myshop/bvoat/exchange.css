@@ -72,9 +72,10 @@
 #orderExchange #orderExchangeTable .description .thumb > a {
   display: block;
   position: relative;
-  padding-top: calc(100% - 12px);
+  padding-top: 100%;
   overflow: hidden;
   border-radius: 2px;
+  font-size: 0;
 }
 #orderExchange #orderExchangeTable .description .thumb > a > img {
   position: absolute;

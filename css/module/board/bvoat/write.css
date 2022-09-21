@@ -47,9 +47,10 @@
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb > a {
   display: block;
   position: relative;
-  padding-top: calc(100% - 12px);
+  padding-top: 100%;
   overflow: hidden;
   border-radius: 2px;
+  font-size: 0;
 }
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb > a > img {
   position: absolute;

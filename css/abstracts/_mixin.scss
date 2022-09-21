@@ -111,9 +111,10 @@
         >a {
             display: block;
             position: relative;
-            padding-top: calc(100% - 12px);
+            padding-top: 100%;
             overflow: hidden;
             border-radius: 2px;
+            font-size: 0;
 
             >img {
                 position: absolute;
