@@ -630,7 +630,7 @@ div.layerProgress {
     color: #292929 !important;
 }
 
-@media (max-width: 344px) {
+@media (max-width: 375px) {
     .product_name>a>span{
         font-size: 1.25rem!important;
     }

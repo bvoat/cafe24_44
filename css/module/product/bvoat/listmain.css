@@ -604,6 +604,7 @@
 @media (max-width: 375px) {
   #indexListmainBest > .weekbest > ul .list_item .thumb {
     max-width: 120px;
+    min-width: 120px;
   }
 }
 #indexListmainBest > .weekbest > ul .list_item .summary {
