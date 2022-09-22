@@ -9,8 +9,8 @@
     /* 라인수 */
     -webkit-box-orient: vertical;
     word-wrap: break-word;
-    line-height: $line-height + 0.3rem;
-    height: (($line-height) * $line-cnt) + 0.65rem;
+    line-height: $line-height + 0.4rem;
+    height: (($line-height) * $line-cnt) + 0.9rem;
 }
 
 // ellipsis 처리만
@@ -23,7 +23,7 @@
     /* 라인수 */
     -webkit-box-orient: vertical;
     word-wrap: break-word;
-    line-height: $line-height + 0.3rem;
+    line-height: $line-height + 0.4rem;
 }
 /* 공통 스타일 */
 
@@ -170,17 +170,6 @@
             word-break: keep-all;
             @include ellipsis(2, $name-ftsz);
             margin-bottom: 20px;
-        }
-
-        >li{
-            &:nth-child(1){
-                font-size: 10px !important;
-                color: $bvt-darkgray;
-            }
-            &:nth-child(2){
-                font-size: 11.5px !important;
-                color: $bvt-darkgray;
-            }
         }
     }
 }

@@ -212,7 +212,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.4rem;
+  line-height: 1.5rem;
   margin-bottom: 7px;
 }
 #specialProject .project_productlist_wrap .desc .product_name,
@@ -230,17 +230,9 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.6rem;
-  height: 3.25rem;
+  line-height: 1.7rem;
+  height: 3.5rem;
   margin-bottom: 20px;
-}
-#specialProject .project_productlist_wrap .desc > li:nth-child(1) {
-  font-size: 10px !important;
-  color: #707070;
-}
-#specialProject .project_productlist_wrap .desc > li:nth-child(2) {
-  font-size: 11.5px !important;
-  color: #707070;
 }
 #specialProject .project_productlist_wrap .thumb {
   position: relative;

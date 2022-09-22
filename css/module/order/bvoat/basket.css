@@ -172,7 +172,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.1rem;
+  line-height: 2.2rem;
 }
 .item_desc .item_info .option {
   font-size: 1.3rem;
@@ -186,7 +186,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.6rem;
+  line-height: 1.7rem;
 }
 .item_desc .item_info .price_list {
   margin-bottom: 8px;

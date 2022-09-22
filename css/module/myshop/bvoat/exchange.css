@@ -174,7 +174,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.8rem;
+  line-height: 1.9rem;
 }
 #orderExchange #orderExchangeTable .xans-myshop-orderhistoryexchangeproduct > table thead > tr {
   height: 25px;

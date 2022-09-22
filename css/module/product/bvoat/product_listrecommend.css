@@ -99,7 +99,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.6rem;
+  line-height: 1.7rem;
   margin-bottom: 7px;
 }
 .listrecommend_list .desc .product_name, .listrecommend_list .desc .product_name span {
@@ -116,8 +116,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.8rem;
-  height: 3.65rem;
+  line-height: 1.9rem;
+  height: 3.9rem;
   margin-bottom: 20px;
 }
 .listrecommend_list .desc > li:nth-child(1) {

@@ -68,7 +68,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.6rem;
+  line-height: 1.7rem;
   display: table-cell;
   font-weight: 600;
 }
@@ -152,8 +152,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.6rem;
-  height: 3.25rem;
+  line-height: 1.7rem;
+  height: 3.5rem;
 }
 #productBoardList #productBoardListTable > .ec-base-button {
   display: flex;

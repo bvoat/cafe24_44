@@ -118,8 +118,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.9rem;
-  height: 3.85rem;
+  line-height: 2rem;
+  height: 4.1rem;
 }
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .information li:nth-child(2) {
   font-size: 1.2rem;

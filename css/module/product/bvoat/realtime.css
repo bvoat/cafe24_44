@@ -34,7 +34,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.4rem;
+  line-height: 1.5rem;
   margin-bottom: 7px;
 }
 #realTimeOrderList .desc .product_name,
@@ -52,17 +52,9 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.59rem;
-  height: 3.23rem;
+  line-height: 1.69rem;
+  height: 3.48rem;
   margin-bottom: 20px;
-}
-#realTimeOrderList .desc > li:nth-child(1) {
-  font-size: 10px !important;
-  color: #707070;
-}
-#realTimeOrderList .desc > li:nth-child(2) {
-  font-size: 11.5px !important;
-  color: #707070;
 }
 #realTimeOrderList .thumb {
   position: relative;

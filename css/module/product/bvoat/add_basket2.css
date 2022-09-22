@@ -137,8 +137,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.9rem;
-  height: 2.25rem;
+  line-height: 2rem;
+  height: 2.5rem;
   color: #707070;
 }
 .desc .basket_option {

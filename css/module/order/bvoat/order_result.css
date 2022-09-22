@@ -283,7 +283,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.8rem;
+  line-height: 1.9rem;
 }
 #mCafe24Order .order_product_section .order_product_details .order_info .product_list_box .product_list .description .info {
   margin-top: 8px;
@@ -300,7 +300,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.2rem;
+  line-height: 1.3rem;
 }
 #mCafe24Order .order_product_section .order_product_details .order_info .product_total {
   display: flex;
