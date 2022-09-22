@@ -11,7 +11,7 @@
         <ul class="desc box-desc">
             <li class="brand">{$prd_brand|striptag}</li>
             <li class="summary">{$summary_desc|striptag}</li>
-            <li class="product_name"><a href="/product/detail.html{$param}">{$product_name}</a></li>
+            <li class="product_name"><a href="/product/detail.html{$param}">{$product_name|striptag}</a></li>
                 <!--@import(../list_price_wrap.html)-->
         </ul>
     </li>
@@ -24,9 +24,9 @@
             <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
         </div>
         <ul class="desc box-desc">
-            <li class="brand">{$prd_brand}</li>
-            <li class="summary">{$summary_desc}</li>
-            <li class="product_name"><a href="/product/detail.html{$param}">{$product_name}</a></li>
+            <li class="brand">{$prd_brand|striptag}</li>
+            <li class="summary">{$summary_desc|striptag}</li>
+            <li class="product_name"><a href="/product/detail.html{$param}">{$product_name|striptag}</a></li>
                 <!--@import(../list_price_wrap.html)-->
         </ul>
     </li>
