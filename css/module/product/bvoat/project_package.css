@@ -230,8 +230,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.5rem;
-  height: 3.1rem;
+  line-height: 1.6rem;
+  height: 3.25rem;
   margin-bottom: 20px;
 }
 #specialProject .project_productlist_wrap .desc > li:nth-child(1) {

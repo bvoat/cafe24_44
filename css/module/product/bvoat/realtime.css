@@ -52,8 +52,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.49rem;
-  height: 3.08rem;
+  line-height: 1.59rem;
+  height: 3.23rem;
   margin-bottom: 20px;
 }
 #realTimeOrderList .desc > li:nth-child(1) {

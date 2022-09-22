@@ -9,8 +9,8 @@
     /* 라인수 */
     -webkit-box-orient: vertical;
     word-wrap: break-word;
-    line-height: $line-height + 0.2rem;
-    height: (($line-height) * $line-cnt) + 0.5rem;
+    line-height: $line-height + 0.3rem;
+    height: (($line-height) * $line-cnt) + 0.65rem;
 }
 
 // ellipsis 처리만

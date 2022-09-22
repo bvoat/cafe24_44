@@ -152,8 +152,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.5rem;
-  height: 3.1rem;
+  line-height: 1.6rem;
+  height: 3.25rem;
 }
 #productBoardList #productBoardListTable > .ec-base-button {
   display: flex;
