@@ -151,6 +151,7 @@
         .brand {
             font-size: $brand-ftsz !important;
             color: $bvt-darkgray;
+            @include only-ellipsis(1, $brand-ftsz);
             margin-bottom: 3px;
         }
 

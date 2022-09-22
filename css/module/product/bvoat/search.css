@@ -341,6 +341,15 @@
 #searchResultProductList .desc .brand {
   font-size: 1rem !important;
   color: #707070;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.4rem;
   margin-bottom: 3px;
 }
 #searchResultProductList .desc .summary {
