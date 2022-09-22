@@ -400,23 +400,20 @@
                 if (order == index) {
                     listmain.classList.add("active");
                     listmain.classList.remove("displaynone");
-                    var MDpickSwiper = new Swiper(".listmain_md", {
-                        spaceBetween: 20,
-                        slidesPerView: 1.5,
-                        slidesPerColumn: 1,
-                        slidesPerColumnFill: 'row',
-                        observer: true,
-                        observeParents: true,
-                        pagination: {
-                            el: ".list_item_progress",
-                            type: "progressbar"
-                        }
-                    });
                 } else {
                     listmain.classList.remove("active");
                     listmain.classList.add("displaynone");
                 }
             });
+
+            //swiper init
+            MDpickSwiper.on('init', function(){
+                let brand = document.querySelectorAll(".brand");
+                let summary = document.querySelectorAll(".summary");
+                brand.forEach((el)=>{ el.style.fontSize = '10px';})
+                summary.forEach((el)=>{ el.style.fontSize = '11.5px';})
+            })
+
         }
     }
 
@@ -459,7 +456,6 @@
         slidesPerView: "auto",
         slidesPerColumnFill: 'row',
         rewind: true,
-
         pagination: {
             el: ".swiper-pagination-fraction-noclick",
             type: "fraction"
