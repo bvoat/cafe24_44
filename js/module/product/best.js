@@ -43,7 +43,7 @@
     const total_moreview = document.querySelector("#weekTotalBestListContents .moreview_btn")
     console.log('total_moreview: ', total_moreview);
     const totalBestShow = () => {
-        // displaynone 상태의 list_item을 display flex로 변경
+        // displaynone 상태의 list_item을 display flex로 변경 
         [...document.querySelectorAll(".weekbest > ul > .list_item")].forEach((el) => {
             el.style.display = "flex"
         })

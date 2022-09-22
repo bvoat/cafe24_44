@@ -10,7 +10,7 @@
     -webkit-box-orient: vertical;
     word-wrap: break-word;
     line-height: $line-height + 0.4rem;
-    height: (($line-height) * $line-cnt) + 0.9rem;
+    height: (($line-height) * $line-cnt) + 0.7rem;
 }
 
 // ellipsis 처리만
