@@ -40,14 +40,15 @@
 
     /* 주간 베스트 더보기 클릭 */
     // 더보기 버튼
-    const total_moreview = document.querySelector("#weekTotalBestListContents > .paginate_moreview > .moreview_btn")
+    const total_moreview = document.querySelector("#weekTotalBestListContents .moreview_btn")
+    console.log('total_moreview: ', total_moreview);
     const totalBestShow = () => {
         // displaynone 상태의 list_item을 display flex로 변경
         [...document.querySelectorAll(".weekbest > ul > .list_item")].forEach((el) => {
             el.style.display = "flex"
         })
         // 더보기 버튼 삭제
-        document.querySelector("#weekTotalBestListContents > .paginate_moreview").classList.add("displaynone");
+        document.querySelector("#weekTotalBestListContents .moreview_btn").classList.add("displaynone");
     }
     total_moreview.addEventListener("click", totalBestShow);
     /* 주간 베스트 더보기 클릭 */
