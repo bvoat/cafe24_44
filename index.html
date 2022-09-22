@@ -368,54 +368,6 @@
 <!--@define(cmc_log)-->
 <script src="/js/module/product/realtime.js"></script>
 <script>
-    /** 
-     * 탭 형식으로 메인진열 교체 
-     * 
-     */
-    const listmainTab = () => {
-        //node 배열
-        let md_pick_btn = document.querySelectorAll(".md_pick_btn");
-        let md_pick_listmain = document.querySelectorAll(".listmain_md");
-        //button에서 index 얻기
-        md_pick_btn.forEach((btns, i) => {
-            btns.addEventListener("click", (el) => {
-                //active 될 node index
-                let tab_index = i;
-                listmainMDTabActive(tab_index);
-            })
-        });
-        //class 교체
-        const listmainMDTabActive = (index) => {
-            //button active
-            md_pick_btn.forEach((btn, order) => {
-                if (order == index) {
-                    btn.classList.add("active");
-                } else {
-                    btn.classList.remove("active");
-                }
-            });
-
-            //listmain active
-            md_pick_listmain.forEach((listmain, order) => {
-                if (order == index) {
-                    listmain.classList.add("active");
-                    listmain.classList.remove("displaynone");
-                } else {
-                    listmain.classList.remove("active");
-                    listmain.classList.add("displaynone");
-                }
-            });
-
-            //swiper init
-            MDpickSwiper.on('init', function(){
-                let brand = document.querySelectorAll(".brand");
-                let summary = document.querySelectorAll(".summary");
-                brand.forEach((el)=>{ el.style.fontSize = '10px';})
-                summary.forEach((el)=>{ el.style.fontSize = '11.5px';})
-            })
-
-        }
-    }
 
     /**
      * 스와이퍼
@@ -497,7 +449,52 @@
             type: "progressbar"
         }
     });
-    
+        /** 
+     * 탭 형식으로 메인진열 교체 
+     * 
+     */
+     const listmainTab = () => {
+        //node 배열
+        let md_pick_btn = document.querySelectorAll(".md_pick_btn");
+        let md_pick_listmain = document.querySelectorAll(".listmain_md");
+        //button에서 index 얻기
+        md_pick_btn.forEach((btns, i) => {
+            btns.addEventListener("click", (el) => {
+                //active 될 node index
+                let tab_index = i;
+                listmainMDTabActive(tab_index);
+            })
+        });
+        //class 교체
+        const listmainMDTabActive = (index) => {
+            //button active
+            md_pick_btn.forEach((btn, order) => {
+                if (order == index) {
+                    btn.classList.add("active");
+                } else {
+                    btn.classList.remove("active");
+                }
+            });
+
+            //listmain active
+            md_pick_listmain.forEach((listmain, order) => {
+                let brand = document.querySelectorAll(".brand");
+                console.log('brand: ', brand);
+                let summary = document.querySelectorAll(".summary");
+                brand.forEach((el)=>{ el.style.fontSize = '10px';})
+                summary.forEach((el)=>{ el.style.fontSize = '11.5px';})
+                if (order == index) {
+                    listmain.classList.add("active");
+                    listmain.classList.remove("displaynone");
+                } else {
+                    listmain.classList.remove("active");
+                    listmain.classList.add("displaynone");
+                }
+            });
+
+        }
+    }
+
     /**
      * 최종 함수 실행
      */
