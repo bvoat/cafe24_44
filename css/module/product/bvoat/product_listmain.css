@@ -101,8 +101,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.5rem;
-  height: 4.7rem;
+  line-height: 2.4rem;
+  height: 4.9rem;
 }
 
 .normal_product_info {
@@ -123,8 +123,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.6rem;
-  height: 2.9rem;
+  line-height: 1.5rem;
+  height: 3.1rem;
 }
 .normal_product_info .normal_product_name > span {
   font-size: 1.3rem !important;

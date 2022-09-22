@@ -657,5 +657,6 @@ div.layerProgress {
 @media screen and (max-device-width: 480px){
     body{
         -webkit-text-size-adjust: none;
+        font-size: 10px;
     }
 }

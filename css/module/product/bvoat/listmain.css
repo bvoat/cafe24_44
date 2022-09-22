@@ -264,8 +264,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.6rem;
-  height: 2.9rem;
+  line-height: 1.5rem;
+  height: 3.1rem;
   margin-bottom: 20px;
 }
 .index_list .desc > li:nth-child(1) {
@@ -340,6 +340,22 @@
 #indexListmainRecommend .desc {
   width: 100%;
   padding: 7px 0 0 0;
+}
+#indexListmainRecommend .desc .brand {
+  font-size: 8pt !important;
+}
+#indexListmainRecommend .desc .summary {
+  font-size: 9pt !important;
+  color: #707070;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.4rem;
+  margin-bottom: 7px;
 }
 
 #indexListmainWeekly ul h4.banner {
@@ -493,8 +509,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.1rem;
-  height: 5.7rem;
+  line-height: 2rem;
+  height: 5.9rem;
 }
 #indexListmainTrend .listmain_trend > ul > li > .xans-product-listmain {
   padding: 0;
@@ -576,6 +592,16 @@
 }
 #indexListmainMD .listmain_md_list_wrap .listmain_md .desc .summary {
   font-size: 9pt !important;
+  color: #707070;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.4rem;
+  margin-bottom: 7px;
 }
 #indexListmainMD .listmain_md_list_wrap .listmain_md.active {
   visibility: visible;
