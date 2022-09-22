@@ -379,7 +379,7 @@
         slidesPerGroup: 3,
         slidesPerColumn: 2,
         slidesPerColumnFill: 'row',
-        initialSlide: 0,
+        normalizeSlideIndex: true,
         pagination: {
             el: ".swiper-pagination-fraction",
             type: "fraction"
@@ -387,9 +387,16 @@
         navigation: {
             nextEl: ".swiper-pagination-clickable",
             prevEl: ".clickable",
-
         },
     });
+    recommendSwiper.on("click", function(){ 
+        console.log("isEnd", recommendSwiper.isEnd);
+        console.log("index", recommendSwiper.previousIndex);
+        [...document.querySelectorAll(".brand")].forEach((el)=>{
+            el.style.fontSize = "10px !important"
+            console.log(el.style.fontSize)
+        })
+    })
     //주간 상품 : Weekly Special 스와이퍼
     var weeklySwiper = new Swiper(".listmain_weekly", {
         spaceBetween: 12,
@@ -424,6 +431,7 @@
         slidesPerColumnFill: 'row',
         observer: true,
         observeParents: true,
+        observeSlideChildren: true,
         pagination: {
             el: ".list_item_progress",
             type: "progressbar"
