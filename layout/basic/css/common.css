@@ -653,3 +653,9 @@ div.layerProgress {
         font-size: 1rem !important;
     }
 }
+/* 아이폰에서 폰트 강제조정되는 현상 해결 */
+@media screen and (max-device-width: 480px){
+    body{
+        -webkit-text-size-adjust: none;
+    }
+}
