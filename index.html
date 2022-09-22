@@ -400,7 +400,18 @@
                 if (order == index) {
                     listmain.classList.add("active");
                     listmain.classList.remove("displaynone");
-
+                    var MDpickSwiper = new Swiper(".listmain_md", {
+                        spaceBetween: 20,
+                        slidesPerView: 1.5,
+                        slidesPerColumn: 1,
+                        slidesPerColumnFill: 'row',
+                        observer: true,
+                        observeParents: true,
+                        pagination: {
+                            el: ".list_item_progress",
+                            type: "progressbar"
+                        }
+                    });
                 } else {
                     listmain.classList.remove("active");
                     listmain.classList.add("displaynone");
@@ -413,25 +424,6 @@
      * 스와이퍼
      */
     //추천 상품 : 가치소비 입문 어때요? 스와이퍼
-    let changed = false;
-    // document.querySelector(".swiper-pagination-clickable").addEventListener("click", ()=>{
-    //     console.log('activeIndex ', recommendSwiper.activeIndex);
-    //     console.log('realIndex', recommendSwiper.realIndex);
-    //     // console.log('swiper.slides', recommendSwiper.slides);
-    //     console.log('changed', changed);
-        
-
-    //     if (changed === true) {
-    //         recommendSwiper.slideTo(0);
-    //         // changed = false;
-    //         console.log('changed2', changed);
-
-    //     }
-
-    //     if (recommendSwiper.realIndex === 3) changed = true;
-
-    // })
-
     var recommendSwiper = new Swiper(".listmain_recommend", {
         spaceBetween: 11,
         slidesPerView: 3,

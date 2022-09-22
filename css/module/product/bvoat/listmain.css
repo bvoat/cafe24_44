@@ -270,11 +270,11 @@
   margin-bottom: 20px;
 }
 .index_list .desc > li:nth-child(1) {
-  font-size: 1rem !important;
+  font-size: 10px !important;
   color: #707070;
 }
 .index_list .desc > li:nth-child(2) {
-  font-size: 1.1rem !important;
+  font-size: 11.5px !important;
   color: #707070;
 }
 .index_list .thumb {
@@ -341,12 +341,6 @@
 #indexListmainRecommend .desc {
   width: 100%;
   padding: 7px 0 0 0;
-}
-#indexListmainRecommend .desc .brand {
-  font-size: 10px !important;
-}
-#indexListmainRecommend .desc .summary {
-  font-size: 11.5px !important;
 }
 
 #indexListmainWeekly ul h4.banner {
