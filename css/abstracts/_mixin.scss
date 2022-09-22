@@ -10,7 +10,7 @@
     -webkit-box-orient: vertical;
     word-wrap: break-word;
     line-height: $line-height + 0.3rem;
-    height: (($line-height) * $line-cnt) + 0.8rem;
+    height: (($line-height) * $line-cnt) + 0.3rem;
 }
 
 // ellipsis 처리만
@@ -155,7 +155,6 @@
         }
 
         .summary {
-            display: block;
             font-size: $summary-ftsz !important;
             color: $bvt-darkgray;
             @include only-ellipsis(1, $summary-ftsz);

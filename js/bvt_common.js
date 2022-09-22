@@ -142,8 +142,10 @@ function monitoringPrice() {
 window.addEventListener("load", () => {
   if (document.querySelector(".price_wrap")) {
     setTimeout(monitoringPrice,300)
+    setTimeout(monitoringDesc,800)
   } else {
     setTimeout(monitoringPrice,1400)
+    setTimeout(monitoringDesc,1200)
   }
 });
 

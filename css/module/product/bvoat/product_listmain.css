@@ -102,7 +102,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 2.5rem;
-  height: 5.2rem;
+  height: 4.7rem;
 }
 
 .normal_product_info {
@@ -124,7 +124,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.6rem;
-  height: 3.4rem;
+  height: 2.9rem;
 }
 .normal_product_info .normal_product_name > span {
   font-size: 1.3rem !important;
