@@ -478,10 +478,6 @@
 
             //listmain active
             md_pick_listmain.forEach((listmain, order) => {
-                let brand = document.querySelectorAll(".brand");
-                let summary = document.querySelectorAll(".summary");
-                brand.forEach((el)=>{ el.style.fontSize = '10px';})
-                summary.forEach((el)=>{ el.style.fontSize = '11.5px';})
                 if (order == index) {
                     listmain.classList.add("active");
                     listmain.classList.remove("displaynone");

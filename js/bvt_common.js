@@ -53,7 +53,19 @@ function createdModal(heading, text, okmsg, nomsg, okfunc, nofunc) {
 }
 /* 모달 생성 함수 */
 
-/* 가격 감시 함수 */
+/**
+ * 브랜드, 요약 설명 감시 함수 
+*/
+function monitoringDesc(){
+  let brand = document.querySelectorAll(".brand");
+  let summary = document.querySelectorAll(".summary");
+  brand.forEach((el)=>{ el.style.fontSize = '10px';})
+  summary.forEach((el)=>{ el.style.fontSize = '11.5px';})
+} 
+
+/**  
+  * 가격 감시 함수
+* */
 function monitoringPrice() {
   console.log("price monitoring");
   let price_content = document.querySelectorAll(".price_wrap");
@@ -128,9 +140,11 @@ function monitoringPrice() {
 }
 window.addEventListener("load", () => {
   if (document.querySelector(".price_wrap")) {
-    setTimeout(monitoringPrice,100)
+    setTimeout(monitoringPrice,300)
+    setTimeout(monitoringDesc,300)
   } else {
-    setTimeout(monitoringPrice,1200)
+    setTimeout(monitoringPrice,1400)
+    setTimeout(monitoringDesc,800)
   }
 });
 
