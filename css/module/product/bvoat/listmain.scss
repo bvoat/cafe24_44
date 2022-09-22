@@ -714,7 +714,7 @@
 
 /* 페이지 프로그레스 */
 .list_item_progress {
-    width: calc(100% - 22px);
+    width: calc(100% - 22px) !important;
     height: 3px;
     margin-top: 26px;
 }
