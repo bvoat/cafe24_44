@@ -59,8 +59,9 @@ function createdModal(heading, text, okmsg, nomsg, okfunc, nofunc) {
 function monitoringDesc(){
   let brand = document.querySelectorAll(".brand");
   let summary = document.querySelectorAll(".summary");
-  brand.forEach((el)=>{ el.style.fontSize = "10px"})
-  summary.forEach((el)=>{ el.style.fontSize = "11.5px"})
+  brand.forEach((el)=>{ el.style.fontSize = "10px"});
+  summary.forEach((el)=>{ el.style.fontSize = "11.5px"});
+  console.log("monitoringDesc")
 } 
 
 /**  
