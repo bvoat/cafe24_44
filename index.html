@@ -481,6 +481,7 @@
                 if (order == index) {
                     listmain.classList.add("active");
                     listmain.classList.remove("displaynone");
+                    monitoringDesc();
                 } else {
                     listmain.classList.remove("active");
                     listmain.classList.add("displaynone");
@@ -494,7 +495,7 @@
      * 최종 함수 실행
      */
     window.addEventListener("load", () => {
-        listmainTab()
+        listmainTab();
     })
 
 </script>
