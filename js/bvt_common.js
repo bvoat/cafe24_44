@@ -59,8 +59,8 @@ function createdModal(heading, text, okmsg, nomsg, okfunc, nofunc) {
 function monitoringDesc(){
   let brand = document.querySelectorAll(".brand");
   let summary = document.querySelectorAll(".summary");
-  brand.forEach((el)=>{ el.style.fontSize = '10px';})
-  summary.forEach((el)=>{ el.style.fontSize = '11.5px';})
+  brand.forEach((el)=>{ el.style.fontSize = "10px"})
+  summary.forEach((el)=>{ el.style.fontSize = "11.5px"})
 } 
 
 /**  
@@ -141,10 +141,10 @@ function monitoringPrice() {
 window.addEventListener("load", () => {
   if (document.querySelector(".price_wrap")) {
     setTimeout(monitoringPrice,300)
-    setTimeout(monitoringDesc,300)
+    setTimeout(monitoringDesc,800)
   } else {
     setTimeout(monitoringPrice,1400)
-    setTimeout(monitoringDesc,800)
+    setTimeout(monitoringDesc,1000)
   }
 });
 
