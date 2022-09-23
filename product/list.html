@@ -1,11 +1,10 @@
 <!--@layout(/layout/basic/layout.html)-->
-<link rel="stylesheet" href="/css/module/product/bvoat/list.css">
+<!--@css(/css/module/product/bvoat/list.css)-->
 <article id="productList">
     <!-- 카테고리 타이틀 -->
     <section id="productListTitle" module="product_headcategory">
-        <input type="hidden" id="topNavControl" name="{$name_1}" value="{$name_1}" class="displaynone" data-parent="{$param_1}">
-        <h1 class="category_title" data-category="{$title_text}" data-main="{$name_1}">가치소비 {$title_text} 추천</h1>
-        <h2></h2>
+        <div class="banner">{$top_image1_tag}{$top_image2_tag}{$top_image3_tag}</div>
+        <input type="hidden" id="topNavControl" name="{$name_1}" value="{$name_1}" class="displaynone" data-parent="{$param_1}"><h1 class="category_title" data-category="{$title_text}" data-main="{$name_1}">가치소비 {$title_text} 추천</h1>
     </section>
     <!-- 카테고리 타이틀 -->
 

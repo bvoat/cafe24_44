@@ -9,17 +9,29 @@
 }
 
 #productListTitle {
-    margin: 19px 0;
-    padding: 0 11px;
+    position: relative;
+    width: 100%;
+    margin: 0 0 19px 0;
+    .banner{
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
+        img{
+            width: 100%;
+        }
+    }
     h1 {
         font-size: 1.9rem;
         font-weight: 700;
-        margin-bottom: 2px;
+        margin: 37px 0 2px 0;
+        padding: 0 11px;
     }
     h2 {
         font-size: 1.3rem;
         font-weight: 300;
         color: $bvt-lostfocus-gray;
+        padding: 0 11px;
     }
 }
 

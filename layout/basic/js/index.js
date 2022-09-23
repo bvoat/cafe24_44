@@ -3,7 +3,7 @@
  */
 //추천 상품 : 가치소비 입문 어때요? 스와이퍼
 var recommendSwiper = new Swiper(".listmain_recommend", {
-  spaceBetween: 11,
+  spaceBetween: 12,
   slidesPerView: 3,
   slidesPerGroup: 3,
   slidesPerColumn: 2,

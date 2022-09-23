@@ -5,15 +5,13 @@
 #fundingIndex{
     width: 100%;
     max-width: 450px;
-    padding: 23px 11px;
-    margin: 80px 0 120px;
+    padding: 80px 0 120px;
 }
 
 /* 펀딩 타이틀 */
 #fundingIndexPlayingTitle,
 #fundingIndexClosingTitle {
-    margin: 19px 0;
-    padding: 0 11px;
+    margin: 37px 0 19px 0;
 
     h2 {
         font-size: 1.9rem;
@@ -27,8 +25,6 @@
         color: $bvt-lostfocus-gray;
     }
 }
-
-
 /* 펀딩 배너*/
 .indextitle {
     margin-top: 108px;
@@ -66,6 +62,10 @@
 }
 
 /* 펀딩 메인진열 */
+#fundingListmain,#fundingEndListmain{
+    width: 100%;
+    padding: 0 11px;
+}
 
 .funding_list{
     display: flex;

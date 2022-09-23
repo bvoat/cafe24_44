@@ -140,12 +140,17 @@
   height: 100%;
   padding-left: 12px;
   color: #707070;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 300;
   box-sizing: border-box;
 }
-#mypageWrap .mypage_info_wrap .mypage_info_bottom .mypage_info_menu li > a > span {
+#mypageWrap .mypage_info_wrap .mypage_info_bottom .mypage_info_menu li span {
   font-size: 1.75rem;
+  font-weight: 600;
+  color: #292929;
+}
+#mypageWrap .mypage_info_wrap .mypage_info_bottom .mypage_info_menu li:nth-child(1) em {
+  font-size: 1.35rem;
   font-weight: 600;
   color: #292929;
 }

@@ -28,12 +28,14 @@ let methods = {
         /* 최상위 대 카테고리 생성 */
         //createdCategoryObjResult 객체의 1번 key value 가져와서 parentCategoryArray로 생성
         const parentCategoryArray = methods.categoryObj[1];
-        //parentCategoryArray로 반복하여 productCategoryArray,tagCategoryArray 배열에 각각 push (207은 All카테고리 570은 패션 카테고리 번호로 상품별과 가치태그 카테고리 구분점으로 지정)
+        //parentCategoryArray로 반복하여 productCategoryArray,tagCategoryArray 배열에 각각 push 
+        //207은 All카테고리 570은 패션 카테고리 번호로 상품별과 가치태그 카테고리 구분점으로 지정
+        //763부터 index spring menu 내 연결용 카테고리 
         parentCategoryArray.forEach((parent) => {
           if (207 < parent.cate_no && parent.cate_no < 570) {
             methods.tagCategoryArray.push(parent);
           } 
-          else if (parent.cate_no >= 570) {
+          else if (parent.cate_no >= 570 && parent.cate_no < 763) {
             methods.productCategoryArray.push(parent);
           }
         });

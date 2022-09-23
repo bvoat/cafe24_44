@@ -23,8 +23,7 @@
         <section class="mypage_info_bottom" module="myshop_asyncbankbook">
             <ul class="mypage_info_menu">
                 <li module="myshop_benefit">
-                    <a href="/myshop/buy_records/list_my.html?member_id={$member_id}" title="✍️ 작성하지 않은 리뷰 쓰기">✍️ 작성하지 않은 리뷰 쓰기<span><em class="buy_records_num"></em>건 쓸 수 있어요</span>
-                    </a>
+                    <a href="/myshop/buy_records/list_my.html?member_id={$member_id}" title="리뷰 작성하고 마일리지 적립하기">✍️ 리뷰 작성하고 마일리지 적립하기<em class="no_review_num">건의 상품이 리뷰를 기다려요!</em></a>
                 </li>
                 <li>
                     <a title="쿠폰 보러가기" href="/myshop/coupon/coupon.html">🎟 보유한 쿠폰<span>{$coupon_cnt}개</span>
@@ -138,7 +137,7 @@ const reciveVoterStamp = (voter_level, voterID, displayStampImg) => {
 
 
 /* 리뷰 수신 */
-const buy_records_num = document.querySelector(".buy_records_num");
+const no_review_num = document.querySelector(".no_review_num");
 
 const reciveNotWriteBuyRecords = (voter_identity) => {
     if(voter_identity != null){
@@ -151,9 +150,9 @@ const reciveNotWriteBuyRecords = (voter_identity) => {
         .then((response) => response.json())
         .then((response) => {
             if(response || response.cnt){
-                buy_records_num.insertAdjacentText("beforeend", response.cnt);
+                no_review_num.insertAdjacentText("afterbegin", response.cnt);
             } else {
-                buy_records_num.insertAdjacentText("beforeend", "0");
+                no_review_num.insertAdjacentText("afterbegin", "0");
             }
         })
         .catch((error) => {

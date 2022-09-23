@@ -233,13 +233,14 @@ function controlTopNavActive(page_path) {
   if (page_path.includes("product/list.html")) {
     //받아온 카테고리 네임 변수화
     const name = document.querySelector("#topNavControl").name;
+    console.log('name: ', name);
     //가치태그 카테고리면
-    if (name.includes("별")) {
+    if (name.includes("패션")|| name.includes("라이프")) {
+      document.querySelector(`#cate${name}`).classList.add("top_nav_active");
+    } else {
       //스토어 홈에 active
       document.querySelector("#index").classList.add("top_nav_active");
       //아니면 각각의 name 에 맞는 nav에 active
-    } else {
-      document.querySelector(`#cate${name}`).classList.add("top_nav_active");
     }
     //path가 크루면
   } else if (page_path.includes("crew/crew.html") || page_path.includes("crew/crewinfo.html")) {
