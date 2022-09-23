@@ -28,6 +28,7 @@ const makeHeadingTwo = (category, description) => {
     } else if(category == '지금할인중' || category == '무료배송' || category == '제로웨이스트' || category == '선물추천') {
       //메인 메뉴 카테고리일 때
       document.querySelector(".category_title").classList.add("displaynone");
+      document.querySelector("#subCategorySwiper").classList.add("displaynone");
     } else if (category == '패션' || category == '라이프' ) {
       //대 카테고리가 패션, 라이프인 경우
       category_title.insertAdjacentHTML('beforeend',`<h2>${description[category]}</h2>`)
