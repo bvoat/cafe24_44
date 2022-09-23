@@ -234,7 +234,7 @@ function controlTopNavActive(page_path) {
     //받아온 카테고리 네임 변수화
     const name = document.querySelector("#topNavControl").name;
     console.log('name: ', name);
-    //가치태그 카테고리면
+    //가치태그 카테고리면 
     if (name.includes("패션")|| name.includes("라이프")) {
       document.querySelector(`#cate${name}`).classList.add("top_nav_active");
     } else {
