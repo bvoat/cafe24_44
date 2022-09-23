@@ -125,21 +125,20 @@
                         height: 100%;
                         padding-left: 12px;
                         color: $bvt-darkgray;
-                        font-size: 1.3rem;
+                        font-size: 1.35rem;
                         font-weight: 300;
                         box-sizing: border-box;
-                    }
-                    span{
-                        font-size: 1.75rem;
-                        font-weight: 600;
-                        color: $bvt-black;
-                    }
-                    &:nth-child(1){
-                        em{
-                            font-size: 1.35rem;
+                        >span{
+                            font-size: 1.75rem;
                             font-weight: 600;
                             color: $bvt-black;
                         }
+                    }
+                    &:nth-child(1){
+
+                    }
+                    &:nth-child(2){
+
                     }
                 }
             }
