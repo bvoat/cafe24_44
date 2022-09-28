@@ -597,7 +597,7 @@ div.layerProgress {
     color: #292929;
 }
 
-.price_item::after {
+.realprice::after, .fixprice::after {
     display: inline-block;
     content: "원";
     font-size: 1.35rem;
