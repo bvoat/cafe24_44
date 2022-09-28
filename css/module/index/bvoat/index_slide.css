@@ -15,29 +15,23 @@
   width: 100%;
   max-width: 450px;
 }
-#indexBanner ul li:nth-child(1) {
-  background: url("/bvtIMG/banner/220706_slide_banner_crew.png") no-repeat;
+#indexBanner ul {
   width: 100%;
-  background-size: contain;
 }
-#indexBanner ul li:nth-child(2) {
-  background: url("/bvtIMG/banner/220921_slide_banner_wallet.png") no-repeat;
+#indexBanner ul li {
   width: 100%;
-  background-size: contain;
-}
-#indexBanner ul li:nth-child(3) {
-  background: url("/bvtIMG/banner/220921_slide_banner_zblack.png") no-repeat;
-  width: 100%;
-  background-size: contain;
 }
 #indexBanner ul li a {
   position: relative;
-  width: 100%;
-  max-width: 450px;
-  padding-top: 100%;
   display: block;
   width: 100%;
-  height: 100%;
+  max-width: 450px;
+  height: auto;
+}
+#indexBanner ul li a img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .banner_item_bullet {
