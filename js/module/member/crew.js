@@ -161,7 +161,7 @@ const postURLAsJson = (formData) => {
         const receivingOk = (id, state) => {
           $.ajax({
             type: "POST",
-            url: `https://${api_domain}.shop/customerinfo/receiving`,
+            url: `https://${api_domain}.shop/member/receiving`,
             data: {
               id: id,
               state: state,
