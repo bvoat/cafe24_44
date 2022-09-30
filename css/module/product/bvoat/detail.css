@@ -672,6 +672,9 @@
   overflow-x: hidden;
   padding: 0 11px;
 }
+#productDetailBottom .detail_swiper_wrap #tab0 {
+  padding: 0;
+}
 #productDetailBottom .detail_swiper_wrap #tab0 img {
   position: relative;
   width: 100% !important;
