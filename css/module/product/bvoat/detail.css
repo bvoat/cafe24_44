@@ -678,13 +678,12 @@
 #productDetailBottom .detail_swiper_wrap #tab0 img {
   position: relative;
   width: 100% !important;
-  height: auto !important;
   max-width: 450px;
   min-width: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform: translateZ(0);
 }
 #productDetailBottom .detail_swiper_wrap #tab0 iframe {
   position: relative;
