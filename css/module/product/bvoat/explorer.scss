@@ -1,0 +1,128 @@
+@charset "utf-8";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
+
+
+#explorer{
+    width: 100%;
+    max-width: 450px;
+    padding: 80px 0 120px;
+    /* 브랜드 카운트 */
+    #indexSupplyCnt {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 9px 0;
+        background: $bvt-point-yellow;
+        margin-bottom: 29px;
+
+        #joinbanner {
+            border: 0;
+            font-size: 1.7rem;
+            font-weight: 400;
+            margin: 6px 0 0 0;
+
+            em {
+                font-weight: 600;
+            }
+        }
+
+    }
+}
+#explorerTitle{
+    width: 100%;
+    max-width: 450px;
+    padding: 0 29px;
+    margin-bottom: 43px;
+
+    .explorer_banner {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border: $bvt-btn-border-gray;
+        border-radius: 5px;
+        padding: 18px 0;
+        margin-bottom: 25px;
+
+        h4 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        p {
+            font-size: 1.7rem;
+            font-weight: 400;
+        }
+    }
+
+    .spring_menu{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        li{
+            width: 23.5%;
+            max-width: 91px;
+            a{
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                img{
+                    width: 100%;
+                    margin-bottom: 9px;
+                }
+                span{
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                }
+            }
+            
+            
+        }
+    }
+}
+// 메인진열 공통
+#indexListmain{
+    width: 100%;
+    max-width:450px;
+    ul{
+        .index_list{
+            width: 100%;
+            max-width:450px;
+            >div{
+                h2{
+                    width: 100%;
+                    max-width: 450px;
+                    margin-bottom: 37px;
+                    img{
+                        width: 100%;
+                    object-fit: contain;
+                    }
+                }
+                >ul{
+                    .list_item {
+                        position: relative;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        width: calc(50% - 12px);
+                        max-width: 181px;
+                        margin-bottom: 27px;
+                
+                        //위시버튼
+                        @include wish-button(21px, 18.98px, 0, 0);
+                
+                    }
+                }
+            }
+        }
+    }
+
+}

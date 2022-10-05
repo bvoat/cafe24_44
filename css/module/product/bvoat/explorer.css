@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/* 공통 스타일 */
+/* 공통 스타일 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 멤버십 관련 */
+/* 멤버십 관련 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
+#explorer {
+  width: 100%;
+  max-width: 450px;
+  padding: 80px 0 120px;
+  /* 브랜드 카운트 */
+}
+#explorer #indexSupplyCnt {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 0;
+  background: #F5FF02;
+  margin-bottom: 29px;
+}
+#explorer #indexSupplyCnt #joinbanner {
+  border: 0;
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin: 6px 0 0 0;
+}
+#explorer #indexSupplyCnt #joinbanner em {
+  font-weight: 600;
+}
+
+#explorerTitle {
+  width: 100%;
+  max-width: 450px;
+  padding: 0 29px;
+  margin-bottom: 43px;
+}
+#explorerTitle .explorer_banner {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #E2E2E2;
+  border-radius: 5px;
+  padding: 18px 0;
+  margin-bottom: 25px;
+}
+#explorerTitle .explorer_banner h4 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+#explorerTitle .explorer_banner p {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+#explorerTitle .spring_menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#explorerTitle .spring_menu li {
+  width: 23.5%;
+  max-width: 91px;
+}
+#explorerTitle .spring_menu li a {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+#explorerTitle .spring_menu li a img {
+  width: 100%;
+  margin-bottom: 9px;
+}
+#explorerTitle .spring_menu li a span {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+#indexListmain {
+  width: 100%;
+  max-width: 450px;
+}
+#indexListmain ul .index_list {
+  width: 100%;
+  max-width: 450px;
+}
+#indexListmain ul .index_list > div h2 {
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 37px;
+}
+#indexListmain ul .index_list > div h2 img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#indexListmain ul .index_list > div > ul .list_item {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: calc(50% - 12px);
+  max-width: 181px;
+  margin-bottom: 27px;
+}
+#indexListmain ul .index_list > div > ul .list_item .wish {
+  position: absolute;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  bottom: 0;
+  right: 0;
+}
+#indexListmain ul .index_list > div > ul .list_item .wish button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+#indexListmain ul .index_list > div > ul .list_item .wish button img {
+  position: relative;
+  width: 41px;
+  height: 38.98px;
+  padding: 10px;
+  margin-top: 2.5px;
+}/*# sourceMappingURL=explorer.css.map */
