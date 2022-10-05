@@ -1,0 +1,72 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/product/bvoat/explorer.css)-->
+<article id="explorer">
+    <!--브랜드 카운트-->
+    <section id="indexSupplyCnt" class="index_user">
+        <div id="joinbanner" class="joinbanner">📦<em id="supplyCount"></em>개의 브랜드가 함께하는 중!</div>
+    </section>
+    <!--브랜드 카운트-->
+    <!-- 둘러보기 타이틀 -->
+    <section id="explorerTitle">
+        <h1 class="displaynone">비보트 둘러보기</h1>
+        <div class="explorer_banner">
+            <h4>MD 추천 제품 무조건 무료배송</h4>
+            <p>열심히 소개할테니 자주자주 둘러보세요!</p>
+        </div>
+        <ul class="spring_menu">
+            <li class="menu_item"><a href="#"><img src="/bvtIMG/icon/index_recommend.png" /><span>MD 추천</span></a></li>
+            <li class="menu_item"><a href="#"><img src="/bvtIMG/icon/index_ranking.png" /><a href="/product/best.html"><span>인기 순위</span></a></li>
+            <li class="menu_item"><a href="#"><img src="/bvtIMG/icon/index_realtime.png" /><a href="/product/realtime.html"><span>방금 구매한</span></a></li>
+            <li class="menu_item"><a href="#"><img src="/bvtIMG/icon/index_gift.png" /><a href="/product/list.html?cate_no=764"><span>선물 추천</span></a></li>
+        </ul>
+    </section>
+    <!-- 둘러보기 타이틀 -->
+    <section id="indexListmain">
+        <ul>
+            <!-- 주간 상품 구좌1 -->
+            <li class="index_list">
+                <div class="swiper_container listmain_1" module="product_listmain_79">
+                <h2><img src="{$category_title_img}" alt="{$category_title_text}" /></h2>
+
+                    <!--
+                    $count = 10
+                    $basket_result = /product/add_basket.html
+                    $basket_option = /product/basket_option.html
+                    -->
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="list_item_progress"></div>
+                </div>
+            </li>
+            <!-- 주간 상품 구좌2 -->
+            <li class="index_list">
+                <div class="listmain_weekly swiper_container listmain_2" module="product_listmain_84">
+                <h2><img src="{$category_title_img}" alt="{$category_title_text}" /></h2>
+
+                    <!--
+                    $count = 10
+                    $basket_result = /product/add_basket.html
+                    $basket_option = /product/basket_option.html
+                    -->
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="list_item_progress"></div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+      
+</article>
+
+<script>
+    //주간 상품 : Weekly Special 스와이퍼
+var weeklySwiper = new Swiper(".listmain_weekly", {
+  spaceBetween: 12,
+  slidesPerView: "auto",
+  slidesPerColumn: 1,
+  slidesPerColumnFill: "row",
+  pagination: {
+    el: ".list_item_progress",
+    type: "progressbar",
+  },
+});
+</script>
