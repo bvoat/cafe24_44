@@ -1,26 +1,13 @@
-/* 슬라이더 */
-var swiper = new Swiper(".crew_benefit_img_wrap", {
-  slidesPerView: "auto",
-  spaceBetween: 8,
-  freeMode: true,
-  loop: true,
-  speed: 1600,
-  autoplay: {
-    enabled: true,
-    delay: 1,
-    disableOnInteraction: false,
-    autoplayDisableOnInteraction: false,
-  },
-});
-var swiper = new Swiper(".crew_method_img_wrap", {
-  slidesPerView: "auto",
-  spaceBetween: 12,
-  pagination: {
-    el: ".img_pagination",
-    clickable: true,
-    type: "progressbar",
-  },
-});
+  /* 슬라이더 */
+  var swiper = new Swiper(".crew_method_img_wrap", {
+    slidesPerView: 2.1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".img_pagination",
+      clickable: true,
+      type: "progressbar",
+    },
+  });
 /* aos 초기화 */
 AOS.init();
 
