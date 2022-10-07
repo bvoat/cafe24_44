@@ -298,18 +298,6 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.index_list .thumb .icon {
-  position: absolute;
-  width: 50px;
-  height: 20.5px;
-  border-radius: 4px;
-  top: 4.6px;
-  left: 4.6px;
-}
-.index_list .thumb .icon img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 .index_list .thumb .wish {
   position: absolute;
   width: auto;
@@ -334,6 +322,12 @@
   height: 38.98px;
   padding: 10px;
   margin-top: 2.5px;
+}
+.index_list .icon {
+  margin-top: 1%;
+}
+.index_list .icon {
+  height: 25px !important;
 }
 
 /* 메인 진열 공통 */
@@ -794,19 +788,6 @@
   width: 7px;
   height: 11px;
   margin-left: 4px;
-}
-
-.icon {
-  position: absolute;
-  width: 50px;
-  height: 20.5px;
-  border-radius: 4px;
-  top: 4.6px;
-  left: 4.6px;
-}
-.icon img {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 /* 더보기 버튼 */
