@@ -1,0 +1,230 @@
+@charset "utf-8";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
+
+#bvoatIntroduce{
+    width: 100%;
+    max-width: 450px;
+    padding: 80px 0 0 0; //top_nav hide
+    text-align: center;
+
+    //전체 타이틀 공통
+    .introduce_title {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 28px;
+        em {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        h3 {
+            font-size: 3.5rem;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 1.7rem;
+            font-weight: 300;
+            line-height: 2.8rem;
+            margin-top: 27px;
+        }
+    }
+
+    //전체 섹션 공통
+    >section{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        max-width: 450px;
+    }
+    #bvoatBeginning{
+        background: url("/bvtIMG/introduce/introduce_background_paper.png") no-repeat center;
+        background-size: cover;
+        padding: 18px 29px 63px;
+        .introduce_title{
+            em{
+                color: $bvt-blue;
+            }
+                &::before{
+                    display: block;
+                    width: 180px;
+                    height: 180px;
+                    content: "";
+                    background: url('/bvtIMG/introduce/introduce_icon_trashcan.png') no-repeat center;
+                    background-size: cover;
+                    margin-bottom: 11px;
+                }
+        }
+        .introduce_desc{
+            width: 100%;
+            ul{
+                li{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: $bvt-input-border;
+                    border-color: $bvt-darkgray;
+                    background: $bvt-white;
+                    font-size: 1.7rem;
+                    font-weight: 300;
+                    line-height: 2.8rem;
+                    padding: 18px 5px;
+                    margin-bottom: 10px;
+                    @media (max-width: 345px) {
+                        font-size: 1.5rem !important;
+                    }
+                }
+            }
+            p {
+                font-size: 1.7rem;
+                font-weight: 300;
+                line-height: 2.8rem;
+                margin-top: 37px;
+            }
+        }
+    }
+    #bvoatPromise{
+        padding: 53px 29px 82px;
+        .introduce_title{
+            em{
+                color: $bvt-blue;
+            }
+                &::before{
+                    display: block;
+                    width: 125px;
+                    height: 125px;
+                    content: "";
+                    background: url('/bvtIMG/introduce/introduce_icon_light.png') no-repeat center;
+                    background-size: cover;
+                    margin-bottom: 24px;
+                }
+        }
+        .introduce_desc{
+            width: 100%;
+            ul{
+                li{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: $bvt-btn-border;
+                    border-radius: 55px;
+                    background: $bvt-white;
+                    font-size: 1.7rem;
+                    font-weight: 300;
+                    line-height: 2.8rem;
+                    padding: 18px 10px;
+                    margin-bottom: 9px;
+                    color: $bvt-blue;
+                    @media (max-width: 345px) {
+                        font-size: 1.5rem !important;
+                    }
+                    &:nth-child(4){
+                        background: $bvt-blue;
+                        font-weight: 500;
+                        color: $bvt-white;
+                    }
+                }
+            }
+            p {
+                font-size: 1.7rem;
+                font-weight: 300;
+                line-height: 2.8rem;
+                margin-top: 44px;
+            }
+        }
+    }
+    #bvoatContact{
+        background: $bvt-blue;
+        color: $bvt-white;
+        padding: 63px 29px 120px;
+        .introduce_title{
+                &::before{
+                    display: block;
+                    width: 125px;
+                    height: 125px;
+                    content: "";
+                    background: url('/bvtIMG/introduce/introduce_icon_basket.png') no-repeat center;
+                    background-size: cover;
+                    margin-bottom: 31px;
+                }
+        }
+        .introduce_desc{
+            width: 100%;
+            background: $bvt-white;
+            border-radius: 9px;
+            
+            ul{
+                li{
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.7rem;
+                    font-weight: 600;
+                    line-height: 2.8rem;
+                    color: $bvt-black;
+
+                    &:nth-child(1){
+                        padding: 15px 0 0 0;
+                        &::before{
+                            display: block;
+                            width: 83px;
+                            height: 83px;
+                            content: "";
+                            background: url('/bvtIMG/introduce/introduce_icon_mail.png') no-repeat center;
+                            background-size: cover;
+                        }
+
+                        a{
+                            font-weight: 300;
+                        }
+                    }
+
+                    &:nth-child(2){
+                        padding: 35px 0 50px;
+                        &::before{
+                            display: block;
+                            width: 83px;
+                            height: 83px;
+                            content: "";
+                            background: url('/bvtIMG/introduce/introduce_icon_check.png') no-repeat center;
+                            background-size: cover;
+                        }
+
+                        a{
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+        #moveTop {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: $bvt-white;
+            background: none;
+            animation: up-and-down-item 1.2s ease-in-out infinite;
+            svg{
+                width: 34.88px;
+                height: 34.88px;
+                margin: 51px 0 20.1px;
+            }
+        }
+    }
+}
+
+
+
+
+@include up-and-down-keyframe(-3%, 4%);

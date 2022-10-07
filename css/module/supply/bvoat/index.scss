@@ -1,0 +1,16 @@
+@charset "utf-8";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
+
+#supplyMinishop{
+    width: 100%;
+    max-width: 450px;
+    
+    #supplyMinishopTitle{
+        width: 100%;
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}

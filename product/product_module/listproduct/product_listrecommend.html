@@ -13,7 +13,6 @@
                     <div class="wish {$list_wish_icon|display}">
                         <button class="gdVote">{$list_wish_icon}</button>
                     </div>
-                    <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
                 </div>
                 <ul class="desc">
                     <li class="brand">{$prd_brand}</li>
@@ -21,6 +20,7 @@
                     <li class="product_name"><a href="/product/detail.html{$param}">{$product_name|striptag}</a></li>
                     <!--@import(../list_price_wrap.html)-->
                 </ul>
+                <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
             </div>
         </li>
         <li class="listrecommend_list swiper-slide" id="anchorBoxId_{$product_no}">
@@ -39,6 +39,7 @@
                     <!--@import(../list_price_wrap.html)-->
                 </ul>
             </div>
+            <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
         </li>
     </ul>
     <div class="swiper-pagination product_list_pagination"></div>

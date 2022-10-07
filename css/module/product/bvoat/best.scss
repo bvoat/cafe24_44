@@ -267,13 +267,23 @@
             width: 31.9%;
             max-width: 130px;
             margin-bottom: 27px;
-            
+            //아이콘 컨트롤
+            .icon{
+                display: none;
+            }
             &:nth-child(1), &:nth-child(2){
                 width: calc(50% - 5px);
                 max-width: 200px;
                 margin-bottom: 27px;
                 //위시버튼
                 @include wish-button(21px, 18.98px, 0, 0);
+
+                //아이콘 컨트롤
+                .icon{
+                    display: block;
+                    height: 25px !important;
+                    margin-top: 10px;
+                }
             }
             &:nth-child(n+9){
                 display: none;
@@ -385,6 +395,12 @@
             @include wish-button(21px, 18.98px, 0, 0);
             &:nth-child(n+5){
                 display: none;
+            }
+            //아이콘 컨트롤
+            .icon{
+                display: block;
+                height: 25px !important;
+                margin-top: 10px;
             }
         }
     }

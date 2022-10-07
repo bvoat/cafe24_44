@@ -16,7 +16,6 @@
                 <div class="wish {$list_wish_icon|display}">
                     <button class="gdVote">{$list_wish_icon}</button>
                 </div>
-                <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
             </div>
             <ul class="desc">
                 <li class="brand">{$prd_brand}</li>
@@ -24,6 +23,7 @@
                 <li class="product_name"><a href="/product/detail.html{$param}">{$product_name}</a></li>
                 <!--@import(../list_price_wrap.html)-->
             </ul>
+            <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
         </li>
         <li class="listnormal_list" id="anchorBoxId_{$product_no}">
             <div class="thumb">
@@ -31,14 +31,14 @@
                 <div class="wish {$list_wish_icon|display}">
                     <button class="gdVote">{$list_wish_icon}</button>
                 </div>
-                <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
             </div>
             <ul class="desc">
                 <li class="brand">{$prd_brand}</li>
                 <li class="summary">{$summary_desc}</li>
-                <li class="product_name"><a href="/product/detail.html{$param}">{$product_name|striptag}</a></li>
+                <li class="product_name"><a href="/product/detail.html{$param}">{$product_name}</a></li>
                 <!--@import(../list_price_wrap.html)-->
             </ul>
+            <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
         </li>
     </ul>
 </section>

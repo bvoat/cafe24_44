@@ -62,3 +62,16 @@
     }
 
 }
+//하단 아이콘 신버전
+.icon{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 10px;
+    height: 25px;
+    img{
+        width: auto;
+        height: inherit;
+        margin-right: 5px;
+        object-fit: cover;
+    }
+}

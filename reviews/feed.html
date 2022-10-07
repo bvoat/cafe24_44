@@ -1,0 +1,148 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/reviews/bvoat/feed.css)-->
+<section id="reviewsFeedWrap">
+    <ul class="reviews_feed_list">
+    </ul>
+    <p class="spinner displaynone"></p>
+</section>
+
+<script>
+
+    // 마지막 자식요소에 옵저버 붙이기
+    let reviewList = document.querySelector('.reviews_feed_list');
+    let lastItem;
+    //페이지 초기화
+    let page;
+    //loading spinner 설정
+    const loading = (condition) => {
+        const spinner = document.querySelector(".spinner");
+        condition ? spinner.classList.remove("displaynone") : spinner.classList.add("displaynone")
+    }
+    //옵저버
+
+    const intersectionObserver = new IntersectionObserver(async (entries, observer) => {
+        console.log("현재 페이지", page);
+        // 마지막 요소가 다 보여진게 아니라면 return
+        if (!entries[0].isIntersecting) return;
+        await page++;
+        await unobserveInfinityScroll(page);
+    }, {
+        threshold: 0.5
+    });
+
+    //최초
+    function getBeginningReviewData() {
+        page = 1;
+        console.log('최초 페이지 page: ', page);
+        //로딩 스피너 시작
+        loading(true);
+        fetch(`https://${api_domain}.shop/buy_records/data?page=${page}&mode=ajax`, {
+            method: "GET",
+        })
+            .then((response) => response.json())
+            .then((response) => {
+                //로딩 스피너 종료
+                loading(false);
+                const result = response.data;
+                result.forEach((data) => {
+                    document.querySelector(".reviews_feed_list")
+                        .insertAdjacentHTML("beforeend",
+                            `
+                            <li class="reviews_item">
+                    <ul class="userinfo_wrap">
+                        <li class="userimg"><img src="https://bvoat.shop/images/new_img/ico__11.png"></li>
+                        <li class="usernickname">${data.nickname}</li>
+                        <li class="userlevel">${data.level}</li>
+                    </ul>
+                    <div class="reviews_wrap">
+                        <div class="reviews_thumb_box thumb">
+                            <a href="#">
+                                <img src="https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com/${data.imgs[0].img_dir}/${data.imgs[0].img_name}">
+                                <em><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 12">
+                                    <path fill="#022CFF" d="m6.12.94 1.23 2.47c.09.17.22.38.41.41l2.67.41c.49.07.76.69.41 1.03L8.8 7.1a.81.81 0 0 0-.2.61l.6 2.68c.1.48-.59.84-1.02.61L5.71 9.78a.35.35 0 0 0-.42 0l-2.46 1.23A.57.57 0 0 1 2 10.4l.4-2.68a.81.81 0 0 0-.2-.61L.16 5.26c-.35-.34-.08-.96.4-1.03l2.68-.41c.2-.03.33-.24.41-.41L4.88.94a.74.74 0 0 1 1.24 0Z"/>
+                                    </svg>
+                                    <span>${data.rate}</span>
+                                </em>
+                            </a>
+                        </div>
+                    </div>
+                </li>`)
+                });
+            })
+            .then(() => {
+                let reviewListItems = reviewList.children;
+                lastItem = reviewListItems[reviewListItems.length - 1];
+                //최초 옵저버 시작
+                intersectionObserver.observe(lastItem);
+                page++;
+            })
+    }
+    window.addEventListener("load", getBeginningReviewData());
+
+
+    // fetch 보내기 전 작업 (unobserve)
+    async function unobserveInfinityScroll(page) {
+        // 통신 시작할 때 관찰 끄기
+        await intersectionObserver.unobserve(lastItem);
+        await loadMoreItem(page);
+
+    };
+
+    //추가 아이템 부르기
+    async function loadMoreItem(page) {
+        //로딩 스피너 시작
+        loading(true);
+        try {
+            await fetch(`https://bvoat.shop/buy_records/data?page=${page}&mode=ajax`, {
+                method: "GET",
+            })
+                .then((response) => response.json())
+                .then((response) => {
+                    //성공하면
+                    //로딩 스피너 종료
+                    loading(false);
+                    const result = response.data;
+                    result.forEach((data) => {
+                        document.querySelector("ul.reviews_feed_list")
+                            .insertAdjacentHTML("beforeend",
+                                `
+                <li class="reviews_item">
+                    <ul class="userinfo_wrap">
+                        <li class="userimg"><img src="https://bvoat.shop/images/new_img/ico__11.png"></li>
+                        <li class="usernickname">${data.nickname}</li>
+                        <li class="userlevel">${data.level}</li>
+                    </ul>
+                    <div class="reviews_wrap">
+                        <div class="reviews_thumb_box thumb">
+                            <a href="#">
+                                <img src="https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com/${data.imgs[0].img_dir}/${data.imgs[0].img_name}">
+                                <em><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 12">
+                                    <path fill="#022CFF" d="m6.12.94 1.23 2.47c.09.17.22.38.41.41l2.67.41c.49.07.76.69.41 1.03L8.8 7.1a.81.81 0 0 0-.2.61l.6 2.68c.1.48-.59.84-1.02.61L5.71 9.78a.35.35 0 0 0-.42 0l-2.46 1.23A.57.57 0 0 1 2 10.4l.4-2.68a.81.81 0 0 0-.2-.61L.16 5.26c-.35-.34-.08-.96.4-1.03l2.68-.41c.2-.03.33-.24.41-.41L4.88.94a.74.74 0 0 1 1.24 0Z"/>
+                                    </svg>
+                                    ${data.rate}
+                                </em>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                `)
+                    });
+                    intersectionObserver.disconnect(lastItem);
+                })
+                .then((response) => {
+                    //페이지 1올리기
+                    page++;
+                    //감시하는 node 수정
+                    reviewListItems = reviewList.children;
+                    lastItem = reviewListItems[reviewListItems.length - 2];
+                    //옵저버 재시작
+                    intersectionObserver.observe(lastItem);
+                })
+        } catch (error) {
+            console.log('error:', error);
+            //에러인 경우 다시 시도;
+            loadMoreItem(page)
+        }
+    }
+
+</script>

@@ -67,6 +67,17 @@
   margin-bottom: 20px;
 }
 
+.icon {
+  height: 30px;
+}
+.icon img {
+  width: auto;
+  height: inherit;
+  margin-right: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .thumb {
   position: relative;
   width: 100%;
@@ -79,24 +90,12 @@
   border-radius: 2px;
   font-size: 0;
 }
-.thumb > a > img {
+.thumb > a img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.thumb .icon {
-  position: absolute;
-  width: 50px;
-  height: 20.5px;
-  border-radius: 4px;
-  top: 4.6px;
-  left: 4.6px;
-}
-.thumb .icon img {
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -395,6 +394,9 @@
   max-width: 130px;
   margin-bottom: 27px;
 }
+.weekbest > ul .list_item .icon {
+  display: none;
+}
 .weekbest > ul .list_item:nth-child(1), .weekbest > ul .list_item:nth-child(2) {
   width: calc(50% - 5px);
   max-width: 200px;
@@ -424,6 +426,11 @@
   height: 38.98px;
   padding: 10px;
   margin-top: 2.5px;
+}
+.weekbest > ul .list_item:nth-child(1) .icon, .weekbest > ul .list_item:nth-child(2) .icon {
+  display: block;
+  height: 25px !important;
+  margin-top: 10px;
 }
 .weekbest > ul .list_item:nth-child(n+9) {
   display: none;
@@ -571,6 +578,11 @@
 }
 .weektag > ul .list_item:nth-child(n+5) {
   display: none;
+}
+.weektag > ul .list_item .icon {
+  display: block;
+  height: 25px !important;
+  margin-top: 10px;
 }
 .weektag > .paginate_moreview {
   display: flex;

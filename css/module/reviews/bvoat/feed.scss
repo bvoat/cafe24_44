@@ -1,0 +1,102 @@
+@charset "utf-8";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
+
+
+#reviewsFeedWrap{
+    padding: 80px 0;
+    background: #22222250;
+    font-size: 15px;
+    ul.reviews_feed_list {
+        width: 100%;
+        max-width: 450px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 23px;
+        li.reviews_item{
+            width: 50%;
+            background-color: pink;
+            list-style: none;
+            text-align: center;
+            color: black;
+            border: 1px solid red;
+          //유저 정보
+            ul.userinfo_wrap{
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: flex-start;
+              align-items: center;
+              width: 100%;
+              margin-bottom: 12px;
+
+                .userimg{
+                  max-width: 30px;
+                  margin-right: 8px;
+                  >img{
+                    width: 100%;
+                  }
+                }
+                .usernickname{
+                  max-width: 102px;
+                  font-size: 1.6rem;
+                  text-align: left;
+
+                  @include ellipsis(1, 3rem);
+                  line-height: normal; 
+                  height: auto;
+                }
+
+                .userlevel{
+                  display: block;
+                  width: 31px;
+                  height: 9px;
+                  background: url('https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/icon/crew_icon.png') no-repeat center;
+                  background-size: contain;
+                  text-indent: -9999px;
+                  overflow: hidden;
+                }
+            }
+            //리뷰 정보
+            div.reviews_wrap{
+              width: 100%;
+              overflow: hidden;
+              @include product-thumb(0px, 0px, 0px, 0px);
+              margin-bottom: 12px;
+              em{
+                float: right;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                width: 51px;
+                height: 23px;
+                border-radius: 100px;
+                background: transparentize($bvt-whitegray, 0.5);
+                margin: 0 12px 10px 0;
+                svg{
+                  width: 11px;
+                  height: 10.47px;
+                }
+                span{
+                  font-size: 1.3rem;
+                  font-weight: 400;
+                  color: $bvt-blue;
+                  margin-left: 2px;
+                }
+              }
+            }
+        }
+
+      }
+      
+
+      .spinner{
+        width: 100%;
+        height: 35px;
+        margin: 25px 0;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='0 0 100 100'%3E%3Ccircle cx='20' cy='50' r='8' fill='%23022cff'%3E%3Canimate attributeName='opacity' begin='.1' dur='1s' repeatCount='indefinite' values='0;1;0'/%3E%3C/circle%3E%3Ccircle cx='50' cy='50' r='8' fill='%23022cff'%3E%3Canimate attributeName='opacity' begin='.2' dur='1s' repeatCount='indefinite' values='0;1;0'/%3E%3C/circle%3E%3Ccircle cx='80' cy='50' r='8' fill='%23022cff'%3E%3Canimate attributeName='opacity' begin='.3' dur='1s' repeatCount='indefinite' values='0;1;0'/%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+        background-size: auto;
+      }
+}

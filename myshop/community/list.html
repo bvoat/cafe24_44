@@ -1,0 +1,35 @@
+<!--@layout(/layout/basic/layout.html)-->
+  <style>
+    section .box {height: 500px; background: red;}
+    section .box p {margin: 0; color: white; padding: 80px 20px;}
+    section .box:nth-child(2n) {background: blue;}
+  </style>
+
+<body>         
+  <h1>무한스크롤</h1>
+  <section>
+    <div class="box">
+      <p>
+        1번째 블록
+      </p>
+    </div>
+    <div class="box">
+      <p>
+        2번째 블록
+      </p>
+    </div>
+  </section>
+  <script>
+    var count = 2;
+    window.onscroll = function(e) {
+      console.log(window.innerHeight , window.scrollY,(document.body.offsetHeight - 100))
+      if((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) { 
+        setTimeout(function(){
+          var addContent = document.createElement("div");
+          addContent.classList.add("box")
+          addContent.innerHTML = `<p>${++count}번째 블록</p>`
+          document.querySelector('section').appendChild(addContent);
+        }, 1000)  
+      }
+    }
+  </script>
