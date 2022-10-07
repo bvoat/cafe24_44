@@ -378,6 +378,10 @@
   height: 3.3rem;
   margin-bottom: 20px;
 }
+#searchResultProductList .icon {
+  height: 25px;
+  margin-top: 5%;
+}
 
 .page-pagination {
   display: flex;

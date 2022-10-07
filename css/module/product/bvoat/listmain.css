@@ -881,6 +881,7 @@
   display: flex;
   flex-flow: row nowrap;
   height: 25px;
+  margin-top: 5%;
 }
 .icon img {
   width: auto;

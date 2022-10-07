@@ -738,7 +738,9 @@
             padding: 0 11px;
         }
         #tab0 {
-            padding: 0;
+            width: 100%;
+            max-width: 450px;
+            padding: 0 !important;
             img {
                 position: relative;
                 //220824 이미지 태그 내 inline으로 width 1924 height 설정 들어가서 (원인 모름) important 삽입
@@ -749,6 +751,7 @@
                 image-rendering: -webkit-optimize-contrast;
                 backface-visibility: hidden;
                 transform: translateZ(0);
+                object-fit: cover;
             }
 
             iframe {

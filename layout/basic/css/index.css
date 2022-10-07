@@ -20,6 +20,8 @@
   /* 메인 소개/카카오 배너 */
   /* 메인 소개/카카오 배너 */
   /* 메인진열 */
+  /* 둘러보기 이동 */
+  /* 둘러보기 이동 */
   /* 메인진열 */
 }
 #bvtHome #indexUserCnt {
@@ -119,9 +121,7 @@
 }
 #bvtHome #indexListmain {
   padding: 0 29px;
-  margin-bottom: 60px;
-  /* 둘러보기 이동 */
-  /* 둘러보기 이동 */
+  margin-bottom: 0;
 }
 #bvtHome #indexListmain div.listmain {
   padding: 0;
@@ -241,19 +241,21 @@
 #bvtHome #indexListmain div.listmain ul.prdList > li .icon img {
   margin-right: 8px;
 }
-#bvtHome #indexListmain .linktolookaround {
+#bvtHome .linktolookaround {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: calc(100% - 58px);
+  margin: 0 auto;
   background: #F2F2F2;
   border-radius: 9px;
   padding: 21px 27px;
   font-size: 1.7rem;
   font-weight: 600;
+  box-sizing: border-box;
 }
-#bvtHome #indexListmain .linktolookaround svg {
+#bvtHome .linktolookaround svg {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -262,7 +264,7 @@
   height: 1.1rem;
 }
 @media (max-width: 360px) {
-  #bvtHome #indexListmain .linktolookaround {
+  #bvtHome .linktolookaround {
     font-size: 1.55rem;
   }
 }/*# sourceMappingURL=index.css.map */

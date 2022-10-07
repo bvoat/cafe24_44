@@ -128,7 +128,7 @@
     /* 메인진열 */
     #indexListmain {
         padding: 0 29px;
-        margin-bottom: 60px;
+        margin-bottom: 0;
 
         div.listmain {
             padding: 0;
@@ -191,19 +191,22 @@
             }
         }
 
+    }
+
         /* 둘러보기 이동 */
         .linktolookaround {
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
-            width: 100%;
+            width: calc(100% - 58px);
+            margin: 0 auto;
             background: $bvt-whitegray;
             border-radius: 9px;
             padding: 21px 27px;
             font-size: 1.7rem;
             font-weight: 600;
-
+            box-sizing: border-box;
             svg {
                 display: flex;
                 flex-flow: row nowrap;
@@ -217,10 +220,7 @@
                 font-size: 1.55rem;
             }
         }
-
         /* 둘러보기 이동 */
-
-    }
 
     /* 메인진열 */
 

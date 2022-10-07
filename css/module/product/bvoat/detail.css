@@ -673,7 +673,9 @@
   padding: 0 11px;
 }
 #productDetailBottom .detail_swiper_wrap #tab0 {
-  padding: 0;
+  width: 100%;
+  max-width: 450px;
+  padding: 0 !important;
 }
 #productDetailBottom .detail_swiper_wrap #tab0 img {
   position: relative;
@@ -684,6 +686,8 @@
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   transform: translateZ(0);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #productDetailBottom .detail_swiper_wrap #tab0 iframe {
   position: relative;
