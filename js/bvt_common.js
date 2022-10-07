@@ -4,7 +4,7 @@
  * 함수 외부에 DOM 관련 변수 선언 금지
  * layout.html에 script 태그로 삽입
  */
-
+ 
 /* 환경변수 확인 */
 //환경변수 세팅
 let api_domain;
