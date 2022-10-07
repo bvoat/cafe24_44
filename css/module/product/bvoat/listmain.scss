@@ -146,9 +146,6 @@
     // 이미지 정사각형 공통 (mixin)
     // thumb 부모에게 width 정해줘야 함!
     @include product-thumb(21px, 18.98px, 0, 0);
-    .icon{
-        height: 25px !important;
-    }
 }
 /* 메인 진열 공통 */
 
@@ -713,7 +710,18 @@
 }
 
 
-
+//하단 아이콘 신버전
+.icon{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 25px;
+    img{
+        width: auto;
+        height: inherit;
+        margin-right: 5px;
+        object-fit: cover;
+    }
+}
 /* 개별 아이템 */
 
     

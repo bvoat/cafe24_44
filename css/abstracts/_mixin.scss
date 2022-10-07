@@ -126,20 +126,16 @@
             }
         }
 
-        //상품 안내 아이콘
-        .icon {
-            position: absolute;
-            width: 50px;
-            height: 20.5px;
-            border-radius: 4px;
-            top: 4.6px;
-            left: 4.6px;
-
-            img {
-                object-fit: cover;
-            }
-        }
         @include wish-button($width, $height, $bottom, $right);
+    }
+
+    //상품 아이콘 
+    //.icon에 높이 주어야 인식
+    .icon{
+        img{
+            height: inherit;
+            object-fit: cover;
+        }
     }
 }
 //상품 목록 하단 정보

@@ -28,7 +28,6 @@
   border: 0;
   font-size: 1.7rem;
   font-weight: 400;
-  margin: 6px 0 0 0;
 }
 #explorer #indexSupplyCnt #joinbanner em {
   font-weight: 600;
@@ -92,16 +91,20 @@
 #indexListmain ul .index_list {
   width: 100%;
   max-width: 450px;
+  margin-bottom: 0;
 }
-#indexListmain ul .index_list > div h2 {
+#indexListmain ul .index_list > div {
+  padding: 0 29px;
+}
+#indexListmain ul .index_list > div .banner {
   width: 100%;
   max-width: 450px;
   margin-bottom: 37px;
 }
-#indexListmain ul .index_list > div h2 img {
+#indexListmain ul .index_list > div .banner a, #indexListmain ul .index_list > div .banner a > img {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #indexListmain ul .index_list > div > ul .list_item {
   position: relative;
@@ -137,4 +140,7 @@
   height: 38.98px;
   padding: 10px;
   margin-top: 2.5px;
+}
+#indexListmain ul .index_list > div .list_item_progress {
+  margin: 0 0 69.7px 0;
 }/*# sourceMappingURL=explorer.css.map */

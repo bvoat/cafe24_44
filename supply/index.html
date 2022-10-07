@@ -1,54 +1,76 @@
 <!--@layout(/layout/basic/layout.html)-->
-<!--@css(/cssbvt/bvt_supply.css)-->
+<!--@css(/css/module/supply/bvoat/index.css)-->
 
 
-<div class="wrapper margin-header ">
-    <div module="Mall_SupplyMainimage">
+<article id="supplyMinishop">
+    <section id="supplyMinishopTitle" module="Mall_SupplyMainimage">
         {$supply_main_image}
+    </section>
+
+<!-- 미니샵 상품 검색 -->
+<section module="Mall_SupplySearch">
+    <!--@css(/css/module/mall/supplySearch.css)-->
+    <fieldset>
+        <legend class="title">샵 상품 검색</legend>
+        {$form.searchSupply}<input type="image" src="http://img.echosting.cafe24.com/skin/base_ko_KR/layout/btn_search.gif" alt="검색" onclick="{$action_search_submit}" /></fieldset>
+</section>
+<!-- 미니샵 상품 검색 -->
+<!-- 공급사 상품 카테고리 -->
+<div module="Layout_CategorySupplyList"  id="category">
+    <!--@css(/css/module/layout/categorySupplyList.css)-->
+    <div class="mainDirect {$main_title_display|display}"><a href="{$main_url}">{$main_title}</a></div>
+    <div class="position" id="{$category_list}">
+        <ul>
+            <li module="Layout_Second" id='{$category_no}'><a href='{$category_url}' class="second">{$category_name}</a>
+                <ul module="Layout_Third">
+                    <li id='{$category_no}' class="depth2"  onmouseover="{$sub_category_show}" onmouseout="{$sub_category_hide}"><a href='{$category_url}'>{$category_name}</a>
+                        <div class='sub-category' style='display:none;'>
+                            <ul>
+                                <li module="Layout_Fourth" id='{$category_no}'><a href='{$category_url}'>{$category_name}</a>
+                                    <ul module="Layout_Fifth">
+                                        <li  id='{$category_no}'><a href='{$category_url}'>{$category_name}</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </div>
-
-
-    <div class="padding2" module="product_normalpackage">
-        <!--@css(/css/module/product/listnormal.css)-->
-        <!--@css(/cssbvt/module/product/listnormal.css)-->
-
-        <!-- <div module="product_normalmenu">
-            <div class="bh-type">
-                <select id="selArray" name="selArray" module="product_Orderby">
-                    <option value="{$param}">{$sort_name}</option>
-                    <option value="{$param}">{$sort_name}</option>
-                </select>
-            </div>
-        </div> -->
-
-        <div class="bvt-listnormal-box" module="product_listnormal">
-            <!--
-                $count = 8
-                    ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
-                    ※ 진열된 상품이 많으면, 쇼핑몰에 부하가 발생할 수 
-                $moreview = yes
-                $basket_result = /product/add_basket.html
-                $basket_option = /product/basket_option.html
-                $cache = yes
-                $type = moreview
-            -->
-            <!--@import(/layoutbvt/listnormal.html)-->
-        </div>
-    </div>
-
-
-
-    <div module="product_listmore">
-        <!--@css(/css/module/product/productMore.css)-->
-        <!--@css(/cssbvt/module/product/productMore.css)-->
-
-        <a href="#none" onclick="{$more_action} refresh_discount();">
-            더보기(<span id="more_current_page">{$current_page}</span>/<span
-                id="more_total_page">{$total_page}</span>)<span class="more_down"></span>
-        </a>
-    </div>
-
 </div>
+<!-- 공급사 상품 카테고리 -->
+    <section module="product_normalpackage">
+        <!-- 추천 상품 진열 -->
+        <!--@import(/product/product_module/listproduct/product_listrecommend.html)-->
+        <!-- 추천 상품 진열 -->
+        <!-- 상품 정렬 select-->
+        <section id="product_normalmenu" module="product_normalmenu">
+            <select id="selArray" name="selArray" module="product_Orderby">
+                <option value="{$param}">{$sort_name}</option>
+                <option value="{$param}">{$sort_name}</option>
+            </select>
+            <label for="selArray">▾</label>
+        </section>
+        <!-- 상품 정렬 select -->
+
+        <!-- 상품 목록 -->
+        <!--@import(/product/product_module/listproduct/product_list.html)-->
+        <!-- 상품 목록 -->
+
+        <!-- 더보기 버튼 -->
+        <div id="product_listmore" module="product_listmore">
+            <button class="moreview_btn" onclick="{$more_action}">
+                가치소비 더 보기
+            </button>
+        </div>
+        <!-- 더보기 버튼 -->
+    </section>
+
+
+
+</article>
 
 <!-- 공급사:판매사정보 -->
 <div module="Mall_SupplyInfo" class="margin-footer supplyInfo ">
@@ -61,24 +83,6 @@
 
 <script>
 
-    var cate_no = getLastPath();
-
-    if (cate_no == "reo119") {
-        $('.xans-mall-supplymainimage').prepend(`<video autoplay loop muted playsinline id="videobcg">
-    <source src="https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/video/project_119reo_vid.webm" type="video/webm">
- <source src="https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/video/project_119reo_vid.mp4" type="video/mp4">
-      Sorry, your browser does not support HTML5 video.
-</video>`);
-    }
-
-    function getLastPath() {
-        var segment_str = window.location.pathname; // return segment1/segment2/segment3/segment4
-        var segment_array = segment_str.split('/');
-        var last_segment = segment_array.pop()
-        return last_segment;
-    }
-
-
 
 
 </script>
@@ -87,4 +91,3 @@
 
 
 <!--@define(cmc_log)-->
-<!--@js(/jsbvt/discount_listnormal.js)-->

@@ -43,7 +43,7 @@
   border-radius: 2px;
   font-size: 0;
 }
-.thumb > a img {
+.thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -76,6 +76,12 @@
   height: 38.98px;
   padding: 10px;
   margin-top: 2.5px;
+}
+
+.icon img {
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .desc {

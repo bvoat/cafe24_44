@@ -67,17 +67,6 @@
   margin-bottom: 20px;
 }
 
-.icon {
-  height: 30px;
-}
-.icon img {
-  width: auto;
-  height: inherit;
-  margin-right: 5px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .thumb {
   position: relative;
   width: 100%;
@@ -90,7 +79,7 @@
   border-radius: 2px;
   font-size: 0;
 }
-.thumb > a img {
+.thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -123,6 +112,12 @@
   height: 38.98px;
   padding: 10px;
   margin-top: 2.5px;
+}
+
+.icon img {
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #weekTotalBestList {

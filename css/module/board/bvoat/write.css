@@ -61,18 +61,6 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb .icon {
-  position: absolute;
-  width: 50px;
-  height: 20.5px;
-  border-radius: 4px;
-  top: 4.6px;
-  left: 4.6px;
-}
-#productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb .icon img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb .wish {
   position: absolute;
   width: auto;
@@ -97,6 +85,11 @@
   height: 38.98px;
   padding: 10px;
   margin-top: 2.5px;
+}
+#productBoardWrite #productBoardWriteSection .ec-base-box .product_info .icon img {
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb {
   width: 30%;

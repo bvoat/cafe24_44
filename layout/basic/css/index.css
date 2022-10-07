@@ -13,83 +13,256 @@
   width: 100%;
   max-width: 450px;
   margin: 81px auto;
-  /* 스프링 메뉴 */
   /* 인덱스 보터 카운트 */
-  /* 더보기 버튼 */
-  /* 더 보러가기 버튼 */
-  /* 메인진열  공통 */
-  /* heading과 간격 조절 (single line or small size (23px/15px) */
-}
-#bvtHome #indexSpringMenu {
-  width: 100%;
-  max-width: 450px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  padding: 0 9.34%;
-}
-#bvtHome #indexSpringMenu li {
-  width: 82px;
-  min-width: 82px;
-  height: 82px;
-}
-#bvtHome #indexSpringMenu li:nth-child(-n+3) {
-  margin-right: 12px;
-}
-#bvtHome #indexSpringMenu li a {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-#bvtHome #indexSpringMenu li a img {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  margin-bottom: 7px;
-}
-#bvtHome #indexSpringMenu li a p {
-  font-size: 1.35rem;
-  font-weight: 400;
-  color: #707070;
-}
-@media (max-width: 375px) {
-  #bvtHome #indexSpringMenu li {
-    width: 70px;
-    min-width: 70px;
-    height: 70px;
-  }
-  #bvtHome #indexSpringMenu li:nth-child(-n+3) {
-    margin-right: 15px;
-  }
+  /* 인덱스 보터 카운트 */
+  /* 메인 타이틀 */
+  /* 메인 타이틀 */
+  /* 메인 소개/카카오 배너 */
+  /* 메인 소개/카카오 배너 */
+  /* 메인진열 */
+  /* 메인진열 */
 }
 #bvtHome #indexUserCnt {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  padding: 21.5px 0;
-  background: #F5F6FA;
-  margin: 54px 0 43px 0;
-}
-#bvtHome #indexUserCnt h3 {
-  font-size: 1.4rem;
-  color: #707070;
-  font-weight: normal;
+  padding: 9px 0;
+  background: #F5FF02;
+  margin-bottom: 29px;
 }
 #bvtHome #indexUserCnt #joinbanner {
   border: 0;
-  font-size: 21px;
-  font-weight: bold;
-  margin: 6px 0 0 0;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+#bvtHome #indexUserCnt #joinbanner span {
+  position: relative;
+  display: inline-block;
+  top: 1px;
 }
 #bvtHome #indexUserCnt #joinbanner em {
-  color: #022CFF;
+  font-weight: 600;
 }
-
-/* 개별 메인 진열 */
-/* 기획전 */
-/* 지금 구매중 배경 *//*# sourceMappingURL=index.css.map */
+#bvtHome #indexTitle {
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 37px;
+  padding: 0 29px;
+}
+#bvtHome #indexTitle em {
+  display: block;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #022CFF;
+  margin-bottom: 14px;
+}
+#bvtHome #indexTitle h1 {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 4.1rem;
+  margin-bottom: 27px;
+  overflow: hidden;
+}
+#bvtHome #indexTitle p {
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 2.8rem;
+}
+#bvtHome #indexintroBanner {
+  width: 100%;
+  max-width: 450px;
+  padding: 0 29px;
+  margin-bottom: 27px;
+}
+#bvtHome #indexintroBanner .total_discount_banner {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #E2E2E2;
+  border-radius: 5px;
+  padding: 18px 0;
+  margin-bottom: 9px;
+}
+#bvtHome #indexintroBanner .total_discount_banner h4 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+#bvtHome #indexintroBanner .total_discount_banner p {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+#bvtHome #indexintroBanner .kakao_friend_banner {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #FADC3F;
+  border-radius: 5px;
+  background: #FFF7CC;
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: #3B1E1E;
+  padding: 12px 0;
+}
+#bvtHome #indexintroBanner .kakao_friend_banner svg {
+  width: 22px;
+  margin-right: 10px;
+}
+#bvtHome #indexListmain {
+  padding: 0 29px;
+  margin-bottom: 60px;
+  /* 둘러보기 이동 */
+  /* 둘러보기 이동 */
+}
+#bvtHome #indexListmain div.listmain {
+  padding: 0;
+}
+#bvtHome #indexListmain div.listmain ul.prdList {
+  display: flex;
+  flex-flow: column nowrap;
+}
+#bvtHome #indexListmain div.listmain ul.prdList > li {
+  margin-bottom: 61px;
+}
+#bvtHome #indexListmain div.listmain ul.prdList > li .thumb {
+  position: relative;
+  width: 100%;
+}
+#bvtHome #indexListmain div.listmain ul.prdList > li .thumb > a {
+  display: block;
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+  font-size: 0;
+}
+#bvtHome #indexListmain div.listmain ul.prdList > li .thumb > a > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#bvtHome #indexListmain div.listmain ul.prdList > li .thumb .wish {
+  position: absolute;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  bottom: 0px;
+  right: 0px;
+}
+#bvtHome #indexListmain div.listmain ul.prdList > li .thumb .wish button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+#bvtHome #indexListmain div.listmain ul.prdList > li .thumb .wish button img {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  margin-top: 2.5px;
+}
+#bvtHome #indexListmain div.listmain ul.prdList > li .icon img {
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#bvtHome #indexListmain div.listmain ul.prdList > li .promotion_date {
+  position: absolute;
+  padding: 6px 14px;
+  background: #ffffff;
+  border-radius: 18px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #022CFF;
+  top: 14px;
+  left: 14px;
+  z-index: 9;
+  letter-spacing: -0.2px;
+}
+#bvtHome #indexListmain div.listmain ul.prdList > li .desc {
+  margin: 21px 0;
+}
+#bvtHome #indexListmain div.listmain ul.prdList > li .desc .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #022CFF;
+  margin-bottom: 14px;
+}
+#bvtHome #indexListmain div.listmain ul.prdList > li .desc .product_model {
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin-bottom: 19px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 2.7rem;
+}
+#bvtHome #indexListmain div.listmain ul.prdList > li .desc .simple {
+  font-size: 1.7rem;
+  font-weight: 300;
+  line-height: 2.9rem;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 3rem;
+  height: 8.5rem;
+}
+#bvtHome #indexListmain div.listmain ul.prdList > li .icon {
+  height: 30px;
+}
+#bvtHome #indexListmain div.listmain ul.prdList > li .icon img {
+  margin-right: 8px;
+}
+#bvtHome #indexListmain .linktolookaround {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: #F2F2F2;
+  border-radius: 9px;
+  padding: 21px 27px;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+#bvtHome #indexListmain .linktolookaround svg {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 6.5px;
+  height: 1.1rem;
+}
+@media (max-width: 360px) {
+  #bvtHome #indexListmain .linktolookaround {
+    font-size: 1.55rem;
+  }
+}/*# sourceMappingURL=index.css.map */

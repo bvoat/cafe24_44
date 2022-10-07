@@ -1,370 +1,52 @@
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(/layout/basic/css/index.css)-->
+<!--@css(/layout/basic/css/aos.css)-->
+<script src="/js/aos.js"></script>
 <article id="bvtHome">
-    <!-- 배너 -->
-    <!--@import(/main/module/index_slide.html)-->
-    <!-- 배너 -->
-    <!-- 스프링 메뉴 -->
-    <ul id="indexSpringMenu">
-        <li class="index_menu">
-            <a href="/product/list.html?cate_no=766" title="지금 할인 중">
-                <img src="/bvtIMG/icon/index-promotion-icon.png" alt="지금 할인 중">
-                <p>지금 할인 중</p>
-            </a>
-        </li>
-        <li class="index_menu">
-            <a href="/product/list.html?cate_no=767" title="무료배송">
-                <img src="/bvtIMG/icon/index-freedelivery-icon.png" alt="무료배송">
-                <p>무료배송</p>
-            </a>
-        </li>
-        <li class="index_menu">
-            <a href="/product/list.html?cate_no=763" title="제로웨이스트">
-                <img src="/bvtIMG/icon/index-zerowaste-icon.png" alt="제로웨이스트">
-                <p>제로웨이스트</p>
-            </a>
-        </li>
-        <li class="index_menu">
-            <a href="/product/list.html?cate_no=764" title="선물 추천">
-                <img src="/bvtIMG/icon/index-gift-icon.png" alt="선물 추천">
-                <p>선물 추천</p>
-            </a>
-        </li>
-    </ul>
-    <!-- 스프링 메뉴 -->
     <!--보터 카운트-->
     <section id="indexUserCnt" class="index_user">
-        <h3>먹고, 입고, 쓰는 친환경 가치소비</h3>
-        <div id="joinbanner" class="joinbanner">👀<em id="membernct"></em>이 함께하고 있어요!</div>
+        <div id="joinbanner" class="joinbanner"><span>👀</span> <em class="membercnt"></em>명이 함께하는 중!</div>
     </section>
     <!--보터 카운트-->
-    <!-- 메인진열 섹션 -->
-    <section id="indexListmain">
-        <!-- 추천 상품 : 가치소비 입문 어때요? -->
-        <section id="indexListmainRecommend" class="index_list">
-            <h3>가치소비 입문 어때요?</h3>
-            <div class="listmain_recommend" module="product_listmain_80">
-                <!--
-                $count = 18
-                $basket_result = /product/add_basket.html
-                $basket_option = /product/basket_option.html
-                -->
-                <!--@import(/product/product_module/listmain/listmain.html)-->
-                <button class="swiper swiper-pagination-clickable page_moreview_btn fraction_btn">
-                    <span class="moreview_noarrow">추천 상품 더 보기</span> <span class="swiper-pagination-fraction"></span>
-                </button>
-            </div>
-        </section>
-        <!-- 추천 상품 : 가치소비 입문 어때요? -->
-        <!-- 주간 상품 : Weekly Special -->
-        <section id="indexListmainWeekly" class="index_list">
-            <h3>Weekly Special</h3>
-            <ul>
-                <!-- 주간 상품 구좌1 -->
-                <li class="listmain_weekly_1 index_list">
-                    <h4 class="banner">
-                        <a href="/product/project.html?cate_no=736" title="그냥 예뻐서 샀는데 별안간 착한 소비가 돼버리는 기부 액세서리 모음">
-                            <img src="/bvtIMG/banner/2209_project_jewelrymain2.png" alt="그냥 예뻐서 샀는데 별안간 착한 소비가 돼버리는 기부 액세서리 모음">
-                        </a>
-                    </h4>
-                    <div class="listmain_weekly swiper_container listmain_1" module="product_listmain_73">
-                        <!--
-                        $count = 10
-                        $basket_result = /product/add_basket.html
-                        $basket_option = /product/basket_option.html
-                        -->
-                        <!--@import(/product/product_module/listmain/listmain.html)-->
-                        <div class="list_item_progress"></div>
-                    </div>
-                </li>
-                <!-- 주간 상품 구좌2 -->
-                <li class="listmain_weekly_2 index_list">
-                    <h4 class="banner">
-                        <a href="/product/project.html?cate_no=768" title="환절기 피부 절대 지켜! 비건 수분 촉촉 진정 케어 제품들">
-                            <img src="/bvtIMG/banner/2209_project_beautymain.png"
-                                alt="환절기 피부 절대 지켜! 비건 수분 촉촉 진정 케어 제품들">
-                        </a>
-                    </h4>
-                    <div class="listmain_weekly swiper_container listmain_2" module="product_listmain_83">
-                        <!--
-                        $count = 10
-                        $basket_result = /product/add_basket.html
-                        $basket_option = /product/basket_option.html
-                        -->
-                        <!--@import(/product/product_module/listmain/listmain.html)-->
-                        <div class="list_item_progress"></div>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <!-- Weekly Special -->
-        <!-- Trend Story -->
-        <section id="indexListmainTrend" class="index_list">
-            <h3>Trend Story<div class="swiper-pagination-fraction-noclick"></div>
-            </h3>
-            <div class="listmain_trend">
-                <ul class="swiper-wrapper">
-                    <li class="swiper-slide list_item list_item1">
-                        <div class="trend_title">
-                            <h4 class="banner"><img src="/bvtIMG/banner/2209_trend_1.png" alt="폰도 지키고 지구도 지키는 케이스"></h4>
-                            <p class="trend_text">케이스 바꿀 때마다 버려지는 플라스틱<br>폰과 지구를 동시에 지킨다면 어떨까요?<br>귀여운 생분해 케이스를 소개합니다.
-                            </p>
-                        </div>
-                        <div module="product_listmain_79">
-                            <!--
-                            $count = 2
-                            $basket_result = /product/add_basket.html
-                            $basket_option = /product/basket_option.html
-                            -->
-                            <!--@import(/product/product_module/listmain/listmain.html)-->
-                            <div class="movepage_btn"><a href="/product/project.html?cate_no=758" title="상품 더 보러가기"
-                                    class="pagelink"><span class="moreview_rightarrow">상품 더 보러가기</span></button></div>
-                        </div>
-                    </li>
-                    <li class="swiper-slide list_item list_item2">
-                        <div class="trend_title">
-                            <h4 class="banner"><img src="/bvtIMG/banner/2209_trend_2.png" alt="기분까지 좋아지는 지금 딱 완벽한 선물!"></h4>
-                            <p class="trend_text">내 몸을 위한 비건 성분에<br>환경을 생각한 제로웨이스트까지<br>지금 이 시대 딱 맞는 샴푸바, fxng</p>
-                        </div>
-                        <div module="product_listmain_84">
-                            <!--
-                            $count = 2
-                            $basket_result = /product/add_basket.html
-                            $basket_option = /product/basket_option.html
-                            -->
-                            <!--@import(/product/product_module/listmain/listmain.html)-->
-                            <div class="movepage_btn"><a href="/product/project.html?cate_no=771" title="상품 더 보러가기"
-                                    class="pagelink"><span class="moreview_rightarrow">상품 더 보러가기</span></button></div>
-                        </div>
-                    </li>
-                    <li class="swiper-slide list_item list_item3">
-                        <div class="trend_title">
-                            <h4 class="banner"><img src="/bvtIMG/banner/2209_trend_3.png" alt="시각 장애인 조향사가 섬세하게 그려낸 향기"></h4>
-                            <p class="trend_text">더 섬세한 후각으로,<br>보이지 않는 아름다움의 가치를 담아낸<br>특별한 조향 예술을 만나보세요.</p>
-                        </div>
-                        <div module="product_listmain_85">
-                            <!--
-                            $count = 2
-                            $basket_result = /product/add_basket.html
-                            $basket_option = /product/basket_option.html
-                            -->
-                            <!--@import(/product/product_module/listmain/listmain.html)-->
-                            <!-- <div class="movepage_btn"><a href="/product/project.html?cate_no=758"  title="상품 더 보러가기" class="pagelink"><span class="moreview_rightarrow">상품 더 보러가기</span></button></div> -->
-                        </div>
-                    </li>
-                    <li class="swiper-slide list_item list_item4">
-                        <div class="trend_title">
-                            <h4 class="banner"><img src="/bvtIMG/banner/2209_trend_4.png" alt="환경까지 생각해서 기분까지 상쾌한 양치"></h4>
-                            <p class="trend_text">플라스틱 칫솔과 똑같은데 생분해돼요.<br>불필요한 포장 없이 같은 효과를 내요.<br>제로웨이스트, 양치부터 시작하세요.
-                            </p>
-                        </div>
-                        <div module="product_listmain_82">
-                            <!--
-                            $count = 2
-                            $basket_result = /product/add_basket.html
-                            $basket_option = /product/basket_option.html
-                            -->
-                            <!--@import(/product/product_module/listmain/listmain.html)-->
-                            <!-- <div class="movepage_btn"><a href="/product/project.html?cate_no=758"  title="상품 더 보러가기" class="pagelink"><span class="moreview_rightarrow">상품 더 보러가기</span></button></div> -->
-                        </div>
-                    </li>
-                    <li class="swiper-slide list_item list_item5">
-                        <div class="trend_title">
-                            <h4 class="banner"><img src="/bvtIMG/banner/2209_trend_5.png" alt="제주공항이 선택한, 지구를 지키는 설거지"></h4>
-                            <p class="trend_text">가을 제주 공항의 향기와 자연에서 온<br>코코넛 수세미로 지구를 지키는<br>설거지를 경험해 보세요.</p>
-                        </div>
-                        <div module="product_listmain_81">
-                            <!--
-                            $count = 2
-                            $basket_result = /product/add_basket.html
-                            $basket_option = /product/basket_option.html
-                            -->
-                            <!--@import(/product/product_module/listmain/listmain.html)-->
-                            <!-- <div class="movepage_btn"><a href="/product/project.html?cate_no=758"  title="상품 더 보러가기" class="pagelink"><span class="moreview_rightarrow">상품 더 보러가기</span></button></div> -->
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!-- Trend Story -->
-        <!-- MD’s PICK!-->
-        <section id="indexListmainMD" class="index_list">
-            <h3>MD’s PICK!</h3>
-            <div class="listmain_md_tab_wrap">
-                <ol class="listmain_md_tab swiper-wrapper">
-                    <li class="swiper-slide"><button class="md_pick_btn active">#기부악세사리</button></li>
-                    <li class="swiper-slide"><button class="md_pick_btn">#비건베이커리</button></li>
-                    <li class="swiper-slide"><button class="md_pick_btn">#베스트간식</button></li>
-                    <li class="swiper-slide"><button class="md_pick_btn">#교복업사이클링</button></li>
-                </ol>
-            </div>
-            <ol class="listmain_md_list_wrap">
-                <li class="listmain_md_1 listmain_md active" module="product_listmain_88">
-                    <!--
-                    $count = 5
-                    $basket_result = /product/add_basket.html
-                    $basket_option = /product/basket_option.html
-                    -->
-                    <!--@import(/product/product_module/listmain/listmain.html)-->
-                    <div class="list_item_progress"></div>
-                </li>
-                <li class="listmain_md_2 listmain_md" module="product_listmain_89">
-                    <!--
-                    $count = 5
-                    $basket_result = /product/add_basket.html
-                    $basket_option = /product/basket_option.html
-                    -->
-                    <!--@import(/product/product_module/listmain/listmain.html)-->
-                    <div class="list_item_progress"></div>
-                </li>
-                <li class="listmain_md_3 listmain_md" module="product_listmain_90">
-                    <!--
-                    $count = 5
-                    $basket_result = /product/add_basket.html
-                    $basket_option = /product/basket_option.html
-                    -->
-                    <!--@import(/product/product_module/listmain/listmain.html)-->
-                    <div class="list_item_progress"></div>
-                </li>
-                <li class="listmain_md_4 listmain_md" module="product_listmain_91">
-                    <!--
-                    $count = 5
-                    $basket_result = /product/add_basket.html
-                    $basket_option = /product/basket_option.html
-                    -->
-                    <!--@import(/product/product_module/listmain/listmain.html)-->
-                    <div class="list_item_progress"></div>
-                </li>
-            </ol>
-        </section>
-        <!-- MD’s PICK!-->
-        <!-- 실시간 구매 -->
-        <section id="indexListmainRealTime" class="index_list listmain72">
-            <h3>실시간 구매 <span class="show_all"><a href="/product/realtime.html" title="방금 구매한(실시간 구매)">전체보기</a></span></h3>
-            <div class="swiper_container realtime_order_list" module="product_listmain_72">
-                <!--
-                $count = 20
-                $basket_result = /product/add_basket.html
-                $basket_option = /product/basket_option.html
-                -->
-                <!--@import(/product/product_module/listmain/listmain.html)-->
-                <div class="list_item_progress"></div>
-            </div>
-        </section>
-        <!-- 실시간 구매 -->
-        <!-- BEST 10 -->
-        <section id="indexListmainBest" class="index_list">
-            <h3>BEST 10</h3>
-            <div class="weekbest" module="product_listmain_66">
-                <!--
-                $count = 10
-                $basket_result = /product/add_basket.html
-                $basket_option = /product/basket_option.html
-                -->
-                <!--@import(/product/product_module/listmain/listmain.html)-->
-                <div class="movepage_btn"><a href="/product/best.html" title="순위 더 보러가기" class="pagelink"><span
-                            class="moreview_rightarrow">순위 더 보러가기</span></a></div>
-            </div>
-        </section>
-        <!-- BEST 10 -->
-        <!-- 추천 가치태그 -->
-        <section id="indexListmainTag" class="index_list">
-            <h3>추천 가치태그</h3>
-            <ul class="tag_category_wrap">
-                <li class="tag">
-                    <h4>#소재별<span class="show_all"><a href="/product/list.html?cate_no=476"
-                                title="소재별 전체보기">전체보기</a></span></h4>
-                    <ol class="tag_category">
-                        <li><a href=/product/list.html?cate_no=477" title="비건가죽"><img
-                                    src="/web/product/big/202112/87c15e6b14ad0884dd91c740710594de.jpg"
-                                    alt="비건가죽 - 에끌라토(Eclatto) 사과 부산물의 놀라운 변신">
-                                <p class="tag_title">비건가죽</p>
-                            </a></li>
-                        <li><a href="/product/list.html?cate_no=496" title="폐방화복"><img
-                                    src="/web/product/big/202204/520e63c9129bb5ca9f30eb34fd128eb0.jpeg"
-                                    alt="폐방화복 - 119레오 생명을 구한 소방복으로">
-                                <p class="tag_title">폐방화복</span>
-                            </a></li>
-                        <li><a href="/product/list.html?cate_no=500" title="패러글라이더"><img
-                                    src="/web/product/big/202203/9c757f1882172f55cc71277bfc816f94.jpg"
-                                    alt="패러글라이더 - 오버랩(OVER LAB) 초경량 패러글라이더의 재탄생">
-                                <p class="tag_title">패러글라이더</p>
-                            </a></li>
-                        <li><a href="/product/list.html?cate_no=508" title="밀짚"><img
-                                    src="/web/product/big/202209/e598eeff34d50035027f83d20a887a75.png" alt="밀짚 - 폴라올라(POLAR OLA)
-                                🌾 밀짚으로 만든 생분해 케이스">
-                                <p class="tag_title">밀짚</span>
-                            </a></li>
-                        <li><a href="/product/list.html?cate_no=495" title="페트병"><img
-                                    src="/web/product/big/202206/4bab30b26a7c0128d4ca0ab37f203e1a.jpg"
-                                    alt="페트병 - 그라인 X 라원 아티스트 라원과의 콜라보">
-                                <p class="tag_title">페트병</p>
-                            </a></li>
-                    </ol>
-                </li>
-                <li class="tag">
-                    <h4>#성분별<span class="show_all"><a href="/product/list.html?cate_no=525"
-                                title="성분별 전체보기">전체보기</a></span></h4>
-                    <ol class="tag_category">
-                        <li><a href="/product/list.html?cate_no=529" title="비건 뷰티"><img
-                                    src="/web/product/big/202208/b72c6ebd82474a9bcce1536f686c677f.jpg"
-                                    alt="비건 뷰티 - 마더메이드 자연 본연의 오리지널 스킨케어">
-                                <p class="tag_title">비건 뷰티</span>
-                            </a></li>
-                        <li><a href="/product/list.html?cate_no=528" title="비건 식품"><img
-                                    src="/web/product/big/202205/f9bee51db531cc062728d3bbb7394bd0.png"
-                                    alt="비건 식품 - 풀무원(Pulmuone) 바른 먹거리, 비건 라면 No.1">
-                                <p class="tag_title">비건 식품</p>
-                            </a></li>
-                        <li><a href="/product/list.html?cate_no=531" title="못난이 농산물"><img
-                                    src="/web/product/big/202207/36bf4f8969fc85e3413fe536943e940d.jpg"
-                                    alt="못난이 농산물 - 코코리 제주 제주 공항의 선택, 청정 제주의 감귤로 만들어요">
-                                <p class="tag_title">못난이 농산물</p>
-                            </a></li>
-                    </ol>
-                </li>
-                <li class="tag">
-                    <h4>#임팩트별<span class="show_all"><a href="/product/list.html?cate_no=532"
-                                title="임팩트별 전체보기">전체보기</a></span></h4>
-                    <ol class="tag_category">
-                        <li><a href="/product/list.html?cate_no=542" title="소방관 후원"><img
-                                    src="/web/product/big/202208/c6b44415416cd6ff470d61fee3814c9f.png"
-                                    alt="소방관 후원 - 119레오 🧑‍🚒 암투병 소방관 수익 50% 지원">
-                                <p class="tag_title">소방관 후원</span>
-                            </a></li>
-                        <li><a href="/product/list.html?cate_no=746" title="취약 계층 아동 지원"><img
-                                    src="/web/product/big/202209/7a739d2205f457fed43d3b8512109b37.jpg"
-                                    alt="취약 계층 아동 지원 - 리버드 매년 버려지는 교복과 불용 교복 원단을 활용하여 업사이클링 제품을 제작합니다. 판매 수익금 일부는 노인 일자리 지원과 사회 취약 계층 아동의 교복 구매 및 신학기 지원금 등으로 사용되고 있습니다.">
-                                <p class="tag_title">취약 계층<br />아동 지원</span>
-                            </a></li>
-                        <li><a href="/product/list.html?cate_no=536" title="동물 보호 지원"><img
-                                    src="/web/product/big/202208/53e3cb3c09b8262f4efb8ab703e78fdd.jpg"
-                                    alt="동물 보호 지원 - 뽀뚜빠뚜(ppottuppttu) 🐶 유기견, 유기묘 사료 후원">
-                                <p class="tag_title">동물 보호 지원</p>
-                            </a></li>
-                        <li><a href="/product/list.html?cate_no=553" title="산림 보호"><img
-                                    src="/web/product/big/202208/bb451e71ef9f8148262e412da001a41b.png"
-                                    alt="산림 보호 - FFM13 🌳 한반도 나무심기 동참">
-                                <p class="tag_title">산림 보호</span>
-                            </a></li>
-                        <li><a href="/product/list.html?cate_no=534" title="공정 무역"><img
-                                    src="/web/product/big/202106/a7e2c2581762c0900eec3d6e6cff8f5d.jpg"
-                                    alt="공정무역 - 바이페어트레이드(Buyfairtrade) 견과류와 사탕 수수의 달콤한 노트">
-                                <p class="tag_title">공정무역</p>
-                            </a></li>
-                    </ol>
-                </li>
-            </ul>
-        </section>
-        <!-- 추천 가치태그 -->
-
-
+    <!-- 메인 타이틀 -->
+    <section id="indexTitle">
+        <em>가치소비로 세상을 바꾸는 방법</em>
+        <h1 data-aos="fade-up" data-aos-offset="0" data-aos-distance="0" 
+        data-aos-duration="600" data-aos-easing="linear">가치소비라고<br>비싸란 법 없잖아요?</h1>
+        <p>무엇부터 시작할지 고민하지 마세요.<br>
+            예쁘고, 맛있고, 편하고 의미까지 있는 가치소비를<br>
+            부담 없이 쉽게 즐길 수 있도록 최저가에 소개합니다.</p>
     </section>
-    <!-- 메인진열 섹션 -->
-
-    <!--@layout(/layout/basic/layout.html)-->
+    <!-- 메인 타이틀 -->
+    <!-- 메인 소개/카카오 배너 -->
+    <section id="indexintroBanner">
+        <div class="total_discount_banner"><h4>최저가 무료배송 · 매주 월수금 소개</h4><p>지금까지 <span>173,451,236</span>원이 절약됐어요!</p></div>
+        <button class="kakao_friend_banner"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 98.88 90.96">
+            <path fill="#371d1e" d="M23.53 72.32a48.8 48.8 0 0 1-11.36-7.68C6.08 59.01 1.86 52.29.58 43.97c-1.39-9.04.95-17.18 6.36-24.44 6.24-8.36 14.69-13.66 24.57-16.56 16.32-4.79 32.12-3.5 47.07 4.92 7.81 4.4 14.03 10.5 17.45 18.92 5.14 12.67 2.66 24.21-6.11 34.41-7.27 8.45-16.81 13.14-27.55 15.51a61 61 0 0 1-21.3.82 2.57 2.57 0 0 0-1.63.47c-5.82 3.92-11.62 7.88-17.43 11.82-.75.51-1.65 1.37-2.42.61-.44-.44-.38-1.65-.18-2.42 1.31-5.22 2.72-10.4 4.12-15.71z"/>
+          </svg>카카오 플친 맺고 알림 받기</button>
+    </section>
+    <!-- 메인 소개/카카오 배너 -->
+<!-- 메인진열 섹션 -->
+    <section id="indexListmain" class="index_list">
+        <h3 class="displaynone">메인진열 리스트</h3>
+        <div class="listmain" module="product_listmain_80">
+            <!--
+            $count = 2
+            $basket_result = /product/add_basket.html
+            $basket_option = /product/basket_option.html
+            -->
+            <!--@import(/product/product_module/listmain/listindex.html)-->
+        </div>
+        <button class="linktolookaround"><span>비보트 추천 가치소비 더 둘러보기</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.5 11.37">
+            <path d="m4.54 5.69-4.3 4.3a.81.81 0 1 0 1.15 1.14l4.87-4.87a.81.81 0 0 0 .03-1.12L1.39.24A.81.81 0 1 0 .24 1.4Z" data-name="Icon ionic-ios-arrow-back"/>
+          </svg></button>
+    </section>
+<!-- 메인진열 섹션 -->
+<!--@layout(/layout/basic/layout.html)-->
 </article>
 <!--@import(/layout/basic/footer.html)-->
 <!--@define(cmc_log)-->
-<script src="/js/module/product/realtime.js"></script>
 <script src="/layout/basic/js/index.js"></script>
+<script>
+    AOS.init();
+</script>

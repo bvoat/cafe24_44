@@ -79,6 +79,9 @@ function monitoringPrice() {
     //실 판매가 = 할인가 = '판매가'
     let realprice = price.children[2];
     let realprice_data = realprice.dataset.price;
+    //프로모션가 = 할인가 = '최종판매가' 프로모션 있을 때만!
+    let promoprice = price.children[2];
+    let promoprice_data = promoprice.dataset.price;
 
     /* 이미 변경된 경우를 체크 */
     //변경 안 되었으면 실행 if
@@ -87,7 +90,7 @@ function monitoringPrice() {
       //판매가(할인가) 데이터가 있고
       //소비자가의 숫자가 0이 아니어야 하고
       //소비자가랑 판매가가 같지 않으면
-      //할인 중
+      //상시 할인 중
       if (
         fixprice_data &&
         realprice_data &&
@@ -172,7 +175,7 @@ function controlTopNav(page_path) {
   const back_btn = document.querySelector(".back_btn");
   const default_nav = document.querySelector(".default_top_nav");
   const comm_nav = document.querySelector(".community_top_nav");
-  //제외할 path
+  //상단바 (탑메뉴) 사라지게 할 path
   const expect_array = [
     "order/basket",
     "order/orderform",
@@ -185,7 +188,7 @@ function controlTopNav(page_path) {
   ];
   //커뮤니티용 path
   const community_array = ["community", "buy_records", "crewinfo"];
-  //뒤로가기 path
+  //뒤로가기 있어야 하는 path
   const back_array = [
     "product/detail",
     "order/basket",
@@ -205,11 +208,11 @@ function controlTopNav(page_path) {
     "list.html?cate_no=764"
   ];
 
-  //top 메뉴 사라지게
+  //상단바 (탑메뉴) 사라지게 하기
   expect_array.forEach((path) => {
     page_path.includes(path) ? default_nav.classList.add("displaynone") : null;
   });
-  //커뮤니티 하단바로
+  //커뮤니티 하단바로 변경하기
   community_array.forEach((path) => {
     if (page_path.includes(path)) {
       console.log('path: ', path);
@@ -219,7 +222,7 @@ function controlTopNav(page_path) {
     }
   });
 
-  //뒤로가기 표시
+  //뒤로가기 표시 하기
   back_array.forEach((path) => {
     if (page_path.includes(path)) {
       back_btn.classList.remove("visiblehidden");
@@ -229,37 +232,20 @@ function controlTopNav(page_path) {
 //상단바 active 표시
 function controlTopNavActive(page_path) {
   console.log('page_path: ', page_path);
-  //path가 list(카테고리-상품리스트)일 때
-  if (page_path.includes("product/list.html")) {
-    //받아온 카테고리 네임 변수화
-    const name = document.querySelector("#topNavControl").name;
-    console.log('name: ', name);
-    //가치태그 카테고리면 
-    if (name.includes("패션")|| name.includes("라이프")) {
-      document.querySelector(`#cate${name}`).classList.add("top_nav_active");
-    } else {
-      //스토어 홈에 active
-      document.querySelector("#index").classList.add("top_nav_active");
-      //아니면 각각의 name 에 맞는 nav에 active
-    }
+  //path가 상품 관련일 때
+  if (page_path.includes("/product/")) {
+    //상품 관련
+    document.querySelector("#prd").classList.add("top_nav_active");
     //path가 크루면
   } else if (page_path.includes("crew/crew.html") || page_path.includes("crew/crewinfo.html")) {
     //크루에 active
     document.querySelector("#crew").classList.add("top_nav_active");
     //path가 펀딩이면
-  } else if (page_path.includes("funding")) {
-    //펀딩에 active
-    document.querySelector("#funding").classList.add("top_nav_active");
-    //path가 best면
-  } else if (page_path.includes("product/best.html")) {
-    //베스트 active
-    document.querySelector("#best").classList.add("top_nav_active");
-    //path가 realtime
-  } else if (page_path.includes("product/realtime.html")) {
+  } else if (page_path.includes("introduce")) {
     //방금 구매한 active
-    document.querySelector("#realtime").classList.add("top_nav_active");
-    //아무것도 확인되지 않으면
-  }else {
+    document.querySelector("#intro").classList.add("top_nav_active");
+    //아무것도 확인되지 않으면 -> 둘러보기
+  } else {
     //스토어 홈에 active
     document.querySelector("#index").classList.add("top_nav_active");
   }
@@ -402,3 +388,27 @@ const bvoatShare = (type, _url) => {
     window.open(`http://www.facebook.com/sharer.php?u=${_url}`)
   }
 };
+
+/**
+ * 숫자 카운트
+ * @param {숫자 넣을 node} $counter 
+ * @param {최대치} max 
+ */
+ function numberCounting($counter, max) {
+  let now = max;
+
+  const handle = setInterval(() => {
+      const gap = Math.ceil(max - now)
+      $counter.innerHTML = gap.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+
+      // 목표에 도달하면 정지
+      if (now < 1) {
+      clearInterval(handle);
+      }
+
+      // 적용될 수치, 점점 줄어듬
+      const step = now / 10;
+      now -= step;
+  }, 40);
+}

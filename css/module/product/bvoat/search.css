@@ -298,18 +298,6 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#searchResultProductList .thumb .icon {
-  position: absolute;
-  width: 50px;
-  height: 20.5px;
-  border-radius: 4px;
-  top: 4.6px;
-  left: 4.6px;
-}
-#searchResultProductList .thumb .icon img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 #searchResultProductList .thumb .wish {
   position: absolute;
   width: auto;
@@ -334,6 +322,11 @@
   height: 38.98px;
   padding: 10px;
   margin-top: 2.5px;
+}
+#searchResultProductList .icon img {
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #searchResultProductList .desc {
   padding: 7px 0 0 0;

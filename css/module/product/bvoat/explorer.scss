@@ -21,8 +21,6 @@
             border: 0;
             font-size: 1.7rem;
             font-weight: 400;
-            margin: 6px 0 0 0;
-
             em {
                 font-weight: 600;
             }
@@ -94,15 +92,17 @@
     ul{
         .index_list{
             width: 100%;
-            max-width:450px;
+            max-width: 450px;
+            margin-bottom: 0;
             >div{
-                h2{
+                padding: 0 29px;
+                .banner{
                     width: 100%;
                     max-width: 450px;
                     margin-bottom: 37px;
-                    img{
+                    a, a>img{
                         width: 100%;
-                    object-fit: contain;
+                        object-fit: cover;
                     }
                 }
                 >ul{
@@ -120,6 +120,10 @@
                         @include wish-button(21px, 18.98px, 0, 0);
                 
                     }
+
+                }
+                .list_item_progress{
+                    margin: 0 0 69.7px 0 ;
                 }
             }
         }

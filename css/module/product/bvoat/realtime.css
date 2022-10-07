@@ -65,16 +65,6 @@
   height: 3.28rem;
   margin-bottom: 20px;
 }
-#realTimeOrderList .icon {
-  height: 30px;
-}
-#realTimeOrderList .icon img {
-  width: auto;
-  height: inherit;
-  margin-right: 5px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 #realTimeOrderList .thumb {
   position: relative;
   width: 100%;
@@ -87,7 +77,7 @@
   border-radius: 2px;
   font-size: 0;
 }
-#realTimeOrderList .thumb > a img {
+#realTimeOrderList .thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -120,6 +110,11 @@
   height: 38.98px;
   padding: 10px;
   margin-top: 2.5px;
+}
+#realTimeOrderList .icon img {
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #realTimeOrderList #realTimeOrderListTitle {
   width: 100%;

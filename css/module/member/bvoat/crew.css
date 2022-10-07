@@ -9,12 +9,6 @@
 /* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
-:root {
-  --section-bg: url("https://bvoatofficial.cafe24.com/bvtIMG/page_image/crew/crew_section_1_bg.png");
-  --arrow-double: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.997' height='12.146'%3E%3Cg data-name='그룹 2030' fill='%23fff'%3E%3Cpath data-name='Icon ionic-ios-arrow-back' d='M6.5 5.19 1.583.272A.93.93 0 0 0 .271 1.588l5.568 5.571a.927.927 0 0 0 1.281.028l5.607-5.595A.93.93 0 1 0 11.415.276Z'/%3E%3Cpath data-name='Icon ionic-ios-arrow-back' d='M6.5 9.906 1.583 4.988A.93.93 0 0 0 .271 6.304l5.568 5.571a.927.927 0 0 0 1.281.028l5.607-5.595a.93.93 0 1 0-1.312-1.316Z'/%3E%3C/g%3E%3C/svg%3E");
-  --title-deco-circle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='333.688' height='380.469'%3E%3Cg data-name='패스 1753' fill='none' opacity='.53'%3E%3Cpath d='M273.047 44.074c33.492 24.343 13.069 109.521-45.605 190.247s-133.39 126.441-166.88 102.1-13.073-109.518 45.603-190.247 133.392-126.441 166.882-102.1Z'/%3E%3Cpath d='M272.459 44.883c-3.99-2.9-8.686-4.83-13.96-5.736-5.179-.89-10.979-.808-17.239.245-6.182 1.04-12.87 3.034-19.88 5.928-6.963 2.876-14.3 6.662-21.807 11.255-7.518 4.6-15.266 10.045-23.03 16.183-7.844 6.202-15.771 13.167-23.563 20.7-16.218 15.684-31.697 33.617-46.006 53.304-14.308 19.687-26.589 39.945-36.5 60.212-4.76 9.737-8.938 19.427-12.416 28.802-3.443 9.28-6.23 18.33-8.284 26.9-2.052 8.559-3.389 16.706-3.974 24.217-.59 7.56-.423 14.538.497 20.74.93 6.279 2.642 11.82 5.087 16.471 2.491 4.737 5.777 8.61 9.766 11.509 3.989 2.899 8.686 4.829 13.96 5.736 5.178.89 10.978.807 17.238-.245 6.182-1.04 12.87-3.035 19.88-5.929 6.963-2.875 14.3-6.662 21.808-11.255 7.517-4.6 15.266-10.044 23.03-16.183 7.843-6.202 15.77-13.167 23.562-20.7 16.219-15.683 31.697-33.617 46.006-53.304 14.309-19.686 26.589-39.945 36.5-60.212 4.76-9.736 8.938-19.427 12.416-28.802 3.443-9.28 6.23-18.33 8.285-26.9 2.051-8.558 3.388-16.706 3.974-24.217.59-7.56.422-14.538-.497-20.74-.931-6.278-2.643-11.82-5.088-16.47-2.49-4.738-5.776-8.61-9.765-11.51m.588-.808c33.49 24.34 13.072 109.518-45.604 190.247-58.676 80.73-133.391 126.442-166.881 102.1-33.49-24.34-13.073-109.517 45.603-190.247 58.677-80.73 133.392-126.442 166.882-102.1Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E");
-}
-
 #memberCrew {
   display: flex;
   flex-flow: column nowrap;
@@ -31,25 +25,7 @@
   align-items: center;
   width: 100%;
   max-width: 450px;
-  background-color: silver;
   text-align: center;
-  color: #ffffff;
-  letter-spacing: -0.2px;
-}
-#memberCrew #memberCrewContent h2 {
-  font-size: 4.5rem;
-  font-weight: 500;
-  line-height: 5rem;
-}
-#memberCrew #memberCrewContent h3 {
-  font-size: 3.4rem;
-  font-weight: 500;
-  line-height: 3.9rem;
-}
-#memberCrew #memberCrewContent h4 {
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 2.1rem;
 }
 #memberCrew #memberCrewContent > section {
   position: relative;
@@ -58,355 +34,324 @@
   align-items: center;
   width: 100%;
   max-width: 450px;
+  z-index: 1;
 }
-#memberCrew #memberCrewContent > section p,
-#memberCrew #memberCrewContent > section ul > li,
-#memberCrew #memberCrewContent > section form {
-  font-size: 1.6rem;
+#memberCrew #memberCrewContent .crew_title {
+  margin-bottom: 51px;
+}
+#memberCrew #memberCrewContent .crew_title em {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+#memberCrew #memberCrewContent .crew_title h3 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 27px;
+}
+#memberCrew #memberCrewContent .crew_title p {
+  font-size: 1.7rem;
   font-weight: 300;
+  line-height: 2.8rem;
 }
-#memberCrew #memberCrewContent #crewInfomation {
-  background: var(--section-bg) no-repeat;
-  background-size: cover;
-  height: 771px;
-  padding: 125px 0 0 0;
+#memberCrew #memberCrewContent #crewCouponZone {
+  width: 100%;
+  max-width: 450px;
 }
-#memberCrew #memberCrewContent #crewInfomation .crew_title {
-  margin-bottom: 17px;
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list {
+  width: 100%;
 }
-#memberCrew #memberCrewContent #crewInfomation > h4 {
-  background: rgba(41, 41, 41, 0.5);
-  border-radius: 3px;
-  padding: 7px 14px 6px;
-  margin-bottom: 103px;
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .couponSkinArea .coupon_list {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
-#memberCrew #memberCrewContent #crewInfomation > ul > li {
-  margin-bottom: 1.6rem;
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .couponSkinArea .coupon_list .coupon_item {
+  width: 100%;
+  margin-bottom: -50px;
 }
-#memberCrew #memberCrewContent #crewInfomation > ul > li:nth-child(3) {
-  font-weight: 500;
-  margin-bottom: 60px;
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .couponSkinArea .coupon_list .coupon_item .coupon {
+  width: 100%;
 }
-#memberCrew #memberCrewContent #crewInfomation #moveLevelUp {
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .couponSkinArea .coupon_list .coupon_item .coupon img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .monthly_couponzone {
+  position: relative;
+  background: #F5FF02;
+  padding: 51px 0 79px;
+  overflow: hidden;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .monthly_couponzone .crew_title {
+  margin-bottom: 10px;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .monthly_couponzone .crew_title em {
+  color: #022CFF;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .monthly_couponzone .couponSkinArea {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .monthly_couponzone .couponSkinArea::after {
+  position: absolute;
+  display: block;
+  content: " ";
+  background: #DFE800;
+  width: 139%;
+  padding-bottom: 139%;
+  border-radius: 50%;
+  top: 60px;
+  z-index: 0;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .crew_couponzone {
+  position: relative;
+  background: #022CFF;
+  padding: 70px 0 60px;
+  overflow: hidden;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .crew_couponzone .crew_title {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .crew_couponzone .couponSkinArea {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .crew_couponzone .couponSkinArea::after {
+  position: absolute;
+  display: block;
+  content: " ";
+  background: #3456FF;
+  width: 139%;
+  padding-bottom: 139%;
+  border-radius: 50%;
+  top: 60px;
+  z-index: 0;
+}
+#memberCrew #memberCrewContent #crewCouponZone #moveLevelUp {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 800;
   color: #ffffff;
   -webkit-animation: up-and-down-item 1.2s ease-in-out infinite;
           animation: up-and-down-item 1.2s ease-in-out infinite;
   background: none;
+  margin-top: 56px;
 }
-#memberCrew #memberCrewContent #crewInfomation #moveLevelUp::after {
-  display: block;
-  content: "";
-  width: 14px;
-  height: 13px;
-  background: var(--arrow-double) no-repeat;
-  background-size: cover;
-  margin-top: 0.6rem;
-}
-#memberCrew #memberCrewContent #crewBenefit {
-  position: relative;
-  padding: 98px 0 0 0;
-  background: black;
-  overflow: hidden;
-}
-#memberCrew #memberCrewContent #crewBenefit .crew_title {
-  position: relative;
-  margin-bottom: 23px;
-}
-#memberCrew #memberCrewContent #crewBenefit .crew_title::before {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 334px;
-  height: 380px;
-  background: var(--title-deco-circle) no-repeat;
-  background-size: contain;
-  z-index: -99;
-  top: -92px;
-  left: -62px;
-}
-#memberCrew #memberCrewContent #crewBenefit > h4 {
-  border-radius: 3px;
-  padding: 6px 14px 5px 15px;
-  font-size: 1.45rem;
-  background: #022CFF;
-  margin-bottom: 40px;
-}
-#memberCrew #memberCrewContent #crewBenefit .crew_benefit_img_wrap {
-  width: 100%;
-  margin-bottom: 50px;
-}
-#memberCrew #memberCrewContent #crewBenefit .crew_benefit_img_wrap::after {
-  position: relative;
-  display: block;
-  content: "VOTE FOR \a BETTER TOMORROW";
-  white-space: pre;
-  bottom: -11px;
-  font-size: 1.4rem;
-  font-family: "Jost";
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  text-align: left;
-  top: -29px;
-  left: 11px;
-  z-index: 1;
-}
-#memberCrew #memberCrewContent #crewBenefit .crew_benefit_img_wrap > ul {
-  width: auto;
-  display: flex;
-  flex-flow: row nowrap;
-  padding: 0 11px;
-  transition-timing-function: linear !important;
-}
-#memberCrew #memberCrewContent #crewBenefit .crew_benefit_img_wrap > ul > li {
-  width: 135px;
-  height: 135px;
-  border-radius: 4px;
-}
-#memberCrew #memberCrewContent #crewBenefit .crew_benefit_img_wrap > ul > li > img {
-  width: 135px;
-  height: 135px;
-}
-#memberCrew #memberCrewContent #crewBenefit .crew_benefit_section {
-  width: 90%;
-  height: auto;
-  background: radial-gradient(#022CFF, rgba(255, 255, 255, 0.32));
-  border-radius: 200px;
-  padding: 70px 0 0 0;
-  margin-bottom: 102px;
-}
-#memberCrew #memberCrewContent #crewBenefit .crew_benefit_section > li {
-  margin-bottom: 47px;
-}
-#memberCrew #memberCrewContent #crewBenefit .crew_benefit_section > li > span {
-  display: block;
-  text-align: center;
-  font-size: 6.5rem;
-}
-#memberCrew #memberCrewContent #crewBenefit .crew_benefit_section > li > h4 {
-  font-size: 2.8rem;
-  font-weight: 500;
-  line-height: 3.7rem;
-  margin-bottom: 20px;
-}
-#memberCrew #memberCrewContent #crewBenefit .crew_benefit_section > li > p {
-  font-weight: 300;
-  color: #F2F2F2;
+#memberCrew #memberCrewContent #crewCouponZone #moveLevelUp svg {
+  width: 34.88px;
+  height: 34.88px;
+  margin-top: 16px;
 }
 #memberCrew #memberCrewContent #crewLevelUp {
   position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   max-width: 450px;
-  padding: 70px 11px 0;
-  background: #ffffff;
+  background: #292929;
+  padding: 78px 29px 44px;
 }
-#memberCrew #memberCrewContent #crewLevelUp > h2 {
-  font-weight: 600;
-  margin-bottom: 21px;
-  color: #292929;
+#memberCrew #memberCrewContent #crewLevelUp .crew_title {
+  color: #ffffff;
 }
-#memberCrew #memberCrewContent #crewLevelUp > h4 {
-  border-radius: 3px;
-  padding: 5px 14px 6px 15px;
-  font-size: 1.45rem;
-  background: #022CFF;
-  margin-bottom: 110px;
+#memberCrew #memberCrewContent #crewLevelUp .crew_title em {
+  color: #F5FF02;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list {
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method {
+  width: 100%;
+}
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list {
   width: 100%;
   max-width: 450px;
   height: auto;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content {
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .crew_method_list_content {
   position: relative;
-  width: 100%;
-  max-width: 450px;
-  background: url("https://bvoatofficial.cafe24.com/bvtIMG/page_image/crew/crew_desc_bg_long.png") no-repeat;
-  background-size: cover;
-  border-radius: 16px;
-}
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .crew_method_desc {
-  position: relative;
-  padding: 70px 0 55px;
-  margin-bottom: 110px;
-}
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .crew_method_desc .crew_method_list_title {
-  position: relative;
-  display: inline-block;
-  color: #ffffff;
-  background: #292929;
-  font-size: 1.8rem;
-  font-weight: 500;
-  padding: 8px 21px;
-  border-radius: 37px;
-  top: -100px;
-}
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .crew_method_desc .crew_method_list_heading {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
-  font-size: 2.8rem;
+  width: 100%;
+  max-width: 450px;
+  color: #ffffff;
+  margin-bottom: 85px;
+}
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .crew_method_list_content .crew_method_list_title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 84px;
+  height: 39px;
+  color: #022CFF;
+  background: #ffffff;
+  font-size: 1.8rem;
   font-weight: 500;
+  border-radius: 37px;
+  margin-bottom: 28px;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .crew_method_desc .crew_method_txt {
-  margin: 1.3rem 0;
-}
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .crew_method_desc .crew_method_txt > p > em {
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .crew_method_list_content .crew_method_list_heading {
+  font-size: 2.1rem;
   font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 19px;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .crew_method_desc .crew_method_sub_txt {
-  font-size: 1.3rem;
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .crew_method_list_content .crew_method_txt {
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 3rem;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .crew_method_desc .crew_method_sub_txt > p {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .crew_method_list_content .crew_method_sub_txt,
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .crew_method_list_content .crew_method_sub_txt li {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #F5FF02;
+  line-height: 2.1rem;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_stamp .crew_method_list_heading::before {
-  display: block;
-  content: "";
-  width: 70px;
-  height: 70px;
-  background: url("https://bvoatofficial.cafe24.com/bvtIMG/icon/whole-stamp.png") no-repeat no-repeat;
-  background-size: cover;
-  transform: rotate(-14deg);
-  margin-bottom: 22px;
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_stamp {
+  width: 100%;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_stamp .crew_method_img_wrap {
-  width: auto;
-  height: 285px;
-  margin: 30px 0;
-  overflow: hidden;
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_stamp .crew_method_img_wrap {
+  width: 100%;
+  margin-bottom: 17px;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_stamp .crew_method_img_wrap .crew_method_img {
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_stamp .crew_method_img_wrap .crew_method_img {
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  height: 284px;
-  padding-left: 9px;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_stamp .crew_method_img_wrap .crew_method_img > li {
-  display: block;
-  width: 175px;
-  height: 284px;
-  text-indent: -9999px;
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_stamp .crew_method_img_wrap .crew_method_img > li img {
+  width: 100%;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_stamp .crew_method_img_wrap .crew_method_img > li:nth-child(1) {
-  background: url(https://bvoatofficial.cafe24.com/bvtIMG/page_image/crew/crew_list_2_img_1.png) no-repeat;
-  background-size: cover;
-}
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_stamp .crew_method_img_wrap .crew_method_img > li:nth-child(2) {
-  background: url(https://bvoatofficial.cafe24.com/bvtIMG/page_image/crew/crew_list_2_img_2.png) no-repeat;
-  background-size: cover;
-}
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_stamp .crew_method_img_wrap .crew_method_img > li:nth-child(3) {
-  background: url(https://bvoatofficial.cafe24.com/bvtIMG/page_image/crew/crew_list_2_img_3.png) no-repeat;
-  background-size: cover;
-}
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_stamp .crew_method_img_wrap .crew_method_img > li:nth-child(4) {
-  background: url(https://bvoatofficial.cafe24.com/bvtIMG/page_image/crew/crew_list_2_img_4.png) no-repeat;
-  background-size: cover;
-}
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_stamp .crew_method_img_wrap .crew_method_img > li:nth-child(5) {
-  background: url(https://bvoatofficial.cafe24.com/bvtIMG/page_image/crew/crew_list_2_img_5.png) no-repeat;
-  background-size: cover;
-}
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_stamp .crew_method_img_wrap .crew_method_img > li:nth-child(6) {
-  background: url(https://bvoatofficial.cafe24.com/bvtIMG/page_image/crew/crew_list_2_img_6.png) no-repeat;
-  background-size: cover;
-}
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_stamp .img_pagination {
-  width: calc(100% - 22px);
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_stamp .img_pagination {
+  width: 100%;
   margin: 0 auto;
   height: 5px;
   opacity: 0.2;
+  margin-bottom: 37px;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_recommend .crew_method_list_heading::before {
-  display: block;
-  content: "📢";
-  width: 40px;
-  height: 40px;
-  font-size: 4rem;
-  margin-bottom: 38px;
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_recommend {
+  width: 100%;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_recommend .crew_method_txt {
-  margin-bottom: 40px;
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_recommend .crew_method_list_heading {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_recommend .crew_method_btn_wrap {
-  margin: 38px 0 10px;
-}
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_recommend .crew_method_btn_wrap button {
-  width: 287px;
-  height: 50px;
-  border-radius: 32px;
-  margin-bottom: 8px;
-  font-size: 1.6rem;
-}
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_recommend .crew_method_btn_wrap .crew_link_copy {
-  background: #DEE4FF;
-  color: #022CFF;
-  font-weight: 600;
-}
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_recommend .crew_method_btn_wrap .crew_link_share {
-  background: #292929;
-  color: #ffffff;
-}
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_share .crew_method_list_heading::before {
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_recommend .crew_method_list_heading::before {
+  position: relative;
   display: block;
   content: "";
-  width: 81px;
-  height: 60px;
-  background: url("https://bvoatofficial.cafe24.com/bvtIMG/page_image/crew/levelup_share.png") no-repeat;
+  width: 114px;
+  height: 114px;
+  background: url("/bvtIMG/icon/crew_method_recommend_icon.png") no-repeat center;
   background-size: cover;
-  margin-bottom: 22px;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_share .crew_method_form_wrap {
-  margin: 37px 0 0;
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_recommend .crew_method_btn_wrap {
+  width: 100%;
+  margin: 35px 0 30px;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_share .crew_method_form_wrap > form fieldset label {
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_recommend .crew_method_btn_wrap button {
+  width: 100%;
+  height: 63px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  border-radius: 9px;
+}
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_recommend .crew_method_btn_wrap .crew_link_copy {
+  background: #F5FF02;
+  margin-bottom: 7px;
+}
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_recommend .crew_method_btn_wrap .crew_link_share {
+  background: #ffffff;
+}
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share {
+  width: 100%;
+}
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share .crew_method_list_heading {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share .crew_method_list_heading::before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 62px;
+  height: 76px;
+  background: url("/bvtIMG/icon/crew_method_url_icon.png") no-repeat center;
+  background-size: cover;
+  margin-bottom: 27.6px;
+}
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share .crew_method_form_wrap {
+  width: 100%;
+  margin: 47px 0 22px;
+}
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share .crew_method_form_wrap > form {
+  width: 100%;
+}
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share .crew_method_form_wrap > form fieldset label {
   font-size: 1.6rem;
   font-weight: 500;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_share .crew_method_form_wrap > form fieldset .share_input_wrap {
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share .crew_method_form_wrap > form fieldset .share_input_wrap {
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  margin: 25px 0 0;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_share .crew_method_form_wrap > form fieldset .share_input_wrap input {
-  width: 90%;
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share .crew_method_form_wrap > form fieldset .share_input_wrap input[type=url] {
+  width: 100%;
   height: 52px;
   border-radius: 26px;
-  padding: 0 18% 0 5%;
+  padding: 1% 18% 0 5%;
   box-sizing: border-box;
   font-size: 1.2rem;
   border: none;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_share .crew_method_form_wrap > form fieldset .share_input_wrap input::-moz-placeholder {
-  font-size: 1.1rem;
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share .crew_method_form_wrap > form fieldset .share_input_wrap input[type=url]::-moz-placeholder {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #292929;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_share .crew_method_form_wrap > form fieldset .share_input_wrap input:-ms-input-placeholder {
-  font-size: 1.1rem;
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share .crew_method_form_wrap > form fieldset .share_input_wrap input[type=url]:-ms-input-placeholder {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #292929;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_share .crew_method_form_wrap > form fieldset .share_input_wrap input::placeholder {
-  font-size: 1.1rem;
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share .crew_method_form_wrap > form fieldset .share_input_wrap input[type=url]::placeholder {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #292929;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method_list .crew_method_list_content .method_share .crew_method_form_wrap > form fieldset .share_input_wrap button {
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share .crew_method_form_wrap > form fieldset .share_input_wrap button {
   position: absolute;
   width: 66px;
   height: 37px;
   background: #022CFF;
+  font-size: 1.3rem;
+  font-weight: 600;
   color: #ffffff;
   border-radius: 22px;
-  right: 35px;
+  right: 15px;
 }
 #memberCrew #memberCrewContent #crewText {
   position: relative;
@@ -416,43 +361,71 @@
   align-items: center;
   width: 100%;
   max-width: 450px;
-  height: 100%;
-  padding: 122px 0 91px 0;
-  background: radial-gradient(closest-side at 50% 41%, rgba(2, 44, 255, 0.8), rgba(41, 41, 41, 0.98), rgba(41, 41, 41, 0.95), black);
+  background: #ffffff;
+  padding: 71px 0 67px;
 }
-#memberCrew #memberCrewContent #crewText::after {
-  padding-bottom: -100%;
+#memberCrew #memberCrewContent #crewText .list_anchor {
+  width: 100%;
 }
-#memberCrew #memberCrewContent #crewText > h3 {
-  margin-bottom: 30px;
+#memberCrew #memberCrewContent #crewText .list_anchor li {
+  height: 63px;
+  border-radius: 9px;
+  background: #F5F5F5;
+  padding: 0 27px;
 }
-#memberCrew #memberCrewContent #crewText > ul > li {
-  margin-bottom: 1.6rem;
+#memberCrew #memberCrewContent #crewText .list_anchor li a {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: #022CFF;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: -0.4px;
 }
-#memberCrew #memberCrewContent #crewText > ul > li:nth-child(2) {
-  margin-bottom: 85px;
+#memberCrew #memberCrewContent #crewText .list_anchor li span {
+  color: #292929;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+}
+#memberCrew #memberCrewContent #crewText .list_anchor li span::after {
+  display: inline-block;
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6.5 11.37'%3E%3Cpath d='m4.54 5.69-4.3 4.3a.81.81 0 1 0 1.15 1.14l4.87-4.87a.81.81 0 0 0 .03-1.12L1.39.24A.81.81 0 1 0 .24 1.4Z' data-name='Icon ionic-ios-arrow-back'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+  width: 6.5px;
+  height: 11.37px;
+  margin-left: 13px;
+}
+#memberCrew #memberCrewContent #crewText .list_anchor li:nth-child(1) {
+  margin-bottom: 11px;
+}
+#memberCrew #memberCrewContent #crewText .list_anchor li:nth-child(2) a {
+  color: #292929;
+}
+@media (max-width: 345px) {
+  #memberCrew #memberCrewContent #crewText .list_anchor li a {
+    font-size: 1.45rem;
+  }
 }
 #memberCrew #memberCrewContent #crewText #moveTop {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #707070;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #022CFF;
   background: none;
-  opacity: 0.98;
+  -webkit-animation: up-and-down-item 1.2s ease-in-out infinite;
+          animation: up-and-down-item 1.2s ease-in-out infinite;
 }
-#memberCrew #memberCrewContent #crewText #moveTop::before {
-  display: block;
-  content: "";
-  width: 14px;
-  height: 13px;
-  background: var(--arrow-double) no-repeat;
-  background-size: cover;
-  margin-bottom: 0.8rem;
-  transform: rotate(180deg);
-  opacity: 0.9;
+#memberCrew #memberCrewContent #crewText #moveTop svg {
+  width: 34.88px;
+  height: 34.88px;
+  margin: 63px 0 20.1px;
 }
 #memberCrew #memberCrewContent #crewRole {
   width: 100%;
@@ -470,7 +443,8 @@
 #memberCrew #memberCrewContent #crewRole > ul > li {
   font-size: 1.3rem;
   font-weight: 300;
-  text-indent: -2%;
+  line-height: 1.8rem;
+  letter-spacing: normal;
 }
 #memberCrew #memberCrewContent #crewRole > ul > li:nth-child(1) {
   margin-top: 30px;

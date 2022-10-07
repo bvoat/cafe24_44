@@ -323,11 +323,10 @@
   padding: 10px;
   margin-top: 2.5px;
 }
-.index_list .icon {
-  margin-top: 1%;
-}
-.index_list .icon {
-  height: 25px !important;
+.index_list .icon img {
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* 메인 진열 공통 */
@@ -876,6 +875,19 @@
 
 .swiper-pagination-progressbar {
   background: #E7ECEF;
+}
+
+.icon {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 25px;
+}
+.icon img {
+  width: auto;
+  height: inherit;
+  margin-right: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* 개별 아이템 *//*# sourceMappingURL=listmain.css.map */

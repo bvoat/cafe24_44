@@ -1,133 +1,58 @@
-/**
- * 스와이퍼
- */
-//추천 상품 : 가치소비 입문 어때요? 스와이퍼
-var recommendSwiper = new Swiper(".listmain_recommend", {
-  spaceBetween: 12,
-  slidesPerView: 3,
-  slidesPerGroup: 3,
-  slidesPerColumn: 2,
-  slidesPerColumnFill: "row",
-  normalizeSlideIndex: true,
-  pagination: {
-    el: ".swiper-pagination-fraction",
-    type: "fraction",
-  },
-  navigation: {
-    nextEl: ".swiper-pagination-clickable",
-    prevEl: ".clickable",
-  },
-});
-recommendSwiper.on("click", function () {
-  console.log("isEnd", recommendSwiper.isEnd);
-  console.log("index", recommendSwiper.previousIndex);
-  [...document.querySelectorAll(".brand")].forEach((el) => {
-    el.style.fontSize = "10px !important";
-    console.log(el.style.fontSize);
-  });
-});
-//주간 상품 : Weekly Special 스와이퍼
-var weeklySwiper = new Swiper(".listmain_weekly", {
-  spaceBetween: 12,
-  slidesPerView: "auto",
-  slidesPerColumn: 1,
-  slidesPerColumnFill: "row",
-  pagination: {
-    el: ".list_item_progress",
-    type: "progressbar",
-  },
-});
-//트렌드 스토리 : Trend Story 스와이퍼
-var trendSwiper = new Swiper(".listmain_trend", {
-  spaceBetween: 20,
-  spaceBetween: 11,
-  slidesPerView: "auto",
-  slidesPerColumnFill: "row",
-  rewind: true,
-  pagination: {
-    el: ".swiper-pagination-fraction-noclick",
-    type: "fraction",
-  },
-  navigation: {
-    nextEl: ".swiper-pagination-clickable",
-  },
-});
-//엠디 상품 : MD' Pick 스와이퍼
-var MDpickSwiper = new Swiper(".listmain_md", {
-  spaceBetween: 20,
-  slidesPerView: 1.5,
-  slidesPerColumn: 1,
-  slidesPerColumnFill: "row",
-  observer: true,
-  observeParents: true,
-  observeSlideChildren: true,
-  pagination: {
-    el: ".list_item_progress",
-    type: "progressbar",
-  },
-});
-//엠디 상품 : MD' Pick 상단 탭 마우스 휠 스와이퍼
-var MDPickTabSwiper = new Swiper(".listmain_md_tab_wrap", {
-  spaceBetween: 11,
-  slidesPerView: "auto",
-  slidesPerColumn: 1,
-  slidesPerColumnFill: "row",
-  mousewheel: true,
-});
-//실시간 구매 : 방금 구매한 스와이퍼
-var realTimeSwiper = new Swiper(".realtime_order_list", {
-  spaceBetween: 13,
-  slidesPerView: 2.205,
-  slidesPerColumn: 1,
-  slidesPerColumnFill: "row",
-  pagination: {
-    el: ".list_item_progress",
-    clickable: true,
-    type: "progressbar",
-  },
-});
-/**
- * 탭 형식으로 메인진열 교체
- *
- */
-const listmainTab = () => {
-  //node 배열
-  let md_pick_btn = document.querySelectorAll(".md_pick_btn");
-  let md_pick_listmain = document.querySelectorAll(".listmain_md");
-  //button에서 index 얻기
-  md_pick_btn.forEach((btns, i) => {
-    btns.addEventListener("click", (el) => {
-      //active 될 node index
-      let tab_index = i;
-      listmainMDTabActive(tab_index);
-    });
-  });
-  //class 교체
-  const listmainMDTabActive = (index) => {
-    //button active
-    md_pick_btn.forEach((btn, order) => {
-      if (order == index) {
-        btn.classList.add("active");
-      } else {
-        btn.classList.remove("active");
-      }
-    });
 
-    //listmain active
-    md_pick_listmain.forEach((listmain, order) => {
-      if (order == index) {
-        listmain.classList.add("active");
+/**
+ * 날짜 계산
+ */
+const calculationDate = () => {
+  const promoEndArray = document.querySelectorAll(".promotion_end");
+  const promotionDateArray = document.querySelectorAll(".promotion_date");
+  
+  promoEndArray.forEach((endDate, i)=>{
+    const today = new Date();
+    const target = new Date(endDate.value);
+    const gap = target - today;
+    const diffDay = String(Math.floor(gap / (1000*60*60*24))).padStart(2,"0");
+    const diffHour = String( Math.floor((gap / (1000*60*60)) % 24)).padStart(2,"0");
+    const diffMin = String(Math.floor((gap / (1000*60)) % 60)).padStart(2,"0");
+    const diffSec = String(Math.floor(gap / 1000 % 60)).padStart(2,"0");
+    if(target != 'Invalid Date'){
+      if (gap <= 0) {
+        promotionDateArray[i].innerText = "마감";
       } else {
-        listmain.classList.remove("active");
+        promotionDateArray[i].innerText = `${diffDay}일 ${diffHour}:${diffMin}:${diffSec}`;
       }
-      monitoringDesc();
-    });
-  };
+    } else {
+      promotionDateArray[i].innerText = "마감";
+      clearInterval(timeChecking)
+    }
+  })
 };
+let timeChecking = setInterval(calculationDate, 1000);
+
+
 
 /**
- * 최종 함수 실행
+ * 회원 수 불러오기
  */
-window.addEventListener("DOMContentLoaded", () => {
-  listmainTab();
-});
+const receiveMemberCount = () => {    
+  fetch(`https://${api_domain}.shop/banner/joinbanner`, {
+  method: 'GET', // 또는 'PUT'
+  headers: {
+      'Content-Type': 'application/json',
+  },
+  })
+  .then((response) => response.json())
+  .then((response) => {
+      if(response.success){             
+          const memberCount = document.querySelector(".membercnt");
+          const memberData = response.data.toString()
+          .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+          numberCounting(memberCount, response.data)
+      }
+    })
+  .catch((error) => {
+      console.error('실패:', error);
+  });     
+}
+
+window.addEventListener("DOMContentLoaded",calculationDate());
+window.addEventListener("DOMContentLoaded", receiveMemberCount());

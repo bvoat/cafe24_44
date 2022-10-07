@@ -3,7 +3,7 @@
 <article id="explorer">
     <!--브랜드 카운트-->
     <section id="indexSupplyCnt" class="index_user">
-        <div id="joinbanner" class="joinbanner">📦<em id="supplyCount"></em>개의 브랜드가 함께하는 중!</div>
+        <div id="joinbanner" class="joinbanner">📦 <em class="supplyCount"></em>개의 브랜드가 함께하는 중!</div>
     </section>
     <!--브랜드 카운트-->
     <!-- 둘러보기 타이틀 -->
@@ -15,9 +15,9 @@
         </div>
         <ul class="spring_menu">
             <li class="menu_item"><a href="#"><img src="/bvtIMG/icon/index_recommend.png" /><span>MD 추천</span></a></li>
-            <li class="menu_item"><a href="#"><img src="/bvtIMG/icon/index_ranking.png" /><a href="/product/best.html"><span>인기 순위</span></a></li>
-            <li class="menu_item"><a href="#"><img src="/bvtIMG/icon/index_realtime.png" /><a href="/product/realtime.html"><span>방금 구매한</span></a></li>
-            <li class="menu_item"><a href="#"><img src="/bvtIMG/icon/index_gift.png" /><a href="/product/list.html?cate_no=764"><span>선물 추천</span></a></li>
+            <li class="menu_item"><a href="/product/best.html"><img src="/bvtIMG/icon/index_ranking.png" /><span>인기 순위</span></a></li>
+            <li class="menu_item"><a href="/product/realtime.html"><img src="/bvtIMG/icon/index_realtime.png" /><span>방금 구매한</span></a></li>
+            <li class="menu_item"><a href="/product/list.html?cate_no=764"><img src="/bvtIMG/icon/index_gift.png" /><span>선물 추천</span></a></li>
         </ul>
     </section>
     <!-- 둘러보기 타이틀 -->
@@ -25,11 +25,11 @@
         <ul>
             <!-- 주간 상품 구좌1 -->
             <li class="index_list">
-                <div class="swiper_container listmain_1" module="product_listmain_79">
-                <h2><img src="{$category_title_img}" alt="{$category_title_text}" /></h2>
+                <div class="swiper_container listmain listmain_1" module="product_listmain_79">
+                <h4 class="banner"><a href="/product/project.html?cate_no=758"><img src="{$category_title_img}" alt="{$category_title_text}" /></a></h4>
 
                     <!--
-                    $count = 10
+                    $count = 100
                     $basket_result = /product/add_basket.html
                     $basket_option = /product/basket_option.html
                     -->
@@ -39,11 +39,53 @@
             </li>
             <!-- 주간 상품 구좌2 -->
             <li class="index_list">
-                <div class="listmain_weekly swiper_container listmain_2" module="product_listmain_84">
-                <h2><img src="{$category_title_img}" alt="{$category_title_text}" /></h2>
+                <div class="swiper_container listmain listmain_2" module="product_listmain_84">
+                <h4 class="banner"><a href="/product/project.html?cate_no=771"><img src="{$category_title_img}" alt="{$category_title_text}" /></a></h4>
 
                     <!--
-                    $count = 10
+                    $count = 100
+                    $basket_result = /product/add_basket.html
+                    $basket_option = /product/basket_option.html
+                    -->
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="list_item_progress"></div>
+                </div>
+            </li>
+            <!-- 주간 상품 구좌3 -->
+            <li class="index_list">
+                <div class="swiper_container listmain listmain_3" module="product_listmain_97">
+                <h4 class="banner"><a href="/product/project.html?cate_no=771"><img src="{$category_title_img}" alt="{$category_title_text}" /></a></h4>
+
+                    <!--
+                    $count = 100
+                    $basket_result = /product/add_basket.html
+                    $basket_option = /product/basket_option.html
+                    -->
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="list_item_progress"></div>
+                </div>
+            </li>
+            <!-- 주간 상품 구좌4 -->
+            <li class="index_list">
+                <div class="swiper_container listmain listmain_4" module="product_listmain_95">
+                <h4 class="banner"><a href="/product/project.html?cate_no=771"><img src="{$category_title_img}" alt="{$category_title_text}" /></a></h4>
+
+                    <!--
+                    $count = 100
+                    $basket_result = /product/add_basket.html
+                    $basket_option = /product/basket_option.html
+                    -->
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="list_item_progress"></div>
+                </div>
+            </li>
+            <!-- 주간 상품 구좌5 -->
+            <li class="index_list">
+                <div class="swiper_container listmain listmain_5" module="product_listmain_96">
+                <h4 class="banner"><a href="/product/project.html?cate_no=771"><img src="{$category_title_img}" alt="{$category_title_text}" /></a></h4>
+
+                    <!--
+                    $count = 100
                     $basket_result = /product/add_basket.html
                     $basket_option = /product/basket_option.html
                     -->
@@ -53,20 +95,43 @@
             </li>
         </ul>
     </section>
-
-      
 </article>
 
 <script>
-    //주간 상품 : Weekly Special 스와이퍼
-var weeklySwiper = new Swiper(".listmain_weekly", {
+//둘러보기 스와이퍼
+var listmainSwiper = new Swiper(".listmain", {
   spaceBetween: 12,
   slidesPerView: "auto",
-  slidesPerColumn: 1,
-  slidesPerColumnFill: "row",
   pagination: {
     el: ".list_item_progress",
     type: "progressbar",
   },
 });
+
+/**
+ * 회원 수 불러오기
+ */
+ const receiveBrandCount = () => {    
+  fetch(`https://${api_domain}.shop/banner/supplier`, {
+  method: 'GET', // 또는 'PUT'
+  headers: {
+      'Content-Type': 'application/json',
+  },
+  })
+  .then((response) => response.json())
+  .then((response) => {
+      if(response.success){             
+          const supplyCount = document.querySelector(".supplyCount");
+          console.log('supplyCount: ', supplyCount);
+          console.log('response.data.', response.data);
+          const memberData = response.data.toString()
+          .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+          numberCounting(supplyCount, response.data)
+      }
+    })
+  .catch((error) => {
+      console.error('실패:', error);
+  });     
+}
+window.addEventListener("DOMContentLoaded", receiveBrandCount())
 </script>

@@ -143,6 +143,9 @@
   color: #ffffff;
   padding: 63px 29px 120px;
 }
+#bvoatIntroduce #bvoatContact .introduce_title {
+  margin-bottom: 51px;
+}
 #bvoatIntroduce #bvoatContact .introduce_title::before {
   display: block;
   width: 125px;
