@@ -125,8 +125,6 @@ var listmainSwiper = new Swiper(".listmain", {
   .then((response) => {
       if(response.success){             
           const supplyCount = document.querySelector(".supplyCount");
-          console.log('supplyCount: ', supplyCount);
-          console.log('response.data.', response.data);
           const memberData = response.data.toString()
           .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
           numberCounting(supplyCount, response.data)

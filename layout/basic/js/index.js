@@ -28,8 +28,6 @@ const calculationDate = () => {
 };
 let timeChecking = setInterval(calculationDate, 1000);
 
-
-
 /**
  * 회원 수 불러오기
  */

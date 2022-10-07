@@ -238,7 +238,7 @@ function controlTopNavActive(page_path) {
     document.querySelector("#prd").classList.add("top_nav_active");
     //path가 크루면
   } else if (page_path.includes("crew/crew.html") || page_path.includes("crew/crewinfo.html")) {
-    //크루에 active
+    //크루에 active 
     document.querySelector("#crew").classList.add("top_nav_active");
     //path가 펀딩이면
   } else if (page_path.includes("introduce")) {
