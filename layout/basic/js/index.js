@@ -7,8 +7,11 @@ const calculationDate = () => {
   const promotionDateArray = document.querySelectorAll(".promotion_date");
   
   promoEndArray.forEach((endDate, i)=>{
+    //Safari, iOS 대응 위한 Date 가공 (yyyy-mm-ddT00:00)
+    const rawCafe24Date = endDate.value.split(" ");
+    const endDay = rawCafe24Date[0]+"T"+rawCafe24Date[1];
     const today = new Date();
-    const target = new Date(endDate.value);
+    const target = new Date(endDay);
     const gap = target - today;
     const diffDay = String(Math.floor(gap / (1000*60*60*24))).padStart(2,"0");
     const diffHour = String( Math.floor((gap / (1000*60*60)) % 24)).padStart(2,"0");
@@ -21,12 +24,12 @@ const calculationDate = () => {
         promotionDateArray[i].innerText = `${diffDay}일 ${diffHour}:${diffMin}:${diffSec}`;
       }
     } else {
-      promotionDateArray[i].innerText = "마감";
-      clearInterval(timeChecking)
+      promotionDateArray[i].innerText = "";
+      clearInterval(promotionTimer)
     }
   })
 };
-let timeChecking = setInterval(calculationDate, 1000);
+let promotionTimer = setInterval(calculationDate, 1000);
 
 /**
  * 회원 수 불러오기
