@@ -398,9 +398,9 @@ const bvoatShare = (type, _url) => {
   let now = max;
 
   const handle = setInterval(() => {
-      const gap = Math.ceil(max - now)
-      $counter.innerHTML = gap.toString()
-      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+      const gap = Math.ceil(max - now);
+      const number = gap.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      $counter.innerHTML = number;
 
       // 목표에 도달하면 정지
       if (now < 1) {

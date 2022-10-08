@@ -42,8 +42,6 @@ const receiveMemberCount = () => {
   .then((response) => {
       if(response.success){             
           const memberCount = document.querySelector(".membercnt");
-          const memberData = response.data.toString()
-          .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
           numberCounting(memberCount, response.data)
       }
     })
