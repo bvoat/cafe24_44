@@ -67,3 +67,14 @@
 .product_list_pagination {
     height: 3px;
 }
+//하단 아이콘 신버전
+.icon{
+    height: 25px;
+    margin-top: 4%;
+    img{
+        width: auto;
+        height: inherit;
+        margin-right: 5px;
+        object-fit: cover;
+    }
+}

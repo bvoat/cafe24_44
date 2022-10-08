@@ -128,10 +128,8 @@
 }
 
 .icon {
-  display: flex;
-  flex-flow: row nowrap;
-  margin-top: 10px;
   height: 25px;
+  margin-top: 4%;
 }
 .icon img {
   width: auto;

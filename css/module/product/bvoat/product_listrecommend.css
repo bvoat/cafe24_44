@@ -124,4 +124,16 @@
 
 .product_list_pagination {
   height: 3px;
+}
+
+.icon {
+  height: 25px;
+  margin-top: 4%;
+}
+.icon img {
+  width: auto;
+  height: inherit;
+  margin-right: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=product_listrecommend.css.map */
