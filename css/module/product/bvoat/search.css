@@ -325,8 +325,8 @@
 }
 #searchResultProductList .icon img {
   height: inherit;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   image-rendering: auto;
 }
 #searchResultProductList .desc {
@@ -380,7 +380,7 @@
   margin-bottom: 20px;
 }
 #searchResultProductList .icon {
-  height: 25px;
+  height: 25px !important;
   margin-top: 5%;
 }
 

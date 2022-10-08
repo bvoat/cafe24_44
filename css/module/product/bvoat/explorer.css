@@ -176,4 +176,15 @@
   }
 }
 
-/* 둘러보기 이동 *//*# sourceMappingURL=explorer.css.map */
+/* 둘러보기 이동 */
+.icon {
+  height: 25px !important;
+  margin-top: 6%;
+}
+.icon img {
+  width: auto;
+  height: inherit;
+  margin-right: 5px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=explorer.css.map */

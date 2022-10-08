@@ -885,8 +885,8 @@
   width: auto;
   height: inherit;
   margin-right: 5px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* 개별 아이템 *//*# sourceMappingURL=listmain.css.map */

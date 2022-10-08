@@ -135,6 +135,6 @@
   width: auto;
   height: inherit;
   margin-right: 5px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=product_list.css.map */
