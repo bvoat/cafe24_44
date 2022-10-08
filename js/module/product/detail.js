@@ -378,3 +378,5 @@ function removePagingArea(oTarget)
         $(this).children('p').children('img').first().remove();
     });
 });
+/* aos 초기화 */
+AOS.init();
