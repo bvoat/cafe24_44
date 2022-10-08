@@ -659,3 +659,13 @@ div.layerProgress {
         font-size: 10px;
     }
 }
+
+.icon {
+    width: 100%;
+    height: 30px;
+}
+.icon img {
+    width: auto;
+    height: inherit;
+    margin-right: 8px;
+}
