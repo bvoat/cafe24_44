@@ -327,6 +327,7 @@
   height: inherit;
   -o-object-fit: cover;
      object-fit: cover;
+  image-rendering: auto;
 }
 
 /* 메인 진열 공통 */
@@ -878,9 +879,6 @@
 }
 
 .icon {
-  display: flex;
-  flex-flow: row nowrap;
-  height: 25px;
   margin-top: 5%;
 }
 .icon img {

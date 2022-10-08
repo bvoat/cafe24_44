@@ -82,6 +82,7 @@
   height: inherit;
   -o-object-fit: cover;
      object-fit: cover;
+  image-rendering: auto;
 }
 
 .desc {

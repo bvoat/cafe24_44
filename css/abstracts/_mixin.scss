@@ -135,6 +135,7 @@
         img{
             height: inherit;
             object-fit: cover;
+            image-rendering: auto;
         }
     }
 }

@@ -115,6 +115,7 @@
   height: inherit;
   -o-object-fit: cover;
      object-fit: cover;
+  image-rendering: auto;
 }
 #realTimeOrderList #realTimeOrderListTitle {
   width: 100%;

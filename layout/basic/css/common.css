@@ -304,7 +304,6 @@ fieldset {
     border: none;
     vertical-align: top;
     /* 비보트 추가 */
-    image-rendering: -webkit-optimize-contrast;
     backface-visibility: hidden;
 }
 

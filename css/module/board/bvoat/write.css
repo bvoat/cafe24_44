@@ -90,6 +90,7 @@
   height: inherit;
   -o-object-fit: cover;
      object-fit: cover;
+  image-rendering: auto;
 }
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb {
   width: 30%;

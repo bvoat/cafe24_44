@@ -183,6 +183,7 @@
   height: inherit;
   -o-object-fit: cover;
      object-fit: cover;
+  image-rendering: auto;
 }
 #bvtHome #indexListmain div.listmain ul.prdList > li .promotion_date {
   position: absolute;
@@ -234,9 +235,6 @@
   word-wrap: break-word;
   line-height: 3rem;
   height: 8.5rem;
-}
-#bvtHome #indexListmain div.listmain ul.prdList > li .icon {
-  height: 30px;
 }
 #bvtHome #indexListmain div.listmain ul.prdList > li .icon img {
   margin-right: 8px;

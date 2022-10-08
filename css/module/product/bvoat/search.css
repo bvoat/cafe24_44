@@ -327,6 +327,7 @@
   height: inherit;
   -o-object-fit: cover;
      object-fit: cover;
+  image-rendering: auto;
 }
 #searchResultProductList .desc {
   padding: 7px 0 0 0;

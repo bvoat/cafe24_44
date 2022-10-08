@@ -127,6 +127,7 @@
   height: inherit;
   -o-object-fit: cover;
      object-fit: cover;
+  image-rendering: auto;
 }
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap em {
   float: right;
