@@ -750,7 +750,7 @@
                 min-width: 200px;
                 backface-visibility: hidden;
                 transform: translateZ(0);
-                object-fit: cover;
+                image-rendering: -webkit-optimize-contrast;
             }
 
             iframe {
