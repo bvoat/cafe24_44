@@ -211,10 +211,10 @@
   margin-bottom: 19px;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .crew_method_list_content .crew_method_txt {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 300;
   color: #ffffff;
-  line-height: 3rem;
+  line-height: 2.7rem;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .crew_method_list_content .crew_method_sub_txt,
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .crew_method_list_content .crew_method_sub_txt li {
@@ -381,9 +381,8 @@
   justify-content: space-between;
   align-items: center;
   color: #022CFF;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  letter-spacing: -0.4px;
 }
 #memberCrew #memberCrewContent #crewText .list_anchor li span {
   color: #292929;
@@ -405,9 +404,10 @@
 #memberCrew #memberCrewContent #crewText .list_anchor li:nth-child(2) a {
   color: #292929;
 }
-@media (max-width: 345px) {
+@media (max-width: 360px) {
   #memberCrew #memberCrewContent #crewText .list_anchor li a {
-    font-size: 1.45rem;
+    font-size: 1.4rem;
+    letter-spacing: -0.4px;
   }
 }
 #memberCrew #memberCrewContent #crewText #moveTop {

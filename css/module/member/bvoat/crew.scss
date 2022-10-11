@@ -238,10 +238,10 @@
                         }
     
                         .crew_method_txt {
-                            font-size: 1.7rem;
+                            font-size: 1.5rem;
                             font-weight: 300;
                             color: $bvt-white;
-                            line-height: 3.0rem;
+                            line-height: 2.7rem;
                         }
     
                         // 세부 설명
@@ -428,9 +428,8 @@
                         justify-content: space-between;
                         align-items: center;
                         color: $bvt-blue;
-                        font-size: 1.7rem;
+                        font-size: 1.5rem;
                         font-weight: 600;
-                        letter-spacing: -0.4px;
                     }
                     span{
                         color: $bvt-black;
@@ -457,9 +456,10 @@
                         }
                     }
 
-                    @media (max-width: 345px) {
+                    @media (max-width: 360px) {
                         a{
-                            font-size: 1.45rem;
+                            font-size: 1.4rem;
+                            letter-spacing: -0.4px;
                         }
                     }
                 }
