@@ -124,11 +124,14 @@ crew_link_share.addEventListener("click", (e) => {
   shareBtnClick(e);
 });
 
-/* url 제출 함수 */
+/* 방법 3 url 제출 함수 */
 //btn addEvent
 const crew_Form = document.querySelector("#crewUrlForm");
-//fetch 통신 함수
-const postURLAsJson = (formData) => {
+/**
+ * 
+ * @param {input 내 value} formData 
+ */
+const postURLtoCrewLevelup = (formData) => {
   fetch(`https://${api_domain}.shop/sns`, {
     method: "POST",
     headers: {
@@ -136,14 +139,17 @@ const postURLAsJson = (formData) => {
     },
     body: formData,
   }).then((response) => {
-    if (response.status === 500) {
-      alert("😢 서버 오류입니다. 비보트에게 알려주세요!");
-      ChannelIO("show");
+    if (response.status === 500 || response.status === 504) {
+      alert("😢 서버 오류입니다. 비보트에게 알려주세÷요!");
+      // ChannelIO("show");
+      document.querySelector(".submit_btn").disabled = false;
       return false;
     } else if (response.status === 409) {
       alert("이미 등록하신 URL 입니다 👍");
+      document.querySelector(".submit_btn").disabled = false;
       return false;
-    } else if (response.status === 201) {
+    } else if (response.status === 201 || response.status === 200) {
+      document.querySelector(".submit_btn").disabled = false;
       const okSns = (e) => {
         const receivingOk = (id, state) => {
           $.ajax({
@@ -154,6 +160,7 @@ const postURLAsJson = (formData) => {
               state: state,
             },
             success: function (response) {
+              console.log('response: ', response);
               if (response.status == 200) {
                 document.querySelector("#bvtCommonModal").remove();
                 return false;
@@ -203,7 +210,7 @@ const postURLAsJson = (formData) => {
       );
     }
     return false;
-  });
+  })
 };
 //submit 함수
 const snsURLSubmit = async (e) => {
@@ -225,11 +232,12 @@ const snsURLSubmit = async (e) => {
       tag_url.focus();
       return false;
     } else {
+      document.querySelector(".submit_btn").disabled = true;
       const form_data = new FormData(form);
       const plainFormData = JSON.stringify(
         Object.fromEntries(form_data.entries())
       );
-      await postURLAsJson(plainFormData);
+      await postURLtoCrewLevelup(plainFormData);
     }
   }
 };
