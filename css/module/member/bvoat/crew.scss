@@ -390,6 +390,9 @@
                                             color: $bvt-white;
                                             border-radius: 22px;
                                             right: 15px;
+                                            &:disabled{
+                                                background: $bvt-lightgray;
+                                            }
                                         }
                                     }
                                 }

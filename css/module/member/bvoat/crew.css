@@ -353,6 +353,9 @@
   border-radius: 22px;
   right: 15px;
 }
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share .crew_method_form_wrap > form fieldset .share_input_wrap button:disabled {
+  background: #C4C4C4;
+}
 #memberCrew #memberCrewContent #crewText {
   position: relative;
   display: flex;
