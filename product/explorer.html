@@ -124,7 +124,7 @@ var listmainSwiper = new Swiper(".listmain", {
     .then((response) => response.json())
     .then((response) => {
         if(response.success){             
-            //   const supplyCount = document.querySelector(".supplyCount");
+            const supplyCount = document.querySelector(".supplyCount");
             numberCounting(supplyCount, response.data)
         }
         })
@@ -134,7 +134,7 @@ var listmainSwiper = new Swiper(".listmain", {
     
     // const supplyCount = document.querySelector(".supplyCount");
     // const tempNum = 137;
-    numberCounting(supplyCount, tempNum)
+    // numberCounting(supplyCount, tempNum)
 }
 window.addEventListener("DOMContentLoaded", receiveBrandCount())
 </script>
