@@ -115,25 +115,25 @@ var listmainSwiper = new Swiper(".listmain", {
  * 회원 수 불러오기
  */
  const receiveBrandCount = () => {    
-//   fetch(`https://${api_domain}.shop/banner/supplier`, {
-//   method: 'GET', // 또는 'PUT'
-//   headers: {
-//       'Content-Type': 'application/json',
-//   },
-//   })
-//   .then((response) => response.json())
-//   .then((response) => {
-//       if(response.success){             
-//         //   const supplyCount = document.querySelector(".supplyCount");
-//           numberCounting(supplyCount, response.data)
-//       }
-//     })
-//   .catch((error) => {
-//       console.error('실패:', error);
-//   });     
+    fetch(`https://${api_domain}.shop/banner/supplier`, {
+    method: 'GET', // 또는 'PUT'
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    })
+    .then((response) => response.json())
+    .then((response) => {
+        if(response.success){             
+            //   const supplyCount = document.querySelector(".supplyCount");
+            numberCounting(supplyCount, response.data)
+        }
+        })
+    .catch((error) => {
+        console.error('실패:', error);
+    });     
     
-    const supplyCount = document.querySelector(".supplyCount");
-    const tempNum = 137;
+    // const supplyCount = document.querySelector(".supplyCount");
+    // const tempNum = 137;
     numberCounting(supplyCount, tempNum)
 }
 window.addEventListener("DOMContentLoaded", receiveBrandCount())
