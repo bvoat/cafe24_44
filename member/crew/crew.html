@@ -10,8 +10,8 @@
         <h1>크루 가입 안내 페이지</h1>
     </section>
     <section id="memberCrewContent">
-        <section id="crewCouponZone" class="crew_couponzone" module="Coupon_zonePackage">
-            <ul class="crew_coupone_list" module="Coupon_Zone">
+        <section id="crewCouponZone" class="crew_couponzone">
+            <ul class="crew_coupone_list">
                 <!--
                     $coupon_down_result_url = /coupon/coupon_down_result.html
                 -->
@@ -23,30 +23,24 @@
                             편하게 실천할 수 있도록</h3>
                         <p>원하는 내일을 마음 편히 선택할 수 있게<br>
                             비보트가 더 많이 도와드릴게요.</p>
-                        <!-- <p>
-                            <a href="#none" onclick="couponZone.allCheck('{$zone_form_id}')"><img alt="전체선택" src="http://img.echosting.cafe24.com/skin/base_ko_KR/coupon/btn_select.gif" id="imgZonecheckAll" img_on="http://img.echosting.cafe24.com/skin/base_ko_KR/coupon/btn_select.gif" img_off="http://img.echosting.cafe24.com/skin/base_ko_KR/coupon/btn_select_cancel.gif" /></a>
-                            <a href="#none" onclick="couponZone.setDown('{$zone_form_id}')"><img alt="선택쿠폰 다운받기" src="http://img.echosting.cafe24.com/skin/base_ko_KR/coupon/btn_select_down.gif"></a>
-                        </p> -->
                     </div>
-                    {$form_start}
                     <div class="couponSkinArea">
-                        <ul class="coupon_list" module="Coupon_aZonelist">
+                        <ul class="coupon_list">
                             <li class="coupon_item">
-                                <div class="coupon {$background_class}">
-                                    <a href="{$coupon_issue_url}"
-                                        title="{$coupon_name} {$coupon_content} {$coupon_period}">
-                                        <img src="{$background_url}" alt="{$coupon_content} {$coupon_period}"></a>
+                                <div class="coupon">
+                                    <a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073820725300000648"
+                                        title="비보트 PICK! 1% 추가 할인 쿠폰">
+                                        <img src="/web/product/coupon/shop1_045ac9fede65b3c3257810d29d2b2749.png" alt="비보트 Pick! 추가 할인 쿠폰 최저가 상품에 할인을 더 붙여드려요"></a>
                                 </div>
                             </li>
                             <li class="coupon_item">
-                                <div class="coupon {$background_class}">
-                                    <a href="{$coupon_issue_url}"
-                                        title="{$coupon_name} {$coupon_content} {$coupon_period}">
-                                        <img src="{$background_url}" alt=" {$coupon_content} {$coupon_period}"></a>
+                                <div class="coupon ">
+                                    <a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073820747400000649"
+                                        title="10월 혜택 3,000원 할인 쿠폰">
+                                        <img src="/web/product/coupon/shop1_130ac37db4efba1d9c35604318d8554e.png" alt="1만 원만 넘겨도 3천원 할인 쿠폰 배송비 있을 때 보태쓰세요"></a>
                                 </div>
                             </li>
                         </ul>
-                        {$form_end}
                     </div>
                 </li>
                 <li class="couponZone crew_couponzone">
@@ -58,25 +52,23 @@
                         <p>· 마일리지 횟수 무제한 2배 적립<br>
                             · 리뷰 작성 시 횟수 무제한 마일리지 5배 적립</p>
                     </div>
-                    {$form_start}
                     <div class="couponSkinArea">
-                        <ul class="coupon_list" module="Coupon_aZonelist">
+                        <ul class="coupon_list">
                             <li class="coupon_item">
-                                <div class="coupon {$background_class}">
-                                    <a href="{$coupon_issue_url}"
-                                        title="{$coupon_name} {$coupon_content} {$coupon_period}">
-                                        <img src="{$background_url}" alt="{$coupon_content} {$coupon_period}"></a>
+                                <div class="coupon">
+                                    <a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073820760200000650"
+                                        title="10월 비보트 크루 10% 할인 쿠폰">
+                                        <img src="/web/product/coupon/shop1_209c90a9ae1007ff17e34d0b330899d3.png" alt="필요할 때 꺼내 쓰는 10% 쿠폰 가치소비 운명 공동체 드림"></a>
                                 </div>
                             </li>
                             <li class="coupon_item">
-                                <div class="coupon {$background_class}">
-                                    <a href="{$coupon_issue_url}"
-                                        title="{$coupon_name} {$coupon_content} {$coupon_period}">
-                                        <img src="{$background_url}" alt=" {$coupon_content} {$coupon_period}"></a>
+                                <div class="coupon">
+                                    <a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073820770400000651"
+                                        title="10월 비보트 크루 3,000원 할인 쿠폰">
+                                        <img src="/web/product/coupon/shop1_398b832c8aa280d28e865bf840e5d17c.png" alt="배송비 생겼을 때 지우개 쿠폰 필요할 때가 또 있을 테니까요"></a>
                                 </div>
                             </li>
                         </ul>
-                        {$form_end}
                     </div>
                     <a href="#moveLevelUpAnchor" id="moveLevelUp"><span>크루 되는 방법</span><svg
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.88 34.88">
@@ -89,6 +81,8 @@
             </ul>
 
         </section>
+
+        
         <section id="crewLevelUp" class="crew_levelup">
             <div class="crew_levelup_title crew_title">
                 <em id="moveLevelUpAnchor">하나만 시작해도 크루 등급</em>
