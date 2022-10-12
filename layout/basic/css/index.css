@@ -199,18 +199,19 @@
   letter-spacing: -0.2px;
 }
 #bvtHome #indexListmain div.listmain ul.prdList > li .desc {
-  margin: 21px 0;
+  margin: 16.5px 0 18px;
+  padding: 0;
 }
 #bvtHome #indexListmain div.listmain ul.prdList > li .desc .title {
   font-size: 1.5rem;
   font-weight: 600;
   color: #022CFF;
-  margin-bottom: 14px;
+  margin: 0 0 7px 0;
 }
 #bvtHome #indexListmain div.listmain ul.prdList > li .desc .product_model {
   font-size: 2.1rem;
   font-weight: 600;
-  margin-bottom: 19px;
+  margin: 0 0 9.5px 0;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -232,8 +233,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.7rem;
-  height: 7.6rem;
+  line-height: 2.4rem;
+  height: 6.7rem;
 }
 #bvtHome .linktolookaround {
   display: flex;
