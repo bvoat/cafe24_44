@@ -137,7 +137,7 @@
   position: relative;
   width: 100%;
 }
-#bvtHome #indexListmain div.listmain ul.prdList > li .thumb > a {
+#bvtHome #indexListmain div.listmain ul.prdList > li .thumb > a, #bvtHome #indexListmain div.listmain ul.prdList > li .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
@@ -145,7 +145,7 @@
   border-radius: 2px;
   font-size: 0;
 }
-#bvtHome #indexListmain div.listmain ul.prdList > li .thumb > a > img {
+#bvtHome #indexListmain div.listmain ul.prdList > li .thumb > a > img, #bvtHome #indexListmain div.listmain ul.prdList > li .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -202,7 +202,7 @@
   margin: 16.5px 0 18px;
   padding: 0;
 }
-#bvtHome #indexListmain div.listmain ul.prdList > li .desc .title {
+#bvtHome #indexListmain div.listmain ul.prdList > li .desc .discount_text {
   font-size: 1.5rem;
   font-weight: 600;
   color: #022CFF;
