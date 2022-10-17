@@ -64,12 +64,57 @@
   padding: 17px 11px;
   border-bottom: 1px solid #E2E2E2;
   box-sizing: border-box;
+  /* 가격 표시 */
+  /* 가격 표시 */
 }
 #productDetailTop .product_info_wrap h2 {
   font-size: 1.43rem;
   font-weight: 600;
   color: #292929;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+}
+#productDetailTop .product_info_wrap .price_wrap {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+}
+#productDetailTop .product_info_wrap .price_wrap > .discount {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #F94D4D;
+  margin-right: 0.88rem;
+  letter-spacing: -0.2px;
+}
+#productDetailTop .product_info_wrap .price_wrap > .price_item {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #292929;
+}
+#productDetailTop .product_info_wrap .price_wrap .realprice::after, #productDetailTop .product_info_wrap .price_wrap .fixprice::after {
+  display: inline-block;
+  content: "원";
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #292929;
+  margin-left: 1px;
+}
+#productDetailTop .product_info_wrap .price_wrap .strike_price {
+  position: absolute;
+  bottom: 2.1rem;
+  text-decoration: line-through !important;
+  color: #ABABAB !important;
+  font-size: 1.2rem !important;
+  font-weight: 400 !important;
+}
+#productDetailTop .product_info_wrap .price_wrap .strike_price::after {
+  color: #ABABAB !important;
+  font-size: 1.3rem !important;
+}
+#productDetailTop .product_info_wrap .price_wrap .onpromotion {
+  color: #292929 !important;
+}
+#productDetailTop .product_info_wrap .price_wrap .onpromotion::after {
+  color: #292929 !important;
 }
 #productDetailTop .product_info_wrap #categoryTagBox {
   display: flex;
