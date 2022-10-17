@@ -576,6 +576,7 @@ div.layerProgress {
 }
 
 /* 가격 표시 */
+/* detail 내에서는 font-size x2 */
 .price_wrap {
     position: relative;
     display: flex;
