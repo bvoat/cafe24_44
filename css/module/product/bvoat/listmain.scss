@@ -22,7 +22,7 @@
             width: calc(50% - 12px);
             max-width: 182px;
             margin-bottom: 27px;
-    
+            overflow: hidden;
             //위시버튼
             @include wish-button(21px, 18.98px, 0, 0);
     
@@ -43,7 +43,7 @@
             width: calc(50% - 15px);
             max-width: 222.5px;
             margin-bottom: 27px;
-    
+            overflow: hidden;
             //위시버튼
             @include wish-button(21px, 18.98px, 0, 0);
     
@@ -64,7 +64,7 @@
             width: calc(50% - 10.9px);
             max-width: 135.5px;
             margin-bottom: 27px;
-    
+            overflow: hidden;
             //위시버튼
             @include wish-button(17px, 15px, 0, 0);
         }
@@ -423,6 +423,7 @@
             display: flex;
             flex-flow: row nowrap;
             margin-bottom: 12.05px;
+            overflow: hidden;
             .thumb{
                 max-width: 130px;
                 margin-right: 17px;

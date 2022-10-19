@@ -62,6 +62,7 @@
                     width: calc(50% - 4px);
                     max-width: 210px;
                     margin-bottom: 40px;
+                    overflow: hidden;
                     //위시버튼
                     @include wish-button(21px, 18.98px, 0, 0);
 

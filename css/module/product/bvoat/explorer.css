@@ -117,6 +117,7 @@
   width: calc(50% - 12px);
   max-width: 181px;
   margin-bottom: 27px;
+  overflow: hidden;
 }
 #indexListmain ul .index_list > div > ul .list_item .wish {
   position: absolute;
