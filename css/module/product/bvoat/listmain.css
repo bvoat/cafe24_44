@@ -23,7 +23,6 @@
   width: calc(50% - 12px);
   max-width: 182px;
   margin-bottom: 27px;
-  overflow: hidden;
 }
 .doublemid > ul .list_item .wish {
   position: absolute;
@@ -61,7 +60,6 @@
   width: calc(50% - 15px);
   max-width: 222.5px;
   margin-bottom: 27px;
-  overflow: hidden;
 }
 .singlebig > ul .list_item .wish {
   position: absolute;
@@ -99,7 +97,6 @@
   width: calc(50% - 10.9px);
   max-width: 135.5px;
   margin-bottom: 27px;
-  overflow: hidden;
 }
 .doublesmall > ul .list_item .wish {
   position: absolute;
@@ -279,7 +276,6 @@
   line-height: 1.7rem;
   height: 3.3rem;
   margin-bottom: 20px;
-  letter-spacing: -0.2px;
 }
 .index_list .thumb {
   position: relative;
@@ -617,7 +613,6 @@
   display: flex;
   flex-flow: row nowrap;
   margin-bottom: 12.05px;
-  overflow: hidden;
 }
 #indexListmainBest > .weekbest > ul .list_item .thumb {
   max-width: 130px;

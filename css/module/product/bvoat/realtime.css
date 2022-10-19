@@ -64,7 +64,6 @@
   line-height: 1.69rem;
   height: 3.28rem;
   margin-bottom: 20px;
-  letter-spacing: -0.2px;
 }
 #realTimeOrderList .thumb {
   position: relative;
@@ -154,7 +153,6 @@
   width: calc(50% - 4px);
   max-width: 210px;
   margin-bottom: 40px;
-  overflow: hidden;
 }
 #realTimeOrderList #realTimeOrderListContents .realtime > ul .list_item .wish {
   position: absolute;
