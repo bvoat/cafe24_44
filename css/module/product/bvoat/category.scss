@@ -48,13 +48,11 @@
         li[class^='middle_main_category']{
             //개별 아이템
             .middle_item{
-                max-width: 119px;
                 a{
                     display: flex;
                     flex-flow: column nowrap;
                     justify-content: center;
                     align-items: center;
-                    max-width: 119px;   
                     //category_img
                     @include product-thumb(0px, 0px, 0px, 0px);
                     //category_name
@@ -93,14 +91,12 @@
             margin-bottom: 60px;
             //개별 아이템
             .middle_item{
-                max-width: 119px;
                 margin-top: 30px !important;
                 a{
                     display: flex;
                     flex-flow: column nowrap;
                     justify-content: center;
                     align-items: center;
-                    max-width: 119px;   
                     //category_img
                     @include product-thumb(0px, 0px, 0px, 0px);
                     //category_name

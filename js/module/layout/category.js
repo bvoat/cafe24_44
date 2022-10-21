@@ -126,7 +126,7 @@ let methods = {
         // 1줄 슬라이더 공통
         var onerowSwiper = new Swiper(".onerow", {
             spaceBetween: 12,
-            slidesPerView: 3.2,
+            slidesPerView: 3.01,
             slidesPerColumn: 1,
             slidesPerColumnFill: 'row',
             pagination: {
@@ -138,7 +138,7 @@ let methods = {
         // 2줄 슬라이더 공통
         var tworowSwiper = new Swiper(".tworow", {
             spaceBetween: 12,
-            slidesPerView: 3.2,
+            slidesPerView: 3.01,
             slidesPerColumn: 2,
             slidesPerColumnFill: 'row',
             pagination: {

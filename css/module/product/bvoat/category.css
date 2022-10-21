@@ -54,15 +54,11 @@
   color: #ffffff;
   margin-bottom: 26px;
 }
-#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item {
-  max-width: 119px;
-}
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  max-width: 119px;
 }
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb {
   position: relative;
@@ -147,7 +143,6 @@
   margin-bottom: 60px;
 }
 #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item {
-  max-width: 119px;
   margin-top: 30px !important;
 }
 #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a {
@@ -155,7 +150,6 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  max-width: 119px;
 }
 #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb {
   position: relative;
