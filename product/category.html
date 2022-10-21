@@ -1,64 +1,36 @@
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(/css/module/product/bvoat/category.css)-->
 
-<article id="category">
+<article id="category" module="layout_category">
     <section id="categoryTitle">
-        <h1 class="displaynone">비보트 카테고리</h1>
-        <h2>카테고리 모아보기</h2>
+        <div class="category_banner"><span>🧭</span>발견해보세요! <em>나만의 가치소비 선택지</em></div>
     </section>
-    <section id="categorySearch" module="Layout_SearchHeader">
-            <!--
-            $category_page=/product/list.html
-            -->
-    <fieldset>
-        <legend class="displaynone">검색</legend>
-            {$form.keyword}
-        <button type="button" class="btnSearch" onclick="{$action_search_submit}" title="검색하기">
-            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 23">
-                <g clip-path="url(#a)" stroke="#022CFF" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" rendering="geometricPrecision">
-                  <path d="M9.455 17.723c4.51 0 8.167-3.67 8.167-8.197 0-4.527-3.657-8.197-8.167-8.197S1.288 5 1.288 9.526c0 4.527 3.656 8.197 8.167 8.197ZM17.015 17.114l3.164 3.175" rendering="geometricPrecision"/>
-                </g>
-                <defs>
-                  <clipPath id="a">
-                    <path fill="#fff" transform="translate(0 .037)" d="M0 0h22v22.08H0z"/>
-                  </clipPath>
-                </defs>
-              </svg>
-        </button>
-    </fieldset>
-    <section class="hot_keyword">
-        <h4 class="search_title">많이 찾는 검색어</h4>
-        <div class="search_hot" module="search_hotkeyword">
-            <ul class="hot_list swiper-wrapper">
-                <li class="swiper-slide"><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
-                <li class="swiper-slide"><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
-            </ul>
-        </div>
-    </section>
-    </section>
-    <section id="categoryNowRecommendList">
-        <section id="categoryTitle">
-            <h2>지금 가장 인기있는</h2>
-        </section>
-        <ul class="recommend_list">
-            <li class="recommend_banner_1"><a href="/product/list.html?cate_no=500#🪂%20%20패러글라이더"><span>패러글라이더</span></a></li>
-            <li class="recommend_banner_2"><a href="/product/list.html?cate_no=483#🇰🇷%20%20한지"><span>한지</span></a></li>
-            <li class="recommend_banner_3"><a href="/product/list.html?cate_no=495#🥤%20%20페트병"><span>페트병</span></a></li>
-            <li class="recommend_banner_4"><a href="/product/list.html?cate_no=531#🍊%20%20못난이%20농산물"><span>못난이 농산물</span></a></li>
+    <!-- 추천 카테고리 -->
+    <section id="categoryOfRecommended">
+        <ul id="categoryOfRecommendedList">
         </ul>
     </section>
+    <!-- 추천 카테고리 -->
+    <!-- 상품별 카테고리 -->
     <section id="categoryOfProduct">
         <ul id="categoryOfProductList">
-
         </ul>
     </section>
-    <section id="categoryTitle">
-        <h2>가치태그 모아보기</h2>
-    </section>
+    <!-- 상품별 카테고리 -->
+    <!-- 가치태그별 카테고리 -->
     <section id="categoryOfTag">
         <ul id="categoryOfTagList">
-
         </ul>
     </section>
+    <!-- 가치태그별 카테고리 -->
+    <a href="#" id="moveTop" class="crew_rewind_anchor">
+        <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34.88 34.88">
+            <path fill="#022cff"
+                d="M0 17.44a17.44 17.44 0 1 1 17.44 17.44A17.43 17.43 0 0 1 0 17.44Zm10.1 2.03 5.09-5.3V27a1.68 1.68 0 0 0 1.69 1.69H18A1.68 1.68 0 0 0 19.69 27V14.16l5.09 5.31a1.69 1.69 0 0 0 2.41.03l.77-.77a1.68 1.68 0 0 0 0-2.39l-9.33-9.33a1.68 1.68 0 0 0-2.38 0l-9.33 9.33a1.68 1.68 0 0 0 0 2.39l.77.77a1.69 1.69 0 0 0 2.4-.03Z"
+                data-name="Icon awesome-arrow-circle-down" />
+        </svg>
+        <span>올라가기</span>
+    </a>
 </article>
 <!--@js(/js/module/layout/category.js)-->
