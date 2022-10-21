@@ -48,6 +48,7 @@
         li[class^='middle_main_category']{
             //개별 아이템
             .middle_item{
+                margin-top: 30px !important;
                 a{
                     display: flex;
                     flex-flow: column nowrap;
@@ -59,9 +60,11 @@
                     .category_name{
                         font-weight: 400;
                         font-size: 1.5rem;
-                        color: $bvt-white;
-                        letter-spacing: -0.2px;
+                        letter-spacing: -0.4px;
                         margin: 15px 0 0 0;
+                        text-align: center;
+                        color: $bvt-white;
+                        @include ellipsis(2, 1.5rem);
                     }
                 }
             }

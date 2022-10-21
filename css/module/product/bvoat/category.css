@@ -54,6 +54,9 @@
   color: #ffffff;
   margin-bottom: 26px;
 }
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item {
+  margin-top: 30px !important;
+}
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a {
   display: flex;
   flex-flow: column nowrap;
@@ -115,9 +118,20 @@
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .category_name {
   font-weight: 400;
   font-size: 1.5rem;
-  color: #ffffff;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.4px;
   margin: 15px 0 0 0;
+  text-align: center;
+  color: #ffffff;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.9rem;
+  height: 3.7rem;
 }
 #categoryOfRecommended #categoryOfRecommendedList .progressbar {
   background: #7582C1 !important;
