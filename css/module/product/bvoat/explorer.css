@@ -143,6 +143,9 @@
   padding: 10px;
   margin-top: 2.5px;
 }
+#indexListmain ul .index_list > div > ul .list_item .icon {
+  height: 25px !important;
+}
 #indexListmain ul .index_list > div .list_item_progress {
   margin: 0 0 69.7px 0;
 }

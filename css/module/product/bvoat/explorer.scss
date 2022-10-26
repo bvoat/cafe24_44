@@ -120,7 +120,10 @@
                 
                         //위시버튼
                         @include wish-button(21px, 18.98px, 0, 0);
-                
+                        //아이콘
+                        .icon{
+                            height: 25px !important;
+                        }
                     }
 
                 }
