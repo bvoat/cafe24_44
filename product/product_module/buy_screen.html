@@ -3,15 +3,13 @@
     <div id="buy" class="buy_screen_box">
         <!-- 구매하기 타이틀 -->
         <div class="buy_screen_title">
-            <h1>
-                구매하기
-            </h1>
-            <button class="screen_close_btn" data-type="buy">
+            <h1 class="displaynone">구매하기</h1>
+            <button class="screen_close_btn" data-type="buy" title="현재 창 닫기">닫기</button>
         </div>
         <!-- 구매하기 타이틀 -->
 
         <!-- 상품선택 -->
-        <section class="buy_screen_payment">
+        <section class="buy_screen_option">
             <!--정기결제 displaynone-->
             <div class="regularDelivery {$regular_delivery_display|display}">
                 <table border="1" summary="정기결제">
@@ -61,13 +59,13 @@
             </dl> -->
             <!-- 수량 선택 -->
 
-            <!-- 옵션 선택 테이블-->
+            <!-- 옵션 선택 테이블 셀렉트 박스-->
             <div id="totalSelects">
             <table border="0" id="totalSelects" class="product_option" summary="옵션 선택" module="product_option">
                 <!-- displaynone -->
                 <tbody>
-                    <tr module="product_addoption">
-                        <th class="add_option_title" scope="row">{$add_option_name}</th>
+                    <tr class="product_addoption" module="product_addoption">
+                        <th class="add_option_title displaynone" scope="row">{$add_option_name}</th>
                         <td>
                             {$form.add_option}
                             <span class="txtByte" title="현재글자수/최대글자수">(<strong
@@ -450,22 +448,22 @@
 
             <!-- 옵션 선택 결과 -->
             <div id="{$total.total_id}" class="{$total.total_display|display} option_direct">
-                <h2 class="select-tip {$several_item_display|display}">옵션선택 박스를 선택하시면 상품이 추가됩니다.
-                </h2>
+                <!-- <h2 class="select-tip {$several_item_display|display}">옵션선택 박스를 선택하시면 상품이 추가됩니다.
+                </h2> -->
                 <!-- 상품 옵션이 없는 경우 -->
-                <table border="0" summary="상품 추가">
+                <table border="1" summary="상품 추가">
                     <caption>상품 추가 목록</caption>
                     <tbody class="{$quantity_display|display}">
                         <tr>
                             <td class="product">{$name}</td>
                             <td>
-                                <span class="quantity" style="position:relative; bottom:0; left:0;">
+                                <span class="quantity">
                                     {$quantity}
                                     <a href="javascript:;" class="up {$quantity_up_class}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif" alt="수량증가" /></a>
                                     <a href="javascript:;" class="down {$quantity_down_class}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif" alt="수량감소" /></a>
                                 </span>
                             </td>
-                            <td class="right displaynone"><span class="{$total.quantity_price} ">{$product_price}</span> <span class="mileage displaynone">(<img src="{$mileage_mileage_icon}" /> <span class="{$total.mileage_price}">{$mileage_value}</span>)</span></td>
+                            <td class="right"><span class="{$total.quantity_price} ">{$product_price}</span> <span class="mileage displaynone">(<img src="{$mileage_mileage_icon}" /> <span class="{$total.mileage_price}">{$mileage_value}</span>)</span></td>
                         </tr>
                         <tr id="{$total.option_id}" class="option displaynone" module="product_option">
                             <!--
@@ -533,43 +531,46 @@
                 </table>
             </div>
             <!-- 옵션 선택 결과 -->
+            <section class="buy_screen_option_result" module="product_action">
+                <h1 class="displaynone">결제금액 안내</h1>
+                <div id="{$total.total_price_id}" class="total_wrap total-price">
+                    <span class="{$total.total_cnt}">
+                    </span>
+                </div>
+                <div id="totalDelivery" class="total_delivery total-price" module="product_detail">
+                    <span>배송비</span>
+                    <span class="total_delivery_price total">{$delivery_price}</span>
+                </div>
+                
+                <p class="ec-base-help {$price_warning_class}">할인가가 적용된 최종 결제예정금액은 주문 시 확인할 수
+                    있습니다.</p>
+
+            </section>
+                    <!-- 네이버 체크아웃 구매 버튼 -->
+                    <div id="NaverChk_Button" >
+                        <p class="naver_msg" module="Layout_stateLogoff">네이버 페이 비회원 구매 시 <br/>비보트의 쿠폰, 마일리지 혜택을 <span>받으실 수 없습니다.</span></p>
+                    </div>
         </section>
         <!-- 상품선택 -->
 
-        <section class="buy_button_box">
-            <h1>결제금액</h1>
-            <div id="{$total.total_price_id}" class="total_price total-price">
-                <span>총 상품금액 (수량) :</span> <span class="{$total.total_cnt}"><strong><em>0</em></strong>
-                    (0개)</span>
+ 
+        <section class="buy_button webnmobile_product_html" module="product_action">
+            <h3 class="displaynone">구매 액션</h3>
+            <div class="btn_cart {$basket_display|display}">
+                <button href="#none" class="cart cart_btn" onclick="{$action_basket}">장바구니 담기</button>
             </div>
-            <div id="totalDelivery" class="total_delivery total-price">
-                <span>배송비 : </span>
-                <span class="total_delivery_price total">{$delivery_price}</span>
+            <div class="btn_buy {$buy_display|display}">
+                <button href="#none" class="car order_btn" onclick="{$action_buy}">
+                    <span id="{$btn_buy_id}">바로구매</span>
+                    <span id="{$btn_reserve_id}" class="{$btn_reserve_class|display}">예약주문</span>
+                    <span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">정기배송
+                        신청</span>
+                </button>
             </div>
-            <p class="ec-base-help {$price_warning_class}">할인가가 적용된 최종 결제예정금액은 주문 시 확인할 수
-                있습니다.</p>
-            <!-- 네이버 체크아웃 구매 버튼 -->
-            <div id="NaverChk_Button" >
-                <p class="naver_msg" module="Layout_stateLogoff">네이버 페이 비회원 구매 시 <br/>비보트의 쿠폰, 마일리지 혜택을 받으실 수 없습니다.</p>
-            </div>
-            <!-- //네이버 체크아웃 구매 버튼 -->
-            <div class="product_action" module="product_action">
-                <div class="btn_buy {$buy_display|display}">
-                    <a href="#none" class="cart" onclick="{$action_buy}">
-                        <span id="{$btn_buy_id}">구매하기</span>
-                        <span id="{$btn_reserve_id}" class="{$btn_reserve_class|display}">예약주문</span>
-                        <span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">정기배송
-                            신청</span>
-                    </a>
-                </div>
-                <div class="btn_cart {$basket_display|display}">
-                    <a href="#none" class="cart" onclick="{$action_basket}">장바구니</a>
-                </div>
-                <div class="btn-basic btn-size-all btn-type0 {$soldout_display|display}">
-                    구매할 수 없는 상품입니다</div>
-            </div>
-            <input type="hidden" value="" class="buy_type"/>
+            <div class="btn-basic btn-size-all btn-type0 {$soldout_display|display}">
+                구매할 수 없는 상품입니다</div>
         </section>
+
     </div>
 </section>
 <script>
@@ -586,5 +587,51 @@
             })
         })
     })
+    };
+    //배송비 class 분기
+    let total_delivery_price = document.querySelector(".total_delivery_price");
+    if(total_delivery_price.outerText != '무료'){
+        total_delivery_price.classList.add("not_free");
+    }
+
+
+
+    
+    const select_box = document.querySelectorAll(".product_select select");
+    const total_wrap = document.querySelector(".total_wrap");
+    const totalProduct = document.getElementById("totalProducts");
+
+    //로드 시 select box 1개 이상 있으면 아래 disabled 했다가 풀기
+    if(select_box.length > 0){
+        select_box.forEach((select)=>{
+            select.addEventListener("change", ()=>{
+                
+            })
+        })
+    }
+    window.addEventListener("DOMContentLoaded", ()=>{
+        select_box.length != 0 ? total_wrap.classList.add("displaynone") : null;
+    })
+    //MutationObserver #totalProduct 노드에 붙여서 옵션값 생성되면 총 합계 노출
+    const observeCallback = (mutationList, observer) => {
+        let option_product = document.querySelectorAll(".option_product");
+        if(option_product.length > 0){
+            total_wrap.classList.remove("displaynone");
+        }else if(option_product.length == 0){
+            total_wrap.classList.add("displaynone");
+        }
+    };
+    const observer = new MutationObserver(observeCallback)
+    observer.observe(totalProduct, {
+        childList: true,
+        subtree: true,
+        attributeOldValue: true,
+    });
+
+    //.product_addoption 내 placeholder 추가 (후원자명 입력 등)
+    const product_addoption = document.querySelector(".product_addoption input[type='text']");
+    const add_option_title = document.querySelector(".add_option_title");
+    if(product_addoption != null){
+        product_addoption.setAttribute("placeholder", add_option_title.outerText)
     }
 </script>

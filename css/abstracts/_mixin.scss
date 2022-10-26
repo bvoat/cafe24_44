@@ -108,7 +108,7 @@
         position: relative;
         width: 100%;
 
-        >a {
+        >a, .img_wrap {
             display: block;
             position: relative;
             padding-top: 100%;
@@ -134,7 +134,7 @@
     .icon{
         img{
             height: inherit;
-            object-fit: cover;
+            object-fit: contain;
             image-rendering: auto;
         }
     }
@@ -272,6 +272,17 @@
         }
     }
 }
+
+/* 셀렉트 박스 화살표 */
+@mixin selectbox-arrow($icon, $right-padding) {
+    position: relative;
+    appearance: none;
+    &::-ms-expand {
+        display: none;/*for IE10,11*/
+    }
+    background: $icon no-repeat calc(100% - $right-padding);
+}
+
 /* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 // 320px 아래의 기기 
