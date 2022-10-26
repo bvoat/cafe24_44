@@ -404,6 +404,18 @@
   display: inline-block;
 }
 
+.naver_msg {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #727272;
+  text-align: center;
+  margin: 15px 0;
+}
+.naver_msg > span {
+  font-weight: 700;
+}
+
 #NaverChk_Button {
   display: flex;
   flex-flow: column nowrap;
@@ -418,17 +430,6 @@
   align-items: center;
   width: 100% !important;
   height: auto !important;
-}
-#NaverChk_Button .naver_msg {
-  font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  color: #727272;
-  text-align: center;
-  margin: 15px 0;
-}
-#NaverChk_Button .naver_msg > span {
-  font-weight: 700;
 }
 #NaverChk_Button .npay_storebtn_bx {
   width: 100% !important;

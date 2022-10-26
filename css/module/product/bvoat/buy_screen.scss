@@ -469,6 +469,21 @@
     }
 }
 
+//네이버페이 안내
+
+.naver_msg {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #727272;
+    text-align: center;
+    margin: 15px 0;
+
+    >span {
+        font-weight: 700;
+    }
+}
+
 //네이버 페이
 #NaverChk_Button {
     display: flex;
@@ -483,19 +498,6 @@
         align-items: center;
         width: 100% !important;
         height: auto !important;
-    }
-
-    .naver_msg {
-        font-weight: 500;
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-        color: #727272;
-        text-align: center;
-        margin: 15px 0;
-
-        >span {
-            font-weight: 700;
-        }
     }
 
     .npay_storebtn_bx {
