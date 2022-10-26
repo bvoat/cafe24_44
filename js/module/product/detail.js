@@ -157,8 +157,8 @@ Array.from(purchase_button).forEach((btn)=>{
     classToggle(buyScreen, "displaynone");
   })
 })
-const screen_close_btn = document.querySelector(".screen_close_btn");
-screen_close_btn.addEventListener("click", ()=>{
+const buy_screen_title = document.querySelector(".buy_screen_title");
+buy_screen_title.addEventListener("click", ()=>{
   classToggle(buyScreen, "displaynone");
 })
 
