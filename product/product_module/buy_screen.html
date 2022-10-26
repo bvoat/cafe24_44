@@ -601,24 +601,19 @@
     const total_wrap = document.querySelector(".total_wrap");
     const totalProduct = document.getElementById("totalProducts");
 
-    //로드 시 select box 1개 이상 있으면 아래 disabled 했다가 풀기
-    if(select_box.length > 0){
-        select_box.forEach((select)=>{
-            select.addEventListener("change", ()=>{
-                
-            })
-        })
-    }
-    window.addEventListener("DOMContentLoaded", ()=>{
-        select_box.length != 0 ? total_wrap.classList.add("displaynone") : null;
-    })
     //MutationObserver #totalProduct 노드에 붙여서 옵션값 생성되면 총 합계 노출
     const observeCallback = (mutationList, observer) => {
         let option_product = document.querySelectorAll(".option_product");
-        if(option_product.length > 0){
-            total_wrap.classList.remove("displaynone");
-        }else if(option_product.length == 0){
-            total_wrap.classList.add("displaynone");
+
+        //셀렉트 박스가 있고
+        if(select_box.length > 0){
+            if(option_product.length > 0){
+                //option length가 0 이상이면 (선택함)
+                total_wrap.classList.remove("displaynone");
+            }else if(option_product.length == 0){
+                //셀렉트 박스로 선택된 option의 length가 0이면 (아직 선택 안함)
+                total_wrap.classList.add("displaynone");
+            }
         }
     };
     const observer = new MutationObserver(observeCallback)
