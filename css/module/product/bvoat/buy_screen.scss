@@ -230,12 +230,14 @@
                     height: 32px !important;
                 }
                 //모바일 버전 p:nth-child(2)
-                p:nth-child(2){
+                p:nth-child(3){
                     position: relative;
                     display: flex;
                     flex-flow: row nowrap;
                     width: 83.06px !important;
                     height: 32px !important;
+                    margin-top: 15px;
+                    margin-bottom: -7%;
                 }
 
                 //셀렉트 박스 .quantity>input[type=text]

@@ -213,12 +213,14 @@
   width: 83.06px !important;
   height: 32px !important;
 }
-.option_direct table tbody tr p:nth-child(2) {
+.option_direct table tbody tr p:nth-child(3) {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
   width: 83.06px !important;
   height: 32px !important;
+  margin-top: 15px;
+  margin-bottom: -7%;
 }
 .option_direct table tbody tr .quantity > input[type=text], .option_direct table tbody tr .quantity > input[type=number],
 .option_direct table tbody tr #quantity, .option_direct table tbody tr p > input {
