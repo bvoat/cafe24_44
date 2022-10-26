@@ -65,7 +65,8 @@
     max-height: 378px;
     padding: 15px;
     overflow-y: auto;
-
+    padding-bottom: calc(constant(safe-area-inset-bottom) + 10px);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 10px);
     //table .product_option
     table{
         width: 100%;
