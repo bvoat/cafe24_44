@@ -220,7 +220,7 @@
   width: 83.06px !important;
   height: 32px !important;
   margin-top: 15px;
-  margin-bottom: -7%;
+  margin-bottom: -15px;
 }
 .option_direct table tbody tr .quantity > input[type=text], .option_direct table tbody tr .quantity > input[type=number],
 .option_direct table tbody tr #quantity, .option_direct table tbody tr p > input {
