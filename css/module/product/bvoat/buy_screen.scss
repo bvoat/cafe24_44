@@ -182,7 +182,6 @@
             width: 100%;
             td {
                 &:nth-child(1) {
-                    margin-bottom: 17px;
                     position: relative;
                 }
 
@@ -215,6 +214,7 @@
                     font-weight: 600;
                     letter-spacing: -0.25px;
                     line-height: 2rem;
+                    margin-bottom: 15px;
                     >span{
                         color: $bvt-blue;
                     }
@@ -236,8 +236,7 @@
                     flex-flow: row nowrap;
                     width: 83.06px !important;
                     height: 32px !important;
-                    margin-top: 15px;
-                    margin-bottom: -15px;
+                    margin-bottom: -25px;
                 }
 
                 //셀렉트 박스 .quantity>input[type=text]
