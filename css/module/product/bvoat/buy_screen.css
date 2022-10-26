@@ -143,7 +143,7 @@
   font-weight: 500;
   color: #454545;
   letter-spacing: -0.25px;
-  padding: 6px 17px;
+  padding: 6px 46px 6px 17px;
   cursor: pointer;
   position: relative;
   -webkit-appearance: none;
@@ -196,7 +196,7 @@
   border-radius: 5px 5px 0 0;
 }
 .option_direct table tbody tr .product {
-  width: 93%;
+  width: 90%;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.25px;
@@ -284,6 +284,24 @@
   right: 12px;
 }
 .option_direct table tbody tr a.delete img {
+  display: none;
+}
+.option_direct table tbody tr .center {
+  width: 100%;
+  position: absolute;
+}
+.option_direct table tbody tr .center > a.delete {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background: var(--icon-close-x) no-repeat center;
+  top: 0;
+  right: 28px;
+}
+.option_direct table tbody tr .center > a.delete img {
   display: none;
 }
 .option_direct table tbody tr .right {

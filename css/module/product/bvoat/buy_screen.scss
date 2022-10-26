@@ -145,7 +145,7 @@
                     font-weight: 500;
                     color:#454545;
                     letter-spacing: -0.25px;
-                    padding: 6px 17px;
+                    padding: 6px 46px 6px 17px;
                     cursor: pointer;
                     @include selectbox-arrow(var(--icon-select-close), 17px);
                 }
@@ -209,7 +209,7 @@
 
                 //옵션명 td 내
                 .product {
-                    width: 93%;
+                    width: 90%;
                     font-size: 1.5rem;
                     font-weight: 600;
                     letter-spacing: -0.25px;
@@ -316,6 +316,26 @@
 
                     img {
                         display: none;
+                    }
+                }
+                //삭제
+                //모바일인 경우 .center>a.delete
+                .center{
+                    width: 100%;
+                    position: absolute;
+                    >a.delete{
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 25px;
+                        height: 25px;
+                        background: var(--icon-close-x) no-repeat center;
+                        top: 0;
+                        right: 28px;
+                        img {
+                            display: none;
+                        }
                     }
                 }
 
