@@ -82,7 +82,7 @@
   width: 100%;
   z-index: 0;
 }
-.buy_screen_option .product_addoption td input[type=text] {
+.buy_screen_option .product_addoption td input {
   width: 100%;
   height: 44px;
   border: 1px solid #C4C4C4;
@@ -94,17 +94,17 @@
   font-size: 1.5rem;
   font-weight: 600;
 }
-.buy_screen_option .product_addoption td input[type=text]::-moz-placeholder {
+.buy_screen_option .product_addoption td input::-moz-placeholder {
   font-size: 1.5rem;
   font-weight: 600;
   color: #A9A9A9;
 }
-.buy_screen_option .product_addoption td input[type=text]:-ms-input-placeholder {
+.buy_screen_option .product_addoption td input:-ms-input-placeholder {
   font-size: 1.5rem;
   font-weight: 600;
   color: #A9A9A9;
 }
-.buy_screen_option .product_addoption td input[type=text]::placeholder {
+.buy_screen_option .product_addoption td input::placeholder {
   font-size: 1.5rem;
   font-weight: 600;
   color: #A9A9A9;
@@ -213,8 +213,8 @@
   width: 83.06px !important;
   height: 32px !important;
 }
-.option_direct table tbody tr .quantity > input[type=text],
-.option_direct table tbody tr #quantity {
+.option_direct table tbody tr .quantity > input[type=text], .option_direct table tbody tr .quantity > input[type=number],
+.option_direct table tbody tr #quantity, .option_direct table tbody tr p > input {
   width: 37px !important;
   height: 32px;
   border: 1px solid #DDDDDD;

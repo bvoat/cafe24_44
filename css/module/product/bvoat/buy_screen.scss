@@ -83,7 +83,7 @@
             width: 100%;
             z-index: 0;
 
-            input[type="text"] {
+            input{
                 width: 100%;
                 height: 44px;
                 border: $bvt-input-border;
@@ -101,6 +101,7 @@
                     color: #A9A9A9;
                 }
             }
+            
 
             .txtByte {
                 position: absolute;
@@ -231,8 +232,9 @@
 
                 //셀렉트 박스 .quantity>input[type=text]
                 //옵션 선택 없을 때 iuput#quantity
-                .quantity>input[type=text],
-                #quantity {
+                //모바일 버전 p>input
+                .quantity>input[type=text], .quantity>input[type=number],
+                #quantity, p>input {
                     width: 37px !important;
                     height: 32px;
                     border: 1px solid #DDDDDD;
