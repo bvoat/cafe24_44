@@ -161,8 +161,6 @@ const buy_screen_title = document.querySelector(".buy_screen_title");
 buy_screen_title.addEventListener("click", ()=>{
   classToggle(buyScreen, "displaynone");
 })
-
-
 /* 가격 -> 스탬프 */
 //스탬프 갯수 변수 할당
 const createStampPcsFromPrice = (price) => {
