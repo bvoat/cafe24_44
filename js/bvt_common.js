@@ -20,39 +20,6 @@ if (
 console.log("api_domain: ", api_domain);
 /* 환경변수 확인 */
 
-/* 클래스 토글 */
-// 클래스가 들어갔다 나갔다 할 node를 element에, 클래스 이름을 className에 전달
-function classToggle(element, className) {
-  element.classList.toggle(className);
-}
-/* 클래스 토글 */
-
-/* 모달 생성 함수 */
-//모달 필요 시 제목, 설명, ok버튼, no버튼, 각각의 실행 함수 전달
-//dialog가 웹뷰 환경에서 정상적으로 동작하지 않아 HTML 모달로 실행
-function createdModal(heading, text, okmsg, nomsg, okfunc, nofunc) {
-  let modal_form = `
-  <section id="bvtCommonModal">
-      <div id="bvtCommonForm" method="dialog">
-          <h1 class="bvt_modal_title">${heading}</h1>
-          <p class="bvt_modal_text">${text}</p>        
-          <div class="bvt_modal_btn">
-              <button class="ok_btn" data-msg="true">${okmsg}</button>
-              <button class="no_btn" data-msg="false">${nomsg}</button>
-          </div>
-      </div>
-  </section>
-  `;
-  //화면 상단에 전달
-  document
-    .querySelector("#bvtContainer")
-    .insertAdjacentHTML("afterbegin", modal_form);
-  // 버튼 클릭 시 발생할 이벤트 수신
-  document.querySelector(".ok_btn").addEventListener("click", okfunc);
-  document.querySelector(".no_btn").addEventListener("click", nofunc);
-}
-/* 모달 생성 함수 */
-
 /**
  * 브랜드, 요약 설명 감시 함수 
 */
@@ -142,15 +109,42 @@ function monitoringPrice() {
     }
   });
 }
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".price_wrap")) {
-    setTimeout(monitoringPrice,300)
-    setTimeout(monitoringDesc,800)
+    setTimeout(monitoringPrice,200)
+    setTimeout(monitoringDesc,500)
   } else {
     setTimeout(monitoringPrice,1400)
     setTimeout(monitoringDesc,1200)
   }
 });
+
+
+/* 모달 생성 함수 */
+//모달 필요 시 제목, 설명, ok버튼, no버튼, 각각의 실행 함수 전달
+//dialog가 웹뷰 환경에서 정상적으로 동작하지 않아 HTML 모달로 실행
+function createdModal(heading, text, okmsg, nomsg, okfunc, nofunc) {
+  let modal_form = `
+  <section id="bvtCommonModal">
+      <div id="bvtCommonForm" method="dialog">
+          <h1 class="bvt_modal_title">${heading}</h1>
+          <p class="bvt_modal_text">${text}</p>        
+          <div class="bvt_modal_btn">
+              <button class="ok_btn" data-msg="true">${okmsg}</button>
+              <button class="no_btn" data-msg="false">${nomsg}</button>
+          </div>
+      </div>
+  </section>
+  `;
+  //화면 상단에 전달
+  document
+    .querySelector("#bvtContainer")
+    .insertAdjacentHTML("afterbegin", modal_form);
+  // 버튼 클릭 시 발생할 이벤트 수신
+  document.querySelector(".ok_btn").addEventListener("click", okfunc);
+  document.querySelector(".no_btn").addEventListener("click", nofunc);
+}
+/* 모달 생성 함수 */
 
 //더보기 시 실행
 const checkMoreView = () => {
@@ -412,3 +406,43 @@ const bvoatShare = (type, _url) => {
       now -= step;
   }, 40);
 }
+
+/**
+ * 세션 있는지 여부 체크
+ * @param {세션에서 찾을 item key} checkitem 
+ * @returns boolean 값
+ */
+function sessionCheck(checkitem) {
+  if(sessionStorage.getItem(checkitem) == null){
+    return false
+  }else{
+    return true;
+  }
+}
+/**
+ * 세션 체크하여 로그인 했는지 확인
+ * @param {세션에서 찾을 item key} checkitem 
+ * @param {로그인 후 되돌아갈 URL} returnUrl 
+ */
+function loginCheck(checkitem, returnUrl) {
+  //로그인 여부 감지
+	//세션에 member_1 이 null이 아니면 로그인 상태
+	if(sessionStorage.getItem(checkitem) != null){
+		console.log("세션 있나요?", "있어요", sessionStorage.getItem(checkitem));
+	//null이면 로그인 안된 상태
+	}else if(sessionStorage.getItem(checkitem) == null){
+		console.log("세션 있나요?", "없어요" , sessionStorage.getItem(checkitem));
+		alert("먼저 로그인 해주세요.");
+		location.href= `/member/login.html?returnUrl=${returnUrl}}`;
+	}else{
+		alert("에러입니다. 확인해주세요.");
+		location.href= "/error.html";
+	}
+}
+
+/* 클래스 토글 */
+// 클래스가 들어갔다 나갔다 할 node를 element에, 클래스 이름을 className에 전달
+function classToggle(element, className) {
+  element.classList.toggle(className);
+}
+/* 클래스 토글 */
