@@ -1,4 +1,12 @@
-  /* 슬라이더 */
+
+/**
+ * 날짜 변경
+ */
+(function monthChange() {
+  document.querySelector(".month").innerText = (new Date().getMonth()) + 1;
+})()
+
+/* 슬라이더 */
   var swiper = new Swiper(".crew_method_img_wrap", {
     slidesPerView: 2.1,
     spaceBetween: 10,
@@ -17,6 +25,11 @@ const moveLevelUp = document.querySelector("#moveLevelUp");
 const moveTop = document.querySelector("#moveTop");
 const crewLevelUp = document.querySelector("#crewLevelUp");
 
+/**
+ * 스크롤 부드럽게
+ * @param {node} element 
+ * @param {위치} target 
+ */
 const smoothScroll = (element, target) => {
   if (target == "top") {
     target = element.offsetTop;
@@ -37,11 +50,17 @@ moveLevelUp.addEventListener("click", () => {
   smoothScroll(crewLevelUp, "top");
 });
 
-/* 추천인 링크 */
+
 
 const crew_link_copy = document.querySelector(".crew_link_copy");
 const crew_link_share = document.querySelector(".crew_link_share");
 const voter_id = document.querySelector("#recoIdCheck");
+
+/**
+ * 추천인 링크 복사하기
+ * @param {event} e 
+ * @returns 
+ */
 const copyBtnClick = (e) => {
   e.preventDefault();
   if (voter_id == null) {
@@ -72,6 +91,13 @@ const copyBtnClick = (e) => {
   clipboardCopy('.crew_link_copy', copy_text, ifsuccess, iferror);
   }
 };
+
+/**
+ * 공유하기 클릭
+ * @param {event} e 
+ * @returns 
+ */
+
 const shareBtnClick = (e) => {
   e.preventDefault();
   if (voter_id == null) {
@@ -124,12 +150,12 @@ crew_link_share.addEventListener("click", (e) => {
   shareBtnClick(e);
 });
 
-/* 방법 3 url 제출 함수 */
-//btn addEvent
+
 const crew_Form = document.querySelector("#crewUrlForm");
+
 /**
- * 
- * @param {input 내 value} formData 
+ * 방법 3 url 제출 함수
+ * @param {*} formData 
  */
 const postURLtoCrewLevelup = (formData) => {
   fetch(`https://${api_domain}.shop/sns`, {
@@ -212,7 +238,12 @@ const postURLtoCrewLevelup = (formData) => {
     return false;
   })
 };
-//submit 함수
+
+/**
+ * submit 함수
+ * @param {event} e 
+ * @returns 
+ */
 const snsURLSubmit = async (e) => {
   e.preventDefault();
   const form = e.currentTarget;
