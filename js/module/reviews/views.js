@@ -11,6 +11,11 @@
 	});
 }
 
+//bvtBottom 감춤
+window.addEventListener("load", ()=>{
+    document.querySelector("#bvtBottom").setAttribute("class", "displaynone");
+})
+
 //글 작성 id
 let admin_id;
 //글 seq
