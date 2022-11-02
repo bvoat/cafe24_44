@@ -21,6 +21,16 @@ console.log("api_domain: ", api_domain);
 /* 환경변수 확인 */
 
 /**
+ * url parameter 가져오는 함수 
+ * @param {location.search} search 
+ * @param {parameter} param 
+ */
+function getUrlParams(param){
+  return new URLSearchParams(location.search).get(param);
+}
+
+
+/**
  * 브랜드, 요약 설명 감시 함수 
 */
 function monitoringDesc(){
@@ -181,7 +191,7 @@ function controlTopNav(page_path) {
     "member/modify",
   ];
   //커뮤니티용 path
-  const community_array = ["community", "buy_records", "crewinfo"];
+  const community_array = ["community", "buy_records", "crewinfo", "reviews"];
   //뒤로가기 있어야 하는 path
   const back_array = [
     "product/detail",
@@ -212,7 +222,8 @@ function controlTopNav(page_path) {
       console.log('path: ', path);
       default_nav.classList.add("displaynone");
       comm_nav.classList.remove("displaynone");
-      document.querySelector(`#${path}_nav`).classList.add("top_nav_active");
+      // document.querySelector(`#${path}_nav`).classList.add("top_nav_active");
+      document.querySelector(`.${path}_nav`).classList.add("top_nav_active");
     }
   });
 
@@ -283,19 +294,25 @@ const clipboardCopy = (element, txt, ok, no) => {
 };
 /* clipboardJS */
 
-/* 공유 기능 */
+/* 공유 기능 + 모달 */
 
 window.addEventListener("load", () => {
-  let shareBtn = document.querySelector(".share_btn");
+  let shareBtn = document.querySelectorAll(".share_btn");
   console.log('shareBtn: ', shareBtn);
   if (shareBtn) {
-    shareBtn.addEventListener("click", (e) => {
-      commonShareBtn(e);
-    });
+    [...shareBtn].forEach((btn)=>{
+      btn.addEventListener("click", (event) => {
+        createSharingModal(event);
+      });
+    })
   }
 });
 
-const commonShareBtn = (e) => {
+/**
+ * 공유 모달 폼 생성
+ * @param {이벤트} e 
+ */
+const createSharingModal = (e) => {
   let modal_form = `
   <section id="bvtCommonModal">
       <div id="bvtCommonShareForm" method="dialog">
@@ -326,6 +343,11 @@ const commonShareBtn = (e) => {
   });
 };
 
+/**
+ * 
+ * @param {텍스트, 카카오톡, 페이스북 data-type} type 
+ * @param {location.href} _url 
+ */
 const bvoatShare = (type, _url) => {
   console.log('type: ', type);
   if (type === "clipboard") {
@@ -383,6 +405,9 @@ const bvoatShare = (type, _url) => {
   }
 };
 
+/* 공유 기능 + 모달 */
+
+
 /**
  * 숫자 카운트
  * @param {숫자 넣을 node} $counter 
@@ -406,43 +431,58 @@ const bvoatShare = (type, _url) => {
       now -= step;
   }, 40);
 }
-
-/**
- * 세션 있는지 여부 체크
- * @param {세션에서 찾을 item key} checkitem 
- * @returns boolean 값
- */
-function sessionCheck(checkitem) {
-  if(sessionStorage.getItem(checkitem) == null){
-    return false
-  }else{
-    return true;
-  }
-}
-/**
- * 세션 체크하여 로그인 했는지 확인
- * @param {세션에서 찾을 item key} checkitem 
- * @param {로그인 후 되돌아갈 URL} returnUrl 
- */
-function loginCheck(checkitem, returnUrl) {
-  //로그인 여부 감지
-	//세션에 member_1 이 null이 아니면 로그인 상태
-	if(sessionStorage.getItem(checkitem) != null){
-		console.log("세션 있나요?", "있어요", sessionStorage.getItem(checkitem));
-	//null이면 로그인 안된 상태
-	}else if(sessionStorage.getItem(checkitem) == null){
-		console.log("세션 있나요?", "없어요" , sessionStorage.getItem(checkitem));
-		alert("먼저 로그인 해주세요.");
-		location.href= `/member/login.html?returnUrl=${returnUrl}}`;
-	}else{
-		alert("에러입니다. 확인해주세요.");
-		location.href= "/error.html";
-	}
-}
-
 /* 클래스 토글 */
 // 클래스가 들어갔다 나갔다 할 node를 element에, 클래스 이름을 className에 전달
 function classToggle(element, className) {
   element.classList.toggle(className);
 }
 /* 클래스 토글 */
+	
+/**
+ * 로컬에서 가져옴
+ * @param {*} key 
+ * @param {*} reverse 
+ * @returns 
+ */
+function getArraylocal(key, reverse) {
+	let str = localStorage.getItem(key);
+	let obj = {};
+	try {
+		obj = JSON.parse(str);
+	} catch {
+		obj = {};
+	}
+	if (!obj) {
+		obj = {};
+		obj[key] = [];
+	}
+	return reverse ? obj[key].reverse() : obj[key];
+}
+/**
+ * 로컬에 저장
+ * @param {*} key 
+ * @param {*} value 
+ * @param {*} limitMax 
+ */
+function setArraylocal(key, value, limitMax) {
+  var str = localStorage.getItem(key);
+  var obj = {};
+  try {
+      obj = JSON.parse(str);
+  } catch {
+      obj = {};
+  }
+  if (!obj) {
+      obj = {};
+      obj[key] = [];
+  }
+  obj[key].push(value);
+  if (limitMax && limitMax < obj[key].length) {
+      let tempList = [];
+      for (let i = obj[key].length - limitMax; i < obj[key].length; i++) {
+          tempList.push(obj[key][i]);
+      }
+      obj[key] = tempList;
+  }
+  localStorage.setItem(key, JSON.stringify(obj));
+}
