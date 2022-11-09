@@ -19,13 +19,7 @@ window.addEventListener("load", ()=>{
 //글 작성 id
 let admin_id;
 //글 seq
-const seq = getUrlParams('seq');
-
-//세션에서 id 받아오기
-const login_userinfo = JSON.parse(sessionStorage.getItem("member_1"))
-console.log('login_userinfo: ', login_userinfo);
-const login_userId = login_userinfo != null ? login_userinfo.data.member_id : null;
-const login_userNickname = login_userinfo != null ? login_userinfo.data.nick_name : null;
+const origin_seq = getUrlParams('seq');
 
 //최초 url
 const url = new URL(window.location.href).searchParams;
@@ -37,7 +31,7 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
      * DOM 생성 함수 - 리뷰
     */
     const makeDOMforView = (data) => {
-        data.forEach((obj) => {
+        data.forEach((obj) => {            
             admin_id = obj.member_id;
             let data = {
                 cmt_num : obj.cmt,
@@ -45,6 +39,7 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
                 seq : obj.seq,
                 nickname : obj.nickname ? obj.nickname : '익명',
                 level : obj.level == null ? '' : obj.level == "1" ? 'normal' : 'crew',
+                cmt_like : obj.is_liked ? 'active' : '',
                 list_image : obj.list_image,
                 img_list : obj.imgs,
                 multi_image :obj.imgs.length > 1 ? 'multi' : '',
@@ -54,7 +49,7 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
                 product_name : obj.product_name ? obj.product_name : '',
                 product_no : obj.product_no ? obj.product_no : '',
                 product_price : obj.product_price ? obj.product_price : '',
-                admin : obj.member_id != login_userId ? 'displaynone' : ''
+                admin : obj.member_id != login_userId ? 'no_admin' : ''
             };
 
             //DOM 추가
@@ -84,7 +79,7 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
                                 <p class="content_date">${data.write_date_tmp}</p>
                             </div>
                             <div class="reviews_product">
-                                <a href="/product/detail.html?product_no=${data.product_no}" title="상품 정보" target="_blank">
+                                <button title="상품 정보" target="_blank" onclick="clickReviewProduct(${data.product_no})">
                                     <ul>
                                         <li class="prd_thumb thumb">
                                             <span class="img_wrap"><img src="${data.list_image}" alt="이미지" title="상품 이미지"></span>
@@ -94,23 +89,23 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
                                             <p title="상품 가격">${data.product_price}</p>
                                         </li>    
                                     </ul>
-                                </a>    
+                                </button>    
                             </div>
                         </div>
                         <ul class="reviews_reaction_box">
                             <li class="reviews_reaction">
-                                <button class="reviews_likes " data-seq="${data.seq}" onclick="reviewsLikesButtons(event)"> 도움이 돼요 <span class="reviews_likes_num_${data.seq}">${data.likes_num}</span></button>
+                                <button class="reviews_likes ${data.cmt_like}" data-seq="${data.seq}" onclick="reviewsLikesButtons(event)"> 도움이 돼요 <span class="reviews_likes_num_${data.seq}">${data.likes_num}</span></button>
                             </li>
                             <li class="reviews_control">
                                 <div class="reviews_share">
                                     <button class="share_text_btn share_text_btn_${data.seq}"  data-seq="${data.seq}"title="공유하기" onclick="sharingLinkText(event)"></button>
                                 </div>
-                                <div class="reviews_admin">
-                                    <p id="admin_modal_${data.seq}" class="admin_modal displaynone" data-seq="${data.seq}">
-                                        <button class="modify" data-seq="${data.seq}" title="수정하기" onclick="reviewDataModify(${data.seq})">수정하기</button>
-                                        <button class="delete" data-seq="${data.seq}" title="삭제하기" onclick="reviewsDataDelete(${data.seq})">삭제하기</button>
+                                <div class="reviews_admin ${data.admin}">
+                                    <p id="reviewsAdminModal_${data.seq}" class="admin_modal displaynone" data-seq="${data.seq}">
+                                        <button class="modify" data-seq="${data.seq}" title="수정하기" type="button" onclick="modifyReviewData(${data.seq})">수정하기</button>
+                                        <button class="delete" data-seq="${data.seq}" title="삭제하기"  type="button" onclick="deleteReviewData(${data.seq})">삭제하기</button>
                                     </p>
-                                    <button class="admin_btn" title="수정/삭제" data-seq="${data.seq}" onclick="createAdminModal(event)"></button>
+                                    <button class="admin_btn" title="수정/삭제" data-seq="${data.seq}" data-type="reviews" onclick="createAdminModal(event)"></button>
                                 </div>
                             </li>
                         </ul>
@@ -138,50 +133,91 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
     */
 
     const makeDOMforComment = (data) => {
-        console.log('comment data: ', data);
         let cmt_num = data.length;
 
         //DOM 추가 (댓글 정보)
-        document.querySelector(".reviews_comment_info")
+        document.querySelector(".comment_info")
         .insertAdjacentHTML("beforeend", `
             <p class="reviews_comment_num">댓글 ${cmt_num}개</p>
         `);
-        console.log('cmt_num: ', cmt_num);
         data.forEach((data)=>{
-            let origin_seq = data.bh_seq;
-            let cmt_seq = data.seq;
-            let cmt_user = data.member_id;
-            let cmt_userlevel = data.level;
-            let cmt_nickname = data.nickname;
-            let cmt_content = data.content;
+            let cmt = {
+                bh_seq : data.bh_seq,
+                seq : data.seq,
+                member_id : data.member_id,
+                level : data.level,
+                nickname : data.nickname ? data.nickname : '익명',
+                member_id : data.member_id ? data.member_id : '',
+                content : data.content ? data.content : '댓글 내용이 없습니다.',
+                child : data.child_comment ? data.child_comment : null,
+                write_date_tmp : data.write_date_tmp ? data.write_date_tmp : '',
+                admin : login_userId != null ? login_userId == data.member_id ? '' : 'no_admin' : 'no_admin'
+            }
 
             //DOM 추가 (댓글)
-            document.querySelector(".reviews_comment_list")
+            document.querySelector(".comment_list")
                 .insertAdjacentHTML("beforeend", `
-                <li id="cmt_${cmt_seq}" class="cmt_item" data-origin="${origin_seq}">
-                    <form>
-                        <fieldset>
-                            <legend><span class="reviews_comment_user"><img class="cmt_userimg" src="https://bvoat.shop/images/new_img/ico__11.png">${cmt_nickname}<span class="${cmt_userlevel}"></span></span>
-                            <span class="reviews_comment_admin">
-                                <div class="cmt_admin_modal displaynone" data-cmtseq=${cmt_seq}>
-                                    <button class="edit" data-cmtseq=${cmt_seq}>수정하기</button>
-                                    <button class="delete" data-cmtseq=${cmt_seq}>삭제하기</button>
-                                </div>
-                                <button class="cmt_admin_btn" data-cmtseq=${cmt_seq} type="button" title="댓글 수정/삭제"></button>
-                            </span>
-                            </legend>
-                            <div class="cmt_content_box"><textarea class="cmt_content" data-cmtseq=${cmt_seq} placeholder="리뷰에 대한 댓글을 남겨주세요." readonly>${cmt_content}</textarea>
-                            </div>
-                            <button class="cmt_modify_submit_btn displaynone" type="button" data-cmtseq=${cmt_seq} data-origin="${origin_seq}" title="수정한 댓글 게시하기">게시</button>
-                        </fieldset>
-                    </form>
+                <li id="comment_${cmt.seq}" class="cmt_item parent" data-seq="${cmt.seq}">
+                    <div class="user_wrap"><span class="comment_user"><img class="cmt_userimg" src="https://bvoat.shop/images/new_img/ico__11.png">${cmt.nickname}<span class="${cmt.level}"></span></span>
+                    <span class="comment_admin">
+                        <div id="commentAdminModal_${cmt.seq}" class="admin_modal displaynone" data-seq="${cmt.seq}">
+                            <button class="edit" title="수정하기" type="button" data-seq="${cmt.seq}"
+                            data-type="comment" data-cmttype="modify" onclick="editComment(event)">수정하기</button>
+                            <button class="delete" title="삭제하기" type="button" data-seq="${cmt.seq}" onclick="deleteCommentData(${cmt.seq}, '${cmt.member_id}')">삭제하기</button>
+                        </div>
+                        <button class="admin_btn cmt_admin_btn ${cmt.admin}" data-seq="${cmt.seq}" data-type="comment"  type="button" title="댓글 수정/삭제" onclick="createAdminModal(event)"></button>
+                    </span>
+                    </div>
+                    <div class="content_box"><p id="commentContent_${cmt.seq}" class="cmt_content" data-parentseq="${cmt.seq}">${cmt.content}</p>
+                    </div>
+                    <button class="cmt_modify_submit_btn displaynone" type="button" data-parentseq="${cmt.seq}" data-origin="${cmt.bh_seq}" title="수정한 댓글 게시하기">게시</button>
                     <div class="cmt_item_reaction">
-                        <span class="cmt_date">1시간 전</span>
-                        <button class="cmt_recomment_btn">답글달기</button>
+                        <span class="cmt_date">${cmt.write_date_tmp}</span>
+                        <button class="cmt_recomment_btn" data-parentseq="${cmt.seq}" data-origin="${cmt.bh_seq}" onclick="typeSettingChildComment(event)">답글달기</button>
                     </div>
                 </li>
                 `)
+
+            //DOM 추가 (대댓글)
+            if(cmt.child != null){
+                let child_data = [...cmt.child];
+                child_data.forEach((data)=>{
+                    let child = {
+                        bh_seq : data.bh_seq,
+                        seq : data.seq,
+                        member_id : data.member_id,
+                        level : data.level,
+                        nickname : data.nickname ? data.nickname : '익명',
+                        member_id : data.member_id ? data.member_id : '',
+                        content : data.content ? data.content : '댓글 내용이 없습니다.',
+                        child : data.child_comment ? data.child_comment : null,
+                        write_date_tmp : data.write_date_tmp ? data.write_date_tmp : '',
+                        admin : login_userId != null ? login_userId == data.member_id ? '' : 'no_admin' : 'no_admin'
+                    }
+        
+                    document.querySelector(`#comment_${cmt.seq}`)
+                    .insertAdjacentHTML("afterend", `<li id="child_${child.seq}" class="child_cmt cmt_item" data-origin="${child.bh_seq}" data-parentseq="${child.parent_comment_seq}">
+                    <div class="child_user_wrap"><span class="comment_user"><img class="cmt_userimg" src="https://bvoat.shop/images/new_img/ico__11.png">${child.nickname}<span class="${child.level}"></span></span>
+                    <span class="comment_admin">
+                        <div id="childAdminModal_${child.seq}" class="admin_modal displaynone" data-parentseq="${child.seq}">
+                            <button class="edit" type="button" title="수정하기" data-type="child" data-origin="${child.bh_seq}"  data-seq="${child.seq}" data-cmttype="modify" onclick="editComment(event)">수정하기</button>
+                            <button class="delete" type="button" title="삭제하기" data-type="child" data-origin="${child.bh_seq}"  data-seq="${child.seq}" onclick="deleteCommentData(${child.seq}, '${child.member_id}')">삭제하기</button>
+                        </div>
+                        <button class="admin_btn cmt_admin_btn ${child.admin}" data-seq="${child.seq}" data-type="child"  type="button" title="댓글 수정/삭제" onclick="createAdminModal(event)"></button>
+                    </span>
+                    </div>
+                    <div class="content_box"><p id="childContent_${child.seq}" class="cmt_content" data-parentseq="${child.seq}">${child.content}</p>
+                    </div>
+                    <button class="cmt_modify_submit_btn displaynone" type="button" data-parentseq="${child.seq}" data-origin="${child.seq}" title="수정한 댓글 게시하기">게시</button>
+                    <div class="cmt_item_reaction">
+                        <span class="cmt_date">${child.write_date_tmp}</span>
+                    </div>
+                </li>`)
+                })
+            }
         })
+
+
     }
     
     /**
@@ -193,7 +229,7 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
         //로딩 스피너 시작
         loading(true);
 
-        fetch(`https://${api_domain}.shop/buy_records/data?seq=${seq}`, {
+        fetch(`https://${api_domain}.shop/reviews/data?seq=${seq}&member_id=${login_userId}`, {
             method: "GET",
         })
         .then((response) => response.json())
@@ -201,6 +237,13 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
             //로딩 스피너 종료
             loading(false);
             reviewsData = response.data;
+            //삭제된 리뷰 체크 
+            if(reviewsData[0].write_date == null){
+                alert("삭제된 리뷰입니다.")
+                location.href="/reviews/feed.html"
+                return false;
+            }
+            //리뷰 DOM 생성
             makeDOMforView(reviewsData);
         })
         .then((response)=>{ 
@@ -214,9 +257,16 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
         .then((response)=>{
             //댓글 생성
             let commentData = reviewsData[0].comment;
-            console.log('commentData: ', commentData);
             makeDOMforComment(commentData);
-
+        })
+        .then(()=>{
+            //내가 쓴 글, 댓글 아닐 경우 admin_btn 삭제
+            let no_admin = document.querySelectorAll(".no_admin");
+            if(no_admin.length > 0){
+                [...no_admin].forEach((btn)=>{
+                    btn.remove();
+                })
+            }
         })
     }
     window.addEventListener("load", getBeginningReviewData(url));
@@ -224,16 +274,62 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
 /* 상세 보기 개별 기능 시작 */
 
 /**
+ * 상품 클릭 시 품절 여부 체크하여 모달 생성
+ * @param {상품번호} prd_no 
+ */
+const clickReviewProduct = (prd_no) => {
+    try {
+        fetch(`https://${api_domain}.shop/products/selling-status?product_no=${prd_no}`, {
+            method: "GET",
+        })
+        .then((response) => response.json())
+        .then((response)=>{
+            console.log(response);
+            if(response.data['sellingStatus'] === 'T'){
+                location.href = `/product/detail.html?product_no=${prd_no}`;
+            }else{
+                //화면 상단에 모달 생성
+                document
+                .querySelector("#bvtContainer")
+                .insertAdjacentHTML("afterbegin", `
+                <section id="bvtCommonModal">
+                <div id="bvtReviewForm" method="dialog">
+                    <h2 class="review_form_title">상품 품절 안내</h2>
+                    <p>해당 상품은 현재 품절 되었어요🥺<br>다른 상품 구경하러 갈까요?
+                    </p>
+                    <button class="ok_btn">네,  구경할래요</button>
+                    <button class="no_btn">아니오, 괜찮습니다.</button>
+                </div>
+                </section>
+                `);
+            }
+            document.querySelector(".ok_btn").addEventListener("click", ()=>{
+                location.href = "/product/category.html";
+            })
+            document.querySelector(".no_btn").addEventListener("click", ()=>{
+                document.querySelector("#bvtCommonModal").remove();
+            })
+            return true;
+        })
+    } catch (error) {
+        console.log("error", error);
+        return false;
+    }
+}
+
+/**
  * 게시글 수정 이동
  * @param {수정 게시물 seq} seq 
  */
-const reviewDataModify = (seq) => {
-    if(sessionCheck("member_1") && admin_id === login_userId){
-        location.href = `http://skin-skin44.bvoatofficial.cafe24.com/reviews/write.html?mode=modify&seq=${seq}&member_id=${login_userId}&div=modify`
-    }else if (!sessionCheck("member_1")) {
+const modifyReviewData = (seq) => {
+    //로그인 검사
+    if (!sessionCheck("member_1")) {
         //미로그인 상태
         loginCheck("member_1", `${location.pathname}${location.search}`);
         return false;
+    }
+    if(sessionCheck("member_1") && admin_id === login_userId){
+        location.href = `http://skin-skin44.bvoatofficial.cafe24.com/reviews/write.html?mode=modify&seq=${seq}&member_id=${login_userId}&div=modify`
     }else if(admin_id != login_userId){
         //어드민이 아님
         alert("본인의 리뷰만 수정할 수 있습니다.");
@@ -249,22 +345,24 @@ const reviewDataModify = (seq) => {
  * 게시글 삭제
  * @param {삭제 게시물 seq} seq 
  */
-const reviewsDataDelete = async (seq) =>{
+const deleteReviewData = async (seq) =>{
+
+    //로그인 검사
+    if (!sessionCheck("member_1")) {
+        //미로그인 상태
+        loginCheck("member_1", `${location.pathname}${location.search}`);
+        return false;
+    }
+
     if(sessionCheck("member_1") && admin_id === login_userId){
         let admin_confirm = confirm("정말 삭제하시겠어요?");
         if(!admin_confirm){
             alert("취소했습니다.")
             return false;
         }else{
-            alert("삭제하겠습니다.",sessionCheck("member_1"))
-            const deleteResult = await runDelete(seq, login_userId);
-            console.log('deleteResult: ', deleteResult);
+            await runReviewDelete(seq);
+            return false;
         }
-        return false;
-    }else if (!sessionCheck("member_1")) {
-        //미로그인 상태
-        loginCheck("member_1", `${location.pathname}${location.search}`);
-        return false;
     }else if(admin_id != login_userId){
         //어드민이 아님
         alert("본인의 리뷰만 삭제할 수 있습니다.");
@@ -276,65 +374,291 @@ const reviewsDataDelete = async (seq) =>{
     }
     
 }
-const runDelete = (seq) => {
-    console.log('삭제 실행!!!!');
-    // try {
-    //     fetch(`https://${api_domain}.shop/buy_records/delete_comment?seq=${seq}`, {
-    //     method: "GET",
-    //     })
-    //     .then((response) => response.json())
-    //     .then((response)=>{
-    //         console.log(response);
-    //         return true;
-    //     })
-    // } catch (error) {
-    //     return false;
-    // }
+const runReviewDelete = (seq) => {
+    let body_data = {
+        member_id: login_userId,
+        seq: seq
+    }
+    try {
+        fetch(`https://${api_domain}.shop/reviews/content`, {
+            method: "DELETE", 
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(body_data)
+        })
+        .then((response) => response.json())
+        .then((response)=>{
+            console.log(response);
+            response.success ? location.href = '/reviews/feed.html' : console.log("삭제 오류입니다. 관리자에게 문의해주세요.")
+            return true;
+        })
+    } catch (error) {
+        console.log("삭제 오류입니다. 관리자에게 문의해주세요.");
+        return false;
+    }
 }
+
+/**
+ * 안 쓴 리뷰 표시 (나도 리뷰 작성하기))
+ */
+const loadMyReviewData = () => {
+    if(login_userId) document.querySelector(".write_move").classList.remove("displaynone");
+
+    try {
+        fetch(`https://${api_domain}.shop/reviews/data?member_id=${login_userId}&div=not_write`, {
+            method: "GET",
+        })
+        .then((response) => response.json())
+        .then((response)=>{
+            let writable_num = response.total;
+            document.querySelector(".write_move_btn > span").innerHTML = writable_num;
+            return true;
+        })
+    } catch (error) {
+        return false;
+    }
+}
+window.addEventListener("load", loadMyReviewData)
 /* 상세 보기 개별 기능 끝 */
 
 /* 댓글 개별 기능 시작 */
 
 //댓글 영역
 const cmtTextArea = document.querySelector("#cmtTextArea");
-//버튼 
+//'게시'버튼 
 const cmtTextSubmitBtn = document.querySelector(".cmt_create_btn");
 
+
+
 /**
- * 댓글 작성 시 세션에 저장(뒤로가기 했을 때 다시 불러오기 대비)
+ * (댓글, 대댓글 공통) 댓글 작성 시 세션에 저장(뒤로가기 했을 때 다시 불러오기 대비)
  * 댓글 작성 시 height 조절하고 최대 rows 5 높이 넘지 않음
  */
-const cmtTextChangeObserve = (event) => {
+const observeCommentText = (event) => {
     sessionStorage.setItem("comment", event.currentTarget.value);
     cmtTextArea.style.height = '1rem';
     cmtTextArea.style.height = (event.currentTarget.scrollHeight) + 'px';
 }
 
-//게시 버튼 클릭 시 데이터 전송
-cmtTextSubmitBtn.addEventListener("click", async ()=>{
+/**
+ * (대댓글) 대댓글 쓰기 위해 '답글달기' 클릭 시
+ * @param {event} event 
+ */
+const typeSettingChildComment = (event) => {
+    const target = event.currentTarget;
+    cmtTextSubmitBtn.setAttribute("data-cmttype", "child");
+    cmtTextSubmitBtn.setAttribute("data-origin", target.dataset.origin);
+    cmtTextSubmitBtn.setAttribute("data-parentseq", target.dataset.parentseq);
+    //수정하기 포커싱
+    cmtTextArea.focus();
+}
+
+/**
+ * (댓글, 대댓글 공통) 댓글, 대댓글 전송 이벤트 개별 설정
+ */
+const sendEvent = {
+    comment : function (cmtText, origin_seq) {
+        let body_data = {
+            bh_seq: parseInt(origin_seq),
+            member_id: login_userId,
+            content: cmtText
+        }
+        try {
+            fetch(`https://${api_domain}.shop/reviews/comment`, {
+                method: "POST",    
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(body_data)
+            })
+            .then((response) => response.json())
+            .then((response) => {
+                cmtTextSubmitBtn.setAttribute("disabled", true)
+                response.success ? location.reload() : alert("댓글 등록에 실패했습니다. 다시 한 번 시도해주세요.");
+                return true;
+            })
+        } catch (error) {
+            console.error("error", error)
+            alert("댓글 등록에 실패했습니다. 관리자에게 문의해주세요.");
+            return false;
+        }
+    },
+    childComment: function (childText, origin_seq, parent) {
+        let body_data = {
+            bh_seq: parseInt(origin_seq),
+            parent_comment_seq: parent,
+            member_id: login_userId,
+            content: childText
+        }
+        try {
+            fetch(`https://${api_domain}.shop/reviews/comment`, {
+                method: "POST",    
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(body_data)
+            })
+            .then((response) => response.json())
+            .then((response) => {
+                cmtTextSubmitBtn.setAttribute("disabled", true)
+                response.success ? location.reload() : alert("댓글 등록에 실패했습니다. 다시 한 번 시도해주세요.");
+                return true;
+            })
+        } catch (error) {
+            console.error("error", error)
+            alert("댓글 등록에 실패했습니다. 관리자에게 문의해주세요.");
+            return false;
+        }
+    },
+    modifyComment : function (editText, target) {
+        let body_data = {
+            seq: parseInt(target),
+            member_id: login_userId,
+            content: editText
+        }
+        console.log(JSON.stringify(body_data));
+        try {
+            fetch(`https://${api_domain}.shop/reviews/comment`, {
+                method: "PUT",    
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(body_data)
+            })
+            .then((response) => response.json())
+            .then((response) => {
+                console.log('response: ', response);
+                cmtTextSubmitBtn.setAttribute("disabled", true)
+                response.success ? location.reload() : alert("댓글 수정에 실패했습니다. 다시 한 번 시도해주세요.");
+                return true;
+            })
+        } catch (error) {
+            console.error("error", error)
+            alert("댓글 수정에 실패했습니다. 관리자에게 문의해주세요.");
+            return false;
+        }
+    },
+}
+
+
+//(댓글, 대댓글 공통) '게시' 버튼 클릭 시 데이터 전송 
+cmtTextSubmitBtn.addEventListener("click", async (event)=>{
+
+    //로그인 검사
+    if (!sessionCheck("member_1")) {
+        //미로그인 상태
+        loginCheck("member_1", `${location.pathname}${location.search}`);
+        return false;
+    }
+    //유효성 검사
     if(cmtTextArea.value == '' || cmtTextArea.value == null){
         alert("댓글을 입력해주세요.")
         cmtTextArea.focus();
         return false;
     }
 
-    await sendComment(cmtTextArea.value, seq);
+    //댓글 / 대댓글 타입
+    let cmttype = event.currentTarget.dataset.cmttype;
+    console.log('cmttype: ', cmttype);
+    if(cmttype === "comment"){
+        //댓글 작성
+        await sendEvent.comment(cmtTextArea.value, origin_seq);
+        return false;
+    }else if(cmttype === "child"){
+        //대댓글 작성
+        const parent_seq = event.currentTarget.dataset.parentseq;
+        await sendEvent.childComment(cmtTextArea.value, origin_seq, parent_seq);
+        return false;
+    }else if(cmttype === "modify"){
+        //댓글, 대댓글 수정
+        const target_seq = event.currentTarget.dataset.seq;
+        await sendEvent.modifyComment(cmtTextArea.value, target_seq);
+        return false;
+    }
+   
 })
-const sendComment = (cmtText, seq) => {
-    console.log('cmtText: ', seq,cmtText,login_userId);
+
+/**
+ * (댓글, 대댓글 공통) 수정하기 클릭 시
+ * @param {event} event 
+ */
+const editComment = (event) => {
+    //'게시' 버튼에 데이터 셋팅
+    const target = {
+        type : event.currentTarget.dataset.type,
+        seq : event.currentTarget.dataset.seq,
+        cmttype : event.currentTarget.dataset.cmttype,
+    }
+    
+    //내용
+    cmtTextArea.value = document.querySelector(`#${target.type}Content_${target.seq}`).innerHTML;
+    //코멘트 타입
+    cmtTextSubmitBtn.setAttribute("data-cmttype", target.cmttype);
+    //seq
+    cmtTextSubmitBtn.setAttribute("data-seq", target.seq);
+
+    //모달 닫기
+    document.querySelector(`#${target.type}AdminModal_${target.seq}`).classList.add("displaynone");
+    
+    //수정하기 포커싱
+    cmtTextArea.focus();
+}
+
+/**
+ * 댓글 삭제
+ * @param {삭제 댓글 seq} seq 
+ */
+ const deleteCommentData = async (seq, id) =>{
+    console.log('seq: ', seq, 'id', id);
+
+    //로그인 검사
+    if (!sessionCheck("member_1")) {
+        //미로그인 상태
+        loginCheck("member_1", `${location.pathname}${location.search}`);
+        return false;
+    }
+    
+    if(sessionCheck("member_1") && id === login_userId){
+        let admin_confirm = confirm("정말 삭제하시겠어요?");
+        if(!admin_confirm){
+            alert("취소했습니다.")
+            return false;
+        }else{
+            await runCommentDelete(seq);
+            return false;
+        }
+    }else if(id != login_userId){
+        //어드민이 아님
+        alert("본인의 리뷰만 삭제할 수 있습니다.");
+        return false;
+    }else{
+        alert("정보를 다시 확인해주세요.");
+        console.error(error);
+        console.log("오류 확인")
+    }
+    
+}
+const runCommentDelete = (seq) => {
+    let body_data = {
+        seq : seq
+    }
     try {
-        fetch(`https://${api_domain}.shop/buy_records/save_comment?bh_seq=${seq}&member_id=${login_userId}&content=${cmtText}`, {
-            method: "GET",
+        fetch(`https://${api_domain}.shop/reviews/comment`, {
+        headers: {
+            "Content-Type": "application/json",
+        },
+        method: "DELETE",
+        body: JSON.stringify(body_data)
         })
         .then((response) => response.json())
-        .then((response) => {
-            console.log("response",response);
-            location.reload();
-            return true;
+        .then((response)=>{
+            if(response.success){
+                response.success ? location.reload() : cmtTextSubmitBtn.setAttribute("disabled", true);
+                return true;
+            }
         })
     } catch (error) {
-        console.error("error", error)
-        alert("댓글 등록에 실패했습니다.");
         return false;
     }
 }

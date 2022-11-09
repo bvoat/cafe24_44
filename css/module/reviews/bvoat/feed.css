@@ -303,7 +303,7 @@
 #reviewsViewWrap .reviews_item {
   width: 100%;
   text-align: center;
-  padding: 0 11px;
+  padding: 0 15px;
 }
 #reviewsViewWrap .reviews_item .userinfo_wrap {
   display: flex;
@@ -351,7 +351,7 @@
   position: absolute;
   width: 65px;
   height: 26px;
-  right: 11px;
+  right: 15px;
 }
 #reviewsViewWrap .reviews_item .userinfo_wrap .userfollow button {
   width: 100%;
@@ -497,19 +497,20 @@
   border-color: #E6E6E6;
   border-radius: 2px;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button {
   width: 100%;
+  background: transparent;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a ul {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a ul .thumb {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb {
   position: relative;
   width: 100%;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a ul .thumb > a, #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a ul .thumb .img_wrap {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb > a, #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
@@ -517,7 +518,7 @@
   border-radius: 2px;
   font-size: 0;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a ul .thumb > a > img, #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a ul .thumb .img_wrap > img {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb > a > img, #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -526,7 +527,7 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a ul .thumb .wish {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb .wish {
   position: absolute;
   width: auto;
   height: auto;
@@ -534,7 +535,7 @@
   bottom: 0px;
   right: 0px;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a ul .thumb .wish button {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb .wish button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -544,23 +545,23 @@
   background: none;
   cursor: pointer;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a ul .thumb .wish button img {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb .wish button img {
   position: relative;
   width: 20px;
   height: 20px;
   padding: 10px;
   margin-top: 2.5px;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a ul .icon img {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .icon img {
   height: inherit;
   -o-object-fit: contain;
      object-fit: contain;
   image-rendering: auto;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a ul .prd_thumb {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .prd_thumb {
   max-width: 80px;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a ul .prd_info {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .prd_info {
   position: relative;
   display: flex;
   flex-flow: column nowrap;
@@ -569,7 +570,7 @@
   width: 100%;
   padding: 0 15px;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a ul .prd_info::after {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .prd_info::after {
   position: absolute;
   display: inline-block;
   content: "";
@@ -578,7 +579,7 @@
   height: 17.68px;
   right: 15px;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a ul .prd_info p:nth-child(1) {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .prd_info p:nth-child(1) {
   width: 90%;
   font-size: 1.4rem;
   font-weight: 700;
@@ -595,7 +596,7 @@
   line-height: 2.5rem;
   height: 2.8rem;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product a ul .prd_info p:nth-child(2) {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .prd_info p:nth-child(2) {
   font-size: 1.4rem;
   font-weight: 500;
   color: #707070;
@@ -715,7 +716,7 @@
   padding: 0 9px;
   top: 13.56px;
   left: -262px;
-  z-index: 9;
+  z-index: 1;
 }
 #reviewsViewWrap .reviews_item .reviews_reaction_box .reviews_control .reviews_admin .admin_modal button {
   width: 50%;
@@ -740,11 +741,11 @@
   height: 14px;
   background: var(--icon-admin-meatball) no-repeat center;
 }
-#reviewsViewWrap .reviews_comment_box {
+#reviewsViewWrap .comment_box {
   width: 100%;
-  padding: 0 11px;
+  padding: 0 15px;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_info {
+#reviewsViewWrap .comment_box .comment_info {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -752,24 +753,22 @@
   width: 100%;
   margin-bottom: 17px;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_info .reviews_comment_num {
+#reviewsViewWrap .comment_box .comment_info .reviews_comment_num {
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.671rem;
   letter-spacing: 0.1px;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list {
+#reviewsViewWrap .comment_box .comment_list {
   width: 100%;
   margin-bottom: 35px;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item {
+#reviewsViewWrap .comment_box .comment_list .cmt_item {
   width: 100%;
   margin-bottom: 13px;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap {
   position: relative;
-}
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset legend {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -779,21 +778,22 @@
   font-weight: 500;
   line-height: 2.4rem;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset legend .reviews_comment_user {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_user, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_user {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
   font-weight: 600;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset legend .reviews_comment_user .cmt_userimg {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_user .cmt_userimg, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_user .cmt_userimg {
   width: 40px;
   margin-right: 12px;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset legend .reviews_comment_admin {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin {
   position: relative;
+  z-index: 1;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset legend .reviews_comment_admin .cmt_admin_modal {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .admin_modal, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .admin_modal {
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -807,7 +807,7 @@
   top: 19.67px;
   left: -264px;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset legend .reviews_comment_admin .cmt_admin_modal button {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .admin_modal button, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .admin_modal button {
   width: 50%;
   max-width: 129px;
   height: 40px;
@@ -817,65 +817,40 @@
   letter-spacing: 0.1px;
   line-height: 2.2rem;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset legend .reviews_comment_admin .cmt_admin_modal .edit {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .admin_modal .edit, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .admin_modal .edit {
   background: #022CFF;
   color: #ffffff;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset legend .reviews_comment_admin .cmt_admin_modal .delete {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .admin_modal .delete, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .admin_modal .delete {
   background: #F5F5F5;
   color: #A1A1A1;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset legend .reviews_comment_admin .cmt_admin_btn {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .cmt_admin_btn, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .cmt_admin_btn {
   width: 18px;
   height: 14px;
   background: var(--icon-admin-meatball) no-repeat center;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset .cmt_content_box {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .content_box {
   width: calc(100% - 52px);
   margin: 0 0 0 52px;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset .cmt_content_box .cmt_content {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .content_box .cmt_content {
+  display: block;
   width: 100%;
-  min-height: 1.45rem;
-  background: transparent;
-  border: 1px solid #E2E2E2;
-  border-color: #E6E6E6;
-  margin-bottom: 2px;
-  padding: 10px 56px 7px 11px;
-  box-sizing: border-box;
-  font-size: 1.45rem;
-  font-weight: 400;
-  color: #454545;
-  overflow-y: hidden;
-  resize: none;
-}
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset .cmt_content_box .cmt_content:-moz-read-only {
-  width: 100%;
-  min-height: 1.45rem;
   background: transparent;
   border: none;
-  padding: 0;
-  font-size: 1.45rem;
+  font-size: 1.4rem;
   font-weight: 400;
+  font-family: inherit;
+  line-height: 2.2rem;
   color: #454545;
-  overflow-y: hidden;
+  padding: 0;
+  margin: -2px 0 6px;
   resize: none;
   cursor: default;
+  overflow: visible;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset .cmt_content_box .cmt_content:read-only {
-  width: 100%;
-  min-height: 1.45rem;
-  background: transparent;
-  border: none;
-  padding: 0;
-  font-size: 1.45rem;
-  font-weight: 400;
-  color: #454545;
-  overflow-y: hidden;
-  resize: none;
-  cursor: default;
-}
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset .cmt_modify_submit_btn {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .cmt_modify_submit_btn {
   position: absolute;
   width: 26px;
   height: 17px;
@@ -886,60 +861,71 @@
   right: 14px;
   background: #ffffff;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item form fieldset .cmt_modify_submit_btn:disabled {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .cmt_modify_submit_btn:disabled {
   display: none;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item .cmt_item_reaction {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .cmt_item_reaction {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: flex-start;
   align-items: center;
   margin-left: 52px;
+  z-index: 0;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item .cmt_item_reaction .cmt_date {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .cmt_item_reaction .cmt_date {
   font-size: 1.3rem;
   font-weight: 400;
   color: #707070;
   opacity: 52%;
   margin-right: 15px;
 }
-#reviewsViewWrap .reviews_comment_box .reviews_comment_list .cmt_item .cmt_item_reaction .cmt_recomment_btn {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .cmt_item_reaction .cmt_recomment_btn {
+  height: 1.4rem;
   font-size: 1.4rem;
+  font-weight: 400;
   letter-spacing: 0.1px;
   color: #A7A7A7;
   background: transparent;
 }
-#reviewsViewWrap .reviews_comment_write_box {
+#reviewsViewWrap .comment_box .comment_list .child_cmt {
+  width: calc(100% - 52px);
+  margin-left: 52px;
+  padding: 12px 15px;
+  background: #F5F6FB;
+}
+#reviewsViewWrap .comment_write_box {
   position: fixed;
   display: flex;
   align-items: center;
   width: 100%;
   max-width: 450px;
   margin-bottom: 29px;
-  padding: 0 15px;
-  height: 80px;
+  padding: 20px 15px;
+  padding-bottom: calc(constant(safe-area-inset-bottom) + 10px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 10px);
   bottom: -30px;
   z-index: 100;
   background: #ffffff;
   box-shadow: 0px -1px 5px rgba(191, 190, 190, 0.25);
 }
-#reviewsViewWrap .reviews_comment_write_box form {
+#reviewsViewWrap .comment_write_box form {
   width: 100%;
   max-width: 450px;
 }
-#reviewsViewWrap .reviews_comment_write_box form fieldset {
+#reviewsViewWrap .comment_write_box form fieldset {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
 }
-#reviewsViewWrap .reviews_comment_write_box form fieldset span {
+#reviewsViewWrap .comment_write_box form fieldset span {
   margin-right: 12px;
 }
-#reviewsViewWrap .reviews_comment_write_box form fieldset span .cmt_userimg {
+#reviewsViewWrap .comment_write_box form fieldset span .cmt_userimg {
   width: 40px;
   max-width: 40px;
 }
-#reviewsViewWrap .reviews_comment_write_box form fieldset .cmt_textarea {
+#reviewsViewWrap .comment_write_box form fieldset .cmt_textarea {
   width: 100%;
   min-height: 39px;
   max-height: 83px;
@@ -955,19 +941,19 @@
   resize: none;
   -ms-overflow-style: none;
 }
-#reviewsViewWrap .reviews_comment_write_box form fieldset .cmt_textarea::-moz-placeholder {
+#reviewsViewWrap .comment_write_box form fieldset .cmt_textarea::-moz-placeholder {
   color: #BFBFBF;
 }
-#reviewsViewWrap .reviews_comment_write_box form fieldset .cmt_textarea:-ms-input-placeholder {
+#reviewsViewWrap .comment_write_box form fieldset .cmt_textarea:-ms-input-placeholder {
   color: #BFBFBF;
 }
-#reviewsViewWrap .reviews_comment_write_box form fieldset .cmt_textarea::placeholder {
+#reviewsViewWrap .comment_write_box form fieldset .cmt_textarea::placeholder {
   color: #BFBFBF;
 }
-#reviewsViewWrap .reviews_comment_write_box form fieldset .cmt_textarea::-webkit-scrollbar {
+#reviewsViewWrap .comment_write_box form fieldset .cmt_textarea::-webkit-scrollbar {
   display: none;
 }
-#reviewsViewWrap .reviews_comment_write_box form fieldset .cmt_create_btn {
+#reviewsViewWrap .comment_write_box form fieldset .cmt_create_btn {
   position: absolute;
   width: 26px;
   height: 17px;
@@ -978,17 +964,20 @@
   right: 14px;
   background: #ffffff;
 }
-#reviewsViewWrap .reviews_comment_write_box form fieldset .cmt_create_btn.active {
+#reviewsViewWrap .comment_write_box form fieldset .cmt_create_btn.active {
   color: #022CFF;
 }
-#reviewsViewWrap .reviews_write_move {
+#reviewsViewWrap .write_move {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 11px;
 }
-#reviewsViewWrap .reviews_write_move .write_move_btn {
+#reviewsViewWrap .write_move .write_move_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 49px;
   background: #022CFF;
@@ -2066,4 +2055,59 @@
   background: rgba(0, 0, 0, 0);
   color: rgba(0, 0, 0, 0);
   transition: all 0.5s ease-in-out;
+}
+
+/* 리뷰 Massage Modal */
+#bvtReviewForm {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  width: 67.55%;
+  height: 271px;
+  padding: 24px 20px;
+  background: #ffffff;
+  border-radius: 5px;
+}
+#bvtReviewForm::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 75px;
+  height: 75px;
+  background: url("https://bvoat.shop/images/new_img/ico__11.png") no-repeat center;
+  background-size: contain;
+  top: -35px;
+}
+#bvtReviewForm .review_form_title {
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  margin-bottom: 5px;
+}
+#bvtReviewForm > p {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.1px;
+  text-align: center;
+  margin-bottom: 37.74px;
+}
+#bvtReviewForm button {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 1.45rem;
+  font-weight: 500;
+  line-height: 1.73rem;
+}
+#bvtReviewForm .ok_btn {
+  background: #022CFF;
+  color: #ffffff;
+  margin-bottom: 10.26px;
+}
+#bvtReviewForm .no_btn {
+  background: #F5F5F5;
+  color: #CBCBCB;
 }/*# sourceMappingURL=feed.css.map */

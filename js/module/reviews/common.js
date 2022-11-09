@@ -1,5 +1,11 @@
 
 /* 리뷰 공통 이벤트 모듈 */
+//세션에서 id 받아오기
+const login_userinfo = JSON.parse(sessionStorage.getItem("member_1"))
+console.log('login_userinfo: ', login_userinfo);
+const login_userId = login_userinfo != null ? login_userinfo.data.member_id : null;
+const login_userNickname = login_userinfo != null ? login_userinfo.data.nick_name : null;
+
 
 /**
  * 좋아요 클릭 이벤트
@@ -8,41 +14,53 @@
  */
 const reviewsLikesButtons = (event) => {
 
-    let loginCheckReturnValue = loginCheck("member_1", window.location.pathname);
+    //로그인 검사
+    if (!sessionCheck("member_1")) {
+        //미로그인 상태
+        loginCheck("member_1", `${location.pathname}${location.search}`);
+        return false;
+    }
 
-    if(loginCheckReturnValue[0]){
-        let current = {
-            btn : event.currentTarget, 
-            num : document.querySelector(`.reviews_likes_num_${ event.currentTarget.dataset.seq}`), 
-            seq : event.currentTarget.dataset.seq,
-            id : loginCheckReturnValue[1],
-        };
-
-        if (getArraylocal("likes").findIndex(likesSeq => likesSeq == current.seq) > -1) {
-            alert("이미 응원하신 리뷰입니다.");
-            return false;
-            //좋아요 삭제
-        }
-
-        fetch(`https://${api_domain}.shop/buy_records/like?seq=${current.seq}&my_id=${current.id}`, {
-            method: "GET",
+    let current = {
+        btn : event.currentTarget, 
+        node : document.querySelector(`.reviews_likes_num_${ event.currentTarget.dataset.seq}`),
+        value : parseInt(document.querySelector(`.reviews_likes_num_${ event.currentTarget.dataset.seq}`).innerHTML),
+        seq : event.currentTarget.dataset.seq,
+        id: login_userId
+    };
+    try {
+        fetch(`https://${api_domain}.shop/reviews/like?seq=${current.seq}&my_id=${current.id}`, {
+        method: "GET",
         })
         .then((response) => response.json())
         .then((response)=>{
-             //response가 success면
-             if(response.success){
-                current.num.innerHTML = parseInt(current.num.textContent)+1;
-                setArraylocal("likes", current.seq);
-                current.btn.classList.add("active");
-             }
-        })
-        .then(()=>{
-            console.log(getArraylocal("likes"));
-        })
+            let status = response.status;
+            if(response.success && response){
+                if(status === 201){
+                    // "좋아요가 정상 처리되었습니다."
+                    current.node.innerHTML = (current.value)+1;
+                    current.btn.classList.add("active");
 
-    }else{
-        console.log("loginCheckReturnValue", loginCheckReturnValue)
+                }else{
+                    console.log('status: ', status);
+                    //"좋아요가 정상적으로 취소되었습니다."
+                    current.node.innerHTML = (current.value)-1;
+                    current.btn.classList.remove("active");
+                }
+            }else{
+                console.log("오류가 발생했습니다.", response);
+                alert("오류가 발생했습니다.");
+            }
+        })
+        .error((jqXHR)=>{
+            console.log(jqXHR);
+            alert("오류가 발생했습니다.");
+        })
+    } catch (error) {
+        
     }
+    
+
 }
 
 
@@ -58,12 +76,12 @@ const reviewsLikesButtons = (event) => {
         //완료 모달 띄우기
         let okmsg = `<p class="reviews_share_modal">복사 완료! 다른 곳에 공유해볼까요? :)</p>`
         document.querySelector("#bvtContents").insertAdjacentHTML("beforeend",okmsg);
-        //사라지는 애니메이션 all 0.5s ease-in-out;
-        // setTimeout(()=>{
-        //     document.querySelector(".reviews_share_modal").classList.add("disappear");
-        //     //완전 node 삭제
-        //     setTimeout(()=>{document.querySelector(".reviews_share_modal").remove();}, 1201)
-        // }, 800)
+        // 사라지는 애니메이션 all 0.5s ease-in-out;
+        setTimeout(()=>{
+            document.querySelector(".reviews_share_modal").classList.add("disappear");
+            //완전 node 삭제
+            setTimeout(()=>{document.querySelector(".reviews_share_modal").remove();}, 1201)
+        }, 800)
     }
     const iferror = () => {
         //에러 모달 띄우기
@@ -74,7 +92,7 @@ const reviewsLikesButtons = (event) => {
             document.querySelector(".reviews_share_modal").classList.add("disappear");
             //완전 node 삭제
             setTimeout(()=>{document.querySelector(".reviews_share_modal").remove();}, 800)
-        }, 500)
+        }, 800)
     }
     clipboardCopy(`.share_text_btn`, _url, ifsuccess, iferror)
 }
@@ -82,11 +100,10 @@ const reviewsLikesButtons = (event) => {
 /* 글 관리 모달 생성 */
 
 const createAdminModal = (event) => {
-	console.log('event: ', event);
 	let current = {
-		modal: document.querySelector(`#admin_modal_${event.currentTarget.dataset.seq}`),
+		modal: document.querySelector(`#${event.currentTarget.dataset.type}AdminModal_${event.currentTarget.dataset.seq}`),
 		node: event.currentTarget,
-		seq: event.currentTarget.dataset.seq
+		seq: event.currentTarget.dataset.seq,
 	}
 	classToggle(current.modal, 'displaynone');
 

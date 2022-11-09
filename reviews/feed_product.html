@@ -1,0 +1,200 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/reviews/bvoat/feed.css)-->
+<section id="reviewsFeedWrap">
+    <ul class="reviews_feed_list">
+    </ul>
+    <p class="spinner displaynone"></p>
+</section>
+
+<script>
+    /* detail에서는 페이지가 2개가 되기 때문에 querySelectorAll 사용하여 반복문으로 적용 */
+
+    //데이터 불러올 url 초기화
+    let fetchURL;
+    //페이지 초기화
+    let page;
+    //리뷰 리스트
+    let reviewList = document.querySelectorAll('.reviews_feed_list');
+    //옵저버 붙이기
+    let lastItem;
+    //리뷰피드인지 상품인지 확인
+    let productNo = getUrlParams('product_no');
+
+
+    if(productNo == null){
+        fetchURL = `https://${api_domain}.shop/buy_records/data?`;
+    } else {
+        fetchURL = `https://${api_domain}.shop/buy_records/data?product_no=${productNo}`;
+    }
+       
+    
+    //loading spinner 설정
+    const loading = (condition) => {
+        const spinner = document.querySelectorAll(".spinner");
+        condition ? spinner.forEach((spinner)=>{
+            spinner.classList.remove("displaynone")
+        }) : spinner.forEach((spinner)=>{
+            spinner.classList.add("displaynone")
+        });
+    }
+
+    //옵저버
+    const intersectionObserver = new IntersectionObserver(async (entries, observer) => {
+        console.log("현재 페이지", page);
+        entries.forEach(()=>{
+
+        })
+        // 마지막 요소가 다 보여진게 아니라면 return
+        if (!entries[0].isIntersecting) return;
+        await unobserveInfinityScroll(page);
+        await page++;
+    }, {
+        threshold: 0.5
+    });
+
+    /**
+     * DOM 생성 함수
+    */
+    const makeDOMforFeed = (data) => {
+        console.log('data: ', data);
+        data.forEach((data) => {
+            let cmt_num = data.cmt;
+            let likes_num = data.likes;
+            let seq = data.seq;
+            let nickname = data.nickname ? data.nickname : '익명';
+            let userlevel = data.level == null ? '' : data.level == "1" ? 'normal' : 'crew';
+            let list_image = data.list_image;
+            let multi_image = data.imgs.length > 1 ? 'multi' : '';
+            let firstImgdir = data.imgs.length != 0 ? data.imgs[0].img_dir : '';
+            let firstImgname = data.imgs.length != 0 ? data.imgs[0].img_name : '';
+            let firstImgUrl = `https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com/${firstImgdir}/${firstImgname}`
+            let rate = data.rate ? data.rate : '5.0';
+            let content = data.content ? data.content : '비어 있는 리뷰입니다.'
+
+
+            //DOM 추가
+            reviewList.forEach((ul)=>{
+                ul.insertAdjacentHTML("beforeend",
+                    `
+                            <li class="reviews_item">
+                    <ul class="userinfo_wrap">
+                        <li class="userimg"><img src="https://bvoat.shop/images/new_img/ico__11.png"></li>
+                        <li class="usernickname">${nickname}</li>
+                        <li class="userlevel ${userlevel}"></li>
+                    </ul>
+                    <div class="reviews_wrap">
+                        <div class="reviews_thumb_box thumb">
+                            <a class="reviews_thumb ${multi_image}" href="/reviews/views.html?seq=${seq}">
+                                <img src="${firstImgUrl}" onerror="this.src='${list_image}';"><em class="reviews_rate">
+                                    <span>${rate}</span>
+                                </em></a>
+                            <ul class="reviews_reaction_box">
+                                <li class="reviews_reaction">
+                                    <button class="reviews_likes" data-seq=${seq}>${likes_num}</button>
+                                    <button class="reviews_cmt" data-seq=${seq} title="${cmt_num}" onclick="location.href='/reviews/views.html?seq=${seq}'"></button>
+                                </li>
+                                <li class="reviews_share"><button data-seq=${seq} title="공유하기"></button></li>
+                            </ul>
+                        </div>
+                        <div class="reviews_content">
+                            <a href="/reviews/views.html?seq=${seq}">
+                            <p class="content">${content}</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>`);
+            })
+            
+        });
+    }
+
+    /**
+     * 최초 데이터 수신
+    */
+    function getBeginningReviewData() {
+        page = 1;
+        console.log('최초 페이지 page: ', page);
+        //로딩 스피너 시작
+        loading(true);
+        fetch(`${fetchURL}&page=${page}&mode=ajax`, {
+            method: "GET",
+        })
+        .then((response) => response.json())
+        .then((response) => {
+            //로딩 스피너 종료
+            loading(false);
+            const reviewsData = response.data;
+            //만약 reviewsData의 length가 0이면 return false
+            if(reviewsData.length === 0){
+                console.log('리뷰 없음');
+                return false;
+            }else if(reviewsData.length > 0){
+                makeDOMforFeed(reviewsData);
+            }
+        })
+        .then(() => {
+            console.log('reviewList: ', reviewList);
+            let reviewListItemFirst = reviewList[0].children;
+            console.log('reviewListItemFirst: ', reviewListItemFirst);
+            let reviewListItemsSecond = reviewList[1].children;
+            console.log('reviewListItemsSecond: ', reviewListItemsSecond);
+            // console.log('reviewListItems: ', reviewListItems);
+            lastItemFirst = reviewListItemFirst[reviewListItems.length - 1];
+            lastItemSecond = reviewListItemsSecond[reviewListItems.length - 1];
+
+            console.log('lastItem: ', lastItem);
+            //최초 옵저버 시작
+            intersectionObserver.observe(lastItemFirst);
+            intersectionObserver.observe(lastItemSecond);
+
+            page++;
+        })
+    }
+    window.addEventListener("load", getBeginningReviewData());
+
+
+    // fetch 보내기 전 작업 (unobserve)
+    async function unobserveInfinityScroll(page) {
+        // 통신 시작할 때 관찰 끄기
+        await intersectionObserver.unobserve(lastItem);
+        // await loadMoreItem(page);
+    };
+
+
+    /**
+     * 추가 데이터 수신
+    */
+    async function loadMoreItem (page) {
+        //로딩 스피너 시작
+        loading(true);
+        try {
+            await fetch(`${fetchURL}&page=${page}&mode=ajax`, {
+                method: "GET",
+            })
+                .then((response) => response.json())
+                .then((response) => {
+                    //성공하면
+                    //로딩 스피너 종료
+                    loading(false);
+                    const reviewsData = response.data;
+                    console.log('reviewsData: ', reviewsData);
+                    makeDOMforFeed(reviewsData);
+                    intersectionObserver.disconnect(lastItem);
+                })
+                .then((response) => {
+                    //페이지 1올리기
+                    page++;
+                    //감시하는 node 수정
+                    reviewListItems = reviewList.children;
+                    lastItem = reviewListItems[reviewListItems.length - 2];
+                    //옵저버 재시작
+                    intersectionObserver.observe(lastItem);
+                })
+        } catch (error) {
+            console.log('error:', error);
+            //에러인 경우 다시 시도;
+            loadMoreItem(page)
+        }
+    }
+
+</script>
