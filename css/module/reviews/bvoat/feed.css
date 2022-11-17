@@ -1241,17 +1241,19 @@
   margin-bottom: 10px;
   background: #ffffff;
 }
-#reviewsWriteWrap #reviewsWriteProduct > a {
+#reviewsWriteWrap #reviewsWriteProduct > button {
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  background: #ffffff;
 }
-#reviewsWriteWrap #reviewsWriteProduct > a .thumb {
+#reviewsWriteWrap #reviewsWriteProduct > button .thumb {
   position: relative;
   width: 100%;
 }
-#reviewsWriteWrap #reviewsWriteProduct > a .thumb > a, #reviewsWriteWrap #reviewsWriteProduct > a .thumb .img_wrap {
+#reviewsWriteWrap #reviewsWriteProduct > button .thumb > a, #reviewsWriteWrap #reviewsWriteProduct > button .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
@@ -1259,7 +1261,7 @@
   border-radius: 2px;
   font-size: 0;
 }
-#reviewsWriteWrap #reviewsWriteProduct > a .thumb > a > img, #reviewsWriteWrap #reviewsWriteProduct > a .thumb .img_wrap > img {
+#reviewsWriteWrap #reviewsWriteProduct > button .thumb > a > img, #reviewsWriteWrap #reviewsWriteProduct > button .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -1268,7 +1270,7 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#reviewsWriteWrap #reviewsWriteProduct > a .thumb .wish {
+#reviewsWriteWrap #reviewsWriteProduct > button .thumb .wish {
   position: absolute;
   width: auto;
   height: auto;
@@ -1276,7 +1278,7 @@
   bottom: 0px;
   right: 0px;
 }
-#reviewsWriteWrap #reviewsWriteProduct > a .thumb .wish button {
+#reviewsWriteWrap #reviewsWriteProduct > button .thumb .wish button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1286,32 +1288,33 @@
   background: none;
   cursor: pointer;
 }
-#reviewsWriteWrap #reviewsWriteProduct > a .thumb .wish button img {
+#reviewsWriteWrap #reviewsWriteProduct > button .thumb .wish button img {
   position: relative;
   width: 20px;
   height: 20px;
   padding: 10px;
   margin-top: 2.5px;
 }
-#reviewsWriteWrap #reviewsWriteProduct > a .icon img {
+#reviewsWriteWrap #reviewsWriteProduct > button .icon img {
   height: inherit;
   -o-object-fit: contain;
      object-fit: contain;
   image-rendering: auto;
 }
-#reviewsWriteWrap #reviewsWriteProduct > a .product_thumb {
+#reviewsWriteWrap #reviewsWriteProduct > button .product_thumb {
   width: 80px;
   max-width: 80px;
 }
-#reviewsWriteWrap #reviewsWriteProduct > a .product_thumb .img_wrap {
+#reviewsWriteWrap #reviewsWriteProduct > button .product_thumb .img_wrap {
   border-radius: 5px;
 }
-#reviewsWriteWrap #reviewsWriteProduct > a .product_info {
+#reviewsWriteWrap #reviewsWriteProduct > button .product_info {
   width: calc(100% - 80px - 15px);
   padding: 0 15px;
   color: #454545;
+  text-align: start;
 }
-#reviewsWriteWrap #reviewsWriteProduct > a .product_info .product_name {
+#reviewsWriteWrap #reviewsWriteProduct > button .product_info .product_name {
   width: 100%;
   font-weight: 800;
   font-size: 1.4rem;
@@ -1326,7 +1329,7 @@
   line-height: 2.2rem;
   height: 2.5rem;
 }
-#reviewsWriteWrap #reviewsWriteProduct > a .product_info .product_option {
+#reviewsWriteWrap #reviewsWriteProduct > button .product_info .product_option {
   width: 100%;
   font-weight: 400;
   font-size: 1.4rem;
@@ -1342,7 +1345,7 @@
   line-height: 2.2rem;
   height: 2.5rem;
 }
-#reviewsWriteWrap #reviewsWriteProduct > a .product_info .product_price {
+#reviewsWriteWrap #reviewsWriteProduct > button .product_info .product_price {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 2.25rem;
@@ -1502,7 +1505,7 @@
   border: 1px solid #E2E2E2;
   border-radius: 2px;
 }
-#reviewsWriteWrap #reviewsWriteBox #reviewsContent .reviews_wrap #reviewsTextBox {
+#reviewsWriteWrap #reviewsWriteBox #reviewsContent .reviews_wrap textarea {
   width: 100%;
   height: 100%;
   border: 15px solid #F9F9F9;
@@ -1515,13 +1518,13 @@
   letter-spacing: -0.25px;
   resize: none;
 }
-#reviewsWriteWrap #reviewsWriteBox #reviewsContent .reviews_wrap #reviewsTextBox::-moz-placeholder {
+#reviewsWriteWrap #reviewsWriteBox #reviewsContent .reviews_wrap textarea::-moz-placeholder {
   color: #CBCBCB;
 }
-#reviewsWriteWrap #reviewsWriteBox #reviewsContent .reviews_wrap #reviewsTextBox:-ms-input-placeholder {
+#reviewsWriteWrap #reviewsWriteBox #reviewsContent .reviews_wrap textarea:-ms-input-placeholder {
   color: #CBCBCB;
 }
-#reviewsWriteWrap #reviewsWriteBox #reviewsContent .reviews_wrap #reviewsTextBox::placeholder {
+#reviewsWriteWrap #reviewsWriteBox #reviewsContent .reviews_wrap textarea::placeholder {
   color: #CBCBCB;
 }
 #reviewsWriteWrap #reviewsWriteBox #reviewsContent .text_length {
@@ -1576,68 +1579,43 @@
 #reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea {
   width: 100%;
   max-width: 450px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   flex-flow: row nowrap;
   margin-top: 10px;
 }
-#reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .thumb {
-  position: relative;
-  width: 100%;
+#reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .appended_item.dropped {
+  -webkit-animation: vibration 0.12s infinite;
+          animation: vibration 0.12s infinite;
 }
-#reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .thumb > a, #reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .thumb .img_wrap {
-  display: block;
-  position: relative;
-  padding-top: 100%;
-  overflow: hidden;
-  border-radius: 2px;
-  font-size: 0;
+@-webkit-keyframes vibration {
+  from {
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(-2deg);
+  }
 }
-#reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .thumb > a > img, #reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .thumb .img_wrap > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .thumb .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0px;
-  right: 0px;
-}
-#reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .thumb .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-#reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .thumb .wish button img {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .icon img {
-  height: inherit;
-  -o-object-fit: contain;
-     object-fit: contain;
-  image-rendering: auto;
+@keyframes vibration {
+  from {
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(-2deg);
+  }
 }
 #reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .appended_item {
   position: relative;
-  width: 25%;
-}
-#reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .appended_item .img_wrap {
+  width: 96px;
   border-radius: 5px;
+  cursor: move;
+}
+#reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .appended_item::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 #reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .appended_item:nth-child(-n+3) {
   margin-right: 12px;
@@ -1652,6 +1630,7 @@
   background: transparent;
   top: 0;
   right: 0;
+  cursor: pointer;
 }
 #reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .appended_item .img_del_btn::after {
   content: "";
@@ -1844,6 +1823,7 @@
   height: 2.5rem;
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_info .product_option {
+  position: relative;
   display: inline-flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -1868,6 +1848,7 @@
   line-height: 1.8rem;
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_info .product_option .option.more {
+  width: calc(100% - 12.73px - 20px);
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1879,6 +1860,7 @@
   line-height: 1.8rem;
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_info .product_option .option.more.open {
+  width: calc(100% - 12.73px - 20px);
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1893,30 +1875,19 @@
   display: none;
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_info .product_option.more .option_more {
+  position: absolute;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 20px;
-  background: transparent;
   text-indent: -9999px;
-}
-#reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_info .product_option.more .option_more::after {
-  display: block;
-  content: "";
-  width: 12.73px;
-  height: 6.49px;
+  right: 0;
   background: var(--icon-off-arrow) no-repeat center;
+  background-size: 12.73px 6.49px;
 }
-#reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_info .product_option.more.open .option_more.open {
+#reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_info .product_option.more .option_more.open {
   display: block;
-}
-#reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_info .product_option.more.open .option_more.open::after {
-  display: block;
-  content: "";
-  width: 12.73px;
-  height: 6.49px;
-  background: var(--icon-off-arrow) no-repeat center;
   transform: rotate(180deg);
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_info .product_price {
@@ -2092,7 +2063,7 @@
   line-height: 2.2rem;
   letter-spacing: 0.1px;
   text-align: center;
-  margin-bottom: 37.74px;
+  margin-bottom: 15.74px;
 }
 #bvtReviewForm button {
   width: 100%;

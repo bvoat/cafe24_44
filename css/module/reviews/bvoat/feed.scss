@@ -1171,11 +1171,13 @@
     margin-bottom: 10px;
     background: $bvt-white;
 
-    >a {
+    >button {
+      width: 100%;
       display: flex;
       flex-flow: row nowrap;
       justify-content: flex-start;
       align-items: flex-start;
+      background: $bvt-white;
       //상품 이미지
       @include product-thumb(0px, 0px, 0px, 0px);
 
@@ -1193,6 +1195,7 @@
         width: calc(100% - 80px - 15px);
         padding: 0 15px;
         color: #454545;
+        text-align: start;
 
         .product_name {
           width: 100%;
@@ -1409,7 +1412,7 @@
         background: #F9F9F9;
         border: 1px solid #E2E2E2;
         border-radius: 2px;
-        #reviewsTextBox{
+        textarea{
           width: 100%;
           height: 100%;
           border: 15px solid #F9F9F9;
@@ -1483,42 +1486,56 @@
       #appendedArea{
         width: 100%;
         max-width: 450px;
+        height: fit-content;
         display: flex;
         flex-flow: row nowrap;
         margin-top: 10px;
-        @include product-thumb(0px, 0px, 0px, 0px);
-        //이미지 아이템 개별
-        .appended_item{
-          position: relative;
-          width: calc(100% / 4);
-          .img_wrap{
-            border-radius: 5px;
+        .appended_item.dropped{
+          animation: vibration .12s infinite;
+        }
+        @keyframes vibration {
+          from {
+            transform: rotate(5deg);
           }
-          //3개까지 margin-right
-          &:nth-child(-n+3){
-            margin-right: 12px;
-          }
-          //이미지 삭제 버튼
-          .img_del_btn{
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 25px;
-            height: 25px;
-            background: transparent;
-            top: 0;
-            right: 0;
-            &::after{
-              content: "";
-              display: block;
-              width: 15px;
-              height: 15px;
-              background: var(--icon-del-btn) no-repeat center;
-            }
+          to {
+            transform: rotate(-2deg);
           }
         }
-
+        .appended_item{
+          position: relative;
+          width: 96px;
+          border-radius: 5px;
+          cursor: move;
+          &::after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+          }
+            // 3개까지 margin-right
+            &:nth-child(-n+3){
+              margin-right: 12px;
+            }
+            //이미지 삭제 버튼
+            .img_del_btn{
+              position: absolute;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 25px;
+              height: 25px;
+              background: transparent;
+              top: 0;
+              right: 0;
+              cursor: pointer;
+              &::after{
+                content: "";
+                display: block;
+                width: 15px;
+                height: 15px;
+                background: var(--icon-del-btn) no-repeat center;
+              }
+          }
+        }
       }
     }
 
@@ -1662,6 +1679,7 @@
             }
 
             .product_option {
+              position: relative;
               display: inline-flex;
               flex-flow: row nowrap;
               justify-content: space-between;
@@ -1679,10 +1697,12 @@
               }
               //옵션이 더보기 필요하고 1줄을 넘지만 아직 오픈되지 않았을 때
               .option.more{
+                width: calc(100% - 12.73px - 20px);
                 @include only-ellipsis(1, 1.4rem);
               }
               //옵션이 더보기 필요하고 1줄을 넘고 오픈되었을 때
               .option.more.open{
+                width: calc(100% - 12.73px - 20px);
                 @include only-ellipsis(5, 1.4rem);
               }
               //줄이 2줄이 아닐 때
@@ -1690,34 +1710,23 @@
                 display: none;
               }
             }
-            //더보기 접힌 상태
+            //더보기 접힌 상태 '더보기'
             .product_option.more .option_more{
+              position: absolute;
               display: inline-flex;
               justify-content: center;
               align-items: center;
               width: 30px;
               height: 20px;
-              background: transparent;
               text-indent: -9999px;
-              &::after{
-                display: block;
-                content: "";
-                width: 12.73px;
-                height: 6.49px;
-                background: var(--icon-off-arrow) no-repeat center;
-              }
+              right: 0;
+              background: var(--icon-off-arrow) no-repeat center;
+              background-size: 12.73px 6.49px;
             }
-            //더보기 열린 상태
-            .product_option.more.open .option_more.open{
+            //더보기 열린 상태 '더보기'
+            .product_option.more .option_more.open{
               display: block;
-              &::after{
-                display: block;
-                content: "";
-                width: 12.73px;
-                height: 6.49px;
-                background: var(--icon-off-arrow) no-repeat center;
                 transform: rotate(180deg);
-              }
             }
 
             .product_price {

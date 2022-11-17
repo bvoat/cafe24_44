@@ -1,15 +1,17 @@
-//세션에서 id 받아오기
-const session_member = JSON.parse(sessionStorage.getItem("member_1"))
-const session_id = session_member.data.member_id;
-const session_nick = session_member.data.nick_name;
-
 //url 정보
 const searchParams = window.location.search;
 const params_seq = getUrlParams("seq");
 const params_id = getUrlParams("member_id");
-const params_div = getUrlParams("div");
+const params_mode = getUrlParams("mode");
+
+//접속 시 자격 체크
+//로그인 검사는 모듈로 대체
+if(params_id != login_userId){
+	alert("본인의 리뷰만 작성할 수 있습니다.");
+	location.href = "/reviews/feed.html";
+}
 //s3
-const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
+const s3url = "https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com";
 //정보 객체 생성
 let review_data = {
 	//url 정보
@@ -19,9 +21,11 @@ let review_data = {
 	},
 	//유저
 	"user" : {
-		"name": "",
-		"member_id": "",
-		"level": "",
+		"nick_name": login_userNickname,
+		"member_id": login_userId,
+		"member_name": login_userName,
+		"level": login_userLevel,
+		"email": login_userEmail,
 	},
 	//상품
 	"product": {
@@ -40,6 +44,13 @@ let review_data = {
 		"imgs": [],
 	}
 };
+
+
+let filesArray = [];
+let filesOrder = [];
+let deleteArray = [];
+
+
 /**
  * 최초 데이터 수신
 */
@@ -51,7 +62,6 @@ function getWriteData(params) {
 	.then((response) => response.json())
 	.then((response) => {
 		reviewsData = response.data;
-		console.log('reviewsData: ', reviewsData);
 		//데이터 할당
 		//상품 정보
 		review_data.product.name = reviewsData[0].product_name;
@@ -59,99 +69,295 @@ function getWriteData(params) {
 		review_data.product.price = reviewsData[0].product_price;
 		review_data.product.option = reviewsData[0].option_value;
 		review_data.product.img = reviewsData[0].list_image;
-		//유저 정보
-		review_data.user.name = reviewsData[0].nickname;
-		review_data.user.member_id = reviewsData[0].member_id;
-		review_data.user.level = reviewsData[0].level;
 		//리뷰 정보
-		if(params_div == 'modify'){
+		if(params_mode == 'modify'){
 			review_data.reviews.content = reviewsData[0].content;
 			review_data.reviews.rate = reviewsData[0].rate;
 			review_data.reviews.write_date = reviewsData[0].write_date;
 			review_data.reviews.write_date_tmp = reviewsData[0].write_date_tmp;
 			review_data.reviews.imgs = reviewsData[0].imgs
 		}
-
 	})
 	.then((response)=>{
 		//상품 정보 삽입
-		document.querySelector(".img_wrap").insertAdjacentHTML("afterbegin",`<img src="${review_data.product.img}" alt="${review_data.product.name}">`)
-		document.querySelector(".product_name").insertAdjacentText("afterbegin", review_data.product.name);
-		document.querySelector(".product_option").insertAdjacentText("afterbegin", review_data.product.option);
-		document.querySelector(".product_price").insertAdjacentText("afterbegin", review_data.product.price + '원');
+		document.querySelector("#reviewsWriteProduct").insertAdjacentHTML("beforeend", `
+			<button onclick="clickReviewProduct(${review_data.product.no})">
+				<div class="product_thumb thumb">
+					<div class="img_wrap" title="상품 이미지">
+						<img src="${review_data.product.img}" alt="${review_data.product.name}">
+					</div>
+				</div>
+				<ul class="product_info">
+					<li class="product_name" title="상품명">${review_data.product.name}</li>
+					<li class="product_option" title="옵션">${review_data.product.option}</li>
+					<li class="product_price" title="상품가">${review_data.product.price}원</li>
+				</ul>
+			</button>
+		`)
+
 		//input 삽입
 		document.querySelector("#seq").value = review_data.url.seq;
-		document.querySelector("#nickname").value = review_data.user.nickname;
-		document.querySelector("#writerId").value = review_data.user.member_id;
+		document.querySelector("#nick_name").value = review_data.user.nick_name;
+		document.querySelector("#member_id").value = review_data.user.member_id;
+		document.querySelector("#member_name").value = review_data.user.member_name;
 		document.querySelector("#level").value = review_data.user.level;
+		document.querySelector("#email").value = review_data.user.email;
 
-		if(params_div == 'modify'){
-			document.querySelector(".review_write_box").innerHTML = review_data.reviews.content;
+
+
+		if(params_mode == 'modify'){
+			document.querySelector(".review_write_box").innerText = review_data.reviews.content;
+			//숫자 표시
+			document.querySelector(".text_num").innerHTML = review_data.reviews.content.length;
+			document.querySelector("#rate").value = review_data.reviews.rate;
 			//rateit에 value 설정 위해 제이쿼리 사용
 			$('#rateit').rateit("value", review_data.reviews.rate);
+			console.log("eview_data.reviews.imgs", review_data.reviews.imgs)
 			//이미지가 있는 경우에 이미지 삽입
 			if([...review_data.reviews.imgs].length > 0){
 				[...review_data.reviews.imgs].forEach((image, index) => {
+					console.log('image: ', image, index);
 					let img_url = image.storage_div == 'cafe24' ? `${image.img_dir}/${image.img_name}` : `${s3url}/${image.img_dir}/${image.img_name}`;
-	
-					document.querySelector("#appendedArea").insertAdjacentHTML(`afterbegin`, `<li id="appended_img_${image.lastModified}" class="appended_item thumb" data-seq="${image.lastModified}" >
-					<div class="appended_wrap img_wrap"><img src="${img_url}"></div>
-					<button class="img_del_btn" title="${index}번 이미지 삭제" data-seq="${image.lastModified}" data-index="${index}" type="button" onclick="appendedPhotoDelete(event)"></button>
-					</li>`)
+					document.querySelector("#appendedArea").insertAdjacentHTML(`beforeend`, `<li id="image_${image.seq}" class="appended_item thumb" data-seq="${image.seq}" data-saved=true data-name="${image.img_name}" style="background: url(${img_url}) no-repeat center; background-size: cover;" draggable="true">
+					<button class="img_del_btn" title="이미지 삭제"  data-saved=true data-seq="${image.seq}" type="button"  onclick="removeAttachedImage(event)"></button>
+					</li>`
+					)
 				});
 			}
-			
 		}
 	})
 }
 window.addEventListener("load", getWriteData(searchParams));
 
-
 /* 쓰기 기능 시작 */
+
+/**
+ * 별점 클릭 시 input#rate에 입력
+ */
+let rate_range = document.querySelector("#rateit");
+rate_range.addEventListener("click", ()=>{
+	document.querySelector("#rate").value = document.querySelector(".rateit-range").ariaValueNow;
+});
+
+/**
+ * textarea length 1000자 제한
+ * content 내용 세션 저장
+ */
+const settingTextarea = (event) => {
+    sessionStorage.setItem("content", event.currentTarget.value);
+	//숫자 제한 (textarea 내 maxlength로도 1000자 제한)
+	if(event.target.value.length > 1000){
+		return false;
+	}else{
+		//숫자 표시
+		document.querySelector(".text_num").innerHTML = event.target.value.length;
+	};
+};
+
 /**
  * 버튼 클릭 시 file 동작
  */
-const addPhotoButtonClick = () => {
-	document.getElementById("appendedImgs").click();
+const clickAttachFileButton = () => {
+	if(document.getElementById('appendedArea').children.length >= 4) {
+		alert("사진은 4장까지 추가 가능합니다.")
+		return false;
+	}
+	document.getElementById("attach_image").click();
+};
+
+
+const createIndexAttachedImage = (attachedimage) => {
+	//이미지에 번호 추가
+	[...attachedimage].forEach((el, index)=>{
+		el.setAttribute("data-order", index);
+	})
 }
+
 /**
  * file 첨부 시 
  * @param {첨부한 이미지} input 
  */
+const attachImage = (file) => {
+	//이미지 갯수 검증
+	if(document.getElementById('appendedArea').children.length+file.files.length > 4) {
+		alert("사진은 4장까지 추가 가능합니다.");
+		return false;
+	}
 
-//이미지 리스트 초기화
-let images;
-
-const previewAppendedPhoto = (input) => {
-	images = input.files;	//선택된 파일 가져오기
-
-	[...images].forEach((image, index)=>{
-		document.getElementById("appendedArea").insertAdjacentHTML("beforeend", `
-		<li id="appended_img_${image.lastModified}" class="appended_item thumb" data-seq="${image.lastModified}" >
-		<div class="appended_wrap img_wrap"><img src="${URL.createObjectURL(image)}"></div>
-		<button class="img_del_btn" title="${index}번 이미지 삭제" data-seq="${image.lastModified}" data-index="${index}" type="button" onclick="appendedPhotoDelete(event)"></button>
-	</li>`)
-	})
+	[...file.files].forEach((image)=>{
+		document.getElementById("appendedArea").insertAdjacentHTML("beforeend", `<li id="image_${image.lastModified}" class="appended_item thumb" data-seq="${image.lastModified}" data-saved=false data-name="${image.name}" style="background: url(${URL.createObjectURL(image)}) no-repeat center; background-size: cover;" draggable="true">
+		<button class="img_del_btn" title="이미지 삭제" data-seq="${image.lastModified}" type="button" onclick="removeAttachedImage(event)"></button>
+		</li>`)
+	});
+	
+	//이미지 Array에 추가
+	[...file.files].forEach((file)=>{
+		filesArray.push(file)
+	});
 }
 
-const appendedPhotoDelete = (event) => {
-
-	//file.lastModified 로 formData 삭제
+const removeAttachedImage = (event) => {
 	const target = event.currentTarget;
+	//file.lastModified 로 formData 삭제
 	const removeTargetSeq = target.dataset.seq;
-	const images = document.getElementById("appendedImgs").files;
-	const data = new DataTransfer();
-
-	 [...images]
-	 .filter(file => file.lastModified != removeTargetSeq)
-	 .forEach((file)=>{
-		data.items.add(file);
-
-	 });
-	document.getElementById("appendedImgs").files = data.files;
-
-	// //file.lastModified -> id 변환해 li 삭제
-	document.getElementById(`appended_img_${removeTargetSeq}`).remove();
+	filesArray = filesArray.filter(file => file.lastModified != removeTargetSeq);
+	
+	// deleteArr에 seq 삽입
+	target.dataset.saved ? deleteArray.push(`${removeTargetSeq}`) : null;
+	// file.lastModified -> id 변환해 li 삭제
+	document.getElementById(`image_${removeTargetSeq}`).remove();
 }
+
+/* 이미지 드래그 순서 변경 */
+
+// 1. 대상 선정
+const appendedArea = document.getElementById("appendedArea");
+
+// 2. 옵저버 인스턴스 생성
+const observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+	dragAppendedImage(mutation.addedNodes[0])
+  });    
+});
+
+// 3. 실행
+observer.observe(appendedArea, {
+	characterData: true,
+    childList: true,
+});
+
+let currentItemIndex;
+let currentItem;
+
+// 4. 콜백 함수
+/**
+ * 이미지 드래그 이벤트
+ * @param {mutation.addedNodes[1]} node 
+ */
+const dragAppendedImage = (node) => {
+	if(node){node.addEventListener("dragstart", (event)=>{
+		currentItem = event.currentTarget;
+		const listArr = [...appendedArea.children];
+		currentItemIndex = listArr.indexOf(currentItem);
+	});
+	node.addEventListener("dragend", (event)=>{
+		event.preventDefault();
+	});
+	node.addEventListener('dragover', (event) => {
+		event.preventDefault();
+		const currentDropItem = event.currentTarget;
+		currentDropItem.classList.add("dropped");
+	});
+	node.addEventListener('dragleave', (event) => {
+		event.preventDefault();
+		const currentDropItem = event.currentTarget;
+		currentDropItem.classList.remove("dropped");
+	});
+	node.addEventListener('drop', (event) => {
+		//드롭되는 아이템
+		const currentDropItem = event.currentTarget;
+		const listArr = [...appendedArea.children];
+		const dropItemIndex = listArr.indexOf(currentDropItem);
+		
+		if(currentItemIndex < dropItemIndex){
+			currentDropItem.after(currentItem);
+		}else{
+			currentDropItem.before(currentItem);
+		}
+		currentDropItem.classList.remove("dropped");
+	});}
+}
+
+
+/**
+ * 리뷰 등록
+ * @param {이벤트} event 
+ */
+
+async function registerReview (event) {
+	 /* 전송 이벤트 중지 */
+	event.preventDefault();
+	/* 이미지 order 설정 */
+	const appended_image = appendedArea.childNodes;
+	createIndexAttachedImage(appended_image);
+
+	//별점 검사
+	if(document.getElementById("rate").value == 'undefined' || document.getElementById("rate").value == ''){
+		alert("구매하신 상품 별점을 알려주세요 :)")
+		return false;
+	}
+	if(document.getElementById("content").value == ''){
+		alert("구매하신 상품에 대한 의견을 작성해주세요 :)")
+		return false;
+	}
+	//이미지 없으면 alert
+	if(appended_image.length < 1){
+		alert("이미지를 추가해주세요 :)")
+		return false;
+	}
+
+	/* 보낼 정보 */
+	let data = {
+		'rate': document.getElementById("rate").value,
+		'content': document.getElementById("content").value,
+		'seq': review_data.url.seq,
+		'member_id': review_data.user.member_id,
+		'member_name': review_data.user.member_name,
+		'nick_name': review_data.user.nick_name,
+		'email': review_data.user.email,
+		'level': review_data.user.level
+	};
+
+
+	/* 최종 formData */
+	let formData = new FormData(); 
+
+	if(appended_image.length > 0){
+
+	// imageOrderArray formdata로 전달
+	appended_image.forEach((image) => {
+		let img_order = image.dataset.order; 
+		let img_name = image.dataset.name;
+		let img_saved = image.dataset.saved === 'true' ? true : false;
+		formData.append('imageOrderArray[]', JSON.stringify({'name': img_name, 'order': img_order, 'isSaved': img_saved}));
+		
+	});
+
+	//첨부 이미지 formdata로 전달
+	filesArray.forEach((file)=>{
+		formData.append("images", file)
+	})
+
+	//삭제 seq formdata로 전달
+	deleteArray.forEach((seq)=>{
+		formData.append("deleteArray", seq);
+	})
+
+	//글 데이터 formdata로 전달
+	formData.append('data', JSON.stringify(data)); 
+
+
+	//API 전달
+	await fetch(`https://${api_domain}.shop/reviews/content`, {
+		method: "POST",
+		body: formData
+	})
+	.then((response) => response.json())
+	.then((response) => {
+		console.log("response", response)
+		response.success ? location.href=`/reviews/views.html?seq=${response.data.seq}` : alert("리뷰 저장 에러입니다. 다시 시도해주세요 :)")
+	})
+	.then((error)=>{
+		console.log(error)
+	});
+	}
+
+}
+
+document.querySelector('#reviewSubmit').addEventListener('click', registerReview);
+
+
+
+
 
 /* 쓰기 기능 끝 */

@@ -1,11 +1,12 @@
 
 /* 리뷰 공통 이벤트 모듈 */
 //세션에서 id 받아오기
-const login_userinfo = JSON.parse(sessionStorage.getItem("member_1"))
-console.log('login_userinfo: ', login_userinfo);
+const login_userinfo = JSON.parse(sessionStorage.getItem("member_1"));
 const login_userId = login_userinfo != null ? login_userinfo.data.member_id : null;
 const login_userNickname = login_userinfo != null ? login_userinfo.data.nick_name : null;
-
+const login_userName = login_userinfo != null ? login_userinfo.data.name : null;
+const login_userLevel = login_userinfo != null ? login_userinfo.data.group_no : null;
+const login_userEmail = login_userinfo != null ? login_userinfo.data.email : null;
 
 /**
  * 좋아요 클릭 이벤트
@@ -152,3 +153,47 @@ function loginCheck(checkitem, returnUrl) {
 	  }
   }
   
+
+  /**
+ * 상품 클릭 시 품절 여부 체크하여 모달 생성
+ * @param {상품번호} prd_no 
+ */
+const clickReviewProduct = (prd_no) => {
+    try {
+        fetch(`https://${api_domain}.shop/products/selling-status?product_no=${prd_no}`, {
+            method: "GET",
+        })
+        .then((response) => response.json())
+        .then((response)=>{
+            console.log(response);
+            if(response.data['sellingStatus'] === 'T'){
+                location.href = `/product/detail.html?product_no=${prd_no}`;
+            }else{
+                //화면 상단에 모달 생성
+                document
+                .querySelector("#bvtContainer")
+                .insertAdjacentHTML("afterbegin", `
+                <section id="bvtCommonModal">
+                <div id="bvtReviewForm" method="dialog">
+                    <h2 class="review_form_title">상품 품절 안내</h2>
+                    <p>해당 상품은 현재 품절 되었어요🥺<br>다른 상품 구경하러 갈까요?
+                    </p>
+                    <button class="ok_btn">네,  구경할래요</button>
+                    <button class="no_btn">아니오, 괜찮습니다.</button>
+                </div>
+                </section>
+                `);
+            }
+            document.querySelector(".ok_btn").addEventListener("click", ()=>{
+                location.href = "/product/category.html";
+            })
+            document.querySelector(".no_btn").addEventListener("click", ()=>{
+                document.querySelector("#bvtCommonModal").remove();
+            })
+            return true;
+        })
+    } catch (error) {
+        console.log("error", error);
+        return false;
+    }
+}

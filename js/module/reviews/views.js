@@ -51,7 +51,7 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
                 product_price : obj.product_price ? obj.product_price : '',
                 admin : obj.member_id != login_userId ? 'no_admin' : ''
             };
-
+            console.log("img_list", data.img_list)
             //DOM 추가
             document.querySelector(".reviews_view")
                 .insertAdjacentHTML("beforeend",
@@ -272,50 +272,6 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
     window.addEventListener("load", getBeginningReviewData(url));
 
 /* 상세 보기 개별 기능 시작 */
-
-/**
- * 상품 클릭 시 품절 여부 체크하여 모달 생성
- * @param {상품번호} prd_no 
- */
-const clickReviewProduct = (prd_no) => {
-    try {
-        fetch(`https://${api_domain}.shop/products/selling-status?product_no=${prd_no}`, {
-            method: "GET",
-        })
-        .then((response) => response.json())
-        .then((response)=>{
-            console.log(response);
-            if(response.data['sellingStatus'] === 'T'){
-                location.href = `/product/detail.html?product_no=${prd_no}`;
-            }else{
-                //화면 상단에 모달 생성
-                document
-                .querySelector("#bvtContainer")
-                .insertAdjacentHTML("afterbegin", `
-                <section id="bvtCommonModal">
-                <div id="bvtReviewForm" method="dialog">
-                    <h2 class="review_form_title">상품 품절 안내</h2>
-                    <p>해당 상품은 현재 품절 되었어요🥺<br>다른 상품 구경하러 갈까요?
-                    </p>
-                    <button class="ok_btn">네,  구경할래요</button>
-                    <button class="no_btn">아니오, 괜찮습니다.</button>
-                </div>
-                </section>
-                `);
-            }
-            document.querySelector(".ok_btn").addEventListener("click", ()=>{
-                location.href = "/product/category.html";
-            })
-            document.querySelector(".no_btn").addEventListener("click", ()=>{
-                document.querySelector("#bvtCommonModal").remove();
-            })
-            return true;
-        })
-    } catch (error) {
-        console.log("error", error);
-        return false;
-    }
-}
 
 /**
  * 게시글 수정 이동
