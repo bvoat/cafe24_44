@@ -16,7 +16,7 @@ function getFollowData() {
 	.then((response)=>{
 		followData=response.data;
 		console.log('followData: ', followData);
-
+		if(followData.length > 0){
 		followData.forEach((data,index) => {
 			let user = {
 				index: index,
@@ -41,7 +41,17 @@ function getFollowData() {
 				</ul>
 			</li>
 			`)
-		});
+		});}
+		else{
+			let text = param == 'follower' ? '팔로워' : '팔로잉';
+			let sentence = param == 'follower' ? '팔로워가 없어요 🥲' : '팔로잉 한 사람이 없어요 🥲';
+			document.querySelector("#reviewsUserFollowListBox").insertAdjacentHTML("afterbegin", `
+			<div id="reviewsEmpty">
+				<h2 class="reviews_empty">${text} 없음</h2>
+				<p>아직 ${sentence}</p>
+			</div>
+			`)
+		}
 	})
 	.then((response)=>{
 		clickFollowButton();
