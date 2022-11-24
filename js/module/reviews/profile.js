@@ -26,6 +26,7 @@ function assignMemberID(member_id) {
 		//2-1. 세션 있으면
 		//세션 member_id와 url member_id 비교하기
 		let getSessionID = JSON.parse(sessionStorage.getItem("member_1")).data.member_id;
+		console.log('getSessionID: ', getSessionID);
 		//2-1-1. 세션 member_id와 url member_id가 같다면
 		//2-1-1-1. compareID true -> 내 정보 보기
 		//2-1-2. 세션 member_id와 url member_id가 다르다면
