@@ -15,7 +15,7 @@
   --icon-cmt: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 17 15'%3E%3Cpath stroke='%2300F' stroke-width='1.2' d='M5.1 11.38v-.6H2.37c-.5 0-.95-.17-1.28-.46a1.32 1.32 0 0 1-.49-.99V2.05c0-.36.16-.72.49-1A2 2 0 0 1 2.37.6h11.95a2 2 0 0 1 1.29.45c.32.28.49.64.49 1v7.28c0 .35-.17.71-.5 1-.32.28-.78.45-1.28.45H8.73l-.16.13-3.18 2.57a.3.3 0 0 1-.22 0 .16.16 0 0 1-.06-.05H5.1v-2.05Z'/%3E%3Cpath fill='%2300F' d='M11.23 6.6a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-2.73 0a.75.75 0 1 0-.01-1.5.75.75 0 0 0 0 1.5Zm-2.75 0a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z'/%3E%3C/svg%3E");
   --icon-likes: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 13 13'%3E%3Cpath stroke='%2300F' stroke-linecap='round' stroke-width='1.2' d='M9.53 12.36H1.39a.4.4 0 0 1-.39-.4V5.53c0-.21.18-.4.4-.4h1.8c.47 0 .9-.23 1.13-.63l1.78-2.97a1.07 1.07 0 0 1 1.95.86L7.4 4.62a.4.4 0 0 0 .38.5h3c.87 0 1.5.83 1.27 1.67l-1.25 4.6c-.16.57-.68.97-1.27.97Z'/%3E%3Cpath stroke='%2300F' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.2' d='M3.3 12.36V5.13'/%3E%3C/svg%3E");
   --icon-likes-active: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 13 14'%3E%3Cpath fill='%23fff' stroke='%2300F' stroke-linecap='round' stroke-width='.4' d='M9.53 13H1.39a.4.4 0 0 1-.39-.42v-6.8a.4.4 0 0 1 .4-.42h1.8c.47 0 .9-.25 1.13-.67l1.78-3.14a1.04 1.04 0 0 1 1.76-.12c.22.29.3.67.2 1.03L7.4 4.82c-.08.27.11.54.38.54h3c.87 0 1.5.87 1.27 1.76l-1.25 4.86c-.16.6-.68 1.02-1.27 1.02Z'/%3E%3Cpath fill='%23fff' d='M3.24 12.82V4.94v7.88Z'/%3E%3Cpath stroke='%2300F' stroke-linecap='square' stroke-linejoin='round' stroke-width='1.4' d='M3.24 12.82V4.94m0 7.88V4.94'/%3E%3C/svg%3E");
-  --icon-share: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 12 14'%3E%3Cpath fill='%23979AA8' fill-rule='evenodd' d='M10 4a2 2 0 1 0-1.9-1.4L3.37 5.55A2 2 0 0 0 0 7a2 2 0 0 0 3.38 1.45l4.71 2.95a2 2 0 1 0 .53-.85L3.91 7.6a2 2 0 0 0 0-1.2l4.71-2.95A2 2 0 0 0 10 4Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  --icon-share: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' fill='none'%3E%3Cpath fill='%23C9C9C9' d='m12.23 7.64 2.3-2.3a4.33 4.33 0 0 1 6.13 6.13l-4.6 4.6a4.33 4.33 0 0 1-6.12 0 1.08 1.08 0 1 1 1.53-1.54c.84.85 2.22.85 3.06 0l4.6-4.6a2.17 2.17 0 1 0-3.07-3.06l-1.08 1.09a5.44 5.44 0 0 0-2.75-.32Zm1.54 10.72-2.3 2.3a4.33 4.33 0 1 1-6.13-6.13l4.6-4.6a4.33 4.33 0 0 1 6.12 0 1.08 1.08 0 1 1-1.53 1.54 2.17 2.17 0 0 0-3.06 0l-4.6 4.6a2.17 2.17 0 0 0 3.07 3.06l1.08-1.09c.88.35 1.82.45 2.75.32Z'/%3E%3C/svg%3E");
   --icon-share-views: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='17' fill='none'%3E%3Cpath fill='%23C9C9C9' fill-rule='evenodd' d='M11.67 4.67a2.33 2.33 0 1 0-2.2-1.55L4 6.53a2.33 2.33 0 0 0-4 1.64A2.33 2.33 0 0 0 4 9.8l5.47 3.42a2.33 2.33 0 1 0 .53-.85L4.53 8.95a2.33 2.33 0 0 0 0-1.57L10 3.97c.42.43 1.01.7 1.67.7Z' clip-rule='evenodd'/%3E%3C/svg%3E");
   --icon-rate: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 11 12'%3E%3Cpath fill='%23022CFF' d='m6.12.94 1.23 2.47c.09.17.22.38.41.41l2.67.41c.49.07.76.69.41 1.03L8.8 7.1a.81.81 0 0 0-.2.61l.6 2.68c.1.48-.59.84-1.02.61L5.71 9.78a.35.35 0 0 0-.42 0l-2.46 1.23A.57.57 0 0 1 2 10.4l.4-2.68a.81.81 0 0 0-.2-.61L.16 5.26c-.35-.34-.08-.96.4-1.03l2.68-.41c.2-.03.33-.24.41-.41L4.88.94a.74.74 0 0 1 1.24 0Z'/%3E%3C/svg%3E");
   --icon-admin-meatball: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 5'%3E%3Ccircle cx='2.22' cy='2.22' r='2.22' fill='%23C9C9C9'/%3E%3Ccircle cx='10' cy='2.22' r='2.22' fill='%23C9C9C9'/%3E%3Ccircle cx='17.78' cy='2.22' r='2.22' fill='%23C9C9C9'/%3E%3C/svg%3E");
@@ -56,11 +56,26 @@
   margin-bottom: 12px;
 }
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item ul.userinfo_wrap .userimg {
-  max-width: 30px;
+  position: relative;
+  width: 30px;
   margin-right: 8px;
 }
-#reviewsFeedWrap ul.reviews_feed_list li.reviews_item ul.userinfo_wrap .userimg img {
+#reviewsFeedWrap ul.reviews_feed_list li.reviews_item ul.userinfo_wrap .userimg .userimg_wrap {
+  display: block;
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  font-size: 0;
+}
+#reviewsFeedWrap ul.reviews_feed_list li.reviews_item ul.userinfo_wrap .userimg .userimg_wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item ul.userinfo_wrap .usernickname {
   display: inline-flex;
@@ -255,14 +270,15 @@
 }
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .reviews_reaction_box .reviews_share {
   position: relative;
-  width: 12px;
-  height: 14px;
+  width: 26px;
+  height: 26px;
 }
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .reviews_reaction_box .reviews_share button {
   display: block;
-  width: 12px;
-  height: 14px;
+  width: 26px;
+  height: 26px;
   background: var(--icon-share) no-repeat center;
+  background-size: contain;
 }
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .reviews_content {
   width: 100%;
@@ -314,11 +330,27 @@
   margin-bottom: 10px;
 }
 #reviewsViewWrap .reviews_item .userinfo_wrap .userimg {
-  max-width: 40px;
+  position: relative;
+  width: 40px;
   margin-right: 12px;
 }
-#reviewsViewWrap .reviews_item .userinfo_wrap .userimg > img {
+#reviewsViewWrap .reviews_item .userinfo_wrap .userimg .userimg_wrap {
+  display: block;
+  position: relative;
   width: 100%;
+  border-radius: 50%;
+  padding-top: 100%;
+  overflow: hidden;
+  font-size: 0;
+}
+#reviewsViewWrap .reviews_item .userinfo_wrap .userimg .userimg_wrap > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #reviewsViewWrap .reviews_item .userinfo_wrap .usernickname {
   font-size: 1.6rem;
@@ -361,6 +393,15 @@
   color: #022CFF;
   font-size: 1.45rem;
   font-weight: 700;
+}
+#reviewsViewWrap .reviews_item .userinfo_wrap .userfollow button.follow::before {
+  display: inline-block;
+  content: "+";
+  margin-right: 2px;
+}
+#reviewsViewWrap .reviews_item .userinfo_wrap .userfollow button.following {
+  color: #ffffff;
+  background: #022CFF;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap {
   width: 100%;
@@ -668,8 +709,8 @@
 }
 #reviewsViewWrap .reviews_item .reviews_reaction_box .reviews_control .reviews_share {
   position: relative;
-  width: 12px;
-  height: 14px;
+  width: 26px;
+  height: 26px;
 }
 #reviewsViewWrap .reviews_item .reviews_reaction_box .reviews_control .reviews_share .reviews_share_modal {
   position: absolute;
@@ -694,9 +735,10 @@
 }
 #reviewsViewWrap .reviews_item .reviews_reaction_box .reviews_control .reviews_share button {
   display: block;
-  width: 14px;
-  height: 17px;
-  background: var(--icon-share-views) no-repeat center;
+  width: 26px;
+  height: 26px;
+  background: var(--icon-share) no-repeat center;
+  background-size: contain;
 }
 #reviewsViewWrap .reviews_item .reviews_reaction_box .reviews_control .reviews_admin {
   position: relative;
@@ -786,8 +828,27 @@
   font-weight: 600;
 }
 #reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_user .cmt_userimg, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_user .cmt_userimg {
+  position: relative;
   width: 40px;
   margin-right: 12px;
+}
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_user .cmt_userimg .cmt_userimg_wrap, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_user .cmt_userimg .cmt_userimg_wrap {
+  display: block;
+  position: relative;
+  width: 100%;
+  border-radius: 50%;
+  padding-top: 100%;
+  overflow: hidden;
+  font-size: 0;
+}
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_user .cmt_userimg .cmt_userimg_wrap > img, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_user .cmt_userimg .cmt_userimg_wrap > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin {
   position: relative;
@@ -836,19 +897,19 @@
 }
 #reviewsViewWrap .comment_box .comment_list .cmt_item .content_box .cmt_content {
   display: block;
-  width: 100%;
+  width: 95%;
   background: transparent;
   border: none;
   font-size: 1.4rem;
   font-weight: 400;
   font-family: inherit;
   line-height: 2.2rem;
+  word-break: break-all;
+  white-space: pre-wrap;
   color: #454545;
   padding: 0;
   margin: -2px 0 6px;
-  resize: none;
   cursor: default;
-  overflow: visible;
 }
 #reviewsViewWrap .comment_box .comment_list .cmt_item .cmt_modify_submit_btn {
   position: absolute;
@@ -918,12 +979,28 @@
   flex-flow: row nowrap;
   align-items: flex-start;
 }
-#reviewsViewWrap .comment_write_box form fieldset span {
+#reviewsViewWrap .comment_write_box form fieldset .cmt_userimg {
+  position: relative;
+  width: 40px;
   margin-right: 12px;
 }
-#reviewsViewWrap .comment_write_box form fieldset span .cmt_userimg {
-  width: 40px;
-  max-width: 40px;
+#reviewsViewWrap .comment_write_box form fieldset .cmt_userimg .cmt_userimg_wrap {
+  display: block;
+  position: relative;
+  width: 100%;
+  border-radius: 50%;
+  padding-top: 100%;
+  overflow: hidden;
+  font-size: 0;
+}
+#reviewsViewWrap .comment_write_box form fieldset .cmt_userimg .cmt_userimg_wrap > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #reviewsViewWrap .comment_write_box form fieldset .cmt_textarea {
   width: 100%;
@@ -1007,10 +1084,15 @@
 }
 #reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userimg {
   width: 80px;
+  height: 80px;
   margin-right: 20px;
 }
-#reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userimg img {
-  width: 80px;
+#reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userimg > img {
+  width: 100%;
+  height: inherit;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo {
   display: flex;
@@ -1042,17 +1124,24 @@
   display: flex;
   flex-flow: row nowrap;
 }
-#reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info p {
+#reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info p, #reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info a {
   font-weight: 500;
   font-size: 1.8rem;
   color: #969696;
   line-height: 1.68rem;
   margin-right: 25px;
 }
-#reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info p span {
+#reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info p span, #reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info a span {
   color: #292929;
   font-weight: 700;
   margin-right: 5px;
+}
+#reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info a {
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #969696;
+  line-height: 1.68rem;
+  margin-right: 0;
 }
 @media (max-width: 340px) {
   #reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info p {
@@ -1105,6 +1194,7 @@
   font-weight: 600;
   color: #022CFF;
   margin-right: 7px;
+  background: transparent;
 }
 #reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .user_reaction .follow_action::after {
   content: "";
@@ -1112,6 +1202,13 @@
   height: 13px;
   background: var(--icon-follow) no-repeat center;
   margin-left: 5px;
+}
+#reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .user_reaction .follow_action.following {
+  color: #ffffff;
+  background: #022CFF;
+}
+#reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .user_reaction .follow_action.following::after {
+  display: none;
 }
 #reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .user_reaction button.profile_share_btn {
   display: flex;
@@ -1126,8 +1223,8 @@
   background: #ffffff;
 }
 #reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .user_reaction button.profile_share_btn::after {
-  width: 14px;
-  height: 16.33px;
+  width: 26px;
+  height: 26px;
   content: "";
   background: var(--icon-share) no-repeat center;
 }
@@ -1146,6 +1243,7 @@
 }
 #reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item {
   width: 100%;
+  max-width: 140.266px;
 }
 #reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb {
   position: relative;
@@ -1928,11 +2026,26 @@
   margin-bottom: 15px;
 }
 #reviewsUserFollowWrap #reviewsUserFollowListBox #reviewsUserFollowList li.user_item ul.user_box li.userimg {
+  position: relative;
   width: 40px;
   margin-right: 13px;
 }
-#reviewsUserFollowWrap #reviewsUserFollowListBox #reviewsUserFollowList li.user_item ul.user_box li.userimg > img {
+#reviewsUserFollowWrap #reviewsUserFollowListBox #reviewsUserFollowList li.user_item ul.user_box li.userimg .userimg_wrap {
+  display: block;
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  font-size: 0;
+}
+#reviewsUserFollowWrap #reviewsUserFollowListBox #reviewsUserFollowList li.user_item ul.user_box li.userimg .userimg_wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #reviewsUserFollowWrap #reviewsUserFollowListBox #reviewsUserFollowList li.user_item ul.user_box li.userinfo .usernickname {
   font-size: 1.6rem;
@@ -1969,6 +2082,10 @@
   border: 1px solid #022CFF;
 }
 #reviewsUserFollowWrap #reviewsUserFollowListBox #reviewsUserFollowList li.user_item ul.user_box li.userfollow button.following {
+  background: #022CFF;
+  color: #ffffff;
+}
+#reviewsUserFollowWrap #reviewsUserFollowListBox #reviewsUserFollowList li.user_item ul.user_box li.userfollow button.active {
   background: #022CFF;
   color: #ffffff;
 }
@@ -2017,7 +2134,7 @@
   font-size: 1.45rem;
   font-weight: 500;
   color: #ffffff;
-  bottom: 100px;
+  top: 92px;
   left: calc(50% - 132px);
   z-index: 9;
 }

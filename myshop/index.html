@@ -7,23 +7,28 @@
 <!--@css(/css/module/myshop/bvoat/index.css)-->
 <article id="mypageWrap" class="mypage_wrap">
     <h1 class="displaynone">마이페이지</h1>
-    <section class="mypage_info_wrap" module="myshop_benefit">
+    <section id="mypageInfo" class="mypage_info_wrap" module="myshop_benefit">
         <h2 class="displaynone">내 정보</h2>
-        <input id="member_id" name="member_id" type="hidden" value="{$member_id}" />
-        <section class="mypage_info_top">
+        <input id="member_id" name="member_id" type="hidden" value="{$member_id}" /><section class="userinfo_box">
             <ul class="mypage_info">
-                <li class="myinfo_img" title="프로필 사진"><img src="https://bvoat.shop/images/new_img/ico__11.png" /></li>
+                <li class="myinfo_img thumb" title="프로필 사진"><div class="img_wrap"><img src="" onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'"/></div></li>
                 <li class="myinfo_txt" title="닉네임">
-                    <div class="myinfo_name_wrap"><p class="nickname" module="layout_statelogon">{$nick}</p> <p class="crew_icon displaynone"></p></div>
-                    <p class="level">{$group_name}                    <input id="level_name" type="hidden" value="{$group_name}"></p>
+                    <div class="myinfo_name_wrap"><p class="nickname crew" module="layout_statelogon">{$nick}</p></div>
+                    <p class="level">{$group_name}<input id="level_name" type="hidden" value="{$group_name}"></p>
                 </li>
+                <li class="myinfo_modify"><a class="modify" href="/member/modify.html"><span>프로필 편집</span></a></li>
             </ul>
-            <a class="mypage_modify" href="/member/modify.html">내 정보 수정</a>
         </section>
-        <section class="mypage_info_bottom" module="myshop_asyncbankbook">
+        <section class="mileage_box" module="myshop_asyncbankbook">
+            <h3><span class="mileage_title">💳 사용 가능 마일리지</span><span class="mileage">{$avail_mileage}</span>
+            </h3>
+            <a class="displaynone" href="/myshop/mileage/historyList.html" class="btnNormal">조회</a>
+            <p class="mileage_info">마일리지는 비보트 내에서 현금처럼 사용이 가능합니다.</p>
+        </section>
+        <section class="reviewscoupon_box" module="myshop_asyncbankbook">
             <ul class="mypage_info_menu">
                 <li module="myshop_benefit">
-                    <a href="/myshop/buy_records/list_my.html?member_id={$member_id}" title="✍️ 작성하지 않은 리뷰 쓰기">✍️ 작성하지 않은 리뷰 쓰기<span><em class="buy_records_num"></em>건 쓸 수 있어요</span>
+                    <a href="/reviews/writable.html?div=not_write&member_id={$member_id}" title="✍️ 작성하지 않은 리뷰 쓰기">✍️ 작성하지 않은 리뷰 쓰기<span><em class="reviews_num"></em>건 쓸 수 있어요</span>
                     </a>
                 </li>
                 <li>
@@ -33,21 +38,10 @@
             </ul>
         </section>
     </section>
-    <section class="mypage_benefit_wrap" module="myshop_asyncbankbook">
-        <h3 class="displaynone">내가 받은 혜택</h3>
-        <section class="mypage_benefit_top">
-            <h3>사용 가능 마일리지</h3>
-            <p class="mypage_mileage">💳   {$avail_mileage}</p>
-            <a class="displaynone" href="/myshop/mileage/historyList.html" class="btnNormal">조회</a>
-            <p class="mypage_mileage_txt">마일리지는 비보트 내에서 현금처럼 사용이 가능합니다.</p>
-        </section>
-        <section class="mypage_benefit_bottom">
-            <h3 class="displaynone">가치 스탬프</h3>
-            <ul class="mypage_stamp_txt">
-                <li>가치 스탬프</li>
-                <li><em class="my_stamp_pcs"></em></li>
-            </ul>
-            <ol class="mypage_stamp_list stamp_list">
+    <section id="mypageBenefit" class="mypage_benefit_wrap">
+        <section class="stamp_box">
+            <h3>가치 스탬프</h3>
+            <ol class="stamp_list">
                 <li><span class="stamp_node stamp0">1개</span></li>
                 <li><span class="stamp_node stamp1">2개</span></li>
                 <li><span class="stamp_node stamp2">3개</span></li>
@@ -55,122 +49,25 @@
                 <li><span class="stamp_node stamp4">5개</span></li>
             </ol>
         </section>
-        <section class="mypage_stamp_info">
-                <p class="voter_txt">가치 스탬프 5개를 모으면 <a href="/member/crew/crew.html" title="크루 등급 안내">크루 등급</a>으로 등업됩니다.
-                </p>
-                <p class="voter_txt_under">가치 스탬프는 지급 받은 시점으로부터 30일이 경과되면 소멸됩니다.</p>
-                <p class="crew_txt displaynone"><em class="crew_end_date"></em>까지 <a href="/member/crew/crew.html" title="크루 등급 안내">크루 등급</a>으로 가치를 즐길 수 있어요!</p>
+        <section class="stampinfo_box">
+            <ul>
+                <li>가치 스탬프 5개를 모으면 <a href="/member/crew/crew.html" title="크루 등급 안내">크루 등급</a>으로 등업됩니다.</li>
+                <li>가치 스탬프는 지급 받은 시점으로부터 30일이 경과되면 소멸됩니다.</li>
+                <li class="stamp_end_date displaynone"><em class="crew_end_date"></em>까지 <a href="/member/crew/crew.html" title="크루 등급 안내">크루 등급</a>으로 가치를 즐길 수 있어요!</li>
+            </ul>
         </section>
     </section>
-    <section class="mypage_menu_wrap">
-        <ul class="mypage_menu">
-            <li><a href="/myshop/order/list.html" title="주문/배송 조회">주문/배송 조회</a></li>
-            <li><a href="/myshop/order/list.html?mode=cs" title="취소/교환/반품">취소/교환/반품</a></li>
-            <li><a href="https://bvoat.channel.io" target="_blank" title="비보트에게 문의하기">1:1 문의</a></li>
+    <section id="mypageMenu" class="mypage_menu_wrap">
+        <ul class="menu_box">
+            <li><a href="/myshop/order/list.html" title="주문·배송 조회">주문·배송 조회</a></li>
+            <li><a href="/myshop/order/list.html?mode=cs" title="취소·반품·교환">취소·반품·교환</a></li>
+            <li><a href="https://bvoat.channel.io" target="_blank" title="비보트에게 문의하기">1:1문의</a></li>
         </ul>
-        <a class="mypage_logout" href="/exec/front/Member/logout/" target="_self" title="로그아웃">로그아웃</a>
+        <a id="logout" class="mypage_logout" href="/exec/front/Member/logout/" target="_self" title="로그아웃">로그아웃</a>
     </section>
+    <div class="reviewsProfileBtn" module="myshop_benefit">
+        <a class="feed_btn" href="/reviews/profile.html?member_id={$member_id}" >내 프로필</a>
+    </div>
 </article>
-
-<script>
-
-/* 등급 크루인 경우 */
-const crew_icon = document.querySelector(".crew_icon");
-const voter_level = document.querySelector("#level_name");
-let voter_identity = document.querySelector("#member_id").value;
-
-/*  stamp 수신 */
-//스탬프 이미지 DOM 출력 
-const displayStampImg = (stamp) => {
-        //스탬프 표시
-        let stampList = document.querySelectorAll(".stamp_node");
-        //스탬프 이미지 표시
-        let i = 0;
-        if(Number.isInteger(stamp)){
-            while(i < stamp){
-                stampList[i].classList.add("whole_stamp");
-                i++;
-            }
-        }else if(!Number.isInteger(stamp)){
-            while(i < stamp){
-                stampList[i].classList.add("whole_stamp");
-                i++;
-            }
-            stampList[Math.floor(stamp)].classList.add("half_stamp");
-        }
-}
-const reciveVoterStamp = (voter_level, voterID, displayStampImg) => {
-    
-    let stamp_node = document.querySelector(".my_stamp_pcs");
-    if(voter_identity != null && voter_level != null){
-        if(voter_level.value == "일반 보터 "){    
-            console.log('일반 보터 ');      
-            fetch(`https://${api_domain}.shop/myshop/stamp?id=${voterID}`, {
-            method: 'GET', // 또는 'PUT'
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            })
-            .then((response) => response.json())
-            .then((res) => {
-                if(res.success){
-                    let stamp_num = res.data.stamp;
-                    console.log('stamp_num: ', stamp_num);
-                    stamp_num < 5 ? stamp_node.insertAdjacentText("beforeend", `🙂 ${stamp_num}개`) : stamp_num => 5 ? stamp_node.insertAdjacentText("beforeend",`🥳 5개`) : stamp_node.insertAdjacentText("beforeend",`🙂 -개`);
-                    displayStampImg(stamp_num)
-                }
-            })
-            .catch((error) => {
-            console.error('실패:', error);
-            });     
-        } else if (voter_level.value == "비보트 크루") {
-            console.log('비보트 크루');
-            //크루 아이콘 등장
-            crew_icon.classList.remove("displaynone");
-            stamp_num = 5;
-            console.log('stamp_num: ', stamp_num);
-            displayStampImg(stamp_num);
-            stamp_node.insertAdjacentText("beforeend",`🥳 5개`)
-        }
-    }   
-    return false;
-}
-
-
-/* 리뷰 수신 */
-const buy_records_num = document.querySelector(".buy_records_num");
-
-const reciveNotWriteBuyRecords = (voter_identity) => {
-    if(voter_identity != null){
-        fetch(`https://${api_domain}.shop/buy_records/data?div=not_write_cnt&member_id=${voter_identity}`, {
-        method: 'GET', // 또는 'PUT'
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        })
-        .then((response) => response.json())
-        .then((response) => {
-            if(response || response.cnt){
-                buy_records_num.insertAdjacentText("beforeend", response.cnt);
-            } else {
-                buy_records_num.insertAdjacentText("beforeend", "0");
-            }
-        })
-        .catch((error) => {
-        console.error('실패:', error);
-        });    
-    }
-}
-
-
-
-
-/* 최종 함수 실행 */
-//스탬프 출력
-reciveVoterStamp(voter_level, voter_identity,displayStampImg);
-let not_write_cnt = reciveNotWriteBuyRecords(voter_identity)
-
-
-
-
-</script>
+<script src="/js/module/reviews/common.js"></script>
+<script src="/js/module/myshop/index.js"></script>

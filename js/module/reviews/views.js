@@ -11,6 +11,26 @@
 	});
 }
 
+/**
+ * 로그인 유저 프로필 이미지 파일 셋팅
+ */
+ const settingUserImage = () => {
+    fetch(`https://${api_domain}.shop/member/profile?member_id=${login_userId}`, {
+		method: "GET",
+	})
+	.then((response) => response.json())
+    .then((response)=>{
+        console.log('response: ', response);
+        if(response.success){
+            const profile_image = response.data.profile_image;
+            document.querySelector(".login_user_image").setAttribute("src",profile_image);
+        }else{
+            return false;
+        }
+    })
+}
+window.addEventListener("DOMContentLoaded",settingUserImage())
+
 //bvtBottom 감춤
 window.addEventListener("load", ()=>{
     document.querySelector("#bvtBottom").setAttribute("class", "displaynone");
@@ -32,14 +52,18 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
     */
     const makeDOMforView = (data) => {
         data.forEach((obj) => {            
+            console.log('obj: ', obj);
             admin_id = obj.member_id;
             let data = {
                 cmt_num : obj.cmt,
                 likes_num : obj.likes,
                 seq : obj.seq,
+                member_id : obj.member_id ? obj.member_id : '',
                 nickname : obj.nickname ? obj.nickname : '익명',
                 level : obj.level == null ? '' : obj.level == "1" ? 'normal' : 'crew',
-                cmt_like : obj.is_liked ? 'active' : '',
+                profile : obj.member_id == '네이버 페이 구매자' ? '#' : `/reviews/profile.html?member_id=${obj.member_id}`,
+                profile_image : obj.profile_image ? obj.profile_image : 'https://bvoat.shop/images/new_img/ico__11.png',
+                cmt_like : obj.is_liked == 1 ? 'active' : 'no_active',
                 list_image : obj.list_image,
                 img_list : obj.imgs,
                 multi_image :obj.imgs.length > 1 ? 'multi' : '',
@@ -49,8 +73,13 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
                 product_name : obj.product_name ? obj.product_name : '',
                 product_no : obj.product_no ? obj.product_no : '',
                 product_price : obj.product_price ? obj.product_price : '',
-                admin : obj.member_id != login_userId ? 'no_admin' : ''
+                admin : obj.member_id != login_userId ? 'no_admin' : '',
+                isFollowing: obj.is_following ? obj.is_following === 1 ? "following" : "follow" : "follow",
+                is_me : obj.member_id == login_userId || obj.nickname.includes("네이버") ? 'displaynone' : '',
+                btn_text: obj.is_following ? obj.is_following === 1 ? "팔로잉" : "팔로우" : "팔로우",
             };
+
+            console.log("데이터: ", obj.is_liked, "like status", data.cmt_like);
             console.log("img_list", data.img_list)
             //DOM 추가
             document.querySelector(".reviews_view")
@@ -58,10 +87,12 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
                     `
                     <div class="reviews_item">
                         <ul class="userinfo_wrap">
-                            <li class="userimg"><img src="https://bvoat.shop/images/new_img/ico__11.png"></li>
-                            <li class="usernickname">${data.nickname}</li>
+                            <li class="userimg"><a href="${data.profile}" class="userimg_wrap"><img src="${data.profile_image}" onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'"></a></li>
+                            <li class="usernickname"><a href="${data.profile}">${data.nickname}</a></li>
                             <li class="userlevel ${data.level}"></li>
-                            <li class="userfollow"><button onclick="#">+ 팔로우</button></li>
+                            <li class="userfollow">
+                                <button class="follow_btn ${data.isFollowing} ${data.is_me}" data-status="${data.isFollowing}" data-target="${data.member_id}">${data.btn_text}</button>
+                            </li>
                         </ul>
                         <div class="reviews_wrap">
                             <div class="reviews_thumb_box">
@@ -98,7 +129,7 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
                             </li>
                             <li class="reviews_control">
                                 <div class="reviews_share">
-                                    <button class="share_text_btn share_text_btn_${data.seq}"  data-seq="${data.seq}"title="공유하기" onclick="sharingLinkText(event)"></button>
+                                    <button class="share_text_btn share_text_btn_${data.seq}"  data-seq="${data.seq}"title="공유하기"  data-status="seq" onclick="sharingLinkText(event)"></button>
                                 </div>
                                 <div class="reviews_admin ${data.admin}">
                                     <p id="reviewsAdminModal_${data.seq}" class="admin_modal displaynone" data-seq="${data.seq}">
@@ -148,6 +179,7 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
                 level : data.level,
                 nickname : data.nickname ? data.nickname : '익명',
                 member_id : data.member_id ? data.member_id : '',
+                profile_image : data.profile_image ? data.profile_image : 'https://bvoat.shop/images/new_img/ico__11.png',
                 content : data.content ? data.content : '댓글 내용이 없습니다.',
                 child : data.child_comment ? data.child_comment : null,
                 write_date_tmp : data.write_date_tmp ? data.write_date_tmp : '',
@@ -158,7 +190,7 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
             document.querySelector(".comment_list")
                 .insertAdjacentHTML("beforeend", `
                 <li id="comment_${cmt.seq}" class="cmt_item parent" data-seq="${cmt.seq}">
-                    <div class="user_wrap"><span class="comment_user"><img class="cmt_userimg" src="https://bvoat.shop/images/new_img/ico__11.png">${cmt.nickname}<span class="${cmt.level}"></span></span>
+                    <div class="user_wrap"><span class="comment_user"><div class="cmt_userimg"><a href="/reviews/profile.html?member_id=${cmt.member_id}" class="cmt_userimg_wrap"><img src="${cmt.profile_image}" onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'"></div>${cmt.nickname}<span class="${cmt.level}"></span></a></span>
                     <span class="comment_admin">
                         <div id="commentAdminModal_${cmt.seq}" class="admin_modal displaynone" data-seq="${cmt.seq}">
                             <button class="edit" title="수정하기" type="button" data-seq="${cmt.seq}"
@@ -182,6 +214,7 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
             if(cmt.child != null){
                 let child_data = [...cmt.child];
                 child_data.forEach((data)=>{
+                    console.log('child data: ', data);
                     let child = {
                         bh_seq : data.bh_seq,
                         seq : data.seq,
@@ -189,6 +222,7 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
                         level : data.level,
                         nickname : data.nickname ? data.nickname : '익명',
                         member_id : data.member_id ? data.member_id : '',
+                        profile_image : data.profile_image ? data.profile_image : '',
                         content : data.content ? data.content : '댓글 내용이 없습니다.',
                         child : data.child_comment ? data.child_comment : null,
                         write_date_tmp : data.write_date_tmp ? data.write_date_tmp : '',
@@ -197,7 +231,7 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
         
                     document.querySelector(`#comment_${cmt.seq}`)
                     .insertAdjacentHTML("afterend", `<li id="child_${child.seq}" class="child_cmt cmt_item" data-origin="${child.bh_seq}" data-parentseq="${child.parent_comment_seq}">
-                    <div class="child_user_wrap"><span class="comment_user"><img class="cmt_userimg" src="https://bvoat.shop/images/new_img/ico__11.png">${child.nickname}<span class="${child.level}"></span></span>
+                    <div class="child_user_wrap"><span class="comment_user"><div class="cmt_userimg"><a href="/reviews/profile.html?member_id=${child.member_id}" class="cmt_userimg_wrap"><img src="${child.profile_image}" onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'"></div>${child.nickname}<span class="${child.level}"></span></a></span>
                     <span class="comment_admin">
                         <div id="childAdminModal_${child.seq}" class="admin_modal displaynone" data-parentseq="${child.seq}">
                             <button class="edit" type="button" title="수정하기" data-type="child" data-origin="${child.bh_seq}"  data-seq="${child.seq}" data-cmttype="modify" onclick="editComment(event)">수정하기</button>
@@ -229,7 +263,7 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
         //로딩 스피너 시작
         loading(true);
 
-        fetch(`https://${api_domain}.shop/reviews/data?seq=${seq}&member_id=${login_userId}`, {
+        fetch(`https://${api_domain}.shop/reviews/data?seq=${seq}&login_id=${login_userId}`, {
             method: "GET",
         })
         .then((response) => response.json())
@@ -267,6 +301,8 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
                     btn.remove();
                 })
             }
+            //팔로우 기능 활성화
+            clickFollowButton();
         })
     }
     window.addEventListener("load", getBeginningReviewData(url));
@@ -345,8 +381,8 @@ const runReviewDelete = (seq) => {
         })
         .then((response) => response.json())
         .then((response)=>{
-            console.log(response);
             response.success ? location.href = '/reviews/feed.html' : console.log("삭제 오류입니다. 관리자에게 문의해주세요.")
+            console.log(response);
             return true;
         })
     } catch (error) {
@@ -359,7 +395,9 @@ const runReviewDelete = (seq) => {
  * 안 쓴 리뷰 표시 (나도 리뷰 작성하기))
  */
 const loadMyReviewData = () => {
+    //로그인 한 사람은 표시하기 (로그인 안하면 표시 안됨)
     if(login_userId) document.querySelector(".write_move").classList.remove("displaynone");
+    document.querySelector(".write_move_btn").setAttribute("href", `/reviews/writable.html?div=not_write&member_id=${login_userId}`)
 
     try {
         fetch(`https://${api_domain}.shop/reviews/data?member_id=${login_userId}&div=not_write`, {
@@ -367,7 +405,7 @@ const loadMyReviewData = () => {
         })
         .then((response) => response.json())
         .then((response)=>{
-            let writable_num = response.total;
+            let writable_num = response.cnt_not_write ? response.cnt_not_write : '0';
             document.querySelector(".write_move_btn > span").innerHTML = writable_num;
             return true;
         })
@@ -375,7 +413,7 @@ const loadMyReviewData = () => {
         return false;
     }
 }
-window.addEventListener("load", loadMyReviewData)
+window.addEventListener("load", loadMyReviewData);
 /* 상세 보기 개별 기능 끝 */
 
 /* 댓글 개별 기능 시작 */

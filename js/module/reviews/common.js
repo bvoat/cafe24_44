@@ -39,11 +39,12 @@ const reviewsLikesButtons = (event) => {
             if(response.success && response){
                 if(status === 201){
                     // "좋아요가 정상 처리되었습니다."
+                    console.log('status: ', status, response.message);
                     current.node.innerHTML = (current.value)+1;
                     current.btn.classList.add("active");
 
                 }else{
-                    console.log('status: ', status);
+                    console.log('status: ', status, response.message);
                     //"좋아요가 정상적으로 취소되었습니다."
                     current.node.innerHTML = (current.value)-1;
                     current.btn.classList.remove("active");
@@ -71,7 +72,18 @@ const reviewsLikesButtons = (event) => {
  */
  const sharingLinkText = (e) => {
     const targetShareBtn = e.currentTarget;
-    const _url = `${location.origin}/reviews/views.html?seq=${targetShareBtn.dataset.seq}`;
+    const targetStatus = targetShareBtn.dataset.status;
+    console.log('targetStatus: ', targetStatus);
+    let _url;
+
+    if(targetStatus == 'seq'){
+        const seq = targetShareBtn.dataset.seq
+        _url = `${location.origin}/reviews/views.html?seq=${seq}`;
+
+    }else{
+        _url = `${location.href}`;
+    }
+    
 
     const ifsuccess = () => {
         //완료 모달 띄우기
@@ -81,8 +93,8 @@ const reviewsLikesButtons = (event) => {
         setTimeout(()=>{
             document.querySelector(".reviews_share_modal").classList.add("disappear");
             //완전 node 삭제
-            setTimeout(()=>{document.querySelector(".reviews_share_modal").remove();}, 1201)
-        }, 800)
+            setTimeout(()=>{document.querySelector(".reviews_share_modal").remove();}, 1301)
+        }, 1000)
     }
     const iferror = () => {
         //에러 모달 띄우기
@@ -127,6 +139,58 @@ const createAdminModal = (event) => {
 	  return true;
 	}
   }
+
+
+/* 팔로우 기능 */
+const clickFollowButton = () => {
+
+	let followBtn = document.querySelectorAll(".follow_btn");
+
+	followBtn.forEach((target)=>{
+		target.addEventListener("click", (event)=>{
+			event.stopPropagation();
+			if(login_userId == null || login_userId == undefined){
+				alert("로그인 후에 이용해주세요 :)")
+				return false;
+			}
+
+            if(event.currentTarget.dataset.target.includes("네이버")){
+                alert("네이버 페이 구매자 입니다 :)")
+            }
+
+			let target = event.currentTarget;
+            console.log('target: ', target);
+			let target_userId = target.dataset.target;
+			if(target_userId == login_userId){
+				return false;
+			}
+
+			let body_data = {
+				login_id: login_userId,
+				member_id: target_userId
+			}
+
+			fetch(`https://${api_domain}.shop/member/follow`, {
+				method: "POST",
+				body: JSON.stringify(body_data),
+				headers: {
+					"Content-Type": "application/json",
+				},
+			})
+			.then((response) => response.json())
+			.then((response)=>{
+				console.log("response", response.message);
+                if(response.success){
+                    target.classList.contains("follow") ? target.classList.replace("follow", "following") : target.classList.replace("following", "follow");
+				target.innerHTML.includes("팔로우") ? target.innerText = "팔로잉" : target.innerText = "팔로우";
+                }else{
+                    alert("팔로우 오류입니다! 다시 시도해주세요.")
+                    console.log("response.message", response)
+                }
+			})
+		})
+	})
+}
 
 
 

@@ -15,12 +15,18 @@
         <ul class="comment_list">
         </ul>
     </div>
-    <div class="write_move displaynone"><a class="write_move_btn" href="/reviews/writable.html"> ✍️ 나도 리뷰 작성하기 (<span></span>)</a></div>
+    <div class="write_move displaynone"><a class="write_move_btn" href="#"> ✍️ 나도 리뷰 작성하기 (<span></span>)</a></div>
     <div class="comment_write_box">
         <form name="sendComment" id="sendComment" method="get">
             <fieldset>
                 <legend class="displaynone">댓글 작성</legend>
-                <span><img class="cmt_userimg" src="https://bvoat.shop/images/new_img/ico__11.png"></span><textarea id="cmtTextArea" rows="1" name="cmtTextArea" class="cmt_textarea" placeholder="리뷰에 대한 댓글을 남겨주세요." onchange="observeCommentText(event)" onkeyup="observeCommentText(event)"
+                <div id="userImgPreview" class="cmt_userimg">
+                    <div class="cmt_userimg_wrap">
+                        <img class="user_img login_user_image"
+                        src="" onerror="this.src='/public/images/image/voter_default.png'" onclick="window.open(this.src)" />
+                    </div>
+                </div>
+                <textarea id="cmtTextArea" rows="1" name="cmtTextArea" class="cmt_textarea" placeholder="리뷰에 대한 댓글을 남겨주세요." onchange="observeCommentText(event)" onkeyup="observeCommentText(event)"
                 onfocus="observeCommentText(event)" ></textarea>
                 <button class="cmt_create_btn active" data-cmttype="comment" type="button">게시</button>  
             </fieldset>

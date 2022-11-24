@@ -135,13 +135,13 @@
 <!-- 상품 정보 상단 -->
 <!-- 상품 정보 하단 선택 탭 -->
 <ul class="detail_tab_wrap" module="product_additional">
-    <li class="tab1 tab" data-hash="prd_detail">상품정보
+    <li class="tab0 tab" data-hash="prd_detail">상품정보
     </li>
-    <li class="tab2 tab" data-hash="prd_bh">리뷰
+    <li class="tab1 tab" data-hash="prd_bh">리뷰
     </li>
-    <li class="tab3 tab" data-hash="use_qna">Q&A({$qna_count})
+    <li class="tab2 tab" data-hash="use_qna">Q&A({$qna_count})
     </li>
-    <li class="tab4 tab" data-hash="prd_info">배송안내
+    <li class="tab3 tab" data-hash="prd_info">배송안내
     </li>
 </ul>
 <!-- 상품 정보 하단 선택 탭 -->
@@ -166,11 +166,7 @@
         <!-- tab0 상품정보 -->
         <!-- tab1 리뷰 -->
         <div id="tab1" class="tab_content swiper-slide" data-hash="prd_bh">
-            <div id="prd_bh">
-                <div id="reviewsDetail">
-                    <iframe id="reviewsDetailFrame"></iframe>
-                </div>
-            </div>
+            <!--@import(/reviews/feed.html)-->
         </div>
         <!-- tab1 리뷰 -->
         <!-- tab2 Q&A -->

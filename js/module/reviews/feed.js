@@ -23,9 +23,8 @@
     let mode;
     //페이지 초기화
     let page;
-    //리뷰 리스트
+    //리뷰 리스트 node
     let reviewList = document.querySelector('.reviews_feed_list');
-    console.log('reviewList: ', reviewList);
     //옵저버 붙이기
     let lastItem;
     //리뷰피드인지 상품인지 확인
@@ -41,7 +40,7 @@
         fetchURL = `https://${api_domain}.shop/reviews/data?product_no=${productNo}`;
         mode = 'detail';
     }
-
+    console.log('mode: ', mode);
     //로그인 한 유저 id
     let login_member;
     if(sessionStorage.getItem("member_1") != null){
@@ -73,7 +72,8 @@
                 seq : obj.seq,
                 nickname : obj.nickname ? obj.nickname : '익명',
                 id : obj.member_id == '네이버 페이 구매자' ? obj.member_id : '',
-                profile : obj.member_id == '네이버 페이 구매자' ? '#' : `/reviews/profile.html?member_id=&${this.id}`,
+                profile : obj.member_id == '네이버 페이 구매자' ? '#' : `/reviews/profile.html?member_id=${obj.member_id}`,
+                profile_image : obj.profile_image ? obj.profile_image : 'https://bvoat.shop/images/new_img/ico__11.png',
                 cmt_like : obj.is_liked ? 'active' : '',
                 level : obj.level == null ? '' : obj.level == "1" ? 'normal' : 'crew',
                 multi_image : obj.imgs.length > 1 ? 'multi' : '',
@@ -83,12 +83,14 @@
                 rate : obj.rate ? obj.rate : '5.0',
                 content : obj.content ? obj.content : '비어 있는 리뷰입니다.',
             }
+
             //DOM 추가
             reviewList
             .insertAdjacentHTML("beforeend",
                     `<li id="item_${data.seq}" class="reviews_item">
                     <ul class="userinfo_wrap">
-                        <li class="userimg"><a href="${data.profile}" onclick="sessionInitClickPosition()"><img src="https://bvoat.shop/images/new_img/ico__11.png"></a></li>
+                        <li class="userimg"><a class="userimg_wrap"
+                        href="${data.profile}" onclick="sessionInitClickPosition()"><img src="${data.profile_image}" onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'"></a></li>
                         <li class="usernickname ${data.level}"><a href="${data.profile}" onclick="sessionInitClickPosition()">${data.nickname}</a></li>
                     </ul>
                     <div class="reviews_wrap">
@@ -102,7 +104,7 @@
                                     <button class="reviews_likes ${data.cmt_like}" data-seq=${data.seq} onclick="reviewsLikesButtons(event)"><span class="reviews_likes_num_${data.seq}">${data.likes_num}</span></button>
                                     <a class="reviews_cmt"  data-seq=${data.seq} title="댓글 ${data.cmt_num}개 보기" href="/reviews/views.html?seq=${data.seq}#reviewsComment" onclick="sessionInitClickPosition()"></a>
                                 </li>
-                                <li class="reviews_share"><button class="share_text_btn share_text_btn_${data.seq}" data-seq=${data.seq} title="공유하기" onclick="sharingLinkText(event)"></button></li>
+                                <li class="reviews_share"><button class="share_text_btn share_text_btn_${data.seq}" data-seq=${data.seq} title="공유하기" data-status="seq" onclick="sharingLinkText(event)"></button></li>
                             </ul>
                         </div>
                         <div class="reviews_content">
@@ -127,7 +129,8 @@
         console.log('최초 페이지 page: ', page);
         //로딩 스피너 시작
         loading(true);
-        fetch(`${fetchURL}page=${page}&mode=ajax&member_id=${login_userId}&div=all`, {
+        console.log('fetchURL', fetchURL);
+        fetch(`${fetchURL}page=${page}&mode=ajax&login_id=${login_userId}&div=all`, {
             method: "GET",
         })
         .then((response) => response.json())
@@ -135,9 +138,15 @@
             //로딩 스피너 종료
             loading(false);
             initialReviewsData = response.data;
+            console.log('initialReviewsData: ', initialReviewsData);
             //만약 reviewsData의 length가 0이면 return false
             if(initialReviewsData.length == 0){
                 console.log('리뷰 없음');
+                document.querySelector("#tab1").insertAdjacentHTML("afterbegin", `
+                <div id="reviewsEmpty">
+                    <p>아직 작성된 리뷰가 없어요 🥲</p>
+                </div>
+                `)
                 return false;
             }else if(initialReviewsData.length > 0){
                 console.log('리뷰 있음');
@@ -184,7 +193,7 @@
         //로딩 스피너 시작
         loading(true);
         try {
-            await fetch(`${fetchURL}&page=${page}&mode=ajax`, {
+            await fetch(`${fetchURL}page=${page}&mode=ajax&login_id=${login_userId}&div=all`, {
                 method: "GET",
             })
                 .then((response) => response.json())
@@ -225,7 +234,7 @@
             loadMoreItem(page)
         }
     }
-    window.addEventListener("load", getBeginningReviewData());
+    window.addEventListener("load", getBeginningReviewData);
 
 /* 불러오기 기능 끝  */
 

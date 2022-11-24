@@ -3,8 +3,10 @@
  * 날짜 계산
  */
 const calculationDate = () => {
+  //카페24에서 받은 마감 date
   const promoEndArray = document.querySelectorAll(".promotion_end");
-  const promotionDateArray = document.querySelectorAll(".promotion_date");
+  //표시할 node
+  const promoDateAreaArray = document.querySelectorAll(".promotion_date");
   
   promoEndArray.forEach((endDate, i)=>{
     //Safari, iOS 대응 위한 Date 가공 (yyyy-mm-ddT00:00)
@@ -19,12 +21,12 @@ const calculationDate = () => {
     const diffSec = String(Math.floor(gap / 1000 % 60)).padStart(2,"0");
     if(target != 'Invalid Date'){
       if (gap <= 0) {
-        promotionDateArray[i].innerText = "마감";
+        promoDateAreaArray[i].innerText = "마감";
       } else {
-        promotionDateArray[i].innerText = `${diffDay}일 ${diffHour}:${diffMin}:${diffSec}`;
+        promoDateAreaArray[i].innerText = `${diffDay}일 ${diffHour}:${diffMin}:${diffSec}`;
       }
     } else {
-      promotionDateArray[i].innerText = "";
+      promoDateAreaArray[i].innerText = "";
       clearInterval(promotionTimer)
     }
   })

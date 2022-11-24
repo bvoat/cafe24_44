@@ -1,5 +1,6 @@
-/* 휴대전화 입력 4자리 포커스 이동*/
+const userImgPreview = document.querySelector(".user_img");
 
+/* 휴대전화 입력 4자리 포커스 이동*/
 const mobile_left = document.querySelector("#mobile2");
 const mobile_right = document.querySelector("#mobile3");
 
@@ -8,14 +9,7 @@ mobile_left.addEventListener("keyup", (e) => {
 })
 
 /* 추천인 수정 제한 조건 30일*/
-//세션 확인
-let join_day = new Date(JSON.parse(sessionStorage.getItem("member_1")).data.created_date);
-let today = new Date();
-const current_date = 24 * 60 * 60 * 1000;// 시 * 분 * 초 * 밀리세컨
-let diff_date = parseInt((today - join_day) / current_date)
-console.log("가입한지 " + diff_date + " 일")
-
-const recommend = document.querySelector("#reco_id");
+let recommend;
 
 //가입한지 30일 지나거나 이미 정보가 있으면 추천인 readonly
 const recommendControl = (type) => {
@@ -23,13 +17,22 @@ const recommendControl = (type) => {
         "notnull": "추천인을 이미 입력하셨습니다 😄",
         "overdate": "추천인은 가입일 이후 30일 동안 입력할 수 있습니다 😅"
     }
-    recommend.setAttribute("readonly", true)
-    recommend.parentNode.insertAdjacentHTML('afterend', `<p class="input_info_txt">${sentence[type]}</p>`)
-    recommend.style.background = "repeating-linear-gradient(45deg, #00000015, #00000015 10px, #00000001 0, #00000001 20px)";
+    recommend.setAttribute("readonly", true);
+    recommend.setAttribute("placeholder", sentence[type]);
+    recommend.setAttribute("value", "");
     recommend.style.cursor = "not-allowed";
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
+    //세션 확인
+    let join_day = new Date(JSON.parse(sessionStorage.getItem("member_1")).data.created_date);
+    let today = new Date();
+    const current_date = 24 * 60 * 60 * 1000;// 시 * 분 * 초 * 밀리세컨
+    let diff_date = parseInt((today - join_day) / current_date)
+    console.log("가입한지 " + diff_date + " 일")
+
+    recommend = document.querySelector("#reco_id");
+
     if (recommend.value !== '') {
         console.log('추천인 입력', recommend.value);
         recommendControl('notnull');
@@ -64,5 +67,65 @@ submit_btn.addEventListener("click", (e) => {
 /* SMS 수신여부 label 변경 */
 const label_arr = [document.querySelector("label[for='is_sms0']"), document.querySelector("label[for='is_news_mail0']")]
 for (const node of label_arr) {
-    node.innerHTML = "받아볼래요";
+    node.innerHTML = "받아볼래요!";
 }
+
+/**
+ * 로그인 유저 프로필 이미지 파일 셋팅
+ */
+const settingUserImage = () => {
+    const user = document.getElementById("member_id").value;
+    fetch(`https://${api_domain}.shop/member/profile?member_id=${user}`, {
+		method: "GET",
+	})
+	.then((response) => response.json())
+    .then((response) => {
+        console.log('response: ', response);
+        if(response.success){
+            const profile_image = response.data.profile_image;
+            userImgPreview.setAttribute("src", `${profile_image}`);
+        }else{
+            return false;
+        }
+    })
+}
+
+/**
+ * 이미지 파일 저장
+ */
+
+function previewUserImage(input) {
+    if(input.files[0].size > (5 * 1024 * 1024)){
+        alert("5MB 이상의 이미지는 첨부할 수 없어요 🥲");
+        return false;
+    }
+
+    //선택된 파일 가져오기
+    const image = input.files[0];
+    const user = document.getElementById("member_id").value;
+
+  	//새로운 이미지로 src 변환
+    userImgPreview.setAttribute("src",URL.createObjectURL(image));
+
+    //formData 생성
+    let formData = new FormData();
+
+    formData.append("user_image", image);
+    formData.append("member_id", user);
+
+    fetch(`https://${api_domain}.shop/member/profile`, {
+        method: "POST",
+        body: formData,
+    })
+	.then((response) => response.json())
+    .then((response)=>{
+        console.log('response: ', response);
+        if(response.error){
+            alert("이미지 업로드에 오류가 있어요 🥲 다시 한 번 시도해 주세요.")
+        }
+    })
+};
+
+/* 최종 함수 실행 */
+//이미지 수신
+window.addEventListener("load", settingUserImage);

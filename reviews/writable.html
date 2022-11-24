@@ -1,6 +1,9 @@
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(/css/module/reviews/bvoat/feed.css)-->
 <section id="reviewsWritableListWrap">
+    <div class="member_id_check displaynone" module="myshop_benefit">
+        <input type="text" id="member_id" name="member_id" value="{$member_id}" ></input>
+    </div>
 	<div id="reviewsWritableListTitle">
         <h2>리뷰 작성하고<br>
 			<em>다른 보터들의 가치소비를 도와요.</em>
@@ -13,5 +16,12 @@
     </div>
     <p class="spinner displaynone"></p>
 </section>
+<div module="layout_logincheck">
+    <!--
+       $url = /member/login.html
+       $returnUrl= /member/login.html?returnUrl=/reviews/writable.html?div=not_write&member_id=kenna
+    -->
+    </div>
+     
 <script src="/js/module/reviews/common.js"></script>
 <script src="/js/module/reviews/writable.js"></script>

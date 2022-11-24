@@ -15,62 +15,99 @@
     align-items: flex-start;
     width: 100%;
     max-width: 450px;
-    padding: 23px 0;
-    margin: 5px 0 100px;//top_nav hide
+    padding: 40px 0 calc(150px + 72px);
+    background: #F9F9FF;
 
-    .mypage_info_wrap{
+    #mypageInfo{
         width: 100%;
-        height: 247px;
-        padding: 28px 14px 37px;
-        .mypage_info_top{
+        padding: 17px 15px 0;
+        @media (max-width: 420px) {
+            padding: 17px 11px 0;
+        }
+        //구분선
+        &::after{
+            display: block;
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: $mileage-bar no-repeat;
+            background-size: cover;
+        }
+
+        .userinfo_box{
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
+
             .mypage_info{
                 display: flex;
                 flex-flow: row nowrap;
-                .myinfo_img{
-                    width: 68px;
-                    height: 68px;
-                    margin-right: 18px;
-                    >img{
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 100%;
+                .thumb{
+                    position: relative;
+                    width: 100%;
+                    max-width: 80px;
+                    .img_wrap{
+                        display: block;
+                        position: relative;
                         width: 100%;
-                        height: 100%;
-                        object-fit: cover;
+                        padding-top: 100%;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        >img{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
                     }
                 }
                 .myinfo_txt{
+                    width: 100%;
+                    height: 80px;
                     position: relative;
                     display: flex;
-                    height: 68px;
                     flex-flow: column nowrap;
-                    justify-content: space-evenly;
+                    justify-content: center;
+                    align-items: flex-start;
+                    padding-left: 11px;
+
                     .myinfo_name_wrap{
                         display: flex;
                         flex-flow: row wrap;
                         align-items: center;
-                        max-width: 200px;
-                            //닉네임
-                            .nickname{
-                                font-size: 2rem;
-                                font-weight: 500;
-                                line-height: 1.8rem;
-                                max-width: 130px;
-                                max-height: 90px;
-                                @include only-ellipsis(1, 2.1rem);
-                                word-break: break-all;
-                                white-space: nowrap;
-                                overflow: hidden;
-                            }
-                            //크루 아이콘
-                            .crew_icon{
+                        width: 100%;
+                        //닉네임
+                        .nickname{
+                            width: 100%;
+                            max-width: 221px;
+                            font-size: 2rem;
+                            font-weight: 700;
+                            letter-spacing: -0.5px;
+                            word-wrap: break-word;
+                            margin-bottom: 5px;
+                        }
+
+                        //크루일 때
+                        .nickname.crew{
+                            &::after{
+                                display: inline-block;
+                                content: "";
                                 width: 35px;
                                 height: 10px;
-                                background: var(--crew-icon) no-repeat;
-                                margin-left: 15px;
+                                background: var(--crew-icon) no-repeat center;
+                                background-size: contain;
+                                margin-left: 4px;
                             }
+                        }
                     }
+                    
                     //등급
                     .level{
                         font-size: 1.45rem;
@@ -78,44 +115,173 @@
                         color: $bvt-darkgray;
                     }
                 }
+                .myinfo_modify{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    height: 80px;
+                    .modify{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 88px;
+                        height: calc(25px + 14px);
+                        margin-top: -1.5rem;
+                        >span{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            min-width: 88px;
+                            height: 25px;
+                            border: $bvt-btn-border-gray;
+                            border-color: #D3D3D3;
+                            border-radius: 5px;
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                            letter-spacing: -0.25px;
+                            color: #868686;
+                            &::after{
+                                display: block;
+                                content: "";
+                                width: 9px;
+                                height: 9px;
+                                background: var(--modify-icon) no-repeat;
+                                background-size: contain;
+                                margin-left: 6px;
+                            }
+                        }
+                    }
+                }
+                
+                @media (max-width: 420px) {
+                    .myinfo_img{
+                        width: 100%;
+                        max-width: 60px;
+                        min-width: 60px;
+                        >img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .myinfo_txt{
+                        padding-left: 9px;
+                        height: 60px;
+                        .nickname{
+                            max-width: 189px !important;
+                            font-size: 1.7rem !important;
+                            font-weight: 700;
+                            word-wrap: break-word;
+                            margin-bottom: 5px;
+                        }
+                        //크루일 때
+                        .nickname.crew{
+                            &::after{
+                                display: inline-block;
+                                content: "";
+                                width: 29.18px;
+                                height: 8.34px;
+                                background: var(--crew-icon) no-repeat center;
+                                background-size: contain;
+                                margin-left: 4px;
+                            }
+                        }
+                    }
+                    
+                    .myinfo_modify{
+                        height: 60px;
+                        .modify{
+                            width: 79.6px;
+                            height: 20.95px;
+                            margin-top: -1.4rem;
+                            >span{
+                                min-width: 79.6px;
+                                height: 20.95px;
+                                font-size: 1.1rem;
+                                &::after{
+                                    display: block;
+                                    content: "";
+                                    width: 7.86px;
+                                    height: 7.86px;
+                                    background: var(--modify-icon) no-repeat;
+                                    background-size: contain;
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                    }
+                   }
             }
 
-            .mypage_modify{
+
+           
+
+        }
+        .mileage_box{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            width: 100%;
+            margin: 33px 0 26px;
+
+            >h3{
                 display: flex;
-                justify-content: center;
+                flex-flow: row nowrap;
+                justify-content: space-between;
                 align-items: center;
-                width: 103px;
-                height: 31px;
-                border: $bvt-btn-border-gray;
-                border-radius: 16px;
-                font-size: 1.2rem;
-                font-weight: 300;
-                color: $bvt-second-darkgray;
-                &::after{
-                    display: block;
+                width: 100%;
+                background: $bvt-white;
+                border-radius: 5px;
+                padding: 15.71px 15px;
+                margin-bottom: 8px;
+                .mileage_title{
+                    display: inline-block;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    color: $bvt-darkgray;
+                    letter-spacing: -0.25px;
+                }
+                .mileage{
+                    font-size: 2rem;
+                    font-weight: 600;
+                    letter-spacing: 0.1px;
+                    color: $bvt-black;
+                }
+            }
+            
+            .mileage_info{
+                font-size: 1.1rem;
+                line-height: 1.313rem;
+                color: $bvt-darkgray;
+                &::before{
+                    position: relative;
+                    display: inline-block;
                     content: "";
-                    width: 10px;
-                    height: 10px;
-                    background: var(--modify-icon) no-repeat;
-                    background-size: cover;
-                    margin-left: 6px;
+                    width: 14.64px;
+                    height: 14.64px;
+                    top: 3px;
+                    margin-right: 5.37px;
+                    background: $info-icon no-repeat;
+                    background-size: contain;
                 }
             }
         }
-        .mypage_info_bottom{
+        .reviewscoupon_box{
             width: 100%;
-            padding-top: 27px;
             .mypage_info_menu{
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-between;
                 align-items: center;
-                height: 78px;
+                height: 64px;
+                margin-bottom: 28px;
                 li{
-                    width: 48.5%;
-                    height: 100%;
-                    border: $bvt-btn-border-gray;
-                    border-radius: 6px;
+                    width: 50%;
+                    max-width: 206px;
+                    height: 100%;   
+                    border-radius: 5px;
+                    padding-left: 12px;
                     >a{
                         display: flex;
                         flex-flow: column nowrap;
@@ -123,223 +289,161 @@
                         align-items: flex-start;
                         width: 100%;
                         height: 100%;
-                        padding-left: 12px;
-                        color: $bvt-darkgray;
-                        font-size: 1.35rem;
-                        font-weight: 300;
                         box-sizing: border-box;
                         >span{
-                            font-size: 1.75rem;
+                            position: relative;
+                            display: inline-flex;
+                            flex-flow: row nowrap;
+                            align-items: center;
+                            width: 100%;
+                            font-size: 1.6rem;
                             font-weight: 600;
-                            color: $bvt-black;
                         }
                     }
+                    //작성하지 않은 리뷰
                     &:nth-child(1){
-
+                        background: $bvt-blue;
+                        border: $bvt-btn-border;
+                        margin-right: 8px;
+                        //작성하지 않은 리뷰
+                        >a{
+                            font-size: 1.3rem;
+                            font-weight: 700;
+                            color: #D7D7D7;
+                            //n건 쓸 수 있어요
+                            >span{
+                                color: $bvt-white;
+                                &::after{
+                                    position: absolute;
+                                    display: inline-block;
+                                    width: 8px;
+                                    height: 15px;
+                                    content: "";
+                                    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 9 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.36198 13.7333L7.49 7.36665L1.36198 1L1 1.35369L6.76602 7.36664L1 13.3796L1.36198 13.7333Z' fill='white' stroke='white'/%3E%3C/svg%3E%0A") no-repeat center;
+                                    right: 11.27px;
+                                }
+                                .reviews_num{
+                                    font-weight: 700;
+                                }
+                            }
+                        }
                     }
+                    //보유한 쿠폰
                     &:nth-child(2){
-
+                        background: transparent;
+                        border: $bvt-btn-border-gray;
+                        >a{
+                            //보유한 쿠폰
+                            font-size: 1.3rem;
+                            font-weight: 700;
+                            color: $bvt-darkgray;
+                            //n개
+                            >span{
+                                color: #3E3E3E;
+                                &::after{
+                                    position: absolute;
+                                    display: inline-block;
+                                    width: 8px;
+                                    height: 15px;
+                                    content: "";
+                                    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 9 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.36198 13.7333L7.49 7.36665L1.36198 1L1 1.35369L6.76602 7.36664L1 13.3796L1.36198 13.7333Z' stroke='%233E3E3E'/%3E%3C/svg%3E%0A") no-repeat center;
+                                    right: 11.27px;
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
     }
 
-    .mypage_benefit_wrap{
+    #mypageBenefit{
         width: 100%;
-        padding: 43px 14px 55px;
-        background: $bvt-bg-lightblue;
+        padding: 18px 15px 32px;
 
-        .mypage_benefit_top{
+        .stamp_box{
             display: flex;
             flex-flow: column nowrap;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: flex-start;
             width: 100%;
-            height: 95px;
-            margin-bottom: 40px;
-
             >h3{
-                font-size: 1.4rem;
-                font-weight: 300;
+                font-weight: 500;
+                font-size: 1.45rem;
                 color: $bvt-darkgray;
+                line-height: 1.73rem;
+                letter-spacing: -0.25px;
+                margin-left: 8px;
             }
-            .mypage_mileage{
-                    width: 100%;
-                    font-size: 2.1rem;
-                    font-weight: 600;
-                >span{
-                    margin-left: 4px;
-                }
-                &::after{
-                    display: block;
-                    content: "";
-                    width: 100%;
-                    height: 2px;
-                    margin: 15px 0 10px;
-                    background: $mileage-bar no-repeat;
-                    background-size: cover;
-                }
-            }
-            .mypage_mileage_txt{
-                font-size: 1.15rem;
-                color: $bvt-darkgray;
-
-                &::before{
-                    position: relative;
-                    display: inline-block;
-                    content: "";
-                    width: 14px;
-                    height: 14px;
-                    top: 2px;
-                    margin-right: 6px;
-                    background: $info-icon no-repeat;
-                    background-size: cover;
-                }
-            }
-        }
-        .mypage_benefit_bottom{
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            height: 60px;
-            margin-bottom: 19px;
-            .mypage_stamp_txt{
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: space-evenly;
-                align-items: flex-start;
-                width: auto;
-                height: 60px;
-                >li{
-                    &:nth-child(1){
-                        font-size: 1.2rem;
-                        font-weight: 300;
-                        color: $bvt-darkgray;
-                    }
-                    &:nth-child(2){
-                        font-size: 1.9rem;
-                        font-weight: 600;
-                        letter-spacing: -0.2px;
-                    }
-                }
-            }
-            .mypage_stamp_list{
+            .stamp_list{
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-between;
                 align-items: center;
-                width: 303px;
-                height: 58px;
-
+                width: 100%;
+                max-width: 340px;
+                min-width: 220px;
+                height: 100%;
+                margin: 15px auto;
                 >li{
-                    width: 58px;
-                    height: 58px;
+                    width: 20%;
+                    max-width: 62.8px;
+                    min-width: 50px;
+                    height: 62.8px;
                     text-indent: -9999px;
                     background: $noactive-stamp;
-                    background-size: cover;
-                }
-            }
-            @media screen and (max-width: 403px) {
-                .mypage_stamp_list{
-                        width: 285px !important;
-                        height: 55px !important;
-    
-                    >li{
-                        width: 55px !important;
-                        height: 55px !important;
-                    }
-                }
-            }
-            @media screen and (max-width: 370px) {
-                .mypage_stamp_list{
-                    width: 250px !important;
-                    height: 48px !important;
-    
-                    >li{
-                        width: 48px !important;
-                        height: 48px !important;
-                    }
-                }
-            }
-            @media screen and (max-width: 330px) {
-                .mypage_stamp_list{
-                    width: 230px !important;
-                    height: 45px !important;
-    
-                    >li{
-                        width: 45px !important;
-                        height: 45px !important;
-                    }
+                    background-size: contain;
                 }
             }
         }
-        .mypage_stamp_info{
-            .voter_txt{
-                font-size: 1.15rem;
-                color: $bvt-darkgray;
-                &::before{
-                    position: relative;
-                    display: inline-block;
-                    content: "";
-                    width: 14px;
-                    height: 14px;
-                    top: 2px;
-                    margin-right: 6px;
-                    background: $info-icon no-repeat;
-                    background-size: cover;
-                }
-                >a{
-                    color: $bvt-blue;
-                    text-decoration: underline;
-                }
+        .stampinfo_box{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-start;
+            width: 100%;
+            &::before{
+                position: relative;
+                display: inline-block;
+                content: "";
+                width: 14.64px;
+                height: 14.64px;
+                top: 1px;
+                margin-right: 5.37px;
+                background: $info-icon no-repeat;                    background-size: contain;
             }
-            .voter_txt_under{
-                font-size: 1rem;
-                font-weight: 200;
-                color: $bvt-darkgray;
-                margin-left: 20px;
-            }
-            .crew_txt{
-                font-size: 1.15rem;
-                font-weight: 200;
-                color: $bvt-darkgray;
-                &::before{
-                    position: relative;
-                    display: inline-block;
-                    content: "";
-                    width: 14px;
-                    height: 14px;
-                    top: 2px;
-                    margin-right: 6px;
-                    background: $info-icon no-repeat;
-                    background-size: cover;
+            ul{
+                li{
+                    font-size: 1.1rem;
+                    line-height: 1.313rem;
+                    color: $bvt-darkgray;
+                    margin-bottom: 3px;
+                    >a{
+                        color: $bvt-blue;
+                    }
                 }
             }
         }
     }
 
-    .mypage_menu_wrap{
+    #mypageMenu{
         width: 100%;
-        padding: 20px 11px;
-        .mypage_menu{
+
+        .menu_box{
             width: 100%;
             li{
                 width: 100%;
                 height: 58px;
-                padding: 0 14px;
                 >a{
                     display: flex;
                     flex-flow: row nowrap;
                     justify-content: space-between;
                     align-items: center;
-                    width: 100%;
                     height: 100%;
                     font-size: 1.35rem;
-                    font-weight: 300;
+                    font-weight: 500;
+                    letter-spacing: -0.25px;
                     color: $bvt-darkgray;
+                    padding: 0 23px;
                     &::after{
                         width: 7px;
                         height: 12px;
@@ -359,19 +463,52 @@
         }
         .mypage_logout{
             display: block;
+            width: 80px;
             text-align: center;
             font-weight: 600;
             font-size: 1.4rem;
-            font-weight: normal;
+            font-weight: 400;
+            letter-spacing: -0.25px;
             text-decoration: underline;
-            color: $bvt-second-darkgray;
+            color: $bvt-darkgray;
             transition: all .3s;
-            margin-top: 50px;
+            margin: 38px auto 0;
+            padding: 6px 0;
 
             &:hover{
                 font-weight: 600;
                 color: $bvt-darkgray;
                 transition: all .3s;
+            }
+        }
+    }
+    //내 프로필 버튼
+    .reviewsProfileBtn{
+        //내 프로필 이동 고정 버튼
+        .feed_btn{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            width: 109px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.62);
+            border-radius: 22px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 19.09px;
+            color: $bvt-white;
+            left: calc(50% - (109px / 2));
+            bottom: calc(60px + 34px);
+            &::before{
+            display: block;
+            content: "";
+            width: 15.95px;
+            height: 15.95px;
+            background: url('/public/images/image/voter_default.png') no-repeat center;
+            background-size: contain;
+            margin-right: 3.05px;
             }
         }
     }

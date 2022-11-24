@@ -2,24 +2,64 @@
 @import "../../../abstracts/mixin";
 @import "../../../abstracts/variables";
 
+:root{
+    --icon-blue-camera: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='16' fill='none'%3E%3Cpath fill='%2300F' d='M7.4 0c-.36.06-.65.29-.92.74l-.63 1.2-.53 1.04H3.67c-1.65-.01-1.65-.01-1.81.02A2.23 2.23 0 0 0 .1 4.76l-.03.16-.04 4.03a51.3 51.3 0 0 0 0 4.17 2.28 2.28 0 0 0 1.82 1.83c.14.03.39.03 7.92.08s7.77.05 7.92.03a2.25 2.25 0 0 0 1.84-1.8c.03-.14.03-.36.05-4.17l.03-4.04-.03-.16c-.1-.46-.29-.81-.62-1.14a2.11 2.11 0 0 0-1.13-.63c-.15-.03-.16-.03-1.81-.05l-1.65-.02-.51-1.04-.6-1.18c-.24-.43-.47-.65-.78-.76l-.12-.04L9.92.01a83.31 83.31 0 0 0-2.5 0L7.4 0Z'/%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-miterlimit='10' stroke-width='.4' d='M2.48 4.78c.14.02.27.1.38.2.31.3.31.76 0 1.07a.73.73 0 0 1-.63.21.75.75 0 0 1-.64-.74c0-.15.02-.22.09-.35.08-.17.24-.3.42-.36a.67.67 0 0 1 .38-.03Z'/%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-miterlimit='10' stroke-width='.5' d='M10.38 4.56a4.5 4.5 0 0 1 3.65 6.05 4.59 4.59 0 0 1-2.54 2.61c-.57.22-1.1.33-1.72.32a4.2 4.2 0 0 1-2.31-.66 4.52 4.52 0 0 1 2.93-8.33Z'/%3E%3Cpath fill='%2300F' stroke='%23fff' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='.5' d='M9.55 6.78a2.26 2.26 0 0 0-2.01 2.4 2.24 2.24 0 0 0 4.24.85 2.25 2.25 0 0 0-1.5-3.22 1.49 1.49 0 0 0-.43-.04h-.31Z'/%3E%3C/svg%3E");
+}
+
 #memberModify {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     width: 100%;
     max-width: 450px;
-    padding: 23px 11px;
+    padding: 24px 15px 36px;
     margin: 40px 0; 
     #memberModifyTitle {
         display: flex;
         flex-flow: column nowrap;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
         margin-bottom: 18px;
+        
+        //프로필 사진 바꾸기
+        #memberUserImage{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            
+            //이미지 미리보기
+            @include product-thumb(0px, 0px, 0px, 0px);
+            #userImgPreview{
+                width: 100%;
+                max-width: 85px;
+                .img_wrap{
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
 
-        h2 {
-            font-weight: 600;
-            font-size: 2.2rem;
+            //input 숨김
+            #userImg{
+                display: none;
+            }
+            //프로필 사진 바꾸기
+            >label{
+                position: relative;
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: $bvt-blue;
+                padding-top: 7px;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    width: 19.5px;
+                    height: 15.5px;
+                    background: var(--icon-blue-camera) no-repeat center;
+                    top: -22px;
+                    right: 8px;
+                }
+            }
         }
     }
 
@@ -40,8 +80,9 @@
                 position: relative;
                 width: 100%;
                 max-width: 450px;
-
-                .member_modify_section {
+                //입력 구역
+                .modify_section {
+                    margin-bottom: 16px;
                     >ul {
                         display: flex;
                         flex-flow: column nowrap;
@@ -49,24 +90,24 @@
                         width: 100%;
                         max-width: 450px;
 
-                        // 회원가입 수정 리스트 
-                        .member_modify_list {
-                            margin-bottom: 18px;
-
+                        // 입력 구역 - 회원가입 수정 리스트 
+                        .modify_list {
+                            margin-bottom: 19px;
                             // 라벨
                             .input_label {
                                 display: block;
-                                font-weight: bold;
-                                font-size: 1.32rem;
+                                font-weight: 400;
+                                font-size: 1.4rem;
                                 color: $bvt-darkgray;
-                                margin-bottom: 6px;
+                                letter-spacing: -0.2px;
+                                margin-bottom: 2px;
                             }
 
-                            .member_modify_input_wrap {
+                            .modify_input_wrap {
                                 position: relative;
                                 display: flex;
                                 flex-flow: row nowrap;
-                                justify-content: flex-start;
+                                justify-content: space-between;
                                 align-items: center;
                                 width: 100%;
                                 max-width: 450px;
@@ -74,17 +115,19 @@
                                 // input 박스
                                 input {
                                     width: 100%;
-                                    height: 44px;
-                                    padding: 12px 25px;
-                                    border-radius: 22px;
-                                    border: $bvt-input-border;
-                                    font-size: 1.35rem;
-                                    color: $bvt-darkgray;
-                                    box-sizing: border-box;
-
+                                    height: 36px;
+                                    border: none;
+                                    border-bottom: $bvt-input-border;
+                                    border-color: #DDDDDD;
+                                    font-weight: 500;
+                                    font-size: 1.6rem;
+                                    color: black;
+                                    line-height: 1.969rem;
+                                    letter-spacing: -0.2px;
+                                    padding-left: 10px;
                                     &::placeholder {
                                         font-size: 1.2rem;
-                                        font-weight: lighter;
+                                        font-weight: 400;
                                         color: $bvt-lightgray;
                                         letter-spacing: -0.3px;
                                     }
@@ -96,29 +139,40 @@
                                 }
 
                                 // 휴대전화
-                                >select {
-                                    width: calc((100% - 44px) / 3);
-                                    height: 44px;
-                                    border-radius: 22px;
-                                    font-size: 1.25rem;
+                                .small_mobile_input{
+                                    font-weight: 400;
+                                    font-size: 1.4rem;
                                     color: $bvt-darkgray;
-                                    border: $bvt-input-border;
-                                    padding: 0 21px;
+                                }
+                                >select {
+                                    width: calc((100% - 78px - 12px - 60px) / 3);
+                                    height: 36px;
+                                    font-size: 1.6rem;
+                                    color: black;
+                                    border: none;
+                                    border-bottom: $bvt-input-border;
                                     appearance: none;
-                                    margin-right: 4px;
+                                    margin-right: 12px;
                                     background: $off-arrow no-repeat;
-                                    background-position: 85%;
+                                    background-position: 95%;
                                     cursor: pointer;
+                                    text-align: center;
                                 }
 
                                 #mobile2,
                                 #mobile3 {
-                                    width: calc((100% - 44px) / 3);
-                                    height: 44px;
-                                    border-radius: 22px;
-                                    font-size: 1.25rem;
-                                    color: $bvt-darkgray;
-                                    border: $bvt-input-border;
+                                    width: calc((100% - 78px - 12px - 60px) / 3);
+                                    height: 36px;
+                                    font-size: 1.6rem;
+                                    color: black;
+                                    border: none;
+                                    border-bottom: $bvt-input-border;
+                                    text-align: center;
+                                    margin: 0 11px;
+                                    padding-left: 0px;
+                                }
+                                #mobile3 {
+                                    margin: 0 0 0 11px;
                                 }
 
                                 #confirm_verify_mobile {
@@ -138,41 +192,51 @@
                                     display: flex;
                                     justify-content: center;
                                     align-items: center;
-                                    width: 123px;
-                                    height: 44px;
-                                    margin-left: 6px;
+                                    width: 78px;
+                                    min-width: 78px;
+                                    height: 36px;
                                     border: $bvt-btn-border;
-                                    border-radius: 22px;
-                                    background: transparentize($bvt-black, 1);
-                                    font-size: 1.35rem;
-                                    font-weight: bold;
+                                    border-radius: 5px;
+                                    background: transparent;
+                                    font-weight: 500;
+                                    font-size: 1.4rem;
                                     color: $bvt-blue;
+                                    letter-spacing: -0.2px;
                                     word-break: keep-all;
                                     cursor: pointer;
+                                    margin-left: 12px;
                                 }
                             }
+                        }
 
-                            // 에러메시지
-                            .val_check_msg {
-                                word-wrap: break-word;
-                                word-break: keep-all;
-                                font-size: 1.2rem;
-                                font-weight: bold;
-                                color: $bvt-lightgray;
-                                margin: 3px 0 0 3px;
-                            }
-
-                            .input_info_txt {
-                                font-size: 1.25rem;
-                                color: $bvt-blue;
-                                letter-spacing: -0.3px;
-                                margin: 3px 0 6px 1px;
+                        // 입력 구역 - 추천인 아이디
+                        .modify_list_reco{
+                            margin-bottom: 30px;
+                        }
+                        // 입력 구역 - 비밀번호
+                        .modify_list_pwd{
+                            >label{
+                            position: relative;
+                            width: fit-content;
+                                &::after{
+                                    position: absolute;
+                                    display: block;
+                                    width: 4px;
+                                    height: 4px;
+                                    content: "";
+                                    background: $bvt-blue;
+                                    border-radius: 50%;
+                                    top: 2px;
+                                    right: -7px;
+                                }
                             }
                         }
+
                     }
                 }
-
+                //동의 구역
                 .member_agree_section {
+                    margin-bottom: 22px;
                     >ul {
                         display: flex;
                         flex-flow: column nowrap;
@@ -180,20 +244,21 @@
                         width: 100%;
                         max-width: 450px;
 
-                        // 회원가입 수정 리스트 
-                        .member_modify_list {
+                        // 동의 구역 - 회원가입 수정 리스트 
+                        .modify_list {
                             margin-bottom: 18px;
 
                             // 라벨
                             .input_label {
                                 display: block;
-                                font-weight: bold;
-                                font-size: 1.32rem;
+                                font-weight: 400;
+                                font-size: 1.4rem;
                                 color: $bvt-darkgray;
-                                margin-bottom: 6px;
+                                letter-spacing: -0.2px;
+                                margin-bottom: 12px;
                             }
-
-                            .member_modify_input_wrap {
+                            // 동의 구역 - 라디오 
+                            .modify_input_wrap {
                                 position: relative;
                                 display: flex;
                                 flex-flow: row nowrap;
@@ -201,39 +266,42 @@
                                 align-items: center;
                                 width: 100%;
                                 max-width: 450px;
-                                padding: 6px 20px;
-
-                                >label {
-                                    font-weight: bold;
-                                    font-size: 1.25rem;
-                                    margin: 0 13px;
-                                    color: $bvt-darkgray;
-                                    cursor: pointer;
-                                }
+                                padding: 0 14px;
 
                                 input[type="radio"] {
-                                    width: 18px;
-                                    height: 18px;
-                                    cursor: pointer;
+                                    display: none;
                                 }
 
-                            }
+                                >label {
+                                    display: inline-flex;
+                                    flex-flow: row nowrap;
+                                    align-items: center;
+                                    font-weight: 400;
+                                    font-size: 1.4rem;
+                                    margin: 0 10px;
+                                    letter-spacing: -0.2px;
+                                    color: #909090;
+                                    cursor: pointer;
+                                }
+                                input[type="radio"] + label::before{
+                                    display: inline-block;
+                                    content: "";
+                                    width: 19px;
+                                    height: 18px;
+                                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='18' fill='none'%3E%3Crect width='19' height='18' fill='%23F3F3F3' rx='9'/%3E%3Cpath fill='%23E0E0E0' d='M8.48 14a.8.8 0 0 1-.58-.25L4.2 9.69a.75.75 0 0 1 .06-1.09.8.8 0 0 1 1.11.06L8.38 12l5.18-7.65a.8.8 0 0 1 1.09-.21c.36.23.46.7.22 1.06l-5.73 8.47a.78.78 0 0 1-.6.34h-.06Z'/%3E%3C/svg%3E") no-repeat center;
+                                    background-size: contain;
+                                    margin-right: 9px;
 
-                            // 에러메시지
-                            .val_check_msg {
-                                word-wrap: break-word;
-                                word-break: keep-all;
-                                font-size: 1.2rem;
-                                font-weight: bold;
-                                color: $bvt-lightgray;
-                                margin: 3px 0 0 3px;
-                            }
-
-                            .input_info_txt {
-                                font-size: 1.25rem;
-                                color: $bvt-blue;
-                                letter-spacing: -0.3px;
-                                margin: -5px 0 6px 1px;
+                                }
+                                input[type="radio"]:checked + label::before { /* 체크 상태 */
+                                    display: inline-block;
+                                    content: "";
+                                    width: 19px;
+                                    height: 18px;
+                                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='18' fill='none'%3E%3Cpath fill='%23E0E0E0' d='M8.16 14.8a.9.9 0 0 1-.67-.3L3.23 9.72a.9.9 0 1 1 1.35-1.2l3.47 3.92L14 3.4a.91.91 0 0 1 1.26-.26.9.9 0 0 1 .25 1.25l-6.6 10a.89.89 0 0 1-.69.4h-.07Z'/%3E%3Crect width='19' height='18' fill='%2300F' rx='9'/%3E%3Cpath fill='%23fff' d='M8.55 14a.8.8 0 0 1-.58-.25l-3.7-4.06a.75.75 0 0 1 .06-1.09.8.8 0 0 1 1.11.06L8.46 12l5.17-7.65a.8.8 0 0 1 1.1-.21c.35.23.45.7.22 1.06L9.2 13.66a.78.78 0 0 1-.6.34h-.06Z'/%3E%3C/svg%3E")no-repeat center;
+                                    background-size: contain;
+                                }
+                                
                             }
                         }
                     }
@@ -242,39 +310,76 @@
         }
     }
 
+}
+
+
+    //수정 완료
     .modify_btn {
-        position: fixed;
         display: flex;
-        bottom: 0;
         width: 100%;
         max-width: 450px;
-        height: 63px;
+        height: 44px;
         align-items: center;
         justify-content: center;
-        border-radius: 8px;
-        z-index: 99;
+        border-radius: 5px;
         background-color: $bvt-blue;
         border: none;
+        font-size: 1.6rem;
+        font-weight: 700;
         color: $bvt-white;
-        font-size: 1.4rem;
-        font-weight: 500;
         cursor: pointer;
     }
+   
+    #userAction{
+        width: 100%;
+        margin: 30px auto 36px;
+        ul{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            
+            li{
 
-    .member_delete_btn {
-        display: block;
-        background: transparentize($bvt-black, 1);
-        font-size: 15px;
-        font-weight: 600;
-        text-align: center;
-        text-decoration: underline;
-        margin: 20px 0 50px;
-        color: $bvt-darkgray;
-        transition: all .5s;
-        &:hover{
-            font-weight: 600;
-            color: $bvt-lightgray;
-            transition: all .3s;
+                &:nth-child(1){
+                    &::after{
+                        display: inline-block;
+                        content: "|";
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        color: $bvt-darkgray;
+                        margin: 0 10px;
+                    }
+                }
+                a{
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    color: $bvt-darkgray;
+                    letter-spacing: -0.25px;
+                    transition: all .5s;
+    
+                    &:hover{
+                        font-weight: 400;
+                        color: $bvt-lightgray;
+                        transition: all .3s;
+                    }
+                }
+            }
         }
     }
+// 에러메시지
+.val_check_msg, .error{
+    word-wrap: break-word;
+    word-break: keep-all;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 56, 56, 0.8);
+    letter-spacing: -0.2px;
+    margin: 6px 0 0 0;
+}
+.input_notice {
+    font-size: 1.25rem;
+    color: $bvt-blue;
+    letter-spacing: 0.3px;
+    margin: 5px 0;
 }

@@ -3,7 +3,8 @@
 <section id="reviewsProfileWrap">
 	<div id="reviewsProfileTitle">
 		<ul class="userinfo_wrap">
-			<li class="userimg"><img src="https://bvoat.shop/images/new_img/ico__11.png"></li>
+			<li class="userimg"><img class="user_img"
+				src="" onerror="this.src='/public/images/image/voter_default.png'" onclick="window.open(this.src)" /></li>
 			<li class="userinfo">
 				<div class="user">
 					<h2 class="usernickname"></h2>
@@ -11,12 +12,12 @@
 				</div>
 				<div class="info">
 					<p class="reviews_num"><span></span>리뷰</p>
-					<p class="following"><span></span>팔로잉</p>
-					<p class="follower"><span></span>팔로워</p>
+					<p class="following"><a href="#" title="팔로잉 목록 보기"><span></span>팔로잉</a></p>
+					<p class="follower"><a href="#" title="팔로워 목록 보기"><span></span>팔로워</a></p>
 				</div>
 			</li>
 			<li class="user_reaction">
-				<button class="profile_share_btn share_btn"></button>
+				<button class="profile_share_btn share_text_btn" data-status="url" onclick="sharingLinkText(event)"></button>
 			</li>
 		</ul>
 	</div>
@@ -29,5 +30,5 @@
 	<a class="feed_btn" href="/reviews/feed.html">리뷰 피드</a>
 	<p class="spinner displaynone"></p>
 </section>
-<script src="/js/module/reviews/common.js" type="module"></script>
+<script src="/js/module/reviews/common.js"></script>
 <script src="/js/module/reviews/profile.js"></script>

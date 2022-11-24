@@ -132,6 +132,30 @@ window.addEventListener("load", getWriteData(searchParams));
 /* 쓰기 기능 시작 */
 
 /**
+ * 뒤로가기 할 때 모달
+ */
+
+// window.addEventListener('beforeunload', (event) => {
+// 	// 표준에 따라 기본 동작 방지
+// 	event.preventDefault();
+// 	// Chrome에서는 returnValue 설정이 필요함
+// 	event.returnValue = '';
+// 	// //화면 상단에 모달 생성
+// 		// document
+// 		// .querySelector("#bvtContainer")
+// 		// .insertAdjacentHTML("afterbegin", `
+// 		// <section id="bvtCommonModal">
+// 		// <div id="bvtReviewForm" method="dialog">
+// 		// 	<h2 class="review_form_title">정말로 나가실 건가요?</h2>
+// 		// 	<p>입력한 정보들은 저장되지 않습니다.
+// 		// 	</p>
+// 		// 	<button class="ok_btn">계속 진행하기</button>
+// 		// 	<button class="no_btn">나가기</button>
+// 		// </div>
+// 		// </section>`)
+//   });
+
+/**
  * 별점 클릭 시 input#rate에 입력
  */
 let rate_range = document.querySelector("#rateit");
@@ -178,23 +202,39 @@ const createIndexAttachedImage = (attachedimage) => {
  * @param {첨부한 이미지} input 
  */
 const attachImage = (file) => {
+
+	let imageValid = true;
+	const maxSize = 5 * 1024 * 1024;
+	//용량 체크
+	[...file.files].forEach((image)=>{
+		if(image.size > maxSize){
+			alert("5MB 이상의 이미지는 첨부할 수 없어요 🥲");
+			// file.files('');
+			imageValid = false;
+			return false;
+		};
+	})
 	//이미지 갯수 검증
 	if(document.getElementById('appendedArea').children.length+file.files.length > 4) {
 		alert("사진은 4장까지 추가 가능합니다.");
+		imageValid = false;
 		return false;
 	}
-
-	[...file.files].forEach((image)=>{
+	
+	if(imageValid){
+	[...file.files].forEach((image, i)=>{
+		if(i > 3) return false;
 		document.getElementById("appendedArea").insertAdjacentHTML("beforeend", `<li id="image_${image.lastModified}" class="appended_item thumb" data-seq="${image.lastModified}" data-saved=false data-name="${image.name}" style="background: url(${URL.createObjectURL(image)}) no-repeat center; background-size: cover;" draggable="true">
 		<button class="img_del_btn" title="이미지 삭제" data-seq="${image.lastModified}" type="button" onclick="removeAttachedImage(event)"></button>
 		</li>`)
 	});
 	
 	//이미지 Array에 추가
-	[...file.files].forEach((file)=>{
+	[...file.files].forEach((file, i)=>{
+		if(i > 3) return false;
 		filesArray.push(file)
-	});
-}
+	});}
+};
 
 const removeAttachedImage = (event) => {
 	const target = event.currentTarget;
@@ -344,11 +384,13 @@ async function registerReview (event) {
 	})
 	.then((response) => response.json())
 	.then((response) => {
-		console.log("response", response)
-		response.success ? location.href=`/reviews/views.html?seq=${response.data.seq}` : alert("리뷰 저장 에러입니다. 다시 시도해주세요 :)")
+		console.log("response", response);
+		response.success == true ? location.href=`/reviews/profile.html?member_id=${data.member_id}` : alert("리뷰 저장 에러입니다. 다시 시도해주세요 :) ")
+		// response.success ? location.href=`/reviews/views.html?seq=${response.data.seq}` : alert("리뷰 저장 에러입니다. 다시 시도해주세요 :)")
 	})
 	.then((error)=>{
-		console.log(error)
+		console.log(error);
+		return false;
 	});
 	}
 

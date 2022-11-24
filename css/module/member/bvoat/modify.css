@@ -6,28 +6,114 @@
 /* 멤버십 관련 */
 /* 멤버십 관련 */
 /* 상품 목록 list 관련 공통 스타일 */
+/* 셀렉트 박스 화살표 */
 /* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
+:root {
+  --icon-blue-camera: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='16' fill='none'%3E%3Cpath fill='%2300F' d='M7.4 0c-.36.06-.65.29-.92.74l-.63 1.2-.53 1.04H3.67c-1.65-.01-1.65-.01-1.81.02A2.23 2.23 0 0 0 .1 4.76l-.03.16-.04 4.03a51.3 51.3 0 0 0 0 4.17 2.28 2.28 0 0 0 1.82 1.83c.14.03.39.03 7.92.08s7.77.05 7.92.03a2.25 2.25 0 0 0 1.84-1.8c.03-.14.03-.36.05-4.17l.03-4.04-.03-.16c-.1-.46-.29-.81-.62-1.14a2.11 2.11 0 0 0-1.13-.63c-.15-.03-.16-.03-1.81-.05l-1.65-.02-.51-1.04-.6-1.18c-.24-.43-.47-.65-.78-.76l-.12-.04L9.92.01a83.31 83.31 0 0 0-2.5 0L7.4 0Z'/%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-miterlimit='10' stroke-width='.4' d='M2.48 4.78c.14.02.27.1.38.2.31.3.31.76 0 1.07a.73.73 0 0 1-.63.21.75.75 0 0 1-.64-.74c0-.15.02-.22.09-.35.08-.17.24-.3.42-.36a.67.67 0 0 1 .38-.03Z'/%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-miterlimit='10' stroke-width='.5' d='M10.38 4.56a4.5 4.5 0 0 1 3.65 6.05 4.59 4.59 0 0 1-2.54 2.61c-.57.22-1.1.33-1.72.32a4.2 4.2 0 0 1-2.31-.66 4.52 4.52 0 0 1 2.93-8.33Z'/%3E%3Cpath fill='%2300F' stroke='%23fff' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='.5' d='M9.55 6.78a2.26 2.26 0 0 0-2.01 2.4 2.24 2.24 0 0 0 4.24.85 2.25 2.25 0 0 0-1.5-3.22 1.49 1.49 0 0 0-.43-.04h-.31Z'/%3E%3C/svg%3E");
+}
+
 #memberModify {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   width: 100%;
   max-width: 450px;
-  padding: 23px 11px;
+  padding: 24px 15px 36px;
   margin: 40px 0;
 }
 #memberModify #memberModifyTitle {
   display: flex;
   flex-flow: column nowrap;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   margin-bottom: 18px;
 }
-#memberModify #memberModifyTitle h2 {
+#memberModify #memberModifyTitle #memberUserImage {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+#memberModify #memberModifyTitle #memberUserImage .thumb {
+  position: relative;
+  width: 100%;
+}
+#memberModify #memberModifyTitle #memberUserImage .thumb > a, #memberModify #memberModifyTitle #memberUserImage .thumb .img_wrap {
+  display: block;
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+  font-size: 0;
+}
+#memberModify #memberModifyTitle #memberUserImage .thumb > a > img, #memberModify #memberModifyTitle #memberUserImage .thumb .img_wrap > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#memberModify #memberModifyTitle #memberUserImage .thumb .wish {
+  position: absolute;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  bottom: 0px;
+  right: 0px;
+}
+#memberModify #memberModifyTitle #memberUserImage .thumb .wish button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+#memberModify #memberModifyTitle #memberUserImage .thumb .wish button img {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  margin-top: 2.5px;
+}
+#memberModify #memberModifyTitle #memberUserImage .icon img {
+  height: inherit;
+  -o-object-fit: contain;
+     object-fit: contain;
+  image-rendering: auto;
+}
+#memberModify #memberModifyTitle #memberUserImage #userImgPreview {
+  width: 100%;
+  max-width: 85px;
+}
+#memberModify #memberModifyTitle #memberUserImage #userImgPreview .img_wrap {
+  width: 100%;
+  border-radius: 50%;
+}
+#memberModify #memberModifyTitle #memberUserImage #userImg {
+  display: none;
+}
+#memberModify #memberModifyTitle #memberUserImage > label {
+  position: relative;
+  font-size: 1.4rem;
   font-weight: 600;
-  font-size: 2.2rem;
+  color: #022CFF;
+  padding-top: 7px;
+}
+#memberModify #memberModifyTitle #memberUserImage > label::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 19.5px;
+  height: 15.5px;
+  background: var(--icon-blue-camera) no-repeat center;
+  top: -22px;
+  right: 8px;
 }
 #memberModify #memberModifyField {
   position: relative;
@@ -47,127 +133,156 @@
   width: 100%;
   max-width: 450px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul {
+#memberModify #memberModifyField fieldset .modify_form .modify_section {
+  margin-bottom: 16px;
+}
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul {
   display: flex;
   flex-flow: column nowrap;
   flex-basis: auto;
   width: 100%;
   max-width: 450px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list {
-  margin-bottom: 18px;
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list {
+  margin-bottom: 19px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .input_label {
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .input_label {
   display: block;
-  font-weight: bold;
-  font-size: 1.32rem;
+  font-weight: 400;
+  font-size: 1.4rem;
   color: #707070;
-  margin-bottom: 6px;
+  letter-spacing: -0.2px;
+  margin-bottom: 2px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap {
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 450px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap input {
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap input {
   width: 100%;
-  height: 44px;
-  padding: 12px 25px;
-  border-radius: 22px;
-  border: 1px solid #C4C4C4;
-  font-size: 1.35rem;
-  color: #707070;
-  box-sizing: border-box;
+  height: 36px;
+  border: none;
+  border-bottom: 1px solid #C4C4C4;
+  border-color: #DDDDDD;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: black;
+  line-height: 1.969rem;
+  letter-spacing: -0.2px;
+  padding-left: 10px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap input::-moz-placeholder {
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap input::-moz-placeholder {
   font-size: 1.2rem;
-  font-weight: lighter;
+  font-weight: 400;
   color: #C4C4C4;
   letter-spacing: -0.3px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap input:-ms-input-placeholder {
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap input:-ms-input-placeholder {
   font-size: 1.2rem;
-  font-weight: lighter;
+  font-weight: 400;
   color: #C4C4C4;
   letter-spacing: -0.3px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap input::placeholder {
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap input::placeholder {
   font-size: 1.2rem;
-  font-weight: lighter;
+  font-weight: 400;
   color: #C4C4C4;
   letter-spacing: -0.3px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap #user_passwd_confirm {
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #user_passwd_confirm {
   margin-top: 6px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap > select {
-  width: calc((100% - 44px) / 3);
-  height: 44px;
-  border-radius: 22px;
-  font-size: 1.25rem;
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap .small_mobile_input {
+  font-weight: 400;
+  font-size: 1.4rem;
   color: #707070;
-  border: 1px solid #C4C4C4;
-  padding: 0 21px;
+}
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap > select {
+  width: calc((100% - 78px - 12px - 60px) / 3);
+  height: 36px;
+  font-size: 1.6rem;
+  color: black;
+  border: none;
+  border-bottom: 1px solid #C4C4C4;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  margin-right: 4px;
+  margin-right: 12px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.582' height='7.194'%3E%3Cpath data-name='Icon ionic-ios-arrow-forward' d='M6.293 5.025 11.051.264a.9.9 0 0 1 1.27 0 .907.907 0 0 1 0 1.274L6.93 6.932a.9.9 0 0 1-1.24.026L.262 1.541A.9.9 0 1 1 1.532.268Z' fill='%23ababab'/%3E%3C/svg%3E") no-repeat;
-  background-position: 85%;
+  background-position: 95%;
   cursor: pointer;
+  text-align: center;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap #mobile2,
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap #mobile3 {
-  width: calc((100% - 44px) / 3);
-  height: 44px;
-  border-radius: 22px;
-  font-size: 1.25rem;
-  color: #707070;
-  border: 1px solid #C4C4C4;
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #mobile2,
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #mobile3 {
+  width: calc((100% - 78px - 12px - 60px) / 3);
+  height: 36px;
+  font-size: 1.6rem;
+  color: black;
+  border: none;
+  border-bottom: 1px solid #C4C4C4;
+  text-align: center;
+  margin: 0 11px;
+  padding-left: 0px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap #confirm_verify_mobile {
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #mobile3 {
+  margin: 0 0 0 11px;
+}
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #confirm_verify_mobile {
   margin-top: 6px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap #expiryTime {
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #expiryTime {
   position: fixed;
   right: 7%;
   font-size: 1.2rem;
   font-weight: bold;
   color: #022CFF;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .member_modify_input_wrap .input_btn {
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap .input_btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 123px;
-  height: 44px;
-  margin-left: 6px;
+  width: 78px;
+  min-width: 78px;
+  height: 36px;
   border: 1px solid #022CFF;
-  border-radius: 22px;
-  background: rgba(41, 41, 41, 0);
-  font-size: 1.35rem;
-  font-weight: bold;
+  border-radius: 5px;
+  background: transparent;
+  font-weight: 500;
+  font-size: 1.4rem;
   color: #022CFF;
+  letter-spacing: -0.2px;
   word-break: keep-all;
   cursor: pointer;
+  margin-left: 12px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .val_check_msg {
-  word-wrap: break-word;
-  word-break: keep-all;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #C4C4C4;
-  margin: 3px 0 0 3px;
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list_reco {
+  margin-bottom: 30px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_modify_section > ul .member_modify_list .input_info_txt {
-  font-size: 1.25rem;
-  color: #022CFF;
-  letter-spacing: -0.3px;
-  margin: 3px 0 6px 1px;
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list_pwd > label {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list_pwd > label::after {
+  position: absolute;
+  display: block;
+  width: 4px;
+  height: 4px;
+  content: "";
+  background: #022CFF;
+  border-radius: 50%;
+  top: 2px;
+  right: -7px;
+}
+#memberModify #memberModifyField fieldset .modify_form .member_agree_section {
+  margin-bottom: 22px;
 }
 #memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul {
   display: flex;
@@ -176,17 +291,18 @@
   width: 100%;
   max-width: 450px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list {
+#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list {
   margin-bottom: 18px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list .input_label {
+#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .input_label {
   display: block;
-  font-weight: bold;
-  font-size: 1.32rem;
+  font-weight: 400;
+  font-size: 1.4rem;
   color: #707070;
-  margin-bottom: 6px;
+  letter-spacing: -0.2px;
+  margin-bottom: 12px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list .member_modify_input_wrap {
+#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
@@ -194,65 +310,100 @@
   align-items: center;
   width: 100%;
   max-width: 450px;
-  padding: 6px 20px;
+  padding: 0 14px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list .member_modify_input_wrap > label {
-  font-weight: bold;
-  font-size: 1.25rem;
-  margin: 0 13px;
-  color: #707070;
+#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap input[type=radio] {
+  display: none;
+}
+#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap > label {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin: 0 10px;
+  letter-spacing: -0.2px;
+  color: #909090;
   cursor: pointer;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list .member_modify_input_wrap input[type=radio] {
-  width: 18px;
+#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap input[type=radio] + label::before {
+  display: inline-block;
+  content: "";
+  width: 19px;
   height: 18px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='18' fill='none'%3E%3Crect width='19' height='18' fill='%23F3F3F3' rx='9'/%3E%3Cpath fill='%23E0E0E0' d='M8.48 14a.8.8 0 0 1-.58-.25L4.2 9.69a.75.75 0 0 1 .06-1.09.8.8 0 0 1 1.11.06L8.38 12l5.18-7.65a.8.8 0 0 1 1.09-.21c.36.23.46.7.22 1.06l-5.73 8.47a.78.78 0 0 1-.6.34h-.06Z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+  margin-right: 9px;
+}
+#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap input[type=radio]:checked + label::before { /* 체크 상태 */
+  display: inline-block;
+  content: "";
+  width: 19px;
+  height: 18px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='18' fill='none'%3E%3Cpath fill='%23E0E0E0' d='M8.16 14.8a.9.9 0 0 1-.67-.3L3.23 9.72a.9.9 0 1 1 1.35-1.2l3.47 3.92L14 3.4a.91.91 0 0 1 1.26-.26.9.9 0 0 1 .25 1.25l-6.6 10a.89.89 0 0 1-.69.4h-.07Z'/%3E%3Crect width='19' height='18' fill='%2300F' rx='9'/%3E%3Cpath fill='%23fff' d='M8.55 14a.8.8 0 0 1-.58-.25l-3.7-4.06a.75.75 0 0 1 .06-1.09.8.8 0 0 1 1.11.06L8.46 12l5.17-7.65a.8.8 0 0 1 1.1-.21c.35.23.45.7.22 1.06L9.2 13.66a.78.78 0 0 1-.6.34h-.06Z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+}
+
+.modify_btn {
+  display: flex;
+  width: 100%;
+  max-width: 450px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #022CFF;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
   cursor: pointer;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list .val_check_msg {
+
+#userAction {
+  width: 100%;
+  margin: 30px auto 36px;
+}
+#userAction ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#userAction ul li:nth-child(1)::after {
+  display: inline-block;
+  content: "|";
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #707070;
+  margin: 0 10px;
+}
+#userAction ul li a {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #707070;
+  letter-spacing: -0.25px;
+  transition: all 0.5s;
+}
+#userAction ul li a:hover {
+  font-weight: 400;
+  color: #C4C4C4;
+  transition: all 0.3s;
+}
+
+.val_check_msg, .error {
   word-wrap: break-word;
   word-break: keep-all;
   font-size: 1.2rem;
-  font-weight: bold;
-  color: #C4C4C4;
-  margin: 3px 0 0 3px;
+  font-weight: 500;
+  color: rgba(255, 56, 56, 0.8);
+  letter-spacing: -0.2px;
+  margin: 6px 0 0 0;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .member_modify_list .input_info_txt {
+
+.input_notice {
   font-size: 1.25rem;
   color: #022CFF;
-  letter-spacing: -0.3px;
-  margin: -5px 0 6px 1px;
-}
-#memberModify .modify_btn {
-  position: fixed;
-  display: flex;
-  bottom: 0;
-  width: 100%;
-  max-width: 450px;
-  height: 63px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  z-index: 99;
-  background-color: #022CFF;
-  border: none;
-  color: #ffffff;
-  font-size: 1.4rem;
-  font-weight: 500;
-  cursor: pointer;
-}
-#memberModify .member_delete_btn {
-  display: block;
-  background: rgba(41, 41, 41, 0);
-  font-size: 15px;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: underline;
-  margin: 20px 0 50px;
-  color: #707070;
-  transition: all 0.5s;
-}
-#memberModify .member_delete_btn:hover {
-  font-weight: 600;
-  color: #C4C4C4;
-  transition: all 0.3s;
+  letter-spacing: 0.3px;
+  margin: 5px 0;
 }/*# sourceMappingURL=modify.css.map */

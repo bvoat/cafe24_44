@@ -8,18 +8,29 @@
      -->
     <section id="memberModifyTitle">
         <h1 class="displaynone">회원 정보 수정 페이지</h1>
-        <h2>🤗 내 정보 수정</h2>
+        <div id="memberUserImage">
+            <div id="userImgPreview" class="thumb">
+                <div class="img_wrap">
+                    <img class="user_img"
+                    src="" onerror="this.src='/public/images/image/voter_default.png'" onclick="window.open(this.src)" />
+                </div>
+            </div>
+            <form action="post" enctype="multipart/form-data">
+                <fieldset class="displaynone"><legend>프로필 사진 바꾸기</legend></fieldset>
+                <input type="file" name="userImg" id="userImg" accept="image/*" maxlegnth="1" onchange="previewUserImage(this)" /><label for="userImg">프로필 사진 바꾸기</label>
+            </form>
+        </div>
     </section>
     <section id="memberModifyField">
         <fieldset>
             <legend class="displaynone">회원 정보 수정</legend>
             <div class="modify_form">
-                <section class="member_modify_section">
+                <section class="modify_section">
                     <ul>
                         <!-- 아이디 시작 -->
-                        <li class="member_modify_list">
+                        <li class="modify_list">
                             <label class="input_label" for="member_id">아이디</label>
-                            <p class="member_modify_input_wrap">
+                            <p class="modify_input_wrap">
                                 <input id="member_id" name="member_id"
                                     fw-filter="isFill&amp;isFill&amp;isMin[4]&amp;isMax[16]&amp;isIdentity"
                                     fw-label="아이디" fw-msg="" class="inputTypeText" placeholder="" readonly="readonly"
@@ -27,37 +38,17 @@
                             </p>
                         </li>
                         <!-- 아이디 끝 -->
-                        <!-- 비밀번호 시작 -->
-                        <li class="member_modify_list">
-                            <label class="input_label" for="passwd">비밀번호</label>
-                            <p class="input_info_txt">비밀번호와 비밀번호 재확인을 입력하셔야 회원정보 수정이 가능합니다.</p>
-                            <p class="member_modify_input_wrap">
-                                <input id="passwd" name="passwd" fw-filter="isFill&amp;isMin[4]&amp;isMax[16]"
-                                    fw-label="비밀번호" fw-msg="" autocomplete="off" maxlength="16" 0="disabled" value=""
-                                    placeholder="비밀번호 입력" type="password">
-                            </p>
-                            <p class="member_modify_input_wrap">
-                                <label class="displaynone" for="input_label user_passwd_confirm">비밀번호 확인</label>
-                                <input id="user_passwd_confirm" name="user_passwd_confirm"
-                                    fw-filter="isFill&amp;isMatch[passwd]" fw-label="비밀번호 확인" fw-msg="비밀번호가 일치하지 않습니다."
-                                    autocomplete="off" maxlength="16" 0="disabled" value="" type="password"
-                                    placeholder="비밀번호 재확인">
-                            </p>
-                            <p id="{$pwConfirmMsg_id}" class="val_check_msg"></p>
-
-                        </li>
-                        <!-- 비밀번호 끝 -->
                         <!-- 이름 시작 -->
-                        <li class="member_modify_list">
+                        <li class="modify_list">
                             <label class="input_label" for="name">이름</label>
-                            <p class="member_modify_input_wrap">
+                            <p class="modify_input_wrap">
                                 {$form.name}</p>
                         </li>
                         <!-- 이름 끝 -->
                         <!-- 휴대전화 시작 -->
-                        <li class="member_modify_list">
+                        <li class="modify_list">
                             <label class="input_label" for="mobile1">휴대전화</label>
-                            <p class="member_modify_input_wrap small_mobile_input">
+                            <p class="modify_input_wrap small_mobile_input">
                                 {$form.mobile}
                                 <button type="button" class="input_btn {$display_verify_mobile|display}"
                                     id="{$btn_action_verify_mobile}" onclick="{$action_verify_mobile}">인증 받기</button>
@@ -72,9 +63,9 @@
                         </li>
                         <!-- 휴대전화 끝 -->
                         <!-- 인증번호 시작 -->
-                        <li class="member_modify_list" id="{$confirm_verify_mobile}">
-                            <label class="input_label" for="verify_sms_number">인증번호</label>
-                            <div class="verify member_modify_input_wrap">
+                        <li class="modify_list" id="{$confirm_verify_mobile}">
+                            <label class="input_label" for="verify_sms_number">인증번호 확인</label>
+                            <div class="verify modify_input_wrap">
                                 {$form.verify_sms_number}
                                 <span class="time" id="{$expiryTime}"></span>
 
@@ -83,47 +74,70 @@
                             </div>
                         </li>
                         <!-- 인증번호 끝 -->
+                        <!-- 별명 시작 -->
+                        <li class="modify_list">
+                            <label class="input_label" for="nick_name">닉네임</label>
+                            <p class="modify_input_wrap">
+                                {$form.nick_name}
+                            </p>
+                        </li>
+                        <!-- 별명 끝 -->
                         <!-- 이메일 시작 -->
-                        <li class="member_modify_list">
+                        <li class="modify_list">
                             <label class="input_label" for="email1">이메일</label>
-                            <p class="member_modify_input_wrap">
+                            <p class="modify_input_wrap">
                                 {$form.email}
                             </p>
                             <p id="emailMsg" class="val_check_msg"></p>
                         </li>
                         <!-- 이메일 끝 -->
-                        <!-- 별명 시작 -->
-                        <li class="member_modify_list">
-                            <label class="input_label" for="nick_name">닉네임</label>
-                            <p class="member_modify_input_wrap">
-                                {$form.nick_name}
-                            </p>
-                        </li>
-                        <!-- 별명 끝 -->
                         <!-- 추천인 시작 -->
-                        <li class="member_modify_list">
+                        <li class="modify_list modify_list_reco">
                             <label class="input_label" for="reco_id">추천인 아이디</label>
-                            <p class="member_modify_input_wrap">
+                            <p class="modify_input_wrap">
                                 {$form.reco_id}</p>
                         </li>
                         <!-- 추천인 끝 -->
+                        
+                        <!-- 비밀번호 시작 -->
+                        <li class="modify_list modify_list_pwd">
+                            <p class="input_notice">비밀번호와 비밀번호 재확인을 입력하셔야 회원정보 수정이 가능합니다.</p>
+                            <label class="input_label" for="passwd">비밀번호</label>
+                            <p class="modify_input_wrap">
+                                <input id="passwd" name="passwd" fw-filter="isFill&amp;isMin[4]&amp;isMax[16]"
+                                    fw-label="비밀번호" fw-msg="" autocomplete="off" maxlength="16" 0="disabled" value=""
+                                    placeholder="비밀번호 입력" type="password">
+                            </p>
+                        </li>
+                        <li class="modify_list modify_list_pwd">
+                            <label class="input_label"
+                            for="input_label user_passwd_confirm">비밀번호 확인</label>
+                            <p class="modify_input_wrap">
+                                <input id="user_passwd_confirm" name="user_passwd_confirm"
+                                    fw-filter="isFill&amp;isMatch[passwd]" fw-label="비밀번호 확인" fw-msg="비밀번호가 일치하지 않습니다."
+                                    autocomplete="off" maxlength="16" 0="disabled" value="" type="password"
+                                    placeholder="비밀번호 재확인">
+                            </p>
+                            <p id="{$pwConfirmMsg_id}" class="val_check_msg"></p>
+                        </li>
+                        <!-- 비밀번호 끝 -->
                     </ul>
                 </section>
                 <section class="member_agree_section">
                     <ul>
                         <!-- SMS 수신여부 시작 -->
-                        <li class="member_modify_list {$display_is_sms|display}">
+                        <li class="modify_list {$display_is_sms|display}">
+                            <p class="input_notice">수신 동의 시 각종 이벤트, 멤버십 등의 혜택을 받으실 수 있습니다.</p>
                             <p class="input_label" for="is_sms1">SMS 수신여부</p>
-                            <p class="input_info_txt">수신 동의 시 각종 이벤트, 멤버십 등의 혜택을 받으실 수 있습니다.</p>
-                            <p class="member_modify_input_wrap">
+                            <p class="modify_input_wrap">
                                 {$form.is_sms}
                             </p>
                         </li>
                         <!-- SMS 수신여부 끝 -->
                         <!-- 이메일 수신여부 시작 -->
-                        <li class="member_modify_list {$display_is_news_mail|display}">
+                        <li class="modify_list {$display_is_news_mail|display}">
                             <p class="input_label" for="is_news_mail1">이메일 수신여부</p>
-                            <p class="member_modify_input_wrap">
+                            <p class="modify_input_wrap">
                                 {$form.is_news_mail}
                             </p>
                         </li>
@@ -133,7 +147,13 @@
             </div>
         </fieldset>
     </section>
-    <a href="#none" class="modify_btn" onclick="{$action_func_join}">회원 정보 수정</a>
-    <a href="#none" class="member_delete_btn"  onclick="{$action_func_del}">회원 탈퇴</a>
+    <a href="#none" class="modify_btn" onclick="{$action_func_join}">수정 완료</a>
+    <section id="userAction">
+        <ul>
+            <li><a href="#none" class="logout_btn" href="/exec/front/Member/logout/">로그아웃</a></li>
+            <li><a href="#none" id="userDeleteBtn" class="member_delete_btn" onclick="{$action_func_del}">회원 탈퇴</a></li>
+        </ul>
+    </section>
 </article>
+<script src="/js/module/reviews/common.js"></script>
 <script src="/js/module/member/modify.js"></script>
