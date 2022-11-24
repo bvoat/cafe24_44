@@ -6,6 +6,7 @@
 /* 멤버십 관련 */
 /* 멤버십 관련 */
 /* 상품 목록 list 관련 공통 스타일 */
+/* 셀렉트 박스 화살표 */
 /* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
@@ -281,7 +282,7 @@
   position: relative;
   width: 100%;
 }
-#searchResultProductList .thumb > a {
+#searchResultProductList .thumb > a, #searchResultProductList .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
@@ -289,7 +290,7 @@
   border-radius: 2px;
   font-size: 0;
 }
-#searchResultProductList .thumb > a > img {
+#searchResultProductList .thumb > a > img, #searchResultProductList .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;

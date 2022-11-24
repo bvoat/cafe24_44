@@ -6,6 +6,7 @@
 /* 멤버십 관련 */
 /* 멤버십 관련 */
 /* 상품 목록 list 관련 공통 스타일 */
+/* 셀렉트 박스 화살표 */
 /* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
@@ -44,7 +45,7 @@
   position: relative;
   width: 100%;
 }
-#productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb > a {
+#productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb > a, #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
@@ -52,7 +53,7 @@
   border-radius: 2px;
   font-size: 0;
 }
-#productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb > a > img {
+#productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb > a > img, #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -88,8 +89,8 @@
 }
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .icon img {
   height: inherit;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   image-rendering: auto;
 }
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb {

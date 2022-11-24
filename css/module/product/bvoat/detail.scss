@@ -831,13 +831,18 @@
             }
         }
         #tab1{
-            iframe{
+            width: 100%;
+            section{
                 width: 100%;
-                max-width: 450px;
-                min-width: 200px;
-                object-fit: cover;
-                object-position: 50% 50%;
+                padding: 0;
             }
+            // iframe{
+            //     width: 100%;
+            //     max-width: 450px;
+            //     min-width: 200px;
+            //     object-fit: cover;
+            //     object-position: 50% 50%;
+            // }
         }
         #tab2 {
             div {

@@ -41,14 +41,15 @@ window.addEventListener("load", ()=>{
 const tab = [...document.querySelectorAll(".tab")];
 const tab_txt = tab.map((node) => node.innerHTML);
 const tab_hash = tab.map((node) => node.dataset.hash);
-var swiper = new Swiper("#productDetailBottom", {
+var detailTabSwiper = new Swiper("#productDetailBottom", {
   autoHeight: true,
   observer: true,
   observeParents: true,
   slidesPerView: "auto",
   centeredSlides: true,
   spaceBetween: 22,
-  loop: true,
+  // loop: true,
+  lazy: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
   edgeSwipeDetection: true,
@@ -65,19 +66,6 @@ var swiper = new Swiper("#productDetailBottom", {
         tab_txt[index]
       } data-hash=${tab_hash[index]}> ${tab_txt[index]} </span> `;
     },
-  },
-  on: {
-    // slideChangeTransitionEnd: function change() {
-    //  //autoHeight가 가능해서 window load 때만 height 값 주고 나머지는 autoHeight 처리
-    //   const productDetailBottom = document.getElementById("productDetailBottom");
-    //   const detail_swiper_wrap = document.getElementById("detail_swiper_wrap");
-    //   const computedHeight = (idx) => {
-    //   let pre_tab = getComputedStyle(document.querySelector(`#tab${idx}`));
-    //     productDetailBottom.style.height = (pre_tab.height + 100 + 'px');
-    //     detail_swiper_wrap.style.height = (pre_tab.height + 100 + 'px');
-    //   };
-    //   computedHeight(swiper.realIndex);
-    // },
   },
 });
 

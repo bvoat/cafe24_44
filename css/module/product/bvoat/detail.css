@@ -6,6 +6,7 @@
 /* 멤버십 관련 */
 /* 멤버십 관련 */
 /* 상품 목록 list 관련 공통 스타일 */
+/* 셀렉트 박스 화살표 */
 /* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
@@ -389,7 +390,7 @@
   content: " ";
   width: 14px;
   height: 14px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.625' height='14.625'%3E%3Cpath data-name='Icon ionic-md-information-circle' d='M7.313 0a7.313 7.313 0 1 0 7.312 7.313A7.316 7.316 0 0 0 7.313 0Zm.738 10.969H6.574V6.574h1.477Zm0-5.836H6.574V3.656h1.477Z' fill='%23707070'/%3E%3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='none'%3E%3Cpath fill='%23AFAFAF' d='M7.31 0a7.31 7.31 0 1 0 0 14.63A7.31 7.31 0 0 0 7.31 0Zm.74 10.97H6.57v-4.4h1.48v4.4Zm0-5.84H6.57V3.66h1.48v1.47Z'/%3E%3C/svg%3E");
   background-size: contain;
   margin-right: 5px;
 }
@@ -452,7 +453,7 @@
   content: " ";
   width: 14px;
   height: 14px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.625' height='14.625'%3E%3Cpath data-name='Icon ionic-md-information-circle' d='M7.313 0a7.313 7.313 0 1 0 7.312 7.313A7.316 7.316 0 0 0 7.313 0Zm.738 10.969H6.574V6.574h1.477Zm0-5.836H6.574V3.656h1.477Z' fill='%23707070'/%3E%3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='none'%3E%3Cpath fill='%23AFAFAF' d='M7.31 0a7.31 7.31 0 1 0 0 14.63A7.31 7.31 0 0 0 7.31 0Zm.74 10.97H6.57v-4.4h1.48v4.4Zm0-5.84H6.57V3.66h1.48v1.47Z'/%3E%3C/svg%3E");
   background-size: contain;
   margin-right: 5px;
 }
@@ -749,14 +750,12 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#productDetailBottom .detail_swiper_wrap #tab1 iframe {
+#productDetailBottom .detail_swiper_wrap #tab1 {
   width: 100%;
-  max-width: 450px;
-  min-width: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
+}
+#productDetailBottom .detail_swiper_wrap #tab1 section {
+  width: 100%;
+  padding: 0;
 }
 #productDetailBottom .detail_swiper_wrap #tab2 div .tab-tip {
   text-align: center;

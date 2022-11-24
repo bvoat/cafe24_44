@@ -45,3 +45,4 @@ function NumAni__increaseWon($el) {
         $el.addClass('num-action-done');
     }
 }
+
