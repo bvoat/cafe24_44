@@ -41,7 +41,7 @@ function getFollowData() {
 				</ul>
 			</li>
 			`)
-		});}
+		});} 
 		else{
 			let text = param == 'follower' ? '팔로워' : '팔로잉';
 			let sentence = param == 'follower' ? '팔로워가 없어요 🥲' : '팔로잉 한 사람이 없어요 🥲';
