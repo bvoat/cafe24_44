@@ -11,21 +11,22 @@
 	});
 }
 //1. URL에서 member_id 받기 
-let member_id = getUrlParams('member_id');
+let member_id;
 
 //1-1. 상태 값 초기화
 let compareID;
-
+let getSessionID;
 /**
  * 세션 있는지 반환 받아서 compareID 할당
  */
 function assignMemberID(member_id) {		
+	console.log('start member_id: ', member_id);
 	//2. 세션 있는지 확인하기
 	// console.log("로그인 세션 있나요?" , sessionCheck("member_1"));
 	if (sessionCheck("member_1")) {
 		//2-1. 세션 있으면
 		//세션 member_id와 url member_id 비교하기
-		let getSessionID = JSON.parse(sessionStorage.getItem("member_1")).data.member_id;
+		getSessionID = JSON.parse(sessionStorage.getItem("member_1")).data.member_id ? JSON.parse(sessionStorage.getItem("member_1")).data.member_id : login_userId;
 		console.log('getSessionID: ', getSessionID);
 		//2-1-1. 세션 member_id와 url member_id가 같다면
 		//2-1-1-1. compareID true -> 내 정보 보기
@@ -83,9 +84,10 @@ const makeDOMuserProfile = (data) => {
 	};
 	console.log('is_me: ', obj.is_me);
 	console.log('isFollowing: ', obj.isFollowing);
-
+	console.log('compareID', compareID)
 
 	if (compareID) {
+		console.log("내 프로필 뷰");
 		//내 프로필 뷰
 		//리뷰 쓰기 + 프로필 뷰
 		document.querySelector(".user_reaction").insertAdjacentHTML("afterbegin", `
@@ -110,9 +112,9 @@ const makeDOMuserProfile = (data) => {
 		//팔로워 링크, 수
 		document.querySelector(".info .follower a").setAttribute("href", `/myshop/follow.html?mode=follower&member_id=${member_id}`);
 		document.querySelector(".info .follower a span").insertAdjacentText("beforeend", obj.follower_cnt);
-
-
 	} else if (!compareID) {
+		console.log("상대방 프로필 뷰");
+
 		//상대방 프로필 뷰
 		//팔로우
 		document.querySelector(".user_reaction").insertAdjacentHTML("afterbegin", `
@@ -173,7 +175,7 @@ function getBeginningReviewData(member_id) {
 	page = 1;
 	console.log('최초 페이지 page: ', page);
 	console.log('받아올 아이디', member_id);
-	console.log('받아오고 있는 주소', `https://${api_domain}.shop/reviews/data?member_id=${member_id}&login_id=${login_userId}&page=${page}`)
+	console.log('받아오고 있는 주소', `https://${api_domain}.shop/reviews/data?member_id=${member_id}&login_id=${getSessionID}&page=${page}`)
 	//로딩 스피너 시작
 	loading(true);
 	fetch(`https://${api_domain}.shop/reviews/data?member_id=${member_id}&login_id=${login_userId}&page=${page}`, {
@@ -181,16 +183,26 @@ function getBeginningReviewData(member_id) {
 	})
 		.then((response) => response.json())
 		.then((response) => {
+
 			//로딩 스피너 종료
 			loading(false);
 			reviewsData = response.data;
 			profileData = response;
-			console.log('response: ', response);
+			console.log('profileData: ', profileData);
 			//response의 data length가 0이 아니면 DOM생성 실행
 			if(reviewsData.length != 0){
 				makeDOMuserProfile(profileData);
 				makeDOMforFeed(reviewsData);				
 			} else {
+				makeDOMuserProfile(profileData);
+				//리뷰를 기다리고 있어요 추가
+				document.querySelector(".reviews_id_list")
+				.insertAdjacentHTML("beforeend", `
+				<div id="reviewsEmpty">
+					<h2 class="reviews_empty">게시물 없음</h2>
+					<p>${profileData.empty}</p>
+				</div>
+				`)
 				intersectionObserver.disconnect(lastItem);
 				return false;
 			}
@@ -268,5 +280,10 @@ async function loadMoreItem(page, member_id) {
 	}
 }
 //member_id 할당부터 시작
-window.addEventListener("load", assignMemberID(member_id));
+window.addEventListener("load", ()=>{
+	setTimeout(()=>{
+		member_id = getUrlParams('member_id') ? getUrlParams('member_id') : document.getElementById("member_id");
+		assignMemberID(member_id)
+	}, 1100)
+});
 

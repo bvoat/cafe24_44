@@ -1316,6 +1316,8 @@
   color: #ffffff;
   left: calc(50% - 54.5px);
   bottom: 94px;
+  margin-bottom: calc(constant(safe-area-inset-bottom) + 1px);
+  margin-bottom: calc(env(safe-area-inset-bottom) + 1px);
 }
 #reviewsProfileWrap .feed_btn::before {
   display: block;

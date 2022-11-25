@@ -29,6 +29,7 @@
     let lastItem;
     //리뷰피드인지 상품인지 확인
     let productNo = getUrlParams('product_no');
+    console.log('productNo: ', productNo);
     //s3
     const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
 
@@ -37,10 +38,10 @@
         fetchURL = `https://${api_domain}.shop/reviews/data?`;
         mode = 'feed';
     } else {
-        fetchURL = `https://${api_domain}.shop/reviews/data?product_no=${productNo}`;
+        fetchURL = `https://${api_domain}.shop/reviews/data?product_no=${productNo}&`;
         mode = 'detail';
     }
-    console.log('mode: ', mode);
+    console.log('mode: ', mode, 'fetchURL', fetchURL);
     //로그인 한 유저 id
     let login_member;
     if(sessionStorage.getItem("member_1") != null){
