@@ -33,7 +33,7 @@ jobs:
           *.scss
           *.css.map
     - name: 📂 Sync files skin45
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
         server: ${{ secrets.ACTION_FTP_HOST }}
         server-dir: /sde_design/skin45/
