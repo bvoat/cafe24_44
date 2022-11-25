@@ -76,14 +76,8 @@ let member_id;
 */
 function getWriteData() {
 	//URL에서 member_id 받기 
-	member_id = !getUrlParams('member_id') ? document.querySelector("#member_id").value : getUrlParams('member_id');
+	member_id = document.getElementById("member_id").value;
 	console.log('member_id: ', member_id);
-
-	//본인 확인
-	if(login_userId != member_id){
-		alert("본인의 리뷰만 작성할 수 있어요 :)");
-		history.back();
-	}
 
 
 	let unwrittenReviewsData;
@@ -197,7 +191,7 @@ function getWriteData() {
 window.addEventListener("load", ()=>{
 	setTimeout(()=>{
 		getWriteData()
-	},600)
+	},1100)
 });
 
 

@@ -2016,6 +2016,14 @@
 #reviewsUserFollowWrap #reviewsUserFollowListBox {
   padding: 25px 0;
 }
+#reviewsUserFollowWrap #reviewsUserFollowListBox #reviewsUserFollowNoHave {
+  width: 100%;
+  height: 200px;
+}
+#reviewsUserFollowWrap #reviewsUserFollowListBox #reviewsUserFollowNoHave p {
+  text-align: center;
+  font-size: 1.4rem;
+}
 #reviewsUserFollowWrap #reviewsUserFollowListBox #reviewsUserFollowList li.user_item ul.user_box {
   position: relative;
   display: flex;
