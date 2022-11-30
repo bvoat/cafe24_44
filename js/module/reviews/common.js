@@ -149,6 +149,7 @@ const clickFollowButton = () => {
 	followBtn.forEach((target)=>{
 		target.addEventListener("click", (event)=>{
 			event.stopPropagation();
+            console.log('login_userId: ', login_userId);
 			if(login_userId == null || login_userId == undefined){
 				alert("로그인 후에 이용해주세요 :)")
 				return false;

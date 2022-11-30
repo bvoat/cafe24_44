@@ -1569,6 +1569,27 @@
   background: #E2E2E2;
   margin-top: 23px;
 }
+#reviewsWriteWrap #reviewsWriteBox #reviewsRate .star {
+  position: relative;
+  font-size: 3.5rem;
+  color: #ddd;
+}
+#reviewsWriteWrap #reviewsWriteBox #reviewsRate .star input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+#reviewsWriteWrap #reviewsWriteBox #reviewsRate .star span {
+  width: 0;
+  position: absolute;
+  left: 0;
+  color: #F9F100;
+  overflow: hidden;
+  pointer-events: none;
+}
 #reviewsWriteWrap #reviewsWriteBox #reviewsRate .rateit {
   margin-bottom: 8px;
   font-size: 100px;

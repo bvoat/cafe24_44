@@ -14,37 +14,37 @@
 let member_id;
 
 //1-1. 상태 값 초기화
-let compareID;
-let getSessionID;
+let compareMode;
+let getLoginID;
 /**
- * 세션 있는지 반환 받아서 compareID 할당
+ * 세션 있는지 반환 받아서 compareMode 할당
  */
-function assignMemberID(member_id) {		
-	console.log('start member_id: ', member_id);
+function assignMemberID(param_member_id) {		
+	console.log('start member_id: ', param_member_id);
+	getLoginID = document.getElementById("member_id")?.value
+	!= undefined ? document.getElementById("member_id").value : '' ;
+
 	//2. 세션 있는지 확인하기
-	// console.log("로그인 세션 있나요?" , sessionCheck("member_1"));
-	if (sessionCheck("member_1")) {
+	if (getLoginID != '') {
 		//2-1. 세션 있으면
 		//세션 member_id와 url member_id 비교하기
-		getSessionID = JSON.parse(sessionStorage.getItem("member_1")).data.member_id ? JSON.parse(sessionStorage.getItem("member_1")).data.member_id : login_userId;
-		console.log('getSessionID: ', getSessionID);
-		//2-1-1. 세션 member_id와 url member_id가 같다면
-		//2-1-1-1. compareID true -> 내 정보 보기
-		//2-1-2. 세션 member_id와 url member_id가 다르다면
-		//2-1-2-1. compareID false -> 상대방 정보 보기
-		if (String(getSessionID) === String(member_id)) {
-			compareID = true
+		console.log('getLoginID: ', getLoginID);
+		//2-1-1. 세션 member_id와 param_member_id가 같다면
+		//2-1-1-1. compareMode true -> 내 정보 보기
+		//2-1-2. 세션 member_id와 param_member_id가 다르다면
+		//2-1-2-1. compareMode false -> 상대방 정보 보기
+		if (String(getLoginID) === String(param_member_id)) {
+			compareMode = true
 		}
 		else {
-			compareID = false;
+			compareMode = false;
 		}
 
 	} else {
-		//2-2. 세션 없으면 
-		//compareID = false
-		compareID = false;
+		//2-2. 세션 없으면 (로그인 안 했으니까 내거 볼 수 없음)
+		compareMode = false;
 	}
-	getBeginningReviewData(member_id);
+	getBeginningReviewData(param_member_id);
 }
 
 // 마지막 자식요소에 옵저버 붙이기
@@ -78,15 +78,14 @@ const makeDOMuserProfile = (data) => {
 		userNotWriteTotal: data.cnt_not_write ? data.cnt_not_write : '0',
 		isFollowing: data.is_following ? data.is_following == true ? "following" : "follow" : "follow",
 		btn_text: data.is_following ? data.is_following == true ? "팔로잉" : "팔로우" : "팔로우",
-		is_me : member_id == login_userId || data.nickname.includes("네이버") ? 'displaynone' : 'diff',
+		is_me : member_id == getLoginID || data.nickname.includes("네이버") ? 'displaynone' : 'diff',
 		follower_cnt: data.follower_cnt ? data.follower_cnt : '0',
 		following_cnt: data.following_cnt ? data.following_cnt : '0'
 	};
 	console.log('is_me: ', obj.is_me);
 	console.log('isFollowing: ', obj.isFollowing);
-	console.log('compareID', compareID)
 
-	if (compareID) {
+	if (compareMode) {
 		console.log("내 프로필 뷰");
 		//내 프로필 뷰
 		//리뷰 쓰기 + 프로필 뷰
@@ -112,7 +111,7 @@ const makeDOMuserProfile = (data) => {
 		//팔로워 링크, 수
 		document.querySelector(".info .follower a").setAttribute("href", `/myshop/follow.html?mode=follower&member_id=${member_id}`);
 		document.querySelector(".info .follower a span").insertAdjacentText("beforeend", obj.follower_cnt);
-	} else if (!compareID) {
+	} else if (!compareMode) {
 		console.log("상대방 프로필 뷰");
 
 		//상대방 프로필 뷰
@@ -169,16 +168,18 @@ const makeDOMforFeed = (data) => {
 /**
  * 최초 데이터 수신
 */
-function getBeginningReviewData(member_id) {
+function getBeginningReviewData(param_member_id) {
 	let reviewsData;
 	let profileData;
 	page = 1;
 	console.log('최초 페이지 page: ', page);
-	console.log('받아올 아이디', member_id);
-	console.log('받아오고 있는 주소', `https://${api_domain}.shop/reviews/data?member_id=${member_id}&login_id=${getSessionID}&page=${page}`)
+	console.log('받아올 아이디', param_member_id);
+	console.log('받아오고 있는 주소', `https://${api_domain}.shop/reviews/data?member_id=${param_member_id}&login_id=${getLoginID}&page=${page}`);
+	console.log('compareMode', compareMode);
+
 	//로딩 스피너 시작
 	loading(true);
-	fetch(`https://${api_domain}.shop/reviews/data?member_id=${member_id}&login_id=${login_userId}&page=${page}`, {
+	fetch(`https://${api_domain}.shop/reviews/data?member_id=${param_member_id}&login_id=${getLoginID}&page=${page}`, {
 		method: "GET",
 	})
 		.then((response) => response.json())
@@ -282,8 +283,9 @@ async function loadMoreItem(page, member_id) {
 //member_id 할당부터 시작
 window.addEventListener("load", ()=>{
 	setTimeout(()=>{
-		member_id = getUrlParams('member_id') ? getUrlParams('member_id') : document.getElementById("member_id");
+		member_id = getUrlParams('member_id');
+		console.log('parameter member_id: ', member_id);
 		assignMemberID(member_id)
-	}, 1100)
+	}, 1200)
 });
 

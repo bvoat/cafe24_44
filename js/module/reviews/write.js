@@ -4,12 +4,7 @@ const params_seq = getUrlParams("seq");
 const params_id = getUrlParams("member_id");
 const params_mode = getUrlParams("mode");
 
-//접속 시 자격 체크
-//로그인 검사는 모듈로 대체
-if(params_id != login_userId){
-	alert("본인의 리뷰만 작성할 수 있습니다.");
-	location.href = "/reviews/feed.html";
-}
+
 //s3
 const s3url = "https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com";
 //정보 객체 생성
@@ -110,9 +105,10 @@ function getWriteData(params) {
 			//숫자 표시
 			document.querySelector(".text_num").innerHTML = review_data.reviews.content.length;
 			document.querySelector("#rate").value = review_data.reviews.rate;
-			//rateit에 value 설정 위해 제이쿼리 사용
-			$('#rateit').rateit("value", review_data.reviews.rate);
-			console.log("eview_data.reviews.imgs", review_data.reviews.imgs)
+			document.querySelector(`.star span`).style.width = `${review_data.reviews.rate * 2 * 10}%`;
+			document.querySelector(".rate_star").dataset.value = review_data.reviews.rate;
+			
+			console.log("review_data.reviews.imgs", review_data.reviews.imgs)
 			//이미지가 있는 경우에 이미지 삽입
 			if([...review_data.reviews.imgs].length > 0){
 				[...review_data.reviews.imgs].forEach((image, index) => {
@@ -127,7 +123,16 @@ function getWriteData(params) {
 		}
 	})
 }
-window.addEventListener("load", getWriteData(searchParams));
+window.addEventListener("load", ()=>{
+	//접속 시 자격 체크
+	//로그인 검사는 모듈로 대체
+	if(params_id != document.getElementById("login_id").value){
+		alert("본인의 리뷰만 작성할 수 있습니다.");
+		location.href = "/reviews/feed.html";
+	}
+	
+	setTimeout(getWriteData(searchParams), 1100);
+});
 
 /* 쓰기 기능 시작 */
 
@@ -158,10 +163,14 @@ window.addEventListener("load", getWriteData(searchParams));
 /**
  * 별점 클릭 시 input#rate에 입력
  */
-let rate_range = document.querySelector("#rateit");
-rate_range.addEventListener("click", ()=>{
-	document.querySelector("#rate").value = document.querySelector(".rateit-range").ariaValueNow;
-});
+let rate;
+let rate_input = document.querySelector("#rate");
+const drawStar = (target) => {
+	rate = target.value;
+    document.querySelector(`.star span`).style.width = `${rate * 10}%`;
+	target.dataset.value=target.value / 2;
+	rate_input.value=target.value / 2;
+}
 
 /**
  * textarea length 1000자 제한
@@ -216,7 +225,7 @@ const attachImage = (file) => {
 	})
 	//이미지 갯수 검증
 	if(document.getElementById('appendedArea').children.length+file.files.length > 4) {
-		alert("사진은 4장까지 추가 가능합니다.");
+		alert("사진은 4장까지만 추가 가능합니다.");
 		imageValid = false;
 		return false;
 	}
@@ -322,7 +331,7 @@ async function registerReview (event) {
 	createIndexAttachedImage(appended_image);
 
 	//별점 검사
-	if(document.getElementById("rate").value == 'undefined' || document.getElementById("rate").value == ''){
+	if(document.getElementById("rate").value == ''){
 		alert("구매하신 상품 별점을 알려주세요 :)")
 		return false;
 	}

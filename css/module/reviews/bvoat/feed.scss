@@ -142,6 +142,7 @@
             margin: 0 12px 10px 0;
             bottom: 0;
             right: 0;
+            
 
             &::before {
               display: block;
@@ -1467,7 +1468,27 @@
         background: #E2E2E2;
         margin-top: 23px;
       }
-
+      .star {
+        position: relative;
+        font-size: 3.5rem;
+        color: #ddd;
+        input {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          opacity: 0;
+          cursor: pointer;
+        }
+        span {
+          width: 0;
+          position: absolute; 
+          left: 0;
+          color: #F9F100;
+          overflow: hidden;
+          pointer-events: none;
+        }
+      }
       .rateit{
         margin-bottom: 8px;
         font-size: 100px;
