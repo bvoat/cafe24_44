@@ -12,7 +12,7 @@ jobs:
     - name: 📂 Sync files mobile21
       uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
-        server: ${{ secrets.ACTION_FTP_HOST }}
+        server: bvoatofficial.ftp.cafe24.com
         server-dir: /sde_design/mobile21/
         username: bvoatofficial
         password: ${{ secrets.ACTION_FTP_PWD }}
@@ -35,7 +35,7 @@ jobs:
     - name: 📂 Sync files skin45
       uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
-        server: ${{ secrets.ACTION_FTP_HOST }}
+        server: bvoatofficial.ftp.cafe24.com
         server-dir: /sde_design/skin45/
         username: bvoatofficial
         password: ${{ secrets.ACTION_FTP_PWD }}
