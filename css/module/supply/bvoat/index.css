@@ -13,12 +13,83 @@
 #supplyMinishop {
   width: 100%;
   max-width: 450px;
+  margin: 81px 0 30px 0;
 }
 #supplyMinishop #supplyMinishopTitle {
   width: 100%;
+  display: block;
+  margin: 0 0 20px 0;
 }
 #supplyMinishop #supplyMinishopTitle img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+#supplyMinishop #supplyItemSearch {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+}
+#supplyMinishop #supplyItemSearch fieldset {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  border: 0;
+}
+#supplyMinishop #supplyItemSearch fieldset label {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  cursor: pointer;
+}
+#supplyMinishop #supplyItemSearch fieldset #searchSection {
+  display: flex;
+  flex-flow: row nowrap;
+}
+#supplyMinishop #supplyItemSearch fieldset #searchSection #searchSupply {
+  display: inline-block;
+  width: 50px;
+  border: 1px solid #E2E2E2;
+  border-radius: 2px;
+}
+#supplyMinishop #supplyItemSearch fieldset #searchSection #searchBtn {
+  display: inline-block;
+  background: transparent;
+  margin-left: 10px;
+  border: 1px solid #E2E2E2;
+  padding: 0 8px;
+}
+#supplyMinishop #supplyItemList #product_normalmenu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 50px;
+  padding: 11px 0;
+}
+#supplyMinishop #supplyItemList #product_normalmenu > select {
+  display: block;
+  position: absolute;
+  width: 67px;
+  height: 17px;
+  right: 10px;
+  padding: 2px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  color: #707070;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+#supplyMinishop #supplyItemList #product_normalmenu > label {
+  display: block;
+  position: absolute;
+  font-size: 1.5rem;
+  top: calc(50% - 12px);
+  right: 11px;
+  color: #707070;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */

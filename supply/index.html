@@ -7,41 +7,7 @@
         {$supply_main_image}
     </section>
 
-<!-- 미니샵 상품 검색 -->
-<section module="Mall_SupplySearch">
-    <!--@css(/css/module/mall/supplySearch.css)-->
-    <fieldset>
-        <legend class="title">샵 상품 검색</legend>
-        {$form.searchSupply}<input type="image" src="http://img.echosting.cafe24.com/skin/base_ko_KR/layout/btn_search.gif" alt="검색" onclick="{$action_search_submit}" /></fieldset>
-</section>
-<!-- 미니샵 상품 검색 -->
-<!-- 공급사 상품 카테고리 -->
-<div module="Layout_CategorySupplyList"  id="category">
-    <!--@css(/css/module/layout/categorySupplyList.css)-->
-    <div class="mainDirect {$main_title_display|display}"><a href="{$main_url}">{$main_title}</a></div>
-    <div class="position" id="{$category_list}">
-        <ul>
-            <li module="Layout_Second" id='{$category_no}'><a href='{$category_url}' class="second">{$category_name}</a>
-                <ul module="Layout_Third">
-                    <li id='{$category_no}' class="depth2"  onmouseover="{$sub_category_show}" onmouseout="{$sub_category_hide}"><a href='{$category_url}'>{$category_name}</a>
-                        <div class='sub-category' style='display:none;'>
-                            <ul>
-                                <li module="Layout_Fourth" id='{$category_no}'><a href='{$category_url}'>{$category_name}</a>
-                                    <ul module="Layout_Fifth">
-                                        <li  id='{$category_no}'><a href='{$category_url}'>{$category_name}</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</div>
-<!-- 공급사 상품 카테고리 -->
-    <section module="product_normalpackage">
+    <section id="supplyItemList" module="product_normalpackage">
         <!-- 추천 상품 진열 -->
         <!--@import(/product/product_module/listproduct/product_listrecommend.html)-->
         <!-- 추천 상품 진열 -->
@@ -54,11 +20,9 @@
             <label for="selArray">▾</label>
         </section>
         <!-- 상품 정렬 select -->
-
         <!-- 상품 목록 -->
         <!--@import(/product/product_module/listproduct/product_list.html)-->
         <!-- 상품 목록 -->
-
         <!-- 더보기 버튼 -->
         <div id="product_listmore" module="product_listmore">
             <button class="moreview_btn" onclick="{$more_action}">
@@ -67,27 +31,10 @@
         </div>
         <!-- 더보기 버튼 -->
     </section>
-
-
-
-</article>
-
 <!-- 공급사:판매사정보 -->
 <div module="Mall_SupplyInfo" class="margin-footer supplyInfo ">
     {$supply_info}
 </div>
 <!-- //공급사:판매사정보 -->
-
-
-</div>
-
-<script>
-
-
-
-</script>
-
-
-
-
+</article>
 <!--@define(cmc_log)-->
