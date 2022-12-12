@@ -13,15 +13,15 @@
         margin-bottom: 18px;
 
         // 내부 점선
-        &::after {
-            content: "";
-            display: block;
-            width: 100%;
-            max-width: 450px;
-            height: 2px;
-            margin: 25px 0;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='428' height='1'%3E%3Cpath data-name='선 328' fill='none' stroke='%23707070' stroke-dasharray='3 7' d='M0 .5h428'/%3E%3C/svg%3E") no-repeat center;
-        }
+        // &::after {
+        //     content: "";
+        //     display: block;
+        //     width: 100%;
+        //     max-width: 450px;
+        //     height: 2px;
+        //     margin: 25px 0;
+        //     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='428' height='1'%3E%3Cpath data-name='선 328' fill='none' stroke='%23707070' stroke-dasharray='3 7' d='M0 .5h428'/%3E%3C/svg%3E") no-repeat center;
+        // }
         
 //기획전 이미지 or 카테고리 네임
         h2 {
