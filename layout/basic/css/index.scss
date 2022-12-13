@@ -60,27 +60,35 @@
     /* 인덱스 사각 배너*/
     /* 메인 카테고리 메뉴 */
     #indexCategoryMenu{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        padding: 28px 28px 0;
+        padding: 28px 0 0 0;
         ul{
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
+            width: 90%;
             .index_category{
             width: 100%;
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
+            margin: 0 2.5px;
                a{
+                width: 100%;
                 max-width: 67px;
                 display: flex;
                 flex-flow: column nowrap;
                 align-items: center;
                 .index_category_img_wrap{
+                    width: 100%;
                     display: block;
                     position: relative;
-                    padding-top: 100%;min-width: 67px;
+                    padding-top: 100%;
                     overflow: hidden;
                     border-radius: 50%;
                     font-size: 0;
@@ -95,8 +103,10 @@
                    }
                 }
                 p{
+                    height: 2.4rem;
+                    text-align: center;
                     font-size: 1.2rem;
-                    font-weight: normal;          
+                    font-weight: normal;
                 }
                }
             }
@@ -194,13 +204,17 @@
                         justify-content: flex-start;
                         align-items: center;
                         .recommended_category{
-                            width: 59.87px;.change_listmain_btn{
+                            max-width: 63px;
+                            width: 16%;
+                            margin-right: 1px;
+                            .change_listmain_btn{
                                 display: flex;
                                 flex-flow: column nowrap;
                                 justify-content: center;
                                 align-items: center;
+                                width: 100%;
+                                padding: 10.5px 2.5px;
                                 border-radius: 19px;
-                                padding: 10px 15px;
                                 background: #F2F5F5;
                                 font-size: 1.5rem;
                                 font-weight: 600;
@@ -235,15 +249,17 @@
                     margin-bottom: 22.1px;
                     .freedelivery_list{
                         width: 100%;
+                        
                         .freedelivery{
                             width: 100%;
-                            max-width: 75px;
+                            max-width: 67px;
                             display: flex;
                             flex-flow: column nowrap;
                             justify-content: 
                             center;
                             align-items: center;
                             .freedelivery_btn{
+                                width: 100%;
                                 background: transparent;
                                 .freedelivery_img_wrap{
                                     display: block;
@@ -252,7 +268,6 @@
                                     margin-bottom: 13px;
                                     img{
                                         width: 100%;
-                                        min-width: 74.96px;
                                         height: auto;
                                         object-fit: contain;
                                         box-sizing: border-box;
@@ -262,6 +277,8 @@
                                     }
                                 }
                                 p{
+                                    height: 2.8rem;
+                                    text-align: center;
                                     font-size: 1.4rem;
                                     font-weight: 400;
                                 }
@@ -337,7 +354,7 @@
             align-items: center;
             width: 117px;
             height: 41px;
-            margin: 20px auto 0;
+            margin: 35px auto 0;
             border: 1px solid $bvt-blue;
             border-radius: 28px;
             color: $bvt-blue;
