@@ -51,7 +51,7 @@
 #realTimeOrderList .desc .product_name span {
   color: #292929 !important;
   font-size: 1.29rem !important;
-  font-weight: bold;
+  font-weight: 600;
   word-wrap: break-word;
   word-break: keep-all;
   display: block;

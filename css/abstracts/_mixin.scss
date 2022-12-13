@@ -163,7 +163,7 @@
         .product_name span {
             color: $bvt-black !important;
             font-size: $name-ftsz !important;
-            font-weight: bold;
+            font-weight: 600;
             word-wrap: break-word;
             word-break: keep-all;
             @include ellipsis(2, $name-ftsz);

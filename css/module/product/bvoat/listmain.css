@@ -246,7 +246,7 @@
   margin-bottom: 3px;
 }
 .index_list .desc .summary {
-  font-size: 1.1rem !important;
+  font-size: 1rem !important;
   color: #707070;
   display: block;
   overflow: hidden;
@@ -256,14 +256,14 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.5rem;
+  line-height: 1.4rem;
   margin-bottom: 7px;
 }
 .index_list .desc .product_name,
 .index_list .desc .product_name span {
   color: #292929 !important;
-  font-size: 1.3rem !important;
-  font-weight: bold;
+  font-size: 1.25rem !important;
+  font-weight: 600;
   word-wrap: break-word;
   word-break: keep-all;
   display: block;
@@ -274,8 +274,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.7rem;
-  height: 3.3rem;
+  line-height: 1.65rem;
+  height: 3.2rem;
   margin-bottom: 20px;
 }
 .index_list .thumb {
@@ -880,7 +880,7 @@
 }
 
 .icon {
-  margin-top: 4%;
+  margin-top: 5%;
 }
 .icon img {
   width: auto;

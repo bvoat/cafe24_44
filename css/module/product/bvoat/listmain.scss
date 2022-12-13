@@ -141,7 +141,7 @@
         padding: 0 11px; 
     }
     //상품 설명 (mixin)
-    @include product-desc(7px, 1rem, 1.1rem, 1.3rem);
+    @include product-desc(7px, 1rem, 1rem, 1.25rem);
 
     // 이미지 정사각형 공통 (mixin)
     // thumb 부모에게 width 정해줘야 함!
@@ -712,7 +712,7 @@
 
 //하단 아이콘 신버전
 .icon{
-    margin-top: 4%;
+    margin-top: 5%;
     img{
         width: auto;
         height: inherit;
