@@ -217,9 +217,6 @@
 #bvtHome #indexListmain #recommendedItemsListTitle #recommendedItemsListContents .prdList .list_item {
   margin-bottom: 15.7px;
 }
-#bvtHome #indexListmain #freeDeliveryListTitle {
-  overflow: hidden;
-}
 #bvtHome #indexListmain #freeDeliveryListTitle .freedelivery_wrap {
   width: 100%;
   margin-bottom: 22.1px;
@@ -229,7 +226,6 @@
 }
 #bvtHome #indexListmain #freeDeliveryListTitle .freedelivery_wrap .freedelivery_list .freedelivery {
   width: 100%;
-  max-width: 67px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -260,6 +256,7 @@
   text-align: center;
   font-size: 1.4rem;
   font-weight: 400;
+  color: #292929;
 }
 #bvtHome #indexListmain #freeDeliveryListTitle .freedelivery_wrap .freedelivery_list .freedelivery .freedelivery_btn.active .freedelivery_img_wrap img {
   border: 2px solid #022CFF;
@@ -268,6 +265,9 @@
   font-size: 1.4rem;
   font-weight: 700;
   color: #022CFF;
+}
+#bvtHome #indexListmain #freeDeliveryListTitle #freeDeliveryListContents {
+  overflow: hidden;
 }
 #bvtHome #indexListmain #trendListTitle {
   width: calc(100% + 58px);

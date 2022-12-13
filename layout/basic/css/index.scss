@@ -243,7 +243,6 @@
 
             //무료배송
             #freeDeliveryListTitle{
-                overflow: hidden;
                 .freedelivery_wrap{
                     width: 100%;
                     margin-bottom: 22.1px;
@@ -252,7 +251,7 @@
                         
                         .freedelivery{
                             width: 100%;
-                            max-width: 67px;
+                            // max-width: 67px;
                             display: flex;
                             flex-flow: column nowrap;
                             justify-content: 
@@ -281,6 +280,7 @@
                                     text-align: center;
                                     font-size: 1.4rem;
                                     font-weight: 400;
+                                    color: $bvt-black;
                                 }
                             }
                             .freedelivery_btn.active{
@@ -298,6 +298,9 @@
                         }
                     }
 
+                }
+                #freeDeliveryListContents{
+                    overflow: hidden;
                 }
             }
             //트렌드
