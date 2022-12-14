@@ -1,0 +1,39 @@
+@charset "utf-8";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
+
+#bvtEvent{
+	width: 100%;
+    max-width: 450px;
+    padding: 0;
+    margin: 80px 0;
+
+	#bvtEventImg{
+		width: 100%;
+
+		figure{
+			width: 100%;
+			margin: 0;
+			figcaption{
+				visibility: hidden;
+			}
+			img{
+				width: 100%;
+			}
+		}
+	}
+	#bvtEventModule{
+		width: 100%;
+		height: auto;
+		//big_img width 181.74px
+		.index_list{
+			position: relative;
+			width: 100%;
+			padding: 0;
+			>.listmain{
+				width: 100%;
+				padding: 0;
+			}
+		}
+	}
+}

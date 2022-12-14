@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* 공통 스타일 */
+/* 공통 스타일 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 멤버십 관련 */
+/* 멤버십 관련 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 셀렉트 박스 화살표 */
+/* 상품 목록 list 관련 공통 스타일 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
+#bvtEvent {
+  width: 100%;
+  max-width: 450px;
+  padding: 0;
+  margin: 80px 0;
+}
+#bvtEvent #bvtEventImg {
+  width: 100%;
+}
+#bvtEvent #bvtEventImg figure {
+  width: 100%;
+  margin: 0;
+}
+#bvtEvent #bvtEventImg figure figcaption {
+  visibility: hidden;
+}
+#bvtEvent #bvtEventImg figure img {
+  width: 100%;
+}
+#bvtEvent #bvtEventModule {
+  width: 100%;
+  height: auto;
+}
+#bvtEvent #bvtEventModule .index_list {
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+#bvtEvent #bvtEventModule .index_list > .listmain {
+  width: 100%;
+  padding: 0;
+}/*# sourceMappingURL=event.css.map */
