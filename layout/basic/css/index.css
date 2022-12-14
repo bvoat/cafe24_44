@@ -52,7 +52,6 @@
 }
 #bvtHome #indexSquareBanner .square_banner {
   width: 100%;
-  overflow: hidden;
 }
 #bvtHome #indexSquareBanner .square_banner li a {
   display: block;
