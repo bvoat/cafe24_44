@@ -1,0 +1,36 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/member/bvoat/event.css)-->
+<article id="bvtEvent">
+	<section id="bvtEventImg">
+		<h1 class="displaynone">이벤트 이미지</h1>
+		<figure>
+			<figcaption>이벤트 소개</figcaption>
+			<img src="/bvtIMG/event/event_detail/221214_christmas_event.jpg">
+		</figure>
+	</section>
+	<section id="bvtEventModule">
+		 <div class="index_list">
+			<div class="swiper_container listmain listmain_1" module="product_listmain_104">
+				<!--
+				$count = 100
+				$basket_result = /product/add_basket.html
+				$basket_option = /product/basket_option.html
+				-->
+				<!--@import(/product/product_module/listmain/listmain.html)-->
+				<div class="list_item_progress"></div>
+			</div>
+		</div>
+	</section>
+</article>
+<script>
+//둘러보기 스와이퍼
+var listmainSwiper = new Swiper(".listmain", {
+  spaceBetween: 12,
+  slidesPerView: 3,
+  pagination: {
+    el: ".list_item_progress",
+    type: "progressbar",
+  },
+});
+
+</script>
