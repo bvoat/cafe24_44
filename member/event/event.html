@@ -10,9 +10,24 @@
 	</section>
 	<section id="bvtEventModule">
 		 <div class="index_list">
-			<div class="swiper_container listmain listmain_1" module="product_listmain_104">
+			<h2>카네이테이 같은<br>
+				업사이클링 브랜드 ♻️</h2>
+			<div class="swiper_container listmain listmain_1" module="product_listmain_222">
 				<!--
-				$count = 100
+				$count = 50
+				$basket_result = /product/add_basket.html
+				$basket_option = /product/basket_option.html
+				-->
+				<!--@import(/product/product_module/listmain/listmain.html)-->
+				<div class="list_item_progress"></div>
+			</div>
+		 </div>
+		 <div class="index_list">
+			<h2>크리스마스에 딱<br>
+				선물하기 좋은 가치소비 🎁</h2>
+			<div class="swiper_container listmain listmain_1" module="product_listmain_223">
+				<!--
+				$count = 50
 				$basket_result = /product/add_basket.html
 				$basket_option = /product/basket_option.html
 				-->
@@ -25,8 +40,9 @@
 <script>
 //둘러보기 스와이퍼
 var listmainSwiper = new Swiper(".listmain", {
-  spaceBetween: 12,
+  spaceBetween: 10,
   slidesPerView: 3,
+  slidesPerGroup: 3,
   pagination: {
     el: ".list_item_progress",
     type: "progressbar",

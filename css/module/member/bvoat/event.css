@@ -14,7 +14,7 @@
   width: 100%;
   max-width: 450px;
   padding: 0;
-  margin: 80px 0;
+  margin: 80px 0 120px;
 }
 #bvtEvent #bvtEventImg {
   width: 100%;
@@ -36,7 +36,12 @@
 #bvtEvent #bvtEventModule .index_list {
   position: relative;
   width: 100%;
-  padding: 0;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+#bvtEvent #bvtEventModule .index_list h2 {
+  font-size: 2.2rem;
+  padding: 20px 0;
 }
 #bvtEvent #bvtEventModule .index_list > .listmain {
   width: 100%;
