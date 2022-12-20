@@ -19,6 +19,26 @@
 #bvtEvent #bvtEventImg {
   width: 100%;
 }
+#bvtEvent #bvtEventImg > h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 15px 0;
+}
+#bvtEvent #bvtEventImg > p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+#bvtEvent #bvtEventImg > p > span {
+  font-weight: 700;
+}
+#bvtEvent #bvtEventImg > em {
+  display: block;
+  font-size: 1.6rem;
+  margin: 15px 0;
+  text-align: center;
+}
 #bvtEvent #bvtEventImg figure {
   width: 100%;
   margin: 0;
