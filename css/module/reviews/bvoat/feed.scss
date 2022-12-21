@@ -464,12 +464,24 @@
 
         //날짜
         .content_date {
-          font-size: 1.3rem;
-          color: $bvt-darkgray;
-          opacity: 52%;
-          line-height: 2.1rem;
-          text-align: start;
-          margin-top: 2px;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          margin-top: 15px;
+          p{
+            font-size: 1.3rem;
+            color: $bvt-darkgray;
+            opacity: 52%;
+            line-height: 2.1rem;
+            text-align: start;
+            margin-top: 2px;
+          }
+          .report_btn{
+            background: transparent;
+            font-size: 1.1rem;
+            color: $bvt-darkgray;
+            opacity: 52%;
+          }
         }
       }
 
@@ -631,7 +643,7 @@
             transition: all 0.5s ease-in-out;
           }
           
-          button {
+          .share_text_btn {
             display: block;
             width: 26px;
             height: 26px;

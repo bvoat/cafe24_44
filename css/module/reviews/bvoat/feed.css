@@ -526,12 +526,24 @@
   line-height: 2.2rem;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_content .content_date {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_content .content_date p {
   font-size: 1.3rem;
   color: #707070;
   opacity: 52%;
   line-height: 2.1rem;
   text-align: start;
   margin-top: 2px;
+}
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_content .content_date .report_btn {
+  background: transparent;
+  font-size: 1.1rem;
+  color: #707070;
+  opacity: 52%;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product {
   border: 1px solid #E2E2E2;
@@ -733,7 +745,7 @@
   color: rgba(0, 0, 0, 0);
   transition: all 0.5s ease-in-out;
 }
-#reviewsViewWrap .reviews_item .reviews_reaction_box .reviews_control .reviews_share button {
+#reviewsViewWrap .reviews_item .reviews_reaction_box .reviews_control .reviews_share .share_text_btn {
   display: block;
   width: 26px;
   height: 26px;

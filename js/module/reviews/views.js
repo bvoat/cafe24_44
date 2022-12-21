@@ -76,6 +76,7 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
                 admin : obj.member_id != login_userId ? 'no_admin' : '',
                 isFollowing: obj.is_following ? obj.is_following === 1 ? "following" : "follow" : "follow",
                 is_me : obj.member_id == login_userId || obj.nickname.includes("네이버") ? 'displaynone' : '',
+                report_name : obj.member_id == login_userId ? 'displaynone' : '',
                 btn_text: obj.is_following ? obj.is_following === 1 ? "팔로잉" : "팔로우" : "팔로우",
             };
 
@@ -107,7 +108,7 @@ const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
                             </div>
                             <div class="reviews_content">
                                 <p class="content">${data.content}</p>
-                                <p class="content_date">${data.write_date_tmp}</p>
+                                <div class="content_date"><p>${data.write_date_tmp}</p><button class="report_btn ${data.report_name}" title="게시글 신고/차단 문의하기" onclick="clickReportButton()">신고/차단</button></div>
                             </div>
                             <div class="reviews_product">
                                 <button title="상품 정보" target="_blank" onclick="clickReviewProduct(${data.product_no})">
@@ -387,6 +388,18 @@ const runReviewDelete = (seq) => {
         })
     } catch (error) {
         console.log("삭제 오류입니다. 관리자에게 문의해주세요.");
+        return false;
+    }
+}
+
+/**
+ * 게시글 신고하기
+ */
+const clickReportButton = () => {
+    const report_boolean = confirm("해당 리뷰를 신고하시겠습니까?");
+    if(report_boolean){
+        location.href="https://bvoat.channel.io/lounge";
+    }else{
         return false;
     }
 }
