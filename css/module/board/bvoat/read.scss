@@ -3,10 +3,12 @@
 @import "../../../abstracts/variables";
 
 #productBoardRead{
+    position: relative;
     width: 100%;
     max-width: 450px;
     padding: 37px 0px;
     margin: 80px 0 60px;
+    z-index: 1;
 
     #productBoardReadTitle {
         width: 100%;
