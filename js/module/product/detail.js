@@ -28,12 +28,14 @@ if (review_frame != null) {
 window.addEventListener("load", ()=>{
   const productDetailBottom = document.getElementById("productDetailBottom");
   const detail_swiper_wrap = document.getElementById("detail_swiper_wrap");
-  let firstTab = getComputedStyle(productDetailBottom);
-  const firstControlContentWrapHeight = (firstTab) => {
-    productDetailBottom.style.height = (firstTab.height + 100 + 'px');
-    detail_swiper_wrap.style.height = (firstTab.height + 100 + 'px');
-  };
-  firstControlContentWrapHeight(firstTab)
+  if(productDetailBottom){
+    let firstTab = getComputedStyle(productDetailBottom);
+    const firstControlContentWrapHeight = (firstTab) => {
+      productDetailBottom.style.height = (firstTab.height + 100 + 'px');
+      detail_swiper_wrap.style.height = (firstTab.height + 100 + 'px');
+    };
+    firstControlContentWrapHeight(firstTab);
+  }
 })
 
 //상품 상세 하단 페이지 탭 슬라이더
