@@ -60,7 +60,6 @@
                                 <a href="#none" class="btnNormalFix sizeS btnReport" onclick="{$board_report_display}">신고</a>
                             </span>
                         </div>
-                        <!--@import(/board/report_popup.html)-->
                     </td>
                 </tr>
                 <tr class="attach {$config.use_attach|display}">
@@ -84,6 +83,8 @@
                     <a href="#none" onclick="{$action_spam_cancle}" class="btnNormalFix sizeS {$is_global_display|display}">스팸해제</a>
                 </span>
                 <a href="{$link_board_list}" class="btnNormalFix sizeS">목록</a>
+                    <a href="#none" class="btnNormalFix sizeS btnReport" onclick="{$board_report_display}">신고</a>
+                <!--@import(/board/report_popup.html)-->
             </span>
             <span class="gRight">
                 <a href="#none" onclick="{$action_delete}" class="btnNormalFix sizeS {$delete_button_auth|display}">삭제</a>
@@ -241,11 +242,11 @@
 </div>
 
 <div module="board_listsgroup_4">
-    <h3>관련 글 보기</h3>
+
     <!--@css(/css/module/board/listsgroup.css)-->
     <!--
         $count = 5
-        $product_name_cut = 30
+        $product_name_cut = 10
     -->
     <div class="ec-base-table typeList gBorder">
         <table border="1" summary="">
