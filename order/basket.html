@@ -12,7 +12,7 @@
         <div class="basket_count" module="Order_TabInfo">
             <p>장바구니 상품 {$basket_count}개</p>
             <button id="product_select_all" class="prd_select_btn" data-status="off">전체선택</button>
-            
+
         </div>
         <!-- empty -->
         <div class="empty" module="Order_Empty">
@@ -48,29 +48,29 @@
                                 </p>
                                 <div class="price_list">
                                     <p class="{$discount} display_product">
-                                        <span>판매가 :   </span>
+                                        <span>판매가 : </span>
                                         <strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong>
                                     <p class="{$product_price_display|display}">
                                         {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p>
                                     </p>
                                     <p class="{$product_sale_price_display|display} display_discount">
-                                        <span>할인가 :   </span>
+                                        <span>할인가 : </span>
                                         <strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong>
                                     <p class="{$product_sale_price_ref_display|display}">
                                         {$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}
                                     </p>
                                     </p>
                                 </div>
-                                <p class="mileage">마일리지 :   {$mileage}</p>
+                                <p class="mileage">마일리지 : {$mileage}</p>
                                 <div class="quantity">
                                     <a href="javascript:;" class="quan_down" onclick="{$out_shortcut}">감소</a>
-                                    {$form.quantity}                                    <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
+                                    {$form.quantity} <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
                                         증가
                                     </a>
-                                    
+
                                 </div>
                                 <div class="total">
-                                    <span>합계   </span>
+                                    <span>합계 </span>
                                     <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}</strong>
                                     <div class="{$sum_price_display|display}">
                                         {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}</div>
@@ -102,29 +102,29 @@
                                 </p>
                                 <div class="price_list">
                                     <p class="{$discount} display_product">
-                                        <span>판매가 :   </span>
+                                        <span>판매가 : </span>
                                         <strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong>
                                     <p class="{$product_price_display|display}">
                                         {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p>
                                     </p>
                                     <p class="{$product_sale_price_display|display} display_discount">
-                                        <span>할인가 :   </span>
+                                        <span>할인가 : </span>
                                         <strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong>
                                     <p class="{$product_sale_price_ref_display|display}">
                                         {$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}
                                     </p>
                                     </p>
                                 </div>
-                                <p class="mileage">마일리지 :   {$mileage}</p>
+                                <p class="mileage">마일리지 : {$mileage}</p>
                                 <div class="quantity">
                                     <a href="javascript:;" class="quan_down" onclick="{$out_shortcut}">감소</a>
-                                    {$form.quantity}                                    <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
+                                    {$form.quantity} <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
                                         증가
                                     </a>
-                                    
+
                                 </div>
                                 <div class="total">
-                                    <span>합계   </span>
+                                    <span>합계 </span>
                                     <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}</strong>
                                     <div class="{$sum_price_display|display}">
                                         {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}</div>
@@ -161,29 +161,34 @@
                                 </p>
                                 <div class="price_list">
                                     <p class="{$discount} display_product">
-                                        <span>판매가 :   </span>
+                                        <span>판매가 : </span>
                                         <strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong>
                                     <p class="{$product_price_display|display}">
                                         {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p>
                                     </p>
+                                    <p class="display_product">
+                                        <span>배송비 : </span>
+                                        <strong>{$delv_price_front_head}{$delv_price_front}{$delv_price_front_tail}</strong>
+                                        <strong>[{$delv_type}] / 기본배송</strong>
+                                    </p>
                                     <p class="{$product_sale_price_display|display} display_discount">
-                                        <span>할인가 :   </span>
+                                        <span>할인가 : </span>
                                         <strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong>
                                     <p class="{$product_sale_price_ref_display|display}">
                                         {$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}
                                     </p>
                                     </p>
                                 </div>
-                                <p class="mileage">마일리지 :   {$mileage}</p>
+                                <p class="mileage">마일리지 : {$mileage}</p>
                                 <div class="quantity">
                                     <a href="javascript:;" class="quan_down" onclick="{$out_shortcut}">감소</a>
-                                    {$form.quantity}                                    <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
+                                    {$form.quantity} <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
                                         증가
                                     </a>
-                                    
+
                                 </div>
                                 <div class="total">
-                                    <span>합계   </span>
+                                    <span>합계 </span>
                                     <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}</strong>
                                     <div class="{$sum_price_display|display}">
                                         {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}</div>
@@ -215,29 +220,34 @@
                                 </p>
                                 <div class="price_list">
                                     <p class="{$discount} display_product">
-                                        <span>판매가 :   </span>
+                                        <span>판매가 : </span>
                                         <strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong>
                                     <p class="{$product_price_display|display}">
                                         {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p>
                                     </p>
+                                    <p class="display_product">
+                                        <span>배송비 : </span>
+                                        <strong>{$delv_price_front_head}{$delv_price_front}{$delv_price_front_tail}</strong>
+                                        <strong>[{$delv_type}] / 기본배송</strong>
+                                    </p>
                                     <p class="{$product_sale_price_display|display} display_discount">
-                                        <span>할인가 :   </span>
+                                        <span>할인가 : </span>
                                         <strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong>
                                     <p class="{$product_sale_price_ref_display|display}">
                                         {$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}
                                     </p>
                                     </p>
                                 </div>
-                                <p class="mileage">마일리지 :   {$mileage}</p>
+                                <p class="mileage">마일리지 : {$mileage}</p>
                                 <div class="quantity">
                                     <a href="javascript:;" class="quan_down" onclick="{$out_shortcut}">감소</a>
-                                    {$form.quantity}                                    <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
+                                    {$form.quantity} <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
                                         증가
                                     </a>
-                                    
+
                                 </div>
                                 <div class="total">
-                                    <span>합계   </span>
+                                    <span>합계 </span>
                                     <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}</strong>
                                     <div class="{$sum_price_display|display}">
                                         {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}</div>
@@ -274,29 +284,29 @@
                                 </p>
                                 <div class="price_list">
                                     <p class="{$discount} display_product">
-                                        <span>판매가 :   </span>
+                                        <span>판매가 : </span>
                                         <strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong>
                                     <p class="{$product_price_display|display}">
                                         {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p>
                                     </p>
                                     <p class="{$product_sale_price_display|display} display_discount">
-                                        <span>할인가 :   </span>
+                                        <span>할인가 : </span>
                                         <strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong>
                                     <p class="{$product_sale_price_ref_display|display}">
                                         {$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}
                                     </p>
                                     </p>
                                 </div>
-                                <p class="mileage">마일리지 :   {$mileage}</p>
+                                <p class="mileage">마일리지 : {$mileage}</p>
                                 <div class="quantity">
                                     <a href="javascript:;" class="quan_down" onclick="{$out_shortcut}">감소</a>
-                                    {$form.quantity}                                    <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
+                                    {$form.quantity} <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
                                         증가
                                     </a>
-                                    
+
                                 </div>
                                 <div class="total">
-                                    <span>합계   </span>
+                                    <span>합계 </span>
                                     <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}</strong>
                                     <div class="{$sum_price_display|display}">
                                         {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}</div>
@@ -328,29 +338,29 @@
                                 </p>
                                 <div class="price_list">
                                     <p class="{$discount} display_product">
-                                        <span>판매가 :   </span>
+                                        <span>판매가 : </span>
                                         <strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong>
                                     <p class="{$product_price_display|display}">
                                         {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p>
                                     </p>
                                     <p class="{$product_sale_price_display|display} display_discount">
-                                        <span>할인가 :   </span>
+                                        <span>할인가 : </span>
                                         <strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong>
                                     <p class="{$product_sale_price_ref_display|display}">
                                         {$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}
                                     </p>
                                     </p>
                                 </div>
-                                <p class="mileage">마일리지 :   {$mileage}</p>
+                                <p class="mileage">마일리지 : {$mileage}</p>
                                 <div class="quantity">
                                     <a href="javascript:;" class="quan_down" onclick="{$out_shortcut}">감소</a>
-                                    {$form.quantity}                                    <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
+                                    {$form.quantity} <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
                                         증가
                                     </a>
-                                    
+
                                 </div>
                                 <div class="total">
-                                    <span>합계   </span>
+                                    <span>합계 </span>
                                     <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}</strong>
                                     <div class="{$sum_price_display|display}">
                                         {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}</div>
@@ -718,6 +728,6 @@
 
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script type="text/javascript">
-window.jQuery1_11_2 = jQuery.noConflict(true);
+    window.jQuery1_11_2 = jQuery.noConflict(true);
 </script>
 <script src="/js/module/order/basket.js"></script>
