@@ -41,94 +41,63 @@ function monitoringDesc(){
   console.log("monitoring desc")
 } 
 
-/**  
-  * 가격 감시 함수
-* */
 function monitoringPrice() {
   console.log("price monitoring");
-  let price_content = document.querySelectorAll(".price_wrap");
-  price_content.forEach((price) => {
-    //변경 여부를 discount에 저장
-    let discount = price.children[0];
-    //공급가 = 정가 = '소비자가'
-    let fixprice = price.children[1];
-    let fixprice_data = fixprice.dataset.price;
-    //실 판매가 = 할인가 = '판매가'
-    let realprice = price.children[2];
-    let realprice_data = realprice.dataset.price;
-    //프로모션가 = 할인가 = '최종판매가' 프로모션 있을 때만!
-    let promoprice = price.children[2];
-    let promoprice_data = promoprice.dataset.price;
+  const priceWrap = document.querySelectorAll(".price_wrap");
+  priceWrap.forEach((price)=>{
+    const fixedPrice = price.children[0];
+    const fixedPriceNum = Number((fixedPrice.dataset.price).replace(/,/g,""));
+    const realPrice = price.children[1];
+    const realPriceNum = Number((realPrice.dataset.price).replace(/,/g,""));
+    const discount = price.children[2];
 
-    /* 이미 변경된 경우를 체크 */
-    //변경 안 되었으면 실행 if
-    if (!discount.classList.contains("price_check")) {
-      //소비자가(정가) 데이터가 있고
-      //판매가(할인가) 데이터가 있고
-      //소비자가의 숫자가 0이 아니어야 하고
-      //소비자가랑 판매가가 같지 않으면
-      //상시 할인 중
-      if (
-        fixprice_data &&
-        realprice_data &&
-        parseInt(fixprice_data) != "0" &&
-        parseInt(fixprice_data) != parseInt(realprice_data)
-      ) {
-        //소비자가(정가)에 strike_price class 붙이고
-        fixprice.classList.add("strike_price");
-        //판매가(할인가)에 onpromotion class 붙이고
-        realprice.classList.add("onpromotion");
-        //판매가(할인가)에 finalprice class 붙이기
-        realprice.classList.add("finalprice");
-
+  //소비자가가 입력된 경우 체크
+  //소비자가 없으면 0으로 표시
+  if(fixedPriceNum != 0){
+    //소비자가와 판매가가 같으면 할인 없음
+    if(fixedPriceNum == realPriceNum){
+      //할인이 없기 때문에 1개의 가격만 노출하면 되나
+      //소비자가가 없는 경우가 있기 때문에 판매가를 노출하고 소비자가를 감춤
+      fixedPrice.classList.add("displaynone");
+      //판매가에 finalprice 클래스 삽입
+      realPrice.classList.add("finalprice")
+    }
+    //소비자가가 판매가보다 크면 할인 있음
+    if(fixedPriceNum > realPriceNum){
+      //할인이 있는 경우 소비자가에 strike 처리
+      fixedPrice.classList.add("strike_price");
+      //판매가에 finalprice 클래스 삽입
+      realPrice.classList.add("finalprice");
+      //할인율 계산하여 discount에 삽입
         //할인된 가격 계산
-        let discount_num = parseInt(fixprice_data) - parseInt(realprice_data);
+        let discount_num = fixedPriceNum - realPriceNum;
         //할인율 계산
         let percentage = Math.floor(
-          (discount_num / parseInt(fixprice_data)) * 100
+          (discount_num / fixedPriceNum) * 100
         );
-        //할인율 넣고 할인 부분 보이게 하기
-        discount.insertAdjacentText("beforeend", `${percentage}%`);
-        discount.classList.remove("displaynone");
-
-        //가격 체크 여부 저장
-        discount.classList.add("price_check");
-
-        //소비자가(정가)는 없고 판매가(실판매가)에 가격이 있어야 하고
-        //소비자가(정가)의 가격이 0이거나
-        //소비자가(정가)의 가격이 비어있거나
-        //소비자가(정가)와 판매가(실판매가)가 같으면
-        // 할인 안함 else if
-      } else if (
-        (!fixprice_data && realprice_data) ||
-        parseInt(fixprice_data) == 0 ||
-        fixprice_data == "" ||
-        parseInt(fixprice_data) == parseInt(realprice_data)
-      ) {
-        //소비자가에 "원" 표시되지 않도록 삭제
-        fixprice.classList.add("displaynone");
-
-        //판매가에 finalprice class 붙이기
-        realprice.classList.add("finalprice");
-
-        //가격 체크 여부 저장
-        discount.classList.add("price_check");
-      }
-    } else {
-      null;
+        discount.innerHTML = `${percentage}%`;
     }
-  });
+  }else{
+    //소비자가가 0이면 할인 없음
+    //할인이 없기 때문에 1개의 가격만 노출하면 되나
+    //소비자가가 없는 경우가 있기 때문에 판매가를 노출하고 소비자가를 감춤
+    fixedPrice.classList.add("displaynone");
+    //판매가에 finalprice 클래스 삽입
+    realPrice.classList.add("finalprice")
+  }
+  })
+
+
 }
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   if (document.querySelector(".price_wrap")) {
     setTimeout(monitoringPrice,200)
-    setTimeout(monitoringDesc,500)
+    setTimeout(monitoringDesc,300)
   } else {
-    setTimeout(monitoringPrice,1400)
+    setTimeout(monitoringPrice,1600)
     setTimeout(monitoringDesc,1200)
   }
 });
-
 
 /* 모달 생성 함수 */
 //모달 필요 시 제목, 설명, ok버튼, no버튼, 각각의 실행 함수 전달

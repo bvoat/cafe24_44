@@ -204,7 +204,8 @@
 }
 #specialProject .project_productlist_wrap .desc .summary {
   font-size: 1.1rem !important;
-  color: #707070;
+  font-weight: 700;
+  color: #292929;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -214,13 +215,13 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.5rem;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 #specialProject .project_productlist_wrap .desc .product_name,
 #specialProject .project_productlist_wrap .desc .product_name span {
   color: #292929 !important;
   font-size: 1.3rem !important;
-  font-weight: 600;
+  font-weight: 300;
   word-wrap: break-word;
   word-break: keep-all;
   display: block;
@@ -239,15 +240,17 @@
   position: relative;
   width: 100%;
 }
-#specialProject .project_productlist_wrap .thumb > a, #specialProject .project_productlist_wrap .thumb .img_wrap {
+#specialProject .project_productlist_wrap .thumb > a,
+#specialProject .project_productlist_wrap .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 20px;
   font-size: 0;
 }
-#specialProject .project_productlist_wrap .thumb > a > img, #specialProject .project_productlist_wrap .thumb .img_wrap > img {
+#specialProject .project_productlist_wrap .thumb > a > img,
+#specialProject .project_productlist_wrap .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;

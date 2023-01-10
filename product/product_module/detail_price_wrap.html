@@ -1,60 +1,18 @@
- <!-- <ul class=" displaynone">
-    <li class=" display_discount"> {$prd_sale_price} {$product_sale_price}</li>
-    <li class=" display_product">{$product_price|numberformat}</li>
-</ul> -->
 <ul class="price_wrap">
-    <li class="discount displaynone" data-name="할인율" title="할인율"></li>
-    <li class="fixprice price_item" data-name="정가" title="정가(소비자가)"
-    data-price="{$product_custom}">{$product_custom|numberformat}</li>
-    <li class="realprice price_item" data-name="판매가" title="판매가(할인가)"
-    data-price="{$product_price}">{$product_price|numberformat}</li>
-    <li class="promotionprice price_item displaynone" data-name="프로모션가" title="프로모션가(할인가)" data-price="{$product_sale_price}" data-test="{$prd_price_sale}" data-mobile="{$product_price_mobile}"></li>
+    <li class="fixprice price_item" data-name="정가" data-realname="공급가소비자가" title="정가(소비자가)"
+        data-price="{$product_custom|numberformat}">
+        {$product_custom|numberformat}</li>
+    <li class="realprice price_item" data-name="판매가" data-realname="판매가" title="판매가(할인가)" data-price="{$product_price}">
+        {$product_price|numberformat}원</li>
+    <li class="discountrate" data-name="할인율" title="할인율"></li>
 </ul>
 
-<!-- 
-<div module="product_detaildesign" class="price_wrap">
-    <span class="displaynone">{$item_content|striptag}</span>
-    <span class="displaynone"><span class="blue2 b">From.</span> {$item_content|striptag}</span>
-    <span class="displaynone prd_name">{$item_content|striptag}</span>
-    <span class="displaynone">{$item_content|striptag}</span>
-    <span class="displaynone">{$item_content|striptag}</span>
-    <span class="display_discount price">{$item_content|striptag}</span>
-    <span class="display_product price">{$item_content|striptag}</span>
-    <span class="">{$item_content|striptag}</span>
-</div> -->
 <!--
-<div module="product_detaildesign">
-    <ul class="price_wrap">
-            <li class="{$item_display|display} displaynone" title="상품명" aria-hidden="true"> 
-                <span>{$item_title}</span>
-                <span>{$item_content}</span>
-            </li>
-            <li class="{$item_display|display} displaynone" title="브랜드" aria-hidden="true">
-                <span>{$item_title}</span>
-                <span>{$item_content}</span>
-            </li>
-            <li class="{$item_display|display} displaynone" title="모델" aria-hidden="true">
-                <span>{$item_title}</span>
-                <span>{$item_content}</span>
-            </li>
-            <li class="{$item_display|display} displaynone" title="마일리지" aria-hidden="true">
-                <span>{$item_title}</span>
-                <span>{$item_content}</span>
-            </li>
-            <li class="{$item_display|display} displaynone" title="배송비" aria-hidden="true">
-                <span>{$item_title}</span>
-                <span>{$item_content}</span>
-            </li>
-            <li class="{$item_display|display} display_discount price" title="할인가격" aria-hidden="false">
-                {$item_content}
-            </li>
-            <li class="{$item_display|display} display_product price detail_product" title="상품가격" aria-hidden="true">
-                {$item_content}
-            </li>
-            <li class="{$item_display|display} displaynone" title="상품설명" aria-hidden="true">
-                <span>{$item_title}</span>
-                <span>{$item_content}</span>
-            </li>
-    </ul>
-</div>
+
+웹
+판매가 : {$product_price}
+소비자가 : {$product_custom}
+모바일
+판매가 : {$product_price}
+소비자가 : {$price_custom}
 -->

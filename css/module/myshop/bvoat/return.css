@@ -83,15 +83,17 @@
   position: relative;
   width: 100%;
 }
-#orderReturn #applyForm #orderReturnTable .description .thumb > a, #orderReturn #applyForm #orderReturnTable .description .thumb .img_wrap {
+#orderReturn #applyForm #orderReturnTable .description .thumb > a,
+#orderReturn #applyForm #orderReturnTable .description .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 20px;
   font-size: 0;
 }
-#orderReturn #applyForm #orderReturnTable .description .thumb > a > img, #orderReturn #applyForm #orderReturnTable .description .thumb .img_wrap > img {
+#orderReturn #applyForm #orderReturnTable .description .thumb > a > img,
+#orderReturn #applyForm #orderReturnTable .description .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;

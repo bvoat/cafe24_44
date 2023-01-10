@@ -201,6 +201,7 @@ const displayStampImg = (productStamp) => {
 //스탬프 promise 진행
 const createStamp = (createStampPcsFromPrice) => {
   let final_price = parseInt(document.querySelector(".finalprice").dataset.price);
+  console.log('final_price: ', final_price);
 
   if (final_price < 1000) {
     final_price = final_price / 10000;

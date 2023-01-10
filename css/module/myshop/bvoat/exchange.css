@@ -70,15 +70,17 @@
   position: relative;
   width: 100%;
 }
-#orderExchange #orderExchangeTable .description .thumb > a, #orderExchange #orderExchangeTable .description .thumb .img_wrap {
+#orderExchange #orderExchangeTable .description .thumb > a,
+#orderExchange #orderExchangeTable .description .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 20px;
   font-size: 0;
 }
-#orderExchange #orderExchangeTable .description .thumb > a > img, #orderExchange #orderExchangeTable .description .thumb .img_wrap > img {
+#orderExchange #orderExchangeTable .description .thumb > a > img,
+#orderExchange #orderExchangeTable .description .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;

@@ -282,15 +282,17 @@
   position: relative;
   width: 100%;
 }
-#searchResultProductList .thumb > a, #searchResultProductList .thumb .img_wrap {
+#searchResultProductList .thumb > a,
+#searchResultProductList .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 20px;
   font-size: 0;
 }
-#searchResultProductList .thumb > a > img, #searchResultProductList .thumb .img_wrap > img {
+#searchResultProductList .thumb > a > img,
+#searchResultProductList .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -349,7 +351,8 @@
 }
 #searchResultProductList .desc .summary {
   font-size: 1.15rem !important;
-  color: #707070;
+  font-weight: 700;
+  color: #292929;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -359,13 +362,13 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.55rem;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 #searchResultProductList .desc .product_name,
 #searchResultProductList .desc .product_name span {
   color: #292929 !important;
   font-size: 1.3rem !important;
-  font-weight: 600;
+  font-weight: 300;
   word-wrap: break-word;
   word-break: keep-all;
   display: block;
@@ -404,12 +407,16 @@
   padding: 1% 5%;
   font-size: 1.3rem;
 }
-.page-pagination .btnPrev_wrap, .page-pagination .btnNext_wrap {
+.page-pagination .btnPrev_wrap,
+.page-pagination .btnNext_wrap {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
-.page-pagination .first, .page-pagination .last, .page-pagination .btnPrev, .page-pagination .btnNext {
+.page-pagination .first,
+.page-pagination .last,
+.page-pagination .btnPrev,
+.page-pagination .btnNext {
   width: 30px;
   height: 30px;
   background: #ffffff;
@@ -420,7 +427,10 @@
   color: #707070;
   font-size: 1.1rem;
 }
-.page-pagination .first:hover, .page-pagination .last:hover, .page-pagination .btnPrev:hover, .page-pagination .btnNext:hover {
+.page-pagination .first:hover,
+.page-pagination .last:hover,
+.page-pagination .btnPrev:hover,
+.page-pagination .btnNext:hover {
   font-weight: 700;
   transition: all 0.3s;
 }

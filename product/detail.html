@@ -1,6 +1,6 @@
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(/css/module/product/bvoat/detail.css)-->
-<!--@css(/layout/basic/css/aos.css)--> 
+<!--@css(/layout/basic/css/aos.css)-->
 <script src="/js/aos.js"></script>
 
 <!--
@@ -16,16 +16,9 @@
 		※ 옵션 선택시 품목의 할인가로 표시됩니다.
 		$use_item_sale_price = T
 	-->
-    <!-- 브랜드 -->
-    <section id="productBrand" class="product_brand">
-        <h1 class="displaynone">브랜드 소개</h1>
-        <h2>From. <em>{$prd_brand}</em></h2>
-        <h3 class="summary_desc {$summary_desc_display}">{$summary_desc}</h3>
-    </section>
-    <!-- 브랜드 -->
     <!-- 썸네일 -->
     <section id="productThumnail" class="product_thumnail_wrap" module="product_image">
-        <h1 class="displaynone">이미지</h1>
+        <h1 class="displaynone">상품 이미지</h1>
         <em class="product_icon">{$soldout_icon}{$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</em>
         <img src="{$big_img}" alt="{$seo_alt_tag}" class="{$big_img_class}" />
     </section>
@@ -33,59 +26,58 @@
     <!-- 상품명, 가격정보, 태그 -->
     <section id="productInfo" class="product_info_wrap">
         <h1 class="displaynone">상품 정보</h1>
-        <h2 class="product_name">{$name}</h2>
-        <!--@import(./product_module/detail_price_wrap.html)-->
         <ul id="categoryTagBox" class="tag_box">
             <!-- 태그 삽입 부분 -->
         </ul>
-        <button class="share_btn">공유하기</button>
+        <h3 class="summary_desc {$summary_desc_display}">{$summary_desc}</h3>
+        <h2 class="product_name">{$name}</h2>
+
+        <div class="product_price">
+            <!--@import(./product_module/detail_price_wrap.html)-->
+            <div class="button_wrap">
+                <button onclick="{$action_wishlist}" class="wish_btn" title="위시리스트 담기">위시리스트 담기</button>
+                <button class="share_btn" title="공유하기">공유하기</button>
+            </div>
+        </div>
     </section>
     <!-- 상품명, 가격정보, 태그 -->
-    <!-- 상품 배송 안내 -->
-    <section id="productDelivery" class="delivery_wrap">
-        <h1 class="displaynone">배송 안내</h1>
-        <ul class="delivery_info">
-            <li>
-                <p class="delivery_title">배송비</p>
-                <p class="delivery_detail delivery_price">{$delivery_price}</p>
+    <!-- 상품 안내 -->
+    <section id="productDetail" class="product_detail_wrap">
+        <h1 class="displaynone">상품 안내</h1>
+        <ul class="product_detail">
+            <li class="delivery">
+                <p class="title">배송 안내</p>
+                <p class="detail">
+                    <span><em>{$prd_brand}</em> 배송</span>
+                    <span>배송비 <i>{$delivery_price}</i></span>
+                </p>
             </li>
-            <li>
-                <p class="delivery_title">발송 안내</p>
-                <p class="delivery_detail"><em>익일 출고</em> (주말, 공휴일 제외)</p>
+            <li class="mileage">
+                <p class="title">마일리지</p>
+                <p class="detail">
+                    <em class="mileage_info"><i class="voter_value">{$mileage_value}</i>점 적립 <span
+                            class="crew_mileage">(크루 등급 <i
+                                class="crew_value">{$mileage_value}</i><span>점</span>)</span></em>
+                    <span class="mileage_txt">리뷰 작성 시 최대 1,000점이 추가 적립됩니다.</span>
+            </li>
+            <li id="productStamp" class="stamp">
+                <p class="title">가치 스탬프</p>
+                <div class="detail">
+                    <span><em class="stamp_pcs"></em>개 지급</span>
+                    <span class="stamp_txt"><span>가치 스탬프 5개를 모으면 <a href="/member/crew/crew.html"> 크루 등급</a>으로
+                            등업됩니다.</span></span>
+                    <ol class="stamp_list">
+                        <li><span class="stamp_node stamp0">1개</span></li>
+                        <li><span class="stamp_node stamp1">2개</span></li>
+                        <li><span class="stamp_node stamp2">3개</span></li>
+                        <li><span class="stamp_node stamp3">4개</span></li>
+                        <li><span class="stamp_node stamp4">5개</span></li>
+                    </ol>
+                </div>
             </li>
         </ul>
     </section>
-    <!-- 상품 배송 안내 -->
-    <!-- 마일리지 -->
-    <section id="productmileage" class="mileage_wrap">
-        <h1>마일리지</h1>
-        <ul id="mileage">
-            <li class="mileage_voter">
-                <p>보터 등급</p>
-                <p><em class="voter_value">{$mileage_value}</em><span>점</span> 적립</p>
-            </li>
-            <li class="mileage_crew">
-                <p>크루 등급</p>
-                <p><em class="crew_value">{$mileage_value}</em><span>점</span> 적립</p>
-            </li>
-            <li class="mileage_crew_txt mileage_txt"><a href="/member/crew/crew.html">비보트 크루</a>는 두 배 적립됩니다.</li>
-            <li class="mileage_mileage_txt mileage_txt">마일리지는 비보트 내에서 현금처럼 사용이 가능합니다.</li>
-        </ul>
-    </section>
-    <!-- 마일리지 -->
-    <!-- 스탬프 -->
-    <section id="productStamp" class="stamp_wrap">
-        <h1 class="stamp_title">가치 스탬프<span><em class="stamp_pcs"></em> 지급</span></h1>
-        <ol class="stamp_list">
-            <li><span class="stamp_node stamp0">1개</span></li>
-            <li><span class="stamp_node stamp1">2개</span></li>
-            <li><span class="stamp_node stamp2">3개</span></li>
-            <li><span class="stamp_node stamp3">4개</span></li>
-            <li><span class="stamp_node stamp4">5개</span></li>
-        </ol>
-        <p class="stamp_txt">가치 스탬프 5개를 모으면 <a href="/member/crew/crew.html"> 크루 등급</a>으로 등업됩니다.</p>
-    </section>
-    <!-- 스탬프 -->
+    <!-- 상품 안내 -->
     <!-- 펀딩 -->
     <section id="aside-funding" class="detail-aside-funding displaynone">
         <!-- <div class="info_box padding2">
@@ -123,7 +115,14 @@
         </div>
     </section>
     <!-- 펀딩 -->
-
+    <!-- 공급사 바로가기버튼 영역 -->
+    <section id="supplyMinishop" class="supply_minishop_wrap" module="product_image">
+        <div class="topLogo supply_link_wrap {$supply_link_display|display}">
+            <span class="supply_name">{$supply_top_logo}</span>
+            <button class="minishop_btn" onclick="{$supply_go_action}" title="묶음 배송 상품 구경하기">묶음 배송 상품 구경하기</button>
+        </div>
+    </section>
+    <!-- 공급사 바로가기버튼 영역 -->
     <!-- 연관 상품 -->
     <section id="productRelation" class="product_relation_wrap" module="product_relation">
         <h2>설렘이 배가 되는 상품,</h2>
@@ -138,7 +137,7 @@
     <li class="tab0 tab" data-hash="prd_detail">상품정보
     </li>
     <li class="tab1 tab" data-hash="prd_bh">리뷰
-         <!--@import(./reviews/feed.html)-->
+        <!--@import(./reviews/feed.html)-->
     </li>
     <li class="tab2 tab" data-hash="use_qna">Q&A({$qna_count})
     </li>
@@ -217,7 +216,7 @@
                 <div class="product_detail_paginate page-pagination" module="product_qnapaging">
                     <div class="paginate-box">
                         <span class="btnPrev_wrap">
-                        <a href="{$param_first}" class="first">처음</a>
+                            <a href="{$param_first}" class="first">처음</a>
                             <a href="{$param_before}" class="btnPrev">이전</a>
                         </span>
                         <ol>
@@ -270,11 +269,9 @@
 <!-- 상품 정보 하단 -->
 <!-- 상품 구매 탭 -->
 <section id="buyAction" module="product_action">
-    <ul class="webnmobile_product_html">
-        <li><button class="wish_btn" alt="찜" onclick="{$action_wishlist}">찜</button></li>
-        <li><button class="gift_btn purchase_button gift_order_btn" data-type="gift" alt="선물하기">선물하기</button></li>
-        <li><button class="buy_btn purchase_button " data-type="buy" alt="구매하기">구매하기</button></li>
-    </ul>
+    <div class="webnmobile_product_html">
+        <button class="buy_btn purchase_button " data-type="buy" alt="구매하기">구매하기</button>
+    </div>
 </section>
 <!-- 상품 구매 탭 -->
 <script src="/js/module/product/detail.js"></script>

@@ -25,6 +25,7 @@
     word-wrap: break-word;
     line-height: $line-height + 0.4rem;
 }
+
 /* 공통 스타일 */
 
 
@@ -43,6 +44,7 @@
         }
     }
 }
+
 // 위에서 아래로 내려가기 애니메이션
 @mixin fadeindown-item-keyframe {
     @keyframes fadeindown-item {
@@ -57,6 +59,7 @@
         }
     }
 }
+
 // 위 아래 툴팁 애니메이션
 @mixin up-and-down-keyframe($start, $end) {
     @keyframes up-and-down-item {
@@ -73,6 +76,7 @@
         }
     }
 }
+
 /* 애니메이션 */
 
 
@@ -96,6 +100,7 @@
         background-size: contain;
     }
 }
+
 /* 멤버십 관련 */
 
 /* 상품 목록 list 관련 공통 스타일 */
@@ -108,12 +113,13 @@
         position: relative;
         width: 100%;
 
-        >a, .img_wrap {
+        >a,
+        .img_wrap {
             display: block;
             position: relative;
             padding-top: 100%;
             overflow: hidden;
-            border-radius: 2px;
+            border-radius: 20px;
             font-size: 0;
 
             >img {
@@ -131,20 +137,23 @@
 
     //상품 아이콘 
     //.icon에 높이 주어야 인식
-    .icon{
-        img{
+    .icon {
+        img {
             height: inherit;
             object-fit: contain;
             image-rendering: auto;
         }
     }
 }
+
 //상품 목록 하단 정보
 //필요시에만 사용
 @mixin product-desc($top-padding, $brand-ftsz, $summary-ftsz, $name-ftsz) {
+
     //상품 설명
     .desc {
         padding: $top-padding 0 0 0;
+
         .brand {
             font-size: $brand-ftsz !important;
             color: $bvt-darkgray;
@@ -154,16 +163,17 @@
 
         .summary {
             font-size: $summary-ftsz !important;
-            color: $bvt-darkgray;
+            font-weight: 700;
+            color: $bvt-black;
             @include only-ellipsis(1, $summary-ftsz);
-            margin-bottom: 7px;
+            margin-bottom: 10px;
         }
 
         .product_name,
         .product_name span {
             color: $bvt-black !important;
             font-size: $name-ftsz !important;
-            font-weight: 600;
+            font-weight: 300;
             word-wrap: break-word;
             word-break: keep-all;
             @include ellipsis(2, $name-ftsz);
@@ -171,6 +181,7 @@
         }
     }
 }
+
 //위시 버튼
 @mixin wish-button($width, $height, $bottom, $right) {
     .wish {
@@ -180,6 +191,7 @@
         cursor: pointer;
         bottom: $bottom;
         right: $right;
+
         button {
             display: flex;
             justify-content: center;
@@ -189,6 +201,7 @@
             border: 0;
             background: none;
             cursor: pointer;
+
             img {
                 position: relative;
                 width: calc($width + 20px);
@@ -199,14 +212,16 @@
         }
     }
 }
+
 //페이지 하단 페이지네이션
 @mixin page-pagination {
-    .page-pagination{
+    .page-pagination {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
         justify-content: center;
         margin-bottom: 100px;
+
         //전체 박스
         .paginate-box {
             display: flex;
@@ -221,16 +236,22 @@
             font-size: 1.3rem;
 
         }
+
         //버튼 랩
-        .btnPrev_wrap, .btnNext_wrap{
+        .btnPrev_wrap,
+        .btnNext_wrap {
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
         }
+
         //좌우 버튼
-        .first, .last, .btnPrev, .btnNext {
+        .first,
+        .last,
+        .btnPrev,
+        .btnNext {
             width: 30px;
-            height: 30px;    
+            height: 30px;
             background: $bvt-white;
             border-radius: 50%;
             line-height: 30px;
@@ -239,7 +260,7 @@
             color: $bvt-darkgray;
             font-size: 1.1rem;
 
-            &:hover{
+            &:hover {
                 font-weight: 700;
                 transition: all .3s;
             }
@@ -252,10 +273,12 @@
             width: 100%;
             justify-content: space-evenly;
             margin: 0 5px;
+
             li {
                 margin: 0 11px;
 
-                a {display: block;
+                a {
+                    display: block;
                     width: 100%;
                     height: 100%;
                     font-weight: 400;
@@ -277,9 +300,12 @@
 @mixin selectbox-arrow($icon, $right-padding) {
     position: relative;
     appearance: none;
+
     &::-ms-expand {
-        display: none;/*for IE10,11*/
+        display: none;
+        /*for IE10,11*/
     }
+
     background: $icon no-repeat calc(100% - $right-padding);
 }
 
@@ -304,7 +330,5 @@
         }
     }
 }
+
 /* 미디어쿼리 */
-
-
-

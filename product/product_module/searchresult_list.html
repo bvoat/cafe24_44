@@ -1,4 +1,3 @@
-
 <ul class="product_listnormal_list_wrap">
     <li class="listnormal_list" id="anchorBoxId_{$product_no}">
         <div class="thumb">
@@ -10,19 +9,25 @@
             </div>
         </div>
         <ul class="desc">
-            <li class="brand">{$prd_brand}</li>
             <li class="summary">{$summary_desc}</li>
             <li class="product_name"><a href="/product/detail.html{$param}">{$product_name}</a></li>
             <!-- numberformat 때문에 별도로 wrap 사용 -->
             <ul class="price_wrap">
-                <li class="discount displaynone" data-name="할인율" title="할인율"></li>
+                <!-- <li class="discount displaynone" data-name="할인율" title="할인율"></li>
                 <li class="display_discount price_item {$product_custom|display}" data-name="소비자가" title="할인가"
-                data-price="{$product_custom}">{$product_custom}</li>
-                <li class="display_product price_item" data-name="상품 가격" title="상품 가격"
-                data-price="{$product_price}">{$product_price}</li>
+                    data-price="{$product_custom}">{$product_custom}</li>
+                <li class="display_product price_item" data-name="상품 가격" title="상품 가격" data-price="{$product_price}">
+                    {$product_price}</li> -->
+                <li class="fixprice price_item displaynone" data-name="정가" data-realname="공급가소비자가" title="정가(소비자가)"
+                    data-price="{$product_custom|numberformat}">
+                    {$product_custom}</li>
+                <li class="realprice price_item" data-name="판매가" data-realname="판매가" title="판매가(할인가)"
+                    data-price="{$product_price}">
+                    {$product_price}원</li>
+                <li class="discountrate" data-name="할인율" title="할인율"></li>
             </ul>
         </ul>
-        <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
+        <!-- <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div> -->
     </li>
     <li class="listnormal_list" id="anchorBoxId_{$product_no}">
         <div class="thumb">
@@ -34,18 +39,24 @@
             </div>
         </div>
         <ul class="desc">
-            <li class="brand">{$prd_brand}</li>
             <li class="summary">{$summary_desc}</li>
             <li class="product_name"><a href="/product/detail.html{$param}">{$product_name}</a></li>
             <!-- numberformat 때문에 별도로 wrap 사용 -->
             <ul class="price_wrap">
-                <li class="discount displaynone" data-name="할인율" title="할인율"></li>
+                <!-- <li class="discount displaynone" data-name="할인율" title="할인율"></li>
                 <li class="display_discount price_item {$product_custom|display}" data-name="소비자가" title="할인가"
-                data-price="{$product_custom}">{$product_custom}</li>
-                <li class="display_product price_item" data-name="상품 가격" title="상품 가격"
-                data-price="{$product_price}">{$product_price}</li>
+                    data-price="{$product_custom}">{$product_custom}</li>
+                <li class="display_product price_item" data-name="상품 가격" title="상품 가격" data-price="{$product_price}">
+                    {$product_price}</li> -->
+                <li class="fixprice price_item displaynone" data-name="정가" data-realname="공급가소비자가" title="정가(소비자가)"
+                    data-price="{$product_custom|numberformat}">
+                    {$product_custom}</li>
+                <li class="realprice price_item" data-name="판매가" data-realname="판매가" title="판매가(할인가)"
+                    data-price="{$product_price}">
+                    {$product_price}원</li>
+                <li class="discountrate" data-name="할인율" title="할인율"></li>
             </ul>
         </ul>
-        <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
+        <!-- <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div> -->
     </li>
 </ul>

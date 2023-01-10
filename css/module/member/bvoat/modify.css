@@ -39,15 +39,17 @@
   position: relative;
   width: 100%;
 }
-#memberModify #memberModifyTitle #memberUserImage .thumb > a, #memberModify #memberModifyTitle #memberUserImage .thumb .img_wrap {
+#memberModify #memberModifyTitle #memberUserImage .thumb > a,
+#memberModify #memberModifyTitle #memberUserImage .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 20px;
   font-size: 0;
 }
-#memberModify #memberModifyTitle #memberUserImage .thumb > a > img, #memberModify #memberModifyTitle #memberUserImage .thumb .img_wrap > img {
+#memberModify #memberModifyTitle #memberUserImage .thumb > a > img,
+#memberModify #memberModifyTitle #memberUserImage .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;

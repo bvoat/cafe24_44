@@ -5,34 +5,42 @@
 #topNav {
     width: 100%;
     max-width: 450px;
-    border-bottom: $bvt-btn-border-gray;
+
     // slider swiper zone
-    .default_top_nav{
+    .default_top_nav {
         width: 100%;
         max-width: 450px;
         height: 40px;
-        .top_nav_list{
+
+        .top_nav_list {
             padding: 0 11px;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
+
             .top_nav_item {
                 width: fit-content !important;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 1.6rem;
+                font-size: 1.4rem;
                 font-weight: normal;
-                >a{
+
+                >a {
                     display: block;
                     word-break: keep-all;
                     color: #797979;
                 }
             }
-            #crew{
+
+            #crew {
                 position: relative;
                 margin-left: 5px;
-                >a{color: $bvt-blue;}
-                &::before{
+
+                >a {
+                    color: $bvt-blue;
+                }
+
+                &::before {
                     position: absolute;
                     display: block;
                     content: "";
@@ -44,40 +52,49 @@
                     right: -5px;
                 }
             }
-            .top_nav_active{
-                >a{
+
+            .top_nav_active {
+                >a {
                     color: $bvt-blue;
                     font-weight: 600;
                 }
-                &::after{
+
+                &::after {
                     position: absolute;
                     display: block;
                     content: " ";
-                    width: 110%;
+                    width: 105%;
                     height: 3px;
                     background: $bvt-blue;
                     border-radius: 50px;
-                    bottom: 0px;
+                    bottom: -1px;
                 }
             }
         }
     }
-    >.community_top_nav{
+
+    >.community_top_nav {
         width: 100%;
-    max-width: 450px;
+        max-width: 450px;
 
         height: 40px;
-        .top_nav_list{
+
+        .top_nav_list {
             width: 100%;
             height: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
-            #crewinfo_nav{
+
+            #crewinfo_nav {
                 position: relative;
                 margin-left: 5px;
-                >a{color: $bvt-blue;}
-                &::before{
+
+                >a {
+                    color: $bvt-blue;
+                }
+
+                &::before {
                     position: absolute;
                     display: block;
                     content: "";
@@ -89,6 +106,7 @@
                     right: -5px;
                 }
             }
+
             .top_nav_item {
                 display: flex;
                 justify-content: center;
@@ -99,13 +117,19 @@
                 width: max-content !important;
                 max-width: max-content !important;
                 height: inherit;
-                >a{
+
+                >a {
                     display: block;
                 }
             }
-            .top_nav_active{
-                >a{color: $bvt-blue; font-weight: bold;}
-                &::after{
+
+            .top_nav_active {
+                >a {
+                    color: $bvt-blue;
+                    font-weight: bold;
+                }
+
+                &::after {
                     position: absolute;
                     display: block;
                     content: " ";
@@ -118,5 +142,6 @@
             }
         }
     }
+
     // slider swiper zone
 }

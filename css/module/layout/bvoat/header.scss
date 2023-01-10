@@ -13,25 +13,30 @@
     overflow: hidden;
     backdrop-filter: blur(30px);
 
+    box-shadow: 0 7px 5px -5px #00000030;
+
     #header_logo_section {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
         width: 100%;
         max-width: 450px;
-        padding: 0 11px; 
-        >.back_btn{
+        padding: 0 11px;
+
+        >.back_btn {
             display: block;
             width: 33%;
             height: 40px;
             background: none;
-            button{
+
+            button {
                 width: 35px;
                 height: 100%;
                 background: none;
             }
         }
-        >a{
+
+        >a {
             display: flex;
             justify-content: center;
             width: 33%;
@@ -64,6 +69,7 @@
 
             .header_search {
                 margin-right: 9px;
+
                 >button {
                     position: relative;
                     display: block;
@@ -79,6 +85,7 @@
                 position: relative;
                 width: 25px;
                 height: 23px;
+
                 a {
                     position: relative;
                     display: block;
@@ -88,6 +95,7 @@
                     background-size: contain;
                     text-indent: -9999px;
                 }
+
                 .count {
                     position: absolute;
                     display: block;
@@ -99,7 +107,8 @@
                     top: -3px;
                     right: -7px;
                     z-index: 100;
-                    >em{
+
+                    >em {
                         position: relative;
                         display: block;
                         font-size: 1rem;

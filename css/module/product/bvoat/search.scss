@@ -3,7 +3,7 @@
 @import "../../../abstracts/variables";
 
 
-#searchModal{
+#searchModal {
     position: fixed;
     width: 100%;
     max-width: 450px;
@@ -17,7 +17,7 @@
     transform: translate(-50%, 0);
     padding: 0 22px;
 
-    #searchModalHeader{
+    #searchModalHeader {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
@@ -25,13 +25,15 @@
         width: 100%;
         max-width: 450px;
         height: 40px;
-        .search_close_btn{
+
+        .search_close_btn {
             width: 18px;
             height: 18px;
             background: $x-btn no-repeat;
             background-size: cover;
             text-indent: -9999px;
         }
+
         .header_logo {
             display: block;
             width: 73px;
@@ -39,56 +41,63 @@
             background: $bvt-logo no-repeat center;
             background-size: contain;
             text-indent: -9999px;
-            >span{
+
+            >span {
                 text-indent: -9999px;
             }
         }
+
         .header_cart {
             position: relative;
+            width: 25px;
+            height: 23px;
+
+            a {
+                display: block;
                 width: 25px;
                 height: 23px;
-                a {
-                    display: block;
-                    width: 25px;
-                    height: 23px;
-                    background: $cart-icon no-repeat center;
-                    background-size: contain;
-                    text-indent: -9999px;
-                }
+                background: $cart-icon no-repeat center;
+                background-size: contain;
+                text-indent: -9999px;
+            }
 
-                .count {
-                    position: absolute;
-                    width: 15px;
-                    height: 15px;
-                    background: $bvt-blue;
-                    font-weight: 700;
+            .count {
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: $bvt-blue;
+                font-weight: 700;
+                color: $bvt-white;
+                border-radius: 50%;
+                text-align: center;
+                top: -3px;
+                right: -7px;
+
+                >em {
+                    position: relative;
+                    display: block;
+                    font-size: 1rem;
+                    font-weight: 600;
                     color: $bvt-white;
-                    border-radius: 50%;
-                    text-align: center;
-                    top: -3px;
-                    right: -7px;
-                    >em{
-                        position: relative;
-                        display: block;
-                        font-size: 1rem;
-                        font-weight: 600;
-                        color: $bvt-white;
-                        text-indent: 0;
-                        z-index: 100;
-                        top: 1.5px;
-                    }
+                    text-indent: 0;
+                    z-index: 100;
+                    top: 1.5px;
                 }
+            }
         }
     }
-    #searchModalTitle{
+
+    #searchModalTitle {
         width: 100%;
         margin: 19px 0;
         padding: 0 11px;
+
         h2 {
             font-weight: 700;
             font-size: 2.5rem;
             font-family: 'Jost', 'Noto Sans KR';
         }
+
         h3 {
             font-weight: 300;
             font-size: 1.4rem;
@@ -96,20 +105,22 @@
         }
     }
 
-    #searchBarForm{
+    #searchBarForm {
         width: 100%;
         max-width: 450px;
-        .search_input_box{
+
+        .search_input_box {
             width: 100%;
             max-width: 450px;
             padding: 0 11px;
 
-            .search_input{
+            .search_input {
                 position: relative;
                 display: flex;
                 flex-flow: row nowrap;
                 align-items: center;
-                #keyword{
+
+                #keyword {
                     display: block;
                     width: 100%;
                     height: 45px;
@@ -120,7 +131,8 @@
                     color: $bvt-darkgray;
                     padding-left: 20px;
                 }
-                .search_btn{
+
+                .search_btn {
                     position: absolute;
                     width: 21px;
                     height: 21px;
@@ -130,7 +142,8 @@
                     text-indent: -9999px;
                 }
             }
-            .recent_keyword{
+
+            .recent_keyword {
                 width: 100%;
                 max-width: 450px;
                 display: flex;
@@ -138,35 +151,37 @@
                 justify-content: space-between;
                 align-items: flex-start;
                 margin: 18px 0;
-                .search_title{
+
+                .search_title {
                     font-weight: 700;
                     font-size: 1.6rem;
                     font-family: 'Jost', 'Noto Sans KR';
                 }
-                .search_recent{
+
+                .search_recent {
                     margin: 14px 0;
-                    .empty{            
+
+                    .empty {
                         text-align: center;
                         margin-top: 50px;
                         font-size: 1.6rem;
                     }
 
-                    .recent_list{
+                    .recent_list {
                         display: flex;
                         flex-flow: row wrap;
 
-                        >li{
+                        >li {
                             background: $bvt-white;
                             border-radius: 6px;
                             padding: 3px 6px;
                             font-size: 1.3rem;
                             font-weight: 500;
                             margin: 0 3px 3px 0;
-                            
-                            >a{
 
-                            }
-                            >button{
+                            >a {}
+
+                            >button {
                                 width: 27px;
                                 height: 22px;
                                 background-color: $bvt-blue;
@@ -177,7 +192,8 @@
                     }
                 }
             }
-            .hot_keyword{
+
+            .hot_keyword {
                 width: 100%;
                 max-width: 450px;
                 display: flex;
@@ -186,23 +202,26 @@
                 align-items: flex-start;
                 margin: 18px 0;
 
-                .search_title{
+                .search_title {
                     font-weight: 700;
                     font-size: 1.6rem;
                     font-family: 'Jost', 'Noto Sans KR';
                 }
-                .search_hot{
+
+                .search_hot {
                     margin: 14px 0;
-                    .empty{            
+
+                    .empty {
                         text-align: center;
                         margin-top: 50px;
                         font-size: 1.6rem;
                     }
 
-                    .hot_list{
+                    .hot_list {
                         display: flex;
                         flex-flow: row wrap;
-                        >li{
+
+                        >li {
                             background: $bvt-white;
                             border-radius: 6px;
                             padding: 6px 10px;
@@ -210,10 +229,9 @@
                             font-weight: 500;
                             margin: 0 3px 3px 0;
 
-                            >a{
+                            >a {}
 
-                            }
-                            >button{
+                            >button {
                                 width: 27px;
                                 height: 22px;
                                 background-color: $bvt-blue;
@@ -227,22 +245,26 @@
         }
     }
 }
-.dimmed{
+
+.dimmed {
     display: none;
 }
+
 // 결과 목록
-#searchResult{
+#searchResult {
     width: 100%;
     max-width: 450px;
     padding: 23px 11px;
-    margin: 81px 0 100px;//top_nav hide
+    margin: 81px 0 100px; //top_nav hide
 
-    #searchResultTitle{
+    #searchResultTitle {
         margin-bottom: 18px;
+
         h2 {
             font-weight: 600;
             font-size: 2.2rem;
         }
+
         h3 {
             font-weight: 300;
             font-size: 1.4rem;
@@ -250,27 +272,33 @@
         }
     }
 
-    #searchResultEmpty{
+    #searchResultEmpty {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        .empty{
+
+        .empty {
             text-align: center;
             margin: 50px;
             font-size: 1.8rem;
             font-weight: 500;
         }
-        .empty_info{
-            >li{font-size: 1.4rem;}
+
+        .empty_info {
+            >li {
+                font-size: 1.4rem;
+            }
         }
     }
 
 
 }
-#searchResultProductList{
+
+#searchResultProductList {
     width: 100%;
-    padding: 0 11px;    
+    padding: 0 11px;
     margin-top: -100px;
+
     .product_listnormal_list_wrap {
         display: flex;
         flex-flow: row wrap;
@@ -291,17 +319,19 @@
             }
         }
     }
+
     //상품 이미지 구역
     @include product-thumb(21px, 18.98px, 0, 0);
     //상품 상세 정보 구역
     @include product-desc(7px, 1rem, 1.15rem, 1.3rem);
 
     //상품 아이콘
-    .icon{
+    .icon {
         height: 25px !important;
         margin-top: 5%
     }
-    
+
 }
+
 //페이지네이션
 @include page-pagination;

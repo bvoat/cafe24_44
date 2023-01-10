@@ -67,15 +67,17 @@
   position: relative;
   width: 100%;
 }
-#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb > a, #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb .img_wrap {
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb > a,
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 20px;
   font-size: 0;
 }
-#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb > a > img, #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img {
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb > a > img,
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -166,15 +168,23 @@
   position: relative;
   width: 100%;
 }
-#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb > a, #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .img_wrap, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb > a, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .img_wrap, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap {
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb > a,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .img_wrap, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb > a,
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .img_wrap, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a,
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 20px;
   font-size: 0;
 }
-#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb > a > img, #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a > img, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb > a > img, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a > img, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img {
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb > a > img,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a > img,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb > a > img,
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a > img,
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;

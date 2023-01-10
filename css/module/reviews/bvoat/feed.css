@@ -118,15 +118,17 @@
   position: relative;
   width: 100%;
 }
-#reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb > a, #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb .img_wrap {
+#reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb > a,
+#reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 20px;
   font-size: 0;
 }
-#reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb > a > img, #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb .img_wrap > img {
+#reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb > a > img,
+#reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -411,15 +413,17 @@
   position: relative;
   width: 100%;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .thumb > a, #reviewsViewWrap .reviews_item div.reviews_wrap .thumb .img_wrap {
+#reviewsViewWrap .reviews_item div.reviews_wrap .thumb > a,
+#reviewsViewWrap .reviews_item div.reviews_wrap .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 20px;
   font-size: 0;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .thumb > a > img, #reviewsViewWrap .reviews_item div.reviews_wrap .thumb .img_wrap > img {
+#reviewsViewWrap .reviews_item div.reviews_wrap .thumb > a > img,
+#reviewsViewWrap .reviews_item div.reviews_wrap .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -563,15 +567,17 @@
   position: relative;
   width: 100%;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb > a, #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb .img_wrap {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb > a,
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 20px;
   font-size: 0;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb > a > img, #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb .img_wrap > img {
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb > a > img,
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -1261,15 +1267,17 @@
   position: relative;
   width: 100%;
 }
-#reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb > a, #reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb .img_wrap {
+#reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb > a,
+#reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 20px;
   font-size: 0;
 }
-#reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb > a > img, #reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb .img_wrap > img {
+#reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb > a > img,
+#reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -1365,15 +1373,17 @@
   position: relative;
   width: 100%;
 }
-#reviewsWriteWrap #reviewsWriteProduct > button .thumb > a, #reviewsWriteWrap #reviewsWriteProduct > button .thumb .img_wrap {
+#reviewsWriteWrap #reviewsWriteProduct > button .thumb > a,
+#reviewsWriteWrap #reviewsWriteProduct > button .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 20px;
   font-size: 0;
 }
-#reviewsWriteWrap #reviewsWriteProduct > button .thumb > a > img, #reviewsWriteWrap #reviewsWriteProduct > button .thumb .img_wrap > img {
+#reviewsWriteWrap #reviewsWriteProduct > button .thumb > a > img,
+#reviewsWriteWrap #reviewsWriteProduct > button .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -1883,15 +1893,17 @@
   position: relative;
   width: 100%;
 }
-#reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb > a, #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb .img_wrap {
+#reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb > a,
+#reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 20px;
   font-size: 0;
 }
-#reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb > a > img, #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb .img_wrap > img {
+#reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb > a > img,
+#reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;

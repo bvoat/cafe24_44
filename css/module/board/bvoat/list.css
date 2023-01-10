@@ -80,15 +80,17 @@
   position: relative;
   width: 100%;
 }
-#productBoardList #productBoardListTable .thumb > a, #productBoardList #productBoardListTable .thumb .img_wrap {
+#productBoardList #productBoardListTable .thumb > a,
+#productBoardList #productBoardListTable .thumb .img_wrap {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 20px;
   font-size: 0;
 }
-#productBoardList #productBoardListTable .thumb > a > img, #productBoardList #productBoardListTable .thumb .img_wrap > img {
+#productBoardList #productBoardListTable .thumb > a > img,
+#productBoardList #productBoardListTable .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -199,12 +201,16 @@
   padding: 1% 5%;
   font-size: 1.3rem;
 }
-#productBoardList .page-pagination .btnPrev_wrap, #productBoardList .page-pagination .btnNext_wrap {
+#productBoardList .page-pagination .btnPrev_wrap,
+#productBoardList .page-pagination .btnNext_wrap {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
-#productBoardList .page-pagination .first, #productBoardList .page-pagination .last, #productBoardList .page-pagination .btnPrev, #productBoardList .page-pagination .btnNext {
+#productBoardList .page-pagination .first,
+#productBoardList .page-pagination .last,
+#productBoardList .page-pagination .btnPrev,
+#productBoardList .page-pagination .btnNext {
   width: 30px;
   height: 30px;
   background: #ffffff;
@@ -215,7 +221,10 @@
   color: #707070;
   font-size: 1.1rem;
 }
-#productBoardList .page-pagination .first:hover, #productBoardList .page-pagination .last:hover, #productBoardList .page-pagination .btnPrev:hover, #productBoardList .page-pagination .btnNext:hover {
+#productBoardList .page-pagination .first:hover,
+#productBoardList .page-pagination .last:hover,
+#productBoardList .page-pagination .btnPrev:hover,
+#productBoardList .page-pagination .btnNext:hover {
   font-weight: 700;
   transition: all 0.3s;
 }
