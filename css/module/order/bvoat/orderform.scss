@@ -19,11 +19,6 @@ body {
     margin-top: 40px; //top_nav hide
     font-size: 100% !important;
 
-    a,
-    input,
-    select {
-        font-size: 120% !important;
-    }
 }
 
 //a 에 font size 적용
@@ -31,6 +26,11 @@ body {
     font-size: 125% !important;
 }
 
+//input select에 font size 적용
+#mCafe24Order select,
+#mCafe24Order input {
+    font-size: 11px !important;
+}
 
 // //타이틀
 #orderFormTitle {
