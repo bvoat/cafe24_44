@@ -7,7 +7,6 @@
             <button class="screen_close_btn" data-type="buy" title="현재 창 닫기">닫기</button>
         </div>
         <!-- 구매하기 타이틀 -->
-
         <!-- 상품선택 -->
         <section class="buy_screen_option">
             <!--정기결제 displaynone-->
@@ -61,56 +60,56 @@
 
             <!-- 옵션 선택 테이블 셀렉트 박스-->
             <div id="totalSelects">
-            <table border="0" id="totalSelects" class="product_option" summary="옵션 선택" module="product_option">
-                <!-- displaynone -->
-                <tbody>
-                    <tr class="product_addoption" module="product_addoption">
-                        <th class="add_option_title displaynone" scope="row">{$add_option_name}</th>
-                        <td>
-                            {$form.add_option}
-                            <span class="txtByte" title="현재글자수/최대글자수">(<strong
-                                    class="length">0</strong>/{$option_maxlength})</span>
-                        </td>
-                    </tr>
-                </tbody>
-                <!-- displaynone -->
+                <table border="0" id="totalSelects" class="product_option" summary="옵션 선택" module="product_option">
+                    <!-- displaynone -->
+                    <tbody>
+                        <tr class="product_addoption" module="product_addoption">
+                            <th class="add_option_title displaynone" scope="row">{$add_option_name}</th>
+                            <td>
+                                {$form.add_option}
+                                <span class="txtByte" title="현재글자수/최대글자수">(<strong
+                                        class="length">0</strong>/{$option_maxlength})</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <!-- displaynone -->
 
-                <tbody class="product_select" module="product_option">
-                    <tr>
-                        <th class="option_title" scope="row">{$option_name}</th>
-                        <td>{$form.option}
-                        </td>
-                    </tr>
-                    <tr module="product_quantity">
-                        <th class="option_title" scope="row">수량</th>
-                        <td>
-                            <div class="quant">
-                                <a href="javascript:;" class="up {$quantity_up_class}"><i class="upArrow">수량
-                                        추가</i></a> {$quantity}
-                                <a href="javascript:;" class="down {$quantity_down_class}"><i class="downArrow">수량
-                                        빼기</i></a>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-                <tbody class="product_select">
-                    <tr class="{$option_push_button_display|display}" id="{$option_push_button_id}">
-                        <td colspan="2" class="selectButton"><a href="#none" class="btnSubmit sizeS"
-                                onclick="{$action_push_button}">옵션선택</a>
-                        </td>
-                    </tr>
-                    <tr module="product_fileoption">
-                        <th scope="row">{$file_option_name}</th>
-                        <td class="fileInfo">
-                            {$form.file_option}
-                            <ul class="infoDesc">
-                                <li>- 파일은 최대 5개까지 {$file_option_limit}M 이하로 개별업로드 가능합니다.</li>
-                                <li>- 동일상품이 장바구니에 있을 경우 현재 업로드 되는 파일로 교체됩니다.</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                    <tbody class="product_select" module="product_option">
+                        <tr>
+                            <th class="option_title" scope="row">{$option_name}</th>
+                            <td>{$form.option}
+                            </td>
+                        </tr>
+                        <tr module="product_quantity">
+                            <th class="option_title" scope="row">수량</th>
+                            <td>
+                                <div class="quant">
+                                    <a href="javascript:;" class="up {$quantity_up_class}"><i class="upArrow">수량
+                                            추가</i></a> {$quantity}
+                                    <a href="javascript:;" class="down {$quantity_down_class}"><i class="downArrow">수량
+                                            빼기</i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="product_select">
+                        <tr class="{$option_push_button_display|display}" id="{$option_push_button_id}">
+                            <td colspan="2" class="selectButton"><a href="#none" class="btnSubmit sizeS"
+                                    onclick="{$action_push_button}">옵션선택</a>
+                            </td>
+                        </tr>
+                        <tr module="product_fileoption">
+                            <th scope="row">{$file_option_name}</th>
+                            <td class="fileInfo">
+                                {$form.file_option}
+                                <ul class="infoDesc">
+                                    <li>- 파일은 최대 5개까지 {$file_option_limit}M 이하로 개별업로드 가능합니다.</li>
+                                    <li>- 동일상품이 장바구니에 있을 경우 현재 업로드 되는 파일로 교체됩니다.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <!-- 옵션 선택 테이블-->
 
@@ -459,11 +458,17 @@
                             <td>
                                 <span class="quantity">
                                     {$quantity}
-                                    <a href="javascript:;" class="up {$quantity_up_class}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif" alt="수량증가" /></a>
-                                    <a href="javascript:;" class="down {$quantity_down_class}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif" alt="수량감소" /></a>
+                                    <a href="javascript:;" class="up {$quantity_up_class}"><img
+                                            src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif"
+                                            alt="수량증가" /></a>
+                                    <a href="javascript:;" class="down {$quantity_down_class}"><img
+                                            src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif"
+                                            alt="수량감소" /></a>
                                 </span>
                             </td>
-                            <td class="right"><span class="{$total.quantity_price} ">{$product_price}</span> <span class="mileage displaynone">(<img src="{$mileage_mileage_icon}" /> <span class="{$total.mileage_price}">{$mileage_value}</span>)</span></td>
+                            <td class="right"><span class="{$total.quantity_price} ">{$product_price}</span> <span
+                                    class="mileage displaynone">(<img src="{$mileage_mileage_icon}" /> <span
+                                        class="{$total.mileage_price}">{$mileage_value}</span>)</span></td>
                         </tr>
                         <tr id="{$total.option_id}" class="option displaynone" module="product_option">
                             <!--
@@ -479,7 +484,7 @@
                                     </colgroup>
                                     <tbody>
 
-                                    <!-- <tr module="product_addoption">
+                                        <!-- <tr module="product_addoption">
                                         <th scope="row">{$add_option_name}</th>
                                         <td>
                                             {$form.add_option}
@@ -499,7 +504,7 @@
                                 </table>
                             </td>
                         </tr>
-                    </tbody>					
+                    </tbody>
 
 
 
@@ -544,15 +549,16 @@
                 <!-- <p class="ec-base-help {$price_warning_class}">할인가가 적용된 최종 결제예정금액은 주문 시 확인할 수
                     있습니다.</p> -->
             </section>
-                    <!-- 네이버 체크아웃 구매 버튼 -->
-                    <p class="naver_msg" module="Layout_stateLogoff">네이버 페이 비회원 구매 시 <br/>비보트의 쿠폰, 마일리지 혜택을 <span>받으실 수 없습니다.</span></p>
-                    <div id="NaverChk_Button" module="Layout_stateLogoff">
-                        
-                    </div>
+            <!-- 네이버 체크아웃 구매 버튼 -->
+            <p class="naver_msg" module="Layout_stateLogoff">네이버 페이 비회원 구매 시 <br />비보트의 쿠폰, 마일리지 혜택을 <span>받으실 수
+                    없습니다.</span></p>
+            <div id="NaverChk_Button" module="Layout_stateLogoff">
+
+            </div>
         </section>
         <!-- 상품선택 -->
 
- 
+
         <section class="buy_button webnmobile_product_html" module="product_action">
             <h3 class="displaynone">구매 액션</h3>
             <div class="btn_cart {$basket_display|display}">
@@ -574,25 +580,25 @@
 </section>
 <script>
     //품절 상품 선택 불가
-    if(document.querySelector("#totalProducts")){
-        Array.from(document.querySelectorAll("select")).forEach((select)=>{
-        select.addEventListener("mouseover", ()=>{
-            document.querySelectorAll("option").forEach((opt)=>{
-                if(opt.innerHTML.includes('품절')){
-                    opt.setAttribute("disabled","true")
-                } else{
-                    null;
-                }
+    if (document.querySelector("#totalProducts")) {
+        Array.from(document.querySelectorAll("select")).forEach((select) => {
+            select.addEventListener("mouseover", () => {
+                document.querySelectorAll("option").forEach((opt) => {
+                    if (opt.innerHTML.includes('품절')) {
+                        opt.setAttribute("disabled", "true")
+                    } else {
+                        null;
+                    }
+                })
             })
         })
-    })
     };
     //배송비 class 분기
     let total_delivery_price = document.querySelector(".total_delivery_price");
-    if(total_delivery_price.outerText != '무료'){
+    if (total_delivery_price.outerText != '무료') {
         total_delivery_price.classList.add("not_free");
     }
-    
+
     const select_box = document.querySelectorAll(".product_select select");
     const total_wrap = document.querySelector(".total_wrap");
     const totalProduct = document.getElementById("totalProducts");
@@ -602,11 +608,11 @@
         let option_product = document.querySelectorAll(".option_product");
 
         //셀렉트 박스가 있고
-        if(select_box.length > 0){
-            if(option_product.length > 0){
+        if (select_box.length > 0) {
+            if (option_product.length > 0) {
                 //option length가 0 이상이면 (선택함)
                 total_wrap.classList.remove("displaynone");
-            }else if(option_product.length == 0){
+            } else if (option_product.length == 0) {
                 //셀렉트 박스로 선택된 option의 length가 0이면 (아직 선택 안함)
                 total_wrap.classList.add("displaynone");
             }
@@ -622,7 +628,7 @@
     //.product_addoption 내 placeholder 추가 (후원자명 입력 등)
     const product_addoption = document.querySelector(".product_addoption input[type='text']");
     const add_option_title = document.querySelector(".add_option_title");
-    if(product_addoption != null){
+    if (product_addoption != null) {
         product_addoption.setAttribute("placeholder", add_option_title.outerText)
     }
 
