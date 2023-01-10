@@ -111,6 +111,7 @@ article {
 }
 
 #mCafe24Order .ec-base-fold>.title {
+    background: $bvt-bg-lightblue;
     border-bottom: 1px solid #d7d5d580;
 }
 
@@ -155,8 +156,8 @@ article {
     font-weight: 700 !important;
 }
 
-//주소 색상
-#mCafe24Order [class*="btn"].mini {
+// 배송지 목록 버튼
+#mCafe24Order .shippingList+.sideRight {
     top: 0 !important;
 }
 
