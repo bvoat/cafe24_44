@@ -170,6 +170,7 @@ article {
 
 .count em {
   font-size: 10px !important;
+  top: -3.5px !important;
 }
 
 #bvtBottom span {
