@@ -18,11 +18,15 @@ body {
     padding: 40px 0;
     margin-top: 40px; //top_nav hide
     font-size: 100% !important;
+
+    a {
+        font-size: 120% !important;
+    }
 }
 
 //a 에 font size 적용
 #mCafe24Order .ec-base-tab a {
-    font-size: 100% !important;
+    font-size: 125% !important;
 }
 
 

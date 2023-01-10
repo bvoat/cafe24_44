@@ -24,9 +24,12 @@ body {
   margin-top: 40px;
   font-size: 100% !important;
 }
+#orderForm a {
+  font-size: 120% !important;
+}
 
 #mCafe24Order .ec-base-tab a {
-  font-size: 100% !important;
+  font-size: 125% !important;
 }
 
 #orderFormTitle {
