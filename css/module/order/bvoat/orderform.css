@@ -111,4 +111,14 @@ body {
 
 #total_order_sale_price_view {
   font-weight: 700 !important;
+}
+
+/*   우편번호 검색    */
+.mCafe24Post.gPc span {
+  font-size: 12px !important;
+}
+.mCafe24Post.gPc input,
+.mCafe24Post.gPc select,
+.mCafe24Post.gPc a {
+  font-size: 12px !important;
 }/*# sourceMappingURL=orderform.css.map */
