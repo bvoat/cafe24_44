@@ -114,11 +114,31 @@ body {
 }
 
 /*   우편번호 검색    */
-.mCafe24Post.gPc span {
+.mCafe24Post.gPc,
+.mCafe24Post.gMobile {
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "나눔고딕", "맑은 고딕", "Malgun Gothic", "돋움", dotum, Verdana, AppleGothic, sans-serif !important;
+}
+.mCafe24Post.gPc div,
+.mCafe24Post.gMobile div {
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "나눔고딕", "맑은 고딕", "Malgun Gothic", "돋움", dotum, Verdana, AppleGothic, sans-serif !important;
+  font-size: 12px !important;
+}
+.mCafe24Post.gPc span,
+.mCafe24Post.gMobile span {
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "나눔고딕", "맑은 고딕", "Malgun Gothic", "돋움", dotum, Verdana, AppleGothic, sans-serif !important;
   font-size: 12px !important;
 }
 .mCafe24Post.gPc input,
 .mCafe24Post.gPc select,
-.mCafe24Post.gPc a {
-  font-size: 12px !important;
+.mCafe24Post.gPc a,
+.mCafe24Post.gMobile input,
+.mCafe24Post.gMobile select,
+.mCafe24Post.gMobile a {
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "나눔고딕", "맑은 고딕", "Malgun Gothic", "돋움", dotum, Verdana, AppleGothic, sans-serif !important;
+  font-size: 12.5px !important;
+}
+
+.mCafe24Post.gPc h1,
+.gMobile.typeAll h2 {
+  background: #022CFF;
 }/*# sourceMappingURL=orderform.css.map */

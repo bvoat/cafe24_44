@@ -128,18 +128,32 @@ body {
 
 
 /*   우편번호 검색    */
-.mCafe24Post.gPc {
+.mCafe24Post.gPc,
+.mCafe24Post.gMobile {
+    font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif !important;
+
+    div {
+        font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif !important;
+        font-size: 12px !important;
+    }
+
     span {
+        font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif !important;
         font-size: 12px !important;
     }
 
     input,
     select,
     a {
-        font-size: 12px !important;
+        font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif !important;
+        font-size: 12.5px !important;
     }
 }
 
+.mCafe24Post.gPc h1,
+.gMobile.typeAll h2 {
+    background: $bvt-blue;
+}
 
 // //heading
 // .heading {
