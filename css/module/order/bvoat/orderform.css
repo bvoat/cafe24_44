@@ -44,7 +44,7 @@ img,
 select,
 section,
 article {
-  font-size: 100% !important;
+  font-size: 100%;
 }
 
 #orderForm {
@@ -63,12 +63,12 @@ article {
   align-items: flex-start;
   width: 100%;
 }
-#orderFormTitle h1 {
+#orderFormTitle > h1 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 15px;
 }
-#orderFormTitle h2 {
+#orderFormTitle > h2 {
   font-size: 1.3rem;
   font-weight: 300;
   color: #ABABAB;
