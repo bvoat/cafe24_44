@@ -174,7 +174,8 @@
                     align-items: center;
 
                     >li {
-                        width: 209px;
+                        width: 48%;
+                        max-width: 209px;
                         margin-bottom: 36px;
 
                         &:nth-child(2n-1) {

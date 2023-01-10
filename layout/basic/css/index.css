@@ -155,7 +155,8 @@
   align-items: center;
 }
 #bvtHome #indexListmain div.listmain .right-side-control .moreview > ul > li {
-  width: 209px;
+  width: 48%;
+  max-width: 209px;
   margin-bottom: 36px;
 }
 #bvtHome #indexListmain div.listmain .right-side-control .moreview > ul > li:nth-child(2n-1) {
