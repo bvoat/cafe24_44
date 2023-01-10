@@ -79,9 +79,11 @@ body {
 }
 
 .txtEm,
-.txtStrong {
+.txtStrong,
+#mCafe24Order .discountDetail .displayFlex .control .discountPrice {
   color: #022CFF !important;
   font-weight: 600 !important;
+  font-size: 17px !important;
 }
 
 .icoRequired {
@@ -93,6 +95,12 @@ body {
 
 .segment {
   padding: 30px 16px 20px !important;
+}
+
+#mCafe24Order p.ec-base-help,
+#mCafe24Order ul.ec-base-help li,
+#mCafe24Order ol.ec-base-help li {
+  font-size: 14px !important;
 }
 
 #orderFixItem.ec-base-button.gFull [class*=btn] {
