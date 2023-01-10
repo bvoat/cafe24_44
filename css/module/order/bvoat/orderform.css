@@ -10,8 +10,10 @@
 /* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
-body {
+body,
+article {
   background: none !important;
+  font-size: 100% !important;
 }
 
 #orderForm {
@@ -20,7 +22,7 @@ body {
   align-items: center;
   width: 100%;
   max-width: 450px;
-  padding: 23px 11px;
+  padding: 40px 0;
   margin-top: 40px;
 }
 
