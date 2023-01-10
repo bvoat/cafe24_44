@@ -227,7 +227,7 @@ function controlTopNavActive(page_path) {
 window.addEventListener("DOMContentLoaded", () => {
   //top nav 숨기기 함수
   controlTopNav(window.location.href);
-  //top nav active 함수
+  //top nav active 함수 
   controlTopNavActive(window.location.href);
 });
 /* nav 컨트롤 스크립트 */
