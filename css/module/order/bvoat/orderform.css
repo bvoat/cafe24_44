@@ -57,9 +57,13 @@ article {
   margin-top: 40px;
 }
 
+#mCafe24Order {
+  padding: 30px 11px 73px;
+}
+
 #mCafe24Order select,
 #mCafe24Order input {
-  font-size: 12px !important;
+  font-size: 13px !important;
 }
 
 #orderFormTitle {
@@ -67,6 +71,7 @@ article {
   flex-flow: column nowrap;
   align-items: flex-start;
   width: 100%;
+  padding: 0 11px;
 }
 #orderFormTitle > h1 {
   font-size: 20px !important;

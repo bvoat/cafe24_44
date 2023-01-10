@@ -53,10 +53,15 @@ article {
 
 }
 
+//padding값 다운
+#mCafe24Order {
+    padding: 30px 11px 73px;
+}
+
 //input select에 font size 적용
 #mCafe24Order select,
 #mCafe24Order input {
-    font-size: 12px !important;
+    font-size: 13px !important;
 }
 
 // //타이틀
@@ -65,6 +70,7 @@ article {
     flex-flow: column nowrap;
     align-items: flex-start;
     width: 100%;
+    padding: 0 11px;
 
     >h1 {
         font-size: 20px !important;
