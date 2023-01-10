@@ -91,11 +91,11 @@ function monitoringPrice() {
 }
 window.addEventListener("load", () => {
   if (document.querySelector(".price_wrap")) {
-    setTimeout(monitoringPrice,200)
-    setTimeout(monitoringDesc,300)
+    setTimeout(monitoringPrice,800)
+    // setTimeout(monitoringDesc,900)
   } else {
     setTimeout(monitoringPrice,1600)
-    setTimeout(monitoringDesc,1200)
+    // setTimeout(monitoringDesc,1200)
   }
 });
 
