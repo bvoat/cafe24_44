@@ -18,7 +18,12 @@ body {
     padding: 40px 0;
     margin-top: 40px; //top_nav hide
     font-size: 100% !important;
+
+    a {
+        font-size: 100% !important;
+    }
 }
+
 
 // //타이틀
 #orderFormTitle {
@@ -90,7 +95,7 @@ body {
 
 //결제정보 padding
 .segment {
-    padding: 20px 16px 20px;
+    padding: 30px 16px 20px !important;
 }
 
 

@@ -24,6 +24,9 @@ body {
   margin-top: 40px;
   font-size: 100% !important;
 }
+#orderForm a {
+  font-size: 100% !important;
+}
 
 #orderFormTitle {
   display: flex;
@@ -83,5 +86,5 @@ body {
 }
 
 .segment {
-  padding: 20px 16px 20px;
+  padding: 30px 16px 20px !important;
 }/*# sourceMappingURL=orderform.css.map */
