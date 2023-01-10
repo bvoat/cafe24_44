@@ -22,8 +22,7 @@ if (review_frame != null) {
     `https://${api_domain}.shop/buy_records?product_no=${product_no}`
   );
 }
-//최초 탭 높이 조절
-
+//최초 탭 높이 조절 
 
 window.addEventListener("load", ()=>{
   const productDetailBottom = document.getElementById("productDetailBottom");
