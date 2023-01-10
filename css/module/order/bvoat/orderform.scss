@@ -107,14 +107,16 @@ article {
 
 //title
 .title {
-    background: $bvt-bg-lightblue;
+    background: $bvt-bg-lightblue !important;
 }
 
-#mCafe24Order .ec-base-fold>.title {
-    background: $bvt-bg-lightblue;
-    border-bottom: 1px solid #d7d5d580;
+#mCafe24Order .ec-base-fold>.title,
+#mCafe24Order .ec-base-tab li.selected {
+    background: $bvt-bg-lightblue !important;
+    border-bottom: 1px solid #d7d5d580 !important;
 }
 
+//탭
 // 강조 색상
 .txtEm,
 .txtStrong,

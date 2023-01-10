@@ -96,12 +96,13 @@ article {
 }
 
 .title {
-  background: #FAFAFE;
+  background: #FAFAFE !important;
 }
 
-#mCafe24Order .ec-base-fold > .title {
-  background: #FAFAFE;
-  border-bottom: 1px solid rgba(215, 213, 213, 0.5019607843);
+#mCafe24Order .ec-base-fold > .title,
+#mCafe24Order .ec-base-tab li.selected {
+  background: #FAFAFE !important;
+  border-bottom: 1px solid rgba(215, 213, 213, 0.5019607843) !important;
 }
 
 .txtEm,
