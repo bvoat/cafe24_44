@@ -24,7 +24,9 @@ body {
   margin-top: 40px;
   font-size: 100% !important;
 }
-#orderForm a {
+#orderForm a,
+#orderForm input,
+#orderForm select {
   font-size: 120% !important;
 }
 

@@ -19,7 +19,9 @@ body {
     margin-top: 40px; //top_nav hide
     font-size: 100% !important;
 
-    a {
+    a,
+    input,
+    select {
         font-size: 120% !important;
     }
 }
