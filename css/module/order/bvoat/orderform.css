@@ -31,7 +31,7 @@ body {
 
 #mCafe24Order select,
 #mCafe24Order input {
-  font-size: 11px !important;
+  font-size: 12px !important;
 }
 
 #orderFormTitle {
@@ -93,4 +93,13 @@ body {
 
 .segment {
   padding: 30px 16px 20px !important;
+}
+
+#btn_payment {
+  width: 100%;
+  max-width: 450px;
+  background: #022CFF;
+}
+#btn_payment #total_order_sale_price_view {
+  font-weight: 700;
 }/*# sourceMappingURL=orderform.css.map */
