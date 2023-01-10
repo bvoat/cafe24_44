@@ -4,8 +4,38 @@
 
 
 //프레임
-body {
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+img,
+select,
+section,
+article {
     background: none !important;
+    font-size: 100% !important;
 }
 
 
@@ -17,14 +47,13 @@ body {
     max-width: 450px;
     padding: 40px 0;
     margin-top: 40px; //top_nav hide
-    font-size: 100% !important;
 
 }
 
 //a 에 font size 적용
-#mCafe24Order .ec-base-tab a {
-    font-size: 125% !important;
-}
+// #mCafe24Order .ec-base-tab a {
+//     font-size: 125% !important;
+// }
 
 //input select에 font size 적용
 #mCafe24Order select,
@@ -70,7 +99,7 @@ body {
 //선물하기
 .webnmobile_order_html {
     >label {
-        font-size: 1.4rem;
+        font-size: 15px;
         font-weight: 500;
         color: $bvt-darkgray;
     }
@@ -153,6 +182,16 @@ body {
 .mCafe24Post.gPc h1,
 .gMobile.typeAll h2 {
     background: $bvt-blue;
+}
+
+.count em {
+    font-size: 10px !important;
+}
+
+#bvtBottom {
+    span {
+        font-size: 10px !important;
+    }
 }
 
 // //heading

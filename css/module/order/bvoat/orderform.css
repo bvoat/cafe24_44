@@ -10,8 +10,38 @@
 /* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
-body {
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+img,
+select,
+section,
+article {
   background: none !important;
+  font-size: 100% !important;
 }
 
 #orderForm {
@@ -22,11 +52,6 @@ body {
   max-width: 450px;
   padding: 40px 0;
   margin-top: 40px;
-  font-size: 100% !important;
-}
-
-#mCafe24Order .ec-base-tab a {
-  font-size: 125% !important;
 }
 
 #mCafe24Order select,
@@ -65,7 +90,7 @@ body {
 }
 
 .webnmobile_order_html > label {
-  font-size: 1.4rem;
+  font-size: 15px;
   font-weight: 500;
   color: #707070;
 }
@@ -141,4 +166,12 @@ body {
 .mCafe24Post.gPc h1,
 .gMobile.typeAll h2 {
   background: #022CFF;
+}
+
+.count em {
+  font-size: 10px !important;
+}
+
+#bvtBottom span {
+  font-size: 10px !important;
 }/*# sourceMappingURL=orderform.css.map */
