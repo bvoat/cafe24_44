@@ -230,7 +230,7 @@ window.addEventListener("DOMContentLoaded", () => {
   //top nav active 함수 
   controlTopNavActive(window.location.href);
 });
-/* nav 컨트롤 스크립트 */
+/* nav 컨트롤 스크립트 */ 
 
 /* 아이폰 스크롤 시 튕김 현상 prevent */
 // disable touchmove event when height is smaller than screen height
