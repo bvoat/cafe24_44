@@ -68,7 +68,7 @@ article {
         font-size: 13px !important;
         font-weight: 300;
         color: $bvt-lostfocus-gray;
-        line-height: 1.9rem;
+        line-height: 20px;
     }
 }
 
@@ -80,166 +80,177 @@ article {
     margin-bottom: 40px;
 }
 
-//     //설정이 많아서 필요한 셀렉터만 선택해서 작업
-//     //fontsize값 1.3 이상으로 (글자값 통일)
-//     span,p,a,dd,dt,dl,ul>li,button,tr,th,tbody,strong,em,label,input,select {
-//         font-size: 1.3rem;
-//     }
-//     //선물하기
-//     .webnmobile_order_html {
-//         >label {
-//             font-size: 1.4rem;
-//             font-weight: 500;
-//             color: $bvt-darkgray;
-//         }
-//     }
+//!!! form_onetouch.css 중에서 필요한 셀렉터만 선택해서 작업
 
-//     // 강조 색상
-//     .txtEm,
-//     .txtStrong {
-//         color: $bvt-blue  !important;
-//         font-weight: 500;
-//     }
-//     //'필수'
-//     .icoRequired{
-//         position: relative;
-//         display: block;
-//         font-size: 8px !important;
-//         top: 1.4rem;
-//     }
+//선물하기
+.webnmobile_order_html {
+    >label {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $bvt-darkgray;
+    }
+}
 
-//     //title
-//     .title {
-//         display: flex;
-//         flex-flow: row nowrap;
-//         justify-content: space-between;
-//         align-items: center;
-//         background: $bvt-bg-lightblue;
-//         border: none;
-//         h2,
-//         h3 {
-//             font-size: 1.45rem;
-//         }
-//     }
+//title
+.title {
+    background: $bvt-bg-lightblue;
+}
 
-//     //heading
-//     .heading {
-//         font-size: 1.5rem !important;
-//     }
-//     //주소
-//     #ec-shop-deliveryInfoAddress{
-//         display: block;
-//     }
-//     //휴대전화
-//     #ec-shop-deliveryInfoCell{
+
+
+// // 강조 색상
+// .txtEm,
+// .txtStrong {
+//     color: $bvt-blue !important;
+//     font-weight: 500;
+// }
+
+// //'필수'
+// .icoRequired {
+//     position: relative;
+//     display: block;
+//     font-size: 8px !important;
+//     top: 1.4rem;
+// }
+
+
+
+// //heading
+// .heading {
+//     font-size: 1.5rem !important;
+// }
+
+// //주소
+// #ec-shop-deliveryInfoAddress {
+//     display: block;
+// }
+
+// //휴대전화
+// #ec-shop-deliveryInfoCell {
+//     padding-left: 11px;
+// }
+
+// //배송지 목록에서 휴대전화
+// .xans-order-deliverylist {
+//     dd {
 //         padding-left: 11px;
 //     }
-//     //배송지 목록에서 휴대전화
-//     .xans-order-deliverylist{
-//         dd{
-//             padding-left: 11px;
+// }
+
+// //배송 메시지 셀렉터
+// #omessage_select {
+//     font-size: 1.25rem;
+// }
+
+// //선물하기 - 선물 메시지
+// #omessage {
+//     font-size: 1.3rem;
+// }
+
+// //주문상품
+// .prdBox {
+//     height: auto;
+
+//     .thumbnail {
+//         border: none;
+//         border-radius: 4px;
+//     }
+
+//     .description {
+//         .prdName {
+//             font-weight: 600;
+//             margin-bottom: 6px;
 //         }
-//     }
-//     //배송 메시지 셀렉터
-//     #omessage_select {
-//         font-size: 1.25rem;
-//     }
-//     //선물하기 - 선물 메시지
-//     #omessage{
-//         font-size: 1.3rem;
-//     }
-//     //주문상품
-//     .prdBox{
-//         height: auto;
-//         .thumbnail{
-//             border: none;
-//             border-radius: 4px;
-//         }
-//         .description{
-//             .prdName{
-//                 font-weight: 600;
-//                 margin-bottom: 6px;
+
+//         .info {
+
+//             li,
+//             p,
+//             span {
+//                 font-size: 1.15rem !important;
+//                 margin-bottom: 3.5px;
 //             }
-//             .info{
-//                 li, p, span{
-//                     font-size: 1.15rem !important;
-//                     margin-bottom: 3.5px;
-//                 }
-//             }
-//         }
-//     }
-//     //결제정보 내부 금액
-//     .right {
-//         font-size: 1.25rem;
-//     }
-
-//     //최근 결제 수단
-//     .payMethod>li.selected>label {
-//         border-color: $bvt-bg-blue;
-//         font-size: 1.3rem;
-//     }
-
-//     .payMethod>li.selected>.inner {
-//         border: $bvt-btn-border;
-//         font-size: 1.25rem;
-//     }
-
-//     //다른 결제 수단
-//     .payMethod>li>label {
-//         border-color: $bvt-bg-blue;
-//         font-size: 1.3rem;
-//     }
-
-//     //현금영수증
-//     .receiptArea {
-//         .title{
-//             padding: 11px 15px 10px;
-//         }
-//     }
-
-//     #cashreceipt_display_area {
-//         font-size: 1.3rem;
-
-//         >label {
-//             font-size: 1.3rem;
-//         }
-//     }
-
-//     #cashreceipt_regist0 {
-//         margin: 20px 15px 9px;
-//     }
-//     //적립 혜택 금액
-//     #ec-jigsaw-heading-benefit{
-//         font-size: 1.4rem !important;
-//     }
-
-//     //모든 약관 동의
-//     .allAgree {
-//         label {
-//             font-size: 1.5rem;
-//         }
-//     }
-//     //구매 버튼
-//     .ec-base-button.gFull{
-//         margin: 11px 0;
-//     }
-//     #btn_payment{
-//         width: 100%;
-//         max-width: 450px;
-//         background: $bvt-blue;
-//         //총금액
-//         #total_order_sale_price_view{
-//             font-size: 1.65rem !important;
-//             font-weight: 700;
-//         }
-//     }
-//     //하단 설명
-//     .helpArea {
-//         >ul {
-//             font-size: 1.23em;
 //         }
 //     }
 // }
+
+// //결제정보 내부 금액
+// .right {
+//     font-size: 1.25rem;
+// }
+
+// //최근 결제 수단
+// .payMethod>li.selected>label {
+//     border-color: $bvt-bg-blue;
+//     font-size: 1.3rem;
+// }
+
+// .payMethod>li.selected>.inner {
+//     border: $bvt-btn-border;
+//     font-size: 1.25rem;
+// }
+
+// //다른 결제 수단
+// .payMethod>li>label {
+//     border-color: $bvt-bg-blue;
+//     font-size: 1.3rem;
+// }
+
+// //현금영수증
+// .receiptArea {
+//     .title {
+//         padding: 11px 15px 10px;
+//     }
+// }
+
+// #cashreceipt_display_area {
+//     font-size: 1.3rem;
+
+//     >label {
+//         font-size: 1.3rem;
+//     }
+// }
+
+// #cashreceipt_regist0 {
+//     margin: 20px 15px 9px;
+// }
+
+// //적립 혜택 금액
+// #ec-jigsaw-heading-benefit {
+//     font-size: 1.4rem !important;
+// }
+
+// //모든 약관 동의
+// .allAgree {
+//     label {
+//         font-size: 1.5rem;
+//     }
+// }
+
+// //구매 버튼
+// .ec-base-button.gFull {
+//     margin: 11px 0;
+// }
+
+// #btn_payment {
+//     width: 100%;
+//     max-width: 450px;
+//     background: $bvt-blue;
+
+//     //총금액
+//     #total_order_sale_price_view {
+//         font-size: 1.65rem !important;
+//         font-weight: 700;
+//     }
+// }
+
+// //하단 설명
+// .helpArea {
+//     >ul {
+//         font-size: 1.23em;
+//     }
+// }
+
 
 // //쿠폰 페이지
 // .xans-coupon-selectnew {

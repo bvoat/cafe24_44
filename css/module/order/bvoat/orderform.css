@@ -72,7 +72,7 @@ article {
   font-size: 13px !important;
   font-weight: 300;
   color: #ABABAB;
-  line-height: 1.9rem;
+  line-height: 20px;
 }
 
 #mCafe24Order {
@@ -80,4 +80,14 @@ article {
   max-width: 450px;
   padding: 23px 0;
   margin-bottom: 40px;
+}
+
+.webnmobile_order_html > label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #707070;
+}
+
+.title {
+  background: #FAFAFE;
 }/*# sourceMappingURL=orderform.css.map */
