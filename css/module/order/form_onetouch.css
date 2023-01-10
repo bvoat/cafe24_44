@@ -1048,6 +1048,7 @@ input:-webkit-autofill {
 
 #mCafe24Order .ec-base-tab li:first-child {
     border-left: 0;
+    border-right: 1px solid #d7d5d5;
 }
 
 #mCafe24Order .ec-base-tab li.selected {
