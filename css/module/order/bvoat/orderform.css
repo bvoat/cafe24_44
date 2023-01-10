@@ -12,4 +12,39 @@
 /* 미디어쿼리 */
 body {
   background: none !important;
+}
+
+#orderForm {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  padding: 23px 11px;
+  margin-top: 40px;
+}
+
+#orderFormTitle {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  width: 100%;
+}
+#orderFormTitle h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+#orderFormTitle h2 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #ABABAB;
+  line-height: 1.9rem;
+}
+
+#mCafe24Order {
+  width: 100%;
+  max-width: 450px;
+  padding: 23px 0;
+  margin-bottom: 40px;
 }/*# sourceMappingURL=orderform.css.map */

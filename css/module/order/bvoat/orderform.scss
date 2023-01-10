@@ -8,45 +8,44 @@ body {
     background: none !important;
 }
 
-// #orderForm {
-//     display: flex;
-//     flex-flow: column nowrap;
-//     align-items: center;
-//     width: 100%;
-//     max-width: 450px;
-//     padding: 23px 11px;
-//     margin-top: 40px; //top_nav hide
-// }
+#orderForm {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    padding: 23px 11px;
+    margin-top: 40px; //top_nav hide
+}
 
 // //타이틀
-// #orderFormTitle {
-//     display: flex;
-//     flex-flow: column nowrap;
-//     align-items: flex-start;
-//     width: 100%;
-//     margin-bottom: 18px;
+#orderFormTitle {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    width: 100%;
 
-//     h2 {
-//         font-size: 1.9rem;
-//         font-weight: 700;
-//         margin-bottom: 15px;
-//     }
+    h1 {
+        font-size: 1.9rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
 
-//     h3 {
-//         font-size: 1.3rem;
-//         font-weight: 300;
-//         color: $bvt-lostfocus-gray;
-//         line-height: 1.9rem;
-//     }
-// }
+    h2 {
+        font-size: 1.3rem;
+        font-weight: 300;
+        color: $bvt-lostfocus-gray;
+        line-height: 1.9rem;
+    }
+}
 
 // //주문서
-// #mCafe24Order {
-//     width: 100%;
-//     max-width: 450px;
-//     padding: 23px 11px;
-//     font-size: 1.3rem !important;
-//     margin-bottom: 41px;
+#mCafe24Order {
+    width: 100%;
+    max-width: 450px;
+    padding: 23px 0;
+    margin-bottom: 40px;
+}
 
 //     //설정이 많아서 필요한 셀렉터만 선택해서 작업
 //     //fontsize값 1.3 이상으로 (글자값 통일)
