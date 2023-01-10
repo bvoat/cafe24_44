@@ -315,67 +315,85 @@ article {
 // }
 
 
-// //쿠폰 페이지
-// .xans-coupon-selectnew {
-//     width: 100%;
-//     max-width: 450px;
-//     font-size: 1.2rem !important;
-//     margin: 0 auto;
-//     h1{
-//         font-size: 1.4rem !important;
-//         font-weight: 600 !important;
-//         background: $bvt-blue !important;
-//         color: $bvt-white !important;
-//     }
-//     .wrap{
-//         .pannelArea {
-//             .title{
-//                 h2, h3{
-//                     font-size: 1.3rem !important;
-//                 }
-//             }
-//             .content{
-//                 .segment{
-//                     ul{
-//                         select{
-//                             font-size: 1.3rem !important;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//         .ec-base-fold{
-//             font-size: 1.3rem !important;
-//             .title{
-//                 h2, h3{font-size: 1.2rem  !important;}
-//             }
-//             .contents{
-//                 th, td{
-//                     font-size: 1.15rem  !important;
-//                 }
-//             }
-//             .helpArea{
-//                 li{
-//                     font-size: 1rem  !important;
-//                 }
-//             }
-//         }
-//     }
-//     .ec-base-button.gFull{
-//         display: flex;
-//         flex-flow: row nowrap;
-//         align-items: center;
-//         padding: 15px auto !important;
-//         .btnSubmit{
-//             width: 48%;
-//             background: $bvt-blue !important;
-//             border: none  !important;
-//             font-weight: 500;
-//         }
-//         .btnEm{
-//             width: 48%;
-//             border: none  !important;
-//             font-weight: 600;
-//         }
-//     }
-// }
+//쿠폰 페이지
+.xans-coupon-selectnew {
+    width: 100%;
+    max-width: 450px;
+    font-size: 1.2rem !important;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 1.4rem !important;
+        font-weight: 600 !important;
+        background: $bvt-blue !important;
+        color: $bvt-white !important;
+    }
+
+    .wrap {
+        .pannelArea {
+            .title {
+
+                h2,
+                h3 {
+                    font-size: 1.3rem !important;
+                }
+            }
+
+            .content {
+                .segment {
+                    ul {
+                        select {
+                            font-size: 1.3rem !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ec-base-fold {
+            font-size: 1.3rem !important;
+
+            .title {
+
+                h2,
+                h3 {
+                    font-size: 1.2rem !important;
+                }
+            }
+
+            .contents {
+
+                th,
+                td {
+                    font-size: 1.15rem !important;
+                }
+            }
+
+            .helpArea {
+                li {
+                    font-size: 1rem !important;
+                }
+            }
+        }
+    }
+
+    .ec-base-button.gFull {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        padding: 15px auto !important;
+
+        .btnSubmit {
+            width: 48%;
+            background: $bvt-blue !important;
+            border: none !important;
+            font-weight: 500;
+        }
+
+        .btnEm {
+            width: 48%;
+            border: none !important;
+            font-weight: 600;
+        }
+    }
+}

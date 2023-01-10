@@ -158,4 +158,55 @@ article {
 
 #bvtBottom span {
   font-size: 11px !important;
+}
+
+.xans-coupon-selectnew {
+  width: 100%;
+  max-width: 450px;
+  font-size: 1.2rem !important;
+  margin: 0 auto;
+}
+.xans-coupon-selectnew h1 {
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
+  background: #022CFF !important;
+  color: #ffffff !important;
+}
+.xans-coupon-selectnew .wrap .pannelArea .title h2,
+.xans-coupon-selectnew .wrap .pannelArea .title h3 {
+  font-size: 1.3rem !important;
+}
+.xans-coupon-selectnew .wrap .pannelArea .content .segment ul select {
+  font-size: 1.3rem !important;
+}
+.xans-coupon-selectnew .wrap .ec-base-fold {
+  font-size: 1.3rem !important;
+}
+.xans-coupon-selectnew .wrap .ec-base-fold .title h2,
+.xans-coupon-selectnew .wrap .ec-base-fold .title h3 {
+  font-size: 1.2rem !important;
+}
+.xans-coupon-selectnew .wrap .ec-base-fold .contents th,
+.xans-coupon-selectnew .wrap .ec-base-fold .contents td {
+  font-size: 1.15rem !important;
+}
+.xans-coupon-selectnew .wrap .ec-base-fold .helpArea li {
+  font-size: 1rem !important;
+}
+.xans-coupon-selectnew .ec-base-button.gFull {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 15px auto !important;
+}
+.xans-coupon-selectnew .ec-base-button.gFull .btnSubmit {
+  width: 48%;
+  background: #022CFF !important;
+  border: none !important;
+  font-weight: 500;
+}
+.xans-coupon-selectnew .ec-base-button.gFull .btnEm {
+  width: 48%;
+  border: none !important;
+  font-weight: 600;
 }/*# sourceMappingURL=orderform.css.map */
