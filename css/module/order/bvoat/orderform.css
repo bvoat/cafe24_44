@@ -95,11 +95,12 @@ body {
   padding: 30px 16px 20px !important;
 }
 
-#btn_payment {
+#orderFixItem.ec-base-button.gFull [class*=btn] {
   width: 100%;
   max-width: 450px;
-  background: #022CFF;
+  background: #022CFF !important;
 }
-#btn_payment #total_order_sale_price_view {
-  font-weight: 700;
+
+#total_order_sale_price_view {
+  font-weight: 700 !important;
 }/*# sourceMappingURL=orderform.css.map */
