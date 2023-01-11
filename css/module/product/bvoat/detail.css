@@ -82,7 +82,7 @@
   font-weight: 300;
 }
 #productDetailTop .product_info_wrap h3.summary_desc {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 600;
   color: #292929;
   margin-bottom: 11px;
@@ -90,7 +90,7 @@
 #productDetailTop .product_info_wrap h2.product_name,
 #productDetailTop .product_info_wrap h2.product_name span {
   color: #292929;
-  font-size: 1.85rem;
+  font-size: 1.6rem;
   font-weight: 300;
   word-wrap: break-word;
   word-break: keep-all;
@@ -120,7 +120,7 @@
   align-items: center;
 }
 #productDetailTop .product_info_wrap .product_price .price_wrap > .price_item {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   font-weight: 700;
   color: #292929;
 }
@@ -128,7 +128,7 @@
   bottom: 2.1rem;
   text-decoration: line-through !important;
   color: #B7B7B7 !important;
-  font-size: 1.7rem !important;
+  font-size: 1.5rem !important;
   font-weight: 600 !important;
   margin-right: 5px;
 }
@@ -139,12 +139,12 @@
   color: #292929 !important;
 }
 #productDetailTop .product_info_wrap .product_price .price_wrap > .discountrate {
-  font-size: 1.9rem;
+  font-size: 1.65rem;
   font-weight: 700;
   color: #022CFF;
   margin-right: 0.88rem;
-  letter-spacing: -0.2px;
-  margin-left: 11px;
+  letter-spacing: -1.2px;
+  margin-left: 10px;
 }
 #productDetailTop .product_info_wrap .product_price .button_wrap {
   display: flex;
@@ -182,7 +182,7 @@
   align-items: center;
   width: 125px;
   min-width: 100px;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 300;
   color: #707070;
 }
@@ -190,31 +190,32 @@
   display: flex;
   flex-flow: column nowrap;
   width: calc(100% - 125px);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 300;
   color: #292929;
 }
 #productDetailTop #productDetail .product_detail li .detail > span {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 #productDetailTop #productDetail .product_detail li .detail em {
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 #productDetailTop #productDetail .product_detail li .detail i {
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
 }
 #productDetailTop #productDetail .product_detail li .detail i span {
-  font-size: 1.5rem !important;
+  font-size: 1.35rem !important;
   color: #292929 !important;
 }
 #productDetailTop #productDetail .product_detail .delivery .title::before {
   display: inline-block;
   content: "";
-  width: 16.92px;
-  height: 13.85px;
+  width: 17.5px;
+  height: 14.2px;
   background: var(--delivery-icon) no-repeat center;
+  background-size: contain;
   margin-right: 14.1px;
 }
 #productDetailTop #productDetail .product_detail .mileage .title::before {

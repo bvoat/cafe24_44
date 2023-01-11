@@ -82,7 +82,7 @@
 
         /* 상품 요약 설명*/
         h3.summary_desc {
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             font-weight: 600;
             color: $bvt-black;
             margin-bottom: 11px;
@@ -91,7 +91,7 @@
         h2.product_name,
         h2.product_name span {
             color: $bvt-black;
-            font-size: 1.85rem;
+            font-size: 1.6rem;
             font-weight: 300;
             word-wrap: break-word;
             word-break: keep-all;
@@ -113,7 +113,7 @@
                 align-items: center;
 
                 >.price_item {
-                    font-size: 1.9rem;
+                    font-size: 1.7rem;
                     font-weight: 700;
                     color: #292929;
                 }
@@ -123,7 +123,7 @@
                     text-decoration: line-through !important;
                     color: #B7B7B7 !important;
                     font-size:
-                        1.7rem !important;
+                        1.5rem !important;
                     font-weight: 600 !important;
                     margin-right: 5px;
                 }
@@ -137,12 +137,12 @@
                 }
 
                 >.discountrate {
-                    font-size: 1.9rem;
+                    font-size: 1.65rem;
                     font-weight: 700;
                     color: $bvt-blue;
                     margin-right: 0.88rem;
-                    letter-spacing: -0.2px;
-                    margin-left: 11px;
+                    letter-spacing: -1.2px;
+                    margin-left: 10px;
                 }
 
             }
@@ -191,7 +191,7 @@
                     align-items: center;
                     width: 125px;
                     min-width: 100px;
-                    font-size: 1.5rem;
+                    font-size: 1.35rem;
                     font-weight: 300;
                     color: $bvt-darkgray;
                 }
@@ -200,25 +200,25 @@
                     display: flex;
                     flex-flow: column nowrap;
                     width: calc(100% - 125px);
-                    font-size: 1.5rem;
+                    font-size: 1.35rem;
                     font-weight: 300;
                     color: $bvt-black;
 
                     >span {
-                        margin-bottom: 8px;
+                        margin-bottom: 6px;
                     }
 
                     em {
                         font-weight: 700;
-                        margin-bottom: 8px;
+                        margin-bottom: 6px;
                     }
 
                     i {
                         font-style: normal;
-                        font-size: 1.5rem;
+                        font-size: 1.35rem;
 
                         span {
-                            font-size: 1.5rem !important;
+                            font-size: 1.35rem !important;
                             color: $bvt-black !important;
                         }
                     }
@@ -231,9 +231,10 @@
                     &::before {
                         display: inline-block;
                         content: '';
-                        width: 16.92px;
-                        height: 13.85px;
+                        width: 17.5px;
+                        height: 14.2px;
                         background: var(--delivery-icon) no-repeat center;
+                        background-size: contain;
                         margin-right: 14.1px;
                     }
                 }
