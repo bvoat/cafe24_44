@@ -177,7 +177,7 @@
             word-wrap: break-word;
             word-break: keep-all;
             @include ellipsis(2, $name-ftsz);
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
     }
 }
