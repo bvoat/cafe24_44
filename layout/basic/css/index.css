@@ -125,7 +125,7 @@
   background: #F0F2F8;
 }
 #bvtHome #indexListmain div.listmain {
-  padding: 44px 11px 47px;
+  padding: 41px 11px 40.7px;
   margin-bottom: 17px;
   background: #ffffff;
 }
@@ -136,12 +136,12 @@
   margin-bottom: 0;
 }
 #bvtHome #indexListmain div.listmain h3 {
-  font-size: 2.3rem;
+  font-size: 1.9rem;
   font-weight: 400;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 #bvtHome #indexListmain div.listmain h4 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 300;
   margin-bottom: 24px;
   color: #707070;
