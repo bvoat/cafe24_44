@@ -195,11 +195,11 @@
   color: #292929;
 }
 #productDetailTop #productDetail .product_detail li .detail > span {
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 #productDetailTop #productDetail .product_detail li .detail em {
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 #productDetailTop #productDetail .product_detail li .detail i {
   font-style: normal;
@@ -265,6 +265,7 @@
   max-width: 53px;
   border-radius: 50%;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='59' height='59'%3E%3Ccircle data-name='타원 721' cx='29.5' cy='29.5' r='29.5' fill='%23f2f2fc'/%3E%3C/svg%3E") no-repeat center;
+  margin-right: 0.5%;
 }
 #productDetailTop #productDetail .product_detail .stamp .stamp_list li > span {
   text-indent: -9999px;

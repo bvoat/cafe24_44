@@ -205,12 +205,12 @@
                     color: $bvt-black;
 
                     >span {
-                        margin-bottom: 6px;
+                        margin-bottom: 4px;
                     }
 
                     em {
                         font-weight: 700;
-                        margin-bottom: 6px;
+                        margin-bottom: 4px;
                     }
 
                     i {
@@ -305,6 +305,7 @@
                         max-width: 53px;
                         border-radius: 50%;
                         background: $stamp-board;
+                        margin-right: 0.5%;
 
                         >span {
                             text-indent: -9999px;
