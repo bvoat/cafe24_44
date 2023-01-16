@@ -827,7 +827,8 @@
   width: 100%;
   margin-bottom: 13px;
 }
-#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap,
+#reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
@@ -838,19 +839,22 @@
   font-weight: 500;
   line-height: 2.4rem;
 }
-#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_user, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_user {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_user,
+#reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_user {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
   font-weight: 600;
 }
-#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_user .cmt_userimg, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_user .cmt_userimg {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_user .cmt_userimg,
+#reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_user .cmt_userimg {
   position: relative;
   width: 40px;
   margin-right: 12px;
 }
-#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_user .cmt_userimg .cmt_userimg_wrap, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_user .cmt_userimg .cmt_userimg_wrap {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_user .cmt_userimg .cmt_userimg_wrap,
+#reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_user .cmt_userimg .cmt_userimg_wrap {
   display: block;
   position: relative;
   width: 100%;
@@ -859,7 +863,8 @@
   overflow: hidden;
   font-size: 0;
 }
-#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_user .cmt_userimg .cmt_userimg_wrap > img, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_user .cmt_userimg .cmt_userimg_wrap > img {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_user .cmt_userimg .cmt_userimg_wrap > img,
+#reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_user .cmt_userimg .cmt_userimg_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -868,11 +873,13 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin,
+#reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin {
   position: relative;
   z-index: 1;
 }
-#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .admin_modal, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .admin_modal {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .admin_modal,
+#reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .admin_modal {
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -886,7 +893,8 @@
   top: 19.67px;
   left: -264px;
 }
-#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .admin_modal button, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .admin_modal button {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .admin_modal button,
+#reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .admin_modal button {
   width: 50%;
   max-width: 129px;
   height: 40px;
@@ -896,15 +904,18 @@
   letter-spacing: 0.1px;
   line-height: 2.2rem;
 }
-#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .admin_modal .edit, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .admin_modal .edit {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .admin_modal .edit,
+#reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .admin_modal .edit {
   background: #022CFF;
   color: #ffffff;
 }
-#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .admin_modal .delete, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .admin_modal .delete {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .admin_modal .delete,
+#reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .admin_modal .delete {
   background: #F5F5F5;
   color: #A1A1A1;
 }
-#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .cmt_admin_btn, #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .cmt_admin_btn {
+#reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .cmt_admin_btn,
+#reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .cmt_admin_btn {
   width: 18px;
   height: 14px;
   background: var(--icon-admin-meatball) no-repeat center;
@@ -1142,14 +1153,16 @@
   display: flex;
   flex-flow: row nowrap;
 }
-#reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info p, #reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info a {
+#reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info p,
+#reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info a {
   font-weight: 500;
   font-size: 1.8rem;
   color: #969696;
   line-height: 1.68rem;
   margin-right: 25px;
 }
-#reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info p span, #reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info a span {
+#reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info p span,
+#reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .userinfo .info a span {
   color: #292929;
   font-weight: 700;
   margin-right: 5px;
@@ -1482,10 +1495,15 @@
   font-weight: 500;
   line-height: 2.6rem;
   letter-spacing: -0.5px;
-  margin-bottom: 15px;
+  margin-bottom: 6px;
 }
 #reviewsWriteWrap #reviewsWriteTitle > h2 em {
   font-weight: 700;
+}
+#reviewsWriteWrap #reviewsWriteTitle > h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 400;
 }
 #reviewsWriteWrap #reviewsWriteTitle > details {
   background: #F5F7FF;
@@ -1513,8 +1531,8 @@
 #reviewsWriteWrap #reviewsWriteTitle > details summary::after {
   position: absolute;
   display: block;
-  width: 14.7px;
-  height: 7.49px;
+  width: 16.9px;
+  height: 9.5px;
   content: "";
   background: var(--icon-off-arrow) no-repeat center;
   background-size: cover;
