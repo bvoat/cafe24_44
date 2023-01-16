@@ -197,16 +197,19 @@
 #productDetailTop #productDetail .product_detail li .detail > span {
   margin-bottom: 4px;
 }
+#productDetailTop #productDetail .product_detail li .detail > span:nth-child(2) {
+  font-size: 1.1rem !important;
+}
 #productDetailTop #productDetail .product_detail li .detail em {
   font-weight: 700;
   margin-bottom: 4px;
 }
 #productDetailTop #productDetail .product_detail li .detail i {
   font-style: normal;
-  font-size: 1.35rem;
+  font-size: 1.1rem;
 }
 #productDetailTop #productDetail .product_detail li .detail i span {
-  font-size: 1.35rem !important;
+  font-size: 1.1rem !important;
   color: #292929 !important;
 }
 #productDetailTop #productDetail .product_detail .delivery .title::before {

@@ -206,6 +206,10 @@
 
                     >span {
                         margin-bottom: 4px;
+
+                        &:nth-child(2) {
+                            font-size: 1.1rem !important;
+                        }
                     }
 
                     em {
@@ -215,10 +219,10 @@
 
                     i {
                         font-style: normal;
-                        font-size: 1.35rem;
+                        font-size: 1.1rem;
 
                         span {
-                            font-size: 1.35rem !important;
+                            font-size: 1.1rem !important;
                             color: $bvt-black !important;
                         }
                     }
