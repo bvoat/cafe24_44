@@ -207,20 +207,24 @@ function controlTopNav(page_path) {
 function controlTopNavActive(page_path) {
   console.log('page_path: ', page_path);
   //path가 상품 관련일 때
-  if (page_path.includes("/product/")) {
-    //상품 관련
+  if (page_path.includes("/product/list.html")) {
+    //상품 관련 -> 비보트 추천 에 active
+    document.querySelector("#index").classList.add("top_nav_active");
+    //path가 방금 샀어요면
+  } else if(page_path.includes("/product/realtime.html")){
+    //상품 관련 -> 비보트 추천 에 active
     document.querySelector("#prd").classList.add("top_nav_active");
     //path가 크루면
   } else if (page_path.includes("crew/crew.html") || page_path.includes("crew/crewinfo.html")) {
     //크루에 active 
     document.querySelector("#crew").classList.add("top_nav_active");
-    //path가 펀딩이면
+    //path가 비보트 소개면
   } else if (page_path.includes("introduce")) {
-    //방금 구매한 active
+    //비보트 소개에 active
     document.querySelector("#intro").classList.add("top_nav_active");
-    //아무것도 확인되지 않으면 -> 둘러보기
+    //아무것도 확인되지 않으면
   } else {
-    //스토어 홈에 active
+    //비보트 추천에 active
     document.querySelector("#index").classList.add("top_nav_active");
   }
 }
