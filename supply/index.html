@@ -2,94 +2,102 @@
 <!--@css(/css/module/supply/bvoat/index.css)-->
 
 
-<article id="supplyMinishop">
+<article id="supplyMinishop" class="supply_index">
     <section id="supplyMinishopTitle" module="Mall_SupplyMainimage">
         {$supply_main_image}
     </section>
 
-    <section id="supplyItemList" module="product_normalpackage">
-        <!-- 추천 상품 진열 -->
-        <!--@import(/product/product_module/listproduct/product_listrecommend.html)-->
-        <!-- 추천 상품 진열 -->
 
-        <!-- 상품 목록 -->
-        <section id="productListnormalList" class="product_list prd_list" module="product_listnormal">
-            <!-- 상품 정렬 select-->
-            <section id="product_normalmenu" module="product_normalmenu">
-                <select id="selArray" name="selArray" module="product_Orderby">
-                    <option value="{$param}">{$sort_name}</option>
-                    <option value="{$param}">{$sort_name}</option>
-                </select>
-                <label for="selArray">▾</label>
-            </section>
-            <!-- 상품 정렬 select -->
-            <!--
-            ※ 상품 진열 갯수 변수, 디폴트는 200개
-            $count = 100
-            $cache = yes
-            $moreview = yes
+    <div module="Mall_SupplySearch">
+        <!--@css(/css/module/mall/supplySearch.css)-->
+        <fieldset>
+            <legend class="title">샵 상품 검색</legend>
+            {$form.searchSupply}<input type="image"
+                src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/btn_search.gif" alt="검색"
+                onclick="{$action_search_submit}" />
+        </fieldset>
+    </div>
+
+
+    <div module="product_listrecommend" class="ec-base-product">
+        <!--
+            $count = 4
+                ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
+                ※ 진열된 상품이 많으면, 쇼핑몰에 부하가 발생할 수 있습니다.
             $basket_result = /product/add_basket.html
             $basket_option = /product/basket_option.html
-            -->
-            <!--@import(/product/product_module/listproduct/minishop_list.html)-->
-            <div module="product_supplymainpaging" class="ec-base-paginate">
-                <a href="{$param_first}" class="first"><img
-                        src="//img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지" /></a>
-                <a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif"
-                        alt="이전 페이지" /></a>
-                <ol>
-                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                </ol>
-                <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif"
-                        alt="다음 페이지" /></a>
-                <a href="{$param_last}" class="last"><img
-                        src="//img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지" /></a>
-            </div>
-        </section>
-        <!-- 상품 목록 -->
-        <!-- 상품 메인진열 -->
-        <section id="productListnormalList" class="product_list prd_list" module="product_listmain_1">
-            <!-- 상품 정렬 select-->
-            <section id="product_normalmenu" module="product_normalmenu">
-                <select id="selArray" name="selArray" module="product_Orderby">
-                    <option value="{$param}">{$sort_name}</option>
-                    <option value="{$param}">{$sort_name}</option>
-                </select>
-                <label for="selArray">▾</label>
-            </section>
-            <!-- 상품 정렬 select -->
-            <!--
-                $count = 100
-                    ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
-                    ※ 진열된 상품이 많으면, 쇼핑몰에 부하가 발생할 수 있습니다.
-                $basket_result = /product/add_basket.html
-                $basket_option = /product/basket_option.html
-            -->
-            <!--@import(/product/product_module/listproduct/minishop_list.html)-->
-            <div module="product_supplymainpaging" class="ec-base-paginate">
-                <a href="{$param_first}" class="first"><img
-                        src="//img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지" /></a>
-                <a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif"
-                        alt="이전 페이지" /></a>
-                <ol>
-                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                </ol>
-                <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif"
-                        alt="다음 페이지" /></a>
-                <a href="{$param_last}" class="last"><img
-                        src="//img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지" /></a>
-            </div>
-        </section>
-        <!-- 상품 메인진열 -->
-    </section>
+        -->
+        <div class="title">
+            <h3><span>BEST SELLERS</span></h3>
+        </div>
+        <ul class="prdList grid4">
+            <li id="anchorBoxId_{$product_no}">
+                <span class="chk"><input type="checkbox"
+                        class="{$product_compare_class} {$product_compare_display|display}" /></span>
+                <div class="thumbnail">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}"
+                            id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"><span
+                                class="prdIcon {$icon_class_name}"
+                                style="background-image:url('{$icon_url}');"></span></span></a>
+                    <span class="wish">{$list_wish_icon}</span>
+                </div>
+                <div class="description">
+                    <div class="icon">
+                        <div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon}
+                            {$product_icons} {$benefit_icons}</div>
+                        <div class="button">
+                            <div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}
+                        </div>
+                    </div>
+                    <strong class="name"><a href="/product/detail.html{$param}"
+                            class="{$product_name_display|display}"><span
+                                class="title {$product_name_title_display|display}">{$product_name_title} :</span>
+                            {$product_name}</a></strong>
+                    <ul module="product_ListItem" class="spec">
+                        <li class="{$item_display|display}"><strong
+                                class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                        </li>
+                        <li class="{$item_display|display}"><strong
+                                class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li id="anchorBoxId_{$product_no}">
+                <span class="chk"><input type="checkbox"
+                        class="{$product_compare_class} {$product_compare_display|display}" /></span>
+                <div class="thumbnail">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}"
+                            id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"><span
+                                class="prdIcon {$icon_class_name}"
+                                style="background-image:url('{$icon_url}');"></span></span></a>
+                    <span class="wish">{$list_wish_icon}</span>
+                </div>
+                <div class="description">
+                    <div class="icon">
+                        <div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon}
+                            {$product_icons} {$benefit_icons}</div>
+                        <div class="button">
+                            <div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}
+                        </div>
+                    </div>
+                    <strong class="name"><a href="/product/detail.html{$param}"
+                            class="{$product_name_display|display}"><span
+                                class="title {$product_name_title_display|display}">{$product_name_title} :</span>
+                            {$product_name}</a></strong>
+                    <ul module="product_ListItem" class="spec">
+                        <li class="{$item_display|display}"><strong
+                                class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                        </li>
+                        <li class="{$item_display|display}"><strong
+                                class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
     <!-- 공급사:판매사정보 -->
     <div module="Mall_SupplyInfo" class="margin-footer supplyInfo ">
         {$supply_info}
