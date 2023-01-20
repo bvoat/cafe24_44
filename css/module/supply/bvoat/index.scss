@@ -2,49 +2,64 @@
 @import "../../../abstracts/mixin";
 @import "../../../abstracts/variables";
 
-#supplyMinishop{
+#normalPackageWrap {
+    background: #ff00ff90;
+}
+
+#listmainWrap {
+    background: #21bdbd80;
+}
+
+#supplyMinishop {
     width: 100%;
     max-width: 450px;
     margin: 81px 0 80px 0;
-    
+
     //상단 이미지
-    #supplyMinishopTitle{
+    #supplyMinishopTitle {
         width: 100%;
         display: block;
         margin: 0 0 20px 0;
-        img{
+
+        img {
             width: 100%;
             object-fit: contain;
         }
     }
+
     //공급사 상품 검색  
-    #supplyItemSearch{
+    #supplyItemSearch {
         display: block;
         width: 100%;
         padding: 20px 0;
-        fieldset{
+
+        fieldset {
             display: flex;
             flex-flow: column nowrap;
             align-items: flex-end;
 
             border: 0;
-            label{
+
+            label {
                 display: block;
                 font-size: 1.3rem;
                 font-weight: 600;
                 margin: 0 0 10px 0;
                 cursor: pointer;
             }
-            #searchSection{
+
+            #searchSection {
                 display: flex;
                 flex-flow: row nowrap;
-                #searchSupply{
+
+                #searchSupply {
                     display: inline-block;
                     width: 50px;
                     border: $bvt-btn-border-gray;
                     border-radius: 2px;
                 }
-                #searchBtn{
+
+                #searchBtn {
                     display: inline-block;
                     background: transparent;
                     margin-left: 10px;
@@ -54,10 +69,12 @@
             }
         }
     }
+
     //공급사 상품 진열
-    #supplyItemList{
+    #supplyItemList {
+
         //상품 정렬 select
-        #product_normalmenu{
+        #product_normalmenu {
             position: relative;
             display: flex;
             align-items: center;
@@ -66,7 +83,7 @@
             height: 50px;
             padding: 11px 0;
 
-            >select{
+            >select {
                 display: block;
                 position: absolute;
                 width: 67px;
@@ -79,7 +96,8 @@
                 font-size: 1.2rem;
                 cursor: pointer;
             }
-            >label{
+
+            >label {
                 display: block;
                 position: absolute;
                 font-size: 1.5rem;
@@ -89,6 +107,19 @@
                 cursor: pointer;
             }
 
+        }
+    }
+}
+
+.product_listnormal_list_wrap {
+    display: flex;
+    flex-flow: row wrap;
+
+    .listnormal_list {
+        width: calc(50% - 4px);
+
+        &:nth-child(2n-1) {
+            margin-right: 8px;
         }
     }
 }

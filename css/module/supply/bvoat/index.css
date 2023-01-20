@@ -10,6 +10,14 @@
 /* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
+#normalPackageWrap {
+  background: rgba(255, 0, 255, 0.5647058824);
+}
+
+#listmainWrap {
+  background: rgba(33, 189, 189, 0.5019607843);
+}
+
 #supplyMinishop {
   width: 100%;
   max-width: 450px;
@@ -92,4 +100,15 @@
   right: 11px;
   color: #707070;
   cursor: pointer;
+}
+
+.product_listnormal_list_wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+.product_listnormal_list_wrap .listnormal_list {
+  width: calc(50% - 4px);
+}
+.product_listnormal_list_wrap .listnormal_list:nth-child(2n-1) {
+  margin-right: 8px;
 }/*# sourceMappingURL=index.css.map */
