@@ -117,9 +117,13 @@
 
     .listnormal_list {
         width: calc(50% - 4px);
+        margin-bottom: 36px;
 
         &:nth-child(2n-1) {
             margin-right: 8px;
+            margin-bottom: 36px;
         }
     }
 }
+
+@include page-pagination;

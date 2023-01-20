@@ -57,22 +57,24 @@
 				</ul>
 			</div>
 
-			<div module="product_normalpaging" class="ec-base-paginate">
-				<a href="{$param_first}" class="first"><img
-						src="//img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지" /></a>
-				<a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif"
-						alt="이전 페이지" /></a>
-				<ol>
-					<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-					<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-					<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-					<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-					<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-				</ol>
-				<a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif"
-						alt="다음 페이지" /></a>
-				<a href="{$param_last}" class="last"><img
-						src="//img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지" /></a>
+			<div module="product_normalpaging" class="ec-base-paginate page-pagination">
+				<div class="paginate-box">
+					<span class="btnPrev_wrap">
+						<a href="{$param_first}" class="first" alt="첫 페이지">처음</a>
+						<a href="{$param_before}" class="btnPrev" alt="이전 페이지">이전</a>
+					</span>
+					<ol>
+						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+					</ol>
+					<span class="btnNext_wrap">
+						<a href="{$param_next}" class="btnNext" alt="다음 페이지">다음</a>
+						<a href="{$param_last}" class="last" alt="마지막 페이지">끝</a>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -99,7 +101,7 @@
 						<li class="brand">{$prd_brand}</li>
 						<li class="summary">{$summary_desc}</li>
 						<li class="product_name"><a href="/product/detail.html{$param}">{$product_name}</a></li>
-						<!--@import(../list_price_wrap.html)-->
+						<!--@import(/product/product_module/list_price_wrap.html)-->
 					</ul>
 				</li>
 				<li id="anchorBoxId_{$product_no}" class="listnormal_list">
@@ -113,28 +115,30 @@
 						<li class="brand">{$prd_brand}</li>
 						<li class="summary">{$summary_desc}</li>
 						<li class="product_name"><a href="/product/detail.html{$param}">{$product_name}</a></li>
-						<!--@import(../list_price_wrap.html)-->
+						<!--@import(/product/product_module/list_price_wrap.html)-->
 					</ul>
 				</li>
 			</ul>
 		</div>
 
-		<div module="product_supplymainpaging" class="ec-base-paginate">
-			<a href="{$param_first}" class="first"><img
-					src="//img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지" /></a>
-			<a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif"
-					alt="이전 페이지" /></a>
-			<ol>
-				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-			</ol>
-			<a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif"
-					alt="다음 페이지" /></a>
-			<a href="{$param_last}" class="last"><img
-					src="//img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지" /></a>
+		<div module="product_supplymainpaging" class="ec-base-paginate page-pagination">
+			<div class="paginate-box">
+				<span class="btnPrev_wrap">
+					<a href="{$param_first}" class="first" alt="첫 페이지">처음</a>
+					<a href="{$param_before}" class="btnPrev" alt="이전 페이지">이전</a>
+				</span>
+				<ol>
+					<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+					<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+					<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+					<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+					<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				</ol>
+				<span class="btnNext_wrap">
+					<a href="{$param_next}" class="btnNext" alt="다음 페이지">다음</a>
+					<a href="{$param_last}" class="last" alt="마지막 페이지">끝</a>
+				</span>
+			</div>
 		</div>
 	</div>
 
