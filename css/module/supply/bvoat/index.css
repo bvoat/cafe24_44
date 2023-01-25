@@ -11,12 +11,12 @@
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 #normalPackageWrap {
-  background: rgba(255, 0, 255, 0.0196078431);
+  background: #F2F2F2;
   padding: 20px 11px;
 }
 
 #listmainWrap {
-  background: rgba(33, 189, 189, 0.0196078431);
+  background: #FAFAFE;
   padding: 20px 11px;
 }
 
