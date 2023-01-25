@@ -80,7 +80,7 @@
 	</div>
 
 
-	<div id="listmainWrap" class="displaynone">
+	<div id="listmainWrap">
 		<div id="supplyItemList" class="ec-base-product" module="product_listmain_1">
 			<!--
 				$count = 100
@@ -151,5 +151,14 @@
 </article>
 <!--@define(cmc_log)-->
 <script>
-	document.querySelector(".xans-mall-supplymainimage img").setAttribute("height", "auto")
+
+	if (document.querySelector(".xans-mall-supplymainimage img") != null) {
+		document.querySelector(".xans-mall-supplymainimage img").setAttribute("height", "auto");
+	} else {
+		const supplyItemList = document.querySelector("#supplyItemList");
+		console.log('supplyItemList: ', supplyItemList.childElementCount);
+		if (supplyItemList.childElementCount == 0) {
+			supplyItemList.insertAdjacentHTML("afterbegin", `<p style="width: 100%; text-align: center; font-size: 15px;">이 브랜드에는 상품이 없어요 :)</p>`)
+		}
+	}
 </script>
