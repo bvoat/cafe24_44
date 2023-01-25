@@ -49,6 +49,7 @@ var detailTabSwiper = new Swiper("#productDetailBottom", {
   slidesPerView: "auto",
   centeredSlides: true,
   spaceBetween: 22,
+  edgeSwipeThreshold: 25,
   // loop: true,
   lazy: true,
   watchSlidesVisibility: true,
