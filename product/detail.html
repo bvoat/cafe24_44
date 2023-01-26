@@ -117,7 +117,10 @@
     <!-- 공급사 바로가기버튼 영역 -->
     <section id="supplyMinishop" class="supply_minishop_wrap" module="product_image">
         <div class="topLogo supply_link_wrap {$supply_link_display|display}">
-            <span class="supply_name">{$supply_top_logo}</span>
+            <span class="supply_name">
+                <!-- {$supply_top_logo} -->
+                {$prd_brand}
+            </span>
             <button class="minishop_btn" onclick="{$supply_go_action}" title="묶음 배송 상품 구경하기">묶음 배송 상품 구경하기</button>
         </div>
     </section>
@@ -161,6 +164,90 @@
                     {$product_detail}
                 </div>
             </div>
+            <!-- 위탁판매자 및 대표판매자 정보 -->
+            <div class="contents">
+
+                <div
+                    style="border:1px solid #d5d5d5; word-break:break-all; word-wrap:break-word; color:#353535; background:#fff;">
+
+                    <table border="1"
+                        style="position:relative; width:100%; table-layout:fixed; border:0 none; border-spacing:0; border-collapse:collapse;">
+
+                        <caption>{$seller_info}</caption>
+
+                        <colgroup>
+
+                            <col style="width:100px;">
+
+                            <col style="width:auto;">
+
+                        </colgroup>
+
+                        <tbody>
+
+                            <tr>
+
+                                <th
+                                    style="padding:12px 0 12px 13px; text-align:left; font-weight:normal; color:#757575; font-size: 13px;">
+                                    <span>상호</span>
+                                </th>
+
+                                <td style="padding:12px 0 12px 13px; font-size:13px; vertical-align:top;">
+                                    <span>{$business_company_name}</span>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th
+                                    style="padding:12px 0 12px 13px; text-align:left; font-weight:normal; color:#757575; border-top:1px solid #ececec; font-size: 13px">
+                                    <span>대표자</span>
+                                </th>
+
+                                <td
+                                    style="padding:12px 0 12px 13px; border-top:1px solid #ececec; font-size:13px; vertical-align:top;">
+                                    <span>{$business_president_name}</span>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th
+                                    style="padding:12px 0 12px 13px; text-align:left; font-weight:normal; color:#757575; border-top:1px solid #ececec; font-size: 13px">
+                                    <span>연락처</span>
+                                </th>
+
+                                <td
+                                    style="padding:12px 0 12px 13px; border-top:1px solid #ececec; font-size:13px; vertical-align:top; font-size: 13px">
+                                    <span>{$business_contact_phone}</span>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th
+                                    style="padding:12px 0 12px 13px; text-align:left; font-weight:normal; color:#757575; border-top:1px solid #ececec; font-size: 13px">
+                                    <span>주소</span>
+                                </th>
+
+                                <td
+                                    style="padding:12px 0 12px 13px; border-top:1px solid #ececec; font-size:13px; vertical-align:top;">
+                                    <span>{$business_address}</span>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+            <!-- 위탁판매자 및 대표판매자 정보 -->
         </div>
         <!-- tab0 상품정보 -->
         <!-- tab1 리뷰 -->
