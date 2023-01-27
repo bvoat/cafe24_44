@@ -326,6 +326,7 @@
   font-size: 1.5rem;
   font-weight: 400;
   color: #707070;
+  background: transparent;
 }
 #supplyMinishop .supply_link_wrap .minishop_btn::after {
   content: "";
