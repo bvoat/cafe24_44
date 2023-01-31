@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 #productBoardList {
@@ -23,14 +20,96 @@
   padding: 0 11px;
 }
 #productBoardList #productBoardListTitle h1 {
-  font-size: 1.9rem;
-  font-weight: 700;
-  margin-bottom: 2px;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 6px;
 }
 #productBoardList #productBoardListTitle h2 {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   font-weight: 300;
-  color: #ABABAB;
+  color: #707070;
+}
+#productBoardList #productBoardListSelect {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  width: 100%;
+  height: 25px;
+}
+#productBoardList #productBoardListSelect span,
+#productBoardList #productBoardListSelect select {
+  width: 80px;
+  height: 25px;
+  font-size: 1.4rem;
+  border-radius: 2px;
+}
+#productBoardList #productBoardList {
+  width: 100%;
+}
+#productBoardList #productBoardList ul {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 17px;
+}
+#productBoardList #productBoardList ul li {
+  position: relative;
+  width: calc(50% - 5px);
+  margin: 0 0 36px 0;
+}
+#productBoardList #productBoardList ul li input[type=checkbox] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+#productBoardList #productBoardList ul li a.board_img_link {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+#productBoardList #productBoardList ul li a.board_img_link .category_name {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 29.8%;
+  height: 26px;
+  border-radius: 28px;
+  background: #022CFF;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  margin: 0;
+}
+#productBoardList #productBoardList ul li a.board_img_link img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 0;
+}
+#productBoardList #productBoardList ul li a.board_subject {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #292929;
+  letter-spacing: -0.5px;
+  line-height: 2.2rem;
+}
+#productBoardList #productBoardList ul li .board_author {
+  display: none;
 }
 #productBoardList #productBoardListTable {
   width: 100%;
@@ -69,7 +148,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.7rem;
+  line-height: 1.6rem;
   display: table-cell;
   font-weight: 600;
 }
@@ -80,22 +159,30 @@
   position: relative;
   width: 100%;
 }
-#productBoardList #productBoardListTable .thumb > a,
-#productBoardList #productBoardListTable .thumb .img_wrap {
+#productBoardList #productBoardListTable .thumb > a {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
-#productBoardList #productBoardListTable .thumb > a > img,
-#productBoardList #productBoardListTable .thumb .img_wrap > img {
+#productBoardList #productBoardListTable .thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#productBoardList #productBoardListTable .thumb .icon {
+  position: absolute;
+  width: 50px;
+  height: 20.5px;
+  border-radius: 4px;
+  top: 4.6px;
+  left: 4.6px;
+}
+#productBoardList #productBoardListTable .thumb .icon img {
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -105,30 +192,26 @@
   height: auto;
   cursor: pointer;
   bottom: 0px;
-  right: 0px;
+  left: 0px;
+  background: #fff;
 }
 #productBoardList #productBoardListTable .thumb .wish button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: inherit;
-  height: inherit;
+  width: auto;
+  height: auto;
   border: 0;
-  background: none;
+  bottom: pink;
   cursor: pointer;
 }
 #productBoardList #productBoardListTable .thumb .wish button img {
   position: relative;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#productBoardList #productBoardListTable .icon img {
-  height: inherit;
+  width: 0px;
+  height: 0px;
+  padding: 0px;
   -o-object-fit: contain;
      object-fit: contain;
-  image-rendering: auto;
 }
 #productBoardList #productBoardListTable .thumb {
   display: flex;
@@ -149,8 +232,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.7rem;
-  height: 3.3rem;
+  line-height: 1.6rem;
+  height: 3.4rem;
 }
 #productBoardList #productBoardListTable > .ec-base-button {
   display: flex;
@@ -182,9 +265,31 @@
   color: #ffffff;
   font-weight: 500;
 }
+#productBoardList #boardListEmpty {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#productBoardList #boardListEmpty p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+#productBoardList .ec-base-button.typeBG span a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 32px;
+  background: #022CFF;
+  border-radius: 22px;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
 #productBoardList .page-pagination {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row;
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;
@@ -201,16 +306,12 @@
   padding: 1% 5%;
   font-size: 1.3rem;
 }
-#productBoardList .page-pagination .btnPrev_wrap,
-#productBoardList .page-pagination .btnNext_wrap {
+#productBoardList .page-pagination .btnPrev_wrap, #productBoardList .page-pagination .btnNext_wrap {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
-#productBoardList .page-pagination .first,
-#productBoardList .page-pagination .last,
-#productBoardList .page-pagination .btnPrev,
-#productBoardList .page-pagination .btnNext {
+#productBoardList .page-pagination .first, #productBoardList .page-pagination .last, #productBoardList .page-pagination .btnPrev, #productBoardList .page-pagination .btnNext {
   width: 30px;
   height: 30px;
   background: #ffffff;
@@ -221,10 +322,7 @@
   color: #707070;
   font-size: 1.1rem;
 }
-#productBoardList .page-pagination .first:hover,
-#productBoardList .page-pagination .last:hover,
-#productBoardList .page-pagination .btnPrev:hover,
-#productBoardList .page-pagination .btnNext:hover {
+#productBoardList .page-pagination .first:hover, #productBoardList .page-pagination .last:hover, #productBoardList .page-pagination .btnPrev:hover, #productBoardList .page-pagination .btnNext:hover {
   font-weight: 700;
   transition: all 0.3s;
 }
@@ -253,4 +351,65 @@
 }
 #productBoardList .page-pagination {
   margin: 20px 0;
+}
+#productBoardList #boardListSearch {
+  background: #FAFAFE;
+}
+#productBoardList #boardListSearch fieldset legend {
+  display: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+#productBoardList #boardListSearch fieldset p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+#productBoardList #boardListSearch fieldset p::before {
+  display: none;
+}
+#productBoardList #boardListSearch fieldset p select,
+#productBoardList #boardListSearch fieldset p input {
+  height: 28px;
+  border: 1px solid #C4C4C4;
+  font-size: 1.2rem;
+  padding: 1%;
+}
+#productBoardList #boardListSearch fieldset p input#search {
+  width: 25%;
+}
+#productBoardList #boardListSearch fieldset p button.btnEmFix {
+  width: 12%;
+  height: 28px;
+  border: 1px solid #022CFF;
+  border-radius: 18px;
+  background: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #022CFF;
+  margin-left: 12px;
+}
+#productBoardList #boardListAdminMenu div {
+  padding: 10px 17px;
+}
+#productBoardList #boardListAdminMenu p {
+  font-size: 1.4rem;
+}
+#productBoardList #boardListAdminMenu input,
+#productBoardList #boardListAdminMenu select {
+  font-size: 1.3rem;
+}
+#productBoardList #boardListAdminMenu button {
+  display: inline-flex;
+  background: #022CFF;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2% 3.8%;
+  border-radius: 18px;
+  font-size: 1.2rem;
 }/*# sourceMappingURL=list.css.map */

@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 #productBoardRead {
@@ -25,14 +22,14 @@
   padding: 0 11px;
 }
 #productBoardRead #productBoardReadTitle h1 {
-  font-size: 1.9rem;
-  font-weight: 700;
-  margin-bottom: 2px;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 6px;
 }
 #productBoardRead #productBoardReadTitle h2 {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   font-weight: 300;
-  color: #ABABAB;
+  color: #707070;
 }
 #productBoardRead #productBoardReadTableHead {
   width: 100%;
@@ -55,22 +52,30 @@
   position: relative;
   width: 100%;
 }
-#productBoardRead #productBoardReadTableHead .product_info .thumb > a,
-#productBoardRead #productBoardReadTableHead .product_info .thumb .img_wrap {
+#productBoardRead #productBoardReadTableHead .product_info .thumb > a {
   display: block;
   position: relative;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
-#productBoardRead #productBoardReadTableHead .product_info .thumb > a > img,
-#productBoardRead #productBoardReadTableHead .product_info .thumb .img_wrap > img {
+#productBoardRead #productBoardReadTableHead .product_info .thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#productBoardRead #productBoardReadTableHead .product_info .thumb .icon {
+  position: absolute;
+  width: 50px;
+  height: 20.5px;
+  border-radius: 4px;
+  top: 4.6px;
+  left: 4.6px;
+}
+#productBoardRead #productBoardReadTableHead .product_info .thumb .icon img {
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -79,31 +84,27 @@
   width: auto;
   height: auto;
   cursor: pointer;
-  bottom: 0;
-  right: 0;
+  bottom: 0px;
+  left: 0px;
+  background: #fff;
 }
 #productBoardRead #productBoardReadTableHead .product_info .thumb .wish button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: inherit;
-  height: inherit;
+  width: auto;
+  height: auto;
   border: 0;
-  background: none;
+  bottom: pink;
   cursor: pointer;
 }
 #productBoardRead #productBoardReadTableHead .product_info .thumb .wish button img {
   position: relative;
-  width: 41px;
-  height: 38.98px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#productBoardRead #productBoardReadTableHead .product_info .icon img {
-  height: inherit;
+  width: 21px;
+  height: 18.98px;
+  padding: 0px;
   -o-object-fit: contain;
      object-fit: contain;
-  image-rendering: auto;
 }
 #productBoardRead #productBoardReadTableHead .product_info .thumb {
   width: 30%;
@@ -125,8 +126,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2rem;
-  height: 3.9rem;
+  line-height: 1.9rem;
+  height: 4rem;
 }
 #productBoardRead #productBoardReadTableHead .product_info .information li:nth-child(2) {
   font-size: 1.2rem;
@@ -150,6 +151,7 @@
 #productBoardRead #productBoardReadTable table {
   width: 100%;
   max-width: 450px;
+  font-size: 1.2rem;
 }
 #productBoardRead #productBoardReadTable table tbody {
   display: flex;
@@ -186,9 +188,6 @@
 }
 #productBoardRead #productBoardReadTable table tbody tr td .detail {
   margin: 20px 0;
-}
-#productBoardRead #productBoardReadTable table tbody tr td .detail p {
-  font-size: 1.15rem !important;
 }
 #productBoardRead #productBoardReadTable > .ec-base-button {
   display: flex;
