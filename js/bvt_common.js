@@ -178,7 +178,8 @@ function controlTopNav(page_path) {
     "list.html?cate_no=766",
     "list.html?cate_no=763",
     "list.html?cate_no=767",
-    "list.html?cate_no=764"
+    "list.html?cate_no=764",
+    "article"
   ];
 
   //상단바 (탑메뉴) 사라지게 하기
