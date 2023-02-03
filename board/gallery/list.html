@@ -9,7 +9,7 @@
         <!-- <p class="imgArea">{$board_top_image}</p> -->
     </div>
 
-    <div id="productBoardListSelect" class="boardSort">
+    <div id="productBoardListSelect" class="boardSort displaynone">
         <span module="board_category_8">{$form.board_category}</span>
     </div>
 
@@ -34,7 +34,7 @@
                         <p class="subject">{$checkbox} {$notice_icon} {$category_name} <a href="{$link_board_detail}">
                                 {$subject} {$icon_new} {$comment_count}</a></p>
                         <strong>작성자 : {$member_icon}{$writer}</strong>
-                        <em class="{$date_display|display}">작성일 : {$write_date}</em>
+                        <em class="{$date_display|display}">작성일 :{$write_date}</em>
                     </div>
                 </li>
                 <li>
@@ -79,9 +79,9 @@
         </div>
     </div>
     <!-- 게시판 게시물 -->
-    <div id="productBoardList" module="board_list_8">
+    <div id="productBoardListBox" module="board_list_8">
         <!--
-            $count = 12
+            $count = 100
             $login_page_url = /member/login.html
             $deny_access_url = /index.html
         -->
@@ -123,7 +123,7 @@
                 class="btnSubmitFix sizeS {$write_display|display}">글쓰기</a>
         </span>
     </div>
-    <div module="board_paging_8" class="ec-base-paginate page-pagination">
+    <div module="board_paging_8" class="ec-base-paginate page-pagination displaynone">
         <div class="paginate-box">
             <a class="btnPrev" href="{$param_prev}">이전</a>
             <ol>
@@ -135,7 +135,7 @@
     </div>
 
     <!-- 게시물 검색 -->
-    <div id="boardListSearch" module="board_search_8">
+    <div id="boardListSearch" class="displaynone" module="board_search_8">
         <!--@css(/css/module/board/search.css)-->
         <fieldset class="boardSearch">
             <legend>게시물 검색</legend>

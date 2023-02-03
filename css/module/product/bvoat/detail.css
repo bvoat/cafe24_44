@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 :root {
@@ -102,8 +99,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.4rem;
-  height: 4.7rem;
+  line-height: 2.3rem;
+  height: 4.8rem;
   margin-bottom: 21px;
 }
 #productDetailTop .product_info_wrap .product_price {
@@ -725,7 +722,7 @@
 }
 #productDetailBottom .detail_swiper_wrap #tab2 div .page-pagination {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row;
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;

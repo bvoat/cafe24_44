@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 #mCafe24Order {
@@ -284,7 +281,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.9rem;
+  line-height: 1.8rem;
 }
 #mCafe24Order .order_product_section .order_product_details .order_info .product_list_box .product_list .description .info {
   margin-top: 8px;
@@ -301,7 +298,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.3rem;
+  line-height: 1.2rem;
 }
 #mCafe24Order .order_product_section .order_product_details .order_info .product_total {
   display: flex;

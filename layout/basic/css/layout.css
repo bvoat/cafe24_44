@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 body {
@@ -68,7 +65,7 @@ body #bvtContainer #bvtBottom {
 
 @media (max-width: 320px) {
   .small_mobile_hide {
-    display: none;
+    display: none !important;
   }
   .small_mobile_input::-moz-placeholder {
     font-size: 8px !important;
