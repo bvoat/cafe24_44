@@ -2,7 +2,7 @@
 @import "../../../abstracts/mixin";
 @import "../../../abstracts/variables";
 
-#productList{
+#productList {
     width: 100%;
     max-width: 450px;
     padding: 80px 0; //상단바 컨트롤
@@ -12,21 +12,25 @@
     position: relative;
     width: 100%;
     margin: 0 0 19px 0;
-    .banner{
+
+    .banner {
         position: relative;
         width: 100%;
         top: 0;
         left: 0;
-        img{
+
+        img {
             width: 100%;
         }
     }
+
     h1 {
         font-size: 1.9rem;
         font-weight: 700;
         margin: 37px 0 2px 0;
         padding: 0 11px;
     }
+
     h2 {
         font-size: 1.3rem;
         font-weight: 300;
@@ -49,25 +53,27 @@
         align-items: center;
         padding: 0 11px;
 
-       .subcategory_list{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: fit-content !important;
-        a {
-            display: block;
-            font-weight: 300;
-            font-size: 1.35rem;
-            letter-spacing: -0.3px;
-            color: $bvt-white;
-            word-break: keep-all;
-            word-wrap: break-word;
-            margin-top: -4px;
+        .subcategory_list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content !important;
+
+            a {
+                display: block;
+                font-weight: 300;
+                font-size: 1.35rem;
+                letter-spacing: -0.3px;
+                color: $bvt-white;
+                word-break: keep-all;
+                word-wrap: break-word;
+                margin-top: -4px;
+            }
         }
-       }
-       .subcate_active {
-            a{
-                &::after{
+
+        .subcate_active {
+            a {
+                &::after {
                     position: absolute;
                     display: block;
                     content: "";
@@ -78,12 +84,12 @@
                     bottom: -4px;
                 }
             }
-       }
+        }
     }
 }
 
 //상품 정렬 select
-#product_normalmenu{
+#product_normalmenu {
     position: relative;
     display: flex;
     align-items: center;
@@ -92,7 +98,7 @@
     height: 50px;
     padding: 11px 0;
 
-    >select{
+    >select {
         display: block;
         position: absolute;
         width: 67px;
@@ -105,7 +111,8 @@
         font-size: 1.2rem;
         cursor: pointer;
     }
-    >label{
+
+    >label {
         display: block;
         position: absolute;
         font-size: 1.5rem;
@@ -118,12 +125,12 @@
 }
 
 
-#product_listmore{
+#product_listmore {
     display: block;
     width: 100%;
     height: 50px;
-    
-    .moreview_btn{
+
+    .moreview_btn {
         width: 100%;
         height: 50px;
         text-align: center;
@@ -134,7 +141,7 @@
         letter-spacing: -0.3px;
         color: $bvt-darkgray;
 
-        &::after{
+        &::after {
             display: inline-block;
             content: "〉";
             font-weight: 900;

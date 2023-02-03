@@ -134,6 +134,10 @@
     #indexListmain {
         background: #F0F2F8;
 
+        .swiper-slide {
+            position: relative;
+        }
+
         //index.html 메인진열 섹션 공통 
         div.listmain {
             padding: 41px 11px 40.7px;
@@ -174,6 +178,7 @@
                     align-items: center;
 
                     >li {
+                        position: relative;
                         width: 48%;
                         max-width: 209px;
                         margin-bottom: 36px;

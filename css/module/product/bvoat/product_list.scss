@@ -17,6 +17,7 @@
 
         // 상품 개별
         .listnormal_list {
+            position: relative;
             width: 49%;
             height: auto;
             padding-bottom: 30px;
@@ -31,12 +32,13 @@
 }
 
 //상품 이미지 구역
-@include product-thumb(21px, 18.98px, 0, 0);
+@include product-thumb(21px, 18.98px, 0px, 0px, 0px);
 
 
 //상품 설명
 .desc {
     padding: 7px 0 0 0;
+
     .brand {
         font-size: 1rem;
         color: $bvt-darkgray;
@@ -51,7 +53,8 @@
         margin-bottom: 7px;
     }
 
-    .product_name, .product_name span {
+    .product_name,
+    .product_name span {
         color: $bvt-black;
         font-size: 1.3rem;
         font-weight: bold;
@@ -62,11 +65,17 @@
     }
 
 }
+
 //하단 아이콘 신버전
-.icon{
+.icon {
+    position: absolute;
     height: 25px;
     margin-top: 4%;
-    img{
+    top: 3px;
+    left: 10px;
+    z-index: 1;
+
+    img {
         width: auto;
         height: inherit;
         margin-right: 5px;

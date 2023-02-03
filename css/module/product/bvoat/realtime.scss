@@ -37,6 +37,7 @@
             color: $bvt-lostfocus-gray;
         }
     }
+
     //메인진열
     #realTimeOrderListContents {
         //메인 모듈
@@ -65,7 +66,7 @@
                     //위시버튼
                     @include wish-button(21px, 18.98px, 0, 0);
 
-                    .icon{
+                    .icon {
                         height: 25px !important;
                         margin-top: 10px;
                     }
@@ -95,6 +96,7 @@
             }
         }
     }
+
     //가치소비는 50개
     #realTimeOrderListMsg {
         width: 100%;

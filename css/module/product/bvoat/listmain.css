@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 /**
@@ -34,7 +31,13 @@
   padding: 10px 0 0 0;
 }
 .index_list .desc .brand {
-  font-size: 1rem !important;
+  font-size: 1rem;
+  color: #707070;
+  margin-bottom: 3px;
+}
+.index_list .desc .summary {
+  display: block;
+  font-size: 1.2rem;
   color: #707070;
   display: block;
   overflow: hidden;
@@ -44,29 +47,14 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.4rem;
-  margin-bottom: 3px;
-}
-.index_list .desc .summary {
-  font-size: 1.2rem !important;
-  font-weight: 700;
-  color: #292929;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
-  line-height: 1.6rem;
-  margin-bottom: 10px;
+  line-height: 1.5rem;
+  margin-bottom: 7px;
 }
 .index_list .desc .product_name,
 .index_list .desc .product_name span {
   color: #292929 !important;
   font-size: 1.4rem !important;
-  font-weight: 300;
+  font-weight: bold;
   word-wrap: break-word;
   word-break: keep-all;
   display: block;
@@ -77,25 +65,23 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.8rem;
-  height: 3.5rem;
+  line-height: 1.7rem;
+  height: 3.6rem;
   margin-bottom: 18px;
 }
 .index_list .thumb {
   position: relative;
   width: 100%;
 }
-.index_list .thumb > a,
-.index_list .thumb .img_wrap {
+.index_list .thumb > a {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
-.index_list .thumb > a > img,
-.index_list .thumb .img_wrap > img {
+.index_list .thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -109,31 +95,39 @@
   width: auto;
   height: auto;
   cursor: pointer;
-  bottom: 0;
-  right: 0;
+  bottom: 0px;
+  left: 0px;
+  background: #fff;
 }
 .index_list .thumb .wish button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: inherit;
-  height: inherit;
+  width: auto;
+  height: auto;
   border: 0;
-  background: none;
+  bottom: pink;
   cursor: pointer;
 }
 .index_list .thumb .wish button img {
   position: relative;
-  width: 41px;
-  height: 38.98px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-.index_list .icon img {
-  height: inherit;
+  width: 21px;
+  height: 18.98px;
+  padding: 0px;
   -o-object-fit: contain;
      object-fit: contain;
-  image-rendering: auto;
+}
+.index_list .icon {
+  position: absolute;
+  height: 25px;
+  margin-top: 4%;
+  top: 3px;
+  left: 10px;
+  z-index: 1;
+}
+.index_list .icon img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* 메인 진열 공통 */

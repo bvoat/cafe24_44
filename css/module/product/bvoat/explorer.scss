@@ -3,10 +3,11 @@
 @import "../../../abstracts/variables";
 
 
-#explorer{
+#explorer {
     width: 100%;
     max-width: 450px;
     padding: 80px 0 120px;
+
     /* 브랜드 카운트 */
     #indexSupplyCnt {
         display: flex;
@@ -21,6 +22,7 @@
             border: 0;
             font-size: 1.7rem;
             font-weight: 400;
+
             em {
                 font-weight: 600;
             }
@@ -28,7 +30,8 @@
 
     }
 }
-#explorerTitle{
+
+#explorerTitle {
     width: 100%;
     max-width: 450px;
     padding: 0 29px;
@@ -57,57 +60,67 @@
         }
     }
 
-    .spring_menu{
+    .spring_menu {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
 
-        li{
+        li {
             width: 23.5%;
             max-width: 91px;
-            a{
+
+            a {
                 display: flex;
                 flex-flow: column nowrap;
                 justify-content: flex-start;
                 align-items: center;
-                img{
+
+                img {
                     width: 100%;
                     margin-bottom: 9px;
                     transform: translateZ(0);
                 }
-                span{
+
+                span {
                     font-size: 1.5rem;
                     font-weight: 300;
                 }
             }
-            
-            
+
+
         }
     }
 }
+
 // 메인진열 공통
-#indexListmain{
+#indexListmain {
     width: 100%;
-    max-width:450px;
-    ul{
-        .index_list{
+    max-width: 450px;
+
+    ul {
+        .index_list {
             width: 100%;
             max-width: 450px;
             margin-bottom: 0;
-            >div{
+
+            >div {
                 padding: 0 29px;
-                .banner{
+
+                .banner {
                     width: 100%;
                     max-width: 450px;
                     margin-bottom: 37px;
-                    a, a>img{
+
+                    a,
+                    a>img {
                         width: 100%;
                         object-fit: cover;
                         transform: translateZ(0);
                     }
                 }
-                >ul{
+
+                >ul {
                     .list_item {
                         position: relative;
                         display: flex;
@@ -117,18 +130,20 @@
                         width: calc(33.33%);
                         max-width: 181px;
                         margin-bottom: 27px;
-                
+
                         //위시버튼
                         @include wish-button(21px, 18.98px, 0, 0);
+
                         //아이콘
-                        .icon{
+                        .icon {
                             height: 22px !important;
                         }
                     }
 
                 }
-                .list_item_progress{
-                    margin: 0 0 69.7px 0 ;
+
+                .list_item_progress {
+                    margin: 0 0 69.7px 0;
                 }
             }
         }
@@ -150,6 +165,7 @@
     font-size: 1.7rem;
     font-weight: 600;
     box-sizing: border-box;
+
     svg {
         display: flex;
         flex-flow: row nowrap;
@@ -163,13 +179,15 @@
         font-size: 1.55rem;
     }
 }
+
 /* 둘러보기 이동 */
 
 //하단 아이콘 신버전
-.icon{
+.icon {
     height: 25px !important;
     margin-top: 6%;
-    img{
+
+    img {
         width: auto;
         height: inherit;
         margin-right: 5px;

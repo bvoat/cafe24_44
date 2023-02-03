@@ -22,29 +22,35 @@
 #weekTotalBestList {
     margin-bottom: 33px;
     padding: 0 11px;
+
     #weekTotalBestListTitle {
         width: 100%;
         max-width: 450px;
         margin-bottom: 18px;
+
         h1 {
             font-size: 1.9rem;
             font-weight: 700;
             margin-bottom: 2px;
         }
+
         h2 {
             font-size: 1.3rem;
             font-weight: 300;
             color: $bvt-lostfocus-gray;
         }
     }
+
     #weekTotalBestListContents {
-        .weekbest{
-            >ul{
-                .list_item{
+        .weekbest {
+            >ul {
+                .list_item {
+
                     //순위 표시
                     //1,2위 배경
-                    &:nth-child(1),&:nth-child(2){
-                        &::before{
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        &::before {
                             position: absolute;
                             display: flex;
                             box-align: start;
@@ -65,9 +71,10 @@
                             padding: 0 0 4px 0;
                         }
                     }
+
                     //3,4,5위 배경
-                    &:nth-child(n+3):nth-child(-n+5){
-                        &::before{
+                    &:nth-child(n+3):nth-child(-n+5) {
+                        &::before {
                             position: absolute;
                             display: flex;
                             box-align: start;
@@ -86,11 +93,12 @@
                             top: -8px;
                             left: 7px;
                             padding: 0 0 4px 0;
-                        }  
+                        }
                     }
+
                     //6-20위 배경
-                    &:nth-child(n+6):nth-child(-n+20){
-                        &::before{
+                    &:nth-child(n+6):nth-child(-n+20) {
+                        &::before {
                             position: absolute;
                             display: flex;
                             box-align: start;
@@ -111,31 +119,132 @@
                             padding: 0 0 4px 0;
                         }
                     }
-                    //숫자 삽입
-                    &:nth-child(1){&::before{content: "1"!important;}}
-                    &:nth-child(2){&::before{content: "2"!important;}}
-                    &:nth-child(3){&::before{content: "3"!important;}}
-                    &:nth-child(4){&::before{content: "4"!important;}}
-                    &:nth-child(5){&::before{content: "5"!important;}}
-                    &:nth-child(6){&::before{content: "6"!important;}}
-                    &:nth-child(7){&::before{content: "7"!important;}}
-                    &:nth-child(8){&::before{content: "8"!important;}}
-                    &:nth-child(9){&::before{content: "9"!important;}}
-                    &:nth-child(10){&::before{content: "10"!important;}}
-                    &:nth-child(11){&::before{content: "11"!important;}}
-                    &:nth-child(12){&::before{content: "12"!important;}}
-                    &:nth-child(13){&::before{content: "13"!important;}}
-                    &:nth-child(14){&::before{content: "14"!important;}}
-                    &:nth-child(15){&::before{content: "15"!important;}}
-                    &:nth-child(16){&::before{content: "16"!important;}}
-                    &:nth-child(17){&::before{content: "17"!important;}}
-                    &:nth-child(18){&::before{content: "18"!important;}}
-                    &:nth-child(19){&::before{content: "19"!important;}}
-                    &:nth-child(20){&::before{content: "20"!important;}}
 
-                    .brand{
+                    //숫자 삽입
+                    &:nth-child(1) {
+                        &::before {
+                            content: "1" !important;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        &::before {
+                            content: "2" !important;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        &::before {
+                            content: "3" !important;
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        &::before {
+                            content: "4" !important;
+                        }
+                    }
+
+                    &:nth-child(5) {
+                        &::before {
+                            content: "5" !important;
+                        }
+                    }
+
+                    &:nth-child(6) {
+                        &::before {
+                            content: "6" !important;
+                        }
+                    }
+
+                    &:nth-child(7) {
+                        &::before {
+                            content: "7" !important;
+                        }
+                    }
+
+                    &:nth-child(8) {
+                        &::before {
+                            content: "8" !important;
+                        }
+                    }
+
+                    &:nth-child(9) {
+                        &::before {
+                            content: "9" !important;
+                        }
+                    }
+
+                    &:nth-child(10) {
+                        &::before {
+                            content: "10" !important;
+                        }
+                    }
+
+                    &:nth-child(11) {
+                        &::before {
+                            content: "11" !important;
+                        }
+                    }
+
+                    &:nth-child(12) {
+                        &::before {
+                            content: "12" !important;
+                        }
+                    }
+
+                    &:nth-child(13) {
+                        &::before {
+                            content: "13" !important;
+                        }
+                    }
+
+                    &:nth-child(14) {
+                        &::before {
+                            content: "14" !important;
+                        }
+                    }
+
+                    &:nth-child(15) {
+                        &::before {
+                            content: "15" !important;
+                        }
+                    }
+
+                    &:nth-child(16) {
+                        &::before {
+                            content: "16" !important;
+                        }
+                    }
+
+                    &:nth-child(17) {
+                        &::before {
+                            content: "17" !important;
+                        }
+                    }
+
+                    &:nth-child(18) {
+                        &::before {
+                            content: "18" !important;
+                        }
+                    }
+
+                    &:nth-child(19) {
+                        &::before {
+                            content: "19" !important;
+                        }
+                    }
+
+                    &:nth-child(20) {
+                        &::before {
+                            content: "20" !important;
+                        }
+                    }
+
+                    .brand {
                         @include only-ellipsis(1, 1rem);
                     }
+
                     .summary {
                         display: block;
                         font-size: 1.15rem;
@@ -156,44 +265,51 @@
 #weekTagBestList {
     background: #F5F6FA;
     padding: 60px 11px 37px;
+
     //지난 한 달간
     #weekTagBestListTitle {
         width: 100%;
         max-width: 450px;
         margin-bottom: 18px;
+
         h1 {
             font-size: 1.9rem;
             font-weight: 700;
             margin-bottom: 2px;
         }
+
         h2 {
             font-size: 1.3rem;
             font-weight: 300;
             color: $bvt-lostfocus-gray;
         }
     }
+
     //모듈 묶음
     #weekTagBestListContents {
         width: 100%;
         max-width: 450px;
+
         //개별 가치태그 모듈
-        .weektag{
+        .weektag {
             background: $bvt-white;
             border-radius: 10px;
             margin-bottom: 40px;
             overflow-x: hidden;
             box-shadow: 0px 3px 4px 0px #0000000D;
 
-            #weekTagTitle{
+            #weekTagTitle {
                 width: 100%;
-                .tag_title{
+
+                .tag_title {
                     font-size: 1.8rem;
                     font-weight: 700;
                     letter-spacing: -0.02em;
                     padding: 15px;
                     border-bottom: 1px solid #EDEDED;
-                //화살표
-                    >.move_arrow{  
+
+                    //화살표
+                    >.move_arrow {
                         position: relative;
                         display: inline-block;
                         width: 9px;
@@ -205,13 +321,14 @@
                     }
                 }
 
-                .tag_subtitle{
+                .tag_subtitle {
                     font-size: 1.6rem;
                     font-weight: 500;
                     letter-spacing: -0.5px;
                     color: $bvt-darkgray;
                     padding: 20px 15px 15px;
-                    .purchasers{
+
+                    .purchasers {
                         font-weight: 700;
                         color: $bvt-blue;
                     }
@@ -232,7 +349,8 @@
                         font-weight: 400;
                         letter-spacing: -0.02em;
                         color: $bvt-black;
-                        >a{
+
+                        >a {
                             font-size: 1.4rem;
                             font-weight: 400;
                             color: $bvt-black;
@@ -247,10 +365,11 @@
 
 /* 메인진열 */
 // 주간 베스트 (best.html)
-.weekbest{
+.weekbest {
     width: 100%;
+
     // 이미지 200px / 130px
-    >ul{
+    >ul {
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-start;
@@ -267,11 +386,14 @@
             width: 31.9%;
             max-width: 130px;
             margin-bottom: 27px;
+
             //아이콘 컨트롤
-            .icon{
+            .icon {
                 display: none;
             }
-            &:nth-child(1), &:nth-child(2){
+
+            &:nth-child(1),
+            &:nth-child(2) {
                 width: calc(50% - 5px);
                 max-width: 200px;
                 margin-bottom: 27px;
@@ -279,109 +401,137 @@
                 @include wish-button(21px, 18.98px, 0, 0);
 
                 //아이콘 컨트롤
-                .icon{
+                .icon {
                     display: block;
                     height: 25px !important;
                     margin-top: 10px;
                 }
             }
-            &:nth-child(n+9){
+
+            &:nth-child(n+9) {
                 display: none;
             }
+
             //간격 조정
-            &:nth-child(1){
+            &:nth-child(1) {
                 margin-right: 10px;
             }
-            &:nth-child(3n),&:nth-child(4),&:nth-child(7),&:nth-child(10),&:nth-child(13),&:nth-child(16),&:nth-child(19){
+
+            &:nth-child(3n),
+            &:nth-child(4),
+            &:nth-child(7),
+            &:nth-child(10),
+            &:nth-child(13),
+            &:nth-child(16),
+            &:nth-child(19) {
                 margin-right: 2.1%;
             }
+
             //위시버튼
             @include wish-button(17px, 15px, 0, 0);
         }
     }
-    @media (max-width: 420px){
-        ul{
+
+    @media (max-width: 420px) {
+        ul {
             max-width: 100%;
             padding: 0;
         }
-        .desc{
+
+        .desc {
             padding: 7px 0 0 0;
         }
-        .price_wrap{
+
+        .price_wrap {
             >.discount {
                 font-size: 1.4rem;
             }
+
             >.price_item {
                 font-size: 1.4rem;
+
                 &::after {
                     font-size: 1.4rem;
                 }
             }
         }
-    } 
+    }
+
     @media (max-width: 379px) {
-        ul{
+        ul {
             max-width: 100%;
             padding: 0;
         }
-        .desc{
+
+        .desc {
             padding: 7px 0 0 0;
         }
-        
-        .price_wrap{
+
+        .price_wrap {
             >.discount {
                 font-size: 1.25rem;
             }
+
             >.price_item {
                 font-size: 1.25rem;
+
                 &::after {
                     font-size: 1.25rem;
                 }
             }
+
             .strike_price {
                 bottom: 1.5rem;
                 font-size: 1rem !important;
             }
         }
     }
+
     @media (max-width: 350px) {
 
-        ul{
+        ul {
             max-width: 100%;
             padding: 0;
         }
-        .desc{
+
+        .desc {
             padding: 7px 0 0 0;
         }
-        
-        .price_wrap{
+
+        .price_wrap {
             >.discount {
                 font-size: 1.1rem;
             }
+
             >.price_item {
                 font-size: 1.1rem;
+
                 &::after {
                     font-size: 1.1rem;
                 }
             }
+
             .strike_price {
                 bottom: 1.5rem;
-                font-size:0.9px !important;
+                font-size: 0.9px !important;
             }
         }
     }
 }
+
 //주간 가치태그 베스트
-.weektag{
+.weektag {
     width: 100%;
+
     // 이미지 200px / 130px
-    >ul{
+    >ul {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
         max-width: calc(100% - 30px);
         padding: 0 15px;
+
         .list_item {
             position: relative;
             display: flex;
@@ -393,24 +543,28 @@
             margin-bottom: 27px;
             //위시버튼
             @include wish-button(21px, 18.98px, 0, 0);
-            &:nth-child(n+5){
+
+            &:nth-child(n+5) {
                 display: none;
             }
+
             //아이콘 컨트롤
-            .icon{
+            .icon {
                 display: block;
                 height: 25px !important;
                 margin-top: 10px;
             }
         }
     }
+
     /* 더보기 버튼 커스텀 */
     >.paginate_moreview {
         display: flex;
         align-items: center;
         width: 100%;
         max-width: inherit;
-        .moreview_btn{
+
+        .moreview_btn {
             width: 100%;
             max-width: inherit;
             height: 42px;
@@ -422,7 +576,8 @@
             font-weight: 400;
             margin: 0 auto;
             cursor: pointer;
-            svg{
+
+            svg {
                 margin: 3px 0 0 2px;
             }
         }

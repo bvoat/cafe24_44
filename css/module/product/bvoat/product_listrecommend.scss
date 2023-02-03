@@ -18,11 +18,12 @@
     }
 
 }
+
 //상품 이미지 구역
 @include product-thumb(21px, 18.98px, 0, 0);
 
 //상품 설명 (fontsize 오류 컨트롤)
-.listrecommend_list{
+.listrecommend_list {
     .desc {
         padding: 7px 0 0 0;
 
@@ -31,7 +32,7 @@
             color: $bvt-darkgray;
             margin-bottom: 3px;
         }
-    
+
         .summary {
             display: block;
             font-size: 11.5px !important;
@@ -39,8 +40,9 @@
             @include only-ellipsis(1, 1.3rem);
             margin-bottom: 7px;
         }
-    
-        .product_name, .product_name span {
+
+        .product_name,
+        .product_name span {
             color: $bvt-black !important;
             font-size: 1.3rem !important;
             font-weight: bold;
@@ -50,15 +52,16 @@
             margin-bottom: 20px;
         }
 
-        >li{
-            &:nth-child(1){
+        >li {
+            &:nth-child(1) {
                 font-size: 10px !important;
             }
-            &:nth-child(2){
+
+            &:nth-child(2) {
                 font-size: 11.5px !important;
             }
         }
-    
+
     }
 }
 
@@ -67,11 +70,13 @@
 .product_list_pagination {
     height: 3px;
 }
+
 //하단 아이콘 신버전
-.icon{
+.icon {
     height: 25px;
     margin-top: 4%;
-    img{
+
+    img {
         width: auto;
         height: inherit;
         margin-right: 5px;

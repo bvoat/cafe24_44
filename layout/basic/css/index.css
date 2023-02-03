@@ -121,6 +121,9 @@
 #bvtHome #indexListmain {
   background: #F0F2F8;
 }
+#bvtHome #indexListmain .swiper-slide {
+  position: relative;
+}
 #bvtHome #indexListmain div.listmain {
   padding: 41px 11px 40.7px;
   margin-bottom: 17px;
@@ -152,6 +155,7 @@
   align-items: center;
 }
 #bvtHome #indexListmain div.listmain .right-side-control .moreview > ul > li {
+  position: relative;
   width: 48%;
   max-width: 209px;
   margin-bottom: 36px;

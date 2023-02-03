@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 #productListnormalList {
@@ -22,6 +19,7 @@
   height: auto;
 }
 #productListnormalList .product_listnormal_list_wrap .listnormal_list {
+  position: relative;
   width: 49%;
   height: auto;
   padding-bottom: 30px;
@@ -36,17 +34,15 @@
   position: relative;
   width: 100%;
 }
-.thumb > a,
-.thumb .img_wrap {
+.thumb > a {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
-.thumb > a > img,
-.thumb .img_wrap > img {
+.thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -60,32 +56,40 @@
   width: auto;
   height: auto;
   cursor: pointer;
-  bottom: 0;
-  right: 0;
+  bottom: 0px;
+  left: 0px;
+  background: #fff;
 }
 .thumb .wish button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: inherit;
-  height: inherit;
+  width: auto;
+  height: auto;
   border: 0;
-  background: none;
+  bottom: pink;
   cursor: pointer;
 }
 .thumb .wish button img {
   position: relative;
-  width: 41px;
-  height: 38.98px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-
-.icon img {
-  height: inherit;
+  width: 21px;
+  height: 18.98px;
+  padding: 0px;
   -o-object-fit: contain;
      object-fit: contain;
-  image-rendering: auto;
+}
+
+.icon {
+  position: absolute;
+  height: 25px;
+  margin-top: 4%;
+  top: 3px;
+  left: 10px;
+  z-index: 1;
+}
+.icon img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .desc {
@@ -108,10 +112,11 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.7rem;
+  line-height: 1.6rem;
   margin-bottom: 7px;
 }
-.desc .product_name, .desc .product_name span {
+.desc .product_name,
+.desc .product_name span {
   color: #292929;
   font-size: 1.3rem;
   font-weight: bold;
@@ -125,14 +130,18 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.9rem;
-  height: 3.7rem;
+  line-height: 1.8rem;
+  height: 3.8rem;
   margin-bottom: 18px;
 }
 
 .icon {
+  position: absolute;
   height: 25px;
   margin-top: 4%;
+  top: 3px;
+  left: 10px;
+  z-index: 1;
 }
 .icon img {
   width: auto;

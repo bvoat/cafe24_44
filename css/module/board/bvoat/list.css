@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 #productBoardList {
@@ -153,7 +150,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.7rem;
+  line-height: 1.6rem;
   display: table-cell;
   font-weight: 600;
 }
@@ -164,17 +161,15 @@
   position: relative;
   width: 100%;
 }
-#productBoardList #productBoardListTable .thumb > a,
-#productBoardList #productBoardListTable .thumb .img_wrap {
+#productBoardList #productBoardListTable .thumb > a {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
-#productBoardList #productBoardListTable .thumb > a > img,
-#productBoardList #productBoardListTable .thumb .img_wrap > img {
+#productBoardList #productBoardListTable .thumb > a > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -189,30 +184,38 @@
   height: auto;
   cursor: pointer;
   bottom: 0px;
-  right: 0px;
+  left: 0px;
+  background: #fff;
 }
 #productBoardList #productBoardListTable .thumb .wish button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: inherit;
-  height: inherit;
+  width: auto;
+  height: auto;
   border: 0;
-  background: none;
+  bottom: pink;
   cursor: pointer;
 }
 #productBoardList #productBoardListTable .thumb .wish button img {
   position: relative;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#productBoardList #productBoardListTable .icon img {
-  height: inherit;
+  width: 0px;
+  height: 0px;
+  padding: 0px;
   -o-object-fit: contain;
      object-fit: contain;
-  image-rendering: auto;
+}
+#productBoardList #productBoardListTable .icon {
+  position: absolute;
+  height: 25px;
+  margin-top: 4%;
+  top: 3px;
+  left: 10px;
+  z-index: 1;
+}
+#productBoardList #productBoardListTable .icon img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #productBoardList #productBoardListTable .thumb {
   display: flex;
@@ -233,8 +236,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.7rem;
-  height: 3.3rem;
+  line-height: 1.6rem;
+  height: 3.4rem;
 }
 #productBoardList #productBoardListTable > .ec-base-button {
   display: flex;
@@ -290,7 +293,7 @@
 }
 #productBoardList .page-pagination {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row;
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;
