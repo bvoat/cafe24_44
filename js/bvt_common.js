@@ -223,7 +223,10 @@ function controlTopNavActive(page_path) {
   } else if (page_path.includes("introduce")) {
     //비보트 소개에 active
     document.querySelector("#intro").classList.add("top_nav_active");
-    //아무것도 확인되지 않으면
+    //path가 board-8이면
+  } else if (page_path.includes("board_no=8") || page_path.includes("article")) {
+    //읽을거리에 active
+    document.querySelector("#board").classList.add("top_nav_active");
   } else {
     //비보트 추천에 active
     document.querySelector("#index").classList.add("top_nav_active");
