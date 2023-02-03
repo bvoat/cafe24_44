@@ -46,7 +46,7 @@
             display: flex;
             flex-flow: row nowrap;
             margin-bottom: 20px;
-            @include product-thumb(21px, 18.98px, 0px, 0px, 0px);
+            @include product-thumb(21px, 18.98px, 0px, 0px);
 
             .thumb {
                 width: 30%;
@@ -91,6 +91,9 @@
             }
         }
 
+        img {
+            width: 100%;
+        }
 
     }
 
@@ -146,6 +149,10 @@
                         }
                     }
                 }
+            }
+
+            img {
+                width: 100%;
             }
         }
 

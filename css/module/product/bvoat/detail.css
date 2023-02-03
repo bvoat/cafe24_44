@@ -75,7 +75,7 @@
   box-sizing: border-box;
   border: 1px solid #E2E2E2;
   border-radius: 14px;
-  margin: 0 6px 0 0;
+  margin: 0 6px 6px 0;
 }
 #productDetailTop .product_info_wrap #categoryTagBox .cate_item > a {
   font-size: 1.2rem;
