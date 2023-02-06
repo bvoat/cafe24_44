@@ -80,15 +80,15 @@
 }
 #productDetailTop .product_info_wrap h3.summary_desc {
   font-size: 1.35rem;
-  font-weight: 600;
-  color: #292929;
+  font-weight: 400;
+  color: #707070;
   margin-bottom: 11px;
 }
 #productDetailTop .product_info_wrap h2.product_name,
 #productDetailTop .product_info_wrap h2.product_name span {
   color: #292929;
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 500;
   word-wrap: break-word;
   word-break: keep-all;
   display: block;

@@ -83,8 +83,8 @@
 		/* 상품 요약 설명*/
 		h3.summary_desc {
 			font-size: 1.35rem;
-			font-weight: 600;
-			color: $bvt-black;
+			font-weight: 400;
+			color: $bvt-darkgray;
 			margin-bottom: 11px;
 		}
 
@@ -92,7 +92,7 @@
 		h2.product_name span {
 			color: $bvt-black;
 			font-size: 1.6rem;
-			font-weight: 300;
+			font-weight: 500;
 			word-wrap: break-word;
 			word-break: keep-all;
 			@include ellipsis(2, 2rem);
