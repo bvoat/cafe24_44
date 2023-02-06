@@ -16,7 +16,7 @@
 #productBoardList #productBoardListTitle {
   width: 100%;
   max-width: 450px;
-  margin-bottom: 18px;
+  margin-bottom: 28px;
   padding: 0 11px;
 }
 #productBoardList #productBoardListTitle h1 {
@@ -81,7 +81,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 29.8%;
+  width: 61px;
   height: 26px;
   border-radius: 28px;
   background: #022CFF;

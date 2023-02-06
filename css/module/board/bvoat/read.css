@@ -195,6 +195,7 @@
 }
 #productBoardRead .ec-base-table .detail {
   padding: 0;
+  margin: 0;
   border: none;
 }
 
