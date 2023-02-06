@@ -54,7 +54,7 @@
 .index_list .desc .product_name span {
   color: #292929 !important;
   font-size: 1.4rem !important;
-  font-weight: bold;
+  font-weight: 500;
   word-wrap: break-word;
   word-break: keep-all;
   display: block;
