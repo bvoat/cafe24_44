@@ -41,50 +41,51 @@
 
 //하위 카테고리
 #subCategorySwiper {
-    display: flex;
     width: 100%;
-    height: 50px;
-    background: $bvt-black;
+    height: 59px;
+    background: #F8F8F8;
+    padding: 0 11px;
 
     .subcategory {
         display: flex;
         width: 100%;
         flex-flow: row nowrap;
+        justify-content: flex-start;
         align-items: center;
-        padding: 0 11px;
 
         .subcategory_list {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: fit-content !important;
 
             a {
                 display: block;
                 font-weight: 300;
-                font-size: 1.35rem;
-                letter-spacing: -0.3px;
-                color: $bvt-white;
+                font-size: 1.6rem;
+                letter-spacing: -0.5px;
                 word-break: keep-all;
                 word-wrap: break-word;
-                margin-top: -4px;
             }
         }
 
-        .subcate_active {
+        .subcategory_list.active {
             a {
+                font-weight: 600;
+                color: $bvt-blue;
+
                 &::after {
                     position: absolute;
                     display: block;
                     content: "";
                     width: 103%;
                     height: 3px;
-                    border-radius: 2px;
-                    background: $bvt-white;
-                    bottom: -4px;
+                    border-radius: 5px;
+                    background: $bvt-blue;
+                    bottom: -20px;
                 }
             }
         }
+
     }
 }
 

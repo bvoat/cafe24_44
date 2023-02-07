@@ -34,7 +34,8 @@
   position: relative;
   width: 100%;
 }
-.thumb > a {
+.thumb > a,
+.thumb .img_wrap {
   display: block;
   position: relative;
   width: 100%;
@@ -42,7 +43,8 @@
   overflow: hidden;
   border-radius: 4px;
 }
-.thumb > a > img {
+.thumb > a > img,
+.thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;

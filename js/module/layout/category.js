@@ -15,7 +15,6 @@ let methods = {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log('data: ', data);
         if (data === null || data === "undefined") return false;
         for (let idx = 0; idx < data.length; idx++) {
           let parentCategoryNo = data[idx].parent_cate_no;
@@ -31,26 +30,20 @@ let methods = {
         const parentCategoryArray = methods.categoryObj[1];
         //parentCategoryArray로 반복하여 productCategoryArray,tagCategoryArray 배열에 각각 push
         parentCategoryArray.forEach((parent, i) => {
-          if (i > 1 && i < 8) {
+          if (i > 1 && i < 7) {
             methods.productCategoryArray.push(parent);
           } 
-          else if (i >= 8 && i <= 12) {
+          else if (i >= 7 && i <= 9) {
             methods.tagCategoryArray.push(parent);
           } else if (i === 1){
             methods.recommendedCategory.push(parent);
           }
-
           return false;
         });
-        
-        console.log("categoryObj", methods.categoryObj)
-        console.log("productCategoryArray", methods.productCategoryArray)
-        console.log("tagCategoryArray", methods.tagCategoryArray)
-        console.log("recommendCategory", methods.recommendedCategory);
+
         
         //추천 카테고리 - 대 카테고리 li 생성
         methods.recommendedCategory.forEach((recommended) => {
-          console.log('recommended: ', recommended);
           document
             .querySelector("#categoryOfRecommendedList")
             .insertAdjacentHTML(
@@ -97,18 +90,7 @@ let methods = {
             "ul[id^='categoryOfRecommended']>li[class^='parent_category']"
           ),
         ].forEach((parent) => {
-          let middleCategory = methods.createdMidCategoryNode(parent.dataset.cateno, 'onerow');
-          parent.insertAdjacentHTML("afterend", middleCategory);
-        });
-        // 상품별 카테고리 > 개별 중 카테고리 생성
-        [
-          ...document.querySelectorAll(
-            "ul[id^='categoryOfProduct']>li[class^='parent_category']"
-          ),
-        ].forEach((parent) => {
-          let row = parent.dataset.cateno == 574 ? 'onerow' : 'tworow';
-          console.log('row: ', row);
-          let middleCategory = methods.createdMidCategoryNode(parent.dataset.cateno, row);
+          let middleCategory = methods.createdMidCategoryNode(parent.dataset.cateno, 'recommend', 'slide');
           parent.insertAdjacentHTML("afterend", middleCategory);
         });
         // 가치태그 카테고리 > 개별 중 카테고리 생성
@@ -117,35 +99,34 @@ let methods = {
             "ul[id^='categoryOfTag']>li[class^='parent_category']"
           ),
         ].forEach((parent) => {
-            let row = 'tworow';
-          let middleCategory = methods.createdMidCategoryNode(parent.dataset.cateno, row);
+          let middleCategory = methods.createdMidCategoryNode(parent.dataset.cateno, 'product-tag', 'slide');
+          parent.insertAdjacentHTML("afterend", middleCategory);
+        });
+        // 상품별 카테고리 > 개별 중 카테고리 생성
+        [
+          ...document.querySelectorAll(
+            "ul[id^='categoryOfProduct']>li[class^='parent_category']"
+          ),
+        ].forEach((parent) => {
+          let middleCategory = methods.createdMidCategoryNode(parent.dataset.cateno, "product-item");
           parent.insertAdjacentHTML("afterend", middleCategory);
         });
       })
       .then(()=>{
-        // 1줄 슬라이더 공통
-        var onerowSwiper = new Swiper(".onerow", {
-            spaceBetween: 12,
-            slidesPerView: 3.01,
-            slidesPerColumn: 1,
-            slidesPerColumnFill: 'row',
-            pagination: {
-                el: ".progressbar",
-                clickable: true,
-                type: "progressbar",
-            },
+        // 추천 슬라이더
+        var recommendSwiper = new Swiper(".recommend", {
+            spaceBetween: 7.2,
+            slidesPerView: "auto",
         });
-        // 2줄 슬라이더 공통
-        var tworowSwiper = new Swiper(".tworow", {
-            spaceBetween: 12,
-            slidesPerView: 3.01,
-            slidesPerColumn: 2,
-            slidesPerColumnFill: 'row',
-            pagination: {
-                el: ".progressbar",
-                clickable: true,
-                type: "progressbar",
-            }
+        // 가치태그 슬라이더
+        var tagSwiper = new Swiper(".product-tag", {
+          spaceBetween: 7.2,
+          slidesPerView: "auto",
+        });
+        //상품 슬라이더
+        var itemSwiper = new Swiper(".product-item", {
+          spaceBetween: 7.2,
+          slidesPerView: "auto",
         });
       })
     return methods.categoryObj;
@@ -159,8 +140,10 @@ let methods = {
    * @param {슬라이더 row} sliderType
    * @returns 
    */
-  createdMidCategoryNode: function (parentCategoryNo, sliderType) {
-    console.log('sliderType: ', sliderType);
+  createdMidCategoryNode: function (parentCategoryNo, swiperClass, swiperType) {
+
+    const type = swiperType === 'slide' ? 'swiper-wrapper' : 'no-swiper';
+
     //상품별 카테고리 중 카테고리 생성
     if (
       methods.categoryObj[parentCategoryNo] == undefined ||
@@ -170,7 +153,7 @@ let methods = {
     }
     //node 리스트의 ul 열기
     let categoryListNodeArray = [
-      `<li class="middle_main_category_${parentCategoryNo} ${sliderType}"><ul class="swiper-wrapper">`,
+      `<li class="middle_main_category_${parentCategoryNo} ${swiperClass}"><ul class="${type}">`,
     ];
     //node 리스트의 li 반복 생성
     methods.categoryObj[parentCategoryNo].forEach((el) => {

@@ -1,83 +1,74 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 #category {
   width: 100%;
   max-width: 450px;
-  padding: 41px 0 120px;
+  margin: 40px 0 60px;
+  background: #F5F6FC;
 }
-
-#categoryTitle {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  padding: 9px 0;
-  background: #F5FF02;
-}
-#categoryTitle .category_banner {
-  border: 0;
-  font-size: 1.7rem;
+#category h2.category_title {
+  font-size: 2.45rem;
   font-weight: 400;
-}
-#categoryTitle .category_banner span {
-  position: relative;
-  display: inline-block;
-  top: 1px;
-  margin-right: 5px;
-}
-#categoryTitle .category_banner em {
-  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 #categoryOfRecommended {
   width: 100%;
   max-width: 450px;
-  background: #022CFF;
-  padding: 24px 29px 28px;
-  margin-bottom: 45px;
+  background: #ffffff;
+  padding: 30px 17px 10px;
+  margin-bottom: 8px;
 }
 #categoryOfRecommended #categoryOfRecommendedList {
   width: 100%;
 }
 #categoryOfRecommended #categoryOfRecommendedList li[class^=parent_category] {
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 2.28rem;
+  font-weight: 600;
+  margin-bottom: 14.5px;
 }
-#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item {
-  margin-top: 30px !important;
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] {
+  width: 100%;
 }
-#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a {
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item {
+  width: 96.46px;
+}
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
-#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb {
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .thumb {
   position: relative;
   width: 100%;
 }
-#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb > a,
-#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb .img_wrap {
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .thumb > a,
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .thumb .img_wrap {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
-#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb > a > img,
-#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img {
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .thumb > a > img,
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -86,44 +77,57 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb .wish {
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .thumb .wish {
   position: absolute;
   width: auto;
   height: auto;
   cursor: pointer;
   bottom: 0px;
-  right: 0px;
+  left: 0px;
+  background: #fff;
 }
-#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb .wish button {
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .thumb .wish button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: inherit;
-  height: inherit;
+  width: auto;
+  height: auto;
   border: 0;
-  background: none;
+  bottom: pink;
   cursor: pointer;
 }
-#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .thumb .wish button img {
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .thumb .wish button img {
   position: relative;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .icon img {
-  height: inherit;
+  width: 0px;
+  height: 0px;
+  padding: 0px;
   -o-object-fit: contain;
      object-fit: contain;
-  image-rendering: auto;
 }
-#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] .middle_item a .category_name {
-  font-weight: 400;
-  font-size: 1.5rem;
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .icon {
+  position: absolute;
+  height: 25px;
+  margin-top: 4%;
+  top: 3px;
+  left: 10px;
+  z-index: 1;
+}
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .icon img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .category_img {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .category_name {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #707070;
   letter-spacing: -0.4px;
   margin: 15px 0 0 0;
   text-align: center;
-  color: #ffffff;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -132,59 +136,66 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.9rem;
-  height: 3.7rem;
+  line-height: 1.8rem;
+  height: 3.8rem;
 }
 #categoryOfRecommended #categoryOfRecommendedList .progressbar {
+  display: none;
   background: #7582C1 !important;
 }
 #categoryOfRecommended #categoryOfRecommendedList .swiper-pagination-progressbar-fill {
   background: #ffffff !important;
 }
 
-#categoryOfProduct, #categoryOfTag {
+#categoryOfTag,
+#categoryOfProduct {
   width: 100%;
   max-width: 450px;
-  padding: 0 29px;
+  background: #ffffff;
+  padding: 30px 17px 10px;
+  margin-bottom: 8px;
 }
-#categoryOfProduct #categoryOfProductList, #categoryOfProduct #categoryOfTagList, #categoryOfTag #categoryOfProductList, #categoryOfTag #categoryOfTagList {
+#categoryOfTag #categoryOfTagList,
+#categoryOfProduct #categoryOfTagList {
   width: 100%;
 }
-#categoryOfProduct #categoryOfProductList li[class^=parent_category], #categoryOfProduct #categoryOfTagList li[class^=parent_category], #categoryOfTag #categoryOfProductList li[class^=parent_category], #categoryOfTag #categoryOfTagList li[class^=parent_category] {
-  font-size: 2.1rem;
+#categoryOfTag #categoryOfTagList li[class^=parent_category],
+#categoryOfProduct #categoryOfTagList li[class^=parent_category] {
+  font-size: 2.28rem;
   font-weight: 600;
-  margin: 60px 0 18px;
+  margin-bottom: 14.5px;
 }
-#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item {
-  margin-top: 15px !important;
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item {
+  width: 131.76px;
 }
-#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a {
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
-#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb {
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb {
   position: relative;
   width: 100%;
 }
-#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb > a,
-#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .img_wrap, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a,
-#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb > a,
-#categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .img_wrap, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a,
-#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap {
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a,
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
-#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb > a > img,
-#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a > img,
-#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb > a > img,
-#categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a > img,
-#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img {
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a > img,
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a > img,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -193,40 +204,66 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .wish, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .wish, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .wish, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .wish {
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .wish,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .wish {
   position: absolute;
   width: auto;
   height: auto;
   cursor: pointer;
   bottom: 0px;
-  right: 0px;
+  left: 0px;
+  background: #fff;
 }
-#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .wish button, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .wish button, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .wish button, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .wish button {
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .wish button,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .wish button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: inherit;
-  height: inherit;
+  width: auto;
+  height: auto;
   border: 0;
-  background: none;
+  bottom: pink;
   cursor: pointer;
 }
-#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .wish button img, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .wish button img, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .thumb .wish button img, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .wish button img {
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .wish button img,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .wish button img {
   position: relative;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .icon img, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .icon img, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .icon img, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .icon img {
-  height: inherit;
+  width: 0px;
+  height: 0px;
+  padding: 0px;
   -o-object-fit: contain;
      object-fit: contain;
-  image-rendering: auto;
 }
-#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] .middle_item a .category_name, #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_name, #categoryOfTag #categoryOfProductList li[class^=middle_main_category] .middle_item a .category_name, #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_name {
-  font-weight: 400;
-  font-size: 1.5rem;
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .icon,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .icon {
+  position: absolute;
+  height: 25px;
+  margin-top: 4%;
+  top: 3px;
+  left: 10px;
+  z-index: 1;
+}
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .icon img,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .icon img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_img,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_img {
+  width: 100%;
+  height: 73.09px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_img .img_wrap img,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_img .img_wrap img {
+  height: auto;
+}
+#categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_name,
+#categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_name {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #707070;
   letter-spacing: -0.4px;
   margin: 15px 0 0 0;
   text-align: center;
@@ -238,28 +275,133 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.9rem;
-  height: 3.7rem;
+  line-height: 1.8rem;
+  height: 3.8rem;
 }
-
-/* 올라가기 */
-#moveTop {
+#categoryOfTag #categoryOfProductList,
+#categoryOfProduct #categoryOfProductList {
+  width: 100%;
+}
+#categoryOfTag #categoryOfProductList li[class^=parent_category],
+#categoryOfProduct #categoryOfProductList li[class^=parent_category] {
+  font-size: 2.28rem;
+  font-weight: 600;
+  margin-bottom: 14.5px;
+}
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 11px;
+       column-gap: 11px;
+}
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item:nth-child(4n),
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item:nth-child(4n) {
+  margin-right: 0;
+}
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: #022CFF;
-  background: none;
-  -webkit-animation: up-and-down-item 1.2s ease-in-out infinite;
-          animation: up-and-down-item 1.2s ease-in-out infinite;
-  margin-top: 58px;
 }
-#moveTop svg {
-  width: 34.88px;
-  height: 34.88px;
-  margin: 0 0 20.1px;
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb {
+  position: relative;
+  width: 100%;
+}
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb > a,
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb .img_wrap,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb > a,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb .img_wrap {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb > a > img,
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb .img_wrap > img,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb > a > img,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb .img_wrap > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb .wish,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb .wish {
+  position: absolute;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  bottom: 0px;
+  left: 0px;
+  background: #fff;
+}
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb .wish button,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb .wish button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  border: 0;
+  bottom: pink;
+  cursor: pointer;
+}
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb .wish button img,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb .wish button img {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .icon,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .icon {
+  position: absolute;
+  height: 25px;
+  margin-top: 4%;
+  top: 3px;
+  left: 10px;
+  z-index: 1;
+}
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .icon img,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .icon img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .category_img,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .category_img {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .category_name,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .category_name {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #707070;
+  letter-spacing: -0.4px;
+  margin: 15px 0 0 0;
+  text-align: center;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.8rem;
+  height: 3.8rem;
 }
 
 /* 페이지 프로그레스 */
@@ -268,28 +410,4 @@
   height: 3px;
   margin-top: 13px;
   z-index: 9;
-}
-
-@-webkit-keyframes up-and-down-item {
-  0% {
-    transform: translateY(-3%);
-  }
-  50% {
-    transform: translateY(4%);
-  }
-  100% {
-    transform: translateY(-3%);
-  }
-}
-
-@keyframes up-and-down-item {
-  0% {
-    transform: translateY(-3%);
-  }
-  50% {
-    transform: translateY(4%);
-  }
-  100% {
-    transform: translateY(-3%);
-  }
 }/*# sourceMappingURL=category.css.map */

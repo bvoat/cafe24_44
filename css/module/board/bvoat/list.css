@@ -161,7 +161,8 @@
   position: relative;
   width: 100%;
 }
-#productBoardList #productBoardListTable .thumb > a {
+#productBoardList #productBoardListTable .thumb > a,
+#productBoardList #productBoardListTable .thumb .img_wrap {
   display: block;
   position: relative;
   width: 100%;
@@ -169,7 +170,8 @@
   overflow: hidden;
   border-radius: 4px;
 }
-#productBoardList #productBoardListTable .thumb > a > img {
+#productBoardList #productBoardListTable .thumb > a > img,
+#productBoardList #productBoardListTable .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;

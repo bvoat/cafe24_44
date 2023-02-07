@@ -73,7 +73,8 @@
   position: relative;
   width: 100%;
 }
-.index_list .thumb > a {
+.index_list .thumb > a,
+.index_list .thumb .img_wrap {
   display: block;
   position: relative;
   width: 100%;
@@ -81,7 +82,8 @@
   overflow: hidden;
   border-radius: 4px;
 }
-.index_list .thumb > a > img {
+.index_list .thumb > a > img,
+.index_list .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;

@@ -42,7 +42,8 @@
   position: relative;
   width: 100%;
 }
-#productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb > a {
+#productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb > a,
+#productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb .img_wrap {
   display: block;
   position: relative;
   width: 100%;
@@ -50,7 +51,8 @@
   overflow: hidden;
   border-radius: 4px;
 }
-#productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb > a > img {
+#productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb > a > img,
+#productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb .img_wrap > img {
   position: absolute;
   top: 0;
   left: 0;
