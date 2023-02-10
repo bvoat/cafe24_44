@@ -56,7 +56,6 @@
 }
 #footer #footer_wrap .company_info_link {
   width: auto;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin-bottom: 24px;

@@ -64,7 +64,6 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 28px;
@@ -532,7 +531,6 @@
   color: #292929;
 }
 .detail_tab_wrap .tab_custom {
-  width: -webkit-fit-content !important;
   width: -moz-fit-content !important;
   width: fit-content !important;
   height: 20px !important;
@@ -819,7 +817,6 @@
   position: fixed;
   width: 100%;
   max-width: 450px;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   z-index: 100;
@@ -832,7 +829,6 @@
   justify-content: center;
   align-items: center;
   min-height: 64px;
-  max-height: -webkit-max-content;
   max-height: -moz-max-content;
   max-height: max-content;
   padding-right: 11px;

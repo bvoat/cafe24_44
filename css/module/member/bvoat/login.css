@@ -87,12 +87,6 @@
   color: #707070;
   letter-spacing: -0.5px;
 }
-#memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .input_form .member_login_list input:-ms-input-placeholder {
-  font-size: 1.3rem;
-  font-weight: 300;
-  color: #707070;
-  letter-spacing: -0.5px;
-}
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .input_form .member_login_list input::placeholder {
   font-size: 1.3rem;
   font-weight: 300;
@@ -172,8 +166,7 @@
   text-align: center;
   padding: 9px 0 0 0;
   cursor: default;
-  -webkit-animation: up-and-down-item 1.2s ease-in-out infinite;
-          animation: up-and-down-item 1.2s ease-in-out infinite;
+  animation: up-and-down-item 1.2s ease-in-out infinite;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_util .login_util_tooltip::after {
   position: fixed;
@@ -348,12 +341,6 @@
   color: #707070;
   letter-spacing: -0.5px;
 }
-#noMemberLogin #noMemberLoginField fieldset > ul .nomem_login_input_wrap > input:-ms-input-placeholder {
-  font-size: 1.3rem;
-  font-weight: 300;
-  color: #707070;
-  letter-spacing: -0.5px;
-}
 #noMemberLogin #noMemberLoginField fieldset > ul .nomem_login_input_wrap > input::placeholder {
   font-size: 1.3rem;
   font-weight: 300;
@@ -374,18 +361,6 @@
   font-weight: 400;
   font-size: 1.3rem;
   cursor: pointer;
-}
-
-@-webkit-keyframes up-and-down-item {
-  0% {
-    transform: translateY(-3%);
-  }
-  50% {
-    transform: translateY(4%);
-  }
-  100% {
-    transform: translateY(-3%);
-  }
 }
 
 @keyframes up-and-down-item {

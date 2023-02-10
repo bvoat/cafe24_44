@@ -9,9 +9,16 @@
     background: $bvt-bg-skyblue;
 
     h2.category_title {
-        font-size: 2.45rem;
+        font-size: 1.9rem;
         font-weight: 400;
-        margin-bottom: 20px;
+        margin-bottom: 14px;
+    }
+
+
+    li[class^='parent_category'] {
+        font-size: 1.7rem;
+        font-weight: 600;
+        margin-bottom: 14.5px;
     }
 }
 
@@ -25,12 +32,6 @@
 
     #categoryOfRecommendedList {
         width: 100%;
-
-        li[class^='parent_category'] {
-            font-size: 2.28rem;
-            font-weight: 600;
-            margin-bottom: 14.5px;
-        }
 
         li[class^='middle_main_category'] {
             width: 100%;
@@ -101,12 +102,6 @@
     #categoryOfTagList {
         width: 100%;
 
-        li[class^='parent_category'] {
-            font-size: 2.28rem;
-            font-weight: 600;
-            margin-bottom: 14.5px;
-        }
-
         li[class^='middle_main_category'] {
 
             //개별 아이템
@@ -152,11 +147,6 @@
     #categoryOfProductList {
         width: 100%;
 
-        li[class^='parent_category'] {
-            font-size: 2.28rem;
-            font-weight: 600;
-            margin-bottom: 14.5px;
-        }
 
         li[class^='middle_main_category'] {
             ul.no-swiper {

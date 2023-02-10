@@ -90,12 +90,6 @@
   color: #C4C4C4;
   letter-spacing: -0.3px;
 }
-#memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .member_join_input_wrap input:-ms-input-placeholder {
-  font-size: 1.2rem;
-  font-weight: lighter;
-  color: #C4C4C4;
-  letter-spacing: -0.3px;
-}
 #memberJoin #memberJoinField fieldset #joinForm .member_join_section .member_join_list .member_join_input_wrap input::placeholder {
   font-size: 1.2rem;
   font-weight: lighter;

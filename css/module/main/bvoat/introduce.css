@@ -205,25 +205,12 @@
   font-weight: 700;
   color: #ffffff;
   background: none;
-  -webkit-animation: up-and-down-item 1.2s ease-in-out infinite;
-          animation: up-and-down-item 1.2s ease-in-out infinite;
+  animation: up-and-down-item 1.2s ease-in-out infinite;
 }
 #bvoatIntroduce #bvoatContact #moveTop svg {
   width: 34.88px;
   height: 34.88px;
   margin: 51px 0 20.1px;
-}
-
-@-webkit-keyframes up-and-down-item {
-  0% {
-    transform: translateY(-3%);
-  }
-  50% {
-    transform: translateY(4%);
-  }
-  100% {
-    transform: translateY(-3%);
-  }
 }
 
 @keyframes up-and-down-item {

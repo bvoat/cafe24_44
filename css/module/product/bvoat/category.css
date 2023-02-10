@@ -14,9 +14,14 @@
   background: #F5F6FC;
 }
 #category h2.category_title {
-  font-size: 2.45rem;
+  font-size: 1.9rem;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
+}
+#category li[class^=parent_category] {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 14.5px;
 }
 
 #categoryOfRecommended {
@@ -28,11 +33,6 @@
 }
 #categoryOfRecommended #categoryOfRecommendedList {
   width: 100%;
-}
-#categoryOfRecommended #categoryOfRecommendedList li[class^=parent_category] {
-  font-size: 2.28rem;
-  font-weight: 600;
-  margin-bottom: 14.5px;
 }
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] {
   width: 100%;
@@ -159,12 +159,6 @@
 #categoryOfProduct #categoryOfTagList {
   width: 100%;
 }
-#categoryOfTag #categoryOfTagList li[class^=parent_category],
-#categoryOfProduct #categoryOfTagList li[class^=parent_category] {
-  font-size: 2.28rem;
-  font-weight: 600;
-  margin-bottom: 14.5px;
-}
 #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item,
 #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item {
   width: 131.76px;
@@ -281,12 +275,6 @@
 #categoryOfTag #categoryOfProductList,
 #categoryOfProduct #categoryOfProductList {
   width: 100%;
-}
-#categoryOfTag #categoryOfProductList li[class^=parent_category],
-#categoryOfProduct #categoryOfProductList li[class^=parent_category] {
-  font-size: 2.28rem;
-  font-weight: 600;
-  margin-bottom: 14.5px;
 }
 #categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper,
 #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper {

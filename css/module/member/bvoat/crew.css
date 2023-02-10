@@ -146,8 +146,7 @@
   font-size: 1.6rem;
   font-weight: 800;
   color: #ffffff;
-  -webkit-animation: up-and-down-item 1.2s ease-in-out infinite;
-          animation: up-and-down-item 1.2s ease-in-out infinite;
+  animation: up-and-down-item 1.2s ease-in-out infinite;
   background: none;
   margin-top: 56px;
 }
@@ -330,11 +329,6 @@
   font-weight: 300;
   color: #292929;
 }
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share .crew_method_form_wrap > form fieldset .share_input_wrap input[type=url]:-ms-input-placeholder {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #292929;
-}
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share .crew_method_form_wrap > form fieldset .share_input_wrap input[type=url]::placeholder {
   font-size: 1.5rem;
   font-weight: 300;
@@ -420,8 +414,7 @@
   font-weight: 700;
   color: #022CFF;
   background: none;
-  -webkit-animation: up-and-down-item 1.2s ease-in-out infinite;
-          animation: up-and-down-item 1.2s ease-in-out infinite;
+  animation: up-and-down-item 1.2s ease-in-out infinite;
 }
 #memberCrew #memberCrewContent #crewText #moveTop svg {
   width: 34.88px;
@@ -449,18 +442,6 @@
 }
 #memberCrew #memberCrewContent #crewRole > ul > li:nth-child(1) {
   margin-top: 30px;
-}
-
-@-webkit-keyframes up-and-down-item {
-  0% {
-    transform: translateY(-3%);
-  }
-  50% {
-    transform: translateY(4%);
-  }
-  100% {
-    transform: translateY(-3%);
-  }
 }
 
 @keyframes up-and-down-item {

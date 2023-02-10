@@ -46,7 +46,6 @@
   font-weight: 700;
 }
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .nav_icon path {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   -o-object-fit: contain;

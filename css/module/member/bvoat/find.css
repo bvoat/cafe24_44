@@ -67,12 +67,6 @@
   color: #C4C4C4;
   letter-spacing: -0.3px;
 }
-.find_article .find_form fieldset > ul .find_input_wrap input:-ms-input-placeholder {
-  font-size: 1.2rem;
-  font-weight: lighter;
-  color: #C4C4C4;
-  letter-spacing: -0.3px;
-}
 .find_article .find_form fieldset > ul .find_input_wrap input::placeholder {
   font-size: 1.2rem;
   font-weight: lighter;

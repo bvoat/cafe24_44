@@ -30,7 +30,6 @@ body #bvtContainer #bvtHeader {
   max-width: 450px;
   min-width: 200px;
   width: 100%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background: rgba(255, 255, 255, 0.8);
@@ -68,9 +67,6 @@ body #bvtContainer #bvtBottom {
     display: none !important;
   }
   .small_mobile_input::-moz-placeholder {
-    font-size: 8px !important;
-  }
-  .small_mobile_input:-ms-input-placeholder {
     font-size: 8px !important;
   }
   .small_mobile_input::placeholder {
