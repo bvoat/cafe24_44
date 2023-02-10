@@ -9,7 +9,6 @@
 
     // 상품 개별
     .listrecommend_list {
-        width: 50%;
         padding-bottom: 27.5px;
 
         .recommend_product {
@@ -24,6 +23,8 @@
 
 //상품 설명 (fontsize 오류 컨트롤)
 .listrecommend_list {
+
+
     .desc {
         padding: 7px 0 0 0;
 
@@ -40,7 +41,7 @@
         .product_name a {
             color: $bvt-black !important;
             font-size: 13px !important;
-            font-weight: bold;
+            font-weight: 400;
             word-wrap: break-word;
             word-break: keep-all;
             @include ellipsis(2, 1.5rem);
@@ -58,6 +59,9 @@
         }
 
     }
+
+    @include product-desc(9px, 0rem, 1.1rem, 1.3rem);
+
 }
 
 

@@ -39,32 +39,29 @@
 .desc {
     padding: 7px 0 0 0;
 
-    .brand {
-        font-size: 1rem;
-        color: $bvt-darkgray;
-        margin-bottom: 3px;
-    }
 
-    .summary {
-        display: block;
-        font-size: 1.15rem;
-        color: $bvt-darkgray;
-        @include only-ellipsis(1, 1.3rem);
-        margin-bottom: 7px;
-    }
+    // .summary {
+    //     display: block;
+    //     font-size: 1.15rem;
+    //     color: $bvt-darkgray;
+    //     @include only-ellipsis(1, 1.3rem);
+    //     margin-bottom: 7px;
+    // }
 
-    .product_name,
-    .product_name span {
-        color: $bvt-black;
-        font-size: 1.3rem;
-        font-weight: bold;
-        word-wrap: break-word;
-        word-break: keep-all;
-        @include ellipsis(2, 1.5rem);
-        margin-bottom: 18px;
-    }
+    // .product_name,
+    // .product_name span {
+    //     color: $bvt-black;
+    //     font-size: 1.3rem;
+    //     font-weight: 400;
+    //     word-wrap: break-word;
+    //     word-break: keep-all;
+    //     @include ellipsis(2, 1.5rem);
+    //     margin-bottom: 18px;
+    // }
 
 }
+
+@include product-desc(9px, 0rem, 1.1rem, 1.3rem);
 
 //하단 아이콘 신버전
 .icon {
