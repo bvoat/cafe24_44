@@ -35,7 +35,7 @@
         <div class="funding_list listmain_26" module="product_listmain_26">
             <!--펀딩 종료진열-->
             <!--
-                $count = 3
+                $count = 30
                 $moreview = yes
                 $cache = yes
             -->
@@ -57,12 +57,12 @@
 
 
 <script>
-    window.addEventListener("load", ()=>{
+    window.addEventListener("load", () => {
         // listmain18 내 ul로 상품 리스트가 없으면 배너 표시
-        if(document.querySelector(".xans-product-listmain-18>ul") == null){
+        if (document.querySelector(".xans-product-listmain-18>ul") == null) {
             console.log("none");
             document.querySelector("#fundingListmain").insertAdjacentHTML("beforeend", `<div class="fundingendbanner">⏳<br><em>현재 진행 중인 펀딩·공구가 없어요!</em></div>`)
-        }else{
+        } else {
             //있으면 상품만 표시
             console.log("doing");
         }

@@ -272,6 +272,10 @@
   line-height: 1.72rem;
   height: 3.64rem;
 }
+#categoryOfTag #categoryOfTagList .progressbar,
+#categoryOfProduct #categoryOfTagList .progressbar {
+  margin: 0;
+}
 #categoryOfTag #categoryOfProductList,
 #categoryOfProduct #categoryOfProductList {
   width: 100%;
