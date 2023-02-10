@@ -12,129 +12,130 @@
             <legend class="displaynone">회원가입</legend>
             <!-- xans-member-join -->
             <div module="member_join">
-                        <!--
+                <!--
                         $returnUrl = /member/join_result.html
                         $checkIdUrl = /member/check_id.html
                         $personalName = 이름
                         -->
 
                 <ul class="member_join_section">
-                        <!-- 아이디 시작 -->
-                        <li class="member_join_list">
-                            <label class="input_label" for="member_id">아이디</label>
-                            <p class="member_join_input_wrap">
-                                {$form.member_id}
-                                <button type="button" class="btnBasic input_btn id_overlap_btn" >중복 확인</button>
-                            <p id="idMsg" class="val_check_msg"></p>
-                            </p>
-                        </li>
-                        <!-- 아이디 끝 -->
-                        <!-- 비밀번호 시작 -->
-                        <li class="member_join_list">
-                            <label class="input_label" for="passwd">비밀번호</label>
-                            <p class="member_join_input_wrap">
-                                <input id="passwd" class="input_box small_mobile_input" name="passwd" title="비밀번호"
-                                    fw-filter="isFill&amp;isMin[4]&amp;isMax[16]" fw-label="비밀번호" fw-msg=""
-                                    autocomplete="off" maxlength="16" 0="disabled" value=""
-                                    placeholder="{$passwd_type_desc}" type="password" required>
-                            </p>
-                            
-                            <p class="member_join_input_wrap">
-                                <label class="input_label displaynone" for="user_passwd_confirm">비밀번호 확인</label>
-                                <input id="user_passwd_confirm" class="input_box small_mobile_input" name="user_passwd_confirm"
-                                    title="비밀번호 확인" fw-filter="isFill&amp;isMatch[passwd]" fw-label="비밀번호 확인"
-                                    fw-msg="비밀번호를 다시 한 번 확인해주세요." autocomplete="off" maxlength="16" 0="disabled"
-                                    value="" placeholder="비밀번호 확인" type="password" required>
-                            <p id="pwConfirmMsg" class="val_check_msg"></p>
-                            </p>
-                        </li>
-                        <!-- 비밀번호 확인 종료 -->
-                        <!-- 이름 시작 -->
-                        <li class="member_join_list">
-                            <label class="input_label" for="name">이름</label>
-                            <p class="member_join_input_wrap">
-                                <input type="text" name="name" id="name" class="input_box small_mobile_input" title="이름"
-                                    placeholder="이름 입력" maxlength="20" autocapitalize="off" required>
-                            </p>
-                        </li>
-                        <!-- 이름 종료 -->
-                        <!-- 휴대전화 시작 -->
-                        <li class="member_join_list">
-                            <label class="input_label" for="mobile2">휴대전화</label>
-                            <label class="input_label displaynone" for="mobile1">휴대전화 앞자리 선택</label>
-                            <label class="input_label displaynone" for="mobile3">휴대전화 마지막 4자리</label>
-                            <p class="member_join_input_wrap">
-                                <select id="mobile1" class="mobile_input_box" name="mobile[]" fw-filter="isNumber"
-                                    fw-label="휴대전화" fw-alone="N" fw-msg="" required>
-                                    <option value="010" selected>010</option>
-                                    <option value="011">011</option>
-                                    <option value="016">016</option>
-                                    <option value="017">017</option>
-                                    <option value="018">018</option>
-                                    <option value="019">019</option>
-                                </select>
-                                <input id="mobile2" class="input_box mobile_input_box" name="mobile[]"
-                                    title="휴대전화 가운데 4자리" maxlength="4" fw-filter="isNumber" pattern="[0-9]+"
-                                    fw-label="휴대전화" fw-alone="N" fw-msg="" value="" type="tel" required>
-                                <input id="mobile3" class="input_box mobile_input_box" name="mobile[]"
-                                    title="휴대전화 뒷 4자리" maxlength="4" fw-filter="isNumber" pattern="[0-9]+"
-                                    fw-label="휴대전화" fw-alone="N" fw-msg="" value="" type="tel" required>
-                                <!-- 휴대전화 인증 시작 -->
+                    <!-- 아이디 시작 -->
+                    <li class="member_join_list">
+                        <label class="input_label" for="member_id">아이디</label>
+                        <p class="member_join_input_wrap">
+                            {$form.member_id}
+                            <button type="button" class="btnBasic input_btn id_overlap_btn">중복 확인</button>
+                        <p id="idMsg" class="val_check_msg"></p>
+                        </p>
+                    </li>
+                    <!-- 아이디 끝 -->
+                    <!-- 비밀번호 시작 -->
+                    <li class="member_join_list">
+                        <label class="input_label" for="passwd">비밀번호</label>
+                        <p class="member_join_input_wrap">
+                            <input id="passwd" class="input_box small_mobile_input" name="passwd" title="비밀번호"
+                                fw-filter="isFill&amp;isMin[4]&amp;isMax[16]" fw-label="비밀번호" fw-msg=""
+                                autocomplete="off" maxlength="16" 0="disabled" value=""
+                                placeholder="{$passwd_type_desc}" type="password" required>
+                        </p>
 
-                                <button type="button" id="{$btn_action_verify_mobile}"
-                                    class="input_btn {$display_verify_mobile|display}"
-                                    onclick="{$action_verify_mobile}">인증 받기</button>
-                            </p>
-                            <p class="val_check_msg gBlank5 {$bDisplayMobileVerifyInfoDefault|display}"
-                                id="{$result_send_verify_mobile_fail}"></p>
-                            <div class="member_join_input_wrap {$display_verify_mobile_confirm|display}"
-                                id="{$confirm_verify_mobile}" id="{$confirm_verify_mobile}">
-                                <div class=" member_join_input_wrap verify">
-                                    <input id="verify_sms_number" name="verify_sms_number" fw-filter="isMax[15]"
-                                        fw-label="verify_sms_number" fw-msg="" class="inputTypeText small_mobile_input" maxlength="15"
-                                        value="" type="text" placeholder="카카오톡 메시지를 확인해주세요">
-                                    <span class="time" id="expiryTime"></span>
-                                </div>
-                                <button type="button" class="input_btn btnNormal" id="{$btn_verify_mobile_confirm}"
-                                    onclick="{$action_verify_mobile_confirm}">확인</button>
+                        <p class="member_join_input_wrap">
+                            <label class="input_label displaynone" for="user_passwd_confirm">비밀번호 확인</label>
+                            <input id="user_passwd_confirm" class="input_box small_mobile_input"
+                                name="user_passwd_confirm" title="비밀번호 확인" fw-filter="isFill&amp;isMatch[passwd]"
+                                fw-label="비밀번호 확인" fw-msg="비밀번호를 다시 한 번 확인해주세요." autocomplete="off" maxlength="16"
+                                0="disabled" value="" placeholder="비밀번호 확인" type="password" required>
+                        <p id="pwConfirmMsg" class="val_check_msg"></p>
+                        </p>
+                    </li>
+                    <!-- 비밀번호 확인 종료 -->
+                    <!-- 이름 시작 -->
+                    <li class="member_join_list">
+                        <label class="input_label" for="name">이름</label>
+                        <p class="member_join_input_wrap">
+                            <input type="text" name="name" id="name" class="input_box small_mobile_input" title="이름"
+                                placeholder="이름 입력" maxlength="20" autocapitalize="off" required>
+                        </p>
+                    </li>
+                    <!-- 이름 종료 -->
+                    <!-- 휴대전화 시작 -->
+                    <li class="member_join_list">
+                        <label class="input_label" for="mobile2">휴대전화</label>
+                        <label class="input_label displaynone" for="mobile1">휴대전화 앞자리 선택</label>
+                        <label class="input_label displaynone" for="mobile3">휴대전화 마지막 4자리</label>
+                        <p class="member_join_input_wrap">
+                            <select id="mobile1" class="mobile_input_box" name="mobile[]" fw-filter="isNumber"
+                                fw-label="휴대전화" fw-alone="N" fw-msg="" required>
+                                <option value="010" selected>010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                                <option value="019">019</option>
+                            </select>
+                            <input id="mobile2" class="input_box mobile_input_box" name="mobile[]" title="휴대전화 가운데 4자리"
+                                maxlength="4" fw-filter="isNumber" pattern="[0-9]+" fw-label="휴대전화" fw-alone="N"
+                                fw-msg="" value="" type="tel" required>
+                            <input id="mobile3" class="input_box mobile_input_box" name="mobile[]" title="휴대전화 뒷 4자리"
+                                maxlength="4" fw-filter="isNumber" pattern="[0-9]+" fw-label="휴대전화" fw-alone="N"
+                                fw-msg="" value="" type="tel" required>
+                            <!-- 휴대전화 인증 시작 -->
+
+                            <button type="button" id="{$btn_action_verify_mobile}"
+                                class="input_btn {$display_verify_mobile|display}" onclick="{$action_verify_mobile}">인증
+                                받기</button>
+                        </p>
+                        <p class="val_check_msg gBlank5 {$bDisplayMobileVerifyInfoDefault|display}"
+                            id="{$result_send_verify_mobile_fail}"></p>
+                        <div class="member_join_input_wrap {$display_verify_mobile_confirm|display}"
+                            id="{$confirm_verify_mobile}" id="{$confirm_verify_mobile}">
+                            <div class=" member_join_input_wrap verify">
+                                <input id="verify_sms_number" name="verify_sms_number" fw-filter="isMax[15]"
+                                    fw-label="verify_sms_number" fw-msg="" class="inputTypeText small_mobile_input"
+                                    maxlength="15" value="" type="text" placeholder="카카오톡 메시지를 확인해주세요">
+                                <span class="time" id="expiryTime"></span>
                             </div>
-                            <!-- 휴대전화 인증 종료 -->
+                            <button type="button" class="input_btn btnNormal" id="{$btn_verify_mobile_confirm}"
+                                onclick="{$action_verify_mobile_confirm}">확인</button>
+                        </div>
+                        <!-- 휴대전화 인증 종료 -->
 
-                        </li>
-                        <!-- 휴대전화 종료 -->
-                        <!-- 이메일 시작 -->
-                        <li class="member_join_list">
-                            <label class="input_label" for="email1">이메일</label>
-                            <p class="member_join_input_wrap">
-                                <input id="email1" class="input_box" name="email" title="이메일"
-                                    fw-filter="isFill&amp;isEmail" fw-label="이메일" fw-alone="N" fw-msg="" value=""
-                                    type="email" autocomplete="on" autocapitalize="off" required>
-                                
-                            <p id="emailMsg" class="val_check_msg"></p>
-                            </p>
-                        </li>
-                        <!-- 이메일 종료 -->
-                        <!-- 별명 시작 -->
-                        <li class="member_join_list">
-                            <label class="input_label" for="nick_name">닉네임</label>
-                            <p class="member_join_input_wrap">
-                                <input id="nick_name" class="input_box small_mobile_input" name="nick_name" title="닉네임" fw-filter="isFill"
-                                    fw-label="별명" fw-msg="" class="inputTypeText" placeholder="한글 2~10자 / 영문 대소문자 4~20자 / 숫자 혼용가능" maxlength="20" value=""
-                                    type="text" autocapitalize="off" required>
-                            </p>
-                        </li>
-                        <!-- 별명 종료 -->
-                        <!-- 추천인아이디 시작 -->
-                        <li class="member_join_list">
-                            <label class="input_label" for="reco_id">추천인 아이디</label>
-                            <p class="input_info_txt">없을 시 공백, 입력하시면 바로 크루 등급이 됩니다.<br>
+                    </li>
+                    <!-- 휴대전화 종료 -->
+                    <!-- 이메일 시작 -->
+                    <li class="member_join_list">
+                        <label class="input_label" for="email1">이메일</label>
+                        <p class="member_join_input_wrap">
+                            <input id="email1" class="input_box" name="email" title="이메일" fw-filter="isFill&amp;isEmail"
+                                fw-label="이메일" fw-alone="N" fw-msg="" value="" type="email" autocomplete="on"
+                                autocapitalize="off" required>
+
+                        <p id="emailMsg" class="val_check_msg"></p>
+                        </p>
+                    </li>
+                    <!-- 이메일 종료 -->
+                    <!-- 별명 시작 -->
+                    <li class="member_join_list">
+                        <label class="input_label" for="nick_name">닉네임</label>
+                        <p class="member_join_input_wrap">
+                            <input id="nick_name" class="input_box small_mobile_input" name="nick_name" title="닉네임"
+                                fw-filter="isFill" fw-label="별명" fw-msg="" class="inputTypeText"
+                                placeholder="한글 2~10자 / 영문 대소문자 4~20자 / 숫자 혼용가능" maxlength="20" value="" type="text"
+                                autocapitalize="off" required>
+                        </p>
+                    </li>
+                    <!-- 별명 종료 -->
+                    <!-- 추천인아이디 시작 -->
+                    <li class="member_join_list">
+                        <label class="input_label" for="reco_id">추천인 아이디</label>
+                        <p class="input_info_txt">없을 시 공백, 입력하시면 바로 크루 등급이 됩니다.<br>
                             추천인 아이디는 가입 후 <em>30일</em> 동안 <em>1회</em>에 한하여 입력하실 수 있습니다.
-                            </p>
-                            <p class="member_join_input_wrap">
-                                {$form.reco_id}
-                            </p>
-                        </li>
-                        <!-- 추천인아이디 종료 -->
+                        </p>
+                        <p class="member_join_input_wrap">
+                            {$form.reco_id}
+                        </p>
+                    </li>
+                    <!-- 추천인아이디 종료 -->
 
 
                 </ul>
@@ -216,6 +217,16 @@
     <p>가입 완료!</p>
 </button>
 <script>
+
+    //추천인 아이디
+    const reco_id_param = getUrlParams("recommend") ? getUrlParams("recommend") : null;
+    console.log('reco_id_param: ', reco_id_param);
+    const reco_id_input = document.querySelector("#reco_id")
+    console.log('reco_id_input: ', reco_id_input);
+    if (reco_id_param != null) {
+        reco_id_input.value = reco_id_param;
+    }
+
     //동의 내 detail node->arr
     const agreeAreaNode = document.querySelectorAll(".agreeArea_control");
     const agreeAreaControl = [...agreeAreaNode];
@@ -254,34 +265,34 @@
     const mobile_left = document.querySelector("#mobile2");
     const mobile_right = document.querySelector("#mobile3");
 
-    mobile_left.addEventListener("keyup", (e)=>{
+    mobile_left.addEventListener("keyup", (e) => {
         e.currentTarget.value.length === 4 ? mobile_right.focus() : null;
     })
 
     /* 아이디 중복 확인 팝업 제한 */
 
-        /* 모바일 기기 체크 */
-        const mobileCheck = () => {
-            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        };
+    /* 모바일 기기 체크 */
+    const mobileCheck = () => {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    };
 
     const id_overlap_btn = document.querySelector(".id_overlap_btn");
     let mobile_bool = mobileCheck();
     console.log('mobile_bool: ', mobile_bool);
 
-    id_overlap_btn.addEventListener("click", ()=>{
+    id_overlap_btn.addEventListener("click", () => {
         const id_value = document.querySelector("#member_id").value;
-        if(id_value == "" || id_value == null){
+        if (id_value == "" || id_value == null) {
             alert("아이디를 입력해주세요")
             return false;
         } else {
-            if(mobile_bool){
+            if (mobile_bool) {
                 checkId('/member/check_id.html');
                 return false;
             } else {
                 return false;
             }
         }
-        
+
     })
 </script>
