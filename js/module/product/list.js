@@ -3,7 +3,7 @@
 
 /* 추천 카테고리 슬라이드 */
 var recommendListSwiper = new Swiper("#productListrecommendList", {
-  slidesPerView: "auto",
+  slidesPerView: "2.233", //2개 + a 보이기
   spaceBetween: 14,
 });
 /* 추천 카테고리 슬라이드 */
