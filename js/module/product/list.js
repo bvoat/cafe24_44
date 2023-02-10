@@ -35,7 +35,6 @@ fetch(`/exec/front/Product/SubCategory`, {
     }
 
     sub_category
-    .reverse()
     .forEach(element => {
       targetUl.insertAdjacentHTML(`afterbegin`, `
       <li class="swiper-slide subcategory_list ${element.cate_no == category_param ? 'active' : 'null'} category_${element.name}" data-category="category_${element.name}">
