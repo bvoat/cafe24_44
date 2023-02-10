@@ -30,37 +30,28 @@
 
         .summary {
             display: block;
-            font-size: 11.5px !important;
-            color: $bvt-darkgray;
-            @include only-ellipsis(1, 1.3rem);
-            margin-bottom: 12px;
+            font-size: 12px !important;
         }
 
         .product_name,
         .product_name span,
         .product_name a {
-            color: $bvt-black !important;
-            font-size: 13px !important;
-            font-weight: 400;
-            word-wrap: break-word;
-            word-break: keep-all;
-            @include ellipsis(2, 1.5rem);
-            margin-bottom: 18px;
+            font-size: 14px !important;
         }
 
         >li {
             &:nth-child(1) {
-                font-size: 11.5px !important;
+                font-size: 12px !important;
             }
 
             &:nth-child(2) {
-                font-size: 11.5px !important;
+                font-size: 12px !important;
             }
         }
 
     }
 
-    @include product-desc(9px, 0rem, 1.1rem, 1.3rem);
+    @include product-desc(9px, 0rem, 1.2rem, 1.4rem);
 
 }
 

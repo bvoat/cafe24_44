@@ -37,31 +37,20 @@
 
 //상품 설명
 .desc {
-    padding: 7px 0 0 0;
+    padding: 9px 0 0 0;
 
+    .summary {
+        font-size: 1.2rem;
+    }
 
-    // .summary {
-    //     display: block;
-    //     font-size: 1.15rem;
-    //     color: $bvt-darkgray;
-    //     @include only-ellipsis(1, 1.3rem);
-    //     margin-bottom: 7px;
-    // }
-
-    // .product_name,
-    // .product_name span {
-    //     color: $bvt-black;
-    //     font-size: 1.3rem;
-    //     font-weight: 400;
-    //     word-wrap: break-word;
-    //     word-break: keep-all;
-    //     @include ellipsis(2, 1.5rem);
-    //     margin-bottom: 18px;
-    // }
+    .product_name,
+    .product_name span {
+        font-size: 1.4rem;
+    }
 
 }
 
-@include product-desc(9px, 0rem, 1.1rem, 1.3rem);
+@include product-desc(9px, 0rem, 1.2rem, 1.4rem);
 
 //하단 아이콘 신버전
 .icon {

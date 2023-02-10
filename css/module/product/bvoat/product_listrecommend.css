@@ -86,44 +86,18 @@
 }
 .listrecommend_list .desc .summary {
   display: block;
-  font-size: 11.5px !important;
-  color: #707070;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
-  line-height: 1.6rem;
-  margin-bottom: 12px;
+  font-size: 12px !important;
 }
 .listrecommend_list .desc .product_name,
 .listrecommend_list .desc .product_name span,
 .listrecommend_list .desc .product_name a {
-  color: #292929 !important;
-  font-size: 13px !important;
-  font-weight: 400;
-  word-wrap: break-word;
-  word-break: keep-all;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
-  line-height: 1.8rem;
-  height: 3.8rem;
-  margin-bottom: 18px;
+  font-size: 14px !important;
 }
 .listrecommend_list .desc > li:nth-child(1) {
-  font-size: 11.5px !important;
+  font-size: 12px !important;
 }
 .listrecommend_list .desc > li:nth-child(2) {
-  font-size: 11.5px !important;
+  font-size: 12px !important;
 }
 .listrecommend_list .desc {
   padding: 9px 0 0 0;
@@ -135,7 +109,7 @@
 }
 .listrecommend_list .desc .summary {
   display: block;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #707070;
   display: block;
   overflow: hidden;
@@ -145,13 +119,13 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.4rem;
+  line-height: 1.5rem;
   margin-bottom: 7px;
 }
 .listrecommend_list .desc .product_name,
 .listrecommend_list .desc .product_name span {
   color: #292929 !important;
-  font-size: 1.3rem !important;
+  font-size: 1.4rem !important;
   font-weight: 500;
   word-wrap: break-word;
   word-break: keep-all;
@@ -163,8 +137,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.6rem;
-  height: 3.4rem;
+  line-height: 1.7rem;
+  height: 3.6rem;
   margin-bottom: 18px;
 }
 

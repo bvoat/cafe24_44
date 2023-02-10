@@ -95,7 +95,14 @@
 }
 
 .desc {
-  padding: 7px 0 0 0;
+  padding: 9px 0 0 0;
+}
+.desc .summary {
+  font-size: 1.2rem;
+}
+.desc .product_name,
+.desc .product_name span {
+  font-size: 1.4rem;
 }
 
 .desc {
@@ -108,7 +115,7 @@
 }
 .desc .summary {
   display: block;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #707070;
   display: block;
   overflow: hidden;
@@ -118,13 +125,13 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.4rem;
+  line-height: 1.5rem;
   margin-bottom: 7px;
 }
 .desc .product_name,
 .desc .product_name span {
   color: #292929 !important;
-  font-size: 1.3rem !important;
+  font-size: 1.4rem !important;
   font-weight: 500;
   word-wrap: break-word;
   word-break: keep-all;
@@ -136,8 +143,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.6rem;
-  height: 3.4rem;
+  line-height: 1.7rem;
+  height: 3.6rem;
   margin-bottom: 18px;
 }
 
