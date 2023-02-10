@@ -14,11 +14,17 @@
         margin-bottom: 14px;
     }
 
-
     li[class^='parent_category'] {
         font-size: 1.7rem;
         font-weight: 600;
         margin-bottom: 14.5px;
+    }
+
+    .category_summary {
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: $bvt-darkgray;
+        margin-left: 4px;
     }
 }
 

@@ -23,6 +23,12 @@
   font-weight: 600;
   margin-bottom: 14.5px;
 }
+#category .category_summary {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #707070;
+  margin-left: 4px;
+}
 
 #categoryOfRecommended {
   width: 100%;

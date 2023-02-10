@@ -1,4 +1,13 @@
-
+const categorySummary = {
+  "🌱 비건": "동물을 성분과 소재로 사용하지 않았어요",
+  "🌳 친환경": "환경에 주는 영향을 최소화 했어요",
+  "🌏 사회가치": "구매가 사회에 선한 영향력을 줘요",
+  "🌿 패션": "비건 가죽 · 업사이클링 · 리사이클",
+  "☘️ 패션 잡화": "비건 가죽 · 업사이클 · 리사이클 · 기부 후원",
+  "🐰 뷰티": "순식물성 비건 뷰티 · 천연, 유기농 · 크루얼티프리",
+  "🍊 푸드": "순식물성 비건 푸드 · 대체 식품 · 유기농 재배",
+  "🏡 홈 · 리빙" : "제로/레스웨이스트 · 자연유래 · 생분해/다회용"
+};
 
 let methods = {
   categoryObj: {},
@@ -15,6 +24,7 @@ let methods = {
     })
       .then((response) => response.json())
       .then((data) => {
+        console.log('data: ', data);
         if (data === null || data === "undefined") return false;
         for (let idx = 0; idx < data.length; idx++) {
           let parentCategoryNo = data[idx].parent_cate_no;
@@ -50,7 +60,7 @@ let methods = {
               "beforeend",
               `<li class="parent_category_${
                 recommended.cate_no
-              }" data-cateno="${recommended.cate_no}"><span>${recommended.name}</span><a href="/${
+              }" data-cateno="${recommended.cate_no}"><span>${recommended.name}</span><span class="category_summary">${categorySummary[recommended.name] != undefined ? categorySummary[recommended.name] : ''} </span><a href="/${
                 recommended.design_page_url + recommended.param
               }#${recommended.name}" title="${recommended.name}"></a></li>`
             );
@@ -64,7 +74,7 @@ let methods = {
               "beforeend",
               `<li class="parent_category_${
                 productcategory.cate_no
-              }" data-cateno="${productcategory.cate_no}">${productcategory.name}</li>`
+              }" data-cateno="${productcategory.cate_no}">${productcategory.name} <span class="category_summary">${categorySummary[productcategory.name] != undefined ? categorySummary[productcategory.name] : ''} </span> </li> `
             );
         });
 
@@ -76,7 +86,7 @@ let methods = {
               "beforeend",
               `<li class="parent_category_${
                 tagcategory.cate_no
-              }" data-cateno="${tagcategory.cate_no}"><span>${tagcategory.name}</span><a href="/${
+              }" data-cateno="${tagcategory.cate_no}"><span>${tagcategory.name}</span> <span class="category_summary">${categorySummary[tagcategory.name] != undefined ? categorySummary[tagcategory.name] : ''} </span> <a href="/${
                 tagcategory.design_page_url + tagcategory.param
               }#${tagcategory.name}" title="${tagcategory.name}"></a></li>`
             );
