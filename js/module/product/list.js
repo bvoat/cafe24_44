@@ -23,7 +23,7 @@ fetch(`/exec/front/Product/SubCategory`, {
   .then((cateArray) => {
     cateArray
     .forEach((cate)=>{
-      cate.parent_cate_no == parent_param ? sub_category.push(cate) : '';
+      cate.parent_cate_no == parent_param || cate.cate_no == parent_param  ? sub_category.push(cate) : '';
     });
   })
   .then(()=>{
@@ -39,7 +39,7 @@ fetch(`/exec/front/Product/SubCategory`, {
       targetUl.insertAdjacentHTML(`afterbegin`, `
       <li class="swiper-slide subcategory_list ${element.cate_no == category_param ? 'active' : 'null'} category_${element.name}" data-category="category_${element.name}">
           <a href="/product/list.html${element.param}&parent_cate_no=${parent_param}">
-          <span class="">${element.name}</span>
+          <span class="">${element.cate_no == parent_param ? 'ALL' : element.name}</span>
           </a>
       </li>`);
     });
@@ -52,7 +52,7 @@ fetch(`/exec/front/Product/SubCategory`, {
   })
   .then(()=>{
     //최초 카테고리 진입 시 parent_param과 category_param이 같으면 all 카테고리에 active 실행
-    if(category_param == parent_param){
-      document.querySelector(".category_ALL").classList.add("active");
-    }
+    // if(category_param == parent_param){
+    //   document.querySelector(".category_ALL").classList.add("active");
+    // }
   })
