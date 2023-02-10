@@ -10,7 +10,7 @@
 #category {
   width: 100%;
   max-width: 450px;
-  margin: 40px 0 60px;
+  margin: 40px 0 80px;
   background: #F5F6FC;
 }
 #category h2.category_title {
@@ -28,7 +28,7 @@
   width: 100%;
   max-width: 450px;
   background: #ffffff;
-  padding: 30px 17px 10px;
+  padding: 21px 17px 0px;
   margin-bottom: 8px;
 }
 #categoryOfRecommended #categoryOfRecommendedList {
@@ -123,10 +123,10 @@
 }
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .category_name {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #707070;
   letter-spacing: -0.4px;
-  margin: 15px 0 0 0;
+  margin: 9px 0 0 0;
   text-align: center;
   display: block;
   overflow: hidden;
@@ -136,8 +136,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.8rem;
-  height: 3.8rem;
+  line-height: 1.72rem;
+  height: 3.64rem;
 }
 #categoryOfRecommended #categoryOfRecommendedList .progressbar {
   display: none;
@@ -152,7 +152,7 @@
   width: 100%;
   max-width: 450px;
   background: #ffffff;
-  padding: 30px 17px 10px;
+  padding: 21px 17px 10px;
   margin-bottom: 8px;
 }
 #categoryOfTag #categoryOfTagList,
@@ -256,10 +256,10 @@
 #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_name,
 #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_name {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #707070;
   letter-spacing: -0.4px;
-  margin: 15px 0 0 0;
+  margin: 9px 0 0 0;
   text-align: center;
   display: block;
   overflow: hidden;
@@ -269,8 +269,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.8rem;
-  height: 3.8rem;
+  line-height: 1.72rem;
+  height: 3.64rem;
 }
 #categoryOfTag #categoryOfProductList,
 #categoryOfProduct #categoryOfProductList {
@@ -375,10 +375,10 @@
 #categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .category_name,
 #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .category_name {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #707070;
   letter-spacing: -0.4px;
-  margin: 15px 0 0 0;
+  margin: 9px 0 0 0;
   text-align: center;
   display: block;
   overflow: hidden;
@@ -388,8 +388,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.8rem;
-  height: 3.8rem;
+  line-height: 1.72rem;
+  height: 3.64rem;
 }
 
 /* 페이지 프로그레스 */

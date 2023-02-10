@@ -5,7 +5,7 @@
 #category {
     width: 100%;
     max-width: 450px;
-    margin: 40px 0 60px;
+    margin: 40px 0 80px;
     background: $bvt-bg-skyblue;
 
     h2.category_title {
@@ -27,7 +27,7 @@
     width: 100%;
     max-width: 450px;
     background: $bvt-white;
-    padding: 30px 17px 10px;
+    padding: 21px 17px 0px;
     margin-bottom: 8px;
 
     #categoryOfRecommendedList {
@@ -65,12 +65,12 @@
 
                         .category_name {
                             font-weight: 600;
-                            font-size: 1.3rem;
+                            font-size: 1.2rem;
                             color: $bvt-darkgray;
                             letter-spacing: -0.4px;
-                            margin: 15px 0 0 0;
+                            margin: 9px 0 0 0;
                             text-align: center;
-                            @include ellipsis(2, 1.5rem);
+                            @include ellipsis(2, 1.42rem);
                         }
                     }
                 }
@@ -95,7 +95,7 @@
     width: 100%;
     max-width: 450px;
     background: $bvt-white;
-    padding: 30px 17px 10px;
+    padding: 21px 17px 10px;
     margin-bottom: 8px;
 
     //태그별
@@ -132,12 +132,12 @@
 
                     .category_name {
                         font-weight: 600;
-                        font-size: 1.3rem;
+                        font-size: 1.2rem;
                         color: $bvt-darkgray;
                         letter-spacing: -0.4px;
-                        margin: 15px 0 0 0;
+                        margin: 9px 0 0 0;
                         text-align: center;
-                        @include ellipsis(2, 1.5rem);
+                        @include ellipsis(2, 1.42rem);
                     }
                 }
             }
@@ -177,12 +177,12 @@
 
                         .category_name {
                             font-weight: 600;
-                            font-size: 1.3rem;
+                            font-size: 1.2rem;
                             color: $bvt-darkgray;
                             letter-spacing: -0.4px;
-                            margin: 15px 0 0 0;
+                            margin: 9px 0 0 0;
                             text-align: center;
-                            @include ellipsis(2, 1.5rem);
+                            @include ellipsis(2, 1.42rem);
                         }
                     }
                 }

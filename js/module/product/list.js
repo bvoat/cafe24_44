@@ -40,7 +40,7 @@ fetch(`/exec/front/Product/SubCategory`, {
       targetUl.insertAdjacentHTML(`afterbegin`, `
       <li class="swiper-slide subcategory_list ${element.cate_no == category_param ? 'active' : 'null'} category_${element.name}" data-category="category_${element.name}">
           <a href="/product/list.html${element.param}&parent_cate_no=${parent_param}">
-          <span class="">${element.cate_no == parent_param ? 'ALL' : element.name}</span>
+          <span class="">${element.cate_no == parent_param ? '전체' : element.name}</span>
           </a>
       </li>`);
     });
