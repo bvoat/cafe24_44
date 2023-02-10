@@ -23,6 +23,7 @@ fetch(`/exec/front/Product/SubCategory`, {
   .then((cateArray) => {
     cateArray
     .forEach((cate)=>{
+      //ALL 카테고리 대신 중 카테고리를 소 카테고리 배열에 포함
       cate.parent_cate_no == parent_param || cate.cate_no == parent_param  ? sub_category.push(cate) : '';
     });
   })
