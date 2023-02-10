@@ -11,9 +11,10 @@ var recommendListSwiper = new Swiper("#productListrecommendList", {
 //category JSON 서버 통신
 let sub_category = [];
 const targetUl = document.querySelector(".menuCategory");
-const param = getUrlParams("parent_cate_no") ? getUrlParams("parent_cate_no") : getUrlParams("cate_no");
-const sub_param = getUrlParams("cate_no");
-console.log('sub_param: ', sub_param);
+const parent_param = getUrlParams("parent_cate_no") ? getUrlParams("parent_cate_no") : getUrlParams("cate_no");
+console.log('parent_param: ', parent_param);
+const category_param = getUrlParams("cate_no");
+console.log('sub_param: ', category_param);
 
 fetch(`/exec/front/Product/SubCategory`, {
   method: "GET",
@@ -22,7 +23,7 @@ fetch(`/exec/front/Product/SubCategory`, {
   .then((cateArray) => {
     cateArray
     .forEach((cate)=>{
-      cate.parent_cate_no == param ? sub_category.push(cate) : '';
+      cate.parent_cate_no == parent_param ? sub_category.push(cate) : '';
     });
   })
   .then(()=>{
@@ -36,8 +37,8 @@ fetch(`/exec/front/Product/SubCategory`, {
     .reverse()
     .forEach(element => {
       targetUl.insertAdjacentHTML(`afterbegin`, `
-      <li class="swiper-slide subcategory_list ${element.cate_no == sub_param ? 'active' : 'null'}">
-          <a href="/product/list.html${element.param}&parent_cate_no=${param}">
+      <li class="swiper-slide subcategory_list ${element.cate_no == category_param ? 'active' : 'null'} category_${element.name}" data-category="category_${element.name}">
+          <a href="/product/list.html${element.param}&parent_cate_no=${parent_param}">
           <span class="">${element.name}</span>
           </a>
       </li>`);
@@ -48,4 +49,10 @@ fetch(`/exec/front/Product/SubCategory`, {
       slidesPerView: "auto",
       spaceBetween: 23,
     });
+  })
+  .then(()=>{
+    //최초 카테고리 진입 시 parent_param과 category_param이 같으면 all 카테고리에 active 실행
+    if(category_param == parent_param){
+      document.querySelector(".category_ALL").classList.add("active");
+    }
   })
