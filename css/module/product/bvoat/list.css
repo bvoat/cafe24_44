@@ -16,8 +16,7 @@
 #productListTitle {
   position: relative;
   width: 100%;
-  margin: 27px 0 14px 0;
-  font-size: 0;
+  margin: 0 0 19px 0;
 }
 #productListTitle .banner {
   position: relative;
@@ -31,7 +30,7 @@
 #productListTitle h1 {
   font-size: 1.9rem;
   font-weight: 700;
-  margin: 0;
+  margin: 37px 0 2px 0;
   padding: 0 11px;
 }
 #productListTitle h2 {
@@ -43,10 +42,9 @@
 
 #subCategorySwiper {
   width: 100%;
-  height: 47px;
+  height: 59px;
   background: #F8F8F8;
   padding: 0 11px;
-  margin: 0;
 }
 #subCategorySwiper .subcategory {
   display: flex;
@@ -63,7 +61,7 @@
 #subCategorySwiper .subcategory .subcategory_list a {
   display: block;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   letter-spacing: -0.5px;
   word-break: keep-all;
   word-wrap: break-word;
@@ -80,46 +78,41 @@
   height: 3px;
   border-radius: 5px;
   background: #022CFF;
-  bottom: -15px;
+  bottom: -20px;
 }
 
 #product_normalmenu {
   position: relative;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   flex-flow: row nowrap;
   width: 100%;
-  height: 40px;
-  padding: 11px;
+  height: 50px;
+  padding: 11px 0;
 }
-#product_normalmenu::after {
-  position: absolute;
-  display: inline-block;
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.064' height='4.532'%3E%3Cpath fill='%23707070' d='m0 0 4.532 4.532L9.064 0Z' data-name='Icon ionic-md-arrow-dropleft'/%3E%3C/svg%3E");
-  font-weight: 900;
-  color: #707070;
-  z-index: 0;
-}
-#product_normalmenu select {
-  position: relative;
+#product_normalmenu > select {
   display: block;
-  width: 75px;
-  height: 22px;
-  padding: 1px 5px;
+  position: absolute;
+  width: 67px;
+  height: 17px;
+  right: 10px;
+  padding: 2px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: none;
   color: #707070;
   font-size: 1.2rem;
-  font-weight: 600;
   cursor: pointer;
-  background: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  z-index: 1;
 }
-#product_normalmenu label {
-  visibility: hidden;
+#product_normalmenu > label {
+  display: block;
+  position: absolute;
+  font-size: 1.5rem;
+  top: calc(50% - 12px);
+  right: 11px;
+  color: #707070;
+  cursor: pointer;
 }
 
 #product_listmore {

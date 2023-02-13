@@ -20,12 +20,12 @@
   padding: 0 11px;
 }
 #productBoardList #productBoardListTitle h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: 500;
   margin-bottom: 6px;
 }
 #productBoardList #productBoardListTitle h2 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 300;
   color: #707070;
 }
@@ -104,11 +104,11 @@
   border: 0;
 }
 #productBoardList #productBoardListBox ul li a.board_subject {
-  font-size: 1.65rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: #292929;
   letter-spacing: -0.5px;
-  line-height: 2.2rem;
+  line-height: 1.87rem;
 }
 #productBoardList #productBoardListBox ul li .board_author {
   display: none;
