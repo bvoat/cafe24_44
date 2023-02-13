@@ -24,7 +24,7 @@ fetch(`/exec/front/Product/SubCategory`, {
     cateArray
     .forEach((cate)=>{
       //ALL 카테고리 대신 중 카테고리를 소 카테고리 배열에 포함
-      cate.parent_cate_no == parent_param || cate.cate_no == parent_param  ? sub_category.push(cate) : '';
+      cate.parent_cate_no == parent_param ? sub_category.push(cate) :  cate.cate_no == parent_param ? sub_category.unshift(cate) : '';
     });
   })
   .then(()=>{
@@ -33,7 +33,7 @@ fetch(`/exec/front/Product/SubCategory`, {
       targetUl.parentNode.classList.add("displaynone");
       return false;
     }
-
+    console.log("sub_category", sub_category);
     sub_category
     .forEach(element => {
       console.log('element: ', element);
