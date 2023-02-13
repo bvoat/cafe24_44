@@ -11,7 +11,7 @@
 #productListTitle {
     position: relative;
     width: 100%;
-    margin: 0 0 19px 0;
+    margin: 10px 0 15px;
 
     .banner {
         position: relative;
@@ -27,7 +27,7 @@
     h1 {
         font-size: 1.9rem;
         font-weight: 700;
-        margin: 37px 0 2px 0;
+        margin: 0;
         padding: 0 11px;
     }
 
@@ -42,9 +42,10 @@
 //하위 카테고리
 #subCategorySwiper {
     width: 100%;
-    height: 59px;
+    height: 45px;
     background: #F8F8F8;
     padding: 0 11px;
+    margin: 0;
 
     .subcategory {
         display: flex;
@@ -61,7 +62,7 @@
             a {
                 display: block;
                 font-weight: 300;
-                font-size: 1.6rem;
+                font-size: 1.45rem;
                 letter-spacing: -0.5px;
                 word-break: keep-all;
                 word-wrap: break-word;
@@ -81,7 +82,7 @@
                     height: 3px;
                     border-radius: 5px;
                     background: $bvt-blue;
-                    bottom: -20px;
+                    bottom: -15px;
                 }
             }
         }
@@ -93,34 +94,42 @@
 #product_normalmenu {
     position: relative;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     flex-flow: row nowrap;
     width: 100%;
     height: 50px;
-    padding: 11px 0;
+    padding: 11px;
 
-    >select {
-        display: block;
+    &::after {
         position: absolute;
-        width: 67px;
-        height: 17px;
-        right: 10px;
-        padding: 2px;
-        appearance: none;
+        display: inline-block;
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.064' height='4.532'%3E%3Cpath fill='%23707070' d='m0 0 4.532 4.532L9.064 0Z' data-name='Icon ionic-md-arrow-dropleft'/%3E%3C/svg%3E");
+        font-weight: 900;
+        color: $bvt-darkgray;
+        z-index: 0;
+    }
+
+    select {
+        position: relative;
+        display: block;
+        width: 75px;
+        height: 22px;
+        padding: 1px 5px;
         border: none;
         color: $bvt-darkgray;
         font-size: 1.2rem;
+        font-weight: 600;
         cursor: pointer;
+        background: transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        z-index: 1;
     }
 
-    >label {
-        display: block;
-        position: absolute;
-        font-size: 1.5rem;
-        top: calc(50% - 12px);
-        right: 11px;
-        color: $bvt-darkgray;
-        cursor: pointer;
+    label {
+        visibility: hidden;
     }
 
 }

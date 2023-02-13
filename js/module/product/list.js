@@ -36,6 +36,7 @@ fetch(`/exec/front/Product/SubCategory`, {
 
     sub_category
     .forEach(element => {
+      console.log('element: ', element);
       targetUl.insertAdjacentHTML(`afterbegin`, `
       <li class="swiper-slide subcategory_list ${element.cate_no == category_param ? 'active' : 'null'} category_${element.name}" data-category="category_${element.name}">
           <a href="/product/list.html${element.param}&parent_cate_no=${parent_param}">
