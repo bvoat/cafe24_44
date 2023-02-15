@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 #fundingIndex {
@@ -25,7 +22,7 @@
 #fundingIndexClosingTitle h2 {
   font-size: 1.9rem;
   font-weight: 700;
-  margin-bottom: 2px;
+  margin-bottom: 7px;
 }
 #fundingIndexPlayingTitle h3,
 #fundingIndexClosingTitle h3 {
@@ -68,172 +65,13 @@
   font-weight: 500;
 }
 
-/* 펀딩 메인진열 */
-#fundingListmain, #fundingEndListmain {
-  width: 100%;
-  padding: 0 11px;
-}
-
-.funding_list {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.bvt-funding {
-  width: 100%;
-  max-width: 450px;
-  margin: 0 auto;
-  padding: 11px 0;
-}
-.bvt-funding > li {
-  position: relative;
-  border-bottom: 1px solid #E2E2E2;
-  margin-bottom: 45px;
-  border-radius: 10px;
-  transition: all 0.6s;
-}
-.bvt-funding > li:hover {
-  border-radius: 10px;
-  transition: all 0.4s;
-  box-shadow: 10px 15px 24px 0px rgba(0, 0, 0, 0.07);
-}
-.bvt-funding > li .msgBox {
-  background-color: #022CFF;
-  color: #ffffff;
-  font-size: 15px;
-  position: relative;
-  z-index: 1;
-  float: right;
-  border-radius: 100px;
-  top: 20px;
-  right: 15px;
-  margin-top: -20px;
-  height: 40px;
-  line-height: 8px;
-}
-.bvt-funding > li .thumb {
-  position: relative;
-  width: 100%;
-}
-.bvt-funding > li .thumb > a {
-  display: block;
-  position: relative;
-  padding-top: 55%;
-  overflow: hidden;
-  border-radius: 4px;
-}
-.bvt-funding > li .thumb > a > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: auto;
-  width: 100%;
-  left: 50%;
-  transform: translate(-50%, -22%);
-}
-.bvt-funding > li .thumb .icon {
-  position: absolute;
-  width: 50px;
-  height: 20.5px;
-  border-radius: 4px;
-  top: 4.6px;
-  left: 4.6px;
-}
-.bvt-funding > li .ddayPrd {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #022CFF;
-  color: #ffffff;
-  font-size: 1.22rem;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  top: -30px;
-  right: 11px;
-  float: right;
-  padding: 0 !important;
-  text-align: center;
-}
-.bvt-funding > li .ddayPrd > span {
-  font-weight: 600;
-}
-.bvt-funding > li .desc {
-  width: 100%;
-  padding: 11px 11px 60px;
-}
-.bvt-funding > li .desc .typePrd {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #022CFF;
-  margin-bottom: 11px;
-}
-.bvt-funding > li .desc .title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 11px;
-}
-.bvt-funding > li .desc .summary {
-  font-size: 1.5rem;
-  margin-bottom: 11px;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
-  line-height: 2.2rem;
-}
-.bvt-funding > li .desc .custom_voter {
-  display: flex;
-  justify-content: space-between;
-  margin: 7px 0;
-}
-.bvt-funding > li .desc .custom_voter div:nth-child(1) {
-  font-size: 1.25rem;
-  color: #022CFF;
-}
-.bvt-funding > li .desc .custom_voter div:nth-child(2) {
-  font-size: 1.25rem;
-  color: #01AF8A;
-}
-.bvt-funding > li .desc .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0;
-  right: 0;
-}
-.bvt-funding > li .desc .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-.bvt-funding > li .desc .wish button img {
-  position: relative;
-  width: 41px;
-  height: 38.98px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-
 /* 진행 펀딩 */
 /* 종료 펀딩 */
 .listmain_26 > .bvt-funding > li > .thumb > a > img {
   filter: opacity(50%) !important;
 }
-.listmain_26 > .bvt-funding > li > .desc > .title > a, .listmain_26 > .bvt-funding > li > .desc > .summary {
+.listmain_26 > .bvt-funding > li > .desc > .title > a,
+.listmain_26 > .bvt-funding > li > .desc > .summary {
   color: #707070 !important;
 }
 

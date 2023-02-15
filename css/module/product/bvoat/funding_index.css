@@ -1,0 +1,199 @@
+@charset "UTF-8";
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
+/* 펀딩 메인진열 */
+#fundingListmain,
+#fundingEndListmain {
+  width: 100%;
+  padding: 0 17px;
+}
+
+.bvt-funding {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 11px 0;
+}
+.bvt-funding .list_item {
+  position: relative;
+  width: 100%;
+  margin-bottom: 45px;
+  border-radius: 20px;
+  box-shadow: 3px 7px 11px 0px rgb(242, 242, 242);
+  transition: all 0.8s;
+  overflow: hidden;
+}
+.bvt-funding .list_item:hover {
+  border-radius: 10px;
+  transition: all 0.8s;
+  box-shadow: 10px 15px 24px 0px rgb(242, 242, 242);
+}
+.bvt-funding .list_item .msgBox {
+  color: #ffffff;
+  font-size: 15px;
+  position: relative;
+  z-index: 1;
+  float: right;
+  border-radius: 100px;
+  top: 20px;
+  right: 15px;
+  margin-top: -20px;
+  height: 40px;
+  line-height: 8px;
+  background-color: #022CFF;
+}
+.bvt-funding .list_item .listmain_price {
+  position: relative;
+}
+.bvt-funding .list_item .listmain_price .discountrate {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: #022CFF;
+  padding: 10px 14px;
+  border-radius: 31px;
+  z-index: 1;
+  top: 10px;
+  left: 2px;
+}
+.bvt-funding .list_item .thumb {
+  position: relative;
+  width: 100%;
+}
+.bvt-funding .list_item .thumb > a,
+.bvt-funding .list_item .thumb .img_wrap {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.bvt-funding .list_item .thumb > a > img,
+.bvt-funding .list_item .thumb .img_wrap > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.bvt-funding .list_item .thumb .wish {
+  position: absolute;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  bottom: 0px;
+  left: 0px;
+  background: #fff;
+}
+.bvt-funding .list_item .thumb .wish button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  border: 0;
+  bottom: pink;
+  cursor: pointer;
+}
+.bvt-funding .list_item .thumb .wish button img {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.bvt-funding .list_item .icon {
+  position: absolute;
+  height: 25px;
+  margin-top: 4%;
+  top: 3px;
+  left: 10px;
+  z-index: 1;
+}
+.bvt-funding .list_item .icon img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.bvt-funding .list_item .thumb {
+  height: 234px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.bvt-funding .list_item .ddayPrd {
+  display: none;
+}
+.bvt-funding .list_item .ddayPrd > span {
+  font-weight: 600;
+}
+.bvt-funding .list_item .desc {
+  position: relative;
+  width: 100%;
+  padding: 24.2px 15px;
+}
+.bvt-funding .list_item .desc .summary {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: 600;
+  top: -22px;
+  right: 25px;
+  padding: 11px 15px;
+  border: 1px solid #C4C4C4;
+  background: #ffffff;
+  color: #292929;
+  border-radius: 31px;
+  border-color: #707070;
+}
+.bvt-funding .list_item .desc .typePrd {
+  display: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #022CFF;
+  margin-bottom: 11px;
+}
+.bvt-funding .list_item .desc .title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 12.7px;
+}
+.bvt-funding .list_item .desc .simple_desc {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #707070;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 2.3rem;
+  height: 4.8rem;
+}
+.bvt-funding .list_item .desc .custom_voter {
+  display: none;
+  margin: 7px 0;
+}
+.bvt-funding .list_item .desc .custom_voter div:nth-child(1) {
+  font-size: 1.25rem;
+  color: #022CFF;
+}
+.bvt-funding .list_item .desc .custom_voter div:nth-child(2) {
+  font-size: 1.25rem;
+  color: #01AF8A;
+}/*# sourceMappingURL=funding_index.css.map */

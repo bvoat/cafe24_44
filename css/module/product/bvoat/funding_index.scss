@@ -1,0 +1,172 @@
+@charset "utf-8";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
+
+
+/* 펀딩 메인진열 */
+#fundingListmain,
+#fundingEndListmain {
+	width: 100%;
+	padding: 0 17px;
+}
+
+.bvt-funding {
+	position: relative;
+	width: 100%;
+	max-width: 450px;
+	margin: 0 auto;
+	padding: 11px 0;
+
+	.list_item {
+		position: relative;
+		width: 100%;
+		margin-bottom: 45px;
+		border-radius: 20px;
+		box-shadow: 3px 7px 11px 0px rgba(242, 242, 242, 1);
+		transition: all 0.8s;
+		overflow: hidden;
+
+		&:hover {
+			border-radius: 10px;
+			transition: all 0.8s;
+			box-shadow: 10px 15px 24px 0px rgba(242, 242, 242, 1);
+		}
+
+		.msgBox {
+			color: #ffffff;
+			font-size: 15px;
+			position: relative;
+			z-index: 1;
+			float: right;
+			border-radius: 100px;
+			top: 20px;
+			right: 15px;
+			margin-top: -20px;
+			height: 40px;
+			line-height: 8px;
+			background-color: $bvt-blue;
+		}
+
+		.listmain_price {
+			position: relative;
+
+			.discountrate {
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.6rem;
+				font-weight: 700;
+				color: $bvt-white;
+				background: $bvt-blue;
+				padding: 10px 14px;
+				border-radius: 31px;
+				z-index: 1;
+				top: 10px;
+				left: 2px;
+			}
+		}
+
+		@include product-thumb(0px, 0px, 0px, 0px, 0px);
+
+		//펀딩 사진 높이 수정
+		.thumb {
+			height: 234px;
+			overflow: hidden;
+			border-radius: 20px;
+		}
+
+		//D-Day 및 종료 아이콘
+		//2023-02 사용 안함 처리
+		.ddayPrd {
+			display: none;
+			// position: relative;
+			// display: flex;
+			// justify-content: center;
+			// align-items: center;
+			// background: $bvt-blue;
+			// color: $bvt-white;
+			// font-size: 1.22rem;
+			// border-radius: 50%;
+			// width: 55px;
+			// height: 55px;
+			// top: -30px;
+			// right: 11px;
+			// float: right;
+			// padding: 0 !important;
+			// text-align: center;
+
+			>span {
+				font-weight: 600;
+			}
+		}
+
+		.desc {
+			position: relative;
+			width: 100%;
+			padding: 24.2px 15px;
+
+			.summary {
+				position: absolute;
+				font-size: 1.5rem;
+				font-weight: 600;
+				top: -22px;
+				right: 25px;
+				padding: 11px 15px;
+				border: $bvt-input-border;
+				background: $bvt-white;
+				color: $bvt-black;
+				border-radius: 31px;
+				border-color: $bvt-darkgray;
+			}
+
+			//공구 / 펀딩 구분 아이콘
+			//2023-02 사용 안함 처리
+			.typePrd {
+				display: none;
+				font-size: 1.5rem;
+				font-weight: bold;
+				color: $bvt-blue;
+				margin-bottom: 11px;
+			}
+
+			//모델명
+			.title {
+				font-size: 2rem;
+				font-weight: 600;
+				margin-bottom: 12.7px;
+			}
+
+			.simple_desc {
+				font-size: 1.5rem;
+				font-weight: 300;
+				color: $bvt-darkgray;
+				@include ellipsis(2, 2rem)
+			}
+
+			//구매자 수, 할인율 처리
+			//2023-02 사용 안함 처리
+			.custom_voter {
+				display: none;
+				// display: flex;
+				// justify-content: space-between;
+				margin: 7px 0;
+
+				div {
+					&:nth-child(1) {
+						//구매 인원
+						font-size: 1.25rem;
+						color: $bvt-blue;
+					}
+
+					&:nth-child(2) {
+						//현재 할인율
+						font-size: 1.25rem;
+						color: #01AF8A;
+					}
+				}
+			}
+
+		}
+	}
+}
