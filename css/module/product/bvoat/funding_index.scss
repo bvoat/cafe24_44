@@ -54,7 +54,7 @@
 				justify-content: center;
 				align-items: center;
 				font-size: 1.6rem;
-				font-weight: 700;
+				font-weight: bold;
 				color: $bvt-white;
 				background: $bvt-blue;
 				padding: 10px 14px;
@@ -95,7 +95,7 @@
 			// text-align: center;
 
 			>span {
-				font-weight: 600;
+				font-weight: bold;
 			}
 		}
 
@@ -107,7 +107,7 @@
 			.summary {
 				position: absolute;
 				font-size: 1.5rem;
-				font-weight: 600;
+				font-weight: bold;
 				top: -22px;
 				right: 25px;
 				padding: 11px 15px;
@@ -130,16 +130,16 @@
 
 			//모델명
 			.title {
-				font-size: 2rem;
-				font-weight: 600;
-				margin-bottom: 12.7px;
+				font-size: 1.9rem;
+				font-weight: bold;
+				margin-bottom: 12px;
 			}
 
 			.simple_desc {
-				font-size: 1.5rem;
-				font-weight: 300;
+				font-size: 1.4rem;
+				font-weight: normal;
 				color: $bvt-darkgray;
-				@include ellipsis(2, 2rem)
+				@include ellipsis(2, 1.8rem)
 			}
 
 			//구매자 수, 할인율 처리

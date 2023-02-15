@@ -56,7 +56,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: bold;
   color: #ffffff;
   background: #022CFF;
   padding: 10px 14px;
@@ -136,7 +136,7 @@
   display: none;
 }
 .bvt-funding .list_item .ddayPrd > span {
-  font-weight: 600;
+  font-weight: bold;
 }
 .bvt-funding .list_item .desc {
   position: relative;
@@ -146,7 +146,7 @@
 .bvt-funding .list_item .desc .summary {
   position: absolute;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: bold;
   top: -22px;
   right: 25px;
   padding: 11px 15px;
@@ -164,13 +164,13 @@
   margin-bottom: 11px;
 }
 .bvt-funding .list_item .desc .title {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 12.7px;
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
 .bvt-funding .list_item .desc .simple_desc {
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.4rem;
+  font-weight: normal;
   color: #707070;
   display: block;
   overflow: hidden;
@@ -180,8 +180,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.3rem;
-  height: 4.8rem;
+  line-height: 2.1rem;
+  height: 4.4rem;
 }
 .bvt-funding .list_item .desc .custom_voter {
   display: none;
