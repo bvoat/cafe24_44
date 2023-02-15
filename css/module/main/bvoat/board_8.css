@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
+#bvtBoard8 {
+  width: 100%;
+  max-width: 450px;
+  padding: 0 17px;
+}
+#bvtBoard8 h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+#bvtBoard8 .thumb {
+  position: relative;
+  width: 100%;
+}
+#bvtBoard8 .thumb > a,
+#bvtBoard8 .thumb .img_wrap {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+#bvtBoard8 .thumb > a > img,
+#bvtBoard8 .thumb .img_wrap > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#bvtBoard8 .thumb .wish {
+  position: absolute;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  bottom: 0px;
+  left: 0px;
+  background: #fff;
+}
+#bvtBoard8 .thumb .wish button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  border: 0;
+  bottom: pink;
+  cursor: pointer;
+}
+#bvtBoard8 .thumb .wish button img {
+  position: relative;
+  width: 21px;
+  height: 18.98px;
+  padding: 0px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#bvtBoard8 .icon {
+  position: absolute;
+  height: 25px;
+  margin-top: 4%;
+  top: 3px;
+  left: 10px;
+  z-index: 1;
+}
+#bvtBoard8 .icon img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#bvtBoard8 ul {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+#bvtBoard8 ul li {
+  width: 50%;
+  max-width: 203px;
+}
+#bvtBoard8 ul li .category_name {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 28px;
+  background: #022CFF;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  margin: 0;
+  padding: 4.5px 11px;
+}
+#bvtBoard8 ul li img {
+  width: 100%;
+}
+#bvtBoard8 ul li .summary {
+  margin: 12px 0 35px;
+}
+#bvtBoard8 ul li .summary a {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2rem;
+  letter-spacing: -0.5px;
+}/*# sourceMappingURL=board_8.css.map */

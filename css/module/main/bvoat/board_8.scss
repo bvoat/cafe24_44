@@ -1,0 +1,66 @@
+@charset "utf-8";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
+
+#bvtBoard8 {
+	width: 100%;
+	max-width: 450px;
+	padding: 0 17px;
+
+	h3 {
+		font-size: 2rem;
+		font-weight: 600;
+		margin-bottom: 20px;
+	}
+
+	// 이미지 정사각형 공통 (mixin)
+	// thumb 부모에게 width 정해줘야 함!
+	@include product-thumb(21px, 18.98px, 0px, 0px, 0px);
+
+	ul {
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: space-between;
+
+		li {
+			width: 50%;
+			max-width: 203px;
+
+			//카테고리 이름
+			.category_name {
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: fit-content;
+				border-radius: 28px;
+				background: $bvt-blue;
+				font-size: 1.3rem;
+				font-weight: 600;
+				color: $bvt-white;
+				top: 8px;
+				left: 8px;
+				z-index: 1;
+				margin: 0;
+				padding: 4.5px 11px;
+			}
+
+			img {
+				width: 100%;
+			}
+
+			.summary {
+				margin: 12px 0 35px;
+
+				a {
+					font-size: 1.6rem;
+					font-weight: 600;
+					line-height: 2rem;
+					letter-spacing: -0.5px;
+				}
+			}
+		}
+	}
+}

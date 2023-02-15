@@ -1,0 +1,40 @@
+<!--@css(/css/module/main/bvoat/board_8.css)-->
+
+<section id="bvtBoard8" module="Board_ListPackage_8">
+	<div id="productBoardListTitle" module="board_title_8">
+		<h3>📖 {$board_title}<span class="listmain_arrow"></span></h3>
+	</div>
+	<div module="board_list_8">
+		<!--
+            $count = 4
+            $subject_cut = 45
+            $login_page_url = /member/login.html
+            $deny_access_url = /index.html
+        -->
+		<ul>
+			<li>
+				<div class="thumb"><a href="/board/gallery/read.html{$param_read}" class="img">
+						<span class="category_name"> {$category_name}</span><img src="{$img_src}"
+							onerror="this.src='http://img.echosting.cafe24.com/skin/mobile_ko_KR/board/img_no.png'"
+							alt="" />
+					</a></div>
+				<div class="summary">
+					<a href="/board/gallery/read.html{$param_read}" class="subject"> {$subject}
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class="thumb"><a href="/board/gallery/read.html{$param_read}" class="img">
+						<span class="category_name"> {$category_name}</span><img src="{$img_src}"
+							onerror="this.src='http://img.echosting.cafe24.com/skin/mobile_ko_KR/board/img_no.png'"
+							alt="" />
+					</a></div>
+				<div class="summary">
+					<a href="/board/gallery/read.html{$param_read}" class="subject"> {$subject}
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<p module="board_empty_8" class="empty {$empty_display|display}">{$empty_message}</p>
+</section>
