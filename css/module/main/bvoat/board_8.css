@@ -87,7 +87,7 @@
   justify-content: space-between;
 }
 #bvtBoard8 ul li {
-  width: 50%;
+  width: calc(50% - 5px);
   max-width: 203px;
 }
 #bvtBoard8 ul li .category_name {
