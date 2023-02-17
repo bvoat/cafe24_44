@@ -11,150 +11,103 @@
     </section>
     <!--보터 카운트-->
     <!-- 메인 사각 배너 -->
-    <div id="indexSquareBanner">
-        <ul class="square_banner swiper-wrapper">
-            <li class="swiper-slide">
-                <a href="/product/detail.html?product_no=2809" title="페트병 35개가 맨투맨으로 쓰임 있게 / 가볍고 편안한 핏, 친환경 롱 슬리브"><img
-                        src="/bvtIMG/banner/indexbanner/230111_index_banner_1.png"></a>
-            </li>
-            <li class=" swiper-slide">
-                <a href="/product/detail.html?product_no=3299" title="구매 만족도 99% 팔팔한 바다를 위한 캘린더 새해 준비, 곧 기부가 되니까"><img
-                        src="/bvtIMG/banner/indexbanner/230111_index_banner_2.png"
-                        alt="구매 만족도 99% 팔팔한 바다를 위한 캘린더 새해 준비, 곧 기부가 되니까"></a>
-            </li>
-            <li class="swiper-slide">
-                <a href="/product/detail.html?product_no=3123" title="지구도 지키고 핸드폰도 지키는 방법 다시 쓰는 리사이클 투명 폰케이스"><img
-                        src="/bvtIMG/banner/indexbanner/230111_index_banner_3.png"
-                        alt="지구도 지키고 핸드폰도 지키는 방법 다시 쓰는 리사이클 투명 폰케이스"></a>
-            </li>
-        </ul>
-        <div class="swiper-pagination img_pagination"></div>
-    </div>
+    <!-- @import(/main/module/index_slide.html) -->
+
     <!-- 메인진열 섹션 -->
     <section id="indexListmain" class="index_list">
-        <!-- 최상단 -->
-        <div id="listmainTopValue" class="listmain">
-            <h3>2023년 맞이<br>소중한 사람에게 선물하기</h3>
-            <h4>신년 선물, 더 의미 있도록</h4>
+        <!-- 펀딩 -->
+        <div id="listmainFunding" class="listmain">
+            <h3>⏰ 진행 중인 펀딩<a class="listmain_arrow displaynone"></a></h3>
+            <div class="list_nocontents_wrap">
+                <div class="thumbnail">
+                    <span class="discountrate">???%</span>
+                    <a class="bvt_kakao" href="http://pf.kakao.com/_Rxnhnxb" target="_blank">카카오 플친 맺고 오픈 알림 받기</a>
+                </div>
+                <div class="description">
+                    <p>비보트 펀딩 Coming Soon!</p>
+                    <span>가치소비는 비싸다는 편견은 그만,<br>1만 명의 비용 1억 원을 절감한 비보트 펀딩이 준비되고 있어요.</span>
+                </div>
+            </div>
+            <div class="list_contents_wrap right-side-control displaynone">
+                <div class="list_item_box one_img" module="product_listmain_18">
+                    <!--
+                        $count = 20
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <!--@import(/funding/module/funding_listmain.html)-->
+                </div>
+                <div class="swiper-pagination list_item_bullet"></div>
+            </div>
+        </div>
+        <!-- 새로 입점된 브랜드  -->
+        <div id="listmainBrand" class="listmain">
+            <h3>🏡 새로 입점된 브랜드<a class="listmain_arrow displaynone"></a></h3>
             <div class="list_contents_wrap">
-                <div class="list_item_box big_img" module="product_listmain_224">
-                    <!--
-                        $count = 30
-                        $basket_result = /product/add_basket.html
-                        $basket_option = /product/basket_option.html
-                    -->
-                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                <div class="list_item_box brand">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide list_item"><a href="/minishop/fxng"><img
+                                    src="/bvtIMG/banner/newbrand/fxng.png" alt="브랜드 퐁 미니샵 바로가기"></a></li>
+                        <li class="swiper-slide list_item"><a href="/minishop/thereed"><img
+                                    src="/bvtIMG/banner/newbrand/thereed.png" alt="브랜드 더리드 미니샵 바로가기"></a></li>
+                        <li class="swiper-slide list_item"><a href="/minishop/zblack"><img
+                                    src="/bvtIMG/banner/newbrand/zblack.png" alt="브랜드 지블랙 미니샵 바로가기"></a></li>
+                        <li class="swiper-slide list_item"><a href="/minishop/rebud"><img
+                                    src="/bvtIMG/banner/newbrand/rebud.png" alt="브랜드 리버드 미니샵 바로가기"></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!-- 재구매 -->
-        <div id="listmainRepurchase" class="listmain">
-            <h3>다시 사러 오셨군요<br>재구매 베스트</h3>
-            <h4>꼭 이걸 사러 오시길래요</h4>
-            <div class="list_contents_wrap right-side-control">
-                <div class="list_item_box listmain_repurchase" module="product_listmain_225">
+        <!-- 주간 베스트 -->
+        <div id="listmainTopValue" class="listmain">
+            <h3>👍 비보트 주간 BEST<a class="listmain_arrow displaynone"></a></h3>
+            <div class="list_contents_wrap">
+                <div class="list_item_box best weekbest" module="product_listmain_66">
                     <!--
-                        $count = 30
+                        $count = 10
                         $basket_result = /product/add_basket.html
                         $basket_option = /product/basket_option.html
                     -->
                     <!--@import(/product/product_module/listmain/listmain.html)-->
-                </div>
-
-                <div class="swiper-pagination repurchase_bullet list_item_bullet"></div>
-            </div>
-        </div>
-        <!-- 베스트 -->
-        <div id="listmainBest" class="listmain">
-            <h3>비보트에서<br>인기가 가장 많아요</h3>
-            <h4>사랑 받는 데에는 이유가 있는 법</h4>
-            <div class="list_contents_wrap right-side-control">
-                <div class="list_item_box moreview best" module="product_listmain_226">
-                    <!--
-                        $count = 30
-                        $basket_result = /product/add_basket.html
-                        $basket_option = /product/basket_option.html
-                    -->
-                    <!--@import(/product/product_module/listmain/listmain.html)-->
-                </div>
-                <div class="moreview_btn_wrap">
-                    <button class="moreview_btn" data-btn="best">더 보기
-                        <svg class="moreview_arrow" xmlns="http://www.w3.org/2000/svg" width="10.67" height="6.59">
-                            <path fill="#022cff" d="m1.25 0 4.08 4.07L9.43 0l1.25 1.25L5.34 6.6 0 1.25Z"
-                                data-name="Icon material-keyboard-arrow-down" />
-                        </svg>
-                    </button>
                 </div>
             </div>
         </div>
         <!-- 테마 -->
-        <div id="listmainTheme_1" class="listmain">
-            <h3>원래 돈은 가치 있는 곳에<br>담겨야 하거든요</h3>
-            <h4>나를 위한 소중한 카드지갑</h4>
-            <div class="list_contents_wrap right-side-control">
-                <div class="list_item_box moreview theme_1" module="product_listmain_227">
+        <div id="listmainTheme_1" class="listmain listmain_pagination" module="product_listmain_227">
+            <h3>{$category_title_text}<a href="/product/list.html?cate_no=1018" class="listmain_arrow"
+                    title="{$category_title_text}"></a></h3>
+            <div class="list_contents_wrap">
+                <div class="list_item_box listmain_theme">
                     <!--
                         $count = 30
                         $basket_result = /product/add_basket.html
                         $basket_option = /product/basket_option.html
                     -->
                     <!--@import(/product/product_module/listmain/listmain.html)-->
-                </div>
-                <div class="moreview_btn_wrap">
-                    <button class="moreview_btn" data-btn="theme_1">더 보기
-                        <svg class="moreview_arrow" xmlns="http://www.w3.org/2000/svg" width="10.67" height="6.59">
-                            <path fill="#022cff" d="m1.25 0 4.08 4.07L9.43 0l1.25 1.25L5.34 6.6 0 1.25Z"
-                                data-name="Icon material-keyboard-arrow-down" />
-                        </svg>
-                    </button>
                 </div>
             </div>
         </div>
         <!-- 테마 -->
-        <div id="listmainTheme_2" class="listmain">
-            <h3>아직 화학 성분과 트러블에서<br>벗어나지 못했다면</h3>
-            <h4>비건 비누로 걱정 없이 세안하기</h4>
-            <div class="list_contents_wrap right-side-control">
-                <div class="list_item_box listmain_theme2" module="product_listmain_228">
+        <div id="listmainTheme_2" class="listmain listmain_pagination" module="product_listmain_228">
+            <h3>{$category_title_text}<a href="/product/list.html?cate_no=627" class="listmain_arrow"
+                    title="{$category_title_text}"></a></h3>
+            <div class="list_contents_wrap">
+                <div class="list_item_box listmain_theme">
                     <!--
                         $count = 30
                         $basket_result = /product/add_basket.html
                         $basket_option = /product/basket_option.html
                     -->
                     <!--@import(/product/product_module/listmain/listmain.html)-->
-                </div>
-                <div class="swiper-pagination theme2_bullet list_item_bullet"></div>
-            </div>
-        </div>
-        <!-- 테마 -->
-        <div id="listmainTheme_3" class="listmain">
-            <h3>올 봄엔 뭘 들지?<br>숄더 · 토트 · 크로스백 나들이</h3>
-            <h4>직장인 대학생 신학기 추천</h4>
-            <div class="list_contents_wrap right-side-control">
-                <div class="list_item_box moreview theme_3" module="product_listmain_229">
-                    <!--
-                        $count = 30
-                        $basket_result = /product/add_basket.html
-                        $basket_option = /product/basket_option.html
-                    -->
-                    <!--@import(/product/product_module/listmain/listmain.html)-->
-                </div>
-                <div class="moreview_btn_wrap">
-                    <button class="moreview_btn" data-btn="theme_3">더 보기
-                        <svg class="moreview_arrow" xmlns="http://www.w3.org/2000/svg" width="10.67" height="6.59">
-                            <path fill="#022cff" d="m1.25 0 4.08 4.07L9.43 0l1.25 1.25L5.34 6.6 0 1.25Z"
-                                data-name="Icon material-keyboard-arrow-down" />
-                        </svg>
-                    </button>
                 </div>
             </div>
         </div>
         <!-- 테마 -->
-        <div id="listmainTheme_4" class="listmain">
-            <h3>너 하나 나 하나<br>허전한 팔에 아름답게</h3>
-            <h4>좋은 일에 쓰이는 우정 · 커플 팔찌</h4>
-            <div class="list_contents_wrap right-side-control">
-                <div class="list_item_box listmain_theme4" module="product_listmain_230">
+        <div id="listmainTheme_3" class="listmain listmain_pagination" module="product_listmain_229">
+            <h3>{$category_title_text}<a href="/product/list.html?cate_no=662" class="listmain_arrow"
+                    title="{$category_title_text}"></a></h3>
+            <div class="list_contents_wrap">
+                <div class="list_item_box listmain_theme">
                     <!--
                         $count = 30
                         $basket_result = /product/add_basket.html
@@ -162,10 +115,24 @@
                     -->
                     <!--@import(/product/product_module/listmain/listmain.html)-->
                 </div>
-                <div class="swiper-pagination theme4_bullet list_item_bullet"></div>
-
             </div>
         </div>
+        <!-- 테마 -->
+        <div id="listmainTheme_4" class="listmain listmain_pagination" module="product_listmain_230">
+            <h3>{$category_title_text}<a href="/product/list.html?cate_no=1074" class="listmain_arrow"
+                    title="{$category_title_text}"></a></h3>
+            <div class="list_contents_wrap">
+                <div class="list_item_box listmain_theme">
+                    <!--
+                        $count = 30
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                </div>
+            </div>
+        </div>
+        <!--@import(/main/module/board_8.html)-->
     </section>
     <!-- 메인진열 섹션 -->
     <!--@layout(/layout/basic/layout.html)-->
@@ -186,45 +153,36 @@
             delay: 3500,
             disableOnInteraction: false,
         },
+    });
+    // Funding 메인진열 슬라이드
+    var swiper = new Swiper(".one_img", {
+        slidesPerView: 1,
+        spaceBetween: 0,
         pagination: {
-            el: ".img_pagination",
+            el: ".list_item_bullet",
             clickable: true,
-            type: "progressbar",
         },
     });
-    // big width 250 메인진열 슬라이드
-    var swiper = new Swiper(".big_img", {
-        slidesPerView: 1.675,
+    // Brand 메인진열 슬라이드
+    var swiper = new Swiper(".brand", {
+        slidesPerView: 2.16168,
         spaceBetween: 10,
     });
     // 재구매
-    var swiper = new Swiper(".listmain_repurchase", {
-        slidesPerView: 2,
-        spaceBetween: 8,
-        slidesPerGroup: 2,
-        pagination: {
-            el: ".repurchase_bullet",
-            clickable: true,
-        },
+    var swiper = new Swiper(".best", {
+        slidesPerView: 2.2227,
+        spaceBetween: 10,
     });
-    // 테마2
-    var swiper = new Swiper(".listmain_theme2", {
-        slidesPerView: 2,
-        spaceBetween: 8,
-        slidesPerGroup: 1,
-        pagination: {
-            el: ".theme2_bullet",
-            clickable: true,
-        },
-    });
-    // 테마2
-    var swiper = new Swiper(".listmain_theme4", {
-        slidesPerView: 2,
-        spaceBetween: 8,
-        slidesPerGroup: 1,
-        pagination: {
-            el: ".theme4_bullet",
-            clickable: true,
+    // 테마
+    var swiper = new Swiper(".listmain_theme", {
+        slidesPerView: 1.7,
+        spaceBetween: 10,
+        freeMode: {
+            enabled: true,
+            minimumVelocity: 2,
+            momentumBounceRatio: 0.1,
+            momentumRatio: 0.5,
+            momentumVelocityRatio: 0.5,
         },
     });
 </script>
