@@ -1,2 +1,6 @@
 .xans-board-function { padding:10px 10px 0; color:#757575; font-size:12px; }
-.xans-board-function p { padding:0 0 0 7px; line-height:25px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_triangle3.gif") no-repeat 0 10px; }
+.xans-board-function p { display:flex; flex-flow: row nowrap; align-items: center; height: 20px;  padding:0 0 0 7px; line-height:25px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_triangle3.gif") no-repeat 0 10px; }
+.xans-board-function p img {
+	width: auto !important;
+	height: 100%;
+}
