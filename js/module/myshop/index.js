@@ -50,11 +50,12 @@ const reciveVoterStamp = (voter_level, voterID, displayStampImg) => {
             .catch((error) => {
             console.error('실패:', error);
             });     
-        } else {
-            console.log('비보트 크루 입니다');
-            stamp_num = 5;
-            displayStampImg(stamp_num);
-        }
+        } 
+        // else {
+        //     console.log('비보트 크루 입니다');
+        //     stamp_num = 5;
+        //     displayStampImg(stamp_num);
+        // }
     }   
     return false;
 }
