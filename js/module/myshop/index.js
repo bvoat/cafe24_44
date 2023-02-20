@@ -28,11 +28,10 @@ const displayStampImg = (stamp) => {
 let stamp_node = document.querySelector(".my_stamp_pcs");
 
 const reciveVoterStamp = (voter_level, voterID, displayStampImg) => {
-
     if(voter_identity != null && voter_level != null){
-        if(voter_level.value == "일반 보터 "){    
-            console.log('일반 보터 ');      
-            fetch(`https://${api_domain}.shop/myshop/stamp?id=${voterID}`, {
+        if(voter_level.value == "일반 보터"){    
+            console.log('일반 보터');      
+            fetch(`https://${api_domain}.shop/stamp?id=${voterID}`, {
             method: 'GET', // 또는 'PUT'
             headers: {
                 'Content-Type': 'application/json',
