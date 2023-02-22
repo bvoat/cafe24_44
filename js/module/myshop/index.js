@@ -28,6 +28,7 @@ const displayStampImg = (stamp) => {
 let stamp_node = document.querySelector(".my_stamp_pcs");
 
 const reciveVoterStamp = (voter_level, voterID, displayStampImg) => {
+    console.log('voter_level: ', voter_level);
     if(voter_identity != null && voter_level != null){
         if(voter_level.value == "일반 보터"){    
             console.log('일반 보터');      
@@ -50,11 +51,12 @@ const reciveVoterStamp = (voter_level, voterID, displayStampImg) => {
             console.error('실패:', error);
             });     
         } 
-        // else {
-        //     console.log('비보트 크루 입니다');
-        //     stamp_num = 5;
-        //     displayStampImg(stamp_num);
-        // }
+        else if(voter_level.value == "비보트 크루") {
+            console.log('비보트 크루 입니다');
+            stamp_num = 5;
+            console.log('stamp_num: ', stamp_num);
+            displayStampImg(stamp_num);
+        }
     }   
     return false;
 }
