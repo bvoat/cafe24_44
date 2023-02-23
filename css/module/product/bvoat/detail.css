@@ -477,6 +477,7 @@
 }
 .funding_box .notice_box {
   margin-top: 40px;
+  padding: 0 11px;
 }
 .funding_box .notice_box p {
   width: 100%;
