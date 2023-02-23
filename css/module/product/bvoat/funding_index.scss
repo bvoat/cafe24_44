@@ -72,6 +72,12 @@
 			height: 234px;
 			overflow: hidden;
 			border-radius: 20px;
+
+			.img_wrap {
+				img {
+					top: -25%;
+				}
+			}
 		}
 
 		//D-Day 및 종료 아이콘
@@ -139,7 +145,7 @@
 				font-size: 1.4rem;
 				font-weight: normal;
 				color: $bvt-darkgray;
-				@include ellipsis(2, 1.8rem)
+				@include only-ellipsis(2, 1.8rem)
 			}
 
 			//구매자 수, 할인율 처리
