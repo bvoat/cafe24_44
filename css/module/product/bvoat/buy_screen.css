@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 :root {
@@ -64,8 +61,10 @@
 .buy_screen_option {
   width: 100%;
   height: 100%;
+  max-width: 449.5px;
   max-height: 378px;
   padding: 15px;
+  overflow-x: hidden;
   overflow-y: auto;
   padding-bottom: calc(constant(safe-area-inset-bottom) + 10px);
   padding-bottom: calc(env(safe-area-inset-bottom) + 10px);
@@ -97,11 +96,6 @@
   font-weight: 600;
 }
 .buy_screen_option .product_addoption td input::-moz-placeholder {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #A9A9A9;
-}
-.buy_screen_option .product_addoption td input:-ms-input-placeholder {
   font-size: 1.5rem;
   font-weight: 600;
   color: #A9A9A9;
@@ -147,15 +141,6 @@
   letter-spacing: -0.25px;
   padding: 6px 46px 6px 17px;
   cursor: pointer;
-  position: relative;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: var(--icon-select-close) no-repeat calc(100% - 17px);
-}
-.buy_screen_option .product_select tr td select::-ms-expand {
-  display: none;
-  /*for IE10,11*/
 }
 .buy_screen_option .product_select tr td ul {
   width: 100%;
@@ -224,8 +209,10 @@
   height: 32px !important;
   margin-bottom: -5px;
 }
-.option_direct table tbody tr .quantity > input[type=text], .option_direct table tbody tr .quantity > input[type=number],
-.option_direct table tbody tr #quantity, .option_direct table tbody tr p > input {
+.option_direct table tbody tr .quantity > input[type=text],
+.option_direct table tbody tr .quantity > input[type=number],
+.option_direct table tbody tr #quantity,
+.option_direct table tbody tr p > input {
   width: 37px !important;
   height: 32px;
   border: 1px solid #DDDDDD;
