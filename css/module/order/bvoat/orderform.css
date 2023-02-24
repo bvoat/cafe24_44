@@ -7,8 +7,9 @@
 /* 애니메이션 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
-select {
-  font-size: 1rem !important;
+select,
+a {
+  font-size: 1.3rem !important;
 }
 
 #mCafe24Order {

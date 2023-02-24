@@ -2,8 +2,9 @@
 @import "../../../abstracts/mixin";
 @import "../../../abstracts/variables";
 
-select {
-    font-size: 1rem !important;
+select,
+a {
+    font-size: 1.3rem !important;
 }
 
 #mCafe24Order {
