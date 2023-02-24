@@ -3,8 +3,9 @@
 @import "../../../abstracts/variables";
 
 select,
-a {
-    font-size: 1.3rem !important;
+a,
+#mCafe24Order input[type="text"] {
+    font-size: 1.35rem !important;
 }
 
 #mCafe24Order {
@@ -17,4 +18,19 @@ a {
 
 #mCafe24Order.typeHeader {
     padding-top: 0;
+}
+
+#mCafe24Order .ec-base-fold>.title .gRight {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+#mCafe24Order .txtStrong,
+#mCafe24Order .txtEm {
+    color: #2A3CD1;
+}
+
+#orderFixItem.ec-base-button.gFull [class*="btn"] {
+    background-color: #2A3CD1;
 }
