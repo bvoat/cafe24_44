@@ -524,7 +524,6 @@
   width: 100%;
   border-bottom: 1px solid #E2E2E2;
   padding: 52px 11px 6px;
-  margin-bottom: 10px;
   box-sizing: border-box;
   color: #292929;
 }
@@ -560,7 +559,7 @@
   display: flex;
   transition-property: height;
   box-sizing: content-box;
-  padding: 20px 0;
+  padding: 0 0 20px 0;
   overflow: hidden;
 }
 #productDetailBottom .detail_swiper_wrap {
