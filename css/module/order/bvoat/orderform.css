@@ -47,4 +47,8 @@ a,
 
 #mCafe24Order .payMethod > li.selected > .inner {
   border: 1px solid #2A3CD1;
+}
+
+#mCafe24Order .ec-base-button.gFull {
+  margin: 14px 14px 80px 18px;
 }/*# sourceMappingURL=orderform.css.map */
