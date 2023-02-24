@@ -38,12 +38,12 @@ $(document).ready(function(){
     $('.xans-product-listmain h2').toggle(function(){
         $(this).css('background-image', 'url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_title_open.gif")');
         $(this).siblings().hide();
-        $(this).parent().find('div.ec-base-paginate').hide();
+        $(this).parent().find('div.paginate').hide();
         $(this).parent().next('div.xans-product-listmore').hide();
     }, function() {
         $(this).css('background-image', 'url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_title_close.gif")');
         $(this).siblings().show();
-        $(this).parent().find('div.ec-base-paginate').show();
+        $(this).parent().find('div.paginate').show();
         $(this).parent().next('div.xans-product-listmore').show();
     });
 
@@ -72,7 +72,7 @@ $(document).ready(function(){
      */
     var globalBuyBtnScrollFunc = function() {
         // 구매버튼 관련변수
-        var sFixId = $('#orderFixItem').length > 0  ? 'orderFixItem' : 'fixedActionButton',
+        var sFixId = $('#orderFixItem').size() > 0  ? 'orderFixItem' : 'fixedActionButton',
             $area = $('#orderFixArea'),
             $item = $('#' + sFixId + '').not($area);
 
