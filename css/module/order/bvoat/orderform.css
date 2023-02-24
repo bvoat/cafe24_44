@@ -68,7 +68,7 @@ a,
 #ec-jigsaw-title-discount h2::before {
   width: 100%;
   display: block;
-  content: "이미 할인이 적용된 펀딩 상품에서는 사용 불가";
+  content: "이미 할인이 적용된 펀딩 상품에서는 사용이 불가합니다.";
   font-size: 11px;
   font-weight: normal;
   color: #707070;
