@@ -364,15 +364,8 @@
 
 .detail-aside-funding {
   width: 100%;
-  float: right;
-  padding: 12px 0;
-}
-
-.detail-goods-info {
-  background-color: #F8F9FD;
-  border-radius: 7px;
-  padding: 17px;
-  margin: 35px 0;
+  max-width: 450px;
+  margin-top: -40px;
 }
 
 /* 상품 정보 */
