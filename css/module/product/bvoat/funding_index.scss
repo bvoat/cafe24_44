@@ -73,6 +73,22 @@
 			overflow: hidden;
 			border-radius: 20px;
 
+			.promotion_date {
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.6rem;
+				font-weight: bold;
+				color: $bvt-white;
+				background: $bvt-blue;
+				padding: 10px 14px;
+				border-radius: 31px;
+				z-index: 1;
+				top: 13px;
+				left: 15px;
+			}
+
 			.img_wrap {
 				img {
 					top: -25%;

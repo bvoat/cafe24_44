@@ -4,10 +4,10 @@
     <li id="anchorBoxId_{$product_no}" class="swiper-slide list_item" data-productno="{$product_no}">
         <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"
             data-title="{$product_name_tag|striptag}">
-            <!--@import(/product/product_module/funding_listmain_price_wrap.html)-->
-
-            <span class="msgBox"></span>
+            <input type="hidden" name="promotion_end" value="{$product_promotion_end_date}"
+                class="displaynone promotion_end"><span class="msgBox"></span>
             <div class="thumb">
+                <p class="promotion_date"></p>
                 <div class="img_wrap">
                     <img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}">
                 </div>
@@ -35,10 +35,10 @@
     <li id="anchorBoxId_{$product_no}" class="swiper-slide list_item" data-productno="{$product_no}">
         <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"
             data-title="{$product_name_tag|striptag}">
-            <!--@import(/product/product_module/funding_listmain_price_wrap.html)-->
-
-            <span class="msgBox"></span>
+            <input type="hidden" name="promotion_end" value="{$product_promotion_end_date}"
+                class="displaynone promotion_end"><span class="msgBox"></span>
             <div class="thumb">
+                <p class="promotion_date"></p>
                 <div class="img_wrap">
                     <img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}">
                 </div>
@@ -76,45 +76,3 @@
         </a>
     </li>
 </ul>
-
-<script>
-    /* 가치태그 수신 */
-    // const reciveTagDetail = (prd_no) => {
-    //     fetch(`https://${api_domain}.shop/products/tagdetail?no=${prd_no}`, {
-    //         method: "GET", // 또는 'PUT'
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //             "Content-Type": "application/x-www-form-urlencoded",
-    //         },
-    //     })
-    //         .then((response) => response.json())
-    //         .then((response) => {
-    //             try {
-    //                 console.log('data: ', response);
-    //                 if (response.status == 200 && response.success) {
-    //                     response.data.forEach((category) => {
-    //                         console.log("category", category)
-
-    //                     });
-    //                 } else {
-    //                     console.log("error : ", response.status, response.message);
-    //                 }
-    //             } catch (error) {
-    //                 console.log("error : ", error, response.status, response.message);
-    //             }
-    //             return false;
-    //         })
-    //         .catch((error) => {
-    //             console.error("실패:", error);
-    //         });
-    // };
-
-    // const list_item_all = document.querySelectorAll(".list_item");
-
-    list_item_all.forEach((item) => {
-        let prd_no = item.dataset.productno;
-        reciveTagDetail(prd_no)
-    })
-
-
-</script>
