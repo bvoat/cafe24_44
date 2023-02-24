@@ -11,7 +11,9 @@ select,
 a,
 #mCafe24Order input[type=text],
 #mCafe24Order .txtEm,
-.totalPay .txtEm {
+.totalPay .txtEm,
+#mCafe24Order p.ec-base-help.typeDash,
+#mCafe24Order ul.ec-base-help.typeDash li {
   font-size: 1.35rem !important;
 }
 
