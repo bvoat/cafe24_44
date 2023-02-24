@@ -4,7 +4,9 @@
 
 select,
 a,
-#mCafe24Order input[type="text"] {
+#mCafe24Order input[type="text"],
+#mCafe24Order .txtEm,
+.totalPay .txtEm {
     font-size: 1.35rem !important;
 }
 
