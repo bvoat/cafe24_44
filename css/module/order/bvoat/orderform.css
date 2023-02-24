@@ -61,6 +61,10 @@ a,
   max-width: 450px;
 }
 
+#ec-jigsaw-title-discount h2 {
+  position: relative;
+  width: 100%;
+}
 #ec-jigsaw-title-discount h2::before {
   width: 100%;
   display: block;
