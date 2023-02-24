@@ -2,6 +2,10 @@
 @import "../../../abstracts/mixin";
 @import "../../../abstracts/variables";
 
+select {
+    font-size: 1rem;
+}
+
 #mCafe24Order {
     width: 100%;
     max-width: 450px;
