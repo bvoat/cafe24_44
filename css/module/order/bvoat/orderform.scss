@@ -58,7 +58,7 @@ a,
 }
 
 #ec-jigsaw-title-discount h2 {
-    &::after {
+    &::before {
         width: 100%;
         display: block;
         content: "이미 할인이 적용된 펀딩·공구 상품은 마일리지 적용이 불가합니다.";
