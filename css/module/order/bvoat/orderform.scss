@@ -3,7 +3,7 @@
 @import "../../../abstracts/variables";
 
 select {
-    font-size: 1rem;
+    font-size: 1rem !important;
 }
 
 #mCafe24Order {
@@ -11,8 +11,9 @@ select {
     max-width: 450px;
     margin: 0 auto;
     padding: 30px 0 0 0;
+}
 
-    .typeHeader {
-        padding-top: 0;
-    }
+
+#mCafe24Order.typeHeader {
+    padding-top: 0;
 }
