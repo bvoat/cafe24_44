@@ -97,7 +97,7 @@
   margin-bottom: 20px;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .input_option .auto_login {
-  display: flex;
+  display: flex !important;
   flex-flow: row nowrap;
   align-items: center;
 }

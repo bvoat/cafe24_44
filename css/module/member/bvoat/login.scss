@@ -96,7 +96,7 @@
                         margin-bottom: 20px;
 
                         .auto_login {
-                            display: flex;
+                            display: flex !important;
                             flex-flow: row nowrap;
                             align-items: center;
 
@@ -213,6 +213,7 @@
                                     width: 44px;
                                     height: 44px;
                                     cursor: pointer;
+
                                     a {
                                         display: block;
                                         width: 100%;
@@ -260,6 +261,7 @@
                         font-size: 1.3rem;
                         font-weight: 400;
                     }
+
                     .nomember_order {
                         display: flex;
                         flex-flow: column nowrap;
@@ -271,13 +273,14 @@
                         margin-top: 17px;
                         padding: 12px 0;
 
-                        p{
+                        p {
                             color: transparentize($bvt-darkgray, 0.1);
                             font-size: 1.1rem;
                             font-weight: 400;
                             text-align: center;
                         }
-                        .nomember_order_btn{
+
+                        .nomember_order_btn {
                             border: $bvt-btn-border-gray;
                             border-radius: 90px;
                             color: $bvt-white;
@@ -298,7 +301,8 @@
 
 #noMemberLogin {
     margin-top: 81px;
-    padding:  23px 0 60%;
+    padding: 23px 0 60%;
+
     //높이 생성 위한 padding
     #noMemberLoginTitle {
         display: flex;
@@ -319,6 +323,7 @@
             letter-spacing: -1px;
             line-height: 1.2em;
         }
+
         h3 {
             margin: 15px 0;
             font-weight: 300;
@@ -326,7 +331,8 @@
             color: transparentize($bvt-black, 0.1);
             letter-spacing: -0.5px;
         }
-        p{
+
+        p {
             font-weight: 600;
             font-size: 1.2rem;
             color: $bvt-blue;
@@ -336,17 +342,20 @@
 
     #noMemberLoginField {
         margin: 50px 11px;
+
         fieldset {
             width: 100%;
             max-width: 450px;
             background: none;
             border: none;
             padding: 0 0 20px;
-            >ul{
+
+            >ul {
                 .nomem_login_input_wrap {
                     display: flex;
                     flex-flow: column nowrap;
                     width: 100%;
+
                     >label {
                         display: block;
                         height: 18px;
@@ -355,6 +364,7 @@
                         color: $bvt-darkgray;
                         margin-left: 5px;
                     }
+
                     >input {
                         display: block;
                         width: 100%;
@@ -365,7 +375,7 @@
                         border: $bvt-input-border;
                         font-size: 1.4rem;
                         color: $bvt-darkgray;
-                        
+
                         &::placeholder {
                             font-size: 1.3rem;
                             font-weight: 300;
@@ -376,6 +386,7 @@
                 }
             }
         }
+
         .nomem_login_submit {
             display: flex;
             width: 100%;
