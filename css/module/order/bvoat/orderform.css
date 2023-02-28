@@ -7,14 +7,39 @@
 /* 애니메이션 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
-select,
-a,
-#mCafe24Order input[type=text],
-#mCafe24Order .txtEm,
-.totalPay .txtEm,
-#mCafe24Order p.ec-base-help.typeDash,
-#mCafe24Order ul.ec-base-help.typeDash li {
-  font-size: 1.35rem !important;
+#header_wrap {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.1607843137);
+}
+#header_wrap #header_logo_section {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  padding: 0 11px;
+}
+#header_wrap #header_logo_section > a {
+  display: flex;
+  justify-content: center;
+  width: 33%;
+}
+#header_wrap #header_logo_section > a .header_logo {
+  display: block;
+  width: 73px;
+  height: 40px;
+  background: url("https://bvoatofficial.cafe24.com/bvtIMG/Bvoat_022CFF_Text_logo_trans_fit.png") no-repeat center;
+  background-size: contain;
+  text-indent: -9999px;
 }
 
 #mCafe24Order {
