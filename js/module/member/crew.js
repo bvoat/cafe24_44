@@ -1,10 +1,4 @@
 
-/**
- * 날짜 변경
- */
-(function monthChange() {
-  document.querySelector(".month").innerText = (new Date().getMonth()) + 1;
-})()
 
 /* 슬라이더 */
   var swiper = new Swiper(".crew_method_img_wrap", {

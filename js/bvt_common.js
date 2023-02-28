@@ -460,3 +460,14 @@ function setArraylocal(key, value, limitMax) {
   }
   localStorage.setItem(key, JSON.stringify(obj));
 }
+
+/**
+ * 날짜 변경
+ */
+function monthChange() {
+  document.querySelectorAll(".month").forEach((month)=>{
+      month.innerText = (new Date().getMonth()) + 1;
+  })
+}
+
+window.addEventListener("load", monthChange)
