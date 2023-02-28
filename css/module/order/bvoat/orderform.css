@@ -7,9 +7,13 @@
 /* 애니메이션 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
+body {
+  width: 100%;
+}
+
 #bvtHeader {
   position: fixed;
-  width: inherit;
+  width: 100%;
   height: -moz-fit-content;
   height: fit-content;
   top: 0;
