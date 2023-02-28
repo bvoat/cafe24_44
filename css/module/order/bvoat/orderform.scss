@@ -2,41 +2,56 @@
 @import "../../../abstracts/mixin";
 @import "../../../abstracts/variables";
 
-
-#header_wrap {
-    width: 100%;
-    max-width: 450px;
-    position: relative;
+#bvtHeader {
+    position: fixed;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    backdrop-filter: blur(30px);
-    box-shadow: 0 7px 5px -5px #00000029;
+    max-width: 450px;
+    min-width: 200px;
+    width: 100%;
+    height: fit-content;
+    background: transparentize(#fff, .2);
+    top: 0;
+    margin: 0 auto;
+    z-index: 9;
 
-    #header_logo_section {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
+    #header_wrap {
         width: 100%;
         max-width: 450px;
-        padding: 0 11px;
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        overflow: hidden;
+        backdrop-filter: blur(30px);
+        box-shadow: 0 7px 5px -5px #00000029;
 
-        >a {
+        #header_logo_section {
             display: flex;
-            justify-content: center;
-            width: 33%;
+            flex-flow: row nowrap;
+            align-items: center;
+            width: 100%;
+            max-width: 450px;
+            padding: 0 11px;
 
-            .header_logo {
-                display: block;
-                width: 73px;
-                height: 40px;
-                background: $bvt-logo no-repeat center;
-                background-size: contain;
-                text-indent: -9999px;
+            >a {
+                display: flex;
+                justify-content: center;
+                width: 33%;
+
+                .header_logo {
+                    display: block;
+                    width: 73px;
+                    height: 40px;
+                    background: $bvt-logo no-repeat center;
+                    background-size: contain;
+                    text-indent: -9999px;
+                }
             }
         }
+
     }
 
 }

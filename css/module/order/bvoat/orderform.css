@@ -7,7 +7,21 @@
 /* 애니메이션 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
-#header_wrap {
+#bvtHeader {
+  position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 450px;
+  min-width: 200px;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: rgba(255, 255, 255, 0.8);
+  top: 0;
+  margin: 0 auto;
+  z-index: 9;
+}
+#bvtHeader #header_wrap {
   width: 100%;
   max-width: 450px;
   position: relative;
@@ -15,12 +29,13 @@
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
   overflow: hidden;
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
   box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.1607843137);
 }
-#header_wrap #header_logo_section {
+#bvtHeader #header_wrap #header_logo_section {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -28,12 +43,12 @@
   max-width: 450px;
   padding: 0 11px;
 }
-#header_wrap #header_logo_section > a {
+#bvtHeader #header_wrap #header_logo_section > a {
   display: flex;
   justify-content: center;
   width: 33%;
 }
-#header_wrap #header_logo_section > a .header_logo {
+#bvtHeader #header_wrap #header_logo_section > a .header_logo {
   display: block;
   width: 73px;
   height: 40px;
