@@ -109,4 +109,13 @@ body {
   color: #707070;
   position: absolute;
   top: -16px;
+}
+
+/* ----------- 쿠폰 새 창 -------------- */
+#mCafe24Order .ec-base-layer.typeWide h1 {
+  background: #022CFF;
+}
+
+#mCafe24Order .btnSubmit {
+  background: #022CFF;
 }/*# sourceMappingURL=orderform.css.map */
