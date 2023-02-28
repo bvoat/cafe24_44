@@ -466,8 +466,9 @@ function setArraylocal(key, value, limitMax) {
  */
 function monthChange() {
   document.querySelectorAll(".month").forEach((month)=>{
+    console.log('month: ', month);
       month.innerText = (new Date().getMonth()) + 1;
   })
 }
 
-window.addEventListener("load", monthChange)
+window.addEventListener("load", setTimeout(monthChange, 500))
