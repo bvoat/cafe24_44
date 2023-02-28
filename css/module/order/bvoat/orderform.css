@@ -38,6 +38,7 @@ body {
 #bvtHeader #header_wrap #header_logo_section {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 450px;
