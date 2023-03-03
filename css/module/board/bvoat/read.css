@@ -100,11 +100,8 @@
      object-fit: contain;
 }
 #productBoardRead #productBoardReadTableHead .product_info .icon {
-  position: absolute;
   height: 25px;
   margin-top: 4%;
-  top: 3px;
-  left: 10px;
   z-index: 1;
 }
 #productBoardRead #productBoardReadTableHead .product_info .icon img {

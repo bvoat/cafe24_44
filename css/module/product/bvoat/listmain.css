@@ -120,11 +120,8 @@
      object-fit: contain;
 }
 .index_list .icon {
-  position: absolute;
   height: 25px;
   margin-top: 4%;
-  top: 3px;
-  left: 10px;
   z-index: 1;
 }
 .index_list .icon img {

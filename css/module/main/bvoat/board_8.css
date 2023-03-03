@@ -68,11 +68,8 @@
      object-fit: contain;
 }
 #bvtBoard8 .icon {
-  position: absolute;
   height: 25px;
   margin-top: 4%;
-  top: 3px;
-  left: 10px;
   z-index: 1;
 }
 #bvtBoard8 .icon img {

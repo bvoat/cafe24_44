@@ -209,11 +209,8 @@
      object-fit: contain;
 }
 #productBoardList #productBoardListTable .icon {
-  position: absolute;
   height: 25px;
   margin-top: 4%;
-  top: 3px;
-  left: 10px;
   z-index: 1;
 }
 #productBoardList #productBoardListTable .icon img {

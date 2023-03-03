@@ -116,11 +116,8 @@
      object-fit: contain;
 }
 .bvt-funding .list_item .icon {
-  position: absolute;
   height: 25px;
   margin-top: 4%;
-  top: 3px;
-  left: 10px;
   z-index: 1;
 }
 .bvt-funding .list_item .icon img {
