@@ -7,7 +7,6 @@
 #fundingListmain,
 #fundingEndListmain {
 	width: 100%;
-	padding: 0 17px;
 }
 
 //메인 진열에 펀딩 없는 경우 카카오 플친 처리
@@ -94,6 +93,7 @@
 		width: 100%;
 		border-radius: 20px;
 		box-shadow: 3px 7px 11px 0px rgba(242, 242, 242, 1);
+		margin-bottom: 20px;
 		transition: all 0.8s;
 		overflow: hidden;
 
