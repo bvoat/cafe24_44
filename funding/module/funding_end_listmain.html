@@ -1,0 +1,72 @@
+<!--@css(/css/module/product/bvoat/funding_index.css)-->
+
+<ul class="prdList swiper-wrapper bvt-funding">
+    <li id="anchorBoxId_{$product_no}" class="swiper-slide list_item" data-productno="{$product_no}">
+        <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"
+            data-title="{$product_name_tag|striptag}">
+            <input type="hidden" name="promotion_end" value="{$product_promotion_end_date}"
+                class="displaynone promotion_end"><span class="msgBox"></span>
+            <div class="thumb">
+                <p class="promotion_date"></p>
+                <div class="img_wrap">
+                    <img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}">
+                </div>
+            </div>
+            <div class="box-desc desc">
+                <div class="summary">{$summary_desc}</div>
+                <div class="ddayPrd"><span id="funding-dday-{$product_no}"></span></div>
+                <div class="typePrd">
+                    <span id="funding-type-{$product_no}"></span>
+                </div>
+                <div class="title model">
+                    {$prd_model}
+                </div>
+                <div class="simple_desc">
+                    {$simple_desc}
+
+                    <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
+                </div>
+                <!-- <div class="gradientline"> </div> -->
+                <!-- <div class="custom_voter">
+                    <div id="custom-voter-{$product_no}"></div>
+                    <div id="custom-discount-{$product_no}"></div>
+                </div> -->
+            </div>
+
+        </a>
+    </li>
+    <li id="anchorBoxId_{$product_no}" class="swiper-slide list_item" data-productno="{$product_no}">
+        <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"
+            data-title="{$product_name_tag|striptag}">
+            <input type="hidden" name="promotion_end" value="{$product_promotion_end_date}"
+                class="displaynone promotion_end"><span class="msgBox"></span>
+            <div class="thumb">
+                <p class="promotion_date"></p>
+                <div class="img_wrap">
+                    <img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}">
+                </div>
+            </div>
+            <div class="box-desc desc">
+                <div class="summary">{$summary_desc}</div>
+                <div class="ddayPrd"><span id="funding-dday-{$product_no}"></span></div>
+                <div class="typePrd">
+                    <span id="funding-type-{$product_no}"></span>
+                </div>
+                <div class="title model">
+                    {$prd_model}
+                </div>
+                <div class="simple_desc">
+                    {$simple_desc}
+
+                    <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
+                </div>
+                <!-- <div class="gradientline"> </div> -->
+                <!-- <div class="custom_voter">
+                    <div id="custom-voter-{$product_no}"></div>
+                    <div id="custom-discount-{$product_no}"></div>
+                </div> -->
+            </div>
+
+        </a>
+    </li>
+</ul>
