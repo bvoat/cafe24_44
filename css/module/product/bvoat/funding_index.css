@@ -245,20 +245,14 @@
   font-size: 1.4rem;
   font-weight: bold;
   color: #022CFF;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .bvt-funding .list_item .desc .summary {
-  position: absolute;
-  font-size: 1.5rem;
-  font-weight: bold;
-  top: -22px;
-  right: 25px;
-  padding: 11px 15px;
-  border: 1px solid #C4C4C4;
-  background: #ffffff;
-  color: #292929;
-  border-radius: 31px;
-  border-color: #707070;
+  position: relative;
+  font-size: 1.35rem;
+  font-weight: normal;
+  margin-bottom: 7.5px;
+  color: #707070;
 }
 .bvt-funding .list_item .desc .typePrd {
   display: none;

@@ -226,21 +226,15 @@
 				font-size: 1.4rem;
 				font-weight: bold;
 				color: $bvt-blue;
-				margin-bottom: 10px;
+				margin-top: 10px;
 			}
 
 			.summary {
-				position: absolute;
-				font-size: 1.5rem;
-				font-weight: bold;
-				top: -22px;
-				right: 25px;
-				padding: 11px 15px;
-				border: $bvt-input-border;
-				background: $bvt-white;
-				color: $bvt-black;
-				border-radius: 31px;
-				border-color: $bvt-darkgray;
+				position: relative;
+				font-size: 1.35rem;
+				font-weight: normal;
+				margin-bottom: 7.5px;
+				color: $bvt-darkgray;
 			}
 
 			//공구 / 펀딩 구분 아이콘
