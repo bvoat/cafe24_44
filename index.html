@@ -3,13 +3,13 @@
 <!--@css(/layout/basic/css/aos.css)-->
 <script src="/js/aos.js"></script>
 <article id="bvtHome">
-    <!--보터 카운트-->
+    <!--인덱스 상단 배너-->
     <section id="indexUserCnt" class="index_user">
         <div id="joinbanner" class="joinbanner"><span>🌞 </span> 비보트에서 <em class="membercnt"></em><em>명</em>이 가치소비를 함께하는
             중!
         </div>
     </section>
-    <!--보터 카운트-->
+    <!--인덱스 상단 배너-->
     <!-- 메인 사각 배너 -->
     <!-- @import(/main/module/index_slide.html) -->
 
@@ -17,15 +17,15 @@
     <section id="indexListmain" class="index_list">
         <!-- 펀딩 -->
         <div id="listmainFunding" class="listmain">
-            <h3>⏰ 진행 중인 펀딩<a class="listmain_arrow" href="/funding/index.html" title="펀딩 보러가기"></a></h3>
-            <div class="list_contents_wrap right-side-control ">
+            <h3>💌 펀딩 진행 중이에요<a class="listmain_arrow" href="/funding/index.html" title="펀딩 보러가기"></a></h3>
+            <div class="list_contents_wrap">
                 <div class="list_item_box one_img" module="product_listmain_18">
                     <!--
                         $count = 20
                         $basket_result = /product/add_basket.html
                         $basket_option = /product/basket_option.html
                     -->
-                    <!--@import(/funding/module/funding_listmain.html)-->
+                    <!--@import(/funding/module/funding_index_listmain.html)-->
                 </div>
                 <div class="swiper-pagination list_item_bullet"></div>
             </div>
@@ -147,7 +147,7 @@
     // Funding 메인진열 슬라이드
     var swiper = new Swiper(".one_img", {
         slidesPerView: 1,
-        spaceBetween: 7,
+        spaceBetween: 0,
         pagination: {
             el: ".list_item_bullet",
             clickable: true,
@@ -246,20 +246,4 @@
         hideMoreview();
         clickMoreviewBtn();
     })
-
-
-
-    /* 최종 실행 */
-    // window.addEventListener("DOMContentLoaded", () => {
-    //     [...recommendBtnArray].forEach((btn) => {
-    //         btn.addEventListener("click", clickChangeRecommendListmainButton);
-    //     });
-    // })
-    // window.addEventListener("DOMContentLoaded", () => {
-    //     [...freedeliveryBtnArray].forEach((btn) => {
-    //         btn.addEventListener("click", clickChangeFreeDeliveryListmainButton);
-    //     });
-    // })
-    /* 최종 실행 */
-
 </script>

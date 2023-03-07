@@ -39,28 +39,6 @@
 			border-radius: 31px;
 			z-index: 1;
 		}
-
-		.bvt_kakao {
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: center;
-			align-items: center;
-			padding: 4px 33px;
-			border-radius: 22px;
-			border: 1px solid #FADC3F;
-			background: #FFF7CC;
-			color: #3B1E1E;
-			font-size: 1.6rem;
-			font-weight: bold;
-
-			&::before {
-				display: inline-block;
-				content: '';
-				width: 34px;
-				height: 34px;
-				background: var(--kakao);
-			}
-		}
 	}
 
 	.description {
@@ -82,18 +60,45 @@
 	}
 }
 
+//카카오 버튼
+.bvt_kakao {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	padding: 6px 33px;
+	border-radius: 22px;
+	border: 1px solid #FADC3F;
+	background: #FFF7CC;
+	color: #3B1E1E;
+	font-size: 1.6rem;
+	font-weight: bold;
+
+	&::before {
+		display: inline-block;
+		content: '';
+		width: 34px;
+		height: 34px;
+		background: $kakao-logo;
+	}
+}
+
+
 .bvt-funding {
 	position: relative;
 	width: 100%;
 	max-width: 450px;
 	margin: 0 auto;
+	padding: 0 11px;
 
 	.list_item {
 		position: relative;
 		width: 100%;
+		max-width: 428px;
+		margin-right: 22px;
 		border-radius: 20px;
 		box-shadow: 3px 7px 11px 0px rgba(242, 242, 242, 1);
-		margin-bottom: 20px;
+		margin-bottom: 33px;
 		transition: all 0.8s;
 		overflow: hidden;
 
@@ -142,29 +147,45 @@
 
 		//펀딩 사진 높이 수정
 		.thumb {
+			position: relative;
 			height: 234px;
 			overflow: hidden;
-			border-radius: 20px;
-
-			.promotion_date {
-				position: absolute;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				font-size: 1.6rem;
-				font-weight: bold;
-				color: $bvt-white;
-				background: $bvt-blue;
-				padding: 10px 14px;
-				border-radius: 31px;
-				z-index: 1;
-				top: 13px;
-				left: 15px;
-			}
 
 			.img_wrap {
 				img {
-					top: -25%;
+					top: -28%;
+				}
+			}
+
+			//할인율 / icon
+			.img_data {
+				position: absolute;
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: flex-start;
+				align-items: center;
+				top: 0;
+				margin: 14px 0 0 15px;
+
+				.fixprice,
+				.realprice {
+					display: none;
+				}
+
+				.discountrate {
+					color: $bvt-darkblue;
+					background: $bvt-white;
+					border: 1px solid $bvt-darkblue;
+					border-radius: 18px;
+					padding: 4.5px 12.5px;
+					box-sizing: border-box;
+					margin-right: 5px;
+					margin-left: 0;
+				}
+
+				.icon {
+					height: 30px;
+					margin: 0;
 				}
 			}
 		}
@@ -198,6 +219,15 @@
 			position: relative;
 			width: 100%;
 			padding: 24.2px 15px;
+
+			.promotion_date {
+				display: flex;
+				align-items: flex-start;
+				font-size: 1.4rem;
+				font-weight: bold;
+				color: $bvt-blue;
+				margin-bottom: 10px;
+			}
 
 			.summary {
 				position: absolute;

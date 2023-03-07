@@ -15,7 +15,7 @@ const calculationDate = () => {
     const today = new Date();
     const target = new Date(endDay);
     const gap = target - today;
-    const diffDay = String(Math.floor(gap / (1000*60*60*24))).padStart(2,"0");
+    const diffDay = String(Math.floor(gap / (1000*60*60*24))).padStart(2,"");
     const diffHour = String( Math.floor((gap / (1000*60*60)) % 24)).padStart(2,"0");
     const diffMin = String(Math.floor((gap / (1000*60)) % 60)).padStart(2,"0");
     const diffSec = String(Math.floor(gap / 1000 % 60)).padStart(2,"0");
@@ -23,7 +23,8 @@ const calculationDate = () => {
       if (gap <= 0) {
         promoDateAreaArray[i].innerText = "마감";
       } else {
-        promoDateAreaArray[i].innerText = `${diffDay}일 ${diffHour}:${diffMin}:${diffSec}`;
+        // promoDateAreaArray[i].innerText = `${diffDay}일 ${diffHour}:${diffMin}:${diffSec}`;
+        promoDateAreaArray[i].innerText = `${diffDay}일 남았어요!`;
       }
     } else {
       promoDateAreaArray[i].innerText = "";
@@ -31,7 +32,7 @@ const calculationDate = () => {
     }
   })
 };
-let promotionTimer = setInterval(calculationDate, 1000);
+let promotionTimer = setInterval(calculationDate, 64000);
 
 /**
  * 회원 수 불러오기
