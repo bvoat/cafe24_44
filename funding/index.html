@@ -4,11 +4,19 @@
 
 
 <section id="fundingIndex">
-
+    <!--보터 카운트 배너-->
+    <section id="indexFundingSumbanner" class="index_sum">
+        <div id="fundingsumbanner" class="fundingsumbanner"><span>👍 </span> 지금까지 <em class="fundingsum"></em>원이 절약됐어요!
+        </div>
+    </section>
+    <!--보터 카운트 배너-->
     <!-- 펀딩중 타이틀 -->
     <section id="fundingIndexPlayingTitle" class="indextitle">
-        <h2>지금 진행 중이에요.</h2>
-        <h3>책임 있는 생산에 가치있는 한 표를 함께해요.</h3>
+        <h2>비보트 펀딩</h2>
+        <h3>가치소비, 저렴한 가격에 배송비 없이 소개할게요</h3>
+        <a href="http://pf.kakao.com/_Rxnhnxb" title="카카오 플친 맺고 오픈 알림 받기">
+            <div class="bvt_kakao">카카오 플친 맺고 오픈 알림 받기</div>
+        </a>
     </section>
     <!-- 펀딩중 타이틀 -->
 
@@ -70,10 +78,6 @@
 
 <script>
     window.addEventListener("DOMContentLoaded", () => {
-        //펀딩 중 메인진열 슬라이더 삭제
-        document.querySelector(".bvt-funding").classList.remove("swiper-wrapper");
-
-
         // listmain18 내 ul로 상품 리스트가 없으면 배너 표시
         if (document.querySelector(".xans-product-listmain-18>ul") == null) {
             console.log("none");
@@ -102,7 +106,7 @@
             const today = new Date();
             const target = new Date(endDay);
             const gap = target - today;
-            const diffDay = String(Math.floor(gap / (1000 * 60 * 60 * 24))).padStart(2, "0");
+            const diffDay = String(Math.floor(gap / (1000 * 60 * 60 * 24))).padStart(2, "");
             const diffHour = String(Math.floor((gap / (1000 * 60 * 60)) % 24)).padStart(2, "0");
             const diffMin = String(Math.floor((gap / (1000 * 60)) % 60)).padStart(2, "0");
             const diffSec = String(Math.floor(gap / 1000 % 60)).padStart(2, "0");
@@ -110,7 +114,8 @@
                 if (gap <= 0) {
                     promoDateAreaArray[i].innerText = "마감";
                 } else {
-                    promoDateAreaArray[i].innerText = `${diffDay}일 ${diffHour}:${diffMin}:${diffSec}`;
+                    // promoDateAreaArray[i].innerText = `${diffDay}일 ${diffHour}:${diffMin}:${diffSec}`;
+                    promoDateAreaArray[i].innerText = `${diffDay}일 남았어요!`;
                 }
             } else {
                 promoDateAreaArray[i].innerText = "";
@@ -119,5 +124,6 @@
         })
     };
     let promotionTimer = setInterval(calculationDate, 1000);
-
+    const sumCount = document.querySelector(".fundingsum");
+    numberCounting(sumCount, "173451236")
 </script>
