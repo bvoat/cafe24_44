@@ -239,19 +239,11 @@
   width: 100%;
   padding: 24.2px 15px;
 }
-.bvt-funding .list_item .desc .promotion_date {
-  display: flex;
-  align-items: flex-start;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #022CFF;
-  margin-top: 10px;
-}
 .bvt-funding .list_item .desc .summary {
   position: relative;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: normal;
-  margin-bottom: 7.5px;
+  margin-bottom: 6px;
   color: #707070;
 }
 .bvt-funding .list_item .desc .typePrd {
@@ -264,12 +256,12 @@
 .bvt-funding .list_item .desc .title {
   font-size: 1.9rem;
   font-weight: bold;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .bvt-funding .list_item .desc .simple_desc {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: normal;
-  color: #707070;
+  color: #292929;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -279,6 +271,14 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 2.1rem;
+}
+.bvt-funding .list_item .desc .promotion_date {
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #022CFF;
+  margin-top: 11px;
 }
 .bvt-funding .list_item .desc .custom_voter {
   display: none;

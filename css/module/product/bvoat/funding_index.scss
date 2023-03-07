@@ -220,20 +220,12 @@
 			width: 100%;
 			padding: 24.2px 15px;
 
-			.promotion_date {
-				display: flex;
-				align-items: flex-start;
-				font-size: 1.4rem;
-				font-weight: bold;
-				color: $bvt-blue;
-				margin-top: 10px;
-			}
 
 			.summary {
 				position: relative;
-				font-size: 1.35rem;
+				font-size: 1.3rem;
 				font-weight: normal;
-				margin-bottom: 7.5px;
+				margin-bottom: 6px;
 				color: $bvt-darkgray;
 			}
 
@@ -251,14 +243,23 @@
 			.title {
 				font-size: 1.9rem;
 				font-weight: bold;
-				margin-bottom: 12px;
+				margin-bottom: 10px;
 			}
 
 			.simple_desc {
-				font-size: 1.4rem;
+				font-size: 1.5rem;
 				font-weight: normal;
-				color: $bvt-darkgray;
+				color: $bvt-black;
 				@include only-ellipsis(2, 1.8rem)
+			}
+
+			.promotion_date {
+				display: flex;
+				align-items: flex-start;
+				font-size: 1.4rem;
+				font-weight: bold;
+				color: $bvt-blue;
+				margin-top: 11px;
 			}
 
 			//구매자 수, 할인율 처리
