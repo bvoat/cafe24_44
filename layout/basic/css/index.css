@@ -126,9 +126,7 @@
 }
 #bvtHome #indexListmain div.listmain:first-of-type {
   padding: 25.8px 11px 0;
-}
-#bvtHome #indexListmain div.listmain:first-of-type > h3 {
-  padding: 0;
+  margin-bottom: 40px;
 }
 #bvtHome #indexListmain div.listmain:nth-child(2) .list_item {
   display: block;
