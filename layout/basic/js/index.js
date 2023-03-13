@@ -24,7 +24,7 @@ const calculationDate = () => {
         promoDateAreaArray[i].innerText = "마감";
       } else {
         // promoDateAreaArray[i].innerText = `${diffDay}일 ${diffHour}:${diffMin}:${diffSec}`;
-        promoDateAreaArray[i].innerText = `${diffDay}일 남았어요!`;
+        promoDateAreaArray[i].innerText = `${+diffDay + 1}일 남았어요!`;
       }
     } else {
       promoDateAreaArray[i].innerText = "";
