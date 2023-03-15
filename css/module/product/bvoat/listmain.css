@@ -93,8 +93,9 @@
      object-fit: cover;
 }
 .index_list .icon {
-  height: 30px;
-  z-index: 1;
+  position: absolute;
+  top: 0;
+  height: 21px;
 }
 
 /* 메인 진열 공통 */

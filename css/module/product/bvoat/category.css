@@ -84,8 +84,9 @@
      object-fit: cover;
 }
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .icon {
-  height: 30px;
-  z-index: 1;
+  position: absolute;
+  top: 0;
+  height: 21px;
 }
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .category_img {
   width: 100%;
@@ -171,8 +172,9 @@
 }
 #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .icon,
 #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .icon {
-  height: 30px;
-  z-index: 1;
+  position: absolute;
+  top: 0;
+  height: 21px;
 }
 #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_img,
 #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_img {
@@ -260,8 +262,9 @@
 }
 #categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .icon,
 #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .icon {
-  height: 30px;
-  z-index: 1;
+  position: absolute;
+  top: 0;
+  height: 21px;
 }
 #categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .category_img,
 #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .category_img {
