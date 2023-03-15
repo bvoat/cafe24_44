@@ -149,6 +149,7 @@
   image-rendering: -webkit-optimize-contrast;
 }
 .bvt-funding .list_item .img_data .price_wrap {
+  width: 100%;
   align-items: flex-end;
 }
 .bvt-funding .list_item .img_data .fixprice,
