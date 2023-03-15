@@ -112,20 +112,4 @@
   line-height: 1.7rem;
   height: 3.6rem;
   margin-bottom: 18px;
-}
-
-.icon {
-  position: absolute;
-  height: 25px;
-  margin-top: 4%;
-  top: 3px;
-  left: 10px;
-  z-index: 1;
-}
-.icon img {
-  width: auto;
-  height: inherit;
-  margin-right: 5px;
-  -o-object-fit: contain;
-     object-fit: contain;
 }/*# sourceMappingURL=product_list.css.map */

@@ -51,20 +51,3 @@
 }
 
 @include product-desc(9px, 0rem, 1.2rem, 1.4rem);
-
-//하단 아이콘 신버전
-.icon {
-    position: absolute;
-    height: 25px;
-    margin-top: 4%;
-    top: 3px;
-    left: 10px;
-    z-index: 1;
-
-    img {
-        width: auto;
-        height: inherit;
-        margin-right: 5px;
-        object-fit: contain;
-    }
-}

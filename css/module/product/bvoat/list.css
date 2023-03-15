@@ -76,11 +76,12 @@
   position: absolute;
   display: block;
   content: "";
-  width: 110%;
+  width: 120%;
   height: 3px;
   border-radius: 5px;
   background: #022CFF;
-  bottom: -12px;
+  bottom: 0;
+  left: -2px;
 }
 
 #product_normalmenu {
