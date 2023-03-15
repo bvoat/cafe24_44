@@ -62,8 +62,9 @@
      object-fit: cover;
 }
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .icon {
-  height: 30px;
-  z-index: 1;
+  position: absolute;
+  top: 0;
+  height: 21px;
 }
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb {
   width: 30%;
