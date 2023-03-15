@@ -13,6 +13,7 @@
     max-width: 450px;
     padding: 23px 11px;
     margin: 81px 0px 60px;
+
     #orderExchangeTitle {
         display: flex;
         flex-flow: column nowrap;
@@ -32,11 +33,12 @@
             color: $bvt-lostfocus-gray;
         }
     }
-    #orderExchangeTable{
+
+    #orderExchangeTable {
         width: 100%;
         max-width: 450px;
 
-        .title{
+        .title {
             display: flex;
             flex-flow: row nowrap;
             justify-content: flex-start;
@@ -44,38 +46,45 @@
             height: 40px;
             padding: 0 11px;
             background: $bvt-darkgray;
-            h3{
+
+            h3 {
                 font-size: 1.3rem;
                 font-weight: 500;
             }
         }
-        .chk>input{
+
+        .chk>input {
             width: 16px;
             height: 16px;
             cursor: pointer;
         }
-        .description{
+
+        .description {
             width: 100%;
             display: flex;
             flex-flow: row nowrap;
             justify-content: flex-start;
             align-items: center;
             padding: 11px 0;
-            @include product-thumb(0px, 0px, 0px, 0px);
-            .thumb{
+            @include product-thumb(4px);
+
+            .thumb {
                 width: 25%;
                 min-width: 75px;
                 margin-right: 10px;
-                >a{
+
+                >a {
                     padding-top: 100%;
                 }
             }
-            .info{
-                .name{
+
+            .info {
+                .name {
                     font-size: 1.5rem;
                     margin-bottom: 5px;
                 }
-                .price_quantity{
+
+                .price_quantity {
                     display: flex;
                     flex-flow: row nowrap;
                     justify-content: space-between;
@@ -84,76 +93,92 @@
             }
 
         }
-        .quantity{
-            input{
+
+        .quantity {
+            input {
                 height: 29px;
                 text-align: center;
                 font-size: 1.5rem;
             }
-            a{
+
+            a {
                 border: $bvt-btn-border-gray;
                 border-radius: 18px;
                 padding: 5px 12px;
             }
         }
-        .status{
+
+        .status {
             font-size: 1.5rem;
             font-weight: 600;
             color: $bvt-blue;
         }
+
         //최초 메시지
-        .message{
+        .message {
             font-size: 1.3rem;
         }
+
         //교환 상품
-        .xans-myshop-orderhistoryexchangeproduct>table{
-            .xans-myshop-selectedproduct{
+        .xans-myshop-orderhistoryexchangeproduct>table {
+            .xans-myshop-selectedproduct {
                 border: 0;
                 padding: 8px;
             }
-            .ec-product-name{
+
+            .ec-product-name {
                 width: 93px;
                 font-size: 1.3rem;
                 @include only-ellipsis(1, 1.5rem)
             }
-            thead>tr{
+
+            thead>tr {
                 height: 25px;
             }
-            th{
+
+            th {
                 font-size: 1.3rem;
                 font-weight: 600;
                 vertical-align: middle;
             }
-            td{
+
+            td {
                 font-size: 1.3rem;
                 vertical-align: middle;
                 padding: 0 5px;
-                .ec-base-qty{
+
+                .ec-base-qty {
                     display: flex;
                     flex-flow: row nowrap;
                     justify-content: center;
                     align-items: center;
                     margin-bottom: 12px;
-                    a{
-                        &:nth-child(1){
+
+                    a {
+                        &:nth-child(1) {
                             order: 0;
                         }
-                        &:nth-child(2){
+
+                        &:nth-child(2) {
                             order: 2;
                         }
-                        >img{
+
+                        >img {
                             width: 25px;
                             height: 25px;
                         }
                     }
-                    >input{
+
+                    >input {
                         order: 1;
                         width: 25px;
                         height: 25px;
                         font-size: 1.2rem;
                     }
                 }
-                a[class="btnNormal gBlank5"], a[class="btnNormal"]{
+
+                a[class="btnNormal gBlank5"],
+                a[class="btnNormal"] {
                     font-size: 1.3rem;
                     font-weight: 500;
                     border: $bvt-btn-border-gray;
@@ -161,32 +186,37 @@
                     padding: 5px 12px;
                 }
             }
-        
+
         }
 
         //교환 사유
-        .exchange_reason{
+        .exchange_reason {
             background: $bvt-bg-lightblue;
             padding: 11px;
-            tr{
+
+            tr {
                 height: 55px;
             }
-            th{
+
+            th {
                 font-size: 1.4rem;
                 font-weight: 600;
             }
-            td{
-                span{
+
+            td {
+                span {
                     display: flex;
                     flex-flow: row nowrap;
                     align-items: center;
                     margin-bottom: 8px;
                 }
-                label{
+
+                label {
                     font-size: 1.3rem;
                     cursor: pointer;
                 }
-                input[type="radio"]{
+
+                input[type="radio"] {
                     width: 15px;
                     height: 15px;
                     margin-right: 5px;
@@ -194,43 +224,52 @@
                 }
             }
         }
+
         //수거신청
-        .return_parcel{
+        .return_parcel {
             background: $bvt-bg-lightblue;
             padding: 11px;
-            tr{
+
+            tr {
                 height: 55px;
             }
-            th{
+
+            th {
                 font-size: 1.4rem;
                 font-weight: 600;
             }
-            td{
-                span{
+
+            td {
+                span {
                     display: flex;
                     flex-flow: row nowrap;
                     align-items: center;
                     margin-bottom: 8px;
                 }
-                label{
+
+                label {
                     font-size: 1.3rem;
                     cursor: pointer;
                 }
-                input[type="radio"]{
+
+                input[type="radio"] {
                     width: 15px;
                     height: 15px;
                     margin: 0 5px 0 15px;
                     cursor: pointer;
                 }
-                #direct{
+
+                #direct {
                     margin: 11px 0;
-                    input[type="text"]{
+
+                    input[type="text"] {
                         width: 100%;
                         height: 30px;
                         font-size: 1.3rem;
                         margin-bottom: 5px;
                     }
-                    input[type="checkbox"]{
+
+                    input[type="checkbox"] {
                         width: 13px;
                         height: 13px;
                         margin-right: 5px;
@@ -239,48 +278,61 @@
                 }
             }
         }
+
         //수거지 정보
-        .return_addr{
+        .return_addr {
             padding: 11px 0;
-            tr{
+
+            tr {
                 height: 55px;
             }
-            th{
+
+            th {
                 font-size: 1.4rem;
                 font-weight: 600;
             }
-            td{
+
+            td {
                 font-size: 1.3rem;
-                span{
+
+                span {
                     display: flex;
                     flex-flow: row nowrap;
                     align-items: center;
                     margin-bottom: 8px;
                 }
-                label{
+
+                label {
                     font-size: 1.3rem;
                     cursor: pointer;
                 }
-                input[type="radio"]{
+
+                input[type="radio"] {
                     width: 15px;
                     height: 15px;
                     margin: 0 5px 0 15px;
                     cursor: pointer;
                 }
-                input[type="text"]{
+
+                input[type="text"] {
                     width: 100%;
                     height: 30px;
                     font-size: 1.3rem;
                     margin-bottom: 5px;
                 }
+
                 //휴대폰 입력 별도
-                #pickup_phone2_1,#pickup_phone2_2,#pickup_phone2_3{
+                #pickup_phone2_1,
+                #pickup_phone2_2,
+                #pickup_phone2_3 {
                     width: 24%;
                     height: 30px;
                     font-size: 1.3rem;
                 }
             }
-            a, #btn_search_rzipcode{
+
+            a,
+            #btn_search_rzipcode {
                 font-size: 1.3rem;
                 font-weight: 500;
                 border: $bvt-btn-border-gray;
@@ -288,17 +340,21 @@
                 padding: 5px 12px;
             }
         }
+
         //환불정보
-        .refund_info{
+        .refund_info {
             padding: 11px 0;
-            tr{
+
+            tr {
                 height: 55px;
             }
-            th{
+
+            th {
                 font-size: 1.4rem;
                 font-weight: 600;
             }
-            a{
+
+            a {
                 font-size: 1.3rem;
                 font-weight: 500;
                 border: $bvt-btn-border-gray;
@@ -307,15 +363,17 @@
             }
         }
     }
-       // 버튼들
-       .ec-base-button{
+
+    // 버튼들
+    .ec-base-button {
         display: flex;
         flex-flow: row nowrap;
         justify-content: flex-start;
         align-items: center;
         width: 100%;
         height: 50px;
-        a{
+
+        a {
             font-size: 1.3rem;
             font-weight: 500;
             border: $bvt-btn-border-gray;
@@ -323,40 +381,45 @@
             padding: 5px 12px;
         }
     }
+
     //최종 버튼 묶음
 
-.apply_btn_wrap{
-    width: 100%;
-    justify-content: center !important;
-    .back{
-        width: 28%;
-        text-align: center;
-        margin-right: 8px;
-        padding: 9px 15px !important;
-    }
-    .apply{
-        width: 28%;
-        text-align: center;
-        background: $bvt-blue;
-        color: $bvt-white;
-        font-weight: 600;
-        padding: 9px 15px !important;
-    }
-}
-}
-//옵션 레이어{
-    .optionModify{
+    .apply_btn_wrap {
         width: 100%;
-        max-width: 350px;
-        .header{
-            padding: 0;
-            height: 30px;
+        justify-content: center !important;
+
+        .back {
+            width: 28%;
+            text-align: center;
+            margin-right: 8px;
+            padding: 9px 15px !important;
+        }
+
+        .apply {
+            width: 28%;
+            text-align: center;
+            background: $bvt-blue;
+            color: $bvt-white;
+            font-weight: 600;
+            padding: 9px 15px !important;
         }
     }
+}
+
+//옵션 레이어{
+.optionModify {
+    width: 100%;
+    max-width: 350px;
+
+    .header {
+        padding: 0;
+        height: 30px;
+    }
+}
 
 
 //우편번호 검색
-#zipcodeLayer #layerZipcode{
+#zipcodeLayer #layerZipcode {
     width: 100%;
     max-width: 350px !important;
 }

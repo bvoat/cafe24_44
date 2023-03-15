@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 :root {
@@ -43,10 +40,10 @@
 #memberModify #memberModifyTitle #memberUserImage .thumb .img_wrap {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
 #memberModify #memberModifyTitle #memberUserImage .thumb > a > img,
 #memberModify #memberModifyTitle #memberUserImage .thumb .img_wrap > img {
@@ -58,36 +55,9 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#memberModify #memberModifyTitle #memberUserImage .thumb .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0px;
-  right: 0px;
-}
-#memberModify #memberModifyTitle #memberUserImage .thumb .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-#memberModify #memberModifyTitle #memberUserImage .thumb .wish button img {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#memberModify #memberModifyTitle #memberUserImage .icon img {
-  height: inherit;
-  -o-object-fit: contain;
-     object-fit: contain;
-  image-rendering: auto;
+#memberModify #memberModifyTitle #memberUserImage .icon {
+  height: 30px;
+  z-index: 1;
 }
 #memberModify #memberModifyTitle #memberUserImage #userImgPreview {
   width: 100%;
@@ -184,12 +154,6 @@
   color: #C4C4C4;
   letter-spacing: -0.3px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap input:-ms-input-placeholder {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #C4C4C4;
-  letter-spacing: -0.3px;
-}
 #memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap input::placeholder {
   font-size: 1.2rem;
   font-weight: 400;
@@ -268,7 +232,6 @@
 }
 #memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list_pwd > label {
   position: relative;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -337,7 +300,8 @@
   background-size: contain;
   margin-right: 9px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap input[type=radio]:checked + label::before { /* 체크 상태 */
+#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap input[type=radio]:checked + label::before {
+  /* 체크 상태 */
   display: inline-block;
   content: "";
   width: 19px;
@@ -393,7 +357,8 @@
   transition: all 0.3s;
 }
 
-.val_check_msg, .error {
+.val_check_msg,
+.error {
   word-wrap: break-word;
   word-break: keep-all;
   font-size: 1.2rem;

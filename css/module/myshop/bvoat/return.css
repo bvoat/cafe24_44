@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 #orderReturn {
@@ -56,12 +53,14 @@
   padding: 0 11px;
   background: #707070;
 }
-#orderReturn #applyForm #orderReturnTable .title h2, #orderReturn #applyForm #orderReturnTable .title h3 {
+#orderReturn #applyForm #orderReturnTable .title h2,
+#orderReturn #applyForm #orderReturnTable .title h3 {
   font-size: 1.3rem;
   font-weight: 500;
   color: #ffffff;
 }
-#orderReturn #applyForm #orderReturnTable .contents, #orderReturn #applyForm #orderReturnTable .typeWrite {
+#orderReturn #applyForm #orderReturnTable .contents,
+#orderReturn #applyForm #orderReturnTable .typeWrite {
   width: 100%;
   max-width: 450px;
   padding: 11px;
@@ -87,10 +86,10 @@
 #orderReturn #applyForm #orderReturnTable .description .thumb .img_wrap {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
 #orderReturn #applyForm #orderReturnTable .description .thumb > a > img,
 #orderReturn #applyForm #orderReturnTable .description .thumb .img_wrap > img {
@@ -102,36 +101,9 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#orderReturn #applyForm #orderReturnTable .description .thumb .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0;
-  right: 0;
-}
-#orderReturn #applyForm #orderReturnTable .description .thumb .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-#orderReturn #applyForm #orderReturnTable .description .thumb .wish button img {
-  position: relative;
-  width: 41px;
-  height: 38.98px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#orderReturn #applyForm #orderReturnTable .description .icon img {
-  height: inherit;
-  -o-object-fit: contain;
-     object-fit: contain;
-  image-rendering: auto;
+#orderReturn #applyForm #orderReturnTable .description .icon {
+  height: 30px;
+  z-index: 1;
 }
 #orderReturn #applyForm #orderReturnTable .description .thumb {
   width: 25%;
@@ -151,7 +123,9 @@
   justify-content: space-between;
   align-items: center;
 }
-#orderReturn #applyForm #orderReturnTable .description .info span > strong, #orderReturn #applyForm #orderReturnTable .description .info span, #orderReturn #applyForm #orderReturnTable .description .info strong {
+#orderReturn #applyForm #orderReturnTable .description .info span > strong,
+#orderReturn #applyForm #orderReturnTable .description .info span,
+#orderReturn #applyForm #orderReturnTable .description .info strong {
   font-size: 1.3rem;
 }
 #orderReturn #applyForm #orderReturnTable .quantity {
@@ -195,7 +169,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.9rem;
+  line-height: 1.8rem;
 }
 #orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table thead > tr {
   height: 25px;
@@ -233,7 +207,8 @@
   height: 25px;
   font-size: 1.2rem;
 }
-#orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table td a[class="btnNormal gBlank5"], #orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table td a[class=btnNormal] {
+#orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table td a[class="btnNormal gBlank5"],
+#orderReturn #applyForm #orderReturnTable .xans-myshop-orderhistoryexchangeproduct > table td a[class=btnNormal] {
   font-size: 1.3rem;
   font-weight: 500;
   border: 1px solid #E2E2E2;
@@ -352,12 +327,15 @@
   font-size: 1.3rem;
   margin-bottom: 5px;
 }
-#orderReturn #applyForm #orderReturnTable .return_addr td #pickup_phone2_1, #orderReturn #applyForm #orderReturnTable .return_addr td #pickup_phone2_2, #orderReturn #applyForm #orderReturnTable .return_addr td #pickup_phone2_3 {
+#orderReturn #applyForm #orderReturnTable .return_addr td #pickup_phone2_1,
+#orderReturn #applyForm #orderReturnTable .return_addr td #pickup_phone2_2,
+#orderReturn #applyForm #orderReturnTable .return_addr td #pickup_phone2_3 {
   width: 24%;
   height: 30px;
   font-size: 1.3rem;
 }
-#orderReturn #applyForm #orderReturnTable .return_addr a, #orderReturn #applyForm #orderReturnTable .return_addr #btn_search_rzipcode {
+#orderReturn #applyForm #orderReturnTable .return_addr a,
+#orderReturn #applyForm #orderReturnTable .return_addr #btn_search_rzipcode {
   font-size: 1.3rem;
   font-weight: 500;
   border: 1px solid #E2E2E2;
