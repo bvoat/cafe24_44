@@ -41,8 +41,9 @@
      object-fit: cover;
 }
 #bvtBoard8 .icon {
-  height: 30px;
-  z-index: 1;
+  position: absolute;
+  top: 0;
+  height: 21px;
 }
 #bvtBoard8 ul {
   width: 100%;
