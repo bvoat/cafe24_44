@@ -95,7 +95,6 @@
 		position: relative;
 		width: 100%;
 		max-width: 428px;
-		border-radius: 20px;
 		box-shadow: 3px 7px 11px 0px rgba(242, 242, 242, 1);
 		margin-bottom: 33px;
 		transition: all 0.8s;
@@ -142,7 +141,7 @@
 			}
 		}
 
-		@include product-thumb(0px, 0px, 0px, 0px, 0px);
+		@include product-thumb(4px);
 
 		//펀딩 사진 높이 수정
 		.thumb {
@@ -156,7 +155,7 @@
 				}
 			}
 
-			//할인율 / icon
+			//할인율
 			.img_data {
 				position: absolute;
 				display: flex;
@@ -164,7 +163,6 @@
 				justify-content: flex-start;
 				align-items: center;
 				top: 0;
-				margin: 14px 0 0 15px;
 
 				.fixprice,
 				.realprice {
@@ -180,11 +178,6 @@
 					box-sizing: border-box;
 					margin-right: 5px;
 					margin-left: 0;
-				}
-
-				.icon {
-					height: 30px;
-					margin: 0;
 				}
 			}
 		}

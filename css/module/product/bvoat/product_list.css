@@ -53,42 +53,10 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.thumb .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0px;
-  left: 0px;
-  background: #fff;
-}
-.thumb .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: auto;
-  border: 0;
-  bottom: pink;
-  cursor: pointer;
-}
-.thumb .wish button img {
-  position: relative;
-  width: 21px;
-  height: 18.98px;
-  padding: 0px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
 
 .icon {
-  height: 25px;
-  margin-top: 4%;
+  height: 30px;
   z-index: 1;
-}
-.icon img {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .desc {

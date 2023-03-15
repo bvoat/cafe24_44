@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 #searchModal {
@@ -286,10 +283,10 @@
 #searchResultProductList .thumb .img_wrap {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
 #searchResultProductList .thumb > a > img,
 #searchResultProductList .thumb .img_wrap > img {
@@ -301,42 +298,21 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#searchResultProductList .thumb .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0;
-  right: 0;
-}
-#searchResultProductList .thumb .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-#searchResultProductList .thumb .wish button img {
-  position: relative;
-  width: 41px;
-  height: 38.98px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#searchResultProductList .icon img {
-  height: inherit;
-  -o-object-fit: contain;
-     object-fit: contain;
-  image-rendering: auto;
+#searchResultProductList .icon {
+  height: 30px;
+  z-index: 1;
 }
 #searchResultProductList .desc {
   padding: 7px 0 0 0;
 }
 #searchResultProductList .desc .brand {
-  font-size: 1rem !important;
+  font-size: 1rem;
+  color: #707070;
+  margin-bottom: 3px;
+}
+#searchResultProductList .desc .summary {
+  display: block;
+  font-size: 1.15rem;
   color: #707070;
   display: block;
   overflow: hidden;
@@ -346,29 +322,14 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.4rem;
-  margin-bottom: 3px;
-}
-#searchResultProductList .desc .summary {
-  font-size: 1.15rem !important;
-  font-weight: 700;
-  color: #292929;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
-  line-height: 1.55rem;
-  margin-bottom: 10px;
+  line-height: 1.45rem;
+  margin-bottom: 7px;
 }
 #searchResultProductList .desc .product_name,
 #searchResultProductList .desc .product_name span {
   color: #292929 !important;
   font-size: 1.3rem !important;
-  font-weight: 300;
+  font-weight: 500;
   word-wrap: break-word;
   word-break: keep-all;
   display: block;
@@ -379,18 +340,14 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.7rem;
-  height: 3.3rem;
+  line-height: 1.6rem;
+  height: 3.4rem;
   margin-bottom: 18px;
-}
-#searchResultProductList .icon {
-  height: 25px !important;
-  margin-top: 5%;
 }
 
 .page-pagination {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row;
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;

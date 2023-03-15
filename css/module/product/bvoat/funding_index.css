@@ -90,7 +90,6 @@
   position: relative;
   width: 100%;
   max-width: 428px;
-  border-radius: 20px;
   box-shadow: 3px 7px 11px 0px rgb(242, 242, 242);
   margin-bottom: 33px;
   transition: all 0.8s;
@@ -156,41 +155,9 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.bvt-funding .list_item .thumb .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0px;
-  left: 0px;
-  background: #fff;
-}
-.bvt-funding .list_item .thumb .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: auto;
-  border: 0;
-  bottom: pink;
-  cursor: pointer;
-}
-.bvt-funding .list_item .thumb .wish button img {
-  position: relative;
-  width: 0px;
-  height: 0px;
-  padding: 0px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
 .bvt-funding .list_item .icon {
-  height: 25px;
-  margin-top: 4%;
+  height: 30px;
   z-index: 1;
-}
-.bvt-funding .list_item .icon img {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .bvt-funding .list_item .thumb {
   position: relative;
@@ -207,7 +174,6 @@
   justify-content: flex-start;
   align-items: center;
   top: 0;
-  margin: 14px 0 0 15px;
 }
 .bvt-funding .list_item .thumb .img_data .fixprice,
 .bvt-funding .list_item .thumb .img_data .realprice {
@@ -222,10 +188,6 @@
   box-sizing: border-box;
   margin-right: 5px;
   margin-left: 0;
-}
-.bvt-funding .list_item .thumb .img_data .icon {
-  height: 30px;
-  margin: 0;
 }
 .bvt-funding .list_item .ddayPrd {
   display: none;

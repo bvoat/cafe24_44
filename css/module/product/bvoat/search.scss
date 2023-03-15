@@ -321,7 +321,7 @@
     }
 
     //상품 이미지 구역
-    @include product-thumb(21px, 18.98px, 0, 0);
+    @include product-thumb(4px);
     //상품 상세 정보 구역
     @include product-desc(7px, 1rem, 1.15rem, 1.3rem);
 
