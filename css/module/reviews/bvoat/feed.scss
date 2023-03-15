@@ -110,7 +110,7 @@
         width: 100%;
         overflow: hidden;
         //리뷰 이미지 (.thumb)
-        @include product-thumb(0px, 0px, 0px, 0px);
+        @include product-thumb(4px);
 
         //리뷰 이미지 + 별점
         .reviews_thumb_box {
@@ -386,7 +386,7 @@
       width: 100%;
       overflow: hidden;
       //리뷰 이미지 (.thumb)
-      @include product-thumb(0px, 0px, 0px, 0px);
+      @include product-thumb(4px);
 
       //리뷰 이미지 + 별점
       .reviews_thumb_box {
@@ -509,7 +509,7 @@
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
-            @include product-thumb(0px, 0px, 0px, 0px);
+            @include product-thumb(4px);
 
             .prd_thumb {
               max-width: 80px;
@@ -1265,7 +1265,7 @@
       .reviews_item {
         width: 100%;
         max-width: 140.266px;
-        @include product-thumb(0px, 0px, 0px, 0px);
+        @include product-thumb(4px);
 
         .reviews_thumb {
           border-radius: 0 !important;
@@ -1327,7 +1327,7 @@
       align-items: flex-start;
       background: $bvt-white;
       //상품 이미지
-      @include product-thumb(0px, 0px, 0px, 0px);
+      @include product-thumb(4px);
 
       .product_thumb {
         width: 80px;
@@ -1881,7 +1881,7 @@
           border-bottom: $bvt-btn-border-gray;
           border-color: #E2E2E2;
 
-          @include product-thumb(0px, 0px, 0px, 0px);
+          @include product-thumb(4px);
 
           //상품 이미지
           .product_thumb {

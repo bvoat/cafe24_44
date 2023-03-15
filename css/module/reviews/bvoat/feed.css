@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 :root {
@@ -94,8 +91,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 3.4rem;
-  height: 3.7rem;
+  line-height: 3.3rem;
+  height: 3.8rem;
   line-height: normal;
   height: auto;
 }
@@ -122,10 +119,10 @@
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb .img_wrap {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb > a > img,
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb .img_wrap > img {
@@ -137,36 +134,9 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0px;
-  right: 0px;
-}
-#reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-#reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb .wish button img {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .icon img {
-  height: inherit;
-  -o-object-fit: contain;
-     object-fit: contain;
-  image-rendering: auto;
+#reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .icon {
+  height: 30px;
+  z-index: 1;
 }
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .reviews_thumb_box {
   margin-bottom: 12px;
@@ -300,8 +270,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.4rem;
-  height: 4.7rem;
+  line-height: 2.3rem;
+  height: 4.8rem;
 }
 
 /* 리뷰 상세보기 view.html */
@@ -366,8 +336,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.8rem;
-  height: 3.1rem;
+  line-height: 2.7rem;
+  height: 3.2rem;
   line-height: normal;
   height: auto;
 }
@@ -417,10 +387,10 @@
 #reviewsViewWrap .reviews_item div.reviews_wrap .thumb .img_wrap {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap .thumb > a > img,
 #reviewsViewWrap .reviews_item div.reviews_wrap .thumb .img_wrap > img {
@@ -432,36 +402,9 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .thumb .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0px;
-  right: 0px;
-}
-#reviewsViewWrap .reviews_item div.reviews_wrap .thumb .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-#reviewsViewWrap .reviews_item div.reviews_wrap .thumb .wish button img {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#reviewsViewWrap .reviews_item div.reviews_wrap .icon img {
-  height: inherit;
-  -o-object-fit: contain;
-     object-fit: contain;
-  image-rendering: auto;
+#reviewsViewWrap .reviews_item div.reviews_wrap .icon {
+  height: 30px;
+  z-index: 1;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_thumb_box {
   position: relative;
@@ -571,10 +514,10 @@
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb .img_wrap {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb > a > img,
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb .img_wrap > img {
@@ -586,36 +529,9 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0px;
-  right: 0px;
-}
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb .wish button img {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .icon img {
-  height: inherit;
-  -o-object-fit: contain;
-     object-fit: contain;
-  image-rendering: auto;
+#reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .icon {
+  height: 30px;
+  z-index: 1;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .prd_thumb {
   max-width: 80px;
@@ -652,8 +568,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.5rem;
-  height: 2.8rem;
+  line-height: 2.4rem;
+  height: 2.9rem;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .prd_info p:nth-child(2) {
   font-size: 1.4rem;
@@ -667,8 +583,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.3rem;
-  height: 2.6rem;
+  line-height: 2.2rem;
+  height: 2.7rem;
 }
 #reviewsViewWrap .reviews_item .reviews_reaction_box {
   display: flex;
@@ -1050,9 +966,6 @@
 #reviewsViewWrap .comment_write_box form fieldset .cmt_textarea::-moz-placeholder {
   color: #BFBFBF;
 }
-#reviewsViewWrap .comment_write_box form fieldset .cmt_textarea:-ms-input-placeholder {
-  color: #BFBFBF;
-}
 #reviewsViewWrap .comment_write_box form fieldset .cmt_textarea::placeholder {
   color: #BFBFBF;
 }
@@ -1284,10 +1197,10 @@
 #reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb .img_wrap {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
 #reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb > a > img,
 #reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb .img_wrap > img {
@@ -1299,36 +1212,9 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0px;
-  right: 0px;
-}
-#reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-#reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb .wish button img {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .icon img {
-  height: inherit;
-  -o-object-fit: contain;
-     object-fit: contain;
-  image-rendering: auto;
+#reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .icon {
+  height: 30px;
+  z-index: 1;
 }
 #reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .reviews_thumb {
   border-radius: 0 !important;
@@ -1390,10 +1276,10 @@
 #reviewsWriteWrap #reviewsWriteProduct > button .thumb .img_wrap {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
 #reviewsWriteWrap #reviewsWriteProduct > button .thumb > a > img,
 #reviewsWriteWrap #reviewsWriteProduct > button .thumb .img_wrap > img {
@@ -1405,36 +1291,9 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#reviewsWriteWrap #reviewsWriteProduct > button .thumb .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0px;
-  right: 0px;
-}
-#reviewsWriteWrap #reviewsWriteProduct > button .thumb .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-#reviewsWriteWrap #reviewsWriteProduct > button .thumb .wish button img {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#reviewsWriteWrap #reviewsWriteProduct > button .icon img {
-  height: inherit;
-  -o-object-fit: contain;
-     object-fit: contain;
-  image-rendering: auto;
+#reviewsWriteWrap #reviewsWriteProduct > button .icon {
+  height: 30px;
+  z-index: 1;
 }
 #reviewsWriteWrap #reviewsWriteProduct > button .product_thumb {
   width: 80px;
@@ -1461,8 +1320,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.2rem;
-  height: 2.5rem;
+  line-height: 2.1rem;
+  height: 2.6rem;
 }
 #reviewsWriteWrap #reviewsWriteProduct > button .product_info .product_option {
   width: 100%;
@@ -1477,8 +1336,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.2rem;
-  height: 2.5rem;
+  line-height: 2.1rem;
+  height: 2.6rem;
 }
 #reviewsWriteWrap #reviewsWriteProduct > button .product_info .product_price {
   font-weight: 400;
@@ -1682,9 +1541,6 @@
 #reviewsWriteWrap #reviewsWriteBox #reviewsContent .reviews_wrap textarea::-moz-placeholder {
   color: #CBCBCB;
 }
-#reviewsWriteWrap #reviewsWriteBox #reviewsContent .reviews_wrap textarea:-ms-input-placeholder {
-  color: #CBCBCB;
-}
 #reviewsWriteWrap #reviewsWriteBox #reviewsContent .reviews_wrap textarea::placeholder {
   color: #CBCBCB;
 }
@@ -1740,7 +1596,6 @@
 #reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea {
   width: 100%;
   max-width: 450px;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
@@ -1748,16 +1603,7 @@
   margin-top: 10px;
 }
 #reviewsWriteWrap #reviewsWriteBox #reviewsImages #appendedArea .appended_item.dropped {
-  -webkit-animation: vibration 0.12s infinite;
-          animation: vibration 0.12s infinite;
-}
-@-webkit-keyframes vibration {
-  from {
-    transform: rotate(5deg);
-  }
-  to {
-    transform: rotate(-2deg);
-  }
+  animation: vibration 0.12s infinite;
 }
 @keyframes vibration {
   from {
@@ -1915,10 +1761,10 @@
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb .img_wrap {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb > a > img,
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb .img_wrap > img {
@@ -1930,36 +1776,9 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0px;
-  right: 0px;
-}
-#reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-#reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb .wish button img {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .icon img {
-  height: inherit;
-  -o-object-fit: contain;
-     object-fit: contain;
-  image-rendering: auto;
+#reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .icon {
+  height: 30px;
+  z-index: 1;
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_thumb {
   width: 80px;
@@ -1982,8 +1801,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.2rem;
-  height: 2.5rem;
+  line-height: 2.1rem;
+  height: 2.6rem;
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_info .product_option {
   position: relative;
@@ -2008,7 +1827,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.8rem;
+  line-height: 1.7rem;
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_info .product_option .option.more {
   width: calc(100% - 12.73px - 20px);
@@ -2020,7 +1839,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.8rem;
+  line-height: 1.7rem;
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_info .product_option .option.more.open {
   width: calc(100% - 12.73px - 20px);
@@ -2032,7 +1851,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.8rem;
+  line-height: 1.7rem;
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_info .product_option .option_more {
   display: none;
