@@ -15,7 +15,7 @@
 
 	// 이미지 정사각형 공통 (mixin)
 	// thumb 부모에게 width 정해줘야 함!
-	@include product-thumb(21px, 18.98px, 0px, 0px, 0px);
+	@include product-thumb(4px);
 
 	ul {
 		width: 100%;
