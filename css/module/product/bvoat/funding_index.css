@@ -92,45 +92,7 @@
   max-width: 428px;
   box-shadow: 3px 7px 11px 0px rgb(242, 242, 242);
   margin-bottom: 33px;
-  transition: all 0.8s;
   overflow: hidden;
-}
-.bvt-funding .list_item:hover {
-  border-radius: 10px;
-  transition: all 0.8s;
-  box-shadow: 10px 15px 24px 0px rgb(242, 242, 242);
-}
-.bvt-funding .list_item .msgBox {
-  color: #ffffff;
-  font-size: 15px;
-  position: relative;
-  z-index: 1;
-  float: right;
-  border-radius: 100px;
-  top: 20px;
-  right: 15px;
-  margin-top: -20px;
-  height: 40px;
-  line-height: 8px;
-  background-color: #022CFF;
-}
-.bvt-funding .list_item .listmain_price {
-  position: relative;
-}
-.bvt-funding .list_item .listmain_price .discountrate {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #ffffff;
-  background: #022CFF;
-  padding: 10px 14px;
-  border-radius: 31px;
-  z-index: 1;
-  top: 10px;
-  left: 2px;
 }
 .bvt-funding .list_item .thumb {
   position: relative;
@@ -167,27 +129,34 @@
 .bvt-funding .list_item .thumb .img_wrap img {
   top: -28%;
 }
-.bvt-funding .list_item .thumb .img_data {
+.bvt-funding .list_item .img_data {
   position: absolute;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
-  align-items: center;
+  width: 100%;
+  height: 100%;
   top: 0;
+  left: 0;
 }
-.bvt-funding .list_item .thumb .img_data .fixprice,
-.bvt-funding .list_item .thumb .img_data .realprice {
+.bvt-funding .list_item .img_data .price_wrap {
+  align-items: flex-end;
+}
+.bvt-funding .list_item .img_data .fixprice,
+.bvt-funding .list_item .img_data .realprice {
   display: none;
 }
-.bvt-funding .list_item .thumb .img_data .discountrate {
+.bvt-funding .list_item .img_data .discountrate {
+  position: absolute;
+  top: 216.5px;
+  right: 0;
   color: #2B3DD3;
   background: #ffffff;
   border: 1px solid #2B3DD3;
   border-radius: 18px;
-  padding: 4.5px 12.5px;
+  padding: 7px 13px;
   box-sizing: border-box;
-  margin-right: 5px;
-  margin-left: 0;
+  margin-right: 24px;
 }
 .bvt-funding .list_item .ddayPrd {
   display: none;
