@@ -2,7 +2,7 @@
 
 
 //상품 목록 이미지 thumbnail 공통 처리
-@mixin product-thumb($width, $height, $padding, $bottom, $left) {
+@mixin product-thumb($borderRadious) {
 
     //상품 이미지 구역 반드시 부모에 width 설정되어 있어야 해당 사이즈로 시작
     .thumb {
@@ -16,7 +16,7 @@
             width: 100%;
             padding-top: 100%;
             overflow: hidden;
-            border-radius: 4px;
+            border-radius: $borderRadious;
 
             >img {
                 position: absolute;
@@ -27,19 +27,12 @@
                 object-fit: cover;
             }
         }
-
-        @include wish-button($width, $height, $padding, $bottom, $left)
     }
 
     //상품 안내 아이콘
     .icon {
-        height: 25px;
-        margin-top: 4%;
+        height: 30px;
         z-index: 1;
-
-        img {
-            object-fit: cover;
-        }
     }
 }
 
