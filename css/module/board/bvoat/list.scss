@@ -182,7 +182,7 @@
             }
         }
 
-        @include product-thumb(0px, 0px, 0px, 0px, 0px);
+        @include product-thumb(4px);
 
         .thumb {
             display: flex;
