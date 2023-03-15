@@ -126,6 +126,16 @@
 			top: 0;
 			left: 0;
 
+
+			.icon {
+				height: 29px;
+
+				img {
+					object-fit: cover;
+					image-rendering: -webkit-optimize-contrast;
+				}
+			}
+
 			.price_wrap {
 				align-items: flex-end;
 			}

@@ -140,6 +140,14 @@
   top: 0;
   left: 0;
 }
+.bvt-funding .list_item .img_data .icon {
+  height: 29px;
+}
+.bvt-funding .list_item .img_data .icon img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+}
 .bvt-funding .list_item .img_data .price_wrap {
   align-items: flex-end;
 }
