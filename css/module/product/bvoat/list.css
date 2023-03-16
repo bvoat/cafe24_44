@@ -22,7 +22,7 @@
 #productListTitle .banner {
   position: relative;
   width: 100%;
-  top: 0;
+  top: -25px;
   left: 0;
 }
 #productListTitle .banner img {
