@@ -149,20 +149,17 @@
 <script>
     AOS.init();
     /* 슬라이더 */
-    // 상단 배너 슬라이드
-    var swiper = new Swiper("#indexSquareBanner", {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        loop: true,
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-        },
-    });
+
     // Funding 메인진열 슬라이드
     var swiper = new Swiper(".funding", {
         slidesPerView: 1,
         spaceBetween: 11,
+        loop: true,
+        autoplay: {
+            delay: 3100,
+            disableOnInteraction: false,
+        },
+
         pagination: {
             el: ".list_item_bullet",
             clickable: true,
