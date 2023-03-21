@@ -118,4 +118,27 @@ body {
 
 #mCafe24Order .btnSubmit {
   background: #022CFF;
+}
+
+/* ----------- 바로구매  -------------- */
+#ec-jigsaw-area-productdetail .product_detail .contents {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 30px 0;
+}
+#ec-jigsaw-area-productdetail .product_detail .contents .prdCont {
+  width: 100%;
+  padding: 0 10px;
+}
+#ec-jigsaw-area-productdetail .product_detail .contents .prdCont .product_info .head p.prdIcon {
+  margin: -2px 0 0;
+}
+#ec-jigsaw-area-productdetail .product_detail .contents .prdCont .product_info .head p.prdIcon img {
+  height: 20px;
+}
+#ec-jigsaw-area-productdetail .product_detail .contents .prdCont .product_info .head .summary_desc {
+  font-size: 13px;
+}
+#ec-jigsaw-area-productdetail .product_detail .contents .prdCont .product_info .head .delivery_price .txt_delivery {
+  font-size: 15px;
 }/*# sourceMappingURL=orderform.css.map */
