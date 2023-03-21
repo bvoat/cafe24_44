@@ -123,6 +123,9 @@ body {
 /* ----------- 바로구매  -------------- */
 #ec-jigsaw-area-productdetail .product_detail .overview .btnDetail {
   position: relative;
+  top: 0;
+  right: 0;
+  left: 5px;
 }
 #ec-jigsaw-area-productdetail .product_detail .contents {
   display: flex;
