@@ -145,8 +145,12 @@ body {
 #ec-jigsaw-area-productdetail .product_detail .contents .prdCont .product_info .head p.prdIcon img {
   height: 20px;
 }
+#ec-jigsaw-area-productdetail .product_detail .contents .prdCont .product_info .head .name {
+  font-size: 15px;
+  font-weight: bold;
+}
 #ec-jigsaw-area-productdetail .product_detail .contents .prdCont .product_info .head .summary_desc {
-  font-size: 13px;
+  font-size: 12px;
 }
 #ec-jigsaw-area-productdetail .product_detail .contents .prdCont .product_info .head .delivery_price .txt_delivery {
   font-size: 15px;
