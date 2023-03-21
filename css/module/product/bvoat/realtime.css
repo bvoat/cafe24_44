@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 #realTimeOrderList {
@@ -20,7 +17,13 @@
   padding: 7px 0 0 0;
 }
 #realTimeOrderList .desc .brand {
-  font-size: 1rem !important;
+  font-size: 1rem;
+  color: #707070;
+  margin-bottom: 3px;
+}
+#realTimeOrderList .desc .summary {
+  display: block;
+  font-size: 1.1rem;
   color: #707070;
   display: block;
   overflow: hidden;
@@ -31,28 +34,13 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.4rem;
-  margin-bottom: 3px;
-}
-#realTimeOrderList .desc .summary {
-  font-size: 1.1rem !important;
-  font-weight: 700;
-  color: #292929;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
-  line-height: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 #realTimeOrderList .desc .product_name,
 #realTimeOrderList .desc .product_name span {
   color: #292929 !important;
   font-size: 1.29rem !important;
-  font-weight: 300;
+  font-weight: 500;
   word-wrap: break-word;
   word-break: keep-all;
   display: block;
@@ -63,8 +51,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.69rem;
-  height: 3.28rem;
+  line-height: 1.59rem;
+  height: 3.38rem;
   margin-bottom: 18px;
 }
 #realTimeOrderList .thumb {
@@ -75,10 +63,10 @@
 #realTimeOrderList .thumb .img_wrap {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
 #realTimeOrderList .thumb > a > img,
 #realTimeOrderList .thumb .img_wrap > img {
@@ -90,36 +78,10 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#realTimeOrderList .thumb .wish {
+#realTimeOrderList .icon {
   position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0;
-  right: 0;
-}
-#realTimeOrderList .thumb .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-#realTimeOrderList .thumb .wish button img {
-  position: relative;
-  width: 41px;
-  height: 38.98px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#realTimeOrderList .icon img {
-  height: inherit;
-  -o-object-fit: contain;
-     object-fit: contain;
-  image-rendering: auto;
+  top: 0;
+  height: 21px;
 }
 #realTimeOrderList #realTimeOrderListTitle {
   width: 100%;
@@ -158,35 +120,6 @@
   max-width: 210px;
   margin-bottom: 40px;
 }
-#realTimeOrderList #realTimeOrderListContents .realtime > ul .list_item .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0;
-  right: 0;
-}
-#realTimeOrderList #realTimeOrderListContents .realtime > ul .list_item .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-#realTimeOrderList #realTimeOrderListContents .realtime > ul .list_item .wish button img {
-  position: relative;
-  width: 41px;
-  height: 38.98px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
-#realTimeOrderList #realTimeOrderListContents .realtime > ul .list_item .icon {
-  height: 25px !important;
-  margin-top: 10px;
-}
 #realTimeOrderList #realTimeOrderListContents .purchaser {
   position: absolute;
   display: flex;
@@ -202,7 +135,7 @@
   padding: 7px 5%;
   z-index: 9;
   top: -15px;
-  left: 11px;
+  right: 11px;
 }
 #realTimeOrderList #realTimeOrderListContents .purchaser > span {
   margin-left: 4px;

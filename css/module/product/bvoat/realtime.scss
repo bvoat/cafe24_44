@@ -14,7 +14,7 @@
 
     // 이미지 정사각형 공통 (mixin)
     // thumb 부모에게 width 정해줘야 함!
-    @include product-thumb(21px, 18.98px, 0, 0);
+    @include product-thumb(4px);
 
 
     // 지금 구매 중 제목 
@@ -63,13 +63,7 @@
                     width: calc(50% - 4px);
                     max-width: 210px;
                     margin-bottom: 40px;
-                    //위시버튼
-                    @include wish-button(21px, 18.98px, 0, 0);
 
-                    .icon {
-                        height: 25px !important;
-                        margin-top: 10px;
-                    }
                 }
             }
         }
@@ -89,7 +83,7 @@
             padding: 7px 5%;
             z-index: 9;
             top: -15px;
-            left: 11px;
+            right: 11px;
 
             >span {
                 margin-left: 4px;
