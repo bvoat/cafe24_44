@@ -1,7 +1,7 @@
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(/css/module/myshop/orderHistoryDetail.css)-->
 <!--@css(/css/module/myshop/bvoat/order_detail.css)-->
-  <script src="/js/common.js"></script>
+<script src="/js/common.js"></script>
 
 
 <article id="orderDetail">
@@ -1961,9 +1961,14 @@
         </div>
 
         <div class="ec-base-button">
-            <span class="gLeft"><a href="#none" onclick="{$action_issue_cash}"
-                    class="btnNormal tax_btn {$issue_cash_display|display}">현금영수증 신청</a></span>
-            <a href="#none" onclick="{$action_issue_tax}" class="tax_btn {$issue_tax_display|display}">세금계산서 신청</a>
+            <a href="#none" onclick="{$action_issue_cash}"
+                class="btnNormal purchase_btn {$issue_cash_display|display}">현금영수증
+                신청</a>
+            <a href="#none" onclick="{$action_issue_tax}" class="purchase_btn {$issue_tax_display|display}">세금계산서 신청</a>
+            <a href="#none" onclick="{$action_print_pg_card}"
+                class="btnNormal purchase_btn {$print_pg_card_display|display}">카드영수증
+                (매출전표)
+                발행</a>
         </div>
 
         <div class="ec-base-button gFull">
