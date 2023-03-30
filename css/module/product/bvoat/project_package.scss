@@ -237,8 +237,9 @@
                 width: 100%;
 
                 >li {
-                    width: 48.2%;
-                    margin-bottom: 28.7px;
+                    position: relative;
+                    width: 49%;
+                    padding-bottom: 30px;
                 }
             }
         }
@@ -250,6 +251,5 @@
         // thumb 부모에게 width 정해줘야 함!
         @include product-thumb(4px);
 
-        @include wish-button(21px, 18.98px, 0, 0);
     }
 }

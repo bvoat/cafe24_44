@@ -7,15 +7,8 @@
     <section id="specialProjectTitle" class="title" module="product_headcategory">
         <p class="banner">{$top_image_tag}</p>
         <h2 class="displaynone"><span>{$title_text_or_image}</span></h2>
-        <h3></h3>
-        <h4>
-            <span>
-            </span>
-            <span>
-            </span>
-        </h4>
     </section>
-
+    <!-- 하위 기획전 제목  -->
     <!-- 아래 ul 주석처리시 오류 발생 -->
     <ul class="displaynone">
         <li module="product_projectcategory" class="displaynone">
@@ -23,8 +16,6 @@
                     class="count {$product_count_display|display}">({$product_count})</span></a>
         </li>
     </ul>
-
-
     <section class="project_productlist_wrap" module="project_list">
         <!--
             $basket_result = /product/add_basket.html
@@ -38,153 +29,8 @@
             <ul class="coupon_list">
             </ul>
         </div>
-
         <div class="project_productlist {$cate_id}" module="project_productlist">
-            <!--@import(/product/product_module/listmain/listmain.html)-->
+            <!--@import(/product/product_module/listproduct/product_list.html)-->
         </div>
     </section>
 </article>
-<script>
-    /* 기획전 타이틀 정보 JSON */
-    /* 기획전이 추가되면 아래에 cate_no 와 title 정보를 객체로 작성하고 하단 반복문을 통해 붙입니다. */
-    const specialProjectTitleData = [
-        {
-            page_cate_no: 736,
-            data: {
-                title: `그냥 예뻐서 골라도<br />
-            기부로 착한 소비가 됩니다.`,
-                sub_title: `<span>가치소비, 예쁘고 의미 있는 액세서리로 하는 법.
-            </span>
-            <span>
-                비보트가 내 돈의 가치가 어디에 가는지<br />
-                투명하게 공개하는 가치 있는 브랜드를 엄선해 소개합니다.
-            </span>`
-            }
-        },
-        {
-            
-            page_cate_no: 747,
-            data: {
-                title: `지속 가능한 친환경 티셔츠,<br/>유기농 면부터 리사이클 폴리까지`,
-                sub_title: `<span>지속가능한 미래를 위한<br/>100% 유기농 코튼부터 리사이클 소재를 활용한 옷까지
-            </span>
-            <span>비보트에서 셀렉한 친환경 브랜드 셔츠를 두 장부터 무료로 배송합니다.
-            </span>`
-            }
-        },
-        {
-            
-            page_cate_no: 749,
-            data: {
-                title: `프라이* 같은 친환경 브랜드<br/>여기 다 모아왔어요.`,
-                sub_title: `<span>저도 오래 쓴 명품 지갑을 잃어버린 뒤로는<br/>가죽보다 친환경적이고 오래 쓰는 선인장 지갑을 쓰고 있어요.
-            </span>
-            <span>비건 가죽부터 현수막, 요트 돛, 패러글라이더 업사이클링에<br/>교복으로 만든 예쁜 카드지갑까지 예쁘고 오래가는 지갑을 소개합니다.
-            </span>`
-            }
-        }
-
-    ];
-    
-
-
-    /* 기획전 타이틀 삽입 */
-    window.addEventListener("load",()=>{
-        //타이틀 node 찾기
-    const specialProjectTitle = document.querySelector("#specialProjectTitle");
-    //URL에서 cate_no 받기
-    let searchObj = new URLSearchParams(location.search);
-    let cateNoParam = searchObj.get("cate_no");
-    console.log('cateNoParam: ', cateNoParam);
-
-        specialProjectTitleData.forEach((cateinfo)=>{
-            if (cateinfo.page_cate_no == cateNoParam) {
-            
-            specialProjectTitle.children[2].insertAdjacentHTML("afterbegin", cateinfo.data.title);
-            specialProjectTitle.children[3].insertAdjacentHTML("afterbegin", cateinfo.data.sub_title);
-        }
-        })
-
-    })
-    /* 개별 기획전 타이틀 정보 JSON */
-    /* 하위 기획전이 추가되면 아래에 cate_name으로 타이틀과 쿠폰 정보를 객체로 작성하고 하단 반복문을 통해 붙입니다. */
-
-const projectSubListData = {
-    '뽀뚜빠뚜 ':
-    {
-        title: `🐶 유기견, 유기묘에게<br>사료와 간식을 후원하는 ‘뽀뚜빠뚜’`,
-        coupon: `
-        <li class="coupon"><a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073512830000000638" title="19,000원 이상 구매 시 1,000원 할인쿠폰 받기"><p>19,000원 이상 구매 시</p><p>1,000원 할인쿠폰</p></a></li><li><a herf="/exec/front/newcoupon/IssueDownload?coupon_no=6073512762700000637" title="29,000원 이상 구매 시 1,500원 할인쿠폰 받기"><p>29,000원 이상 구매 시</p><p>1,500원 할인쿠폰</p></a></li>`
-    },
-
-    'FFM13': 
-    {
-        title: `🌳 한반도 우리 숲에<br> 나무 심기를 동참하는 ‘FFM13’`,
-        coupon: `<li class="coupon"><a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073512837600000639" title="29,000원 이상 구매 시 1,500원 할인쿠폰 받기"><p>29,000원 이상 구매 시</p><p>1,500원 할인쿠폰</p></a></li>`
-    },
-
-    '119레오': 
-    {
-        title: `🧑‍🚒 암 투병 소방관에게<br>지원금을 전달하는 ‘110REO’`,
-        coupon: `<li class="coupon"><a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073512845700000640" title="119REO 전용 5% 할인 쿠폰"><p>119REO 전용</p><p>5% 할인 쿠폰</p></a></li>`
-    },
-
-    '88하다': 
-    {
-        title: `🐋 WWF 해양 동물<br>보존에 기부하는 ‘88하다’`,
-        coupon: `
-        <li class="coupon"><a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073512853400000641" title="40,000원 이상 구매 시 2,000원 할인쿠폰 받기"><p>4만 원 이상 구매 시</p><p>2,000원 할인 쿠폰</p></a></li>`
-    },
-
-    '스모어웨이브' :
-    {
-        title: `👩‍🦰 네팔 취약 계층 여성의<br>자립을 지원하는 ‘스모어웨이브’`,
-        coupon: `<li class="coupon"><a href="/exec/front/newcoupon/IssueDownload?coupon_no=6073512860000000642" title="19,000원 이상 구매 시 1,000원 할인쿠폰 받기"><p>19,000원 이상 구매 시</p><p>1,000원 할인쿠폰</p></a></li><li><a herf="/exec/front/newcoupon/IssueDownload?coupon_no=6073512866500000643" title="29,000원 이상 구매 시 1,500원 할인쿠폰 받기"><p>29,000원 이상 구매 시</p><p>1,500원 할인쿠폰</p></a></li>`
-    },
-    '쌀':
-    {
-        title: `🍚 한국인의 밥심, 쌀의 변신은 무죄!<br>#우리쌀 #현미 #찹쌀`,
-        coupon: ``
-    },
-
-    '콩': 
-    {
-        title: `👍 건강 인기 재료! 작은 콩이 만든 모든 것<br>#토종콩 #밤콩 #약콩`,
-        coupon: ``
-    },
-
-    '견과류': 
-    {
-        title: `🥜 필수 영양소 가득, 통곡물 견과 듬뿍 Nut<br>#아몬드 #땅콩 #캐슈넛`,
-        coupon: ``
-    }
-}
-
- 
-    //반복문 돌려서 붙이기
-    
-
-    const urlParams = new URLSearchParams(window.location.search).get("cate_no");
-    if(urlParams === '736' || urlParams === '752'){
-        window.addEventListener("load", ()=>{
-           //타이틀 node 찾기
-            const specialProjectList = document.querySelectorAll(".project_productlist_wrap");
-            console.log('specialProjectList: ', specialProjectList);
-
-            for(let i=0; i<specialProjectList.length; i++){
-            let brand = specialProjectList[i].children[0].dataset.brand;
-            console.log('brand: ', brand);
-            let brandData = projectSubListData[brand];
-            console.log('brandData: ', brandData);
-
-            //브랜드 제목
-            specialProjectList[i].children[1].children[0].insertAdjacentHTML("afterbegin",brandData.title);
-            //브랜드 쿠폰
-            specialProjectList[i].children[1].children[1].insertAdjacentHTML("afterbegin",brandData.coupon);
-        }
-    });
-    }else{
-        document.querySelector("#specialProjectTitle  h3").remove();
-        document.querySelector("#specialProjectTitle  h4").remove();
-    }
-</script>

@@ -1,39 +1,29 @@
 <!--@css(/css/module/product/bvoat/product_list.css)-->
-<section id="productListnormalList" class="product_list prd_list" module="product_listnormal">
-    <!--
-            ※ 상품 진열 갯수 변수, 디폴트는 200개
-            $count = 14
-            $cache = yes
-            $moreview = yes
-            $basket_result = /product/add_basket.html
-            $basket_option = /product/basket_option.html
-    -->
-    <ul class="product_listnormal_list_wrap">
-        <li class="listnormal_list" id="anchorBoxId_{$product_no}">
-            <div class="thumb">
-                <a href="/product/detail.html{$param}"><img src="{$image_big}" alt="{$seo_alt_tag}"></a>
-            </div>
-            <ul class="desc box-desc">
-                <li class="summary">{$summary_desc}</li>
-                <li class="product_name"><a href="/product/detail.html{$param}">{$product_name|striptag}</a></li>
-                <li class="listmain_price">
-                    <!--@import(../list_price_wrap.html)-->
-                </li>
-            </ul>
-            <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
-        </li>
-        <li class="listnormal_list" id="anchorBoxId_{$product_no}">
-            <div class="thumb">
-                <a href="/product/detail.html{$param}"><img src="{$image_big}" alt="{$seo_alt_tag}"></a>
-            </div>
-            <ul class="desc box-desc">
-                <li class="summary">{$summary_desc}</li>
-                <li class="product_name"><a href="/product/detail.html{$param}">{$product_name|striptag}</a></li>
-                <li class="listmain_price">
-                    <!--@import(../list_price_wrap.html)-->
-                </li>
-            </ul>
-            <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
-        </li>
-    </ul>
-</section>
+<ul class="product_listnormal_list_wrap">
+    <li class="listnormal_list" id="anchorBoxId_{$product_no}">
+        <div class="thumb">
+            <a href="/product/detail.html{$param}"><img src="{$image_big}" alt="{$seo_alt_tag}"></a>
+        </div>
+        <ul class="desc box-desc">
+            <li class="summary">{$summary_desc}</li>
+            <li class="product_name"><a href="/product/detail.html{$param}">{$product_name|striptag}</a></li>
+            <li class="listmain_price">
+                <!--@import(../list_price_wrap.html)-->
+            </li>
+        </ul>
+        <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
+    </li>
+    <li class="listnormal_list" id="anchorBoxId_{$product_no}">
+        <div class="thumb">
+            <a href="/product/detail.html{$param}"><img src="{$image_big}" alt="{$seo_alt_tag}"></a>
+        </div>
+        <ul class="desc box-desc">
+            <li class="summary">{$summary_desc}</li>
+            <li class="product_name"><a href="/product/detail.html{$param}">{$product_name|striptag}</a></li>
+            <li class="listmain_price">
+                <!--@import(../list_price_wrap.html)-->
+            </li>
+        </ul>
+        <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
+    </li>
+</ul>
