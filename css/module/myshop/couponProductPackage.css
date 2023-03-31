@@ -1,4 +1,4 @@
-#popup { width:600px; }
+#popup { width:600px;  }
 .xans-myshop-couponproductsearch { color:#757575; }
 .xans-myshop-couponproductsearch p { padding:0 0 10px; }
 .xans-myshop-couponproductlist .title { overflow:hidden; margin:18px 0 8px; }
@@ -6,3 +6,8 @@
 .xans-myshop-couponproductlist .title select { float:right; }
 .xans-myshop-couponproductlist table td.thumb img { width:80px; }
 .xans-myshop-couponproductlist table td.price strong { display:block; }
+
+	/* 비보트 추가 */
+	.xans-myshop-couponproductsearch p { font-size: 12px; }
+	.xans-myshop-couponproductlist .title  { font-size: 12px;  }
+	.xans-myshop-couponproductlist table td, .xans-myshop-couponproductlist table tr, .xans-myshop-couponproductlist table th { font-size: 12px; }
