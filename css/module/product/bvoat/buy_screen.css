@@ -96,14 +96,14 @@
   font-weight: 600;
 }
 .buy_screen_option .product_addoption td input::-moz-placeholder {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  color: #A9A9A9;
+  color: #707070;
 }
 .buy_screen_option .product_addoption td input::placeholder {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  color: #A9A9A9;
+  color: #707070;
 }
 .buy_screen_option .product_addoption td .txtByte {
   position: absolute;

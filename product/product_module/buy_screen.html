@@ -65,7 +65,7 @@
                     <tbody>
                         <tr class="product_addoption" module="product_addoption">
                             <th class="add_option_title displaynone" scope="row">{$add_option_name}</th>
-                            <td>
+                            <td class="ePlaceholder" title="{$add_option_name}">
                                 {$form.add_option}
                                 <span class="txtByte" title="현재글자수/최대글자수">(<strong
                                         class="length">0</strong>/{$option_maxlength})</span>
@@ -626,10 +626,10 @@
     });
 
     //.product_addoption 내 placeholder 추가 (후원자명 입력 등)
-    const product_addoption = document.querySelector(".product_addoption input[type='text']");
-    const add_option_title = document.querySelector(".add_option_title");
-    if (product_addoption != null) {
-        product_addoption.setAttribute("placeholder", add_option_title.outerText)
-    }
+    // const product_addoption = document.querySelector(".product_addoption input[type='text']");
+    // const add_option_title = document.querySelector(".add_option_title");
+    // if (product_addoption != null) {
+    //     product_addoption.setAttribute("placeholder", add_option_title.outerText)
+    // }
 
 </script>
