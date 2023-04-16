@@ -20,6 +20,7 @@
 .find_article .find_title h2 {
   font-weight: 600;
   font-size: 2.2rem;
+  line-height: 4rem;
 }
 .find_article .find_title h3 {
   font-weight: 300;
@@ -73,7 +74,9 @@
   color: #C4C4C4;
   letter-spacing: -0.3px;
 }
-.find_article .find_form fieldset > ul .find_input_wrap #mobile1, .find_article .find_form fieldset > ul .find_input_wrap #mobile2, .find_article .find_form fieldset > ul .find_input_wrap #mobile3 {
+.find_article .find_form fieldset > ul .find_input_wrap #mobile1,
+.find_article .find_form fieldset > ul .find_input_wrap #mobile2,
+.find_article .find_form fieldset > ul .find_input_wrap #mobile3 {
   width: 31%;
 }
 .find_article .find_form fieldset > ul .find_input_wrap select {
@@ -152,4 +155,39 @@
   background: #022CFF;
   color: #ffffff;
   margin-top: 30px;
+}
+
+.ec-base-desc li {
+  font-size: 1.3rem;
+  margin: 15px 0 0 !important;
+}
+.ec-base-desc li .term {
+  display: inline-block;
+  width: 40%;
+}
+.ec-base-desc li .desc {
+  padding-left: 10% !important;
+  font-size: 1.3rem;
+}
+
+.xans-member-findpasswdmethod .inner .ec-base-button {
+  padding: 40px 0;
+}
+
+.submit_btn {
+  width: 45%;
+  padding: 4%;
+  background: #022CFF;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 100px;
+}
+
+.cancle_btn {
+  width: 45%;
+  padding: 4%;
+  background: #707070;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 100px;
 }/*# sourceMappingURL=find.css.map */

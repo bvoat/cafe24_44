@@ -2,45 +2,52 @@
 @import "../../../abstracts/mixin";
 @import "../../../abstracts/variables";
 
-#bvtContents{
-}
+
 .find_article {
     width: 100%;
     max-width: 450px;
     padding: 23px 11px 100%;
-    margin-top: 80px;//top_nav hide
+    margin-top: 80px; //top_nav hide
     background: $bvt-bg-lightblue;
 
     .find_title {
         margin-bottom: 18px;
+
         h2 {
             font-weight: 600;
             font-size: 2.2rem;
+            line-height: 4rem;
         }
+
         h3 {
             font-weight: 300;
             font-size: 1.4rem;
             color: $bvt-darkgray;
         }
     }
-    .find_form{
-        fieldset{
-            >ul{                            
+
+    .find_form {
+        fieldset {
+            >ul {
                 display: flex;
                 flex-flow: column nowrap;
                 flex-basis: auto;
                 width: 100%;
                 max-width: 450px;
-                .find_input_wrap{
+
+                .find_input_wrap {
                     margin-bottom: 18px;
-                    >span{
+
+                    >span {
                         font-size: 1.5rem;
                         font-weight: 600;
                     }
-                    .txtInfo{
+
+                    .txtInfo {
                         font-size: 1.2rem;
                         font-weight: 300;
                     }
+
                     .input_label {
                         display: block;
                         font-weight: bold;
@@ -48,6 +55,7 @@
                         color: $bvt-darkgray;
                         margin-bottom: 6px;
                     }
+
                     // input 박스
                     input {
                         width: 100%;
@@ -58,6 +66,7 @@
                         font-size: 1.35rem;
                         color: $bvt-darkgray;
                         box-sizing: border-box;
+
                         &::placeholder {
                             font-size: 1.2rem;
                             font-weight: lighter;
@@ -65,18 +74,24 @@
                             letter-spacing: -0.3px;
                         }
                     }
-                    #mobile1, #mobile2, #mobile3{
+
+                    #mobile1,
+                    #mobile2,
+                    #mobile3 {
                         width: 31%;
                     }
-                    select{
+
+                    select {
                         width: 100%;
                         height: 45px;
                         font-size: 1.4rem;
                         cursor: pointer;
                     }
                 }
-                .check{
+
+                .check {
                     margin-bottom: 18px;
+
                     .input_label {
                         font-weight: bold;
                         font-size: 1.5rem;
@@ -84,7 +99,8 @@
                         margin: 0 15px 6px 0;
                         cursor: pointer;
                     }
-                    input[type=radio]{
+
+                    input[type=radio] {
                         width: 18px;
                         height: 18px;
                         border: $bvt-btn-border-gray;
@@ -93,7 +109,8 @@
                     }
                 }
             }
-            #findPwdIdBtn{
+
+            #findPwdIdBtn {
                 width: 100%;
                 height: 55px;
                 background: $bvt-blue;
@@ -104,22 +121,25 @@
                 margin-top: 40px;
             }
         }
-        >ul{
+
+        >ul {
             width: 100%;
             max-width: 450px;
             margin: 50px 0;
-            >li{
+
+            >li {
                 display: flex;
                 flex-flow: column nowrap;
                 background: $bvt-white;
                 padding: 20px;
                 border-radius: 16px;
-                   >p{
+
+                >p {
                     font-size: 1.4rem;
                     margin-bottom: 1rem;
                     line-height: 2.3rem;
 
-                    >span{
+                    >span {
                         color: $bvt-blue;
                         font-weight: 600;
                         background: $bvt-yellow;
@@ -128,7 +148,8 @@
                 }
             }
         }
-        >a{
+
+        >a {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -143,11 +164,51 @@
         }
     }
 
-}   
-.find_btn{
+}
+
+.find_btn {
     width: 100%;
     padding: 4%;
     background: $bvt-blue;
     color: $bvt-white;
     margin-top: 30px;
+}
+
+//find_passwd_method 수정
+
+.ec-base-desc li {
+    font-size: 1.3rem;
+    margin: 15px 0 0 !important;
+
+    .term {
+        display: inline-block;
+        width: 40%;
+    }
+
+    .desc {
+        padding-left: 10% !important;
+        font-size: 1.3rem;
+    }
+}
+
+.xans-member-findpasswdmethod .inner .ec-base-button {
+    padding: 40px 0;
+}
+
+.submit_btn {
+    width: 45%;
+    padding: 4%;
+    background: $bvt-blue;
+    color: $bvt-white;
+    font-weight: bold;
+    border-radius: 100px;
+}
+
+.cancle_btn {
+    width: 45%;
+    padding: 4%;
+    background: $bvt-darkgray;
+    color: $bvt-white;
+    font-weight: bold;
+    border-radius: 100px;
 }
