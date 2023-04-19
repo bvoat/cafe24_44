@@ -129,6 +129,22 @@
   font-weight: normal;
   font-size: 1.4rem;
   cursor: pointer;
+  margin-bottom: 12px;
+}
+#memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .nomember_order_btn {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #022CFF;
+  border-radius: 90px;
+  color: #022CFF;
+  font-weight: normal;
+  font-size: 1.4rem;
+  cursor: pointer;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_util {
   display: flex;
@@ -237,33 +253,6 @@
   color: rgba(112, 112, 112, 0.9);
   font-size: 1.3rem;
   font-weight: 400;
-}
-#memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .nomember_order {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background: #ECF0F2;
-  border-radius: 7px;
-  margin-top: 17px;
-  padding: 12px 0;
-}
-#memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .nomember_order p {
-  color: rgba(112, 112, 112, 0.9);
-  font-size: 1.1rem;
-  font-weight: 400;
-  text-align: center;
-}
-#memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .nomember_order .nomember_order_btn {
-  border: 1px solid #E2E2E2;
-  border-radius: 90px;
-  color: #ffffff;
-  background: #707070;
-  font-size: 1.3rem;
-  font-weight: 400;
-  margin: 8px 0 0 0;
-  padding: 8px 24px;
 }
 
 #noMemberLogin {

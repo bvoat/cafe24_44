@@ -132,6 +132,23 @@
                         font-weight: normal;
                         font-size: 1.4rem;
                         cursor: pointer;
+                        margin-bottom: 12px;
+                    }
+
+                    .nomember_order_btn {
+                        display: flex;
+                        width: 100%;
+                        height: 60px;
+                        align-items: center;
+                        align-content: center;
+                        justify-content: center;
+                        background-color: $bvt-white;
+                        border: $bvt-btn-border;
+                        border-radius: 90px;
+                        color: $bvt-blue;
+                        font-weight: normal;
+                        font-size: 1.4rem;
+                        cursor: pointer;
                     }
 
                     .login_section_bottom {
@@ -260,36 +277,6 @@
                         color: transparentize($bvt-darkgray, 0.1);
                         font-size: 1.3rem;
                         font-weight: 400;
-                    }
-
-                    .nomember_order {
-                        display: flex;
-                        flex-flow: column nowrap;
-                        justify-content: center;
-                        align-items: center;
-                        width: 100%;
-                        background: $bvt-btn-lightblue;
-                        border-radius: 7px;
-                        margin-top: 17px;
-                        padding: 12px 0;
-
-                        p {
-                            color: transparentize($bvt-darkgray, 0.1);
-                            font-size: 1.1rem;
-                            font-weight: 400;
-                            text-align: center;
-                        }
-
-                        .nomember_order_btn {
-                            border: $bvt-btn-border-gray;
-                            border-radius: 90px;
-                            color: $bvt-white;
-                            background: $bvt-darkgray;
-                            font-size: 1.3rem;
-                            font-weight: 400;
-                            margin: 8px 0 0 0;
-                            padding: 8px 24px;
-                        }
                     }
                 }
             }

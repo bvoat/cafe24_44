@@ -13,7 +13,7 @@
             <legend class="displaynone">회원로그인</legend>
             <!-- xans-member-login -->
             <div id="{$member_login_module_id}" module="member_login">
-                    <!--
+                <!--
                         $defaultReturnUrl = /index.html
                     -->
                 <section class="member_login_section">
@@ -39,6 +39,8 @@
                         </li>
                     </ul>
                     <button type="submit" class="login_submit" onclick="{$action_func_login}">로그인하기</button>
+                    <a href="{$returnUrl}" class="nomember_order_btn" onclick="{$action_nomember_order}"
+                        title="비회원 구매하기">비회원 구매</a>
                     <div class="login_section_bottom">
                         <ul class="login_util">
                             <li><a href="/member/id/find_id.html" class="btnLogin">아이디 찾기</a></li>
@@ -51,76 +53,72 @@
                         <ul class="login_sns">
                             <h4>SNS 계정으로 로그인하기</h4>
                             <ul class="login_sns_icon_wrap">
-                                <li><a href="#none" class="btnKakao 1"
-                                    onclick="{$kakao_func_login}" title="카카오 로그인"><span>카카오
+                                <li><a href="#none" class="btnKakao 1" onclick="{$kakao_func_login}"
+                                        title="카카오 로그인"><span>카카오
                                             로그인</span></a></li>
-                                <li><a href="#none" class="btnNaver 1"
-                                    onclick="{$naver_func_login}" title="네이버 로그인"><span>네이버
+                                <li><a href="#none" class="btnNaver 1" onclick="{$naver_func_login}"
+                                        title="네이버 로그인"><span>네이버
                                             로그인</span></a>
                                 </li>
                                 <li><a href="#none" onclick="{$facebook_func_login}" title="페이스북 로그인"><span>Facebook
                                             로그인</span></a></li>
-                                <li><a href="#none" class="btnApple 1"
-                                    onclick="{$apple_func_login}" title="애플 로그인"><span>Apple
+                                <li><a href="#none" class="btnApple 1" onclick="{$apple_func_login}"
+                                        title="애플 로그인"><span>Apple
                                             로그인</span></a>
                                 </li>
                             </ul>
                         </ul>
                     </div>
-                    
+
                     <a href="/member/login_nomember.html?noMemberOrder&returnUrl=%2Fmyshop%2Forder%2Flist.html"
                         class="nomember_order_invoice" title="비회원 주문 조회">
                         비회원 주문 조회
                     </a>
-                    <div class="nomember_order {$display_nomember|display}" id="noMemberWrap">
-                        <p>비회원 구매 시 <br/>
-                        비보트의 쿠폰, 마일리지 혜택을 받으실 수 없습니다.</p>
-                        <a href="{$returnUrl}" class="nomember_order_btn" onclick="{$action_nomember_order}" title="비회원 구매하기">비회원 구매</a>
-                    </div>
                 </section>
             </div>
         </fieldset>
     </section>
 </article>
 <script>
-(function($){
+    (function ($) {
         //로그인폼 placeholder 추가
-if ($('.xans-member-login').val() != undefined) {
-    var login_id_type_text = $('#member_id').parent().attr('title');
-    $('#member_id').attr('placeholder', login_id_type_text);
-    $('#member_passwd').attr('placeholder', '패스워드');
-}
+        if ($('.xans-member-login').val() != undefined) {
+            var login_id_type_text = $('#member_id').parent().attr('title');
+            $('#member_id').attr('placeholder', login_id_type_text);
+            $('#member_passwd').attr('placeholder', '패스워드');
+        }
 
-//키보드 미리보기
-$('.keyboard button').click(function(){
-    if($(this).hasClass('selected')==true){
-        $('.keyboard .btnKey').removeClass('selected');
-        $('.view div').hide();
-    }
-    else{
-        $('.keyboard .btnKey').removeClass('selected');
-        $('.view div').hide();
-        $(this).addClass('selected');
-        var key=$(this).attr('title');
-        $(this).parent().next().children('.'+key+'').show();
-    }
-});
+        //키보드 미리보기
+        $('.keyboard button').click(function () {
+            if ($(this).hasClass('selected') == true) {
+                $('.keyboard .btnKey').removeClass('selected');
+                $('.view div').hide();
+            }
+            else {
+                $('.keyboard .btnKey').removeClass('selected');
+                $('.view div').hide();
+                $(this).addClass('selected');
+                var key = $(this).attr('title');
+                $(this).parent().next().children('.' + key + '').show();
+            }
+        });
 
-// 회원&비회원 토글
-$('.ec-base-tab').each(function(){
-    var selected = $(this).find('> ul > li.selected > a');
-});
+        // 회원&비회원 토글
+        $('.ec-base-tab').each(function () {
+            var selected = $(this).find('> ul > li.selected > a');
+        });
 
-$('body').delegate('.ec-base-tab a', 'click', function(e){
-   var _target = $(this).attr('href');
-    if (_target == '#member') {
-        $('#member_login_module_id').show();
-        $('#order_history_nologin_id').hide();
-    } else { console.log("BBB");
-        $('#member_login_module_id').hide();
-        $('#order_history_nologin_id').show();
-    }
-    e.preventDefault();
-});
-})
+        $('body').delegate('.ec-base-tab a', 'click', function (e) {
+            var _target = $(this).attr('href');
+            if (_target == '#member') {
+                $('#member_login_module_id').show();
+                $('#order_history_nologin_id').hide();
+            } else {
+                console.log("BBB");
+                $('#member_login_module_id').hide();
+                $('#order_history_nologin_id').show();
+            }
+            e.preventDefault();
+        });
+    })
 </script>
