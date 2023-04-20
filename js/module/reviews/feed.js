@@ -97,7 +97,7 @@
                     <div class="reviews_wrap">
                         <div class="reviews_thumb_box thumb">
                             <a class="reviews_thumb ${data.multi_image}" href="/reviews/views.html?seq=${data.seq}" onclick="sessionInitClickPosition()">
-                                <img src="${data.img_url}" alt="${data.productno}" onerror="this.onerror='${obj.list_image}'; this.src='${data.list_image}'"><em class="reviews_rate">
+                                <img src="${data.img_url}" alt="${data.productno}" onerror="this.onerror='${obj.list_image}' this.src='${data.list_image}'"><em class="reviews_rate">
                                     <span>${data.rate}</span>
                                 </em></a>
                             <ul class="reviews_reaction_box">
