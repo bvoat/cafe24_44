@@ -29,7 +29,7 @@
     let lastItem;
     //리뷰피드인지 상품인지 확인
     let productNo = getUrlParams('product_no');
-    console.log('productNo: ', productNo);
+    console.log('상품 productNo: ', productNo);
     //s3
     const s3url = 'https://s3.ap-northeast-2.amazonaws.com/community.bvoat.com';
 
@@ -41,7 +41,7 @@
         fetchURL = `https://${api_domain}.shop/reviews/data?product_no=${productNo}&`;
         mode = 'detail';
     }
-    console.log('mode: ', mode, 'fetchURL', fetchURL);
+
     //로그인 한 유저 id
     let login_member;
     if(sessionStorage.getItem("member_1") != null){
@@ -97,7 +97,7 @@
                     <div class="reviews_wrap">
                         <div class="reviews_thumb_box thumb">
                             <a class="reviews_thumb ${data.multi_image}" href="/reviews/views.html?seq=${data.seq}" onclick="sessionInitClickPosition()">
-                                <img src="${data.img_url}" alt="${data.productno}" onerror="this.src='${data.list_image}';"><em class="reviews_rate">
+                                <img src="${data.img_url}" alt="${data.productno}" onerror="this.onerror='${obj.list_image}'; this.src='${data.list_image}'"><em class="reviews_rate">
                                     <span>${data.rate}</span>
                                 </em></a>
                             <ul class="reviews_reaction_box">
