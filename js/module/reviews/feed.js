@@ -71,7 +71,7 @@
                 cmt_num : obj.cmt,
                 likes_num : obj.likes,
                 seq : obj.seq,
-                nickname : obj.nickname ? obj.nickname : '익명',
+                nickname : obj.nickname == '네이버 페이 구매자' ? '익명의 보터' : obj.nickname,
                 id : obj.member_id == '네이버 페이 구매자' ? obj.member_id : '',
                 profile : obj.member_id == '네이버 페이 구매자' ? '#' : `/reviews/profile.html?member_id=${obj.member_id}`,
                 profile_image : obj.profile_image ? obj.profile_image : 'https://bvoat.shop/images/new_img/ico__11.png',
