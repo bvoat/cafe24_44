@@ -79,7 +79,7 @@
                 level : obj.level == null ? '' : obj.level == "1" ? 'normal' : 'crew',
                 multi_image : obj.imgs.length > 1 ? 'multi' : '',
                 list_image : obj.list_image ? obj.list_image : '',
-                img_url : obj.imgs.length > 0 ? obj.imgs[0].storage_div == 'cafe24' ? `${obj.imgs[0].img_dir}/${obj.imgs[0].img_name}` : `${s3url}/${obj.imgs[0].img_dir}/${obj.imgs[0].img_name}` : obj.list_image,
+                img_url : obj.imgs.length > 0 ? obj.imgs[0].storage_div == 'cafe24' ? obj.list_image : `${s3url}/${obj.imgs[0].img_dir}/${obj.imgs[0].img_name}` : obj.list_image,
                 productno : obj.product_name ? obj.product_name : '구매 상품',
                 rate : obj.rate ? obj.rate : '5.0',
                 content : obj.content ? obj.content : '비어 있는 리뷰입니다.',
