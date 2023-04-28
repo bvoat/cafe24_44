@@ -49,7 +49,7 @@ function monitoringPrice() {
     const fixedPriceNum = Number((fixedPrice.dataset.price).replace(/,/g,""));
     const realPrice = price.children[1];
     const realPriceNum = Number((realPrice.dataset.price).replace(/,/g,""));
-    const discount = price.children[2];
+    const discount = price.children[2];    
 
   //소비자가가 입력된 경우 체크
   //소비자가 없으면 0으로 표시
