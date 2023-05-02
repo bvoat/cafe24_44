@@ -87,6 +87,7 @@
   position: absolute;
   top: 0;
   height: 21px;
+  z-index: 1;
 }
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .category_img {
   width: 100%;
@@ -175,6 +176,7 @@
   position: absolute;
   top: 0;
   height: 21px;
+  z-index: 1;
 }
 #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_img,
 #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_img {
@@ -265,6 +267,7 @@
   position: absolute;
   top: 0;
   height: 21px;
+  z-index: 1;
 }
 #categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .category_img,
 #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .category_img {

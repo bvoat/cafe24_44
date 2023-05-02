@@ -59,6 +59,7 @@
   position: absolute;
   top: 0;
   height: 21px;
+  z-index: 1;
 }
 #memberModify #memberModifyTitle #memberUserImage #userImgPreview {
   width: 100%;

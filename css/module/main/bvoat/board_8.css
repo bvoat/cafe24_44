@@ -44,6 +44,7 @@
   position: absolute;
   top: 0;
   height: 21px;
+  z-index: 1;
 }
 #bvtBoard8 ul {
   width: 100%;

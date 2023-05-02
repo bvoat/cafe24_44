@@ -65,6 +65,7 @@
   position: absolute;
   top: 0;
   height: 21px;
+  z-index: 1;
 }
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb {
   width: 30%;

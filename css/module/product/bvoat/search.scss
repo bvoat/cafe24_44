@@ -320,12 +320,13 @@
         }
     }
 
-    //상품 이미지 구역
-    @include product-thumb(4px);
-    //상품 상세 정보 구역
-    @include product-desc(7px, 1rem, 1.15rem, 1.3rem);
 
 }
+
+//상품 이미지 구역
+@include product-thumb(4px);
+//상품 상세 정보 구역
+@include product-desc(7px, 1rem, 1.15rem, 1.3rem);
 
 //페이지네이션
 @include page-pagination;

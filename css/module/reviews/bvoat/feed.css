@@ -138,6 +138,7 @@
   position: absolute;
   top: 0;
   height: 21px;
+  z-index: 1;
 }
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .reviews_thumb_box {
   margin-bottom: 12px;
@@ -407,6 +408,7 @@
   position: absolute;
   top: 0;
   height: 21px;
+  z-index: 1;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_thumb_box {
   position: relative;
@@ -535,6 +537,7 @@
   position: absolute;
   top: 0;
   height: 21px;
+  z-index: 1;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .prd_thumb {
   max-width: 80px;
@@ -1219,6 +1222,7 @@
   position: absolute;
   top: 0;
   height: 21px;
+  z-index: 1;
 }
 #reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .reviews_thumb {
   border-radius: 0 !important;
@@ -1299,6 +1303,7 @@
   position: absolute;
   top: 0;
   height: 21px;
+  z-index: 1;
 }
 #reviewsWriteWrap #reviewsWriteProduct > button .product_thumb {
   width: 80px;
@@ -1785,6 +1790,7 @@
   position: absolute;
   top: 0;
   height: 21px;
+  z-index: 1;
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_thumb {
   width: 80px;

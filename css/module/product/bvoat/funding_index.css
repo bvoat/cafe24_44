@@ -121,6 +121,7 @@
   position: absolute;
   top: 0;
   height: 21px;
+  z-index: 1;
 }
 .bvt-funding .list_item .thumb {
   position: relative;
