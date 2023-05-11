@@ -1,5 +1,7 @@
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(/css/module/board/bvoat/read.css)-->
+<!--@css(/css/module/board/bvoat/read4.css)-->
+
 <!-- 상품 관련 게시판 전체 -->
 <article id="productBoardRead" module="board_ReadPackage_4">
     <section id="productBoardReadTitle" module="board_title_4">
@@ -7,307 +9,271 @@
         <h2>{$board_info}</h2>
     </section>
 
-    <section id="productBoardReadTableHead" module="board_Product_4" class="ec-base-box typeProduct">
-        <h2>문의 상품 정보</h2>
-        <div class="product_info">
-            <div class="thumb">
-                <a href="/product/detail.html{$param_product}" title="{$product_name}"><img src="{$product_img}" alt="{$product_name}" onerror="this.src='//img.echosting.cafe24.com/thumb/75x75.gif'" /></a>
-            </div>
-            <ul class="information">
-                <li><a href="/product/detail.html{$param_product}" title="{$product_name}">{$product_name}</a></li>
-                <li class="price">{$product_price} {$product_tax_type_text}원</li>
-                <li class="button"><a href="/product/detail.html{$param_product}" class="btnEm" title="상품 상세보기 새 창으로 이동" target="_blank">상품 상세보기</a></li>
-            </ul>
-        </div>
-    </section>
 
-    <section id="productBoardReadTable"  module="board_read_4">
+    <div id="productBoardReadTable" module="board_read_4">
         <!--
             $login_page_url = /member/login.html
             $deny_access_url = /board/product/list.html
         -->
-        <div class="ec-base-table typeWrite">
-            <table border="0" summary="">
-            <caption>상품 게시판 상세</caption>
-            <tbody>
-                <tr>
-                    <th scope="row">제목</th>
-                    <td>{$subject}</td>
-                </tr>
-                <tr>
-                    <th scope="row">작성자</th>
-                    <td>{$member_icon} {$writer} <span class="{$config.display_ip|display}">(ip:{$ip})</span> {$admin_mileage}</td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <ul class="etcArea">
-                            <li class="{$config.is_use_point|display}">
-                                <strong>평점</strong> <img src="//img.echosting.cafe24.com/skin/base/board/ico_point{$point_count}.gif" alt="{$point_count}점">
-                            </li>
-                            <li class="{$config.use_date|display}">
-                                <strong>작성일</strong> <span class="txtNum">{$write_date}</span>
-                            </li>
-                            <li class="{$config.is_use_recom|display}">
-                                <strong>추천</strong> <span class="txtNum">{$vote_count} <a href="#none" class="btnNormal" onclick="{$action_vote}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_recommend.gif" alt="" /> 추천하기</a></span>
-                            </li>
-                            <li class="{$config.use_cnt|display}">
-                                <strong>조회수</strong> <span class="txtNum">{$hit_count}</span>
-                            </li>
-                        </ul>
-                        <div class="detail">{$content_image}{$content}</div>
-                        <div class="ec-base-button report-button {$is_report_display|display}">
-                            <span class="gRight">
-                                <a href="#none" class="btnNormalFix sizeS btnReport" onclick="{$board_report_display}">신고</a>
-                            </span>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="attach {$config.use_attach|display}">
-                    <th scope="row">첨부파일</th>
-                    <td>{$attach_file}</td>
-                </tr>
-                <tr class="{$delete_button_auth|display} {$config.use_password|display}">
-                    <th scope="row">비밀번호</th>
-                    <td>{$form.password} <span class="ec-base-help txtInfo">삭제하려면 비밀번호를 입력하세요.</span></td>
-                </tr>
-            </tbody>
-            </table>
-        </div>
+        <div class="boardRead">
+            <div id="productBoardReadInfo" class="info">
+                <div class="user">
+                    <img src="https://bvoat.shop/images/new_img/ico__11.png"
+                        onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'">
+                    <span data-id="{$member_id}">{$writer}</span><span
+                        class="{$config.display_ip|display}">(ip:{$ip})</span>
 
-        <div class="ec-base-button">
-            <span class="gLeft">
-                <span class="{$config.is_admin|display}">
-                    <a href="#none" onclick="{$action_post}" class="btnNormalFix sizeS admin {$config.is_post|display}">{$admin_publish_message}</a>
-                    <a href="#none" onclick="{$action_post}" class="btnNormalFix sizeS admin {$config.not_post|display}">{$not_publish_message}</a>
-                    <a href="#none" onclick="{$action_spam}" class="btnNormalFix sizeS {$is_global_display|display}">스팸신고</a>
-                    <a href="#none" onclick="{$action_spam_cancle}" class="btnNormalFix sizeS {$is_global_display|display}">스팸해제</a>
-                </span>
-                <a href="{$link_board_list}" class="btnNormalFix sizeS">목록</a>
-                    <a href="#none" class="btnNormalFix sizeS btnReport" onclick="{$board_report_display}">신고</a>
-                <!--@import(/board/report_popup.html)-->
-            </span>
-            <span class="gRight">
-                <a href="#none" onclick="{$action_delete}" class="btnNormalFix sizeS {$delete_button_auth|display}">삭제</a>
-                <a href="/board/product/modify.html{$param_modify}" class="btnEmFix sizeS {$modify_button_auth|display}">수정</a>
-                <a href="/board/product/reply.html{$param_reply}" class="btnSubmitFix sizeS {$reply_button_auth|display}">답변</a>
-            </span>
+                </div>
+                <div class="hit {$config.use_cnt|display}">
+                    <strong class="label">조회</strong>
+                    {$hit_count}
+                </div>
+                <p class="rating {$config.is_use_point|display}" data-rate="{$point_count}">{$point_count}
+                </p>
+            </div>
+            <section id="productBoardReadTableHead" module="board_Product_4"
+                class="ec-base-box typeProduct product_info">
+                <a href="/product/detail.html{$param_product}" title="{$product_name}" class="product_info_link">
+                    <div class="thumb">
+                        <img src="{$product_img}" alt="{$product_name}"
+                            onerror="this.src='//img.echosting.cafe24.com/thumb/75x75.gif'" />
+                    </div>
+                    <ul class="information">
+                        <li class="prd_name">{$product_name}</li>
+                        <li class="prd_price">{$product_price} {$product_tax_type_text}원</li>
+                    </ul>
+                </a>
+            </section>
+
+            <div id="productBoardReadContent">
+                {$content_image}
+                <div class="content">{$content}</div>
+                <div class="vote {$config.is_use_recom|display}">
+                    <a href="#" class="btnNormal vote_btn" onclick="{$action_vote}"><img
+                            src="/bvtIMG/icon/icon_review_like.png" alt="" /> 도움이 돼요
+                        {$vote_count}</a>
+                    <p class="regdate {$config.use_date|display}">
+                        {$write_date}
+                    </p>
+                </div>
+
+            </div>
+            <div id="productBoardReadAttach" class="attach {$config.use_attach|display} displaynone">
+                <strong class="label">첨부파일</strong>
+                <span>{$attach_file}</span>
+            </div>
+            <div id="productBoardReadPassword" class="password {$delete_button_auth|display}">
+                <strong class="label {$delete_button_auth|display} {$config.use_password|display}">비밀번호 입력</strong>
+                <div class="form {$board_password_type}">
+                    <div class="form_password">
+                        <div class="passwordForm {$config.use_password|display}">
+                            {$form.password}</div>
+                        <a href="/board/product/modify.html{$param_modify}"
+                            class="btnBasic control_btn {$modify_button_auth|display}">수정</a>
+                        <button class="btnBasic control_btn {$delete_button_auth|display}"
+                            onclick="{$action_delete}">삭제</button>
+
+                    </div>
+                    <p class="{$config.use_password|display}">비밀번호 입력후 수정 혹은 삭제해주세요.</p>
+                </div>
+            </div>
+            <!-- <div class="btnArea">
+                <span class="gLeft"><a href="{$link_board_list}" class="btnStrong">목록</a></span>
+                <span class="gRight"><a href="/board/product/reply.html{$param_reply}"
+                        class="btnStrong {$reply_button_auth|display}">답변쓰기</a></span>
+            </div> -->
         </div>
-    </section>
-    
-<div module="board_CommentPackage_4">
-    <!--@css(/css/module/board/commentPackage.css)-->
-    <div module="board_commentlist_4">
-        <!--
+    </div>
+
+    <section id="productBoardReadComment" module="board_CommentPackage_4">
+        <!--@css(/css/module/board/commentPackage.css)-->
+        <div class="board_commentlist" module="board_commentlist_4">
+            <!--
             $delete_page_url = /board/product/comment_del.html
             $delete_success_url = /board/product/read.html
         -->
-        <ul class="boardComment">
-            <li class="first {$comment_reply_css}">
-                <div class="commentTop">
-                    <strong class="name">{$checkbox} {$member_icon} {$comment_name}</strong>
-                    <span class="date">{$comment_write_date}</span>
-                    <span class="grade {$config.is_use_point|display}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$comment_point_count}.gif" alt="{$comment_point_count}점" /></span>
-                </div>
-                <span class="button">
-                    <a href="javascript:;" class="btnNormal {$comment_modify_display|display}" onclick="{$action_comment_update}">수정</a>
-                    <a href="javascript:;" class="btnNormal {$comment_delete_display|display}" onclick="{$action_comment_delete}"><i class="icoDelete"></i> 삭제</a>
-                    <a href="javascript:;" onclick="{$action_comment_reply}" class="btnNormal {$comment_reply_display|display}">댓글 <img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_reply.gif" alt="" /></a>
-                </span>
-                <div class="comment">
-                    <span class="{$is_spam_display|display}"><img src="//img.echosting.cafe24.com/skin/base/board/ico_spam.gif" alt="스팸글" /></span>
-                    {$comment_icon_lock} {$comment_content}
-                </div>
-            </li>
-            <li class="{$comment_reply_css}">
-                <div class="commentTop">
-                    <strong class="name">{$checkbox} {$member_icon} {$comment_name}</strong>
-                    <span class="date">{$comment_write_date}</span>
-                    <span class="grade {$config.is_use_point|display}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$comment_point_count}.gif" alt="{$comment_point_count}점" /></span>
-                </div>
-                <span class="button">
-                    <a href="javascript:;" class="btnNormal {$comment_modify_display|display}" onclick="{$action_comment_update}">수정</a>
-                    <a href="javascript:;" class="btnNormal {$comment_delete_display|display}" onclick="{$action_comment_delete}"><i class="icoDelete"></i> 삭제</a>
-                    <a href="javascript:;" onclick="{$action_comment_reply}" class="btnNormal {$comment_reply_display|display}">댓글 <img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_reply.gif" alt="" /></a>
-                </span>
-                <div class="comment">
-                    <span class="{$is_spam_display|display}"><img src="//img.echosting.cafe24.com/skin/base/board/ico_spam.gif" alt="스팸글" /></span>
-                    {$comment_icon_lock} {$comment_content}
-                </div>
-            </li>
-        </ul>
+            <ul class="boardComment">
+                <li class="first {$comment_reply_css}">
+                    <div class="commentTop">
+                        <strong class="name">{$checkbox} <a href="#" class="userimg_wrap">
+                                <img src="https://bvoat.shop/images/new_img/ico__11.png"
+                                    onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'"></a>{$comment_name}</strong>
+                        <span class="date">{$comment_write_date}</span>
+                        <span class="grade {$config.is_use_point|display}"><img
+                                src="//img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$comment_point_count}.gif"
+                                alt="{$comment_point_count}점" /></span>
+                    </div>
+                    <span class="button">
+                        <a href="javascript:;" class="btnNormal {$comment_modify_display|display}"
+                            onclick="{$action_comment_update}">수정</a>
+                        <a href="javascript:;" class="btnNormal {$comment_delete_display|display}"
+                            onclick="{$action_comment_delete}"><i class="icoDelete"></i> 삭제</a>
+                        <a href="javascript:;" onclick="{$action_comment_reply}"
+                            class="btnNormal {$comment_reply_display|display}">댓글 <img
+                                src="//img.echosting.cafe24.com/skin/base/common/btn_icon_reply.gif" alt="" /></a>
+                    </span>
+                    <div class="comment">
+                        <span class="{$is_spam_display|display}"><img
+                                src="//img.echosting.cafe24.com/skin/base/board/ico_spam.gif" alt="스팸글" /></span>
+                        {$comment_icon_lock} {$comment_content}
+                    </div>
+                </li>
+                <li class="{$comment_reply_css}">
+                    <div class="commentTop">
+                        <strong class="name">{$checkbox} {$member_icon} {$comment_name}</strong>
+                        <span class="date">{$comment_write_date}</span>
+                        <span class="grade {$config.is_use_point|display}"><img
+                                src="//img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$comment_point_count}.gif"
+                                alt="{$comment_point_count}점" /></span>
+                    </div>
+                    <span class="button">
+                        <a href="javascript:;" class="btnNormal {$comment_modify_display|display}"
+                            onclick="{$action_comment_update}">수정</a>
+                        <a href="javascript:;" class="btnNormal {$comment_delete_display|display}"
+                            onclick="{$action_comment_delete}"><i class="icoDelete"></i> 삭제</a>
+                        <a href="javascript:;" onclick="{$action_comment_reply}"
+                            class="btnNormal {$comment_reply_display|display}">댓글 <img
+                                src="//img.echosting.cafe24.com/skin/base/common/btn_icon_reply.gif" alt="" /></a>
+                    </span>
+                    <div class="comment">
+                        <span class="{$is_spam_display|display}"><img
+                                src="//img.echosting.cafe24.com/skin/base/board/ico_spam.gif" alt="스팸글" /></span>
+                        {$comment_icon_lock} {$comment_content}
+                    </div>
+                </li>
+            </ul>
 
-        <div class="ec-base-button typeBG spam {$config.is_admin|display}">
-            <span class="gLeft">
-                <a href="#none" onclick="{$action_spam}" class="btnNormalFix sizeS {$is_global_display|display}">스팸신고</a>
-                <a href="#none" onclick="{$action_spam_cancle}" class="btnNormalFix sizeS {$is_global_display|display}">스팸해제</a>
-            </span>
-        </div>
-    </div>
-
-    <div module="board_commentpaging_4" class="ec-base-paginate typeSub">
-        <a href="{$param_prev}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev2.gif" alt="이전 페이지" /></a>
-        <ol>
-            <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
-            <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
-        </ol>
-        <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next2.gif" alt="다음 페이지" /></a>
-    </div>
-
-    <div module="board_commentform_4">
-        <fieldset>
-            <legend>댓글 수정</legend>
-            <p>비밀번호 : {$form.comment_password} <span class="secret {$comment_secret_display|display}"><label>{$form.secure}비밀댓글</label></span></p>
-            <div class="view">
-                {$form.comment_modify}
-                <span class="submit">
-                    <a href="#none" class="btnEm sizeL" onclick="{$action_comment_update}">수정</a>
-                    <a href="#none" class="btnNormal sizeL" onclick="{$action_comment_cancel}">취소</a>
+            <div class="ec-base-button typeBG spam {$config.is_admin|display}">
+                <span class="gLeft">
+                    <a href="#none" onclick="{$action_spam}"
+                        class="btnNormalFix sizeS {$is_global_display|display}">스팸신고</a>
+                    <a href="#none" onclick="{$action_spam_cancle}"
+                        class="btnNormalFix sizeS {$is_global_display|display}">스팸해제</a>
                 </span>
             </div>
-            <p class="{$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</p>
-        </fieldset>
-    </div>
+        </div>
 
-    <div module="board_commentformsecret_1002">
-        <p>비밀번호 : {$form.secure_password}
-            <a href="#none" class="btnNormal" onclick="{$action_secret_submit}">확인</a>
-            <a href="#none" class="btnNormal" onclick="{$action_secret_cancel}">취소</a>
-        </p>
-    </div>
+        <div module="board_commentpaging_4" class="ec-base-paginate typeSub">
+            <a href="{$param_prev}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev2.gif"
+                    alt="이전 페이지" /></a>
+            <ol>
+                <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+                <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+            </ol>
+            <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next2.gif"
+                    alt="다음 페이지" /></a>
+        </div>
 
-    <div module="board_commentwrite_4">
-        <!-- 댓글권한 있음 -->
-        <div class="{$comment_write_display|display}">
+        <div module="board_commentform_4">
             <fieldset>
-                <legend>댓글 입력</legend>
-                <div class="input">
-                    <strong>댓글달기</strong>
-                    <span class="{$comment_input_name|display}">이름 : {$form.comment_name}</span>비밀번호 : {$form.comment_password}<span class="secret {$comment_secret_display|display}"><label>{$form.secure}비밀댓글</label></span><a href="#none" onclick="{$action_comment_admin}" class="btnNormal {$config.pre_comment|display}">관리자답변보기</a>
-                    <p class="ec-base-help {$password_rule_help_display|display}">영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자</p>
-                </div>
-                <div class="view">
-                    {$form.comment}
-                    <a href="#none" onclick="{$action_comment_insert}" class="btnEm sizeL {$comment_button|display}">확인</a>
-                </div>
-                <p class="grade {$config.is_use_point|display}">{$form.comment_point}</p>
-                <p class="{$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</p>
-                <p class="captcha {$config.use_captcha_comment|display}">
-                    {$captcha_image} {$captcha_refresh}
-                    {$form.captcha}
-                    <span class="ec-base-help txtInfo">왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)</span>
+                <legend>댓글 수정</legend>
+                <p>비밀번호 : {$form.comment_password} <span
+                        class="secret {$comment_secret_display|display}"><label>{$form.secure}비밀댓글</label></span>
                 </p>
-            </fieldset>
-        </div>
-        <!-- 댓글권한 없음 -->
-        <div class="{$comment_write_display_none|display}">
-            <p>{$comment_auth_name}에게만 댓글 작성 권한이 있습니다.</p>
-        </div>
-    </div>
-
-    <div module="board_commentreply_4">
-        <!-- 댓글권한 있음 -->
-        <div class="{$comment_write_display|display}">
-            <fieldset>
-                <legend>댓글 입력</legend>
-                <div class="input">
-                    <strong>댓글달기</strong>
-                    <span class="{$comment_input_name|display}">이름 : {$form.comment_name}</span>비밀번호 : {$form.comment_password}<span class="secret {$comment_secret_display|display}"><label>{$form.secure}비밀댓글</label></span>
-                    <p class="ec-base-help {$password_rule_help_display|display}">영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자</p>
-                </div>
                 <div class="view">
-                    {$form.comment}
-                    <a href="#none" onclick="{$action_comment_insert}" class="btnEm sizeL {$comment_button|display}">확인</a>
+                    {$form.comment_modify}
+                    <span class="submit">
+                        <a href="#none" class="btnEm sizeL" onclick="{$action_comment_update}">수정</a>
+                        <a href="#none" class="btnNormal sizeL" onclick="{$action_comment_cancel}">취소</a>
+                    </span>
                 </div>
                 <p class="{$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</p>
-                <p class="captcha {$config.use_captcha_comment|display}">
-                    {$captcha_image} {$captcha_refresh}
-                    {$form.captcha}
-                    <span class="ec-base-help txtInfo">왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)</span>
-                </p>
             </fieldset>
         </div>
-        <!-- 댓글권한 없음 -->
-        <div class="{$comment_write_display_none|display}">
-            <p>{$comment_auth_name}에게만 댓글 작성 권한이 있습니다.</p>
+
+        <div module="board_commentformsecret_1002">
+            <p>비밀번호 : {$form.secure_password}
+                <a href="#none" class="btnNormal" onclick="{$action_secret_submit}">확인</a>
+                <a href="#none" class="btnNormal" onclick="{$action_secret_cancel}">취소</a>
+            </p>
         </div>
-    </div>
-</div>
 
-<div module="board_movement_4">
-    <!--@css(/css/module/board/movement.css)-->
-    <ul>
-        <li class="prev {$prev_display|display}"><strong>이전글</strong><a href="{$link_board_detail_prev}">{$prev_subject}</a></li>
-        <li class="next {$next_display|display}"><strong>다음글</strong><a href="{$link_board_detail_next}">{$next_subject}</a></li>
-    </ul>
-</div>
+        <div module="board_commentwrite_4">
+            <!-- 댓글권한 있음 -->
+            <div class="{$comment_write_display|display}">
+                <fieldset>
+                    <legend>댓글 입력</legend>
+                    <div class="input">
+                        <strong>댓글달기</strong>
+                        <span class="{$comment_input_name|display}">이름 : {$form.comment_name}</span>비밀번호 :
+                        {$form.comment_password}<span
+                            class="secret {$comment_secret_display|display}"><label>{$form.secure}비밀댓글</label></span><a
+                            href="#none" onclick="{$action_comment_admin}"
+                            class="btnNormal {$config.pre_comment|display}">관리자답변보기</a>
+                        <p class="ec-base-help {$password_rule_help_display|display}">영문 대소문자/숫자/특수문자 중 2가지 이상 조합,
+                            10자~16자</p>
+                    </div>
+                    <div class="view">
+                        {$form.comment}
+                        <a href="#none" onclick="{$action_comment_insert}"
+                            class="btnEm sizeL {$comment_button|display}">확인</a>
+                    </div>
+                    <p class="grade {$config.is_use_point|display}">{$form.comment_point}</p>
+                    <p class="{$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</p>
+                    <p class="captcha {$config.use_captcha_comment|display}">
+                        {$captcha_image} {$captcha_refresh}
+                        {$form.captcha}
+                        <span class="ec-base-help txtInfo">왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)</span>
+                    </p>
+                </fieldset>
+            </div>
+            <!-- 댓글권한 없음 -->
+            <div class="{$comment_write_display_none|display}">
+                <p>{$comment_auth_name}에게만 댓글 작성 권한이 있습니다.</p>
+            </div>
+        </div>
 
-<div module="board_listsgroup_4">
+        <div module="board_commentreply_4">
+            <!-- 댓글권한 있음 -->
+            <div class="{$comment_write_display|display}">
+                <fieldset>
+                    <legend>댓글 입력</legend>
+                    <div class="input">
+                        <strong>댓글달기</strong>
+                        <span class="{$comment_input_name|display}">이름 : {$form.comment_name}</span>비밀번호 :
+                        {$form.comment_password}<span
+                            class="secret {$comment_secret_display|display}"><label>{$form.secure}비밀댓글</label></span>
+                        <p class="ec-base-help {$password_rule_help_display|display}">영문 대소문자/숫자/특수문자 중 2가지 이상 조합,
+                            10자~16자</p>
+                    </div>
+                    <div class="view">
+                        {$form.comment}
+                        <a href="#none" onclick="{$action_comment_insert}"
+                            class="btnEm sizeL {$comment_button|display}">확인</a>
+                    </div>
+                    <p class="{$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</p>
+                    <p class="captcha {$config.use_captcha_comment|display}">
+                        {$captcha_image} {$captcha_refresh}
+                        {$form.captcha}
+                        <span class="ec-base-help txtInfo">왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)</span>
+                    </p>
+                </fieldset>
+            </div>
+            <!-- 댓글권한 없음 -->
+            <div class="{$comment_write_display_none|display}">
+                <p>{$comment_auth_name}에게만 댓글 작성 권한이 있습니다.</p>
+            </div>
+        </div>
+    </section>
 
-    <!--@css(/css/module/board/listsgroup.css)-->
-    <!--
-        $count = 5
-        $product_name_cut = 10
-    -->
-    <div class="ec-base-table typeList gBorder">
-        <table border="1" summary="">
-            <caption>관련글 모음</caption>
-            <colgroup>
-                    <col style="width:70px;" />
-                    <col style="width:134px;" />
-                    <col style="width:auto;" />
-                    <col style="width:84px;" />
-                    <col style="width:77px;" class="{$config.use_date|display}" />
-                    <col style="width:55px;" class="{$config.use_cnt|display}" />
-                </colgroup>
-            <thead>
-                <tr>
-                    <th scope="col">번호</th>
-                    <th scope="col">상품명</th>
-                    <th scope="col">제목</th>
-                    <th scope="col">작성자</th>
-                    <th scope="col" class="{$config.use_date|display}">작성일</th>
-                    <th scope="col" class="{$config.use_cnt|display}">조회</th>
-                </tr>
-            </thead>
-            <tbody class="center">
-                <tr>
-                    <td>{$idx}</td>
-                    <td><span>{$product_name}</span></td>
-                    <td class="subject left txtBreak">
-                        {$icon_re}{$icon_lock} <a href="{$link_board_detail}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}
-                    </td>
-                    <td>{$member_icon}{$writer}</td>
-                    <td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
-                    <td class="{$hit_display|display}"><span class="txtNum">{$hit_count}</span></td>
-                </tr>
-                <tr>
-                    <td>{$idx}</td>
-                    <td><span>{$product_name}</span></td>
-                    <td class="subject left txtBreak">
-                        {$icon_re}{$icon_lock} <a href="{$link_board_detail}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}
-                    </td>
-                    <td>{$member_icon}{$writer}</td>
-                    <td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
-                    <td class="{$hit_display|display}"><span class="txtNum">{$hit_count}</span></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-<!-- 관리자 전용 메뉴 -->
-<div module="board_function_4">
-    <!--@css(/css/module/board/function.css)-->
-    <!--
+    <!-- 관리자 전용 메뉴 -->
+    <div module="board_function_4">
+        <!--@css(/css/module/board/function.css)-->
+        <!--
         $success_return_url = /board/product/list.html
      -->
-    <p>
-        {$board_function_selectbox}
-        <a href="#none" class="btnNormal" onclick="{$action_article_move}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_move.gif" alt="" /> {$article_move}</a>
-        <a href="#none" class="btnNormal" onclick="{$action_article_copy}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_copy.gif" alt="" /> {$article_copy}</a>
-        {$board_function_help}
-    </p>
-</div>
-<!-- // 관리자 전용 메뉴 -->
+        <p>
+            {$board_function_selectbox}
+            <a href="#none" class="btnNormal" onclick="{$action_article_move}"><img
+                    src="//img.echosting.cafe24.com/skin/base/common/btn_icon_move.gif" alt="" />
+                {$article_move}</a>
+            <a href="#none" class="btnNormal" onclick="{$action_article_copy}"><img
+                    src="//img.echosting.cafe24.com/skin/base/common/btn_icon_copy.gif" alt="" />
+                {$article_copy}</a>
+            {$board_function_help}
+        </p>
+    </div>
+    <!-- // 관리자 전용 메뉴 -->
 </article>
 
 

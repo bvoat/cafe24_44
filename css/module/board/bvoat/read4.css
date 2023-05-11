@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
+:root {
+  --icon-rate: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 11 12'%3E%3Cpath fill='%23022CFF' d='m6.12.94 1.23 2.47c.09.17.22.38.41.41l2.67.41c.49.07.76.69.41 1.03L8.8 7.1a.81.81 0 0 0-.2.61l.6 2.68c.1.48-.59.84-1.02.61L5.71 9.78a.35.35 0 0 0-.42 0l-2.46 1.23A.57.57 0 0 1 2 10.4l.4-2.68a.81.81 0 0 0-.2-.61L.16 5.26c-.35-.34-.08-.96.4-1.03l2.68-.41c.2-.03.33-.24.41-.41L4.88.94a.74.74 0 0 1 1.24 0Z'/%3E%3C/svg%3E");
+}
+
+#productBoardReadTable #productBoardReadInfo {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+#productBoardReadTable #productBoardReadInfo .user {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+#productBoardReadTable #productBoardReadInfo .user img {
+  display: block;
+  width: 40px;
+  margin-right: 12px;
+  font-size: 0;
+}
+#productBoardReadTable #productBoardReadInfo .rating {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 51px;
+  height: 23px;
+  border-radius: 100px;
+  background: rgba(242, 242, 242, 0.5);
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #022CFF;
+}
+#productBoardReadTable #productBoardReadInfo .rating::before {
+  display: block;
+  content: "";
+  width: 11px;
+  height: 10.47px;
+  background: var(--icon-rate) no-repeat center;
+  margin-right: 2px;
+}
+#productBoardReadTable #productBoardReadTableHead {
+  width: 100%;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+#productBoardReadTable #productBoardReadTableHead .product_info_link {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#productBoardReadTable #productBoardReadTableHead .product_info_link .thumb {
+  width: 100%;
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 2px;
+  font-size: 0;
+}
+#productBoardReadTable #productBoardReadTableHead .product_info_link .information {
+  width: calc(100% - 92px);
+}
+#productBoardReadTable #productBoardReadTableHead .product_info_link .information li {
+  font-size: 1.4rem;
+}
+#productBoardReadTable #productBoardReadTableHead .product_info_link .information .prd_name {
+  width: 90%;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #454545;
+  text-align: start;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.7rem;
+  margin-bottom: 12px;
+}
+#productBoardReadTable #productBoardReadContent {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#productBoardReadTable #productBoardReadContent img {
+  width: 100%;
+}
+#productBoardReadTable #productBoardReadContent p,
+#productBoardReadTable #productBoardReadContent div {
+  font-size: 1.4rem;
+}
+#productBoardReadTable #productBoardReadContent .content {
+  font-size: 1.4rem;
+  margin: 20px 0;
+}
+#productBoardReadTable #productBoardReadContent .vote {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#productBoardReadTable #productBoardReadContent .vote img {
+  width: 14.88px;
+  margin-right: 3.68px;
+}
+#productBoardReadTable #productBoardReadContent .vote .vote_btn {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 138px;
+  height: 30px;
+  border: 1px solid #022CFF;
+  border-width: 1.2px;
+  border-radius: 2px;
+  background: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.027rem;
+  color: #022CFF;
+}
+#productBoardReadTable #productBoardReadContent .vote .regdate {
+  color: #707070;
+}
+#productBoardReadTable #productBoardReadPassword {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.35rem;
+}
+#productBoardReadTable #productBoardReadPassword .label {
+  width: 100px;
+}
+#productBoardReadTable #productBoardReadPassword .form {
+  width: 100%;
+  margin-left: 12px;
+}
+#productBoardReadTable #productBoardReadPassword .form .form_password {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: right;
+  align-items: center;
+}
+#productBoardReadTable #productBoardReadPassword .form .form_password .passwordForm input {
+  width: 190px;
+  height: 26px;
+  font-size: 1.6rem;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  margin-right: 8px;
+}
+#productBoardReadTable #productBoardReadPassword .form .form_password .control_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc((100% - 210px) / 2);
+  height: 26px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: #ffffff;
+  border: 1px solid #C4C4C4;
+  border-radius: 9px;
+  margin-right: 4px;
+}
+#productBoardReadTable #productBoardReadPassword .form p {
+  font-size: 1.2rem;
+}
+
+#productBoardReadComment {
+  background-color: rgba(0, 255, 0, 0.062745098);
+}
+#productBoardReadComment .board_commentlist {
+  background: rgba(255, 0, 0, 0.1254901961);
+}
+#productBoardReadComment .board_commentlist .boardComment li {
+  font-size: 1.3rem;
+}
+#productBoardReadComment .board_commentlist .boardComment li .commentTop {
+  font-size: 1.3rem;
+}
+#productBoardReadComment .board_commentlist .boardComment li .comment {
+  font-size: 1.3rem;
+}/*# sourceMappingURL=read4.css.map */
