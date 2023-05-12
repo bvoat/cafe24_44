@@ -18,10 +18,10 @@
         <div class="boardRead">
             <div id="productBoardReadInfo" class="info">
                 <div class="user">
-                    <img src="https://bvoat.shop/images/new_img/ico__11.png"
+                    <img class="user_img" src="https://bvoat.shop/images/new_img/ico__11.png"
                         onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'">
-                    <span data-id="{$member_id}">{$writer}</span><span
-                        class="{$config.display_ip|display}">(ip:{$ip})</span>
+                    <span class="writer" data-writer="{$writer}" data-id="{$id}"> {$writer}</span>
+                    <div class="member_icon">{$member_icon}</div>
 
                 </div>
                 <div class="hit {$config.use_cnt|display}">
@@ -85,9 +85,11 @@
         </div>
     </div>
 
+    <!-- 댓글 섹션 -->
     <section id="productBoardReadComment" module="board_CommentPackage_4">
         <!--@css(/css/module/board/commentPackage.css)-->
-        <div class="board_commentlist" module="board_commentlist_4">
+        <!-- 댓글 리스트 -->
+        <div id="commentList" module="board_commentlist_4">
             <!--
             $delete_page_url = /board/product/comment_del.html
             $delete_success_url = /board/product/read.html
@@ -95,40 +97,43 @@
             <ul class="boardComment">
                 <li class="first {$comment_reply_css}">
                     <div class="commentTop">
-                        <strong class="name">{$checkbox} <a href="#" class="userimg_wrap">
-                                <img src="https://bvoat.shop/images/new_img/ico__11.png"
-                                    onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'"></a>{$comment_name}</strong>
-                        <span class="date">{$comment_write_date}</span>
-                        <span class="grade {$config.is_use_point|display}"><img
-                                src="//img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$comment_point_count}.gif"
-                                alt="{$comment_point_count}점" /></span>
+                        <div class="name">{$checkbox}
+                            <img class="user_img" src="https://bvoat.shop/images/new_img/ico__11.png"
+                                onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'">{$comment_name}
+                            <span
+                                class="grade rate displaynone {$config.is_use_point|display}">{$comment_point_count}</span>
+                        </div>
+                        <div class="button">
+                            <a href="javascript:;" class="btnNormal control_btn {$comment_modify_display|display}"
+                                onclick="{$action_comment_update}">수정</a>
+                            <a href="javascript:;" class="btnNormal control_btn {$comment_delete_display|display}"
+                                onclick="{$action_comment_delete}"><i class="icoDelete"></i> 삭제</a>
+                            <a href="javascript:;" onclick="{$action_comment_reply}"
+                                class="btnNormal control_btn {$comment_reply_display|display}">댓글 </a>
+                        </div>
                     </div>
-                    <span class="button">
-                        <a href="javascript:;" class="btnNormal {$comment_modify_display|display}"
-                            onclick="{$action_comment_update}">수정</a>
-                        <a href="javascript:;" class="btnNormal {$comment_delete_display|display}"
-                            onclick="{$action_comment_delete}"><i class="icoDelete"></i> 삭제</a>
-                        <a href="javascript:;" onclick="{$action_comment_reply}"
-                            class="btnNormal {$comment_reply_display|display}">댓글 <img
-                                src="//img.echosting.cafe24.com/skin/base/common/btn_icon_reply.gif" alt="" /></a>
-                    </span>
+
                     <div class="comment">
                         <span class="{$is_spam_display|display}"><img
                                 src="//img.echosting.cafe24.com/skin/base/board/ico_spam.gif" alt="스팸글" /></span>
                         {$comment_icon_lock} {$comment_content}
+                        <p class="date">{$comment_write_date}</p>
                     </div>
+
                 </li>
                 <li class="{$comment_reply_css}">
                     <div class="commentTop">
-                        <strong class="name">{$checkbox} {$member_icon} {$comment_name}</strong>
-                        <span class="date">{$comment_write_date}</span>
+                        <strong class="name">{$checkbox} {$member_icon} {$comment_name}
+                            <span class="date">{$comment_write_date}</span>
+                        </strong>
+
                         <span class="grade {$config.is_use_point|display}"><img
                                 src="//img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$comment_point_count}.gif"
                                 alt="{$comment_point_count}점" /></span>
                     </div>
                     <span class="button">
-                        <a href="javascript:;" class="btnNormal {$comment_modify_display|display}"
-                            onclick="{$action_comment_update}">수정</a>
+                        <button href="javascript:;" class="btnNormal {$comment_modify_display|display}"
+                            onclick="{$action_comment_update}">수정</button>
                         <a href="javascript:;" class="btnNormal {$comment_delete_display|display}"
                             onclick="{$action_comment_delete}"><i class="icoDelete"></i> 삭제</a>
                         <a href="javascript:;" onclick="{$action_comment_reply}"
@@ -152,7 +157,7 @@
                 </span>
             </div>
         </div>
-
+        <!-- 댓글 페이징 -->
         <div module="board_commentpaging_4" class="ec-base-paginate typeSub">
             <a href="{$param_prev}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev2.gif"
                     alt="이전 페이지" /></a>
@@ -163,10 +168,11 @@
             <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next2.gif"
                     alt="다음 페이지" /></a>
         </div>
-
-        <div module="board_commentform_4">
+        <!-- 댓글 수정 폼 -->
+        <div id="commentModifyForm" module="board_commentform_4">
             <fieldset>
                 <legend>댓글 수정</legend>
+                <h2>댓글 수정</h2>
                 <p>비밀번호 : {$form.comment_password} <span
                         class="secret {$comment_secret_display|display}"><label>{$form.secure}비밀댓글</label></span>
                 </p>
@@ -188,15 +194,22 @@
             </p>
         </div>
 
-        <div module="board_commentwrite_4">
+        <!-- 댓글 입력 폼 -->
+        <div id="commentWritingForm" module="board_commentwrite_4">
             <!-- 댓글권한 있음 -->
             <div class="{$comment_write_display|display}">
                 <fieldset>
                     <legend>댓글 입력</legend>
                     <div class="input">
-                        <strong>댓글달기</strong>
-                        <span class="{$comment_input_name|display}">이름 : {$form.comment_name}</span>비밀번호 :
-                        {$form.comment_password}<span
+                        <h2>댓글달기</h2>
+                        <div class="userinfo_input">
+                            <span class="name {$comment_input_name|display}"><img class="user_img"
+                                    src="https://bvoat.shop/images/new_img/ico__11.png"
+                                    onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'">{$form.comment_name}</span>
+                            <span class="password{$comment_input_name|display}">비밀번호
+                                {$form.comment_password}</span>
+                        </div>
+                        <span
                             class="secret {$comment_secret_display|display}"><label>{$form.secure}비밀댓글</label></span><a
                             href="#none" onclick="{$action_comment_admin}"
                             class="btnNormal {$config.pre_comment|display}">관리자답변보기</a>
@@ -206,9 +219,9 @@
                     <div class="view">
                         {$form.comment}
                         <a href="#none" onclick="{$action_comment_insert}"
-                            class="btnEm sizeL {$comment_button|display}">확인</a>
+                            class="btnEm sizeL control_btn {$comment_button|display}">확인</a>
                     </div>
-                    <p class="grade {$config.is_use_point|display}">{$form.comment_point}</p>
+                    <p class="grade displaynone {$config.is_use_point|display}">{$form.comment_point}</p>
                     <p class="{$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</p>
                     <p class="captcha {$config.use_captcha_comment|display}">
                         {$captcha_image} {$captcha_refresh}
@@ -218,21 +231,24 @@
                 </fieldset>
             </div>
             <!-- 댓글권한 없음 -->
-            <div class="{$comment_write_display_none|display}">
+            <div class="no_auth_write {$comment_write_display_none|display}">
                 <p>{$comment_auth_name}에게만 댓글 작성 권한이 있습니다.</p>
             </div>
         </div>
 
-        <div module="board_commentreply_4">
+
+        <!-- 대댓글 입력 폼 -->
+        <div id="commentReplyForm" module="board_commentreply_4">
             <!-- 댓글권한 있음 -->
             <div class="{$comment_write_display|display}">
                 <fieldset>
                     <legend>댓글 입력</legend>
                     <div class="input">
-                        <strong>댓글달기</strong>
-                        <span class="{$comment_input_name|display}">이름 : {$form.comment_name}</span>비밀번호 :
-                        {$form.comment_password}<span
-                            class="secret {$comment_secret_display|display}"><label>{$form.secure}비밀댓글</label></span>
+                        <h2>댓글달기</h2>
+                        <span class="{$comment_input_name|display}">이름 : {$form.comment_name}</span>
+                        <span class="{$comment_input_name|display}">비밀번호 :
+                            {$form.comment_password}</span>
+                        <span class="secret {$comment_secret_display|display}"><label>{$form.secure}비밀댓글</label></span>
                         <p class="ec-base-help {$password_rule_help_display|display}">영문 대소문자/숫자/특수문자 중 2가지 이상 조합,
                             10자~16자</p>
                     </div>
