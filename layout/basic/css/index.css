@@ -155,44 +155,6 @@
   padding: 0 17px;
   margin-bottom: 15%;
 }
-#bvtHome #indexListmain div.listmain:first-of-type {
-  padding: 25.8px 11px 0;
-  margin-bottom: 9%;
-}
-#bvtHome #indexListmain div.listmain:nth-child(2) {
-  margin-bottom: 12%;
-}
-#bvtHome #indexListmain div.listmain:nth-child(2) .list_item {
-  display: flex;
-  flex-flow: row nowrap;
-  width: auto;
-  margin-bottom: 9.8px;
-}
-#bvtHome #indexListmain div.listmain:nth-child(2) .list_item .thumb {
-  width: auto;
-  min-width: 125.5px;
-}
-#bvtHome #indexListmain div.listmain:nth-child(2) .list_item .desc {
-  width: auto;
-  padding: 7px 0 0 9.8px;
-}
-#bvtHome #indexListmain div.listmain:nth-child(2) .list_item .desc .price_wrap,
-#bvtHome #indexListmain div.listmain:nth-child(2) .list_item .desc .product_name,
-#bvtHome #indexListmain div.listmain:nth-child(2) .list_item .desc .summary {
-  width: 91%;
-}
-#bvtHome #indexListmain div.listmain:nth-child(3) .list_item {
-  display: block;
-  border-radius: 4px;
-}
-#bvtHome #indexListmain div.listmain:nth-child(3) .list_item a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-#bvtHome #indexListmain div.listmain:nth-child(3) .list_item a img {
-  width: 100%;
-}
 #bvtHome #indexListmain div.listmain h3 {
   display: flex;
   flex-flow: row nowrap;
@@ -203,6 +165,44 @@
 }
 #bvtHome #indexListmain div.listmain .right-side-control {
   overflow: hidden;
+}
+#bvtHome #indexListmain #listmainFunding {
+  padding: 25.8px 11px 0;
+  margin-bottom: 9%;
+}
+#bvtHome #indexListmain #listmainFreeShipping {
+  margin-bottom: 12%;
+}
+#bvtHome #indexListmain #listmainFreeShipping .list_item {
+  display: flex;
+  flex-flow: row nowrap;
+  width: auto;
+  margin-bottom: 9.8px;
+}
+#bvtHome #indexListmain #listmainFreeShipping .list_item .thumb {
+  width: auto;
+  min-width: 125.5px;
+}
+#bvtHome #indexListmain #listmainFreeShipping .list_item .desc {
+  width: auto;
+  padding: 7px 0 0 9.8px;
+}
+#bvtHome #indexListmain #listmainFreeShipping .list_item .desc .price_wrap,
+#bvtHome #indexListmain #listmainFreeShipping .list_item .desc .product_name,
+#bvtHome #indexListmain #listmainFreeShipping .list_item .desc .summary {
+  width: 91%;
+}
+#bvtHome #indexListmain #listmainBrand .list_item {
+  display: block;
+  border-radius: 4px;
+}
+#bvtHome #indexListmain #listmainBrand .list_item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#bvtHome #indexListmain #listmainBrand .list_item a img {
+  width: 100%;
 }
 #bvtHome #indexListmain .moreview_btn_wrap {
   width: 100%;
