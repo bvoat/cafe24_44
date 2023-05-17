@@ -315,13 +315,10 @@
             <!--세트상품-->
 
             <!--추가구성상품-->
-            <!-- displaynone -->
-            <div class="productSet additional" module="product_addproduct">
+            <div class="productSet additional buy_screen_additional" module="product_addproduct">
                 <div class="title">
-                    <h3>추가구성상품 <span>추가로 구매를 원하시면 선택하세요.</span></h3>
-                    <a href="#self" class="toggle"><img
-                            src="//img.echosting.cafe24.com/skin/base/product/btn_additional_close.gif"
-                            alt="추가구성상품 닫기" /></a>
+                    <h3>추가 구성 상품 <span>(추가로 구매를 원하시면 선택하세요.)</span>
+                    </h3>
                 </div>
                 <ul class="product_additional_ul">
                     <li>
@@ -330,12 +327,16 @@
                                 <a href="{$link_product_detail}"><img src="{$product_image}" alt=""
                                         id="{$image_id}" /></a>
                             </div>
-                            <p class="name" title="상품명"><strong>{$product_name}</strong></p>
-                            <p class="price {$product_price_display|display}" title="판매가">
-                                <strong class="{$product_price_del}">{$product_price}{$product_tax_type_text}</strong>
-                            </p>
-                            <p class="salePrice {$product_sale_price_display|display}" title="할인판매가">
-                                {$product_sale_price}</p>
+                            <div class="info">
+                                <div class="name">{$product_name}</div>
+                                <div class="price {$product_price_display|display}" title="판매가">
+                                    <strong
+                                        class="{$product_price_del}">{$product_price}{$product_tax_type_text}</strong>
+                                </div>
+                                <div class="salePrice {$product_sale_price_display|display}" title="할인판매가">
+                                    {$product_sale_price}</div>
+                            </div>
+
                         </div>
                         <ul class="option">
                             <li module="product_addoption">
@@ -442,7 +443,6 @@
                     </li>
                 </ul>
             </div>
-            <!-- displaynone -->
             <!--추가구성상품-->
 
             <!-- 옵션 선택 결과 -->
