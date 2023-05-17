@@ -389,12 +389,16 @@
                                 <a href="{$link_product_detail}"><img src="{$product_image}" alt=""
                                         id="{$image_id}" /></a>
                             </div>
-                            <p class="name" title="상품명"><strong>{$product_name}</strong></p>
-                            <p class="price {$product_price_display|display}" title="판매가">
-                                <strong class="{$product_price_del}">{$product_price}{$product_tax_type_text}</strong>
-                            </p>
-                            <p class="salePrice {$product_sale_price_display|display}" title="할인판매가">
-                                {$product_sale_price}</p>
+                            <div class="info">
+                                <div class="name">{$product_name}</div>
+                                <div class="price {$product_price_display|display}" title="판매가">
+                                    <strong
+                                        class="{$product_price_del}">{$product_price}{$product_tax_type_text}</strong>
+                                </div>
+                                <div class="salePrice {$product_sale_price_display|display}" title="할인판매가">
+                                    {$product_sale_price}</div>
+                            </div>
+
                         </div>
                         <ul class="option">
                             <li module="product_addoption">
