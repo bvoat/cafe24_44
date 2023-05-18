@@ -25,7 +25,7 @@
   height: 64px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li {
