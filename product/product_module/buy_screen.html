@@ -113,6 +113,143 @@
             </div>
             <!-- 옵션 선택 테이블-->
 
+
+            <!--추가구성상품-->
+            <div class="productSet additional buy_screen_additional" module="product_addproduct">
+                <div class="title">
+                    <h3>추가 구성 상품 <span>(추가로 구매를 원하시면 선택하세요.)</span>
+                    </h3>
+                </div>
+                <ul class="product_additional_ul">
+                    <li>
+                        <div class="information">
+                            <div class="thumbnail">
+                                <a href="{$link_product_detail}"><img src="{$product_image}" alt=""
+                                        id="{$image_id}" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="name">{$product_name}</div>
+                                <div class="price {$product_price_display|display}" title="판매가">
+                                    <strong
+                                        class="{$product_price_del}">{$product_price}{$product_tax_type_text}</strong>
+                                </div>
+                                <div class="salePrice {$product_sale_price_display|display}" title="할인판매가">
+                                    {$product_sale_price}</div>
+                            </div>
+
+                        </div>
+                        <ul class="option">
+                            <li module="product_addoption">
+                                <strong class="name">{$add_option_name}</strong>
+                                {$form.add_option}
+                                <span class="txtByte" title="현재글자수/최대글자수">(<strong
+                                        class="length">0</strong>/{$option_maxlength})</span>
+                            </li>
+                            <li module="product_option">
+                                <ul>
+                                    <li>
+                                        <strong class="name">{$option_name}</strong>
+                                        {$form.option}
+                                        <p class="value">{$option_desc}</p>
+                                    </li>
+                                    <li module="product_quantity">
+                                        <div class="quant">
+                                            <a href="javascript:;" class="up {$quantity_up_class}"><i class="upArrow">수량
+                                                    추가</i></a> {$quantity}
+                                            <a href="javascript:;" class="down {$quantity_down_class}"><i
+                                                    class="downArrow">수량 빼기</i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li module="product_noneoption">
+                                <ul>
+                                    <li>
+                                        <strong class="name">상품선택</strong> {$form.noneoption}
+                                    </li>
+                                    <li module="product_quantity">
+                                        <div class="quant">
+                                            <a href="javascript:;" class="up {$quantity_up_class}"><i class="upArrow">수량
+                                                    추가</i></a> {$quantity}
+                                            <a href="javascript:;" class="down {$quantity_down_class}"><i
+                                                    class="downArrow">수량 빼기</i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="{$add_option_push_button_display|display} selectButton"
+                                id="{$add_option_push_button_id}">
+                                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button}">옵션선택</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="information">
+                            <div class="thumbnail">
+                                <a href="{$link_product_detail}"><img src="{$product_image}" alt=""
+                                        id="{$image_id}" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="name">{$product_name}</div>
+                                <div class="price {$product_price_display|display}" title="판매가">
+                                    <strong
+                                        class="{$product_price_del}">{$product_price}{$product_tax_type_text}</strong>
+                                </div>
+                                <div class="salePrice {$product_sale_price_display|display}" title="할인판매가">
+                                    {$product_sale_price}</div>
+                            </div>
+
+                        </div>
+                        <ul class="option">
+                            <li module="product_addoption">
+                                <strong class="name">{$add_option_name}</strong>
+                                {$form.add_option}
+                                <span class="txtByte" title="현재글자수/최대글자수">(<strong
+                                        class="length">0</strong>/{$option_maxlength})</span>
+                            </li>
+                            <li module="product_option">
+                                <ul>
+                                    <li>
+                                        <strong class="name">{$option_name}</strong>
+                                        {$form.option}
+                                        <p class="value">{$option_desc}</p>
+                                    </li>
+                                    <li module="product_quantity">
+                                        <div class="quant">
+                                            <a href="javascript:;" class="up {$quantity_up_class}"><i class="upArrow">수량
+                                                    추가</i></a> {$quantity}
+                                            <a href="javascript:;" class="down {$quantity_down_class}"><i
+                                                    class="downArrow">수량 빼기</i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li module="product_noneoption">
+                                <ul>
+                                    <li>
+                                        <strong class="name">상품선택</strong> {$form.noneoption}
+                                    </li>
+                                    <li module="product_quantity">
+                                        <div class="quant">
+                                            <a href="javascript:;" class="up {$quantity_up_class}"><i class="upArrow">수량
+                                                    추가</i></a> {$quantity}
+                                            <a href="javascript:;" class="down {$quantity_down_class}"><i
+                                                    class="downArrow">수량 빼기</i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="{$add_option_push_button_display|display} selectButton"
+                                id="{$add_option_push_button_id}">
+                                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button}">옵션선택</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--추가구성상품-->
+
+
             <!--세트상품-->
             <!-- displaynone -->
             <div class="productSet" module="product_setproduct">
@@ -420,141 +557,6 @@
                 <!-- <p class="ec-base-help {$price_warning_class}">할인가가 적용된 최종 결제예정금액은 주문 시 확인할 수
                     있습니다.</p> -->
             </section>
-
-            <!--추가구성상품-->
-            <div class="productSet additional buy_screen_additional" module="product_addproduct">
-                <div class="title">
-                    <h3>추가 구성 상품 <span>(추가로 구매를 원하시면 선택하세요.)</span>
-                    </h3>
-                </div>
-                <ul class="product_additional_ul">
-                    <li>
-                        <div class="information">
-                            <div class="thumbnail">
-                                <a href="{$link_product_detail}"><img src="{$product_image}" alt=""
-                                        id="{$image_id}" /></a>
-                            </div>
-                            <div class="info">
-                                <div class="name">{$product_name}</div>
-                                <div class="price {$product_price_display|display}" title="판매가">
-                                    <strong
-                                        class="{$product_price_del}">{$product_price}{$product_tax_type_text}</strong>
-                                </div>
-                                <div class="salePrice {$product_sale_price_display|display}" title="할인판매가">
-                                    {$product_sale_price}</div>
-                            </div>
-
-                        </div>
-                        <ul class="option">
-                            <li module="product_addoption">
-                                <strong class="name">{$add_option_name}</strong>
-                                {$form.add_option}
-                                <span class="txtByte" title="현재글자수/최대글자수">(<strong
-                                        class="length">0</strong>/{$option_maxlength})</span>
-                            </li>
-                            <li module="product_option">
-                                <ul>
-                                    <li>
-                                        <strong class="name">{$option_name}</strong>
-                                        {$form.option}
-                                        <p class="value">{$option_desc}</p>
-                                    </li>
-                                    <li module="product_quantity">
-                                        <div class="quant">
-                                            <a href="javascript:;" class="up {$quantity_up_class}"><i class="upArrow">수량
-                                                    추가</i></a> {$quantity}
-                                            <a href="javascript:;" class="down {$quantity_down_class}"><i
-                                                    class="downArrow">수량 빼기</i></a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li module="product_noneoption">
-                                <ul>
-                                    <li>
-                                        <strong class="name">상품선택</strong> {$form.noneoption}
-                                    </li>
-                                    <li module="product_quantity">
-                                        <div class="quant">
-                                            <a href="javascript:;" class="up {$quantity_up_class}"><i class="upArrow">수량
-                                                    추가</i></a> {$quantity}
-                                            <a href="javascript:;" class="down {$quantity_down_class}"><i
-                                                    class="downArrow">수량 빼기</i></a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="{$add_option_push_button_display|display} selectButton"
-                                id="{$add_option_push_button_id}">
-                                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button}">옵션선택</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="information">
-                            <div class="thumbnail">
-                                <a href="{$link_product_detail}"><img src="{$product_image}" alt=""
-                                        id="{$image_id}" /></a>
-                            </div>
-                            <div class="info">
-                                <div class="name">{$product_name}</div>
-                                <div class="price {$product_price_display|display}" title="판매가">
-                                    <strong
-                                        class="{$product_price_del}">{$product_price}{$product_tax_type_text}</strong>
-                                </div>
-                                <div class="salePrice {$product_sale_price_display|display}" title="할인판매가">
-                                    {$product_sale_price}</div>
-                            </div>
-
-                        </div>
-                        <ul class="option">
-                            <li module="product_addoption">
-                                <strong class="name">{$add_option_name}</strong>
-                                {$form.add_option}
-                                <span class="txtByte" title="현재글자수/최대글자수">(<strong
-                                        class="length">0</strong>/{$option_maxlength})</span>
-                            </li>
-                            <li module="product_option">
-                                <ul>
-                                    <li>
-                                        <strong class="name">{$option_name}</strong>
-                                        {$form.option}
-                                        <p class="value">{$option_desc}</p>
-                                    </li>
-                                    <li module="product_quantity">
-                                        <div class="quant">
-                                            <a href="javascript:;" class="up {$quantity_up_class}"><i class="upArrow">수량
-                                                    추가</i></a> {$quantity}
-                                            <a href="javascript:;" class="down {$quantity_down_class}"><i
-                                                    class="downArrow">수량 빼기</i></a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li module="product_noneoption">
-                                <ul>
-                                    <li>
-                                        <strong class="name">상품선택</strong> {$form.noneoption}
-                                    </li>
-                                    <li module="product_quantity">
-                                        <div class="quant">
-                                            <a href="javascript:;" class="up {$quantity_up_class}"><i class="upArrow">수량
-                                                    추가</i></a> {$quantity}
-                                            <a href="javascript:;" class="down {$quantity_down_class}"><i
-                                                    class="downArrow">수량 빼기</i></a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="{$add_option_push_button_display|display} selectButton"
-                                id="{$add_option_push_button_id}">
-                                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button}">옵션선택</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!--추가구성상품-->
 
             <!-- 네이버 체크아웃 구매 버튼 -->
             <p class="naver_msg" module="Layout_stateLogoff">네이버 페이 비회원 구매 시 <br />비보트의 쿠폰, 마일리지 혜택을 <span>받으실 수

@@ -392,7 +392,6 @@
 .buy_screen_additional {
   margin: 15px 0;
   padding: 10px 0;
-  background: #FAFAFE;
 }
 .buy_screen_additional h3 {
   font-size: 1.6rem;
@@ -446,6 +445,7 @@
   height: 30px;
   font-size: 1.3rem;
   margin: 5px 0;
+  padding: 2px;
 }
 
 .naver_msg {
