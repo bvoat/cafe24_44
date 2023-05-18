@@ -160,7 +160,7 @@ function controlTopNav(page_path) {
     "member/modify",
   ];
   //커뮤니티용 path
-  const community_array = ["community", "buy_records", "crewinfo", "reviews"];
+  // const community_array = ["community", "buy_records", "crewinfo", "reviews"];
   //뒤로가기 있어야 하는 path
   const back_array = [
     "product/detail",
@@ -184,15 +184,15 @@ function controlTopNav(page_path) {
     page_path.includes(path) ? default_nav.classList.add("displaynone") : null;
   });
   //커뮤니티 하단바로 변경하기
-  community_array.forEach((path) => {
-    if (page_path.includes(path)) {
-      console.log('path: ', path);
-      default_nav.classList.add("displaynone");
-      comm_nav.classList.remove("displaynone");
-      // document.querySelector(`#${path}_nav`).classList.add("top_nav_active");
-      document.querySelector(`.${path}_nav`).classList.add("top_nav_active");
-    }
-  });
+  // community_array.forEach((path) => {
+  //   if (page_path.includes(path)) {
+  //     console.log('path: ', path);
+  //     default_nav.classList.add("displaynone");
+  //     comm_nav.classList.remove("displaynone");
+  //     // document.querySelector(`#${path}_nav`).classList.add("top_nav_active");
+  //     document.querySelector(`.${path}_nav`).classList.add("top_nav_active");
+  //   }
+  // });
 
   //뒤로가기 표시 하기
   back_array.forEach((path) => {
@@ -204,29 +204,25 @@ function controlTopNav(page_path) {
 //상단바 active 표시
 function controlTopNavActive(page_path) {
   console.log('page_path: ', page_path);
-  //path가 상품 관련일 때
-  if (page_path.includes("/product/list.html")) {
-    //상품 관련 -> 비보트 추천 에 active
-    document.querySelector("#index").classList.add("top_nav_active");
-    //path가 방금 샀어요면
-  } else if(page_path.includes("/product/realtime.html")){
-    //상품 관련 -> 비보트 추천 에 active
-    document.querySelector("#prd").classList.add("top_nav_active");
-    //path가 크루면
-  } else if (page_path.includes("crew/crew.html") || page_path.includes("crew/crewinfo.html")) {
+
+ if (page_path.includes("crew/crew.html") || page_path.includes("crew/crewinfo.html")) {
     //크루에 active 
     document.querySelector("#crew").classList.add("top_nav_active");
-    //path가 비보트 소개면
   } else if (page_path.includes("introduce")) {
     //비보트 소개에 active
     document.querySelector("#intro").classList.add("top_nav_active");
-    //path가 board-8이면
   } else if (page_path.includes("board_no=8") || page_path.includes("article")) {
     //읽을거리에 active
     document.querySelector("#board").classList.add("top_nav_active");
-  } else {
+  } else if(page_path.includes("reviews/")) {
     //비보트 추천에 active
-    document.querySelector("#index").classList.add("top_nav_active");
+    document.querySelector("#buy_records_nav").classList.add("top_nav_active");
+  } else if(page_path.includes("realtime")){
+    //보터들의 픽에 active
+    document.querySelector("#realtime").classList.add("top_nav_active");
+  } else {
+        //관련 없는 경우  -> 비보트 추천 에 active
+        document.querySelector("#index").classList.add("top_nav_active");
   }
 }
 window.addEventListener("DOMContentLoaded", () => {
