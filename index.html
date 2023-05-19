@@ -170,12 +170,11 @@
     var swiper = new Swiper(".funding", {
         slidesPerView: 1,
         spaceBetween: 11,
-        loop: true,
+        loop: document.querySelectorAll(".bvt-funding > li").length > 3,
         autoplay: {
             delay: 4500,
             disableOnInteraction: false,
         },
-
         pagination: {
             el: ".list_item_bullet",
             clickable: true,
