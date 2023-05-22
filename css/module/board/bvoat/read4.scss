@@ -1,0 +1,483 @@
+@charset "utf-8";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
+
+:root {
+	--icon-rate: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 11 12'%3E%3Cpath fill='%23022CFF' d='m6.12.94 1.23 2.47c.09.17.22.38.41.41l2.67.41c.49.07.76.69.41 1.03L8.8 7.1a.81.81 0 0 0-.2.61l.6 2.68c.1.48-.59.84-1.02.61L5.71 9.78a.35.35 0 0 0-.42 0l-2.46 1.23A.57.57 0 0 1 2 10.4l.4-2.68a.81.81 0 0 0-.2-.61L.16 5.26c-.35-.34-.08-.96.4-1.03l2.68-.41c.2-.03.33-.24.41-.41L4.88.94a.74.74 0 0 1 1.24 0Z'/%3E%3C/svg%3E");
+}
+
+#productBoardReadTable {
+
+
+	#productBoardReadInfo {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 20px;
+
+		.user {
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			justify-content: flex-start;
+			font-size: 1.6rem;
+			font-weight: bold;
+
+			.member_icon {
+				width: 35px;
+				margin-left: 6px;
+
+				img {
+					width: 100%;
+				}
+			}
+
+		}
+
+		.rating {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			align-items: center;
+			width: 51px;
+			height: 23px;
+			border-radius: 100px;
+			background: rgba(242, 242, 242, 0.5);
+			font-size: 1.3rem;
+			font-weight: bold;
+			color: $bvt-blue;
+
+			&::before {
+				display: block;
+				content: "";
+				width: 11px;
+				height: 10.47px;
+				background: var(--icon-rate) no-repeat center;
+				margin-right: 2px;
+			}
+		}
+	}
+
+	#productBoardReadTableHead {
+		width: 100%;
+		border: 1px solid #E6E6E6;
+		border-radius: 4px;
+		overflow: hidden;
+		margin-bottom: 20px;
+
+		.product_info_link {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+
+			.thumb {
+				width: 100%;
+				max-width: 80px;
+				max-height: 80px;
+				border-radius: 2px;
+				font-size: 0;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.information {
+				width: calc(100% - 92px);
+
+				li {
+					font-size: 1.4rem;
+				}
+
+				.prd_name {
+					width: 90%;
+					font-size: 1.4rem;
+					font-weight: 700;
+					color: #454545;
+					text-align: start;
+					@include only-ellipsis(1, 1.4rem);
+					margin-bottom: 12px;
+				}
+			}
+		}
+	}
+
+	#productBoardReadContent {
+		width: 100%;
+		margin-bottom: 20px;
+
+		p,
+		div {
+			font-size: 1.4rem;
+		}
+
+		.content {
+			font-size: 1.4rem;
+			margin: 20px 0;
+		}
+
+		.vote {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+
+			img {
+				width: 14.88px;
+				margin-right: 3.68px;
+			}
+
+			.vote_btn {
+				display: flex;
+				flex-wrap: nowrap;
+				justify-content: center;
+				align-items: center;
+				width: 138px;
+				height: 30px;
+				border: 1px solid #022CFF;
+				border-width: 1.2px;
+				border-radius: 2px;
+				background: #ffffff;
+				font-size: 1.4rem;
+				font-weight: 500;
+				line-height: 2.027rem;
+				color: #022CFF;
+			}
+
+			.regdate {
+				color: $bvt-darkgray;
+			}
+		}
+	}
+
+	#productBoardReadAttach {}
+
+	#productBoardReadPassword {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: flex-start;
+		font-size: 1.35rem;
+
+		.label {
+			width: 100px;
+		}
+
+		.form {
+			width: 100%;
+			margin-left: 12px;
+
+			.form_password {
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: right;
+				align-items: center;
+
+				.passwordForm {
+					width: 70%;
+					margin-right: 4px;
+
+					input {
+						width: 100%;
+						height: 26px;
+						font-size: 1.6rem;
+						border: $bvt-input-border;
+						box-sizing: border-box;
+					}
+				}
+			}
+
+			p {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+//댓글 섹션
+#productBoardReadComment {
+
+	//댓글 리스트
+	#commentList {
+		border: 0;
+
+		.boardComment {
+			li {
+				font-size: 1.3rem;
+				border: 0;
+
+				//댓글 유저
+				.commentTop {
+					position: relative;
+					display: flex;
+					flex-flow: row nowrap;
+					justify-content: space-between;
+					border: 0;
+					padding: 12px 0;
+					overflow: visible;
+
+					.name {
+						display: flex;
+						flex-flow: row nowrap;
+						justify-content: center;
+						align-items: center;
+						font-size: 1.6rem;
+						font-weight: bold;
+					}
+
+					//댓글 버튼
+					.button {
+						position: relative;
+						top: 0;
+						right: 0;
+						display: flex;
+						flex-flow: row nowrap;
+						width: 28%;
+
+						.control_btn {
+							font-size: 1.2rem;
+							width: 100%;
+						}
+
+					}
+
+				}
+
+
+
+				//댓글
+				.comment {
+					font-size: 1.6rem;
+					padding: 0 0 0 52px;
+
+					.date {
+						font-size: 1.2rem;
+						font-weight: normal;
+						color: $bvt-darkgray;
+						margin: 12px 0 0 0;
+					}
+
+				}
+			}
+		}
+	}
+
+	//댓글 수정 폼
+	#commentForm {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+
+		//댓글 컨트롤
+		#commentModifyForm {
+			padding: 10px;
+
+			fieldset {
+
+				h2,
+				p,
+				span {
+					font-size: 1.3rem;
+				}
+
+				#comment_password {
+					height: 26px;
+				}
+
+				//댓글 수정 창
+				.view {
+					padding: 0;
+
+					textarea {
+						width: calc(100% - 95px);
+						font-size: 1.3rem;
+						resize: none;
+					}
+
+					.submit {
+						display: flex;
+						flex-flow: row nowrap;
+						width: 90px;
+
+						a {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 100%;
+							height: 37px;
+							font-size: 1.3rem;
+							font-weight: bold;
+							background: $bvt-white;
+							border: $bvt-input-border;
+							border-radius: 9px;
+							margin: 2px;
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+	//댓글 입력 폼
+	#commentWriteForm {
+		margin-bottom: 20px;
+
+		#commentWritingForm {
+			border: none;
+
+			fieldset {
+
+				div,
+				p,
+				h2 {
+					font-size: 1.3rem;
+					margin-bottom: 12px;
+				}
+
+				.input {
+					.userinfo_input {
+						display: flex;
+						flex-flow: row nowrap;
+						justify-content: space-between;
+						align-items: center;
+
+						.name {
+							input {
+								background: none;
+								border: none;
+								font-size: 1.5rem;
+							}
+						}
+
+						.password {
+							justify-content: flex-end;
+
+							input {
+								margin-left: 5px;
+							}
+						}
+
+						span {
+							display: flex;
+							flex-flow: row nowrap;
+							align-items: center;
+						}
+
+						input {
+							width: 50%;
+							height: 26px;
+							font-size: 1.3rem;
+							font-weight: bold;
+							margin: 0;
+						}
+					}
+				}
+
+				.view {
+
+					.control_btn {
+						height: 42px;
+					}
+				}
+			}
+
+			//회원에게만 댓글 작성 권한
+			.no_auth_write,
+			.no_auth_write p {
+				font-weight: bold;
+				font-size: 1.3rem;
+
+			}
+
+		}
+	}
+
+	//대댓글 입력 폼 
+	#commentReplyWriteForm {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+
+
+		//댓글 컨트롤
+		#commentReplyForm {
+			padding: 10px;
+
+			fieldset {
+
+				h2,
+				p,
+				span {
+					font-size: 1.3rem;
+					margin-bottom: 5px;
+				}
+
+				input {
+					width: 25%;
+					height: 26px;
+				}
+
+				//댓글 수정 창
+				.view {
+					padding: 0;
+
+					textarea {
+						width: calc(100% - 95px);
+						font-size: 1.3rem;
+						resize: none;
+					}
+
+					.submit {
+						display: flex;
+						flex-flow: row nowrap;
+						width: 90px;
+					}
+
+					a {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 40px;
+						height: 37px;
+						font-size: 1.3rem;
+						font-weight: bold;
+						background: $bvt-white;
+						border: $bvt-input-border;
+						border-radius: 9px;
+						margin: 2px;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+//공통 처리
+.user_img {
+	display: block;
+	width: 40px;
+	margin-right: 12px;
+	font-size: 0;
+}
+
+.control_btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20%;
+	height: 26px;
+	font-size: 1.3rem;
+	font-weight: bold;
+	background: $bvt-white;
+	border: $bvt-input-border;
+	border-radius: 9px;
+	margin-right: 4px;
+}

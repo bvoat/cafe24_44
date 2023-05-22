@@ -26,11 +26,12 @@
   font-size: 1.6rem;
   font-weight: bold;
 }
-#productBoardReadTable #productBoardReadInfo .user img {
-  display: block;
-  width: 40px;
-  margin-right: 12px;
-  font-size: 0;
+#productBoardReadTable #productBoardReadInfo .user .member_icon {
+  width: 35px;
+  margin-left: 6px;
+}
+#productBoardReadTable #productBoardReadInfo .user .member_icon img {
+  width: 100%;
 }
 #productBoardReadTable #productBoardReadInfo .rating {
   display: flex;
@@ -74,6 +75,9 @@
   border-radius: 2px;
   font-size: 0;
 }
+#productBoardReadTable #productBoardReadTableHead .product_info_link .thumb img {
+  width: 100%;
+}
 #productBoardReadTable #productBoardReadTableHead .product_info_link .information {
   width: calc(100% - 92px);
 }
@@ -100,9 +104,6 @@
 #productBoardReadTable #productBoardReadContent {
   width: 100%;
   margin-bottom: 20px;
-}
-#productBoardReadTable #productBoardReadContent img {
-  width: 100%;
 }
 #productBoardReadTable #productBoardReadContent p,
 #productBoardReadTable #productBoardReadContent div {
@@ -162,19 +163,217 @@
   justify-content: right;
   align-items: center;
 }
+#productBoardReadTable #productBoardReadPassword .form .form_password .passwordForm {
+  width: 70%;
+  margin-right: 4px;
+}
 #productBoardReadTable #productBoardReadPassword .form .form_password .passwordForm input {
-  width: 190px;
+  width: 100%;
   height: 26px;
   font-size: 1.6rem;
   border: 1px solid #C4C4C4;
   box-sizing: border-box;
-  margin-right: 8px;
 }
-#productBoardReadTable #productBoardReadPassword .form .form_password .control_btn {
+#productBoardReadTable #productBoardReadPassword .form p {
+  font-size: 1.2rem;
+}
+
+#productBoardReadComment #commentList {
+  border: 0;
+}
+#productBoardReadComment #commentList .boardComment li {
+  font-size: 1.3rem;
+  border: 0;
+}
+#productBoardReadComment #commentList .boardComment li .commentTop {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border: 0;
+  padding: 12px 0;
+  overflow: visible;
+}
+#productBoardReadComment #commentList .boardComment li .commentTop .name {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+#productBoardReadComment #commentList .boardComment li .commentTop .button {
+  position: relative;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 28%;
+}
+#productBoardReadComment #commentList .boardComment li .commentTop .button .control_btn {
+  font-size: 1.2rem;
+  width: 100%;
+}
+#productBoardReadComment #commentList .boardComment li .comment {
+  font-size: 1.6rem;
+  padding: 0 0 0 52px;
+}
+#productBoardReadComment #commentList .boardComment li .comment .date {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #707070;
+  margin: 12px 0 0 0;
+}
+#productBoardReadComment #commentForm {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#productBoardReadComment #commentForm #commentModifyForm {
+  padding: 10px;
+}
+#productBoardReadComment #commentForm #commentModifyForm fieldset h2,
+#productBoardReadComment #commentForm #commentModifyForm fieldset p,
+#productBoardReadComment #commentForm #commentModifyForm fieldset span {
+  font-size: 1.3rem;
+}
+#productBoardReadComment #commentForm #commentModifyForm fieldset #comment_password {
+  height: 26px;
+}
+#productBoardReadComment #commentForm #commentModifyForm fieldset .view {
+  padding: 0;
+}
+#productBoardReadComment #commentForm #commentModifyForm fieldset .view textarea {
+  width: calc(100% - 95px);
+  font-size: 1.3rem;
+  resize: none;
+}
+#productBoardReadComment #commentForm #commentModifyForm fieldset .view .submit {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 90px;
+}
+#productBoardReadComment #commentForm #commentModifyForm fieldset .view .submit a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc((100% - 210px) / 2);
+  width: 100%;
+  height: 37px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: #ffffff;
+  border: 1px solid #C4C4C4;
+  border-radius: 9px;
+  margin: 2px;
+}
+#productBoardReadComment #commentWriteForm {
+  margin-bottom: 20px;
+}
+#productBoardReadComment #commentWriteForm #commentWritingForm {
+  border: none;
+}
+#productBoardReadComment #commentWriteForm #commentWritingForm fieldset div,
+#productBoardReadComment #commentWriteForm #commentWritingForm fieldset p,
+#productBoardReadComment #commentWriteForm #commentWritingForm fieldset h2 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+#productBoardReadComment #commentWriteForm #commentWritingForm fieldset .input .userinfo_input {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#productBoardReadComment #commentWriteForm #commentWritingForm fieldset .input .userinfo_input .name input {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+#productBoardReadComment #commentWriteForm #commentWritingForm fieldset .input .userinfo_input .password {
+  justify-content: flex-end;
+}
+#productBoardReadComment #commentWriteForm #commentWritingForm fieldset .input .userinfo_input .password input {
+  margin-left: 5px;
+}
+#productBoardReadComment #commentWriteForm #commentWritingForm fieldset .input .userinfo_input span {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+#productBoardReadComment #commentWriteForm #commentWritingForm fieldset .input .userinfo_input input {
+  width: 50%;
+  height: 26px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+}
+#productBoardReadComment #commentWriteForm #commentWritingForm fieldset .view .control_btn {
+  height: 42px;
+}
+#productBoardReadComment #commentWriteForm #commentWritingForm .no_auth_write,
+#productBoardReadComment #commentWriteForm #commentWritingForm .no_auth_write p {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+#productBoardReadComment #commentReplyWriteForm {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#productBoardReadComment #commentReplyWriteForm #commentReplyForm {
+  padding: 10px;
+}
+#productBoardReadComment #commentReplyWriteForm #commentReplyForm fieldset h2,
+#productBoardReadComment #commentReplyWriteForm #commentReplyForm fieldset p,
+#productBoardReadComment #commentReplyWriteForm #commentReplyForm fieldset span {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+#productBoardReadComment #commentReplyWriteForm #commentReplyForm fieldset input {
+  width: 25%;
+  height: 26px;
+}
+#productBoardReadComment #commentReplyWriteForm #commentReplyForm fieldset .view {
+  padding: 0;
+}
+#productBoardReadComment #commentReplyWriteForm #commentReplyForm fieldset .view textarea {
+  width: calc(100% - 95px);
+  font-size: 1.3rem;
+  resize: none;
+}
+#productBoardReadComment #commentReplyWriteForm #commentReplyForm fieldset .view .submit {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 90px;
+}
+#productBoardReadComment #commentReplyWriteForm #commentReplyForm fieldset .view a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 37px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: #ffffff;
+  border: 1px solid #C4C4C4;
+  border-radius: 9px;
+  margin: 2px;
+}
+
+.user_img {
+  display: block;
+  width: 40px;
+  margin-right: 12px;
+  font-size: 0;
+}
+
+.control_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
   height: 26px;
   font-size: 1.3rem;
   font-weight: bold;
@@ -182,23 +381,4 @@
   border: 1px solid #C4C4C4;
   border-radius: 9px;
   margin-right: 4px;
-}
-#productBoardReadTable #productBoardReadPassword .form p {
-  font-size: 1.2rem;
-}
-
-#productBoardReadComment {
-  background-color: rgba(0, 255, 0, 0.062745098);
-}
-#productBoardReadComment .board_commentlist {
-  background: rgba(255, 0, 0, 0.1254901961);
-}
-#productBoardReadComment .board_commentlist .boardComment li {
-  font-size: 1.3rem;
-}
-#productBoardReadComment .board_commentlist .boardComment li .commentTop {
-  font-size: 1.3rem;
-}
-#productBoardReadComment .board_commentlist .boardComment li .comment {
-  font-size: 1.3rem;
 }/*# sourceMappingURL=read4.css.map */

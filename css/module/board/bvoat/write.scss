@@ -3,26 +3,28 @@
 @import "../../../abstracts/variables";
 
 #productBoardWrite {
+    position: relative;
     width: 100%;
     max-width: 450px;
-    padding: 37px 0px;
-    margin: 80px 0 60px;
+    padding: 0 11px;
+    margin: 105px 0 200px;
+    z-index: 1;
 
     #productBoardWriteTitle {
         width: 100%;
         max-width: 450px;
-        margin-bottom: 18px;
-        padding: 0 11px;
+        margin: 18px 0;
+
 
         h1 {
-            font-size: 2.5rem;
-            font-weight: 500;
+            font-size: 2rem;
+            font-weight: bold;
             margin-bottom: 6px;
         }
 
         h2 {
-            font-size: 1.7rem;
-            font-weight: 300;
+            font-size: 1.4rem;
+            font-weight: normal;
             color: $bvt-darkgray;
         }
     }
@@ -30,7 +32,6 @@
     #productBoardWriteSection {
 
         .ec-base-box {
-            padding: 0 11px;
 
             .product_info {
                 width: 100%;
@@ -38,6 +39,11 @@
                 flex-flow: row nowrap;
                 margin-bottom: 20px;
                 @include product-thumb(4px);
+                //상품정보
+
+                .thumbnail {
+                    background: red;
+                }
 
                 .thumb {
                     width: 30%;
@@ -83,65 +89,110 @@
             }
         }
 
-        .ec-base-table {
-            width: 100%;
-            margin: 25px 0;
-            padding: 0 11px;
+        #productBoardWriteBox {
+            background-color: #df000020;
 
-            th {
-                font-size: 1.3rem;
-                font-weight: 500;
-                height: 30px;
-                margin: 8px 0;
-                vertical-align: middle;
-            }
+            #productBoardWriteTable {
+                tr {
+                    width: 18%;
+                    height: 30px;
+                    border: 1px solid violet;
+                    font-size: 1.3rem;
+                }
 
-            td>input[type="text"],
-            td>input[type="password"],
-            label {
-                width: 100%;
-                height: 30px;
-                padding: 0 11px;
-                font-size: 1.2rem;
-                vertical-align: middle;
-                margin: 8px 0;
-            }
-        }
+                th,
+                td {
+                    text-align: start;
+                    vertical-align: middle;
+                    font-size: 1.3rem;
+                    padding: 5px;
+                }
 
-        //글 관련 버튼 (게시안함, 스팸신고, ... 삭제, 수정)
-        >.ec-base-button {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            height: 25px;
+                select,
+                input,
+                textarea {
+                    background: none;
+                    border: none;
+                    font-size: 1.3rem;
+                    padding: 11px;
+                }
 
-            span {
-                &:nth-child(1) {
-                    width: 60%;
+                textarea {
+                    width: 100%;
+                }
 
-                    a {
-                        display: inline-block;
-                        font-size: 1.1rem;
-                        border: $bvt-btn-border-gray;
-                        border-radius: 12px;
-                        padding: 1.5% 4%;
+                //별점, 비밀글 설정
+                .table_td_rate {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: start;
+                    align-items: center;
+
+                    label {
+                        margin: 0 2% 0 1px;
                     }
                 }
 
-                &:nth-child(2) {
-                    width: 35%;
+                //비밀번호, 보안문자
+                #password,
+                #captcha {
+                    background: #fff;
+                }
+            }
 
-                    a {
-                        display: inline-block;
-                        font-size: 1.2rem;
-                        background: $bvt-blue;
-                        border-radius: 12px;
-                        padding: 2% 12%;
-                        color: $bvt-white;
-                        font-weight: 500;
-                    }
+        }
+
+
+    }
+
+    //글 관련 버튼 (게시안함, 스팸신고, ... 삭제, 수정)
+    .ec-base-button {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 35px;
+
+        span {
+            &:nth-child(1) {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.1rem;
+                    border: $bvt-btn-border-gray;
+                    border-radius: 12px;
+                    width: 60px;
+                    height: 30px;
+                    margin: 2.5px;
+
+                }
+            }
+
+            &:nth-child(2) {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.2rem;
+                    background: $bvt-blue;
+                    border-radius: 12px;
+                    color: $bvt-white;
+                    font-weight: 500;
+                    width: 60px;
+                    height: 30px;
+                    margin: 2.5px;
                 }
             }
         }

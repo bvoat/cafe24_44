@@ -41,7 +41,7 @@
                     <caption>글 수정 폼</caption>
                     <tbody>
                         <tr width="100%">
-                            <th width="18%" scope="row">제목</th>
+                            <th width="16%" scope="row">제목</th>
                             <td class="table_td">{$form.board_category} {$form.subject} {$form.notice} {$form.is_post}
                             </td>
                         </tr>
@@ -90,7 +90,7 @@
                         </tr>
                         <tr class="{$config.use_secret|display}">
                             <th scope="row">비밀글설정</th>
-                            <td>{$form.secure}</td>
+                            <td class="table_td_rate">{$form.secure}</td>
                         </tr>
                         <tr class="captcha {$config.use_captcha_write|display}">
                             <th scope="row">보안문자</th>

@@ -8,29 +8,27 @@
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 #productBoardWrite {
+  position: relative;
   width: 100%;
   max-width: 450px;
-  padding: 37px 0px;
-  margin: 80px 0 60px;
+  padding: 0 11px;
+  margin: 105px 0 200px;
+  z-index: 1;
 }
 #productBoardWrite #productBoardWriteTitle {
   width: 100%;
   max-width: 450px;
-  margin-bottom: 18px;
-  padding: 0 11px;
+  margin: 18px 0;
 }
 #productBoardWrite #productBoardWriteTitle h1 {
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: bold;
   margin-bottom: 6px;
 }
 #productBoardWrite #productBoardWriteTitle h2 {
-  font-size: 1.7rem;
-  font-weight: 300;
+  font-size: 1.4rem;
+  font-weight: normal;
   color: #707070;
-}
-#productBoardWrite #productBoardWriteSection .ec-base-box {
-  padding: 0 11px;
 }
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info {
   width: 100%;
@@ -66,6 +64,9 @@
   top: 0;
   height: 21px;
   z-index: 1;
+}
+#productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumbnail {
+  background: red;
 }
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb {
   width: 30%;
@@ -109,55 +110,87 @@
   color: #292929;
   transition: all 0.5s;
 }
-#productBoardWrite #productBoardWriteSection .ec-base-table {
-  width: 100%;
-  margin: 25px 0;
-  padding: 0 11px;
+#productBoardWrite #productBoardWriteSection #productBoardWriteBox {
+  background-color: rgba(223, 0, 0, 0.1254901961);
 }
-#productBoardWrite #productBoardWriteSection .ec-base-table th {
+#productBoardWrite #productBoardWriteSection #productBoardWriteBox #productBoardWriteTable tr {
+  width: 18%;
+  height: 30px;
+  border: 1px solid violet;
   font-size: 1.3rem;
-  font-weight: 500;
-  height: 30px;
-  margin: 8px 0;
-  vertical-align: middle;
 }
-#productBoardWrite #productBoardWriteSection .ec-base-table td > input[type=text],
-#productBoardWrite #productBoardWriteSection .ec-base-table td > input[type=password],
-#productBoardWrite #productBoardWriteSection .ec-base-table label {
+#productBoardWrite #productBoardWriteSection #productBoardWriteBox #productBoardWriteTable th,
+#productBoardWrite #productBoardWriteSection #productBoardWriteBox #productBoardWriteTable td {
+  text-align: start;
+  vertical-align: middle;
+  font-size: 1.3rem;
+  padding: 5px;
+}
+#productBoardWrite #productBoardWriteSection #productBoardWriteBox #productBoardWriteTable select,
+#productBoardWrite #productBoardWriteSection #productBoardWriteBox #productBoardWriteTable input,
+#productBoardWrite #productBoardWriteSection #productBoardWriteBox #productBoardWriteTable textarea {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  padding: 11px;
+}
+#productBoardWrite #productBoardWriteSection #productBoardWriteBox #productBoardWriteTable textarea {
   width: 100%;
-  height: 30px;
-  padding: 0 11px;
-  font-size: 1.2rem;
-  vertical-align: middle;
-  margin: 8px 0;
 }
-#productBoardWrite #productBoardWriteSection > .ec-base-button {
+#productBoardWrite #productBoardWriteSection #productBoardWriteBox #productBoardWriteTable .table_td_rate {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  align-items: center;
+}
+#productBoardWrite #productBoardWriteSection #productBoardWriteBox #productBoardWriteTable .table_td_rate label {
+  margin: 0 2% 0 1px;
+}
+#productBoardWrite #productBoardWriteSection #productBoardWriteBox #productBoardWriteTable #password,
+#productBoardWrite #productBoardWriteSection #productBoardWriteBox #productBoardWriteTable #captcha {
+  background: #fff;
+}
+#productBoardWrite .ec-base-button {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 25px;
+  height: 35px;
 }
-#productBoardWrite #productBoardWriteSection > .ec-base-button span:nth-child(1) {
-  width: 60%;
+#productBoardWrite .ec-base-button span:nth-child(1) {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
-#productBoardWrite #productBoardWriteSection > .ec-base-button span:nth-child(1) a {
-  display: inline-block;
+#productBoardWrite .ec-base-button span:nth-child(1) a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.1rem;
   border: 1px solid #E2E2E2;
   border-radius: 12px;
-  padding: 1.5% 4%;
+  width: 60px;
+  height: 30px;
+  margin: 2.5px;
 }
-#productBoardWrite #productBoardWriteSection > .ec-base-button span:nth-child(2) {
-  width: 35%;
+#productBoardWrite .ec-base-button span:nth-child(2) {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
-#productBoardWrite #productBoardWriteSection > .ec-base-button span:nth-child(2) a {
-  display: inline-block;
+#productBoardWrite .ec-base-button span:nth-child(2) a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
   background: #022CFF;
   border-radius: 12px;
-  padding: 2% 12%;
   color: #ffffff;
   font-weight: 500;
+  width: 60px;
+  height: 30px;
+  margin: 2.5px;
 }/*# sourceMappingURL=write.css.map */

@@ -7,12 +7,9 @@
     width: 100%;
     max-width: 450px;
     padding: 0 11px;
-    margin: 105px 0 60px;
+    margin: 105px 0 200px;
     z-index: 1;
 
-    img {
-        width: 100%;
-    }
 
     #productBoardReadTitle {
         width: 100%;
@@ -168,6 +165,8 @@
         }
     }
 }
+
+
 
 //글 관련 버튼 (게시안함, 스팸신고, ... 삭제, 수정)
 .ec-base-button {

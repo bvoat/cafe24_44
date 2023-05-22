@@ -47,7 +47,7 @@
   margin: 10px 0;
   padding: 20px 0 0 0;
 }
-#productBoardList #productBoardListBox ul {
+#productBoardList #productBoardListBox > ul {
   width: 100%;
   min-width: 0;
   display: flex;
@@ -55,19 +55,19 @@
   justify-content: space-between;
   padding: 0 17px;
 }
-#productBoardList #productBoardListBox ul li {
+#productBoardList #productBoardListBox > ul li {
   position: relative;
   width: calc(50% - 5px);
   margin: 0 0 36px 0;
 }
-#productBoardList #productBoardListBox ul li input[type=checkbox] {
+#productBoardList #productBoardListBox > ul li input[type=checkbox] {
   position: absolute;
   top: 0;
   left: 0;
   width: 20px;
   height: 20px;
 }
-#productBoardList #productBoardListBox ul li a.board_img_link {
+#productBoardList #productBoardListBox > ul li a.board_img_link {
   display: block;
   position: relative;
   width: 100%;
@@ -76,7 +76,7 @@
   border-radius: 20px;
   margin-bottom: 12px;
 }
-#productBoardList #productBoardListBox ul li a.board_img_link .category_name {
+#productBoardList #productBoardListBox > ul li a.board_img_link .category_name {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -94,7 +94,7 @@
   margin: 0;
   padding: 4.5px 11px;
 }
-#productBoardList #productBoardListBox ul li a.board_img_link img {
+#productBoardList #productBoardListBox > ul li a.board_img_link img {
   width: 100%;
   position: absolute;
   top: 0;
@@ -104,14 +104,14 @@
      object-fit: cover;
   border: 0;
 }
-#productBoardList #productBoardListBox ul li a.board_subject {
+#productBoardList #productBoardListBox > ul li a.board_subject {
   font-size: 1.45rem;
   font-weight: 700;
   color: #292929;
   letter-spacing: -0.5px;
   line-height: 1.87rem;
 }
-#productBoardList #productBoardListBox ul li .board_author {
+#productBoardList #productBoardListBox > ul li .board_author {
   display: none;
 }
 #productBoardList #productBoardListTable {
