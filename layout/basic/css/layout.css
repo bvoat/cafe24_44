@@ -22,6 +22,7 @@ body #bvtContainer {
   min-width: 100px;
   height: auto;
   margin: 0 auto;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 body #bvtContainer #bvtHeader {
   position: fixed;
