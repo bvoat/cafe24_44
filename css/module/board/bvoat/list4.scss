@@ -121,6 +121,10 @@
 					}
 
 					.summary_info {
+						//p표시 여러개 중복되어 height로 잡아줌 
+						width: 100%;
+						height: 67px;
+						overflow: hidden;
 
 						.vote_comment {
 							display: flex;
@@ -204,6 +208,8 @@
 				background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/blue_arrow_back_3x.png) no-repeat center;
 				background-size: contain;
 			}
+
+
 		}
 
 		.next {
@@ -231,7 +237,23 @@
 				align-items: center;
 				font-size: 1.5rem;
 				font-weight: normal;
-				margin: 0 13px;
+				margin: 0 7px;
+
+				a {
+					display: flex;
+					flex-flow: row nowrap;
+					justify-content: center;
+					align-items: center;
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+				}
+			}
+
+			.this {
+				font-weight: bold;
+				color: $bvt-blue;
+				background: $bvt-bg-blue;
 			}
 		}
 	}
@@ -239,7 +261,7 @@
 	//검색
 	#productBoardSearch {
 		width: 100%;
-		padding: 20px 0;
+		padding: 20px 17px;
 
 		fieldset {
 			display: flex;

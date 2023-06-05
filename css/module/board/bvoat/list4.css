@@ -109,6 +109,11 @@
   background: var(--icon-rate) no-repeat center;
   margin-right: 3px;
 }
+#productBoardList #productBoardListWrap li.review_item .item .item_anchor .summary_info {
+  width: 100%;
+  height: 67px;
+  overflow: hidden;
+}
 #productBoardList #productBoardListWrap li.review_item .item .item_anchor .summary_info .vote_comment {
   display: flex;
   flex-wrap: nowrap;
@@ -206,11 +211,25 @@
   align-items: center;
   font-size: 1.5rem;
   font-weight: normal;
-  margin: 0 13px;
+  margin: 0 7px;
+}
+#productBoardList #productBoardPagenation ol li a {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+#productBoardList #productBoardPagenation ol .this {
+  font-weight: bold;
+  color: #022CFF;
+  background: #F5F6FB;
 }
 #productBoardList #productBoardSearch {
   width: 100%;
-  padding: 20px 0;
+  padding: 20px 17px;
 }
 #productBoardList #productBoardSearch fieldset {
   display: flex;
