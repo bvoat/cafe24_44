@@ -1,87 +1,72 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="path">
-    <span>현재 위치</span>
-    <ol>
-        <li><a href="/">홈</a></li>
-        <li><a href="/myshop/index.html">마이쇼핑</a></li>
-        <li title="현재 위치"><strong>게시물 관리</strong></li>
-    </ol>
-</div>
-
-<div class="titleArea">
-    <h2>게시물 관리</h2>
-</div>
-
-<div module="myshop_BoardPackage">
     <!--@css(/css/module/myshop/boardPackage.css)-->
-    <div module="myshop_boardListHead">
-        <p>분류 선택 {$board_sort}</p>
-    </div>
-
-    <div class="ec-base-table typeList gBorder gBlank10" module="myshop_boardList">
+    <!--@css(/css/module/myshop/bvoat/board_list.css)-->
+<!--@css(/css/module/board/bvoat/list.css)-->
+    
+<article id="myshopProductBoardList" module="Board_ListPackage_4">
+    <section id="productBoardListTitle" module="board_title_4">
+        <h1>{$board_title} {$board_adult_icon}</h1>
+        <h2>{$board_info}</h2>
+    </section>
+<div id="productBoardListTab" module="myshop_BoardPackage">
+    <div module="myshop_boardTitle" class="tab">
         <!--
-            $count = 10
             $relation_post = yes
         -->
-        <table border="1" summary="">
-        <caption>게시물 관리 목록</caption>
-        <colgroup module="board_listheader_1002">
-            <col style="width:70px;" />
-            <col style="width:135px;" />
-            <col style="width:auto;" />
-            <col style="width:84px;" />
-            <col style="width:80px;" />
-            <col style="width:55px;" />
-        </colgroup>
-        <thead>
-            <tr>
-                <th scope="col">번호</th>
-                <th scope="col">분류</th>
-                <th scope="col">제목</th>
-                <th scope="col">작성자</th>
-                <th scope="col">작성일</th>
-                <th scope="col">조회</th>
-            </tr>
-        </thead>
-        <tbody class="{$list_display|display} center">
-            <tr>
-                <td>{$no}</td>
-                <td><a href="{$link_board_list}" class="txtEm">{$board_category}</a></td>
-                <td class="left subject">{$icon_re}{$icon_lock} <a href="{$board_read_url}">{$subject}</a> {$icon_new}{$icon_file}{$comment_count}</td>
-                <td>{$writer}</td>
-                <td><span class="txtNum">{$write_date}</span></td>
-                <td><span class="txtNum">{$hit_count}</span></td>
-            </tr>
-            <tr>
-                <td>{$no}</td>
-                <td><a href="{$link_board_list}" class="txtEm">{$board_category}</a></td>
-                <td class="left subject">{$icon_re}{$icon_lock} <a href="{$board_read_url}">{$subject}</a> {$icon_new}{$icon_file}{$comment_count}</td>
-                <td>{$writer}</td>
-                <td><span class="txtNum">{$write_date}</span></td>
-                <td><span class="txtNum">{$hit_count}</span></td>
-            </tr>
-        </tbody>
-        </table>
-        <p class="message {$nodata_display|display}">게시물이 없습니다.</p>
+        <ul>
+            <li class="selected"><a href="/myshop/board_list.html">게시글 ({$my_board_count}) </a></li>
+            <li><a href="/myshop/board_comment.html">댓글 ({$my_comment_count})</a></li>
+        </ul>
+    </div>
+    <div id="myshopProductBoardUL" module="myshop_boardList">
+        <ul class="list">
+            <!--
+                $count = 5
+                $relation_post = yes
+            -->
+            <li>
+                <p class="summary">
+                    <a href="{$board_read_url}">
+                        <span class="subject">{$icon_re} {$icon_mobile} {$icon_lock} <strong>[{$board_category}]</strong> {$subject} {$comment_count} {$icon_file} {$icon_new}</span>
+                        <span class="id" title="작성자">{$writer}</span><span class="date" title="작성일">{$write_date}</span>
+                    </a>
+                </p>
+            </li>
+            <li>
+                <p class="summary">
+                    <a href="{$board_read_url}">
+                        <span class="subject">{$icon_re} {$icon_mobile} {$icon_lock} <strong>[{$board_category}]</strong> {$subject} {$comment_count} {$icon_file} {$icon_new}</span>
+                        <span class="id" title="작성자">{$writer}</span><span class="date" title="작성일">{$write_date}</span>
+                    </a>
+                </p>
+            </li>
+        </ul>
     </div>
 </div>
 
-<div module="myshop_boardlistPaging" class="ec-base-paginate">
+
+<div id="productBoardPagenation" module="myshop_boardlistPaging" class="paginate typeList">
     <!--
         $relation_post = yes
     -->
-    <a href="{$param_prev}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+    <p class="prev"><a href="{$param_prev}" title="이전 페이지"></a></p>
     <ol>
         <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
         <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
     </ol>
-    <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+    <p class="next"><a href="{$param_next}" title="다음 페이지"></a></p>
 </div>
 
-<div module="myshop_boardlistSearch">
-    <!--@css(/css/module/myshop/boardlistSearch.css)-->
-    <fieldset class="boardSearch">
-        <legend>게시물 검색</legend>
-        <p>{$form.search_key} {$form.search} <a href="#none" class="btnEmFix" onclick="{$action_search}">찾기</a></p>
-    </fieldset>
-</div>
+    <!-- 검색 -->
+    <section id="productBoardSearch" module="myshop_boardlistSearch">
+        <!--@css(/css/module/board/search.css)-->
+        <fieldset class="boardSearch">
+            <legend class="displaynone">게시물 검색</legend>
+            <div class="date">{$form.search_date} </div>
+            <div class="category">{$form.search_key}</div>
+            <div class="keyword">{$form.search} </div>
+            <button class="btnStrong" onclick="{$action_search}">검색</button>
+        </fieldset>
+    </section>
+
+</article>

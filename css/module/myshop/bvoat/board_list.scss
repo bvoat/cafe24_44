@@ -1,0 +1,197 @@
+@charset "utf-8";
+@import "../../../abstracts/mixin";
+@import "../../../abstracts/variables";
+
+//프로필 profile.html
+#reviewsProfileWrap .xans-myshop-boardpackage {
+	margin: 0 0 200px;
+}
+
+//내 게시글 board_list.html comment_list.html
+#myshopProductBoardList {
+	position: relative;
+	width: 100%;
+	max-width: 450px;
+	padding: 0 11px;
+	margin: 105px 0 200px;
+
+	//게시판 title (board_title_seq)
+	#productBoardListTitle {
+		width: 100%;
+		max-width: 450px;
+		margin: 18px 0;
+
+		h1 {
+			font-size: 2rem;
+			font-weight: bold;
+			margin-bottom: 6px;
+		}
+
+		h2 {
+			font-size: 1.4rem;
+			font-weight: normal;
+			color: $bvt-darkgray;
+		}
+	}
+
+	//탭
+	#productBoardListTab {
+		.tab {
+			>ul {
+				li.selected {
+					background: $bvt-white;
+				}
+
+				li {
+					background: $bvt-bg-skyblue;
+				}
+			}
+		}
+	}
+
+
+	//글 목록
+	#myshopProductBoardUL,
+	#productBoardList {
+		ul {
+			li {
+				overflow: inherit;
+
+				p {
+					a {
+						font-size: 15px;
+
+						span {
+							font-size: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	//페이지네이션
+	#productBoardPagenation {
+		width: 100%;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: center;
+		margin: 12px 0;
+
+		.prev {
+			margin: 0 6px;
+
+			a {
+				display: inline-block;
+				width: 17px;
+				height: 18px;
+				background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/blue_arrow_back_3x.png) no-repeat center;
+				background-size: contain;
+			}
+
+
+		}
+
+		.next {
+			margin: 0 6px;
+
+			a {
+				display: inline-block;
+				width: 17px;
+				height: 18px;
+				background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/blue_arrow_back_3x.png) no-repeat center;
+				background-size: contain;
+				transform: scaleX(-1);
+			}
+		}
+
+		ol {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			align-items: center;
+
+			li {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.5rem;
+				font-weight: normal;
+				margin: 0 7px;
+
+				a {
+					display: flex;
+					flex-flow: row nowrap;
+					justify-content: center;
+					align-items: center;
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+				}
+			}
+
+			.this {
+				font-weight: bold;
+				color: $bvt-blue;
+				background: $bvt-bg-blue;
+			}
+		}
+	}
+
+	//검색
+	//게시물 검색
+	#productBoardSearch {
+		width: 100%;
+		padding: 20px 17px;
+
+		fieldset {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+
+			.date,
+			.category {
+				width: 20%;
+
+			}
+
+			select {
+				width: 100%;
+				margin: 0;
+				height: 32px;
+				font-size: 1.3rem;
+				cursor: pointer;
+				border: $bvt-btn-border-gray;
+			}
+
+			.keyword {
+				width: 50%;
+			}
+
+			input,
+			button {
+				margin: 0;
+				height: 32px;
+				font-size: 1.3rem;
+				padding: 0 5px;
+			}
+
+			input {
+				width: 100%;
+				border: $bvt-btn-border-gray;
+			}
+
+			button {
+				background: $bvt-blue;
+				color: $bvt-white;
+				font-size: 1.4rem;
+				font-weight: bold;
+			}
+		}
+
+	}
+}

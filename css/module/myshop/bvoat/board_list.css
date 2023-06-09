@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
+/* 애니메이션 */
+/* 애니메이션 */
+/* 미디어쿼리 */
+/* 미디어쿼리 */
+#reviewsProfileWrap .xans-myshop-boardpackage {
+  margin: 0 0 200px;
+}
+
+#myshopProductBoardList {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  padding: 0 11px;
+  margin: 105px 0 200px;
+}
+#myshopProductBoardList #productBoardListTitle {
+  width: 100%;
+  max-width: 450px;
+  margin: 18px 0;
+}
+#myshopProductBoardList #productBoardListTitle h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+#myshopProductBoardList #productBoardListTitle h2 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #707070;
+}
+#myshopProductBoardList #productBoardListTab .tab > ul li.selected {
+  background: #ffffff;
+}
+#myshopProductBoardList #productBoardListTab .tab > ul li {
+  background: #F5F6FC;
+}
+#myshopProductBoardList #myshopProductBoardUL ul li,
+#myshopProductBoardList #productBoardList ul li {
+  overflow: inherit;
+}
+#myshopProductBoardList #myshopProductBoardUL ul li p a,
+#myshopProductBoardList #productBoardList ul li p a {
+  font-size: 15px;
+}
+#myshopProductBoardList #myshopProductBoardUL ul li p a span,
+#myshopProductBoardList #productBoardList ul li p a span {
+  font-size: 15px;
+}
+#myshopProductBoardList #productBoardPagenation {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 0;
+}
+#myshopProductBoardList #productBoardPagenation .prev {
+  margin: 0 6px;
+}
+#myshopProductBoardList #productBoardPagenation .prev a {
+  display: inline-block;
+  width: 17px;
+  height: 18px;
+  background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/blue_arrow_back_3x.png) no-repeat center;
+  background-size: contain;
+}
+#myshopProductBoardList #productBoardPagenation .next {
+  margin: 0 6px;
+}
+#myshopProductBoardList #productBoardPagenation .next a {
+  display: inline-block;
+  width: 17px;
+  height: 18px;
+  background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/blue_arrow_back_3x.png) no-repeat center;
+  background-size: contain;
+  transform: scaleX(-1);
+}
+#myshopProductBoardList #productBoardPagenation ol {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#myshopProductBoardList #productBoardPagenation ol li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0 7px;
+}
+#myshopProductBoardList #productBoardPagenation ol li a {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+#myshopProductBoardList #productBoardPagenation ol .this {
+  font-weight: bold;
+  color: #022CFF;
+  background: #F5F6FB;
+}
+#myshopProductBoardList #productBoardSearch {
+  width: 100%;
+  padding: 20px 17px;
+}
+#myshopProductBoardList #productBoardSearch fieldset {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#myshopProductBoardList #productBoardSearch fieldset .date,
+#myshopProductBoardList #productBoardSearch fieldset .category {
+  width: 20%;
+}
+#myshopProductBoardList #productBoardSearch fieldset select {
+  width: 100%;
+  margin: 0;
+  height: 32px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: 1px solid #E2E2E2;
+}
+#myshopProductBoardList #productBoardSearch fieldset .keyword {
+  width: 50%;
+}
+#myshopProductBoardList #productBoardSearch fieldset input,
+#myshopProductBoardList #productBoardSearch fieldset button {
+  margin: 0;
+  height: 32px;
+  font-size: 1.3rem;
+  padding: 0 5px;
+}
+#myshopProductBoardList #productBoardSearch fieldset input {
+  width: 100%;
+  border: 1px solid #E2E2E2;
+}
+#myshopProductBoardList #productBoardSearch fieldset button {
+  background: #022CFF;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}/*# sourceMappingURL=board_list.css.map */

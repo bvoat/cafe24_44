@@ -25,11 +25,63 @@
 		</ul>
 	</div>
 
-	<div id="reviewsProfileReviews">
+	<!-- 기존 리뷰 리스트 -->
+	<section id="myshopProductBoardList" module="myshop_BoardPackage">
+        <!--@css(/css/module/myshop/boardPackage.css)-->
+        <!--@css(/css/module/myshop/bvoat/board_list.css)-->
+
+        <div module="myshop_boardTitle" class="tab">
+            <!--
+                $relation_post = yes
+            -->
+            <ul>
+                <li class="selected"><a href="/myshop/board_list.html">게시글 ({$my_board_count}) </a></li>
+                <li><a href="/myshop/board_comment.html">댓글 ({$my_comment_count})</a></li>
+            </ul>
+        </div>
+        <div id="productBoardList" module="myshop_boardList">
+            <ul class="list">
+                <!--
+                    $count = 5
+                    $relation_post = yes
+                -->
+                <li>
+                    <p class="summary">
+                        <a href="{$board_read_url}">
+                            <span class="subject">{$icon_re} {$icon_mobile} {$icon_lock} <strong>[{$board_category}]</strong> {$subject} {$comment_count} {$icon_file} {$icon_new}</span>
+                            <span class="id" title="작성자">{$writer}</span><span class="date" title="작성일">{$write_date}</span>
+                        </a>
+                    </p>
+                </li>
+                <li>
+                    <p class="summary">
+                        <a href="{$board_read_url}">
+                            <span class="subject">{$icon_re} {$icon_mobile} {$icon_lock} <strong>[{$board_category}]</strong> {$subject} {$comment_count} {$icon_file} {$icon_new}</span>
+                            <span class="id" title="작성자">{$writer}</span><span class="date" title="작성일">{$write_date}</span>
+                        </a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <div id="productBoardPagenation" module="myshop_boardlistPaging" class="paginate typeList">
+            <!--
+                $relation_post = yes
+            -->
+            <p class="prev"><a href="{$param_prev}" title="이전 페이지"></a></p>
+            <ol>
+                <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+                <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+            </ol>
+            <p class="next"><a href="{$param_next}" title="다음 페이지"></a></p>
+        </div>
+    </section>
+
+	<!-- <div id="reviewsProfileReviews">
 		<ul class="reviews_id_list">
 
 		</ul>
-	</div>
+	</div> -->
 	<a class="feed_btn" href="/reviews/feed.html">리뷰 피드</a>
 	<p class="spinner displaynone"></p>
 </section>

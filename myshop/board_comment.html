@@ -1,0 +1,66 @@
+<!--@layout(/layout/basic/layout.html)-->
+    <!--@css(/css/module/myshop/boardPackage.css)-->
+    <!--@css(/css/module/myshop/bvoat/board_list.css)-->
+<!--@css(/css/module/board/bvoat/list.css)-->
+
+    
+	<article id="myshopProductBoardList" module="Board_ListPackage_4">
+        <section id="productBoardListTitle" module="board_title_4">
+            <h1>{$board_title} {$board_adult_icon}</h1>
+            <h2>{$board_info}</h2>
+        </section>
+    <div id="productBoardListTab" module="myshop_BoardPackage">
+    <div module="myshop_boardTitle" class="tab">
+        <ul>
+            <li><a href="/myshop/board_list.html">게시글 ({$my_board_count})</a></li>
+            <li class="selected"><a href="/myshop/board_comment.html">댓글 ({$my_comment_count})</a></li>
+        </ul>
+    </div>
+
+    <div id="myshopProductBoardUL"  module="myshop_Commentlist">
+        <ul class="list">
+            <li>
+                <p class="summary">
+                    <a href="{$board_read_url}">
+                        <span class="subject">{$icon_mobile} <strong>[{$board_category}]</strong> {$comment_content}</span>
+                        <span class="id" title="작성자">{$comment_name}</span><span class="date" title="작성일">{$comment_write_date}</span>
+                    </a>
+                </p>
+            </li>
+            <li>
+                <p class="summary">
+                    <a href="{$board_read_url}">
+                        <span class="subject">{$icon_mobile} <strong>[{$board_category}]</strong> {$comment_content}</span>
+                        <span class="id" title="작성자">{$comment_name}</span><span class="date" title="작성일">{$comment_write_date}</span>
+                    </a>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="productBoardPagenation" module="myshop_boardlistPaging" class="paginate typeList">
+    <!--
+        $relation_post = yes
+    -->
+    <p class="prev"><a href="{$param_prev}" title="이전 페이지"></a></p>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <p class="next"><a href="{$param_next}" title="다음 페이지"></a></p>
+</div>
+
+    <!-- 검색 -->
+    <section id="productBoardSearch" module="myshop_boardlistSearch">
+        <!--@css(/css/module/board/search.css)-->
+        <fieldset class="boardSearch">
+            <legend class="displaynone">게시물 검색</legend>
+            <div class="date">{$form.search_date} </div>
+            <div class="category">{$form.search_key}</div>
+            <div class="keyword">{$form.search} </div>
+            <button class="btnStrong" onclick="{$action_search}">검색</button>
+        </fieldset>
+    </section>
+
+	</article>
