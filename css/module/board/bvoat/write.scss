@@ -41,10 +41,6 @@
                 @include product-thumb(4px);
                 //상품정보
 
-                .thumbnail {
-                    background: red;
-                }
-
                 .thumb {
                     width: 30%;
                     margin-right: 20px;
@@ -53,13 +49,14 @@
                 .information {
                     position: relative;
                     width: 70%;
+                    margin: 2%;
 
                     li {
                         &:nth-child(1) {
                             font-size: 1.4rem;
                             font-weight: 500;
                             color: $bvt-black;
-                            @include ellipsis(2, 1.6rem)
+                            @include ellipsis(2, 1rem)
                         }
 
                         &:nth-child(2) {
@@ -90,13 +87,11 @@
         }
 
         #productBoardWriteBox {
-            background-color: #df000020;
 
             #productBoardWriteTable {
                 tr {
                     width: 18%;
                     height: 30px;
-                    border: 1px solid violet;
                     font-size: 1.3rem;
                 }
 
@@ -108,14 +103,28 @@
                     padding: 5px;
                 }
 
-                select,
-                input,
                 textarea {
                     background: none;
-                    border: none;
                     font-size: 1.3rem;
                     padding: 11px;
+                    border: none;
                 }
+
+                select,
+                input[type="text"],
+                input[type="password"] {
+                    background: none;
+                    font-size: 1.3rem;
+                    border: $bvt-btn-border-gray;
+                    padding: 11px;
+                }
+
+                input[type="file"] {
+                    background: none;
+                    font-size: 1.3rem;
+                    padding: 8px;
+                }
+
 
                 textarea {
                     width: 100%;
@@ -168,7 +177,7 @@
                     font-size: 1.1rem;
                     border: $bvt-btn-border-gray;
                     border-radius: 12px;
-                    width: 60px;
+                    width: 80px;
                     height: 30px;
                     margin: 2.5px;
 
@@ -190,7 +199,7 @@
                     border-radius: 12px;
                     color: $bvt-white;
                     font-weight: 500;
-                    width: 60px;
+                    width: 80px;
                     height: 30px;
                     margin: 2.5px;
                 }

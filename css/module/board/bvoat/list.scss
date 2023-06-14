@@ -2,6 +2,7 @@
 @import "../../../abstracts/mixin";
 @import "../../../abstracts/variables";
 
+
 #productBoardList {
     width: 100%;
     max-width: 450px;
@@ -27,6 +28,7 @@
             color: $bvt-darkgray;
         }
     }
+
 
     //게시판 카테고리
     #productBoardListSelect {

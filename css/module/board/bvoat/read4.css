@@ -279,6 +279,9 @@
   font-size: 1.3rem;
   margin-bottom: 12px;
 }
+#productBoardReadComment #commentWriteForm #commentWritingForm fieldset textarea {
+  font-size: 1.3rem;
+}
 #productBoardReadComment #commentWriteForm #commentWritingForm fieldset .input .userinfo_input {
   display: flex;
   flex-flow: row nowrap;
@@ -334,6 +337,9 @@
 #productBoardReadComment #commentReplyWriteForm #commentReplyForm fieldset input {
   width: 25%;
   height: 26px;
+}
+#productBoardReadComment #commentReplyWriteForm #commentReplyForm fieldset textarea {
+  font-size: 1.3rem;
 }
 #productBoardReadComment #commentReplyWriteForm #commentReplyForm fieldset .view {
   padding: 0;
