@@ -121,30 +121,31 @@
                     </div>
 
                 </li>
-                <li class="{$comment_reply_css}">
+                <li class=" {$comment_reply_css}">
                     <div class="commentTop">
-                        <strong class="name">{$checkbox} {$member_icon} {$comment_name}
-                            <span class="date">{$comment_write_date}</span>
-                        </strong>
-
-                        <span class="grade {$config.is_use_point|display}"><img
-                                src="//img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$comment_point_count}.gif"
-                                alt="{$comment_point_count}점" /></span>
+                        <div class="name">{$checkbox}
+                            <img class="user_img" src="https://bvoat.shop/images/new_img/ico__11.png"
+                                onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'">{$comment_name}
+                            <span
+                                class="grade rate displaynone {$config.is_use_point|display}">{$comment_point_count}</span>
+                        </div>
+                        <div class="button">
+                            <a href="javascript:;" class="btnNormal control_btn {$comment_modify_display|display}"
+                                onclick="{$action_comment_update}">수정</a>
+                            <a href="javascript:;" class="btnNormal control_btn {$comment_delete_display|display}"
+                                onclick="{$action_comment_delete}"><i class="icoDelete"></i> 삭제</a>
+                            <a href="javascript:;" onclick="{$action_comment_reply}"
+                                class="btnNormal control_btn {$comment_reply_display|display}">댓글 </a>
+                        </div>
                     </div>
-                    <span class="button">
-                        <button href="javascript:;" class="btnNormal {$comment_modify_display|display}"
-                            onclick="{$action_comment_update}">수정</button>
-                        <a href="javascript:;" class="btnNormal {$comment_delete_display|display}"
-                            onclick="{$action_comment_delete}"><i class="icoDelete"></i> 삭제</a>
-                        <a href="javascript:;" onclick="{$action_comment_reply}"
-                            class="btnNormal {$comment_reply_display|display}">댓글 <img
-                                src="//img.echosting.cafe24.com/skin/base/common/btn_icon_reply.gif" alt="" /></a>
-                    </span>
+
                     <div class="comment">
                         <span class="{$is_spam_display|display}"><img
                                 src="//img.echosting.cafe24.com/skin/base/board/ico_spam.gif" alt="스팸글" /></span>
                         {$comment_icon_lock} {$comment_content}
+                        <p class="date">{$comment_write_date}</p>
                     </div>
+
                 </li>
             </ul>
 

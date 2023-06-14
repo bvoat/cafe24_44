@@ -94,9 +94,8 @@
                         <div class="gRight">
                             <span class="{$invoice_no_display|display}"><a href="#none" class="line btnNormal mini"
                                     onclick="{$shipping_trace_popup}">배송조회</a></span>
-                            <!-- <a href="/board/product/write.html{$param_postscript}"
-                                class="btnNormal mini {$postscript_display|display} alpha_review_button"
-                                style="display:none">구매후기</a> -->
+                            <a href="/board/product/write.html{$param_postscript}"
+                                class="btnNormal mini  review_btn{$postscript_display|display}">리뷰작성</a>
                             <a href="#none" class="btnNormal mini {$withdraw_cancel_display|display}"
                                 onclick="{$action_withdraw_cancel}">취소철회</a>
                             <a href="#none" class="btnNormal mini {$withdraw_exchange_display|display}"
@@ -161,9 +160,8 @@
                         <div class="gRight">
                             <span class="{$invoice_no_display|display}"><a href="#none" class="line btnNormal mini"
                                     onclick="{$shipping_trace_popup}">배송조회</a></span>
-                            <!-- <a href="/board/product/write.html{$param_postscript}"
-                                class="btnNormal mini {$postscript_display|display} alpha_review_button"
-                                style="display:none">구매후기</a> -->
+                            <a href="/board/product/write.html{$param_postscript}"
+                                class="btnNormal mini review_btn {$postscript_display|display}">리뷰작성</a>
                             <a href="#none" class="btnNormal mini {$withdraw_cancel_display|display}"
                                 onclick="{$action_withdraw_cancel}">취소철회</a>
                             <a href="#none" class="btnNormal mini {$withdraw_exchange_display|display}"
@@ -186,8 +184,6 @@
         </div>
         <p class="empty {$empty_display|display}">주문 내역이 없습니다.</p>
     </section>
-
-
     <div id="OrderHistoryPagination" class="paginate page-pagination" module="Myshop_OrderHistoryPaging">
         <div class="paginate-box">
             <span class="btnPrev_wrap">
@@ -211,3 +207,4 @@
 <!--footer-->
 <!--@css(/cssbvt/module/layout/footer.css)-->
 <!--@import(/layout/basic/footer.html)-->
+

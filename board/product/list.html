@@ -58,7 +58,6 @@
             <p class="summary">
                 <a href="/board/gallery/read.html{$param_read}"><strong class="subject">{$fixed_icon} {$subject} <span
                             class="comment">{$comment_count}</span> {$icon_hit} {$icon_new}</strong></a>
-                <span class="{$category_display|display}" title="카테고리">{$category_name}</span>
                 <span class="name" title="작성자">{$writer}</span>
                 <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
             </p>
@@ -146,8 +145,8 @@
         -->
         <p class="prev"><a href="{$param_prev}" title="이전 페이지"></a></p>
         <ol>
-            <li><a href="{$param_num}" class="{$param_class}" title="{$page_num}">{$page_num}</a></li>
-            <li><a href="{$param_num}" class="{$param_class}" title="{$page_num}">{$page_num}</a></li>
+            <li><a id="page_{$page_num}" href="{$param_num}" class="{$param_class}" title="{$page_num}">{$page_num}</a></li>
+            <li><a id="page_{$page_num}" href="{$param_num}" class="{$param_class}" title="{$page_num}">{$page_num}</a></li>
         </ol>
         <p class="next"><a href="{$param_next}" title="다음 페이지"></a></p>
     </section>
@@ -163,8 +162,8 @@
             <button class="btnStrong" onclick="{$action_search}">검색</button>
         </fieldset>
     </section>
-    <!-- // 검색 -->
 
+    <!-- // 검색 -->
 
     <!-- 관리자 전용 메뉴 -->
     <div module="board_catemove_4">
@@ -193,9 +192,9 @@
     <!-- // 관리자 전용 메뉴 -->
 </article>
 <script>
-    window.addEventListener("DOMContentLoaded", ()=>{
-        //thumnail 한 개만 남기기
-        const thumbnail = document.querySelectorAll(".thumbnail");
+   //thumnail 한 개만 남기기
+    const thumnailChange = () => {
+   const thumbnail = document.querySelectorAll(".thumbnail");
         thumbnail.forEach(box => {
             const imgTagCount = box.childElementCount;
             if(parseInt(imgTagCount) === 2){
@@ -203,11 +202,16 @@
                 product_img.remove();
             }
         })
-
-        //username 네이버 페이 구매자 면 익명의 보터로 변경
-        const username = document.querySelectorAll(".user_name");
+    };
+ //username 네이버 페이 구매자 면 익명의 보터로 변경
+    const userNameChange = () => {
+ const username = document.querySelectorAll(".user_name");
         username.forEach(name => {
             name.innerHTML == '네이버 페이 구매자'? name.innerHTML = '익명의 보터' : null;
         })
+    };
+    window.addEventListener("load", ()=>{
+        thumnailChange();
+        userNameChange();
     })
 </script>
