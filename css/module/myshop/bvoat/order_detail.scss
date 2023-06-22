@@ -56,6 +56,22 @@
         font-size: 13px;
     }
 
+    //구매후기 작성
+    .review_btn {
+        background: $bvt-blue;
+        color: $bvt-white;
+        font-weight: bold;
+        font-size: 13px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        transition: all .4s;
+
+        &:hover {
+            background: $bvt-white;
+            color: $bvt-blue;
+        }
+    }
+
     //금액 합계
     .ec-base-fold.theme3 .contents {
         font-size: 13px;

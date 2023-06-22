@@ -49,6 +49,19 @@
 #orderDetail .ec-base-prdInfo .prdFoot .gLeft {
   font-size: 13px;
 }
+#orderDetail .review_btn {
+  background: #022CFF;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+#orderDetail .review_btn:hover {
+  background: #ffffff;
+  color: #022CFF;
+}
 #orderDetail .ec-base-fold.theme3 .contents {
   font-size: 13px;
 }
