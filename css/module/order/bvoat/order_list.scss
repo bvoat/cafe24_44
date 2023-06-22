@@ -79,9 +79,11 @@
     #OrderHistoryForm {
         width: 100%;
         max-width: 450px;
+
         #orderListSearch {
             width: 100%;
             max-width: 450px;
+
             fieldset {
                 display: block;
                 width: 100%;
@@ -90,27 +92,32 @@
                 legend {
                     display: none;
                 }
-                
-                ul{
+
+                ul {
                     padding: 0 11px;
                     margin: 11px;
-                    li{
+
+                    li {
                         display: flex;
                         flex-flow: row nowrap;
                         align-items: center;
                         width: 100%;
                         padding: 5px 9px;
                         margin: 0;
-                        span{
+
+                        span {
                             font-size: 1.3rem;
                             margin-right: 12px;
                         }
-                        select,input{
+
+                        select,
+                        input {
                             font-size: 1.35rem;
                             width: 80%;
                             padding: 8px;
                         }
-                        a{
+
+                        a {
                             font-size: 1.2rem;
                             font-weight: 400;
                             margin-right: 3px;
@@ -120,7 +127,7 @@
 
                         //dataSearch
 
-                        #order_search_btn{
+                        #order_search_btn {
                             width: 39px;
                             height: 24px;
                             padding: 0;
@@ -131,10 +138,12 @@
         }
     }
 }
-#orderHistoryListitem{
+
+#orderHistoryListitem {
     width: 100%;
     max-width: 450px;
-    #orderHistoryList{
+
+    #orderHistoryList {
         width: 100%;
         max-width: 450px;
         margin: 0 auto;
@@ -143,14 +152,15 @@
 
 
 //개별 상품
-.order{
+.order {
     width: 100%;
     max-width: 450px;
     position: relative;
     border-left: 1px solid #d5d5d5;
     border-right: 1px solid #d5d5d5;
     background-color: #fff;
-    h3{
+
+    h3 {
         overflow: hidden;
         margin: 7px 0 0;
         padding: 0 0 0 14px;
@@ -159,11 +169,12 @@
         font-size: 13px;
         font-weight: normal;
         background-color: #707070;
-        .date{
+
+        .date {
             font-weight: bold;
         }
 
-        a{
+        a {
             color: #fff;
         }
     }
@@ -177,12 +188,12 @@
         border: 1px solid #d5d5d5;
         box-sizing: border-box;
         background: #fff;
-    
+
         .prdCheck {
             display: inline-block;
             margin-bottom: 7px;
         }
-    
+
         .prdBox {
             display: -webkit-flex;
             display: -ms-flex;
@@ -190,7 +201,7 @@
             min-height: 90px;
             margin-top: 7px;
         }
-    
+
         .thumbnail {
             overflow: hidden;
             width: 73px;
@@ -198,73 +209,73 @@
             margin-right: 15px;
             border: 1px solid #d5d5d5;
             box-sizing: border-box;
-    
+
             img {
                 width: 100%;
             }
         }
-    
+
         .description {
             overflow: hidden;
             -webkit-flex: 1;
             -ms-flex: 1;
             flex: 1;
             overflow: hidden;
-    
+
             .prdName {
                 display: block;
                 margin: 0 0 10px;
                 font-size: 13px;
-    
+
                 .ec-set-product-name {
                     display: block;
                     margin: 0 0 3px;
                 }
             }
-    
+
             .info {
                 margin: 0 0 14px;
-    
+
                 li {
                     margin: 0 0 7px;
                     font-size: 12px;
                     color: #757575;
-    
+
                     .mileage {
                         display: inline-block;
                     }
                 }
-    
+
                 .price {
                     font-size: 13px;
                     color: #292929;
-    
+
                     .refer {
                         font-weight: normal;
                         font-size: 11px;
                     }
-    
+
                     .discount {
                         font-weight: normal;
                         text-decoration: line-through;
                     }
-    
+
                     .strike {
                         font-weight: normal;
                         text-decoration: line-through;
-    
+
                         strong {
                             font-weight: normal;
                         }
                     }
-    
+
                     .quantity {
                         position: relative;
                         display: inline-block;
                         margin: 0 0 0 10px;
                         padding: 0 0 0 14px;
                         font-size: 13px;
-    
+
                         &::before {
                             display: block;
                             content: "";
@@ -276,56 +287,56 @@
                             background: #989899;
                         }
                     }
-    
+
                 }
-    
+
                 input[type="number"] {
                     max-width: 51px;
                 }
-    
+
                 .amount button {
                     margin: 0;
                     padding: 0;
                     border: 0;
                 }
-    
+
                 /* gift > quantity */
                 .amount {
                     width: 50px;
                 }
-    
+
                 input.amount {
                     text-align: right;
                 }
-    
+
             }
-    
+
             input[type="tel"] {
                 text-align: right;
             }
-    
+
             .quantity input[type="tel"] {
                 width: 51px;
             }
-    
+
         }
 
 
-    
+
         p.option {
             margin: 0 14px;
             padding: 14px 0;
             border-top: 1px solid #ececec;
             font-size: 13px;
         }
-    
+
         .option {
             padding: 0;
             color: #353535;
-    
+
             >li {
                 border-top: 1px solid #ececec;
-    
+
                 .name {
                     display: -webkit-flex;
                     display: -moz-flex;
@@ -342,17 +353,17 @@
                     -ms-align-items: center;
                     align-items: center;
                 }
-    
+
                 .optionDesc {
                     word-break: break-all;
                 }
-    
+
                 .change {
                     margin: 0 0 0 5px;
                     white-space: nowrap;
                 }
             }
-    
+
             .file a {
                 margin: 0 0 0 4px;
                 padding: 0 0 0 11px;
@@ -361,7 +372,7 @@
                 background: url("//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_attach.png") no-repeat 0 0;
                 background-size: 8px 13px;
             }
-    
+
             .layerOptionModify {
                 display: none;
                 width: auto;
@@ -371,22 +382,22 @@
                 background-color: #f1f1f1;
             }
         }
-    
+
         .layerOptionModify .titleArea {
             margin-top: 3px;
             display: none;
         }
-    
+
         .layerOptionModify {
             ul {
                 padding: 0;
                 font-size: 12px;
-    
+
                 li {
                     position: relative;
                     margin: 0 0 7px;
                     padding: 0 0 0 73px;
-    
+
                     .optionItem {
                         display: block;
                         position: absolute;
@@ -403,23 +414,24 @@
                     }
                 }
             }
-    
+
             select,
             input[type="text"] {
                 width: 100%;
             }
-    
+
             .ec-base-button.gCenter {
                 margin: 0;
             }
         }
-    
+
     }
-    
-    
+
+
 }
+
 //상세보기
-.xans-myshop-orderhistorylistitem a.btnDetail{
+.xans-myshop-orderhistorylistitem a.btnDetail {
     position: absolute;
     top: 14px;
     right: 14px;
@@ -428,59 +440,61 @@
     color: #fff;
     background: url(/bvtIMG/icon/icon_arrow_order.svg) right center no-repeat;
 }
- 
-        //입금정보
-        .prdFoot {
-            padding: 6px 12px;
-            line-height: 26px;
-            color: #022CFF;
-            text-align: center;
-            background: #f1f1f1;
-            border-bottom: 1px solid #d5d5d5;
-    
-            &::after {
-                content: '';
-                display: block;
-                clear: both;
-            }
-    
-            .gLeft {
-                float: left;
-                text-align: left;
-                font-size: 1.3rem;
-            }
-    
-            .gRight {
-                float: right;
-                text-align: right;
-            }
-    
-            .store {
-                color: #292929;
-                font-weight: normal;
-            }
-    
-            .btnBasic {
-                font-weight: normal;
-                background-color: #fff;
-            }
-    
-            span>span>span {
-                font-size: 11px;
-            }
-    
-            span span.discount {
-                text-decoration: line-through;
-            }
-    
-            span span.discount strong {
-                font-weight: normal;
-            }
 
-        }
+//입금정보
+.prdFoot {
+    padding: 6px 12px;
+    line-height: 26px;
+    color: #022CFF;
+    text-align: center;
+    background: #f1f1f1;
+    border-bottom: 1px solid #d5d5d5;
+
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .gLeft {
+        float: left;
+        text-align: left;
+        font-size: 1.3rem;
+    }
+
+    .gRight {
+        float: right;
+        text-align: right;
+    }
+
+    .store {
+        color: #292929;
+        font-weight: normal;
+    }
+
+    .btnBasic {
+        font-weight: normal;
+        background-color: #fff;
+    }
+
+    span>span>span {
+        font-size: 11px;
+    }
+
+    span span.discount {
+        text-decoration: line-through;
+    }
+
+    span span.discount strong {
+        font-weight: normal;
+    }
+
+}
+
 //주문취소 버튼
 .request {
-    width: 100%;;
+    width: 100%;
+    ;
     position: relative;
     overflow: hidden;
     margin: 0 auto;
@@ -492,6 +506,7 @@
     background-color: #f1f1f1;
     text-align: center;
 }
+
 .btnNormal {
     color: #292929;
     border: 1px solid #cfcfcf;
@@ -502,6 +517,32 @@
     padding: 5px 10px;
     vertical-align: middle;
     font-size: 13px;
+    border-radius: 4px;
+}
+
+//구매후기 작성 버튼
+.review_btn {
+    background: $bvt-blue;
+    color: $bvt-white;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all .4s;
+
+    &:hover {
+        background: $bvt-white;
+        color: $bvt-blue;
+    }
+}
+
+//주문 내역이 없습니다.
+.empty {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: $bvt-darkgray;
+    margin: 25px 0;
 }
 
 //페이지네이션
