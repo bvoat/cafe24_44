@@ -109,6 +109,10 @@
 #productBoardReadTable #productBoardReadContent div {
   font-size: 1.4rem;
 }
+#productBoardReadTable #productBoardReadContent img {
+  width: 100%;
+  margin: 10px 0;
+}
 #productBoardReadTable #productBoardReadContent .content {
   font-size: 1.4rem;
   margin: 20px 0;
