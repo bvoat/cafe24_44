@@ -65,26 +65,28 @@ const reciveVoterStamp = (voter_level, voterID, displayStampImg) => {
 /* 리뷰 갯수, 프로필 수신 */
 const reviews_num = document.querySelector(".reviews_num");
 
-const reciveNotWriteBuyRecords = (voter_identity) => {
-    if(voter_identity != null){
-        fetch(`https://${api_domain}.shop/reviews/data?div=not_write_cnt&member_id=${voter_identity}`, {
-        method: 'GET', // 또는 'PUT'
-        })
-        .then((response) => response.json())
-        .then((response) => {
-            console.log("response", response);
-            if(response || response.cnt_not_write){
-                const cnt_not_write = response.cnt_not_write ? response.cnt_not_write : '0';
-                reviews_num.insertAdjacentText("beforeend", cnt_not_write);
-            } else {
-                reviews_num.insertAdjacentText("beforeend", "0");
-            }
-        })
-        .catch((error) => {
-        console.error('실패:', error);
-        });    
-    }
-}
+//리뷰 갯수 수신 중단
+//카페24에서 받아 오는 것으로 변경 230614
+// const reciveNotWriteBuyRecords = (voter_identity) => {
+//     if(voter_identity != null){
+//         fetch(`https://${api_domain}.shop/reviews/data?div=not_write_cnt&member_id=${voter_identity}`, {
+//         method: 'GET', // 또는 'PUT'
+//         })
+//         .then((response) => response.json())
+//         .then((response) => {
+//             console.log("response", response);
+//             if(response || response.cnt_not_write){
+//                 const cnt_not_write = response.cnt_not_write ? response.cnt_not_write : '0';
+//                 reviews_num.insertAdjacentText("beforeend", cnt_not_write);
+//             } else {
+//                 reviews_num.insertAdjacentText("beforeend", "0");
+//             }
+//         })
+//         .catch((error) => {
+//         console.error('실패:', error);
+//         });    
+//     }
+// }
 const settingUserImage = () => {
     fetch(`https://${api_domain}.shop/member/profile?member_id=${voter_identity}`, {
     method: 'GET', // 또는 'PUT'
