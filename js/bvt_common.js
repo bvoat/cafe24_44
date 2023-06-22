@@ -214,7 +214,7 @@ function controlTopNavActive(page_path) {
   } else if (page_path.includes("board_no=8") || page_path.includes("article")) {
     //읽을거리에 active
     document.querySelector("#board").classList.add("top_nav_active");
-  } else if(page_path.includes("reviews/")) {
+  } else if(page_path.includes("board_no=4/")) {
     //비보트 추천에 active
     document.querySelector("#buy_records_nav").classList.add("top_nav_active");
   } else if(page_path.includes("realtime")){
