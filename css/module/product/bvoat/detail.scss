@@ -9,6 +9,9 @@
 	--delivery-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18.42' height='15.35'%3E%3Cg fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' data-name='Icon feather-truck'%3E%3Cpath d='M.75.75h11.54v10H.75Z' data-name='패스 2252'/%3E%3Cpath d='M12.29 4.6h3.08l2.3 2.3v3.85H12.3Z' data-name='패스 2253'/%3E%3Cpath d='M6.13 12.67a1.92 1.92 0 1 1-1.92-1.92 1.92 1.92 0 0 1 1.92 1.92Z' data-name='패스 2254'/%3E%3Cpath d='M16.13 12.67a1.92 1.92 0 1 1-1.92-1.92 1.92 1.92 0 0 1 1.92 1.92Z' data-name='패스 2255'/%3E%3C/g%3E%3C/svg%3E");
 	--mileage-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.93' height='17.93'%3E%3Cg fill='%23707070' data-name='그룹 2046'%3E%3Cpath d='M12.55 9.86h-1.8a1.8 1.8 0 1 1-3.58 0h-1.8a3.59 3.59 0 1 0 7.18 0Z' data-name='패스 2267'/%3E%3Cpath d='M7.17 7.18a.9.9 0 1 1-.9-.9.9.9 0 0 1 .9.9Z' data-name='패스 2268'/%3E%3Cpath d='M11.66 8.07a.9.9 0 1 0-.9-.9.9.9 0 0 0 .9.9Z' data-name='패스 2269'/%3E%3Cpath fill-rule='evenodd' d='M17.93 8.96A8.96 8.96 0 1 1 8.96 0a8.96 8.96 0 0 1 8.97 8.96Zm-1.8 0A7.17 7.17 0 1 1 8.97 1.8a7.17 7.17 0 0 1 7.18 7.17Z' data-name='패스 2270'/%3E%3C/g%3E%3C/svg%3E");
 	--stamp-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.92' height='19.75'%3E%3Cpath fill='%23707070' d='M15.51 11.29h-4.23v-2.2a5.28 5.28 0 0 1 .82-2.71 4.23 4.23 0 1 0-7.8-2.93 4.17 4.17 0 0 0 .53 2.94 5.12 5.12 0 0 1 .8 2.63v2.27H1.42A1.41 1.41 0 0 0 0 12.69v2.83a1.41 1.41 0 0 0 1.41 1.4v1.41a1.41 1.41 0 0 0 1.41 1.42H14.1a1.41 1.41 0 0 0 1.41-1.42v-1.4a1.41 1.41 0 0 0 1.41-1.42V12.7a1.41 1.41 0 0 0-1.41-1.41ZM5.7 3.7a2.82 2.82 0 1 1 5.2 1.96 6.88 6.88 0 0 0-.97 2.8H7a6.73 6.73 0 0 0-.97-2.8 2.78 2.78 0 0 1-.35-1.96Zm4.18 6.17v1.41H7.05v-1.4Zm4.23 8.47H2.82v-1.41H14.1Zm-12.7-2.82V12.7h14.1v2.82Z'/%3E%3C/svg%3E");
+	--icon-rate: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 11 12'%3E%3Cpath fill='%23022CFF' d='m6.12.94 1.23 2.47c.09.17.22.38.41.41l2.67.41c.49.07.76.69.41 1.03L8.8 7.1a.81.81 0 0 0-.2.61l.6 2.68c.1.48-.59.84-1.02.61L5.71 9.78a.35.35 0 0 0-.42 0l-2.46 1.23A.57.57 0 0 1 2 10.4l.4-2.68a.81.81 0 0 0-.2-.61L.16 5.26c-.35-.34-.08-.96.4-1.03l2.68-.41c.2-.03.33-.24.41-.41L4.88.94a.74.74 0 0 1 1.24 0Z'/%3E%3C/svg%3E");
+	--icon-likes: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 13 13'%3E%3Cpath stroke='%2300F' stroke-linecap='round' stroke-width='1.2' d='M9.53 12.36H1.39a.4.4 0 0 1-.39-.4V5.53c0-.21.18-.4.4-.4h1.8c.47 0 .9-.23 1.13-.63l1.78-2.97a1.07 1.07 0 0 1 1.95.86L7.4 4.62a.4.4 0 0 0 .38.5h3c.87 0 1.5.83 1.27 1.67l-1.25 4.6c-.16.57-.68.97-1.27.97Z'/%3E%3Cpath stroke='%2300F' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.2' d='M3.3 12.36V5.13'/%3E%3C/svg%3E");
+	--icon-cmt: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 17 15'%3E%3Cpath stroke='%2300F' stroke-width='1.2' d='M5.1 11.38v-.6H2.37c-.5 0-.95-.17-1.28-.46a1.32 1.32 0 0 1-.49-.99V2.05c0-.36.16-.72.49-1A2 2 0 0 1 2.37.6h11.95a2 2 0 0 1 1.29.45c.32.28.49.64.49 1v7.28c0 .35-.17.71-.5 1-.32.28-.78.45-1.28.45H8.73l-.16.13-3.18 2.57a.3.3 0 0 1-.22 0 .16.16 0 0 1-.06-.05H5.1v-2.05Z'/%3E%3Cpath fill='%2300F' d='M11.23 6.6a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-2.73 0a.75.75 0 1 0-.01-1.5.75.75 0 0 0 0 1.5Zm-2.75 0a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z'/%3E%3C/svg%3E");
 
 }
 
@@ -684,6 +687,7 @@
 			padding: 0 11px;
 		}
 
+		//상품 정보
 		#tab0 {
 			width: 100%;
 			max-width: 450px;
@@ -719,6 +723,7 @@
 			}
 		}
 
+		//사용 후기
 		#tab1 {
 			width: 100%;
 
@@ -727,15 +732,233 @@
 				padding: 0;
 			}
 
-			// iframe{
-			//     width: 100%;
-			//     max-width: 450px;
-			//     min-width: 200px;
-			//     object-fit: cover;
-			//     object-position: 50% 50%;
-			// }
+			#productBoardListWrap {
+				display: flex;
+				flex-flow: row wrap;
+				align-items: flex-start;
+				width: 100%;
+				margin: 50px 0;
+
+				//리뷰 아이템
+				li.review_item {
+					width: 50%;
+					list-style: none;
+					text-align: center;
+					padding: 0 7.5px;
+
+					.item {
+						position: relative;
+
+						.item_anchor {
+
+							.user_info {
+								display: flex;
+								flex-flow: row nowrap;
+								justify-content: flex-start;
+								align-items: center;
+								margin-bottom: 12px;
+								font-size: 0;
+
+								.user_img {
+									position: relative;
+									width: 30px;
+									margin-right: 8px;
+								}
+
+								.user_name {
+									font-size: 1.6rem;
+									font-weight: bold;
+									@include only-ellipsis(2, 1.9rem);
+								}
+							}
+
+							.thumbnail_info {
+								position: relative;
+								display: block;
+								width: 100%;
+								padding-top: 100%;
+								overflow: hidden;
+								border-radius: 4px;
+								margin-bottom: 12px;
+
+								img {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									-o-object-fit: cover;
+									object-fit: cover;
+								}
+
+								.rate {
+									position: absolute;
+									display: flex;
+									flex-flow: row nowrap;
+									justify-content: center;
+									align-items: center;
+									width: 51px;
+									height: 23px;
+									border-radius: 100px;
+									background: rgba(242, 242, 242, 0.5);
+									margin: 0 12px 10px 0;
+									bottom: 0;
+									right: 0;
+									font-size: 1.3rem;
+									font-weight: bold;
+									color: $bvt-blue;
+
+									&::before {
+										display: block;
+										content: "";
+										width: 11px;
+										height: 10.47px;
+										background: var(--icon-rate) no-repeat center;
+										margin-right: 3px;
+									}
+
+								}
+							}
+
+							.summary_info {
+								//p표시 여러개 중복되어 height로 잡아줌 
+								width: 100%;
+								height: 67px;
+								overflow: hidden;
+
+								.vote_comment {
+									display: flex;
+									flex-wrap: nowrap;
+									justify-content: flex-start;
+									align-items: center;
+									margin: 5px 0;
+
+									.vote {
+										display: flex;
+										flex-wrap: nowrap;
+										justify-content: space-between;
+										align-items: center;
+										width: 40px;
+										height: 22px;
+										border: 1px solid #022CFF;
+										border-width: 1.2px;
+										border-radius: 2px;
+										background: #ffffff;
+										font-size: 1.1rem;
+										font-weight: 700;
+										letter-spacing: -0.2px;
+										color: #022CFF;
+										padding: 1px 7px 0;
+										box-sizing: border-box;
+										margin-right: 8px;
+
+										&::before {
+											display: inline-block;
+											width: 12.1px;
+											height: 11.36px;
+											content: "";
+											background: var(--icon-likes) no-repeat center;
+											margin-right: 1px;
+										}
+									}
+
+									.comment {
+										&::after {
+											display: inline-block;
+											content: "";
+											width: 16.7px;
+											height: 14.1px;
+											background: var(--icon-cmt) no-repeat transparent center;
+										}
+									}
+
+								}
+
+								p {
+									font-size: 1.3rem;
+									@include only-ellipsis(2, 1.7rem);
+									text-align: left;
+								}
+
+								span {
+									display: none;
+								}
+
+							}
+						}
+					}
+				}
+			}
+
+			//페이지네이션
+			#productBoardPagenation {
+				width: 100%;
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 12px;
+
+				.prev {
+					margin: 0 6px;
+
+					a {
+						display: inline-block;
+						width: 17px;
+						height: 18px;
+						background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/blue_arrow_back_3x.png) no-repeat center;
+						background-size: contain;
+					}
+				}
+
+				.next {
+					margin: 0 6px;
+
+					a {
+						display: inline-block;
+						width: 17px;
+						height: 18px;
+						background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/blue_arrow_back_3x.png) no-repeat center;
+						background-size: contain;
+						transform: scaleX(-1);
+					}
+				}
+
+				ol {
+					display: flex;
+					flex-flow: row nowrap;
+					justify-content: center;
+					align-items: center;
+
+					li {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						font-size: 1.5rem;
+						font-weight: normal;
+						margin: 0 13px;
+
+						a {
+							display: flex;
+							flex-flow: row nowrap;
+							justify-content: center;
+							align-items: center;
+							width: 20px;
+							height: 20px;
+							border-radius: 50%;
+						}
+					}
+
+					.this {
+						font-weight: bold;
+						color: $bvt-blue;
+						background: $bvt-bg-blue;
+					}
+				}
+			}
 		}
 
+		//Q&A
 		#tab2 {
 			div {
 				.tab-tip {
@@ -870,6 +1093,7 @@
 			}
 		}
 
+		//배송안내
 		#tab3 {
 			div {
 				.tab_prd_info {
