@@ -242,7 +242,7 @@
         const reviews_num = document.querySelector(".reviews_num");
 
         if(review_btn){
-            const review_length = review_btn.length - displaynone_review_btn.length;
+            const review_length = (review_btn.length - displaynone_review_btn.length).toString();
             console.log("review_length",review_length);
             reviews_num.innerHTML(review_length);
         }
