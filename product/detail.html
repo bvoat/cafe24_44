@@ -136,9 +136,7 @@
 <ul class="detail_tab_wrap" module="product_additional">
     <li class="tab0 tab" data-hash="prd_detail">상품정보
     </li>
-    <li class="tab1 tab" data-hash="prd_bh">리뷰
-        <!--@import(./reviews/feed.html)-->
-    </li>
+    <li class="tab1 tab" data-hash="prd_bh">리뷰</li>
     <li class="tab2 tab" data-hash="use_qna">Q&A({$qna_count})
     </li>
     <li class="tab3 tab" data-hash="prd_info">배송안내
@@ -162,95 +160,96 @@
                     {$product_detail}
                 </div>
             </div>
-            <!-- 위탁판매자 및 대표판매자 정보 
-            <div class="contents">
-
-                <div
-                    style="border:1px solid #d5d5d5; word-break:break-all; word-wrap:break-word; color:#353535; background:#fff;">
-
-                    <table border="1"
-                        style="position:relative; width:100%; table-layout:fixed; border:0 none; border-spacing:0; border-collapse:collapse;">
-
-                        <caption>{$seller_info}</caption>
-
-                        <colgroup>
-
-                            <col style="width:100px;">
-
-                            <col style="width:auto;">
-
-                        </colgroup>
-
-                        <tbody>
-
-                            <tr>
-
-                                <th
-                                    style="padding:12px 0 12px 13px; text-align:left; font-weight:normal; color:#757575; font-size: 13px;">
-                                    <span>상호</span>
-                                </th>
-
-                                <td style="padding:12px 0 12px 13px; font-size:13px; vertical-align:top;">
-                                    <span>{$business_company_name}</span>
-                                </td>
-
-                            </tr>
-
-                            <tr>
-
-                                <th
-                                    style="padding:12px 0 12px 13px; text-align:left; font-weight:normal; color:#757575; border-top:1px solid #ececec; font-size: 13px">
-                                    <span>대표자</span>
-                                </th>
-
-                                <td
-                                    style="padding:12px 0 12px 13px; border-top:1px solid #ececec; font-size:13px; vertical-align:top;">
-                                    <span>{$business_president_name}</span>
-                                </td>
-
-                            </tr>
-
-                            <tr>
-
-                                <th
-                                    style="padding:12px 0 12px 13px; text-align:left; font-weight:normal; color:#757575; border-top:1px solid #ececec; font-size: 13px">
-                                    <span>연락처</span>
-                                </th>
-
-                                <td
-                                    style="padding:12px 0 12px 13px; border-top:1px solid #ececec; font-size:13px; vertical-align:top; font-size: 13px">
-                                    <span>{$business_contact_phone}</span>
-                                </td>
-
-                            </tr>
-
-                            <tr>
-
-                                <th
-                                    style="padding:12px 0 12px 13px; text-align:left; font-weight:normal; color:#757575; border-top:1px solid #ececec; font-size: 13px">
-                                    <span>주소</span>
-                                </th>
-
-                                <td
-                                    style="padding:12px 0 12px 13px; border-top:1px solid #ececec; font-size:13px; vertical-align:top;">
-                                    <span>{$business_address}</span>
-                                </td>
-
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-            </div>
-            위탁판매자 및 대표판매자 정보 -->
         </div>
         <!-- tab0 상품정보 -->
         <!-- tab1 리뷰 -->
         <div id="tab1" class="tab_content swiper-slide" data-hash="prd_bh">
-            <!--@import(/reviews/feed.html)-->
+            <!-- @import(/reviews/feed.html) -->
+            <div id="prdReview">
+                <div class="board">
+                    <!-- <ul class="btnArea type2">
+                        <li><a href="{$review_write}" class="btnSubmit">상품후기쓰기</a></li> 
+                        <li> <a href="{$review_list}" class="btnEm">이 상품 후기 모두보기</a></li> 
+                    </ul> -->
+                    <div module="product_review">
+                <!--
+                        $count = 12
+                        $product_name_cut = 30
+                        $subject_cut = 22
+                        $login_page_url = /member/login.html
+                        $deny_access_url = /index.html
+                    -->
+                        <section class="no_access">
+                            <a name="use_review"></a>
+                            <p class="noAccess {$deny_display|display}">글읽기 권한이 없습니다.</p>
+                            <div class="minor {$adult_display|display}">
+                                <p><span>19세 미만의 미성년자</span>는 출입을 금합니다.</p>
+                                <a class="btnBasic" href="/intro/board.html{$returnParam}">성인인증하기</a>
+                            </div>
+                        </section>
+                        <ul id="productBoardListWrap" class="board {$list_display|display}">
+                            <li id="review_{$no}" class="review_item">
+                                <div class="item">
+                                    <a href="{$link_board_detail}" class="item_anchor" >
+                                        <div class="user_info">
+                                                <img class="user_img" src="https://bvoat.shop/images/new_img/ico__11.png" onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'">
+                                                <p class="user_name" title="작성자">{$writer}</p>
+                                        </div>
+                                        <div class="thumbnail_info">
+                                            <div class="thumbnail" data-id="{$no}">
+                                                {$product_img}{$image_medium}<img src="{$img_src}" onerror="this.remove ? this.remove() : this.removeNode();" alt="" /></div>                            <p class="rate">{$point_count}</p>
+                                        </div>
+                                        <div class="summary_info">
+                                            <div class="vote_comment">
+                                                <span class="vote">
+                                                    {$vote}
+                                                </span>
+                                                <span class="comment">{$comment_count}</span>
+                                            </div>
+                                            <p class="summary" title="내용">{$content}</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li id="review_{$no}" class="review_item">
+                                <div class="item">
+                                    <a href="{$link_board_detail}" class="item_anchor" >
+                                        <div class="user_info">
+                                                <img class="user_img" src="https://bvoat.shop/images/new_img/ico__11.png" onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'">
+                                                <p class="user_name" title="작성자">{$writer}</p>
+                                        </div>
+                                        <div class="thumbnail_info">
+                                            <div class="thumbnail" data-id="{$no}">
+                                                {$product_img}{$image_medium}<img src="{$img_src}" onerror="this.remove ? this.remove() : this.removeNode();" alt="" /></div>                            <p class="rate">{$point_count}</p>
+                                        </div>
+                                        <div class="summary_info">
+                                            <div class="vote_comment">
+                                                <span class="vote">
+                                                    {$vote}
+                                                </span>
+                                                <span class="comment">{$comment_count}</span>
+                                            </div>
+                                            <p class="summary" title="내용">{$content}</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="productBoardPagenation" module="product_reviewpaging" class="paginate typeList">
+                        <p class="prev"><a href="{$param_before}" title="이전 페이지"></a></p>
+                        <ol>
+                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                        </ol>
+                        <p class="next"><a href="{$param_next}" title="다음 페이지"></a></p>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <!-- tab1 리뷰 -->
         <!-- tab2 Q&A -->
