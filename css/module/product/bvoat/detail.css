@@ -614,6 +614,16 @@
   width: 100%;
   padding: 0;
 }
+#productDetailBottom .detail_swiper_wrap #tab1 #prdReview {
+  background: #FAFAFE;
+}
+#productDetailBottom .detail_swiper_wrap #tab1 #prdReview .nodata {
+  margin: 20px auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #022CFF;
+  text-align: center;
+}
 #productDetailBottom .detail_swiper_wrap #tab1 #productBoardListWrap {
   display: flex;
   flex-flow: row wrap;
