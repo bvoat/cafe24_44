@@ -367,5 +367,30 @@ function removePagingArea(oTarget)
         $(this).children('p').children('img').first().remove();
     });
 });
+
+
+   //thumnail 한 개만 남기기
+    const thumnailChange = () => {
+   const thumbnail = document.querySelectorAll(".thumbnail");
+        thumbnail.forEach(box => {
+            const imgTagCount = box.childElementCount;
+            if(parseInt(imgTagCount) === 2){
+                const product_img = box.children[0];
+                product_img.remove();
+            }
+        })
+    };
+ //username 네이버 페이 구매자 면 익명의 보터로 변경
+    const userNameChange = () => {
+ const username = document.querySelectorAll(".user_name");
+        username.forEach(name => {
+            name.innerHTML == '네이버 페이 구매자' || name.innerHTML == '비보트' ? name.innerHTML = '익명의 보터' : null;
+        })
+    };
+    window.addEventListener("load", ()=>{
+        thumnailChange();
+        userNameChange();
+    })
+
 /* aos 초기화 */
 AOS.init();
