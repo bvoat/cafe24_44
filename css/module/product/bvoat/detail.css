@@ -629,6 +629,7 @@
 }
 #productDetailBottom .detail_swiper_wrap #tab1 #productBoardListWrap li.review_item .item {
   position: relative;
+  margin-bottom: 30px;
 }
 #productDetailBottom .detail_swiper_wrap #tab1 #productBoardListWrap li.review_item .item .item_anchor .user_info {
   display: flex;
