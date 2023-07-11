@@ -207,7 +207,7 @@
     const userNameChange = () => {
  const username = document.querySelectorAll(".user_name");
         username.forEach(name => {
-            name.innerHTML == '네이버 페이 구매자'? name.innerHTML = '익명의 보터' : null;
+            name.innerHTML == '네이버 페이 구매자' || name.innerHTML == '비보트' ? name.innerHTML = '익명의 보터' : null;
         })
     };
     window.addEventListener("load", ()=>{
