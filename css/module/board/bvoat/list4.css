@@ -36,6 +36,7 @@
 }
 #productBoardList #productBoardListWrap li.review_item {
   position: relative;
+  margin-bottom: 30px;
 }
 #productBoardList #productBoardListWrap li.review_item .item {
   position: relative;
