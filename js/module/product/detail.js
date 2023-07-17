@@ -44,17 +44,18 @@ const tab_txt = tab.map((node) => node.innerHTML);
 const tab_hash = tab.map((node) => node.dataset.hash);
 var detailTabSwiper = new Swiper("#productDetailBottom", {
   autoHeight: true,
-  observer: true,
-  observeParents: true,
-  slidesPerView: "auto",
+  slidesPerView: "1",
   centeredSlides: true,
-  spaceBetween: 22,
-  edgeSwipeThreshold: 25,
+  spaceBetween: 0.5,
+  edgeSwipeDetection: true,
+  edgeSwipeThreshold: 50,
+  maxBackfaceHiddenSlides: 5,
   // loop: true,
-  lazy: true,
+  // lazy: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
-  edgeSwipeDetection: true,
+  resistance: true,
+  resistanceRatio: 1,
   hashNavigation: {
     replaceState: true,
   },
@@ -277,7 +278,7 @@ const reciveTagDetail = (prd_no) => {
  
 /* 최종 함수 실행 */
 //리뷰 컨트롤
-buyRecordFrameControl();
+//buyRecordFrameControl();
 //크루 등급 마일리지 2배 변환
 crewValueControl(2);
 //공유 이벤트 클릭
