@@ -164,8 +164,12 @@
         <!-- tab0 상품정보 -->
         <!-- tab1 리뷰 -->
         <div id="tab1" class="tab_content swiper-slide" data-hash="prd_bh">
-            <!-- @import(/reviews/feed.html) -->
-            <div id="prdReview">
+            <script defer src="https://snippet.reviewaid.ai/latest/product.js"></script>
+            <div id="ReviewAid" style="display: none"></div>
+            <div id="review-aid-fake-product-root" style="display: none"></div>
+            <div id="review-aid-widget-root" class="ReviewAidV2"></div>
+            <!--@import(/reviews/feed.html)-->
+            <div id="prdReview" class="displaynone">
                 <div class="board">
                     <!-- <ul class="btnArea type2">
                         <li><a href="{$review_write}" class="btnSubmit">상품후기쓰기</a></li> 
