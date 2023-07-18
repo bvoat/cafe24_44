@@ -43,19 +43,10 @@ const tab = [...document.querySelectorAll(".tab")];
 const tab_txt = tab.map((node) => node.innerHTML);
 const tab_hash = tab.map((node) => node.dataset.hash);
 var detailTabSwiper = new Swiper("#productDetailBottom", {
-  //autoHeight: true,
-  //slidesPerView: "1",
-  //centeredSlides: true,
-  //spaceBetween: 0.5,
-  //edgeSwipeDetection: true,
-  //edgeSwipeThreshold: 50,
-  //maxBackfaceHiddenSlides: 5,
-  //loop: true,
-  //lazy: true,
-  //watchSlidesVisibility: true,
-  //watchSlidesProgress: true,
-  //resistance: true,
-  //resistanceRatio: 1,
+  autoHeight: true,
+  slidesPerView: "1",
+  centeredSlides: true,
+  spaceBetween: 0.5,
   allowTouchMove: false,
   hashNavigation: {
     replaceState: true,
