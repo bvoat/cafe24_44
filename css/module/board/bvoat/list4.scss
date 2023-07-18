@@ -8,6 +8,12 @@
 	--icon-cmt: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 17 15'%3E%3Cpath stroke='%2300F' stroke-width='1.2' d='M5.1 11.38v-.6H2.37c-.5 0-.95-.17-1.28-.46a1.32 1.32 0 0 1-.49-.99V2.05c0-.36.16-.72.49-1A2 2 0 0 1 2.37.6h11.95a2 2 0 0 1 1.29.45c.32.28.49.64.49 1v7.28c0 .35-.17.71-.5 1-.32.28-.78.45-1.28.45H8.73l-.16.13-3.18 2.57a.3.3 0 0 1-.22 0 .16.16 0 0 1-.06-.05H5.1v-2.05Z'/%3E%3Cpath fill='%2300F' d='M11.23 6.6a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-2.73 0a.75.75 0 1 0-.01-1.5.75.75 0 0 0 0 1.5Zm-2.75 0a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z'/%3E%3C/svg%3E");
 }
 
+//리뷰에이드 상단 헤더만큼 내림
+#review-aid-best-review-root {
+	margin-top: 82px;
+}
+
+
 #productBoardList {
 
 	//게시판 title (board_title_seq)
