@@ -17,6 +17,14 @@
   margin-top: 82px;
 }
 
+#review-aid-review-board-root > div > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(3) > div > p {
+  font-size: 12px !important;
+}
+
+#review-aid-review-board-root > div > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > div:nth-child(2) > div {
+  font-size: 14px !important;
+}
+
 #productBoardList #titleArea {
   width: 100%;
   max-width: 450px;
