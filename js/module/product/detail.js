@@ -51,7 +51,7 @@ var detailTabSwiper = new Swiper("#productDetailBottom", {
   // edgeSwipeThreshold: 50,
   // maxBackfaceHiddenSlides: 5,
   // loop: true,
-  lazy: true,
+  lazy: false,
   // watchSlidesVisibility: true,
   // watchSlidesProgress: true,
   // resistance: true,
