@@ -18,20 +18,21 @@
   overflow: hidden;
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
-  box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.1607843137);
 }
 #header_wrap #header_logo_section {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   max-width: 450px;
-  padding: 0 11px;
+  height: 60px;
+  padding: 0 26.3px;
 }
 #header_wrap #header_logo_section > .back_btn {
   display: block;
   width: 33%;
-  height: 40px;
+  height: 60px;
   background: none;
 }
 #header_wrap #header_logo_section > .back_btn button {
@@ -39,16 +40,11 @@
   height: 100%;
   background: none;
 }
-#header_wrap #header_logo_section > a {
-  display: flex;
-  justify-content: center;
-  width: 33%;
-}
 #header_wrap #header_logo_section > a .header_logo {
   display: block;
-  width: 73px;
-  height: 40px;
-  background: url("https://bvoatofficial.cafe24.com/bvtIMG/Bvoat_022CFF_Text_logo_trans_fit.png") no-repeat center;
+  width: 107.55px;
+  height: 26.78px;
+  background: url("https://bvoatofficial.cafe24.com/bvtIMG/logo/v2_logo_3x.png") no-repeat center;
   background-size: contain;
   text-indent: -9999px;
 }
@@ -65,51 +61,35 @@
 #header_wrap #header_logo_section .header_menu li {
   position: relative;
 }
+#header_wrap #header_logo_section .header_menu .header_wish {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 19.9px;
+}
+#header_wrap #header_logo_section .header_menu .header_wish > a {
+  position: relative;
+  display: block;
+  width: 28.64px;
+  height: 25.88px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27.085' height='24.626'%3E%3Cpath data-name='패스 1748' d='M24.609 2.475a7.6 7.6 0 0 0-9.848-.754l-1.156 1.141-.387-.387A7.6 7.6 0 0 0 2.474 13.219l11.084 11.054L24.609 13.22a7.6 7.6 0 0 0 0-10.746ZM14.415 12.528c1.4.983 3.292 2.79 4.609 3.717l-4.609 4.73Zm-10.2 0-.527-.527a5.874 5.874 0 0 1 8.307-8.308l.667.666v16.583l-8.021-8.019Zm19.172-.527-3.322 3.238c-.961-.676-2.037-1.754-3.4-2.711-.551-.386-1.557-1.307-2.249-1.791V4.474a6.1 6.1 0 0 1 .649-.781 6.411 6.411 0 0 1 .8-.655 5.875 5.875 0 0 1 7.528 8.963Z' fill='%23292929' stroke='%23292929' stroke-width='.5'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+  text-indent: -9999px;
+  fill: #003DD3;
+  color: #003DD3;
+}
 #header_wrap #header_logo_section .header_menu .header_search {
-  margin-right: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #header_wrap #header_logo_section .header_menu .header_search > button {
   position: relative;
   display: block;
-  width: 20px;
-  height: 20px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24.2' height='24.2'%3E%3Cg data-name='Icon feather-search' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath data-name='패스 1690' d='M20.365 10.683A9.683 9.683 0 1 1 10.683 1a9.683 9.683 0 0 1 9.683 9.683Z'/%3E%3Cpath data-name='패스 1691' d='m22.786 22.786-5.265-5.265'/%3E%3C/g%3E%3C/svg%3E") no-repeat center;
+  width: 25.75px;
+  height: 26.33px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26.835' height='27.328'%3E%3Cpath fill='%23003dd3' fill-rule='evenodd' stroke='%23003dd3' d='M12.874.5a12.367 12.367 0 0 1 9.116 20.731l3.978 3.97a.953.953 0 0 1-1.347 1.349l-4.026-4.015A12.371 12.371 0 1 1 12.874.5Zm0 1.906a10.468 10.468 0 1 0 10.467 10.467A10.479 10.479 0 0 0 12.874 2.406Z' data-name='Iconly/Light-Outline/Search'/%3E%3C/svg%3E") no-repeat center;
   background-size: contain;
   text-indent: -9999px;
-}
-#header_wrap #header_logo_section .header_menu .header_cart {
-  position: relative;
-  width: 25px;
-  height: 23px;
-}
-#header_wrap #header_logo_section .header_menu .header_cart a {
-  position: relative;
-  display: block;
-  width: 25px;
-  height: 23px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27.838' height='25.417'%3E%3Cg data-name='그룹 2020' transform='translate(1 1.234)' stroke='%23000'%3E%3Cpath data-name='선 2' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M0 0h3.243'/%3E%3Cpath data-name='선 263' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M7.703 15.811 3.243 0'/%3E%3Cpath data-name='선 264' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M7.703 15.811h13.379'/%3E%3Cpath data-name='선 265' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m25.542 4.46-4.46 11.352'/%3E%3Cpath data-name='선 266' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M25.541 4.46H4.865'/%3E%3Crect data-name='사각형 1123' width='3.886' height='3.685' rx='1.843' transform='translate(6.869 19.998)'/%3E%3Crect data-name='사각형 1124' width='3.886' height='3.685' rx='1.843' transform='translate(18.303 19.998)'/%3E%3C/g%3E%3C/svg%3E") no-repeat center;
-  background-size: contain;
-  text-indent: -9999px;
-}
-#header_wrap #header_logo_section .header_menu .header_cart .count {
-  position: absolute;
-  display: block;
-  width: 15px;
-  height: 15px;
-  background: #022CFF;
-  border-radius: 50%;
-  text-align: center;
-  top: -3px;
-  right: -7px;
-  z-index: 100;
-}
-#header_wrap #header_logo_section .header_menu .header_cart .count > em {
-  position: relative;
-  display: block;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ffffff;
-  text-indent: 0;
-  z-index: 100;
-  top: 1.5px;
 }/*# sourceMappingURL=header.css.map */

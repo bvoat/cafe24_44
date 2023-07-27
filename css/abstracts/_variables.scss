@@ -1,6 +1,6 @@
 // color
 
-$bvt-blue: #022CFF;
+$bvt-blue: #003DD3;
 $bvt-darkblue: #2B3DD3;
 $bvt-main-bg: #F5F6FA;
 $bvt-bg-blue: #F5F6FB;
@@ -23,7 +23,7 @@ $bvt-trans: #00000000;
 
 //border
 $bvt-input-border: 1px solid #C4C4C4;
-$bvt-btn-border: 1px solid #022CFF;
+$bvt-btn-border: 1px solid #003DD3;
 $bvt-btn-border-gray: 1px solid #E2E2E2;
 
 //shadow
@@ -34,11 +34,11 @@ $bvt-btn-shadow: 0px 3px 7px #70707027;
 
 //icon
 
-$bvt-logo: url("https://bvoatofficial.cafe24.com/bvtIMG/Bvoat_022CFF_Text_logo_trans_fit.png");
+$bvt-logo: url("https://bvoatofficial.cafe24.com/bvtIMG/logo/v2_logo_3x.png");
 
-$cart-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27.838' height='25.417'%3E%3Cg data-name='그룹 2020' transform='translate(1 1.234)' stroke='%23000'%3E%3Cpath data-name='선 2' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M0 0h3.243'/%3E%3Cpath data-name='선 263' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M7.703 15.811 3.243 0'/%3E%3Cpath data-name='선 264' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M7.703 15.811h13.379'/%3E%3Cpath data-name='선 265' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m25.542 4.46-4.46 11.352'/%3E%3Cpath data-name='선 266' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M25.541 4.46H4.865'/%3E%3Crect data-name='사각형 1123' width='3.886' height='3.685' rx='1.843' transform='translate(6.869 19.998)'/%3E%3Crect data-name='사각형 1124' width='3.886' height='3.685' rx='1.843' transform='translate(18.303 19.998)'/%3E%3C/g%3E%3C/svg%3E");
+$wish-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29.638' height='27.085'%3E%3Cpath fill='%232b3dd3' stroke='%232b3dd3' d='M26.741 2.896a8.182 8.182 0 0 0-10.609-.812l-1.245 1.229-.417-.417A8.184 8.184 0 0 0 2.896 14.47l11.94 11.908 11.9-11.906a8.186 8.186 0 0 0 0-11.575Zm-10.978 10.83c1.513 1.059 3.547 3.005 4.965 4l-4.965 5.1Zm-10.986 0-.568-.568a6.328 6.328 0 0 1 8.948-8.949l.718.718v17.864l-8.641-8.638Zm20.652-.568-3.579 3.488c-1.035-.728-2.194-1.89-3.666-2.92-.593-.416-1.677-1.408-2.422-1.929V5.051a6.551 6.551 0 0 1 .7-.842 6.891 6.891 0 0 1 .858-.706 6.328 6.328 0 0 1 8.109 9.655Z' data-name='패스 1513'/%3E%3C/svg%3E");
 
-$search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24.2' height='24.2'%3E%3Cg data-name='Icon feather-search' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath data-name='패스 1690' d='M20.365 10.683A9.683 9.683 0 1 1 10.683 1a9.683 9.683 0 0 1 9.683 9.683Z'/%3E%3Cpath data-name='패스 1691' d='m22.786 22.786-5.265-5.265'/%3E%3C/g%3E%3C/svg%3E");
+$search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26.835' height='27.328'%3E%3Cpath fill='%23003dd3' fill-rule='evenodd' stroke='%23003dd3' d='M12.874.5a12.367 12.367 0 0 1 9.116 20.731l3.978 3.97a.953.953 0 0 1-1.347 1.349l-4.026-4.015A12.371 12.371 0 1 1 12.874.5Zm0 1.906a10.468 10.468 0 1 0 10.467 10.467A10.479 10.479 0 0 0 12.874 2.406Z' data-name='Iconly/Light-Outline/Search'/%3E%3C/svg%3E");
 
 $off-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.582' height='7.194'%3E%3Cpath data-name='Icon ionic-ios-arrow-forward' d='M6.293 5.025 11.051.264a.9.9 0 0 1 1.27 0 .907.907 0 0 1 0 1.274L6.93 6.932a.9.9 0 0 1-1.24.026L.262 1.541A.9.9 0 1 1 1.532.268Z' fill='%23ababab'/%3E%3C/svg%3E");
 

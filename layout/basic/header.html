@@ -11,16 +11,19 @@
         </div>
         <a href="/" title="비보트 메인으로" target="_self"><span class="header_logo">비보트 Bvoat</span></a>
         <ul class="header_menu">
+
+            <li class="header_wish">
+                <a href="/myshop/wish_list.html" title="위시리스트">
+                <!-- <span class="count"><em>{$basket_count}</em></span> -->
+                </a>
+                <!-- <a href="/order/basket.html" title="장바구니">
+                    <span class="count"><em>{$basket_count}</em></span>
+                </a> -->
+            </li>
             <li class="header_search">
                 <button type="button" class="search_btn" title="상품 검색"
                     onclick="classToggle(document.querySelector('#searchModal'), 'displaynone')">검색</button>
             </li>
-            <li class="header_cart" module="Layout_orderBasketcount">
-                <a href="/order/basket.html" title="장바구니">
-                    <span class="count"><em>{$basket_count}</em></span>
-                </a>
-            </li>
         </ul>
     </section>
-    <!--@import(../nav/top_nav.html)-->
 </article>
