@@ -17,75 +17,101 @@
 #footer #footer_wrap {
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
+  color: #003DD3;
 }
-#footer #footer_wrap .company_contact {
-  order: 2;
+#footer #footer_wrap h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 19px;
 }
-#footer #footer_wrap .company_contact h4 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin-bottom: 21px;
-}
-#footer #footer_wrap .company_contact .company_app_down {
+#footer #footer_wrap .company_app_link {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
-  width: 235px;
-  height: auto;
-  margin-bottom: 14px;
+  justify-content: center;
+  width: 100%;
 }
-#footer #footer_wrap .company_contact .company_app_down a {
-  width: 114px;
-  height: 36px;
+#footer #footer_wrap .company_app_link li a {
+  display: block;
+  width: 131px;
+  height: 39px;
   text-indent: -9999px;
   overflow: hidden;
+  margin-right: 8px;
 }
-#footer #footer_wrap .company_contact .company_app_down .google_down {
-  background: url(/public/images/icon/icon-playstore.png) no-repeat center;
+#footer #footer_wrap .company_app_link .appStore .appstore_down {
+  background: url("https://bvoatofficial.cafe24.com/bvtIMG/icon/appStore.png") no-repeat center;
   background-size: contain;
 }
-#footer #footer_wrap .company_contact .company_app_down .appstore_down {
-  background: url(/public/images/icon/icon-appstore.png) no-repeat center;
+#footer #footer_wrap .company_app_link .googlePlay .google_down {
+  background: url("https://bvoatofficial.cafe24.com/bvtIMG/icon/googlePlay.png") no-repeat center;
   background-size: contain;
 }
-#footer #footer_wrap .company_contact p {
-  font-size: 1.2rem;
+#footer #footer_wrap .company_contact_link {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 32px;
 }
-#footer #footer_wrap .company_contact p > a:active, #footer #footer_wrap .company_contact p > a:hover, #footer #footer_wrap .company_contact p > a:focus {
-  text-decoration: underline;
+#footer #footer_wrap .company_contact_link li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 35px;
+  background-color: #ffffff;
+  color: #003DD3;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-right: 5px;
 }
 #footer #footer_wrap .company_info_link {
   width: auto;
   height: -moz-fit-content;
   height: fit-content;
   margin-bottom: 24px;
-  order: 1;
+  text-align: center;
 }
 #footer #footer_wrap .company_info_link li {
   display: inline-block;
   margin-right: 10px;
+  margin-top: 19px;
+}
+#footer #footer_wrap .company_info_link li a {
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
+  text-decoration: underline;
+  color: #003DD3;
   letter-spacing: -0.6px;
 }
+#footer #footer_wrap .company_info_link li p,
+#footer #footer_wrap .company_info_link li p > a {
+  font-size: 1.15rem;
+  text-decoration: none;
+}
 #footer #footer_wrap details {
-  order: 3;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   width: auto;
   height: auto;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
+  color: #292929;
+  text-align: center;
 }
 #footer #footer_wrap details summary {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #8E8E8E;
-  margin-bottom: 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #292929;
+  margin-bottom: 26px;
 }
 #footer #footer_wrap details summary .summary_marker_off {
   display: inline-block;
-  width: 17px;
-  height: 9px;
+  width: 12.71px;
+  height: 7.85px;
   margin-left: 5px;
-  background: url(/public/images/icon/icon-details-arrow.png) no-repeat center;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.711' height='7.849'%3E%3Cpath fill='%23292929' d='m1.494 0 4.862 4.851L11.218 0l1.493 1.493-6.355 6.356L0 1.493Z' data-name='Icon material-keyboard-arrow-right'/%3E%3C/svg%3E") no-repeat center;
   background-size: contain;
   transition: all 0.2s;
   text-indent: -9999px;
@@ -93,10 +119,10 @@
 }
 #footer #footer_wrap details summary .summary_marker_on {
   display: inline-block;
-  width: 17px;
-  height: 9px;
+  width: 12.71px;
+  height: 7.85px;
   margin-left: 5px;
-  background: url(/public/images/icon/icon-details-arrow-on.png) no-repeat center;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.711' height='7.849'%3E%3Cpath fill='%23292929' d='M11.217 7.849 6.355 2.998 1.493 7.849 0 6.356 6.355 0l6.356 6.356Z' data-name='Icon material-keyboard-arrow-right'/%3E%3C/svg%3E") no-repeat center;
   background-size: contain;
   transition: all 0.2s;
   text-indent: -9999px;
@@ -109,11 +135,6 @@
 #footer #footer_wrap details summary::-webkit-details-marker {
   content: "";
   display: none;
-}
-#footer #footer_wrap details .company_name::after {
-  display: inline-block;
-  content: "|";
-  font-size: 1.3rem;
 }
 #footer #footer_wrap details .company_addr {
   display: block;

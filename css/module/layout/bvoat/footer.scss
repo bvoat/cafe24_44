@@ -14,101 +14,136 @@
     #footer_wrap {
         display: flex;
         flex-flow: column nowrap;
+        align-items: center;
+        color: $bvt-blue;
 
-        .company_contact {
-            order: 2;
 
-            h4 {
-                font-size: 1.8rem;
-                font-weight: 400;
-                margin-bottom: 21px;
+        h4 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 19px;
+        }
+
+
+        .company_app_link {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            width: 100%;
+
+            li a {
+                display: block;
+                width: 131px;
+                height: 39px;
+                text-indent: -9999px;
+                overflow: hidden;
+                margin-right: 8px;
             }
 
-            .company_app_down {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-between;
-                width: 235px;
-                height: auto;
-                margin-bottom: 14px;
-
-                a {
-                    width: 114px;
-                    height: 36px;
-                    text-indent: -9999px;
-                    overflow: hidden;
-                }
-
-                .google_down {
-                    background: url(/public/images/icon/icon-playstore.png) no-repeat center;
-                    background-size: contain;
-                }
-
+            .appStore {
                 .appstore_down {
-                    background: url(/public/images/icon/icon-appstore.png) no-repeat center;
+                    background: url("https://bvoatofficial.cafe24.com/bvtIMG/icon/appStore.png") no-repeat center;
                     background-size: contain;
                 }
             }
 
-            p {
-                font-size: 1.2rem;
-
-                >a {
-
-                    &:active,
-                    &:hover,
-                    &:focus {
-                        text-decoration: underline;
-                    }
+            .googlePlay {
+                .google_down {
+                    background: url("https://bvoatofficial.cafe24.com/bvtIMG/icon/googlePlay.png") no-repeat center;
+                    background-size: contain;
                 }
             }
+
+
+
+
+        }
+
+        .company_contact_link {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            width: 100%;
+            margin-top: 32px;
+
+            li a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 110px;
+                height: 35px;
+                background-color: $bvt-white;
+                color: $bvt-blue;
+                font-weight: bold;
+                font-size: 1.3rem;
+                margin-right: 5px;
+            }
+
         }
 
         .company_info_link {
             width: auto;
             height: fit-content;
             margin-bottom: 24px;
-            order: 1;
+            text-align: center;
 
             li {
                 display: inline-block;
                 margin-right: 10px;
-                font-size: 1.4rem;
-                font-weight: 400;
-                letter-spacing: -0.6px;
+                margin-top: 19px;
+
+                a {
+                    font-size: 1.4rem;
+                    font-weight: normal;
+                    text-decoration: underline;
+                    color: $bvt-blue;
+                    letter-spacing: -0.6px;
+                }
+
+                p,
+                p>a {
+                    font-size: 1.15rem;
+                    text-decoration: none;
+                }
+
             }
         }
 
         details {
-            order: 3;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
             width: auto;
             height: auto;
-            font-size: 1.3rem;
+            font-size: 1.15rem;
+            color: $bvt-black;
+            text-align: center;
 
-            summary{
-                font-size: 1.3rem;
-                font-weight: 700;
-                color: $bvt-second-darkgray;
-                margin-bottom: 20px;
+            summary {
+                font-size: 1.25rem;
+                font-weight: bold;
+                color: $bvt-black;
+                margin-bottom: 26px;
 
 
-                .summary_marker_off{
+                .summary_marker_off {
                     display: inline-block;
-                    width: 17px;
-                    height: 9px;
+                    width: 12.71px;
+                    height: 7.85px;
                     margin-left: 5px;
-                    background: url(/public/images/icon/icon-details-arrow.png) no-repeat center;
+                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.711' height='7.849'%3E%3Cpath fill='%23292929' d='m1.494 0 4.862 4.851L11.218 0l1.493 1.493-6.355 6.356L0 1.493Z' data-name='Icon material-keyboard-arrow-right'/%3E%3C/svg%3E") no-repeat center;
                     background-size: contain;
                     transition: all 0.2s;
                     text-indent: -9999px;
                     overflow: hidden;
                 }
-                .summary_marker_on{
+
+                .summary_marker_on {
                     display: inline-block;
-                    width: 17px;
-                    height: 9px;
+                    width: 12.71px;
+                    height: 7.85px;
                     margin-left: 5px;
-                    background: url(/public/images/icon/icon-details-arrow-on.png) no-repeat center;
+                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.711' height='7.849'%3E%3Cpath fill='%23292929' d='M11.217 7.849 6.355 2.998 1.493 7.849 0 6.356 6.355 0l6.356 6.356Z' data-name='Icon material-keyboard-arrow-right'/%3E%3C/svg%3E") no-repeat center;
                     background-size: contain;
                     transition: all 0.2s;
                     text-indent: -9999px;
@@ -116,49 +151,42 @@
                 }
             }
 
-            summary::marker{
-                content: "  ";  
-                display:none;
+            summary::marker {
+                content: "  ";
+                display: none;
 
             }
+
             summary::-webkit-details-marker {
                 content: "";
-                display:none;
+                display: none;
             }
 
-
-            .company_name{
-
-                &::after{
-                    display: inline-block;
-                    content: "|";
-                    font-size: 1.3rem;
-                }
-            }
-
-            .company_addr{
+            .company_addr {
                 display: block;
             }
 
-            .company_regno{
+            .company_regno {
                 display: block;
             }
 
-            .company_network{
+            .company_network {
                 display: block;
             }
 
-            .company_cpo{
+            .company_cpo {
                 display: block;
             }
         }
-        details[open] summary::marker{
+
+        details[open] summary::marker {
             content: "";
-            display:none;
+            display: none;
         }
+
         details[open] summary::-webkit-details-marker {
             content: "";
-            display:none;
+            display: none;
         }
 
     }
