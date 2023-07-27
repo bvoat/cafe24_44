@@ -7,7 +7,7 @@
 #bvtHome {
     width: 100%;
     max-width: 450px;
-    margin: 81px auto;
+    margin: 0 auto;
 
     /* 인덱스 상단 배너 */
     #indexUserCnt {
@@ -16,25 +16,46 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 40px;
-        background: #FFF39B;
+        height: 73px;
+        background: $bvt-blue;
+        margin-top: 60px;
 
         #joinbanner {
             border: 0;
-            font-size: 1.5rem;
-            font-weight: 300;
-            color: $bvt-blue;
+            color: $bvt-white;
+            text-align: center;
 
-            span {
-                position: relative;
-                display: inline-block;
-                top: 1px;
+            p {
+                font-size: 1.4rem;
+                font-weight: normal;
+                line-height: 2.2rem;
             }
 
             em {
-                font-weight: 600;
+                font-weight: bold;
+            }
+
+            .banner_text {
+                font-size: 1.8rem;
+
+                a {
+                    color: $bvt-white;
+
+                    &::after {
+                        display: inline-block;
+                        content: "";
+                        width: 6.78px;
+                        height: 11.87px;
+                        margin-left: 14px;
+                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.343' height='12.433'%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-width='.5' d='m4.985 6.185-4.49 4.487a.849.849 0 0 0 1.2 1.2l5.09-5.087a.846.846 0 0 0 .025-1.169L1.702.497a.849.849 0 1 0-1.2 1.2Z' data-name='Icon ionic-ios-arrow-back'/%3E%3C/svg%3E");
+                        ;
+                    }
+                }
+
+
             }
         }
+
 
     }
 
