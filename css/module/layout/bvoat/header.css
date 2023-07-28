@@ -16,8 +16,7 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
+  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
 }
 #header_wrap #header_logo_section {
   display: flex;
@@ -73,7 +72,7 @@
   display: block;
   width: 28.64px;
   height: 25.88px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27.085' height='24.626'%3E%3Cpath data-name='패스 1748' d='M24.609 2.475a7.6 7.6 0 0 0-9.848-.754l-1.156 1.141-.387-.387A7.6 7.6 0 0 0 2.474 13.219l11.084 11.054L24.609 13.22a7.6 7.6 0 0 0 0-10.746ZM14.415 12.528c1.4.983 3.292 2.79 4.609 3.717l-4.609 4.73Zm-10.2 0-.527-.527a5.874 5.874 0 0 1 8.307-8.308l.667.666v16.583l-8.021-8.019Zm19.172-.527-3.322 3.238c-.961-.676-2.037-1.754-3.4-2.711-.551-.386-1.557-1.307-2.249-1.791V4.474a6.1 6.1 0 0 1 .649-.781 6.411 6.411 0 0 1 .8-.655 5.875 5.875 0 0 1 7.528 8.963Z' fill='%23292929' stroke='%23292929' stroke-width='.5'/%3E%3C/svg%3E") no-repeat center;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29.638' height='27.085'%3E%3Cpath fill='%232b3dd3' stroke='%232b3dd3' d='M26.741 2.896a8.182 8.182 0 0 0-10.609-.812l-1.245 1.229-.417-.417A8.184 8.184 0 0 0 2.896 14.47l11.94 11.908 11.9-11.906a8.186 8.186 0 0 0 0-11.575Zm-10.978 10.83c1.513 1.059 3.547 3.005 4.965 4l-4.965 5.1Zm-10.986 0-.568-.568a6.328 6.328 0 0 1 8.948-8.949l.718.718v17.864l-8.641-8.638Zm20.652-.568-3.579 3.488c-1.035-.728-2.194-1.89-3.666-2.92-.593-.416-1.677-1.408-2.422-1.929V5.051a6.551 6.551 0 0 1 .7-.842 6.891 6.891 0 0 1 .858-.706 6.328 6.328 0 0 1 8.109 9.655Z' data-name='패스 1513'/%3E%3C/svg%3E") no-repeat center;
   background-size: contain;
   text-indent: -9999px;
   fill: #003DD3;

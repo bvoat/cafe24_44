@@ -22,7 +22,7 @@
 }
 #bottom_nav #bottom_nav_wrap .bottom_nav_list {
   width: 100%;
-  height: 64px;
+  height: 60px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
@@ -30,7 +30,7 @@
 }
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li {
   width: calc((100% - 20px) / 5);
-  height: 64px;
+  height: 57px;
   cursor: pointer;
 }
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu {
@@ -45,39 +45,82 @@
   font-size: 1.1rem;
   font-weight: 700;
 }
-#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .nav_icon path {
-  width: -moz-fit-content;
-  width: fit-content;
-  -o-object-fit: contain;
-     object-fit: contain;
-  fill: #ABABAB;
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .store_icon::before {
+  display: block;
+  width: 23.75px;
+  height: 25px;
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23.75' height='25'%3E%3Cg data-name='Iconly/Bulk/Home'%3E%3Cpath fill='%23707070' d='M8.3 23.478v-3.834a1.773 1.773 0 0 1 1.768-1.767h3.593a1.773 1.773 0 0 1 1.78 1.767v3.822A1.539 1.539 0 0 0 16.979 25h2.451a4.325 4.325 0 0 0 3.054-1.249 4.263 4.263 0 0 0 1.266-3.029V9.832a3.091 3.091 0 0 0-1.119-2.378L14.3.843a3.894 3.894 0 0 0-4.943.089L1.209 7.454A3.093 3.093 0 0 0 0 9.832v10.879A4.3 4.3 0 0 0 4.32 25h2.4a1.539 1.539 0 0 0 1.091-.442 1.517 1.517 0 0 0 .453-1.08Z' data-name='패스 2323'/%3E%3C/g%3E%3C/svg%3E");
 }
-#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .feed_icon {
-  width: 26px;
-  height: 26px;
-}
-#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .cate_icon {
-  width: 26px;
-  height: 26px;
-}
-#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .store_icon {
-  width: 28px;
-  height: 26px;
-}
-#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .like_icon {
-  width: 29px;
-  height: 26px;
-}
-#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .myp_icon {
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .category_icon::before {
+  display: block;
   width: 25px;
-  height: 26px;
+  height: 25px;
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25'%3E%3Cg data-name='Iconly/Bulk/Discovery'%3E%3Cpath fill='%23ababab' d='M25 12.5A12.5 12.5 0 1 1 12.5 0 12.5 12.5 0 0 1 25 12.5' opacity='.4'/%3E%3Cpath fill='%23707070' d='m17.33 8.381-2.025 6.4a.814.814 0 0 1-.55.551l-6.375 2a.56.56 0 0 1-.7-.7l2-6.412a.835.835 0 0 1 .55-.55l6.4-2a.561.561 0 0 1 .7.712'/%3E%3C/g%3E%3C/svg%3E");
+}
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .cart_icon {
+  position: relative;
+}
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .cart_icon .count {
+  position: absolute;
+  top: -6px;
+  right: -14.5px;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #003DD3;
+  border: 2.5px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+}
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .cart_icon::before {
+  display: block;
+  width: 25.53px;
+  height: 25px;
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25.532' height='25'%3E%3Cg data-name='Iconly/Bulk/Buy'%3E%3Cpath fill='%23ababab' d='M6.927 21.135a1.933 1.933 0 1 1-1.939 1.939 1.935 1.935 0 0 1 1.939-1.939Zm14.35 0a1.933 1.933 0 1 1-1.939 1.939 1.935 1.935 0 0 1 1.94-1.939Z' opacity='.4'/%3E%3Cpath fill='%23707070' d='m.993 0 .13.011L4.166.47a.963.963 0 0 1 .791.867L5.2 4.195a.779.779 0 0 0 .778.716H23.2a2.17 2.17 0 0 1 1.8.855 2.713 2.713 0 0 1 .485 2.193l-1.212 8.368a3.255 3.255 0 0 1-3.227 2.794H7.131a3.251 3.251 0 0 1-3.24-2.984L2.718 2.23.792 1.9A.96.96 0 0 1 .014.8.975.975 0 0 1 1.123.011Zm18.014 9.629h-3.533a.957.957 0 0 0 0 1.913h3.533a.957.957 0 0 0 0-1.913Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu .mypage_icon::before {
+  display: block;
+  width: 19.99px;
+  height: 25px;
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19.993' height='25'%3E%3Cg data-name='Iconly/Bulk/Profile'%3E%3Cpath fill='%23707070' d='M10 16.469c-5.391 0-10 .85-10 4.25S4.576 25 10 25c5.391 0 10-.849 10-4.25s-4.575-4.281-10-4.281'/%3E%3Cpath fill='%23ababab' d='M9.996 13.23a6.615 6.615 0 1 0-6.62-6.615 6.591 6.591 0 0 0 6.62 6.615' opacity='.4'/%3E%3C/g%3E%3C/svg%3E");
 }
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottom_menu span {
   color: #ABABAB;
 }
-#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottomactive .nav_icon path {
-  fill: #022CFF;
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottomactive .store_icon::before {
+  display: block;
+  width: 23.75px;
+  height: 25px;
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23.75' height='25'%3E%3Cg data-name='Iconly/Bulk/Home'%3E%3Cpath fill='%23003dd3' d='M8.3 23.478v-3.834a1.773 1.773 0 0 1 1.768-1.767h3.593a1.773 1.773 0 0 1 1.78 1.767v3.822A1.539 1.539 0 0 0 16.979 25h2.451a4.325 4.325 0 0 0 3.054-1.249 4.263 4.263 0 0 0 1.266-3.029V9.832a3.091 3.091 0 0 0-1.119-2.378L14.3.843a3.894 3.894 0 0 0-4.943.089L1.209 7.454A3.093 3.093 0 0 0 0 9.832v10.879A4.3 4.3 0 0 0 4.32 25h2.4a1.539 1.539 0 0 0 1.091-.442 1.517 1.517 0 0 0 .453-1.08Z' data-name='패스 2323'/%3E%3C/g%3E%3C/svg%3E");
+}
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottomactive .category_icon::before {
+  display: block;
+  width: 25px;
+  height: 25px;
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25'%3E%3Cg fill='%23003dd3' data-name='Iconly/Bulk/Discovery'%3E%3Cpath d='M25 12.5A12.5 12.5 0 1 1 12.5 0 12.5 12.5 0 0 1 25 12.5' opacity='.4'/%3E%3Cpath d='m17.33 8.381-2.025 6.4a.814.814 0 0 1-.55.551l-6.375 2a.56.56 0 0 1-.7-.7l2-6.412a.835.835 0 0 1 .55-.55l6.4-2a.561.561 0 0 1 .7.712'/%3E%3C/g%3E%3C/svg%3E");
+}
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottomactive .cart_icon::before {
+  display: block;
+  width: 25.53px;
+  height: 25px;
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25.532' height='25'%3E%3Cg fill='%23003dd3' data-name='Iconly/Bulk/Buy'%3E%3Cpath d='M6.927 21.135a1.933 1.933 0 1 1-1.939 1.939 1.935 1.935 0 0 1 1.939-1.939Zm14.35 0a1.933 1.933 0 1 1-1.939 1.939 1.935 1.935 0 0 1 1.94-1.939Z' opacity='.4'/%3E%3Cpath d='m.993 0 .13.011L4.166.47a.963.963 0 0 1 .791.867L5.2 4.195a.779.779 0 0 0 .778.716H23.2a2.17 2.17 0 0 1 1.8.855 2.713 2.713 0 0 1 .485 2.193l-1.212 8.368a3.255 3.255 0 0 1-3.227 2.794H7.131a3.251 3.251 0 0 1-3.24-2.984L2.718 2.23.792 1.9A.96.96 0 0 1 .014.8.975.975 0 0 1 1.123.011Zm18.014 9.629h-3.533a.957.957 0 0 0 0 1.913h3.533a.957.957 0 0 0 0-1.913Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+#bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottomactive .mypage_icon::before {
+  display: block;
+  width: 19.99px;
+  height: 25px;
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19.993' height='25'%3E%3Cg fill='%23003dd3' data-name='Iconly/Bulk/Profile'%3E%3Cpath d='M10 16.469c-5.391 0-10 .85-10 4.25S4.576 25 10 25c5.391 0 10-.849 10-4.25s-4.575-4.281-10-4.281'/%3E%3Cpath d='M9.996 13.23a6.615 6.615 0 1 0-6.62-6.615 6.591 6.591 0 0 0 6.62 6.615' opacity='.4'/%3E%3C/g%3E%3C/svg%3E");
 }
 #bottom_nav #bottom_nav_wrap .bottom_nav_list li .bottomactive span {
-  color: #022CFF;
+  color: #003DD3;
 }/*# sourceMappingURL=bottom_nav.css.map */

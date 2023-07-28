@@ -9,8 +9,8 @@
           document.querySelector(".bottom_category").classList.add("bottomactive")
         } else if (page_path === '/' || page_path.includes("product/list") || page_path.includes("product/detail")){
           document.querySelector(".bottom_store").classList.add("bottomactive")
-        } else if (page_path.includes("myshop/wish_list")){
-          document.querySelector(".bottom_like").classList.add("bottomactive")
+        } else if (page_path.includes("/order/basket")){
+          document.querySelector(".bottom_cart").classList.add("bottomactive")
         } else if (page_path.includes("join") || page_path.includes("myshop/index") || page_path.includes("login")){
           document.querySelector(".bottom_user").classList.add("bottomactive")
         } else {
