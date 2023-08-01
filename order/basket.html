@@ -3,17 +3,12 @@
 <article id="Basket" module="Order_BasketPackage">
     <!--@css(/layout/basic/css/ec-base-layer.css)-->
     <section id="BasketTitle">
-        <h1 class="displaynone">좋아요 누른 상품</h1>
-        <h1>🛒 가치소비 장바구니</h1>
-        <h2>더 나은 세상을 향한 선택, 소비는 투표다!</h2>
+        <h1 class="displaynone">장바구니</h1>
+        <h1>장바구니</h1>
     </section>
 
     <section id="BasketSection" module="Order_BasketPackage">
-        <div class="basket_count" module="Order_TabInfo">
-            <p>장바구니 상품 {$basket_count}개</p>
-            <button id="product_select_all" class="prd_select_btn" data-status="off">전체선택</button>
 
-        </div>
         <!-- empty -->
         <div class="empty" module="Order_Empty">
             <span class="order_list_check">🛒 </span>
@@ -26,29 +21,16 @@
             <section class="boardList" module="Order_NormNormal">
                 <ul class="basket_list" module="Order_list">
                     <li class="basket_item">
-                        <div class="item_control">
-                            <input type="checkbox" id="{$chk_id}" name="{$chk_name}" />
-                            <p>
-                                <a href="javascript:;" onclick="{$action_wish_item}" class="wish_btn">관심상품 등록</a>
-                                <a href="javascript:;" onclick="{$action_move_item}" class="del_btn">삭제</a>
-                            </p>
-                        </div>
                         <ul class="item_desc">
                             <li class="item_img">
-                                <p class="thumb"><a href="/product/detail.html{$param}"><img src="{$img}"
+                                <p class="thumb"><input type="checkbox" id="{$chk_id}" name="{$chk_name}" /><a href="/product/detail.html{$param}"><img src="{$img}"
                                             onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';"
                                             alt="{$name_alt}" /></a></p>
-                                <a href="javascript:;" class="order_btn" onclick="{$action_buy_item}">주문하기</a>
                             </li>
                             <li class="item_info">
                                 <p class="item_name"><a href="/product/detail.html{$param}">{$name}</a></p>
-                                <p class="option" module="Order_optionAll">
-                                    {$option_str}
-                                    <span class="{$qty_display|display}">({$qty}개)</span>
-                                </p>
                                 <div class="price_list">
                                     <p class="{$discount} display_product">
-                                        <span>판매가 : </span>
                                         <strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong>
                                     <p class="{$product_price_display|display}">
                                         {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p>
@@ -61,7 +43,9 @@
                                     </p>
                                     </p>
                                 </div>
-                                <p class="mileage">마일리지 : {$mileage}</p>
+                                <div class="delv_price">배송비 :
+                                    <span class="{$delv_price_display|display}">{$delv_price_front_head}{$delv_price_front}{$delv_price_front_tail}<span class="{$delv_ref_display|display}">{$delv_price_back_head}{$delv_price_back}{$delv_price_back_tail}</span></span> [{$delv_type}] / 기본배송 <span class="{$oversea_able_display|display}">(해외배송가능)</span>
+</div>
                                 <div class="quantity">
                                     <a href="javascript:;" class="quan_down" onclick="{$out_shortcut}">감소</a>
                                     {$form.quantity} <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
@@ -69,40 +53,52 @@
                                     </a>
 
                                 </div>
-                                <div class="total">
-                                    <span>합계 </span>
-                                    <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}</strong>
-                                    <div class="{$sum_price_display|display}">
-                                        {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}</div>
-                                </div>
+
                                 </p>
                             </li>
                         </ul>
+                        <div class="item_option" module="Order_optionAll">
+                            {$option_str}
+                            <span class="{$qty_display|display}">({$qty}개)</span><a href="#none" class="btnBasic {$option_change_display|display}" onclick="{$action_option_change}">옵션변경</a>
+                            <!-- 참고 : 옵션변경 레이어 -->
+                        <div class="layerOptionModify" id="{$option_modify_layer_id}">
+                            <ul module="Order_optionList">
+                                <li><span>{$option_name}</span>{$form.option_value}</li>
+                                <li><span>{$option_name}</span>{$form.option_value}</li>
+                            </ul>
+                            <ul module="Order_optionAddList">
+                                <li><span>{$option_name}</span> {$form.option_value}</li>
+                                <li><span>{$option_name}</span> {$form.option_value}</li>
+                            </ul>
+                            <div class="option_btn">
+                                <button class="btnBasic modify_btn" onclick="{$action_option_modify}">변경</button>      
+                                <button class="btnNormal cancle_btn" onclick="$('.layerOptionModify').hide();">취소</button>
+                            </div>
+                        </div><!-- //참고 -->
+                    </div>
+                    <div class="total_price_each">
+                        <i>합계 :</i>
+                        <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}<i>원</i></strong>
+                        <div class="{$sum_price_display|display}">
+                            {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail<i>원</i></div>
+                    </div>
+                        <div class="item_control">
+                                <a href="javascript:;" onclick="{$action_move_item}" class="del_btn">삭제</a>
+                                <a href="javascript:;" onclick="{$action_wish_item}" class="wish_btn">찜 목록 추가</a>
+                                <a href="javascript:;" class="order_btn" onclick="{$action_buy_item}">주문하기</a>
+                        </div>
                     </li>
                     <li class="basket_item">
-                        <div class="item_control">
-                            <input type="checkbox" id="{$chk_id}" name="{$chk_name}" />
-                            <p>
-                                <a href="javascript:;" onclick="{$action_wish_item}" class="wish_btn">관심상품 등록</a>
-                                <a href="javascript:;" onclick="{$action_move_item}" class="del_btn">삭제</a>
-                            </p>
-                        </div>
                         <ul class="item_desc">
                             <li class="item_img">
-                                <p class="thumb"><a href="/product/detail.html{$param}"><img src="{$img}"
+                                <p class="thumb"><input type="checkbox" id="{$chk_id}" name="{$chk_name}" /><a href="/product/detail.html{$param}"><img src="{$img}"
                                             onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';"
                                             alt="{$name_alt}" /></a></p>
-                                <a href="javascript:;" class="order_btn" onclick="{$action_buy_item}">주문하기</a>
                             </li>
                             <li class="item_info">
                                 <p class="item_name"><a href="/product/detail.html{$param}">{$name}</a></p>
-                                <p class="option" module="Order_optionAll">
-                                    {$option_str}
-                                    <span class="{$qty_display|display}">({$qty}개)</span>
-                                </p>
                                 <div class="price_list">
                                     <p class="{$discount} display_product">
-                                        <span>판매가 : </span>
                                         <strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong>
                                     <p class="{$product_price_display|display}">
                                         {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p>
@@ -115,7 +111,9 @@
                                     </p>
                                     </p>
                                 </div>
-                                <p class="mileage">마일리지 : {$mileage}</p>
+                                <div class="delv_price">배송비 :
+                                    <span class="{$delv_price_display|display}">{$delv_price_front_head}{$delv_price_front}{$delv_price_front_tail}<span class="{$delv_ref_display|display}">{$delv_price_back_head}{$delv_price_back}{$delv_price_back_tail}</span></span> [{$delv_type}] / 기본배송 <span class="{$oversea_able_display|display}">(해외배송가능)</span>
+</div>
                                 <div class="quantity">
                                     <a href="javascript:;" class="quan_down" onclick="{$out_shortcut}">감소</a>
                                     {$form.quantity} <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
@@ -123,15 +121,40 @@
                                     </a>
 
                                 </div>
-                                <div class="total">
-                                    <span>합계 </span>
-                                    <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}</strong>
-                                    <div class="{$sum_price_display|display}">
-                                        {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}</div>
-                                </div>
+
                                 </p>
                             </li>
                         </ul>
+                        <div class="item_option" module="Order_optionAll">
+                            {$option_str}
+                            <span class="{$qty_display|display}">({$qty}개)</span><a href="#none" class="btnBasic {$option_change_display|display}" onclick="{$action_option_change}">옵션변경</a>
+                            <!-- 참고 : 옵션변경 레이어 -->
+                        <div class="layerOptionModify" id="{$option_modify_layer_id}">
+                            <ul module="Order_optionList">
+                                <li><span>{$option_name}</span>{$form.option_value}</li>
+                                <li><span>{$option_name}</span>{$form.option_value}</li>
+                            </ul>
+                            <ul module="Order_optionAddList">
+                                <li><span>{$option_name}</span> {$form.option_value}</li>
+                                <li><span>{$option_name}</span> {$form.option_value}</li>
+                            </ul>
+                            <div class="option_btn">
+                                <button class="btnBasic modify_btn" onclick="{$action_option_modify}">변경</button>      
+                                <button class="btnNormal cancle_btn" onclick="$('.layerOptionModify').hide();">취소</button>
+                            </div>
+                        </div><!-- //참고 -->
+                    </div>
+                    <div class="total_price_each">
+                        <i>합계 :</i>
+                        <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}<i>원</i></strong>
+                        <div class="{$sum_price_display|display}">
+                            {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}<i>원</i></div>
+                    </div>
+                        <div class="item_control">
+                                <a href="javascript:;" onclick="{$action_move_item}" class="del_btn">삭제</a>
+                                <a href="javascript:;" onclick="{$action_wish_item}" class="wish_btn">찜 목록 추가</a>
+                                <a href="javascript:;" class="order_btn" onclick="{$action_buy_item}">주문하기</a>
+                        </div>
                     </li>
                 </ul>
             </section>
@@ -139,37 +162,19 @@
             <section class="basket_list" module="Order_SuppNormal">
                 <ul module="Order_list">
                     <li class="basket_item">
-                        <div class="item_control">
-                            <input type="checkbox" id="{$chk_id}" name="{$chk_name}" />
-                            <p>
-                                <a href="javascript:;" onclick="{$action_wish_item}" class="wish_btn">관심상품 등록</a>
-                                <a href="javascript:;" onclick="{$action_move_item}" class="del_btn">삭제</a>
-                            </p>
-                        </div>
                         <ul class="item_desc">
                             <li class="item_img">
-                                <p class="thumb"><a href="/product/detail.html{$param}"><img src="{$img}"
+                                <p class="thumb"><input type="checkbox" id="{$chk_id}" name="{$chk_name}" /><a href="/product/detail.html{$param}"><img src="{$img}"
                                             onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';"
                                             alt="{$name_alt}" /></a></p>
-                                <a href="javascript:;" class="order_btn" onclick="{$action_buy_item}">주문하기</a>
                             </li>
                             <li class="item_info">
                                 <p class="item_name"><a href="/product/detail.html{$param}">{$name}</a></p>
-                                <p class="option" module="Order_optionAll">
-                                    {$option_str}
-                                    <span class="{$qty_display|display}">({$qty}개)</span>
-                                </p>
                                 <div class="price_list">
                                     <p class="{$discount} display_product">
-                                        <span>판매가 : </span>
                                         <strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong>
                                     <p class="{$product_price_display|display}">
                                         {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p>
-                                    </p>
-                                    <p class="display_product">
-                                        <span>배송비 : </span>
-                                        <strong>{$delv_price_front_head}{$delv_price_front}{$delv_price_front_tail}</strong>
-                                        <strong>[{$delv_type}] / 기본배송</strong>
                                     </p>
                                     <p class="{$product_sale_price_display|display} display_discount">
                                         <span>할인가 : </span>
@@ -179,7 +184,9 @@
                                     </p>
                                     </p>
                                 </div>
-                                <p class="mileage">마일리지 : {$mileage}</p>
+                                <div class="delv_price">배송비 :
+                                    <span class="{$delv_price_display|display}">{$delv_price_front_head}{$delv_price_front}{$delv_price_front_tail}<span class="{$delv_ref_display|display}">{$delv_price_back_head}{$delv_price_back}{$delv_price_back_tail}</span></span> [{$delv_type}] / 기본배송 <span class="{$oversea_able_display|display}">(해외배송가능)</span>
+</div>
                                 <div class="quantity">
                                     <a href="javascript:;" class="quan_down" onclick="{$out_shortcut}">감소</a>
                                     {$form.quantity} <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
@@ -187,48 +194,55 @@
                                     </a>
 
                                 </div>
-                                <div class="total">
-                                    <span>합계 </span>
-                                    <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}</strong>
-                                    <div class="{$sum_price_display|display}">
-                                        {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}</div>
-                                </div>
+
                                 </p>
                             </li>
                         </ul>
+                        <div class="item_option" module="Order_optionAll">
+                            {$option_str}
+                            <span class="{$qty_display|display}">({$qty}개)</span><a href="#none" class="btnBasic {$option_change_display|display}" onclick="{$action_option_change}">옵션변경</a>
+                            <!-- 참고 : 옵션변경 레이어 -->
+                        <div class="layerOptionModify" id="{$option_modify_layer_id}">
+                            <ul module="Order_optionList">
+                                <li><span>{$option_name}</span>{$form.option_value}</li>
+                                <li><span>{$option_name}</span>{$form.option_value}</li>
+                            </ul>
+                            <ul module="Order_optionAddList">
+                                <li><span>{$option_name}</span> {$form.option_value}</li>
+                                <li><span>{$option_name}</span> {$form.option_value}</li>
+                            </ul>
+                            <div class="option_btn">
+                                <button class="btnBasic modify_btn" onclick="{$action_option_modify}">변경</button>      
+                                <button class="btnNormal cancle_btn" onclick="$('.layerOptionModify').hide();">취소</button>
+                            </div>
+                        </div><!-- //참고 -->
+                    </div>
+                    <div class="total_price_each">
+                        <i>합계 :</i>
+                        <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}<i>원</i></strong>
+                        <div class="{$sum_price_display|display}">
+                            {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}<i>원</i></div>
+                    </div>
+                        <div class="item_control">
+                                <a href="javascript:;" onclick="{$action_move_item}" class="del_btn">삭제</a>
+                                <a href="javascript:;" onclick="{$action_wish_item}" class="wish_btn">찜 목록 추가</a>
+                                <a href="javascript:;" class="order_btn" onclick="{$action_buy_item}">주문하기</a>
+                        </div>
                     </li>
                     <li class="basket_item">
-                        <div class="item_control">
-                            <input type="checkbox" id="{$chk_id}" name="{$chk_name}" />
-                            <p>
-                                <a href="javascript:;" onclick="{$action_wish_item}" class="wish_btn">관심상품 등록</a>
-                                <a href="javascript:;" onclick="{$action_move_item}" class="del_btn">삭제</a>
-                            </p>
-                        </div>
                         <ul class="item_desc">
                             <li class="item_img">
-                                <p class="thumb"><a href="/product/detail.html{$param}"><img src="{$img}"
+                                <p class="thumb"><input type="checkbox" id="{$chk_id}" name="{$chk_name}" /><a href="/product/detail.html{$param}"><img src="{$img}"
                                             onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';"
                                             alt="{$name_alt}" /></a></p>
-                                <a href="javascript:;" class="order_btn" onclick="{$action_buy_item}">주문하기</a>
                             </li>
                             <li class="item_info">
                                 <p class="item_name"><a href="/product/detail.html{$param}">{$name}</a></p>
-                                <p class="option" module="Order_optionAll">
-                                    {$option_str}
-                                    <span class="{$qty_display|display}">({$qty}개)</span>
-                                </p>
                                 <div class="price_list">
                                     <p class="{$discount} display_product">
-                                        <span>판매가 : </span>
                                         <strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong>
                                     <p class="{$product_price_display|display}">
                                         {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p>
-                                    </p>
-                                    <p class="display_product">
-                                        <span>배송비 : </span>
-                                        <strong>{$delv_price_front_head}{$delv_price_front}{$delv_price_front_tail}</strong>
-                                        <strong>[{$delv_type}] / 기본배송</strong>
                                     </p>
                                     <p class="{$product_sale_price_display|display} display_discount">
                                         <span>할인가 : </span>
@@ -238,7 +252,9 @@
                                     </p>
                                     </p>
                                 </div>
-                                <p class="mileage">마일리지 : {$mileage}</p>
+                                <div class="delv_price">배송비 :
+                                    <span class="{$delv_price_display|display}">{$delv_price_front_head}{$delv_price_front}{$delv_price_front_tail}<span class="{$delv_ref_display|display}">{$delv_price_back_head}{$delv_price_back}{$delv_price_back_tail}</span></span> [{$delv_type}] / 기본배송 <span class="{$oversea_able_display|display}">(해외배송가능)</span>
+</div>
                                 <div class="quantity">
                                     <a href="javascript:;" class="quan_down" onclick="{$out_shortcut}">감소</a>
                                     {$form.quantity} <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
@@ -246,15 +262,40 @@
                                     </a>
 
                                 </div>
-                                <div class="total">
-                                    <span>합계 </span>
-                                    <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}</strong>
-                                    <div class="{$sum_price_display|display}">
-                                        {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}</div>
-                                </div>
+
                                 </p>
                             </li>
                         </ul>
+                        <div class="item_option" module="Order_optionAll">
+                            {$option_str}
+                            <span class="{$qty_display|display}">({$qty}개)</span><a href="#none" class="btnBasic {$option_change_display|display}" onclick="{$action_option_change}">옵션변경</a>
+                            <!-- 참고 : 옵션변경 레이어 -->
+                        <div class="layerOptionModify" id="{$option_modify_layer_id}">
+                            <ul module="Order_optionList">
+                                <li><span>{$option_name}</span>{$form.option_value}</li>
+                                <li><span>{$option_name}</span>{$form.option_value}</li>
+                            </ul>
+                            <ul module="Order_optionAddList">
+                                <li><span>{$option_name}</span> {$form.option_value}</li>
+                                <li><span>{$option_name}</span> {$form.option_value}</li>
+                            </ul>
+                            <div class="option_btn">
+                                <button class="btnBasic modify_btn" onclick="{$action_option_modify}">변경</button>      
+                                <button class="btnNormal cancle_btn" onclick="$('.layerOptionModify').hide();">취소</button>
+                            </div>
+                        </div><!-- //참고 -->
+                    </div>
+                    <div class="total_price_each">
+                        <i>합계 :</i>
+                        <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}<i>원</i></strong>
+                        <div class="{$sum_price_display|display}">
+                            {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}<i>원</i></div>
+                    </div>
+                        <div class="item_control">
+                                <a href="javascript:;" onclick="{$action_move_item}" class="del_btn">삭제</a>
+                                <a href="javascript:;" onclick="{$action_wish_item}" class="wish_btn">찜 목록 추가</a>
+                                <a href="javascript:;" class="order_btn" onclick="{$action_buy_item}">주문하기</a>
+                        </div>
                     </li>
                 </ul>
             </section>
@@ -262,29 +303,16 @@
             <section class="boardList" module="Order_NormIndividual">
                 <ul class="basket_list" module="Order_list">
                     <li class="basket_item">
-                        <div class="item_control">
-                            <input type="checkbox" id="{$chk_id}" name="{$chk_name}" />
-                            <p>
-                                <a href="javascript:;" onclick="{$action_wish_item}" class="wish_btn">관심상품 등록</a>
-                                <a href="javascript:;" onclick="{$action_move_item}" class="del_btn">삭제</a>
-                            </p>
-                        </div>
                         <ul class="item_desc">
                             <li class="item_img">
-                                <p class="thumb"><a href="/product/detail.html{$param}"><img src="{$img}"
+                                <p class="thumb"><input type="checkbox" id="{$chk_id}" name="{$chk_name}" /><a href="/product/detail.html{$param}"><img src="{$img}"
                                             onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';"
                                             alt="{$name_alt}" /></a></p>
-                                <a href="javascript:;" class="order_btn" onclick="{$action_buy_item}">주문하기</a>
                             </li>
                             <li class="item_info">
                                 <p class="item_name"><a href="/product/detail.html{$param}">{$name}</a></p>
-                                <p class="option" module="Order_optionAll">
-                                    {$option_str}
-                                    <span class="{$qty_display|display}">({$qty}개)</span>
-                                </p>
                                 <div class="price_list">
                                     <p class="{$discount} display_product">
-                                        <span>판매가 : </span>
                                         <strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong>
                                     <p class="{$product_price_display|display}">
                                         {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p>
@@ -297,7 +325,9 @@
                                     </p>
                                     </p>
                                 </div>
-                                <p class="mileage">마일리지 : {$mileage}</p>
+                                <div class="delv_price">배송비 :
+                                    <span class="{$delv_price_display|display}">{$delv_price_front_head}{$delv_price_front}{$delv_price_front_tail}<span class="{$delv_ref_display|display}">{$delv_price_back_head}{$delv_price_back}{$delv_price_back_tail}</span></span> [{$delv_type}] / 기본배송 <span class="{$oversea_able_display|display}">(해외배송가능)</span>
+</div>
                                 <div class="quantity">
                                     <a href="javascript:;" class="quan_down" onclick="{$out_shortcut}">감소</a>
                                     {$form.quantity} <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
@@ -305,40 +335,52 @@
                                     </a>
 
                                 </div>
-                                <div class="total">
-                                    <span>합계 </span>
-                                    <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}</strong>
-                                    <div class="{$sum_price_display|display}">
-                                        {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}</div>
-                                </div>
+
                                 </p>
                             </li>
                         </ul>
+                        <div class="item_option" module="Order_optionAll">
+                            {$option_str}
+                            <span class="{$qty_display|display}">({$qty}개)</span><a href="#none" class="btnBasic {$option_change_display|display}" onclick="{$action_option_change}">옵션변경</a>
+                            <!-- 참고 : 옵션변경 레이어 -->
+                        <div class="layerOptionModify" id="{$option_modify_layer_id}">
+                            <ul module="Order_optionList">
+                                <li><span>{$option_name}</span>{$form.option_value}</li>
+                                <li><span>{$option_name}</span>{$form.option_value}</li>
+                            </ul>
+                            <ul module="Order_optionAddList">
+                                <li><span>{$option_name}</span> {$form.option_value}</li>
+                                <li><span>{$option_name}</span> {$form.option_value}</li>
+                            </ul>
+                            <div class="option_btn">
+                                <button class="btnBasic modify_btn" onclick="{$action_option_modify}">변경</button>      
+                                <button class="btnNormal cancle_btn" onclick="$('.layerOptionModify').hide();">취소</button>
+                            </div>
+                        </div><!-- //참고 -->
+                    </div>
+                    <div class="total_price_each">
+                        <i>합계 :</i>
+                        <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}<i>원</i></strong>
+                        <div class="{$sum_price_display|display}">
+                            {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}<i>원</i></div>
+                    </div>
+                        <div class="item_control">
+                                <a href="javascript:;" onclick="{$action_move_item}" class="del_btn">삭제</a>
+                                <a href="javascript:;" onclick="{$action_wish_item}" class="wish_btn">찜 목록 추가</a>
+                                <a href="javascript:;" class="order_btn" onclick="{$action_buy_item}">주문하기</a>
+                        </div>
                     </li>
                     <li class="basket_item">
-                        <div class="item_control">
-                            <input type="checkbox" id="{$chk_id}" name="{$chk_name}" />
-                            <p>
-                                <a href="javascript:;" onclick="{$action_wish_item}" class="wish_btn">관심상품 등록</a>
-                                <a href="javascript:;" onclick="{$action_move_item}" class="del_btn">삭제</a>
-                            </p>
-                        </div>
                         <ul class="item_desc">
                             <li class="item_img">
-                                <p class="thumb"><a href="/product/detail.html{$param}"><img src="{$img}"
+                                <p class="thumb"><input type="checkbox" id="{$chk_id}" name="{$chk_name}" /><a href="/product/detail.html{$param}"><img src="{$img}"
                                             onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';"
                                             alt="{$name_alt}" /></a></p>
-                                <a href="javascript:;" class="order_btn" onclick="{$action_buy_item}">주문하기</a>
                             </li>
                             <li class="item_info">
                                 <p class="item_name"><a href="/product/detail.html{$param}">{$name}</a></p>
-                                <p class="option" module="Order_optionAll">
-                                    {$option_str}
-                                    <span class="{$qty_display|display}">({$qty}개)</span>
-                                </p>
                                 <div class="price_list">
                                     <p class="{$discount} display_product">
-                                        <span>판매가 : </span>
                                         <strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong>
                                     <p class="{$product_price_display|display}">
                                         {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p>
@@ -351,7 +393,9 @@
                                     </p>
                                     </p>
                                 </div>
-                                <p class="mileage">마일리지 : {$mileage}</p>
+                                <div class="delv_price">배송비 :
+                                    <span class="{$delv_price_display|display}">{$delv_price_front_head}{$delv_price_front}{$delv_price_front_tail}<span class="{$delv_ref_display|display}">{$delv_price_back_head}{$delv_price_back}{$delv_price_back_tail}</span></span> [{$delv_type}] / 기본배송 <span class="{$oversea_able_display|display}">(해외배송가능)</span>
+</div>
                                 <div class="quantity">
                                     <a href="javascript:;" class="quan_down" onclick="{$out_shortcut}">감소</a>
                                     {$form.quantity} <a href="javascript:;" class="quan_up" onclick="{$add_shortcut}">
@@ -359,15 +403,40 @@
                                     </a>
 
                                 </div>
-                                <div class="total">
-                                    <span>합계 </span>
-                                    <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}</strong>
-                                    <div class="{$sum_price_display|display}">
-                                        {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}</div>
-                                </div>
+
                                 </p>
                             </li>
                         </ul>
+                        <div class="item_option" module="Order_optionAll">
+                            {$option_str}
+                            <span class="{$qty_display|display}">({$qty}개)</span><a href="#none" class="btnBasic {$option_change_display|display}" onclick="{$action_option_change}">옵션변경</a>
+                            <!-- 참고 : 옵션변경 레이어 -->
+                        <div class="layerOptionModify" id="{$option_modify_layer_id}">
+                            <ul module="Order_optionList">
+                                <li><span>{$option_name}</span>{$form.option_value}</li>
+                                <li><span>{$option_name}</span>{$form.option_value}</li>
+                            </ul>
+                            <ul module="Order_optionAddList">
+                                <li><span>{$option_name}</span> {$form.option_value}</li>
+                                <li><span>{$option_name}</span> {$form.option_value}</li>
+                            </ul>
+                            <div class="option_btn">
+                                <button class="btnBasic modify_btn" onclick="{$action_option_modify}">변경</button>      
+                                <button class="btnNormal cancle_btn" onclick="$('.layerOptionModify').hide();">취소</button>
+                            </div>
+                        </div><!-- //참고 -->
+                    </div>
+                    <div class="total_price_each">
+                        <i>합계 :</i>
+                        <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}<i>원</i></strong>
+                        <div class="{$sum_price_display|display}">
+                            {$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}<i>원</i></div>
+                    </div>
+                        <div class="item_control">
+                                <a href="javascript:;" onclick="{$action_move_item}" class="del_btn">삭제</a>
+                                <a href="javascript:;" onclick="{$action_wish_item}" class="wish_btn">찜 목록 추가</a>
+                                <a href="javascript:;" class="order_btn" onclick="{$action_buy_item}">주문하기</a>
+                        </div>
                     </li>
                 </ul>
             </section>
@@ -394,7 +463,7 @@
                                     class="{$total_option_price_display|display}">({$total_option_price})</span></strong><span
                                 class="{$total_product_ref_display|display}"> {$total_product_ref}</span> <span
                                 class="{$total_delvtype_benefit_price_display|display}"> - 상품할인금액
-                                {$total_delvtype_benefit_price} </span> = 합계 : <strong
+                                {$total_delvtype_benefit_price} </span> = 합계 :: <strong
                                 class="total">{$total_sum_price_front_head}<span>{$total_sum_price_front}</span>{$total_sum_price_front_tail}</strong>
                             <span class="{$total_sum_price_ref_display|display}">
                                 {$total_sum_price_back_head}{$total_sum_price_back}{$total_sum_price_back_tail}</span>
@@ -675,49 +744,52 @@
                 </tbody>
             </table>
         </section>
-
         <!-- 일반 상품 리스트 -->
+                <!-- 상품 전체 선택 후 액션 버튼 -->
+                <div class="basket_select_action_wrap" module="Order_SelectOrder" module="Order_TabInfo">
+                        <button id="product_select_all" class="prd_select_btn" data-status="off">전체 선택</button>
+                    <div class="basket_select_box">
+                    <button class="prd_select_btn select_del" onclick="{$action_delete}">선택 삭제</button>
+                    <button class="prd_select_btn select_clear" onclick="{$action_empty}">장바구니 비우기</button>
+                </div>
+                </div>
+                <!-- 상품 전체 선택 후 액션 버튼 -->
+        
         <!-- 총 주문금액 : 국내배송상품 -->
         <ul module="Order_TotalSummary" class="{$area_delv_info_display|display} basket_total" unroll=1>
-            <li class="toggleArea type1 eToggle">
-                <h3>상품금액</h3>
+            <li class="total total_price toggleArea type1 eToggle">
+                <h3>총 상품금액</h3>
                 <p>
-                    {$total_product_price_display_front_head}{$total_product_price_display_front}{$total_product_price_display_front_tail}
+                    {$total_product_price_display_front_head}{$total_product_price_display_front}{$total_product_price_display_front_tail}<i>원</i>
                 </p>
             </li>
-            <li class="total">
-                <h3>배송비</h3>
+            <li class="total total_delv_price">
+                <h3>총 배송비</h3>
                 <p> <span>+</span>
-                    {$total_delv_price_front_head}{$total_delv_price_front}{$total_delv_price_front_tail}
+                    {$total_delv_price_front_head}{$total_delv_price_front}{$total_delv_price_front_tail}<i>원</i>
                 </p>
             </li>
-            <li class="toggleArea type1 eToggle {$total_benefit_layer_display|display}">
+            <li class="total total_benefit toggleArea type1 eToggle {$total_benefit_layer_display|display}">
                 <h3>할인금액</h3>
                 <p> <span>-</span>
-                    {$total_product_discount_price_front_head}{$total_product_discount_price_front}{$total_product_discount_price_front_tail}
+                    {$total_product_discount_price_front_head}{$total_product_discount_price_front}{$total_product_discount_price_front_tail}<i>원</i>
                 </p>
             </li>
             <li class="total order">
-                <h3>결제<br>예정금액</h3>
+                <h3>결제 예정 금액</h3>
                 <p class="total_order">
-                    {$total_order_price_front_head}{$total_order_price_front}{$total_order_price_front_tail}
+                    {$total_order_price_front_head}{$total_order_price_front}{$total_order_price_front_tail}<i>원</i>
                 </p>
             </li>
         </ul>
         <!-- 총 주문금액 : 국내배송상품 -->
-        <!-- 상품 전체 선택 후 액션 버튼 -->
-        <div class="basket_select_action_wrap" module="Order_SelectOrder">
-            <button class="prd_select_btn select_del" onclick="{$action_delete}">삭제하기</button>
-            <button class="prd_select_btn select_clear" onclick="{$action_empty}">장바구니 비우기</button>
-        </div>
-        <!-- 상품 전체 선택 후 액션 버튼 -->
 
         <!-- 상품 구매 버튼 -->
         <section class="{$btn_order_display|display} basket_total_btn_wrap" module="Order_TotalOrder" id="orderFixItem">
             <button onclick="{$action_order_select}" class="order_select" link-order="/order/orderform.html{$param}"
-                link-login="/member/login.html">선택상품주문</button>
+                link-login="/member/login.html">선택 상품 주문하기</button>
             <button onclick="{$action_order_all}" class="order_all {$buy_display|display}"
-                link-order="/order/orderform.html{$param}" link-login="/member/login.html">전체상품주문</button>
+                link-order="/order/orderform.html{$param}" link-login="/member/login.html">전체 상품 주문하기</button>
             <!-- 네이버 체크아웃 구매 버튼  -->
             <div id="{$naver_checkout_button_id}" class="naver_checkout"></div>
         </section>

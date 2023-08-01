@@ -9,26 +9,21 @@
     width: 100%;
     max-width: 450px;
     padding: 23px 11px 150px;
-    margin: 40px auto 80px; //top_nav hide
+    margin: 60px auto 80px; //top_nav hide
 
     #BasketTitle {
         display: flex;
         flex-flow: column nowrap;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        margin-bottom: 18px;
+        margin-bottom: 24px;
 
         h1 {
-            font-size: 1.9rem;
-            font-weight: 700;
-            margin-bottom: 2px;
+            font-size: 2.45rem;
+            font-weight: bold;
         }
 
-        h2 {
-            font-size: 1.3rem;
-            font-weight: 300;
-            color: $bvt-lostfocus-gray;
-        }
     }
 
     #BasketSection {
@@ -65,12 +60,11 @@
 
         // 개별 아이템
         .basket_item {
-            border-radius: 15px;
+            border-radius: 10px;
             border: $bvt-btn-border-gray;
-            padding: 3% 5%;
+            padding: 19.4px 16.1px;
             background: $bvt-white;
-            box-shadow: $bvt-shadow;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
     }
 }
@@ -94,60 +88,93 @@
 
 }
 
-//상단 메뉴
+//삭제/찜/주문
 
 .item_control {
     width: 100%;
-    height: 20px;
+    height: 43px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    margin-bottom: 10px;
 
-    // 체크박스
-    >input {
-        width: 18px;
-        height: 18px;
-        cursor: pointer;
-    }
-
-    .wish_btn {
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 43px;
+        border-radius: 5px;
         border: $bvt-btn-border-gray;
-        border-radius: 30px;
-        padding: 3px 10px;
-        font-size: 1.05rem;
-        margin: 2px;
+        font-size: 1.3rem;
+        letter-spacing: -.4px;
+        font-weight: normal;
+        box-sizing: border-box;
     }
 
     .del_btn {
-        border: $bvt-btn-border-gray;
-        border-radius: 30px;
-        padding: 3px 10px;
-        font-size: 1.05rem;
+        width: 74px;
+        min-width: 74px;
+        margin-right: 4px;
+        color: $bvt-darkgray;
     }
+
+    .wish_btn {
+        width: 100%;
+        border: $bvt-btn-border;
+        margin-right: 4px;
+        color: $bvt-blue;
+        background: $bvt-white;
+    }
+
+    .order_btn {
+        width: 100%;
+        border: $bvt-btn-border;
+        background: $bvt-blue;
+        color: $bvt-white;
+
+    }
+
 }
 
 // 상품 상세
 .item_desc {
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
+    margin-bottom: 17px;
 
     .item_img {
-        width: 85px;
+        width: 100%;
+        max-width: 114.5px;
 
         .thumb {
+            position: relative;
             display: flex;
             flex-flow: column nowrap;
             justify-content: flex-start;
-            width: 85px;
+            width: 100%;
+
+            input[type="checkbox"] {
+                position: absolute;
+                width: 21px;
+                height: 21px;
+                z-index: 2;
+                top: 7.3px;
+                left: 5.6px;
+                border-radius: 2px;
+                border: 1px solid $bvt-darkgray;
+
+                &:checked {
+                    background: $bvt-blue;
+                }
+            }
 
             >a {
                 display: block;
                 position: relative;
                 padding-top: 100%;
                 overflow: hidden;
-                border-radius: 4px;
+                border-radius: 10px;
 
                 >img {
                     position: absolute;
@@ -175,16 +202,16 @@
     .item_info {
         display: flex;
         flex-flow: column nowrap;
-        justify-content: space-between;
-        width: calc(100% - 85px);
-        padding: 0 12px;
+        justify-content: flex-start;
+        width: calc(100% - 114.59px - 19px);
+        padding: 0 0 0 19px;
 
         //상품명
         .item_name {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 4px;
-            @include only-ellipsis(2, 1.8rem);
+            font-size: 1.75rem;
+            font-weight: normal;
+            margin-bottom: 11px;
+            @include only-ellipsis(1, 2.5rem);
         }
 
         .option {
@@ -195,13 +222,12 @@
         }
 
         .price_list {
-            margin-bottom: 8px;
+            margin-bottom: 5px;
 
             .display_product {
-                font-size: 1.35rem;
-                font-weight: 500;
+                font-size: 1.75rem;
+                font-weight: bold;
                 color: $bvt-black;
-                margin-top: 5px;
             }
 
             .display_discount {
@@ -209,18 +235,17 @@
                 font-weight: 500;
                 color: $bvt-black;
             }
+
         }
 
-        .mileage {
-            font-size: 1.2rem;
-            font-weight: 400;
-            margin-bottom: 12px;
 
-            >img {
-                display: none;
-            }
+        .delv_price {
+            font-size: 1.25rem;
+            font-weight: normal;
+            color: $bvt-darkgray;
+            letter-spacing: -0.4px;
+            margin-bottom: 6.4px;
         }
-
 
         .quantity {
             display: flex;
@@ -256,15 +281,115 @@
             }
 
         }
+    }
+}
 
-        //상품 총 가격
-        .total {
+//상품 개별 가격
+.total_price_each {
+    width: 100%;
+    padding: 4px 0;
+    text-align: right;
+    font-size: 1.65rem;
+    font-weight: bold;
+    color: $bvt-blue;
+    border-top: $bvt-btn-border-gray;
+    padding-top: 19px;
+    margin-bottom: 13px;
+}
+
+// 상품 옵션
+
+.item_option {
+    width: 100%;
+    font-size: 1.45rem;
+    color: $bvt-black;
+    letter-spacing: -.3px;
+    padding-bottom: 18.6px;
+    margin-bottom: 19px;
+
+    .btnBasic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 65px;
+        height: 25px;
+        border: $bvt-btn-border-gray;
+        font-size: 1.25rem;
+        font-weight: normal;
+        color: $bvt-darkgray;
+        background: $bvt-white;
+        float: right;
+        margin-top: -5px;
+    }
+
+    .layerOptionModify {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 100%;
+        border-radius: 5px;
+        background: $bvt-whitegray;
+        margin-top: 14px;
+        padding: 14.5px 24.2px;
+
+        >ul {
             width: 100%;
-            padding: 4px 0;
-            text-align: right;
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: $bvt-blue;
+
+            >li {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5.2px;
+
+                .optionItem,
+                span {
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                }
+
+                >select {
+                    width: 80%;
+                    height: 35px;
+                    font-size: 1.3rem;
+                    font-weight: normal;
+                    color: $bvt-darkgray;
+                    cursor: pointer;
+                    border-radius: 20px;
+                    padding: 0 8px;
+                }
+
+            }
+        }
+
+        .option_btn {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+
+            >button {
+                width: 55.11px;
+                height: 28.57px;
+                border-radius: 14px;
+                background: $bvt-white;
+                font-weight: normal;
+                font-size: 1.25rem;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            .modify_btn {
+                border: $bvt-btn-border;
+                color: $bvt-blue;
+                margin-right: 4.9px;
+            }
+
+            .cancle_btn {
+                border: $bvt-btn-border-gray;
+                color: $bvt-darkgray;
+            }
         }
     }
 }
@@ -273,91 +398,120 @@
 .basket_select_action_wrap {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 100%;
-    padding: 10px 0;
-    margin-bottom: 35px;
-}
+    margin-top: 16px;
 
-// 상단 전체선택 및 상품 선택 액션 버튼 
-.prd_select_btn {
-    padding: 7px 16px;
-    box-shadow: $bvt-btn-shadow;
-    border: $bvt-btn-border-gray;
-    border-radius: 20px;
-    background: $bvt-white;
-}
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        border: $bvt-btn-border-gray;
+        border-radius: 5px;
+        background: $bvt-whitegray;
+        font-size: 1.45rem;
+        font-weight: bold;
+        color: $bvt-darkgray;
+        letter-spacing: -.3px;
+    }
 
-.select_clear {
-    margin-left: 5px;
+    #product_select_all {
+        //전체선택
+        min-width: 88px;
+        background: #E6EEFF;
+        border: $bvt-btn-border;
+        color: $bvt-blue;
+    }
+
+    .basket_select_box {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+
+        .select_del {
+            width: 88px;
+        }
+
+        .select_clear {
+            width: 39.5%;
+            margin-left: 4px;
+        }
+    }
 }
 
 // 토탈
 .basket_total {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
     width: 100%;
-    max-width: 450px;
+    margin-top: 16px;
+    border-top: 7px solid $bvt-whitegray;
+    padding: 29px 32px 27px;
 
-    >li {
+    .total {
         display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
+        flex-flow: row nowrap;
+        justify-content: space-between;
         align-items: center;
-        flex-grow: 1;
-        padding: 5px 5%;
-        border: $bvt-btn-border-gray;
-        border-radius: 12px;
-        background: $bvt-bg-lightblue;
-        text-align: center;
-        margin: 14px 5px;
 
-        >h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.3rem;
+        h2,
+        h3,
+        span,
+        p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: $bvt-black;
         }
 
-        >p {
-            display: flex;
-            flex-flow: row nowrap;
-            font-size: 1.3rem;
-            font-weight: 400;
+
+        &:nth-child(1) {
+            margin-bottom: 13px;
         }
 
+        &:nth-child(2) {
+            margin-bottom: 13px;
+        }
+
+        //최종 금액
         .total_order {
             color: $bvt-blue;
-            font-size: 1.4rem;
-            font-weight: 600;
         }
     }
+
+
 }
 
-#orderFixItem {
+.basket_total_btn_wrap {
     position: relative;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    margin: 0 auto;
-
-    >button {
-        padding: 6% 12%;
-        border-radius: 60px;
-        font-weight: 500;
-        font-size: 1.5rem;
-    }
+    height: 66px;
 
     .order_select {
-        background: $bvt-white;
-        border: $bvt-btn-border;
+        width: 100%;
+        height: 100%;
         color: $bvt-blue;
+        margin-right: 4.5px;
+        border-radius: 5px;
+        background-color: #E6EEFF;
+        font-size: 1.7rem;
+        font-weight: bold;
     }
 
     .order_all {
+        width: 100%;
+        height: 100%;
         background: $bvt-blue;
         color: $bvt-white;
-        margin-left: 6px;
+        border-radius: 5px;
+        font-size: 1.7rem;
+        font-weight: bold;
     }
 
     .naver_checkout {
@@ -384,4 +538,10 @@
         font-weight: 500;
         box-shadow: $bvt-btn-shadow;
     }
+}
+
+
+i {
+    font-weight: normal;
+    font-style: normal;
 }
