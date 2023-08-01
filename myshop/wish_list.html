@@ -3,47 +3,47 @@
 <article id="wishList">
     <section id="wishListTitle">
         <h1 class="displaynone">좋아요 누른 상품</h1>
-        <h1>내 좋아요 리스트</h1>
-        <h2>가치소비 후보들 모아보고 결정할까요?</h2>
+        <h1>찜해둔 상품 목록</h1>
     </section>
     <section id="wishListCardSection" module="myshop_wishlist">
         <!--@js(/js/module/myshop/wishlist.js)-->
         <!--
         $login_page = /member/login.html
-        $count = 20
+        $count = 200
         -->
         <ul module="myshop_wishlistitem" id="wishListList">
             <li class="wishlist_item ec-base-prdInfo">
-                <!-- 체크박스 시작 -->
-                {$checkbox}
-                <!-- 체크박스 끝 -->
                 <ul class="wishlist_item_box">
-                                        <!-- 썸네일 시작 -->
-                    <li class="thumbnail"><a href="{$link_product_detail}"><img src="{$image_medium}" alt="{$product_name}"></a></li>
-                                                    <!-- 썸네일 종료 -->
-                                                    <!-- 상품설명 시작 -->
+                    <!-- 썸네일 시작 -->
+                    <li class="thumbnail">
+                    <!-- 체크박스 시작 -->
+                    {$checkbox}
+                    <!-- 체크박스 끝 -->
+                        <a href="{$link_product_detail}"><img src="{$image_medium}" alt="{$product_name}"></a></li>
+                    <!-- 썸네일 종료 -->
+                    <!-- 상품설명 시작 -->
                     <li class="description">
-                        <p class="product_name" title="상품명">{$product_name_link}</p>
+                        <div class="product_name" title="상품명">{$product_name_link}</div>
                         <ul class="info">
-                            <li class="delivery">
+                            <li class="delivery">                            <!--@import(/product/product_module/wishlist_price_wrap.html)-->
                                 배송 :
                                 <span class="delivery_price {$delv_price_display|display}">
                                     {$delv_price}<span class="{$delv_ref_display|display}">{$delv_price_ref}</span>
                                 </span>
                                 <span class="delivery_opt {$delv_type_display|display}">[{$delv_type}] / {$ship_type}</span>
-                            </li>
-                            <!--@import(/product/product_module/wishlist_price_wrap.html)-->
+                          </li>
                         </ul>
-                    </li>                                                       <!-- 상품설명 시작 -->
+                     </li>                      
+                     <!-- 상품설명 시작 -->
                 </ul>
                 <!-- 옵션 관련 시작 -->
                 <ul class="wishlist_item_option" module="Myshop_optionAll">
                     <li class="option_info">
                         <div class="option_name">
-                            <span class="optionDesc"><span class="{$product_name_display|display}">{$product_name} :
-                                </span>{$option_str} <span class="{$qty_display|display}">({$qty}개)</span></span>
                             <a href="#none" class="btnBasic option_change {$option_change_display|display}"
                                 onclick="{$action_option_change}">옵션 변경</a>
+                                <span class="optionDesc"><span class="{$product_name_display|display}">{$product_name} :
+                                </span>{$option_str} <span class="{$qty_display|display}">({$qty}개)</span></span>
                         </div>
                         <div class="layerOptionModify" id="{$option_modify_layer_id}" style="display: none;">
                             <ul module="Myshop_optionList">
@@ -89,52 +89,48 @@
                     </li>
                 </ul>
                 <!-- 옵션 관련 끝 -->
-                <!-- 선택 합계 시작 -->
-                <div class="wishlist_item_option_total {$sum_price_display|display}">합계 : <strong>{$sum_price}</strong></div>
-                <!-- 선택 합계 끝 -->
                 <!-- 상품 관련 버튼 시작-->
                 <div class="wishlist_item_btn">
                     <a href="#none" class="item_del {$class_del}" rel="{$rel_del}">삭제</a>
-                    <p>
-                    <button type="button" onclick="{$act_basket}"
-                    class="item_cart {$disp_basket|display}">장바구니 담기</button>
                     <button type="button" onclick="{$act_order}"
                         class="item_order {$disp_order|display}">주문하기</button>
-                        </p>
+                        <button type="button" onclick="{$act_basket}"
+                        class="item_cart {$disp_basket|display}">장바구니 담기</button>
                 </div>
                 <!-- 상품 관련 버튼 끝 -->
             </li>
             <li class="wishlist_item ec-base-prdInfo">
-                <!-- 체크박스 시작 -->
-                {$checkbox}
-                <!-- 체크박스 끝 -->
                 <ul class="wishlist_item_box">
-                                        <!-- 썸네일 시작 -->
-                    <li class="thumbnail"><a href="{$link_product_detail}"><img src="{$image_medium}" alt="{$product_name}"></a></li>
-                                                    <!-- 썸네일 종료 -->
-                                                    <!-- 상품설명 시작 -->
+                    <!-- 썸네일 시작 -->
+                    <li class="thumbnail">
+                    <!-- 체크박스 시작 -->
+                    {$checkbox}
+                    <!-- 체크박스 끝 -->
+                        <a href="{$link_product_detail}"><img src="{$image_medium}" alt="{$product_name}"></a></li>
+                    <!-- 썸네일 종료 -->
+                    <!-- 상품설명 시작 -->
                     <li class="description">
-                        <p class="product_name" title="상품명">{$product_name_link}</p>
+                        <div class="product_name" title="상품명">{$product_name_link}</div>
                         <ul class="info">
-                            <li class="delivery">
+                            <li class="delivery">                            <!--@import(/product/product_module/wishlist_price_wrap.html)-->
                                 배송 :
                                 <span class="delivery_price {$delv_price_display|display}">
                                     {$delv_price}<span class="{$delv_ref_display|display}">{$delv_price_ref}</span>
                                 </span>
                                 <span class="delivery_opt {$delv_type_display|display}">[{$delv_type}] / {$ship_type}</span>
-                            </li>
-                            <!--@import(/product/product_module/wishlist_price_wrap.html)-->
+                          </li>
                         </ul>
-                    </li>                                                       <!-- 상품설명 시작 -->
+                     </li>                      
+                     <!-- 상품설명 시작 -->
                 </ul>
                 <!-- 옵션 관련 시작 -->
                 <ul class="wishlist_item_option" module="Myshop_optionAll">
                     <li class="option_info">
                         <div class="option_name">
-                            <span class="optionDesc"><span class="{$product_name_display|display}">{$product_name} :
-                                </span>{$option_str} <span class="{$qty_display|display}">({$qty}개)</span></span>
                             <a href="#none" class="btnBasic option_change {$option_change_display|display}"
                                 onclick="{$action_option_change}">옵션 변경</a>
+                                <span class="optionDesc"><span class="{$product_name_display|display}">{$product_name} :
+                                </span>{$option_str} <span class="{$qty_display|display}">({$qty}개)</span></span>
                         </div>
                         <div class="layerOptionModify" id="{$option_modify_layer_id}" style="display: none;">
                             <ul module="Myshop_optionList">
@@ -180,32 +176,28 @@
                     </li>
                 </ul>
                 <!-- 옵션 관련 끝 -->
-                <!-- 선택 합계 시작 -->
-                <div class="wishlist_item_option_total {$sum_price_display|display}">합계 : <strong>{$sum_price}</strong></div>
-                <!-- 선택 합계 끝 -->
                 <!-- 상품 관련 버튼 시작-->
                 <div class="wishlist_item_btn">
                     <a href="#none" class="item_del {$class_del}" rel="{$rel_del}">삭제</a>
-                    <p>
-                    <button type="button" onclick="{$act_basket}"
-                    class="item_cart {$disp_basket|display}">장바구니 담기</button>
                     <button type="button" onclick="{$act_order}"
                         class="item_order {$disp_order|display}">주문하기</button>
-                        </p>
+                        <button type="button" onclick="{$act_basket}"
+                        class="item_cart {$disp_basket|display}">장바구니 담기</button>
                 </div>
                 <!-- 상품 관련 버튼 끝 -->
             </li>
         </ul>
-        <h2 class="empty {$empty_display|display}">📂  관심상품 내역이 없습니다.</h2>    
+        <h2 class="empty {$empty_display|display}">🌳<br> 아직 비어있어요!</h2>    
         <section id="wishListBtn" module="myshop_wishlistbutton">
-            <div class="select select_btn">
-                <button class="select_all_btn" id="product_select_all"
-                    data-status="off">전체선택</button>
+            <div class="select select_btn_wrap">
+                <button id="product_select_all"
+                data-status="off" class="select_all_btn">전체선택</button>
                 <button onclick="{$action_delete}" class="select_del_btn">선택삭제</button>
+                <button onclick="{$action_order_all}" class="order_all_btn">전체상품주문</button>
             </div>
-            <button onclick="{$action_order_all}" id="order_all">전체상품주문</button>
+            <a href="/order/basket.html" class="move_cart_btn">장바구니 이동하기</a>
         </section>
-        <section id="wishListPaginate" class="ec-base-paginate typeList page-pagination" module="myshop_wishlistpaging">
+        <section id="wishListPaginate" class="ec-base-paginate typeList displaynone page-pagination" module="myshop_wishlistpaging">
             <!--@css(/css/module/myshop/wishlistpaging.css)-->
             <div class="paginate-box">
                 <span class="btnPrev_wrap">
