@@ -2,17 +2,12 @@
 
 <article id="searchModal" class="displaynone">
     <section id="searchModalHeader" module="Layout_SearchHeader">
-        <button type="button" class="search_close_btn" onclick="classToggle(document.querySelector('#searchModal'), 'displaynone');">닫기</button>
         <a href="/" title="비보트 메인으로" target="_self"><span class="header_logo">비보트 Bvoat</span></a>
-        <p class="header_cart" module="Layout_orderBasketcount">
-            <a href="/order/basket.html" title="장바구니">장바구니</a>
-            <span class="count"><em>{$basket_count}</em></span>
-        </p>
+        <button type="button" class="search_close_btn" onclick="classToggle(document.querySelector('#searchModal'), 'displaynone');">닫기</button>
     </section>
     <section id="searchModalTitle">
         <h1 class="displaynone">검색</h1>
-        <h2>🔍 Search</h2>
-        <h3>오늘은 어떤 가치소비를 해볼까요?</h3>
+        <h2>뭘 찾아도, 가치소비.</h2>
     </section>
     <section module="Layout_SearchHeader" class="search_input_box" id="{$search_box_id}">
         <!--
@@ -46,7 +41,7 @@
         </section>
         
         <section class="hot_keyword">
-        <h4 class="search_title">HOT 키워드</h4>
+        <h4 class="search_title">다른 사람들이 많이 찾아요! 👀</h4>
         <div class="search_hot" module="search_hotkeyword">
             <ul class="hot_list">
                 <li><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
