@@ -10,21 +10,27 @@
 #memberJoin {
     width: 100%;
     max-width: 450px;
-    padding: 23px 11px 100px;
-    margin-top: 80px; //top_nav hide
+    padding: 19px 17px 100%;
+    margin: 60px 0px 0px; //top_nav hide
+
 
     #memberJoinTitle {
-        margin-bottom: 18px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 26px;
 
-        h2 {
-            font-weight: 600;
-            font-size: 2.2rem;
+        h1 {
+            font-size: 2.45rem;
+            font-weight: bold;
         }
 
-        h3 {
-            font-weight: 300;
-            font-size: 1.4rem;
-            color: $bvt-darkgray;
+        h2 {
+            font-size: 1.45rem;
+            font-weight: normal;
+            margin-top: 6.9px;
         }
     }
 
@@ -55,15 +61,15 @@
 
                     // 회원가입 정보 작성 리스트 
                     .member_join_list {
-                        margin-bottom: 18px;
+                        margin-bottom: 18.9px;
 
                         // 라벨
                         .input_label {
                             display: block;
                             font-weight: bold;
-                            font-size: 1.32rem;
-                            color: $bvt-darkgray;
-                            margin-bottom: 6px;
+                            font-size: 1.45rem;
+                            color: $bvt-black;
+                            margin-bottom: 10.5px;
                         }
 
                         .member_join_input_wrap {
@@ -74,6 +80,8 @@
                             align-items: center;
                             width: 100%;
                             max-width: 450px;
+                            font-size: 0;
+                            ;
 
                             // input 박스
                             input {
@@ -85,6 +93,7 @@
                                 font-size: 1.35rem;
                                 color: $bvt-darkgray;
                                 box-sizing: border-box;
+                                margin-right: 4px;
 
                                 &::placeholder {
                                     font-size: 1.2rem;
@@ -94,23 +103,28 @@
                                 }
                             }
 
+                            /* 개별 input */
+                            #member_id {
+                                margin-right: 9.5px;
+                            }
+
                             //비밀번호 확인
                             #user_passwd_confirm {
-                                margin-top: 6px;
+                                margin-top: 6.5px;
                             }
 
                             // 휴대전화
                             >select {
                                 padding: 0 21px;
                                 appearance: none;
-                                margin-right: 4px;
                                 background: $off-arrow no-repeat;
                                 background-position: 85%;
+                                margin-right: 4px;
                                 cursor: pointer;
                             }
 
                             .mobile_input_box {
-                                width: calc((100% - 44px) / 3);
+                                width: calc((100% - 112.27px) / 3);
                                 height: 44px;
                                 border-radius: 22px;
                                 font-size: 1.25rem;
@@ -140,12 +154,13 @@
                                 border: $bvt-btn-border;
                                 border-radius: 22px;
                                 background: transparentize($bvt-black, 1);
-                                font-size: 1.35rem;
+                                font-size: 1.4rem;
                                 font-weight: bold;
+                                font-family: inherit;
+                                letter-spacing: -.5px;
                                 color: $bvt-blue;
                                 word-break: keep-all;
                                 cursor: pointer;
-                                margin-left: 3px;
                             }
 
                         }
@@ -161,10 +176,10 @@
                         }
 
                         .input_info_txt {
-                            font-size: 1.2rem;
-                            color: $bvt-blue;
-                            letter-spacing: -1px;
-                            margin: 3px 0 4px 1px;
+                            font-size: 1.25rem;
+                            color: $bvt-darkgray;
+                            letter-spacing: -.5px;
+                            margin-top: 10.5px;
                         }
                     }
 
@@ -177,7 +192,7 @@
                     align-items: center;
                     width: 100%;
                     vertical-align: middle;
-                    font-size: 1.35rem;
+                    font-size: 0;
 
                     .agreeAll {
                         display: flex;
@@ -187,6 +202,7 @@
                         height: 52px;
                         background-color: $bvt-whitegray;
                         padding: 15px;
+                        font-size: 1.45rem;
 
                         .agreeArea_title {
                             display: flex;
@@ -198,14 +214,14 @@
                                 height: 19px;
                                 margin-left: 10px;
                                 font-weight: bold;
-                                font-size: 1.35rem;
-                                color: $bvt-blue;
+                                font-size: 1.45rem;
+                                color: $bvt-black;
                                 cursor: pointer;
                             }
 
                             input {
-                                width: 18px;
-                                height: 18px;
+                                width: 21px;
+                                height: 21px;
                                 cursor: pointer;
                             }
                         }
@@ -237,19 +253,19 @@
                                 height: 19px;
                                 margin-left: 10px;
                                 font-weight: bold;
-                                font-size: 14px;
-                                color: $bvt-darkgray;
+                                font-size: 14.5px;
+                                color: $bvt-black;
 
                                 >span {
                                     font-weight: lighter;
-                                    color: $bvt-blue;
+                                    color: $bvt-black;
                                 }
 
                             }
 
                             >input {
-                                width: 18px;
-                                height: 18px;
+                                width: 21px;
+                                height: 21px;
                                 cursor: pointer;
                             }
                         }
@@ -339,8 +355,8 @@
                                 height: 19px;
                                 margin-left: 10px;
                                 font-weight: bold;
-                                font-size: 14px;
-                                color: $bvt-darkgray;
+                                font-size: 14.5px;
+                                color: $bvt-black;
 
                                 >span {
                                     font-weight: lighter;
@@ -348,16 +364,16 @@
                                 }
 
                                 >p {
-                                    margin-top: 3px;
-                                    color: $bvt-lightgray;
-                                    font-weight: 300;
-                                    font-size: 1.2rem;
+                                    margin-top: 10.5px;
+                                    color: $bvt-darkgray;
+                                    font-weight: normal;
+                                    font-size: 1.3rem;
                                 }
                             }
 
                             input {
-                                width: 18px;
-                                height: 18px;
+                                width: 21px;
+                                height: 21px;
                                 cursor: pointer;
                             }
                         }
@@ -367,26 +383,27 @@
                             flex-flow: row nowrap;
                             align-items: center;
                             margin: 14px 0 0 46px;
+
                             li {
                                 display: flex;
                                 flex-flow: row nowrap;
                                 justify-content: center;
                                 align-items: center;
-                                font-size: 12px;
+                                font-size: 13px;
 
                                 input {
                                     display: inline-block;
-                                    width: 15px;
-                                    height: 15px;
-                                    margin: 20px 6px 0 0;
+                                    width: 17px;
+                                    height: 17px;
+                                    margin: 16.5px 9px 0 0;
                                     cursor: pointer;
                                 }
 
                                 label {
                                     display: inline-block;
-                                    margin: 20px 20px 0 0;
+                                    margin: 16.5px 19px 0 0;
                                     color: $bvt-darkgray;
-                                    font-weight: 100;
+                                    font-weight: normal;
                                     vertical-align: middle;
                                     cursor: pointer;
                                 }
@@ -404,12 +421,11 @@
     position: fixed;
     display: flex;
     bottom: 0;
-    width: calc(100% + 22px);
+    width: calc(100%);
     max-width: 450px;
     height: 61px;
     align-items: center;
     justify-content: center;
-    margin-left: -11px;
     z-index: 99;
     background-color: $bvt-blue;
     border: none;
@@ -417,8 +433,9 @@
 
     >p {
         color: $bvt-white;
-        font-size: 1.45rem;
-        font-weight: 500;
+        font-size: 1.7rem;
+        font-weight: bold;
+        font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif;
     }
 }
 
@@ -558,4 +575,18 @@
     font-size: 1.45rem;
     font-weight: 500;
     cursor: pointer;
+}
+
+//애스터리스크* 공통
+i {
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $bvt-blue;
+    margin-left: 2px;
+}
+
+em {
+    font-weight: normal;
+    margin-left: 2px;
 }
