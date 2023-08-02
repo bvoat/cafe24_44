@@ -136,7 +136,7 @@
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .nomember_order_btn {
   display: flex;
   width: 100%;
-  height: 60px;
+  height: 49.09px;
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -147,6 +147,8 @@
   font-weight: normal;
   font-size: 1.4rem;
   cursor: pointer;
+  margin-top: -16px;
+  margin-bottom: 26px;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_util {
   display: flex;
@@ -269,11 +271,13 @@
   width: 100%;
   height: 49px;
   background: #ECF0F2;
-  border-radius: 7px;
+  border-radius: 90px;
   margin-top: 9.5px;
   color: rgba(112, 112, 112, 0.9);
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: 1.65rem;
+  font-weight: bold;
+  font-family: inherit;
+  letter-spacing: -0.3px;
 }
 
 #noMemberLogin {
