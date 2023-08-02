@@ -8,15 +8,14 @@
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 :root {
-  --login-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/bvoat-logo-earthst.png");
   --tooltip-black: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='26'%3E%3Cg data-name='그룹 1249'%3E%3Cg data-name='그룹 1248' fill='%23292929'%3E%3Crect data-name='사각형 2202' width='84' height='20' rx='3' transform='translate(0 6)'/%3E%3Cpath data-name='다각형 1' d='M41.5 0 51 13H32Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 #memberLogin {
   width: 100%;
   max-width: 450px;
-  margin: 80px 0;
-  padding: 23px 11px;
+  margin: 67px 0;
+  padding: 0 17px 100%;
 }
 #memberLogin #memberLoginTitle {
   display: flex;
@@ -24,32 +23,27 @@
   align-items: center;
   width: 100%;
   max-width: 450px;
-  height: 195px;
   text-align: center;
-  margin-bottom: 18px;
-  background: var(--login-bg) no-repeat center;
-  background-size: contain;
-  background-position-y: 65px;
+  margin-bottom: 28.4px;
+}
+#memberLogin #memberLoginTitle .login_logo {
+  width: 100%;
+  max-width: 378px;
+  transform: rotate(-15deg);
 }
 #memberLogin #memberLoginTitle h2 {
-  font-weight: 500;
-  font-size: 3rem;
+  font-weight: bold;
+  font-size: 2.45rem;
   letter-spacing: -1px;
-  line-height: 1.2em;
-}
-#memberLogin #memberLoginTitle h3 {
-  margin-top: 15px;
-  font-weight: 300;
-  font-size: 1.4rem;
-  color: rgba(41, 41, 41, 0.9);
-  letter-spacing: -0.5px;
+  line-height: 35px;
+  margin-top: 20px;
 }
 #memberLogin #memberLoginField fieldset {
   width: 100%;
   max-width: 450px;
   background: none;
   border: none;
-  padding: 0;
+  padding: 0 19px;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login {
   width: 100%;
@@ -57,15 +51,19 @@
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .input_form {
   width: 100%;
-  height: 106.9px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  margin-bottom: 14.4px;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .input_form .member_login_list {
   width: 100%;
   height: 50px;
+}
+#memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .input_form .member_login_list:nth-child(1) {
+  margin-bottom: 6.9px;
+}
+#memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .input_form .member_login_list:nth-child(2) {
+  margin-bottom: 14.4px;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .input_form .member_login_list label {
   position: absolute;
@@ -74,23 +72,23 @@
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .input_form .member_login_list input {
   display: block;
   width: 100%;
-  height: 50px;
+  height: 100%;
   padding: 12px 25px;
   border-radius: 90px;
   border: 1px solid #C4C4C4;
   font-size: 1.4rem;
-  color: #707070;
+  color: #292929;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .input_form .member_login_list input::-moz-placeholder {
   font-size: 1.3rem;
-  font-weight: 300;
-  color: #707070;
+  font-weight: normal;
+  color: #292929;
   letter-spacing: -0.5px;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .input_form .member_login_list input::placeholder {
   font-size: 1.3rem;
-  font-weight: 300;
-  color: #707070;
+  font-weight: normal;
+  color: #292929;
   letter-spacing: -0.5px;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .input_option {
@@ -106,7 +104,8 @@
   width: 16px;
   height: 16px;
   cursor: pointer;
-  margin: 0 0 0 5px;
+  margin: 0 0 0 9px;
+  font-family: inherit;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .input_option .auto_login label {
   display: block;
@@ -119,18 +118,20 @@
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_submit {
   display: flex;
   width: 100%;
-  height: 60px;
+  height: 49.09px;
   align-items: center;
   align-content: center;
   justify-content: center;
-  background-color: #022CFF;
+  background-color: #003DD3;
   border: none;
   border-radius: 90px;
   color: #ffffff;
-  font-weight: normal;
-  font-size: 1.4rem;
+  font-weight: bold;
+  font-size: 1.65rem;
+  letter-spacing: -0.4px;
   cursor: pointer;
-  margin-bottom: 12px;
+  margin-bottom: 26px;
+  font-family: inherit;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .nomember_order_btn {
   display: flex;
@@ -140,9 +141,9 @@
   align-content: center;
   justify-content: center;
   background-color: #ffffff;
-  border: 1px solid #022CFF;
+  border: 1px solid #003DD3;
   border-radius: 90px;
-  color: #022CFF;
+  color: #003DD3;
   font-weight: normal;
   font-size: 1.4rem;
   cursor: pointer;
@@ -151,57 +152,76 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  align-items: center;
-  margin: 23px 0 60px;
+  align-items: flex-start;
+  margin: 0 0 70px;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_util li {
-  margin-left: 18px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: normal;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_util li a {
   color: #707070;
+}
+#memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_util li:nth-child(1) {
+  margin-right: 19px;
+}
+#memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_util li:nth-child(2) {
+  margin-right: 8px;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_util li:nth-child(3) {
   position: relative;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_util li:nth-child(3) a {
-  color: #022CFF;
-  font-weight: 500;
+  color: #003DD3;
+  font-weight: bold;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_util .login_util_tooltip {
-  position: absolute;
-  width: 80px;
-  height: 30px;
-  top: 21px;
-  left: -12px;
-  background: var(--tooltip-black) no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 76px;
+  height: 24px;
+  margin-top: 12px;
+  padding-top: 1.5px;
+  background: #E6EEFF;
   background-size: contain;
-  font-size: 10px;
-  font-weight: 400;
-  color: #ffffff;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #003DD3;
   text-align: center;
-  padding: 9px 0 0 0;
   cursor: default;
   animation: up-and-down-item 1.2s ease-in-out infinite;
 }
-#memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_util .login_util_tooltip::after {
+#memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_util .login_util_tooltip::before {
   position: fixed;
+  content: "▲";
+  color: #E6EEFF;
+  top: -7px;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_sns {
+  position: relative;
   display: flex;
   width: 100%;
   flex-flow: column nowrap;
   align-items: center;
-  box-shadow: 3px 7px 11px #EDEFF5;
-  border-radius: 7px;
-  padding: 23px 0;
+  border-top: 1px solid #c7c7c7;
+  padding: 31px 0;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_sns h4 {
+  position: absolute;
   display: block;
-  font-size: 13px;
-  font-weight: 300;
+  font-size: 1.45rem;
+  font-weight: normal;
   color: #707070;
+  top: -7.58px;
+  background: #ffffff;
+  padding: 0 15.5px;
 }
 #memberLogin #memberLoginField fieldset .xans-member-login .member_login_section .login_section_bottom .login_sns .login_sns_icon_wrap {
   display: flex;
@@ -250,7 +270,7 @@
   height: 49px;
   background: #ECF0F2;
   border-radius: 7px;
-  margin-top: 17px;
+  margin-top: 9.5px;
   color: rgba(112, 112, 112, 0.9);
   font-size: 1.3rem;
   font-weight: 400;
@@ -289,7 +309,7 @@
 #noMemberLogin #noMemberLoginTitle p {
   font-weight: 600;
   font-size: 1.2rem;
-  color: #022CFF;
+  color: #003DD3;
 }
 #noMemberLogin #noMemberLoginField {
   margin: 50px 11px;
@@ -344,7 +364,7 @@
   align-items: center;
   align-content: center;
   justify-content: center;
-  background-color: #022CFF;
+  background-color: #003DD3;
   border: none;
   border-radius: 90px;
   color: #ffffff;

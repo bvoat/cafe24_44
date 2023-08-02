@@ -3,15 +3,15 @@
 @import "../../../abstracts/variables";
 
 :root {
-    --login-bg: url("https://s3.ap-northeast-2.amazonaws.com/img.bvoat.com/shop/member/bvoat-logo-earthst.png");
+
     --tooltip-black: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='26'%3E%3Cg data-name='그룹 1249'%3E%3Cg data-name='그룹 1248' fill='%23292929'%3E%3Crect data-name='사각형 2202' width='84' height='20' rx='3' transform='translate(0 6)'/%3E%3Cpath data-name='다각형 1' d='M41.5 0 51 13H32Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 #memberLogin {
     width: 100%;
     max-width: 450px;
-    margin: 80px 0;
-    padding: 23px 11px;
+    margin: 67px 0;
+    padding: 0 17px 100%;
 
     #memberLoginTitle {
         display: flex;
@@ -19,26 +19,21 @@
         align-items: center;
         width: 100%;
         max-width: 450px;
-        height: 195px;
         text-align: center;
-        margin-bottom: 18px;
-        background: var(--login-bg) no-repeat center;
-        background-size: contain;
-        background-position-y: 65px;
+        margin-bottom: 28.4px;
 
-        h2 {
-            font-weight: 500;
-            font-size: 3rem;
-            letter-spacing: -1px;
-            line-height: 1.2em;
+        .login_logo {
+            width: 100%;
+            max-width: 378px;
+            transform: rotate(-15deg);
         }
 
-        h3 {
-            margin-top: 15px;
-            font-weight: 300;
-            font-size: 1.4rem;
-            color: transparentize($bvt-black, 0.1);
-            letter-spacing: -0.5px;
+        h2 {
+            font-weight: bold;
+            font-size: 2.45rem;
+            letter-spacing: -1px;
+            line-height: 35px;
+            margin-top: 20px;
         }
     }
 
@@ -48,7 +43,7 @@
             max-width: 450px;
             background: none;
             border: none;
-            padding: 0;
+            padding: 0 19px;
 
             .xans-member-login {
                 width: 100%;
@@ -57,15 +52,21 @@
                 .member_login_section {
                     .input_form {
                         width: 100%;
-                        height: 106.9px;
                         display: flex;
                         flex-flow: column nowrap;
                         justify-content: space-between;
-                        margin-bottom: 14.4px;
 
                         .member_login_list {
                             width: 100%;
                             height: 50px;
+
+                            &:nth-child(1) {
+                                margin-bottom: 6.9px;
+                            }
+
+                            &:nth-child(2) {
+                                margin-bottom: 14.4px;
+                            }
 
                             label {
                                 position: absolute;
@@ -75,19 +76,20 @@
                             input {
                                 display: block;
                                 width: 100%;
-                                height: 50px;
+                                height: 100%;
                                 padding: 12px 25px;
                                 border-radius: 90px;
                                 border: $bvt-input-border;
                                 font-size: 1.4rem;
-                                color: $bvt-darkgray;
+                                color: $bvt-black;
 
                                 &::placeholder {
                                     font-size: 1.3rem;
-                                    font-weight: 300;
-                                    color: $bvt-darkgray;
+                                    font-weight: normal;
+                                    color: $bvt-black;
                                     letter-spacing: -0.5px;
                                 }
+
                             }
                         }
                     }
@@ -105,7 +107,8 @@
                                 width: 16px;
                                 height: 16px;
                                 cursor: pointer;
-                                margin: 0 0 0 5px;
+                                margin: 0 0 0 9px;
+                                font-family: inherit;
                             }
 
                             label {
@@ -122,7 +125,7 @@
                     .login_submit {
                         display: flex;
                         width: 100%;
-                        height: 60px;
+                        height: 49.09px;
                         align-items: center;
                         align-content: center;
                         justify-content: center;
@@ -130,10 +133,12 @@
                         border: none;
                         border-radius: 90px;
                         color: $bvt-white;
-                        font-weight: normal;
-                        font-size: 1.4rem;
+                        font-weight: bold;
+                        font-size: 1.65rem;
+                        letter-spacing: -.4px;
                         cursor: pointer;
-                        margin-bottom: 12px;
+                        margin-bottom: 26px;
+                        font-family: inherit;
                     }
 
                     .nomember_order_btn {
@@ -157,16 +162,27 @@
                             display: flex;
                             flex-flow: row nowrap;
                             justify-content: center;
-                            align-items: center;
-                            margin: 23px 0 60px;
+                            align-items: flex-start;
+                            margin: 0 0 70px;
 
                             li {
-                                margin-left: 18px;
+                                display: flex;
+                                flex-flow: column nowrap;
+                                justify-content: flex-start;
+                                align-items: center;
                                 font-size: 1.3rem;
-                                font-weight: 300;
+                                font-weight: normal;
 
                                 a {
                                     color: $bvt-darkgray;
+                                }
+
+                                &:nth-child(1) {
+                                    margin-right: 19px;
+                                }
+
+                                &:nth-child(2) {
+                                    margin-right: 8px;
                                 }
 
                                 &:nth-child(3) {
@@ -174,48 +190,57 @@
 
                                     a {
                                         color: $bvt-blue;
-                                        font-weight: 500;
+                                        font-weight: bold;
                                     }
                                 }
                             }
 
                             .login_util_tooltip {
-                                position: absolute;
-                                width: 80px;
-                                height: 30px;
-                                top: 21px;
-                                left: -12px;
-                                background: var(--tooltip-black) no-repeat;
+                                position: relative;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 76px;
+                                height: 24px;
+                                margin-top: 12px;
+                                padding-top: 1.5px;
+                                background: #E6EEFF;
                                 background-size: contain;
-                                font-size: 10px;
-                                font-weight: 400;
-                                color: $bvt-white;
+                                border-radius: 3px;
+                                font-size: 11px;
+                                font-weight: bold;
+                                color: $bvt-blue;
                                 text-align: center;
-                                padding: 9px 0 0 0;
-
                                 cursor: default;
                                 animation: up-and-down-item 1.2s ease-in-out infinite;
 
-                                &::after {
+                                &::before {
                                     position: fixed;
+                                    content: "▲";
+                                    color: #E6EEFF;
+                                    top: -7px;
                                 }
                             }
                         }
 
                         .login_sns {
+                            position: relative;
                             display: flex;
                             width: 100%;
                             flex-flow: column nowrap;
                             align-items: center;
-                            box-shadow: $bvt-shadow;
-                            border-radius: 7px;
-                            padding: 23px 0;
+                            border-top: 1px solid #c7c7c7;
+                            padding: 31px 0;
 
                             h4 {
+                                position: absolute;
                                 display: block;
-                                font-size: 13px;
-                                font-weight: 300;
+                                font-size: 1.45rem;
+                                font-weight: normal;
                                 color: $bvt-darkgray;
+                                top: -7.58px;
+                                background: $bvt-white;
+                                padding: 0 15.5px;
                             }
 
                             .login_sns_icon_wrap {
@@ -274,7 +299,7 @@
                         height: 49px;
                         background: $bvt-btn-lightblue;
                         border-radius: 7px;
-                        margin-top: 17px;
+                        margin-top: calc(40.5px - 31px);
                         color: transparentize($bvt-darkgray, 0.1);
                         font-size: 1.3rem;
                         font-weight: 400;
