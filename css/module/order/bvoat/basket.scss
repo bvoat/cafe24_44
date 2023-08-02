@@ -32,13 +32,13 @@
         padding: 0 11px;
 
         .empty {
-            position: relative;
-            top: 50%;
-            transform: translate(0, -50%);
             text-align: center;
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: $bvt-darkgray;
+            margin-top: 50px;
+            font-size: 1.9rem;
+            font-weight: bold;
+            line-height: 35px;
+            padding-bottom: 100%;
+            margin-bottom: 100%;
         }
     }
 }
@@ -319,7 +319,6 @@
         color: $bvt-darkgray;
         background: $bvt-white;
         float: right;
-        margin-top: -5px;
     }
 
     .layerOptionModify {
