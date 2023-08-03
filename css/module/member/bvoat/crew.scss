@@ -9,7 +9,7 @@
     align-items: center;
     width: 100%;
     max-width: 450px;
-    margin-top: 80px; //top_nav hide
+    margin-top: 60px; //top_nav hide
 
     #memberCrewContent {
         position: relative;
@@ -77,9 +77,11 @@
                         .coupon_item {
                             width: 100%;
                             margin-bottom: -50px;
+
                             .coupon {
                                 width: 100%;
-                                img{
+
+                                img {
                                     width: 100%;
                                     object-fit: cover;
                                 }
@@ -99,6 +101,7 @@
                     //개별 타이틀
                     .crew_title {
                         margin-bottom: 10px;
+
                         em {
                             color: $bvt-blue;
                         }
@@ -191,17 +194,20 @@
             //개별 타이틀
             .crew_title {
                 color: $bvt-white;
+
                 em {
                     color: $bvt-point-yellow;
                 }
             }
-            .crew_levelup_method{
+
+            .crew_levelup_method {
                 width: 100%;
+
                 .crew_levelup_method_list {
                     width: 100%;
                     max-width: 450px;
                     height: auto;
-    
+
                     //방법 공통
                     .crew_method_list_content {
                         position: relative;
@@ -213,7 +219,7 @@
                         max-width: 450px;
                         color: $bvt-white;
                         margin-bottom: 85px;
-    
+
                         //방법 1, 2, 3
                         .crew_method_list_title {
                             position: relative;
@@ -229,21 +235,21 @@
                             border-radius: 37px;
                             margin-bottom: 28px;
                         }
-    
+
                         .crew_method_list_heading {
                             font-size: 2.1rem;
                             font-weight: 600;
                             color: $bvt-white;
                             margin-bottom: 19px;
                         }
-    
+
                         .crew_method_txt {
                             font-size: 1.5rem;
                             font-weight: 300;
                             color: $bvt-white;
                             line-height: 2.7rem;
                         }
-    
+
                         // 세부 설명
                         .crew_method_sub_txt,
                         .crew_method_sub_txt li {
@@ -252,31 +258,33 @@
                             color: $bvt-point-yellow;
                             line-height: 2.1rem;
                         }
-    
+
                     }
-    
-    
+
+
                     //개별 CSS
                     //방법 1
                     .method_stamp {
                         width: 100%;
-                        .crew_method_img_wrap{
+
+                        .crew_method_img_wrap {
                             width: 100%;
                             margin-bottom: 17px;
-                        .crew_method_img {
-                            width: 100%;
-                            display: flex;
-                            flex-flow: row nowrap;
-    
-                            >li {
-                                img{
-                                    width: 100%;
+
+                            .crew_method_img {
+                                width: 100%;
+                                display: flex;
+                                flex-flow: row nowrap;
+
+                                >li {
+                                    img {
+                                        width: 100%;
+                                    }
+
                                 }
-    
                             }
                         }
-                        }
-    
+
                         .img_pagination {
                             width: 100%;
                             margin: 0 auto;
@@ -285,30 +293,32 @@
                             margin-bottom: 37px;
                         }
                     }
-    
+
                     //방법 2
                     .method_recommend {
                         width: 100%;
+
                         .crew_method_list_heading {
                             display: flex;
                             flex-flow: column nowrap;
                             justify-content: center;
                             align-items: center;
-    
-                            &::before{
+
+                            &::before {
                                 position: relative;
                                 display: block;
-                                content:"";
+                                content: "";
                                 width: 114px;
                                 height: 114px;
                                 background: url('/bvtIMG/icon/crew_method_recommend_icon.png') no-repeat center;
                                 background-size: cover;
                             }
                         }
-    
+
                         .crew_method_btn_wrap {
                             width: 100%;
                             margin: 35px 0 30px;
+
                             button {
                                 width: 100%;
                                 height: 63px;
@@ -316,30 +326,32 @@
                                 font-weight: 600;
                                 border-radius: 9px;
                             }
-    
+
                             .crew_link_copy {
                                 background: $bvt-point-yellow;
                                 margin-bottom: 7px;
                             }
-    
+
                             .crew_link_share {
                                 background: $bvt-white;
                             }
                         }
                     }
+
                     //방법 3
                     .method_share {
                         width: 100%;
+
                         .crew_method_list_heading {
                             display: flex;
                             flex-flow: column nowrap;
                             justify-content: center;
                             align-items: center;
-    
-                            &::before{
+
+                            &::before {
                                 position: relative;
                                 display: block;
-                                content:"";
+                                content: "";
                                 width: 62px;
                                 height: 76px;
                                 background: url('/bvtIMG/icon/crew_method_url_icon.png') no-repeat center;
@@ -347,23 +359,27 @@
                                 margin-bottom: 27.6px;
                             }
                         }
+
                         .crew_method_form_wrap {
                             width: 100%;
                             margin: 47px 0 22px;
+
                             >form {
                                 width: 100%;
+
                                 fieldset {
                                     label {
                                         font-size: 1.6rem;
                                         font-weight: 500;
                                     }
-    
+
                                     .share_input_wrap {
                                         width: 100%;
                                         display: flex;
                                         flex-flow: row nowrap;
                                         align-items: center;
                                         justify-content: center;
+
                                         input[type='url'] {
                                             width: 100%;
                                             height: 52px;
@@ -372,13 +388,14 @@
                                             box-sizing: border-box;
                                             font-size: 1.2rem;
                                             border: none;
-    
+
                                             &::placeholder {
                                                 font-size: 1.5rem;
                                                 font-weight: 300;
                                                 color: $bvt-black;
                                             }
                                         }
+
                                         //신청 버튼
                                         button {
                                             position: absolute;
@@ -390,7 +407,8 @@
                                             color: $bvt-white;
                                             border-radius: 22px;
                                             right: 15px;
-                                            &:disabled{
+
+                                            &:disabled {
                                                 background: $bvt-lightgray;
                                             }
                                         }
@@ -415,15 +433,16 @@
             background: $bvt-white;
             padding: 71px 29px 67px;
 
-            .list_anchor{
+            .list_anchor {
                 width: 100%;
-                li{
+
+                li {
                     height: 63px;
                     border-radius: 9px;
                     background: #F5F5F5;
                     padding: 0 27px;
 
-                    a{
+                    a {
                         width: 100%;
                         height: inherit;
                         display: flex;
@@ -434,11 +453,13 @@
                         font-size: 1.5rem;
                         font-weight: 600;
                     }
-                    span{
+
+                    span {
                         color: $bvt-black;
                         font-weight: 400;
                         letter-spacing: -0.6px;
-                        &::after{
+
+                        &::after {
                             display: inline-block;
                             content: "";
                             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6.5 11.37'%3E%3Cpath d='m4.54 5.69-4.3 4.3a.81.81 0 1 0 1.15 1.14l4.87-4.87a.81.81 0 0 0 .03-1.12L1.39.24A.81.81 0 1 0 .24 1.4Z' data-name='Icon ionic-ios-arrow-back'/%3E%3C/svg%3E") no-repeat center;
@@ -449,18 +470,18 @@
                         }
                     }
 
-                    &:nth-child(1){
+                    &:nth-child(1) {
                         margin-bottom: 11px;
                     }
-                        
-                    &:nth-child(2){
-                        a{
+
+                    &:nth-child(2) {
+                        a {
                             color: $bvt-black;
                         }
                     }
 
                     @media (max-width: 360px) {
-                        a{
+                        a {
                             font-size: 1.4rem;
                             letter-spacing: -0.4px;
                         }
@@ -478,7 +499,8 @@
                 color: $bvt-blue;
                 background: none;
                 animation: up-and-down-item 1.2s ease-in-out infinite;
-                svg{
+
+                svg {
                     width: 34.88px;
                     height: 34.88px;
                     margin: 63px 0 20.1px;
