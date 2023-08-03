@@ -3,26 +3,23 @@
     <section id="header_logo_section">
         <div class="back_btn visiblehidden">
             <button class="move_back_btn" onclick="history.go(-1)">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12.607" height="21.011" display="block">
-                    <path d="M12.607 1.274 11.25 0 0 10.506l11.25 10.505 1.359-1.267-9.882-9.238Z"
-                        rendering="geometricPrecision" />
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15.574" height="27.504"><path fill="#003dd3" stroke="#003dd3" d="M14.633.981a1.274 1.274 0 0 1 .123 1.659l-.123.143L3.644 13.772l10.989 10.99a1.274 1.274 0 0 1 .123 1.658l-.123.143a1.274 1.274 0 0 1-1.659.123l-.143-.123-11.89-11.89a1.274 1.274 0 0 1-.123-1.659l.123-.143L12.831.981a1.274 1.274 0 0 1 1.802 0Z" data-name="Iconly/Light-Outline/Arrow---Left-2"/></svg>
             </button>
         </div>
         <a href="/" title="비보트 메인으로" target="_self"><span class="header_logo">비보트 Bvoat</span></a>
         <ul class="header_menu">
-
             <li class="header_wish">
                 <a href="/myshop/wish_list.html" title="위시리스트">
-                <!-- <span class="count"><em>{$basket_count}</em></span> -->
                 </a>
-                <!-- <a href="/order/basket.html" title="장바구니">
-                    <span class="count"><em>{$basket_count}</em></span>
-                </a> -->
             </li>
             <li class="header_search">
                 <button type="button" class="search_btn" title="상품 검색"
                     onclick="classToggle(document.querySelector('#searchModal'), 'displaynone')">검색</button>
+            </li>
+            <li class="header_cart" >
+                <a href="/order/basket.html" module="Layout_orderBasketcount">
+                    <span class="count"><em>{$basket_count}</em></span>
+                </a>
             </li>
         </ul>
     </section>

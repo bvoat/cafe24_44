@@ -571,24 +571,26 @@ div.layerProgress {
 .price_wrap {
     position: relative;
     display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+    flex-flow:  row nowrap;
+    align-items: normal;
+    padding-bottom: 20px;
 }
 
 .price_wrap>.price_item {
-    font-size: 1.6rem;
-    font-weight: 700;
+    font-size: 1.45rem;
+    font-weight: bold;
     color: #292929;
 }
 
 .price_wrap .strike_price {
-    bottom: 2.1rem;
     text-decoration: line-through !important;
     color: #B7B7B7 !important;
     font-size:
-        1.55rem !important;
-    font-weight: 600 !important;
-    margin-right: 5px;
+        1.2rem !important;
+    font-weight: normal !important;
+    position: absolute;
+    left: 0;
+    top: 20px;
 }
 
 .onpromotion {
@@ -600,12 +602,34 @@ div.layerProgress {
 }
 
 .price_wrap>.discountrate {
-    font-size: 1.59rem;
-    font-weight: 700;
-    color: #022CFF;
-    margin-right: 0.88rem;
+    position: relative;
+    font-size: 1.45rem;
+    font-weight: bold;
+    color: #003DD3;
     letter-spacing: -0.5px;
-    margin-left: 11px;
+}
+
+/* 장바구니 카운트 */
+
+
+.count {
+    position: absolute;
+    top: -6px;
+    right: -14.5px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #003DD3;
+    border: 2.5px solid #fff;
+    border-radius: 50%;
+
+}
+.count em{
+    font-weight: bold;
+    color: #fff;
+    z-index: 2;
 }
 
 /* **************************** 필수 CSS 수정 및 삭제 불가 **************************** */

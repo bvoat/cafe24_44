@@ -11,14 +11,20 @@
 
     /* 인덱스 상단 배너 */
     #indexUserCnt {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
         width: 100%;
         height: 73px;
         background: $bvt-blue;
         margin-top: 60px;
+
+        a {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            color: $bvt-white;
+        }
 
         #joinbanner {
             border: 0;
@@ -26,20 +32,15 @@
             text-align: center;
 
             p {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
                 font-weight: normal;
-                line-height: 2.2rem;
-            }
 
-            em {
-                font-weight: bold;
-            }
+                em {
+                    font-size: 1.2rem;
+                }
 
-            .banner_text {
-                font-size: 1.8rem;
-
-                a {
-                    color: $bvt-white;
+                &:nth-child(2) {
+                    margin-top: 5px;
 
                     &::after {
                         display: inline-block;
@@ -51,294 +52,70 @@
                         ;
                     }
                 }
-
-
             }
-        }
 
-
-    }
-
-    /* 인덱스 상단 배너 */
-    /* 인덱스 사각 배너*/
-    #indexSquareBanner {
-        width: 100%;
-        max-height: 450px;
-
-        .square_banner {
-            width: 100%;
-
-            li {
-                a {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-
-                    img {
-                        width: 100%;
-                        height: auto;
-                        object-fit: cover;
-                    }
-                }
-            }
-        }
-
-        .swiper-pagination-progressbar {
-            height: 2px !important;
-        }
-    }
-
-    /* 인덱스 사각 배너*/
-    /* 메인 카테고리 메뉴 */
-    #indexCategoryMenu {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 28px 0 0 0;
-
-        ul {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: center;
-            width: 90%;
-
-            .index_category {
-                width: 100%;
-                display: flex;
-                flex-flow: column nowrap;
-                align-items: center;
-                margin: 0 2.5px;
-
-                a {
-                    width: 100%;
-                    max-width: 67px;
-                    display: flex;
-                    flex-flow: column nowrap;
-                    align-items: center;
-
-                    .index_category_img_wrap {
-                        width: 100%;
-                        display: block;
-                        position: relative;
-                        padding-top: 100%;
-                        overflow: hidden;
-                        border-radius: 50%;
-                        font-size: 0;
-                        margin-bottom: 12px;
-
-                        img {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-
-                    p {
-                        height: 2.4rem;
-                        text-align: center;
-                        font-size: 1.2rem;
-                        font-weight: normal;
-                    }
-                }
-            }
-        }
-    }
-
-    /* 메인 카테고리 메뉴 */
-    /* 메인진열 섹션 */
-    #indexListmain {
-
-        /* 인덱스 미니배너*/
-        #indexMiniBanner {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 28px 0 0 0;
-
-            ul {
-                display: flex;
-                flex-flow: row nowrap;
-                align-items: center;
-
-                li {
-                    width: 100%;
-
-
-                    a {
-                        width: 100%;
-                        display: flex;
-                        flex-flow: column nowrap;
-                        align-items: center;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-                }
-            }
-        }
-
-        //index.html 메인진열 섹션 공통 
-        div.listmain {
-            width: 100%;
-            height: auto;
-            padding: 0 17px;
-
-            //margin-bottom 공통
-            margin-bottom: 15%;
-
-            h3 {
-                display: flex;
-                flex-flow: row nowrap;
-                align-items: center;
-                font-size: 2rem;
+            .banner_text {
+                font-size: 1.6rem;
                 font-weight: 600;
-                margin-bottom: 20px;
-            }
-
-
-            //우측 여백 없애기 + .list_contents_wrap
-            .right-side-control {
-                overflow: hidden;
             }
         }
-
-        //펀딩
-        #listmainFunding {
-            padding: 25.8px 11px 0;
-            margin-bottom: 9%;
-        }
-
-        //무료배송
-        #listmainFreeShipping {
-            margin-bottom: 12%;
-
-            .list_item {
-                display: flex;
-                flex-flow: row nowrap;
-                width: auto;
-                margin-bottom: 9.8px;
-
-                .thumb {
-                    width: auto;
-                    min-width: 125.5px;
-                }
-
-                .desc {
-                    width: auto;
-                    padding: 7px 0 0 9.8px;
-
-                    .price_wrap,
-                    .product_name,
-                    .summary {
-                        width: 91%;
-                    }
-                }
-            }
-        }
-
-        //브랜드
-        #listmainBrand {
-            .list_item {
-                display: block;
-                border-radius: 4px;
-
-                a {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-
-        //베스트
-        #listmainTopValue {
-            .weekbest {
-                >ul {
-                    .list_item {
-
-                        //순위 표시
-                        //숫자 삽입
-                        // @for $i from 1 through 10 {
-                        //     &:nth-child(#{$i})::before {
-                        //         position: absolute;
-                        //         display: flex;
-                        //         justify-content: center;
-                        //         align-items: center;
-                        //         width: 27px;
-                        //         height: 27px;
-                        //         top: 8px;
-                        //         left: 8px;
-                        //         border-radius: 50%;
-                        //         background: $bvt-blue;
-                        //         color: $bvt-white;
-                        //         font-weight: bold;
-                        //         font-size: 1.6rem;
-                        //         z-index: 2;
-                        //         content: '#{$i}';
-                        //     }
-                        // }
-                    }
-                }
-            }
-        }
-
-        //자세히 보기
-        .moreview_btn_wrap {
-            width: 100%;
-
-            .moreview_btn {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 118px;
-                height: 54px;
-                margin: 0 auto;
-                border-radius: 32px;
-                color: $bvt-blue;
-                font-size: 1.7rem;
-                font-weight: 400;
-                background: #F2F4FC;
-
-                .moreview_arrow {
-                    margin-left: 7.2px;
-                }
-            }
-        }
-
-        .listmain_pagination {}
     }
 
-    /* 메인진열 섹션 */
 
-    //메인진열 화살표 arrow
-    .listmain_arrow {
-        display: inline-flex;
+
+    h2,
+    h3 {
+        font-size: 2.25rem;
+        font-weight: bold;
+        text-align: center;
+        color: $bvt-black;
+        letter-spacing: -0.9px;
+        margin: 50px 0 20px;
+    }
+
+    .pad_add {
+        padding-left: 7px;
+    }
+
+    /* swiper pagination wrapper*/
+    .swiper-pagination-best,
+    .swiper-pagination-tab,
+    .swiper-pagination-brand {
+        position: relative;
+        display: flex;
         justify-content: center;
         align-items: center;
-        width: 24px;
-        height: 24px;
-
-        &::after {
-            display: inline-block;
-            width: 8.083px;
-            height: 13.09px;
-            content: "";
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.083' height='13.09'%3E%3Cpath d='m0 1.54 5 5.007-5 5.007 1.538 1.536 6.545-6.55L1.538-.005Z' data-name='Icon material-keyboard-arrow-left'/%3E%3C/svg%3E");
-        }
+        width: 70px;
+        height: 37px;
+        background: $bvt-whitegray;
+        font-size: 1.45rem;
+        color: $bvt-darkgray;
+        margin: 0 auto;
+        border-radius: 21px;
+        letter-spacing: 2px;
     }
+
+    .swiper-pagination-best>.swiper-pagination-current,
+    .swiper-pagination-tab>.swiper-pagination-current,
+    .swiper-pagination-brand>.swiper-pagination-current {
+        font-weight: 400;
+        color: $bvt-black;
+        font-size: 1.45rem;
+    }
+
+    .swiper-pagination-best>.swiper-pagination-total,
+    .swiper-pagination-tab>.swiper-pagination-total,
+    .swiper-pagination-brand>.swiper-pagination-total {
+        letter-spacing: 0;
+    }
+}
+
+//인덱스 전체 페이지네이션 상단 값 
+.swiper-pagination {
+    margin-top: 18px !important;
+}
+
+//리뷰에이드 하단 botton 간격
+#review-aid-best-review-root {
+    margin-bottom: 80px;
 }

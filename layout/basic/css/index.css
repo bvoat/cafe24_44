@@ -12,23 +12,22 @@
   max-width: 450px;
   margin: 0 auto;
   /* 인덱스 상단 배너 */
-  /* 인덱스 상단 배너 */
-  /* 인덱스 사각 배너*/
-  /* 인덱스 사각 배너*/
-  /* 메인 카테고리 메뉴 */
-  /* 메인 카테고리 메뉴 */
-  /* 메인진열 섹션 */
-  /* 메인진열 섹션 */
+  /* swiper pagination wrapper*/
 }
 #bvtHome #indexUserCnt {
+  width: 100%;
+  height: 73px;
+  background: #003DD3;
+  margin-top: 60px;
+}
+#bvtHome #indexUserCnt a {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 73px;
-  background: #003DD3;
-  margin-top: 60px;
+  height: 100%;
+  color: #ffffff;
 }
 #bvtHome #indexUserCnt #joinbanner {
   border: 0;
@@ -36,20 +35,16 @@
   text-align: center;
 }
 #bvtHome #indexUserCnt #joinbanner p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: normal;
-  line-height: 2.2rem;
 }
-#bvtHome #indexUserCnt #joinbanner em {
-  font-weight: bold;
+#bvtHome #indexUserCnt #joinbanner p em {
+  font-size: 1.2rem;
 }
-#bvtHome #indexUserCnt #joinbanner .banner_text {
-  font-size: 1.8rem;
+#bvtHome #indexUserCnt #joinbanner p:nth-child(2) {
+  margin-top: 5px;
 }
-#bvtHome #indexUserCnt #joinbanner .banner_text a {
-  color: #ffffff;
-}
-#bvtHome #indexUserCnt #joinbanner .banner_text a::after {
+#bvtHome #indexUserCnt #joinbanner p:nth-child(2)::after {
   display: inline-block;
   content: "";
   width: 6.78px;
@@ -57,197 +52,55 @@
   margin-left: 14px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.343' height='12.433'%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-width='.5' d='m4.985 6.185-4.49 4.487a.849.849 0 0 0 1.2 1.2l5.09-5.087a.846.846 0 0 0 .025-1.169L1.702.497a.849.849 0 1 0-1.2 1.2Z' data-name='Icon ionic-ios-arrow-back'/%3E%3C/svg%3E");
 }
-#bvtHome #indexSquareBanner {
-  width: 100%;
-  max-height: 450px;
-}
-#bvtHome #indexSquareBanner .square_banner {
-  width: 100%;
-}
-#bvtHome #indexSquareBanner .square_banner li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-#bvtHome #indexSquareBanner .square_banner li a img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#bvtHome #indexSquareBanner .swiper-pagination-progressbar {
-  height: 2px !important;
-}
-#bvtHome #indexCategoryMenu {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 28px 0 0 0;
-}
-#bvtHome #indexCategoryMenu ul {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-}
-#bvtHome #indexCategoryMenu ul .index_category {
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  margin: 0 2.5px;
-}
-#bvtHome #indexCategoryMenu ul .index_category a {
-  width: 100%;
-  max-width: 67px;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-#bvtHome #indexCategoryMenu ul .index_category a .index_category_img_wrap {
-  width: 100%;
-  display: block;
-  position: relative;
-  padding-top: 100%;
-  overflow: hidden;
-  border-radius: 50%;
-  font-size: 0;
-  margin-bottom: 12px;
-}
-#bvtHome #indexCategoryMenu ul .index_category a .index_category_img_wrap img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#bvtHome #indexCategoryMenu ul .index_category a p {
-  height: 2.4rem;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: normal;
-}
-#bvtHome #indexListmain {
-  /* 인덱스 미니배너*/
-}
-#bvtHome #indexListmain #indexMiniBanner {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 28px 0 0 0;
-}
-#bvtHome #indexListmain #indexMiniBanner ul {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-}
-#bvtHome #indexListmain #indexMiniBanner ul li {
-  width: 100%;
-}
-#bvtHome #indexListmain #indexMiniBanner ul li a {
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-#bvtHome #indexListmain #indexMiniBanner ul li a img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#bvtHome #indexListmain div.listmain {
-  width: 100%;
-  height: auto;
-  padding: 0 17px;
-  margin-bottom: 15%;
-}
-#bvtHome #indexListmain div.listmain h3 {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  font-size: 2rem;
+#bvtHome #indexUserCnt #joinbanner .banner_text {
+  font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 20px;
 }
-#bvtHome #indexListmain div.listmain .right-side-control {
-  overflow: hidden;
+#bvtHome h2,
+#bvtHome h3 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: #292929;
+  letter-spacing: -0.9px;
+  margin: 50px 0 20px;
 }
-#bvtHome #indexListmain #listmainFunding {
-  padding: 25.8px 11px 0;
-  margin-bottom: 9%;
+#bvtHome .pad_add {
+  padding-left: 7px;
 }
-#bvtHome #indexListmain #listmainFreeShipping {
-  margin-bottom: 12%;
-}
-#bvtHome #indexListmain #listmainFreeShipping .list_item {
-  display: flex;
-  flex-flow: row nowrap;
-  width: auto;
-  margin-bottom: 9.8px;
-}
-#bvtHome #indexListmain #listmainFreeShipping .list_item .thumb {
-  width: auto;
-  min-width: 125.5px;
-}
-#bvtHome #indexListmain #listmainFreeShipping .list_item .desc {
-  width: auto;
-  padding: 7px 0 0 9.8px;
-}
-#bvtHome #indexListmain #listmainFreeShipping .list_item .desc .price_wrap,
-#bvtHome #indexListmain #listmainFreeShipping .list_item .desc .product_name,
-#bvtHome #indexListmain #listmainFreeShipping .list_item .desc .summary {
-  width: 91%;
-}
-#bvtHome #indexListmain #listmainBrand .list_item {
-  display: block;
-  border-radius: 4px;
-}
-#bvtHome #indexListmain #listmainBrand .list_item a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-#bvtHome #indexListmain #listmainBrand .list_item a img {
-  width: 100%;
-}
-#bvtHome #indexListmain .moreview_btn_wrap {
-  width: 100%;
-}
-#bvtHome #indexListmain .moreview_btn_wrap .moreview_btn {
+#bvtHome .swiper-pagination-best,
+#bvtHome .swiper-pagination-tab,
+#bvtHome .swiper-pagination-brand {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 118px;
-  height: 54px;
+  width: 70px;
+  height: 37px;
+  background: #F2F2F2;
+  font-size: 1.45rem;
+  color: #707070;
   margin: 0 auto;
-  border-radius: 32px;
-  color: #003DD3;
-  font-size: 1.7rem;
+  border-radius: 21px;
+  letter-spacing: 2px;
+}
+#bvtHome .swiper-pagination-best > .swiper-pagination-current,
+#bvtHome .swiper-pagination-tab > .swiper-pagination-current,
+#bvtHome .swiper-pagination-brand > .swiper-pagination-current {
   font-weight: 400;
-  background: #F2F4FC;
+  color: #292929;
+  font-size: 1.45rem;
 }
-#bvtHome #indexListmain .moreview_btn_wrap .moreview_btn .moreview_arrow {
-  margin-left: 7.2px;
+#bvtHome .swiper-pagination-best > .swiper-pagination-total,
+#bvtHome .swiper-pagination-tab > .swiper-pagination-total,
+#bvtHome .swiper-pagination-brand > .swiper-pagination-total {
+  letter-spacing: 0;
 }
-#bvtHome .listmain_arrow {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
+
+.swiper-pagination {
+  margin-top: 18px !important;
 }
-#bvtHome .listmain_arrow::after {
-  display: inline-block;
-  width: 8.083px;
-  height: 13.09px;
-  content: "";
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.083' height='13.09'%3E%3Cpath d='m0 1.54 5 5.007-5 5.007 1.538 1.536 6.545-6.55L1.538-.005Z' data-name='Icon material-keyboard-arrow-left'/%3E%3C/svg%3E");
+
+#review-aid-best-review-root {
+  margin-bottom: 80px;
 }/*# sourceMappingURL=index.css.map */
