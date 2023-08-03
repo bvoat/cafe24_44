@@ -48,7 +48,9 @@
         .brand {
             font-size: $brand-ftsize;
             color: $bvt-darkgray;
+            @include only-ellipsis(1, $summary-ftsize);
             margin-bottom: 3px;
+            font-weight: normal;
         }
 
         .summary {
@@ -57,49 +59,19 @@
             color: $bvt-darkgray;
             @include only-ellipsis(1, $summary-ftsize);
             margin-bottom: 7px;
+            font-weight: normal;
         }
 
         .product_name,
-        .product_name span {
+        .product_name>span,
+        .product_name>a {
             color: $bvt-black !important;
             font-size: $name-ftsize !important;
-            font-weight: 500;
+            font-weight: normal !important;
             word-wrap: break-word;
             word-break: keep-all;
             @include ellipsis(2, $name-ftsize);
             margin-bottom: 18px;
-        }
-    }
-}
-
-//위시 버튼
-@mixin wish-button($width, $height, $padding, $bottom, $left) {
-    .wish {
-        position: absolute;
-        width: auto;
-        height: auto;
-        cursor: pointer;
-        bottom: $bottom;
-        left: $left;
-        background: #fff;
-
-        button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: auto;
-            height: auto;
-            border: 0;
-            bottom: pink;
-            cursor: pointer;
-
-            img {
-                position: relative;
-                width: calc($width + ($padding * 2));
-                height: calc($height + ($padding * 2));
-                padding: $padding;
-                object-fit: contain;
-            }
         }
     }
 }
@@ -294,7 +266,7 @@
     -webkit-box-orient: vertical;
     word-wrap: break-word;
     line-height: $line-height + 0.3rem;
-    height: (($line-height) * $line-cnt) + 0.8rem;
+    height: (($line-height) * $line-cnt) + 0.6rem;
 }
 
 // ellipsis 처리만
