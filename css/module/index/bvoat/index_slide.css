@@ -10,28 +10,76 @@
 /* 인덱스 배너 */
 #indexBanner {
   position: relative;
-  width: 100%;
-  max-width: 450px;
-}
-#indexBanner ul {
-  width: 100%;
-}
-#indexBanner ul li {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
   width: 100%;
 }
-#indexBanner ul li a {
+#indexBanner .index_banner_list {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  transition-timing-function: linear 2s;
+}
+#indexBanner .index_banner_list .banner_item {
   position: relative;
-  display: block;
   width: 100%;
-  max-width: 450px;
-  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  font-size: 0;
 }
-#indexBanner ul li a img {
+#indexBanner .index_banner_list .banner_item a {
+  display: block;
+  position: relative;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  padding-top: 100%;
+}
+#indexBanner .index_banner_list .banner_item a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
-.banner_item_bullet {
-  top: 14.5px !important;
+/* 인덱스 하단 배너 */
+#indexBannerBottom {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 54px;
+}
+#indexBannerBottom .index_banner_list {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  transition-timing-function: linear 2s;
+}
+#indexBannerBottom .index_banner_list .banner_item {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  font-size: 0;
+}
+#indexBannerBottom .index_banner_list .banner_item a {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+#indexBannerBottom .index_banner_list .banner_item a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=index_slide.css.map */

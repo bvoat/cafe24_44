@@ -1,38 +1,232 @@
 
 /**
- * 날짜 계산
+ * SwiperJS
  */
-const calculationDate = () => {
-  //카페24에서 받은 마감 date
-  const promoEndArray = document.querySelectorAll(".promotion_end");
-  //표시할 node
-  const promoDateAreaArray = document.querySelectorAll(".promotion_date");
-  
-  promoEndArray.forEach((endDate, i)=>{
-    //Safari, iOS 대응 위한 Date 가공 (yyyy-mm-ddT00:00)
-    const rawCafe24Date = endDate.value.split(" ");
-    const endDay = rawCafe24Date[0]+"T"+rawCafe24Date[1];
-    const today = new Date();
-    const target = new Date(endDay);
-    const gap = target - today;
-    const diffDay = String(Math.floor(gap / (1000*60*60*24))).padStart(2,"");
-    const diffHour = String( Math.floor((gap / (1000*60*60)) % 24)).padStart(2,"0");
-    const diffMin = String(Math.floor((gap / (1000*60)) % 60)).padStart(2,"0");
-    const diffSec = String(Math.floor(gap / 1000 % 60)).padStart(2,"0");
-    if(target != 'Invalid Date'){
-      if (gap <= 0) {
-        promoDateAreaArray[i].innerText = "마감";
-      } else {
-        // promoDateAreaArray[i].innerText = `${diffDay}일 ${diffHour}:${diffMin}:${diffSec}`;
-        promoDateAreaArray[i].innerText = `${+diffDay + 1}일 남았어요!`;
+// 1줄
+var swiper = new Swiper(".list1line", {
+  slidesPerView: 2.323,
+  spaceBetween: 5.9,
+  //displaynone 이슈
+  observer: true,
+  observeParents: true,      
+});
+
+
+// 3x2줄
+var swiper = new Swiper(".list3x2list", {
+  slidesPerView: 3,
+  slidesPerColumn: 2,
+  slidesPerGroup: 6,
+  slidesPerColumnFill: 'row',
+  spaceBetween: 4.6,
+    pagination: {
+      el: ".swiper-pagination-best",
+      type: "fraction",
+    },
+    on: {
+      init: function(sw){
+        document.addEventListener("DOMContentLoaded", ()=>{
+          var current = document.querySelector(".swiper-pagination-best>.swiper-pagination-current");
+          var total = document.querySelector(".swiper-pagination-best>.swiper-pagination-total");
+          current.innerHTML = "1";
+          total.innerHTML = "2";
+        })
       }
-    } else {
-      promoDateAreaArray[i].innerText = "";
-      clearInterval(promotionTimer)
-    }
-  })
-};
-let promotionTimer = setInterval(calculationDate, 64000);
+    },
+});
+
+//tab 메뉴
+var swiper = new Swiper(".list_content_tap", {
+  slidesPerView: "auto",
+  spaceBetween: 8,
+})
+
+// 1줄 tab
+var swiper = new Swiper(".list1linetab", {
+  slidesPerView: 2.323,
+  spaceBetween: 5.9,
+  //displaynone 이슈
+  observer: true,
+  observeParents: true,      
+  observeSlideChildren: true,
+});
+
+
+// 3x2줄 tab
+var swiper = new Swiper(".tab2-1", {
+  slidesPerView: 3,
+  slidesPerColumn: 2,
+  slidesPerGroup: 6,
+  slidesPerColumnFill: 'row',
+  spaceBetween: 4.6,
+    //displaynone 이슈
+    observer: true,
+    observeParents: true, 
+    observeSlideChildren: true,
+    pagination: {
+      el: ".swiper-pagination-tab2-1",
+      type: "fraction",
+    },
+});
+var swiper = new Swiper(".tab2-2", {
+  slidesPerView: 3,
+  slidesPerColumn: 2,
+  slidesPerGroup: 6,
+  slidesPerColumnFill: 'row',
+  spaceBetween: 4.6,
+    //displaynone 이슈
+    observer: true,
+    observeParents: true, 
+    observeSlideChildren: true,
+    pagination: {
+      el: ".swiper-pagination-tab2-2",
+      type: "fraction",
+    },
+});
+var swiper = new Swiper(".tab2-3", {
+  slidesPerView: 3,
+  slidesPerColumn: 2,
+  slidesPerGroup: 6,
+  slidesPerColumnFill: 'row',
+  spaceBetween: 4.6,
+    //displaynone 이슈
+    observer: true,
+    observeParents: true, 
+    observeSlideChildren: true,
+    pagination: {
+      el: ".swiper-pagination-tab2-3",
+      type: "fraction",
+    },
+});
+var swiper = new Swiper(".tab2-4", {
+  slidesPerView: 3,
+  slidesPerColumn: 2,
+  slidesPerGroup: 6,
+  slidesPerColumnFill: 'row',
+  spaceBetween: 4.6,
+    //displaynone 이슈
+    observer: true,
+    observeParents: true, 
+    observeSlideChildren: true,
+    pagination: {
+      el: ".swiper-pagination-tab2-4",
+      type: "fraction",
+    },
+});
+
+
+
+//배너-브랜드
+var swiper = new Swiper(".only3", {
+  slidesPerView: 1,
+  spaceBetween: 9,
+  centeredSlides: true,
+      //displaynone 이슈
+      observer: true,
+      observeParents: true, 
+      observeSlideChildren: true,
+      pagination: {
+        el: ".swiper-pagination-brand",
+        type: "fraction",
+      },
+});
+var swiper = new Swiper(".only3item", {
+  slidesPerView: 3,
+  spaceBetween: 4.6,
+});
+
+var swiper = new Swiper(".index_banner_bottom", {
+slidesPerView: 1.8,
+spaceBetween: 8.1,
+centeredSlides: true,
+// pagination: {
+//   el: ".banner_item_bullet_bottom",
+// },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+});
+
+/**
+ * Tab 1,2
+ */
+
+const listmainTab1 = () => {
+  //node 배열
+  let tab1btn = document.querySelectorAll(".tab1");
+  let tab1listmain = document.querySelectorAll(".tabmain1");
+  //button에서 index 얻기
+  tab1btn.forEach((btns, i) => {
+      btns.addEventListener("click", (el) => {
+          //active 될 node index
+          let tab_index = i;
+          listmainTabActive(tab_index);
+      })
+  });
+  // class 교체
+  const listmainTabActive = (index) => {
+      //button active
+      tab1btn.forEach((btn, order) => {
+          console.log('btn: ', btn);
+          if (order == index) {
+              btn.parentElement.classList.add("active");
+          } else {
+              btn.parentElement.classList.remove("active");
+          }
+      });
+
+      // listmain active
+      tab1listmain.forEach((listmain, order) => {
+
+          if (order == index) {
+              listmain.classList.add("active");
+              listmain.classList.remove("displaynone");
+          } else {
+              listmain.classList.remove("active");
+              listmain.classList.add("displaynone");
+          }
+      });
+  }
+}
+const listmainTab2 = () => {
+  //node 배열
+  let tab2btn = document.querySelectorAll(".tab2");
+  let tab2listmain = document.querySelectorAll(".tabmain2");
+  //button에서 index 얻기
+  tab2btn.forEach((btns, i) => {
+      btns.addEventListener("click", (el) => {
+          //active 될 node index
+          let tab_index = i;
+          listmainTabActive(tab_index);
+      })
+  });
+  // class 교체
+  const listmainTabActive = (index) => {
+      //button active
+      tab2btn.forEach((btn, order) => {
+          if (order == index) {
+              btn.parentElement.classList.add("active");
+          } else {
+              btn.parentElement.classList.remove("active");
+          }
+      });
+
+      // listmain active
+      tab2listmain.forEach((listmain, order) => {
+
+          if (order == index) {
+              listmain.classList.add("active");
+              listmain.classList.remove("displaynone");
+          } else {
+              listmain.classList.remove("active");
+              listmain.classList.add("displaynone");
+          }
+      });
+  }
+}
+
 
 /**
  * 회원 수 불러오기
@@ -56,5 +250,30 @@ const receiveMemberCount = () => {
   });     
 }
 
-window.addEventListener("DOMContentLoaded",calculationDate());
-window.addEventListener("DOMContentLoaded", receiveMemberCount());
+
+//인기 순위
+const rankNumbering = () => {
+  const numbering = [1, 2, 3, 7, 8, 9, 4, 5, 6, 10, 11, 12]
+  const list = document.querySelectorAll(".list3x2list > ul > li")
+
+  list.forEach(li => {
+    const newDiv = document.createElement( 'div' )
+    newDiv.classList.add("numbering")
+    li.appendChild(newDiv);
+  });
+  document.querySelectorAll(".numbering").forEach((li,i) => {
+    li.innerHTML = numbering[i];
+  })
+}
+
+
+/**
+* 최종 함수 실행
+*/
+window.addEventListener("load", () => {
+  listmainTab1();
+  listmainTab2();
+  receiveMemberCount();
+  rankNumbering();
+})
+

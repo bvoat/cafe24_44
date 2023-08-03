@@ -5,52 +5,151 @@
 
 
 /**
-/* 구좌별 메인진열 (width 체크) */
+/* 구좌별 메인진열 */
 /* 구좌별 스타일 명시
 */
 
-/* 메인 진열 공통 */
-.index_list {
-    width: 100%;
-    max-width: 450px;
-    margin-bottom: 67px;
-    overflow: hidden;
+/* 메인진열 섹션 */
 
-    &:last-of-type {
-        margin-bottom: 0;
-    }
-
-    //메인 진열 제목
-    >h3 {
-        font-size: 2.2rem;
-        font-weight: 700;
-        margin-bottom: 18px;
-        padding: 0 11px;
-    }
-
-    //상품 설명 (mixin)
-    @include product-desc(10px, 1rem, 1.2rem, 1.4rem);
-
-    // 이미지 정사각형 공통 (mixin)
-    // thumb 부모에게 width 정해줘야 함!
-    @include product-thumb(4px);
+#indexListmain {
+	padding: 0 17px;
 }
 
-/* 메인 진열 공통 */
-
-
-/* 메인 진열 개별 */
-/* 페이지 프로그레스 */
-.list_item_progress {
-    width: 100%;
-    height: 3px;
-    margin-top: 26px;
+.list3x2list,
+.list3x2,
+.only3,
+.only3item,
+.tab_design2 {
+	overflow: hidden;
 }
 
-.list_item_bullet {
-    margin-top: px;
+;
+
+//지금 인기가 많아요
+.list3x2list {
+
+	//넘버링
+	.numbering {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 23px;
+		height: 23px;
+		background: $bvt-white;
+		color: $bvt-blue;
+		font-weight: bold;
+		font-size: 1.4rem;
+		border-radius: 50%;
+		z-index: 1;
+		top: 7.4px;
+		left: 6.8px;
+		box-shadow: 3px 3px 5px 0px #0D349513;
+	}
 }
 
-.swiper-pagination-progressbar {
-    background: #E7ECEF;
+//인기 브랜드 둘러보기
+.only3 {
+	.list_contents_wrap {
+		position: relative;
+
+		.only3item {
+
+			.brand_banner {
+				position: relative;
+				display: block;
+				width: 100%;
+				border-radius: 10px;
+				height: 200px;
+				margin-bottom: 14.6px;
+				overflow: hidden;
+
+				a {
+					position: relative;
+					display: block;
+					width: 100%;
+
+					img {
+						position: absolute;
+						width: 100%;
+						top: 0;
+						left: 0;
+						object-fit: contain;
+						background-size: contain;
+					}
+				}
+			}
+		}
+
+	}
 }
+
+
+.tab_design {
+	.list_content_tap {
+		margin-bottom: 16.6px;
+
+		ul {
+			display: flex;
+			flex-flow: row nowrap;
+
+			/* tab  wrpper*/
+			li {
+				display: flex;
+				flex-flow: row nowrap;
+				align-items: center;
+				justify-content: center;
+				border: $bvt-btn-border-gray;
+				border-radius: 22px;
+				background-color: $bvt-white;
+				margin-right: 8px;
+				box-sizing: border-box;
+				padding: 2% 3%;
+
+
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					font-size: 1.4rem;
+					font-weight: normal;
+					color: $bvt-darkgray;
+					line-height: 1.5rem;
+				}
+			}
+
+			li.active {
+				background: $bvt-blue;
+				border: 1px solid $bvt-blue;
+				box-sizing: border-box;
+				padding: 2% 3%;
+
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					font-size: 1.4rem;
+					color: $bvt-white;
+					font-weight: normal;
+					box-sizing: border-box;
+					line-height: 1.5rem;
+				}
+			}
+		}
+
+	}
+
+
+}
+
+.prdList {
+
+	.list_item {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: flex-start;
+	}
+}
+
+@include product-thumb(10px);
+@include product-desc(0.75rem, 11px, 1.1rem, 1.35rem);

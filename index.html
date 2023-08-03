@@ -1,277 +1,317 @@
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(/layout/basic/css/index.css)-->
-<!--@css(/layout/basic/css/aos.css)-->
-<script src="/js/aos.js"></script>
-<article id="bvtHome">
-    <!--인덱스 상단 배너-->
-    <section id="indexUserCnt" class="index_user">
-        <div id="joinbanner" class="joinbanner">
-            
-            <p><em class="membercnt"></em>명이 함께 탐험 중!
-            </p>
-            <p>
-            <em class="banner_text"><a href="/member/crew/crew.html" title="쿠폰 증정">친환경 라이프스타일, 매달 혜택과 함께</a></em>
-        </p>
-        </div>
 
-    </section>
+<script src="/js/aos.js"></script>
+<section id="bvtHome">
     <!--인덱스 상단 배너-->
+    <article id="indexUserCnt" class="index_user">
+        <a href="/member/crew/crew.html" title="쿠폰 증정">
+            <div id="joinbanner" class="joinbanner">
+                <p><em class="membercnt"></em>명이 함께 탐험 중!
+                </p>
+                <p>
+                    <em class="banner_text">친환경 라이프스타일, 매달 혜택과 함께</em>
+                </p>
+            </div>
+        </a>
+    </article>
     <!-- 메인 사각 배너 -->
-    <!-- @import(/main/module/index_slide.html) -->
+    <article id="indexListmain" class="index_list">
+        <h3>우리 가치소비 탐험 어때요?</h3>
+        <!--@import(/main/module/index_slide.html)-->
+    </article>
+    <!-- /메인 사각 배너 -->
+
     <!-- 메인진열 섹션 -->
-    <section id="indexListmain" class="index_list">
-        <!-- 펀딩 -->
-        <div id="listmainFunding" class="listmain">
-            <h3><a href="/funding/index.html" title="펀딩 보러가기">💌 펀딩 진행 중이에요<span class="listmain_arrow"></span></a></h3>
+    <article id="indexListmain" class="index_list" module="product_listmain_226">
+        <div class="listmain best">
+            <h3>{$category_title_text}</h3>
             <div class="list_contents_wrap">
-                <div class="list_item_box funding" module="product_listmain_18">
+                <div class="list_item_box list3x2list">
+
                     <!--
-                        $count = 20
+                        $count = 12
                         $basket_result = /product/add_basket.html
                         $basket_option = /product/basket_option.html
                     -->
-                    <!--@import(/funding/module/listmain_funding.html)-->
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
                 </div>
-                <div class="swiper-pagination list_item_bullet"></div>
+                <div class="swiper-pagination swiper-pagination-best"></div>
             </div>
         </div>
-
-        <!-- 새로 입점된 브랜드  -->
-        <div id="listmainBrand" class="listmain">
-            <h3>🏡 새로 입점된 브랜드<span class="listmain_arrow displaynone"></span></h3>
+        <div class="listmain line1" module="product_listmain_231">
+            <h3>{$category_title_text}</h3>
             <div class="list_contents_wrap">
-                <div id="brand" class="list_item_box brand">
-                    <ul class="swiper-wrapper">
-                        <li class="swiper-slide list_item"><a href="/minishop/sunnicorn"><img
-                                    src="/bvtIMG/banner/newbrand/sunnicorn.png" alt="브랜드 써니콘  미니샵 바로가기"></a></li>
-                        <li class="swiper-slide list_item"><a href="/minishop/pulphy"><img
-                                    src="/bvtIMG/banner/newbrand/pulphy.png" alt="브랜드 스튜디오 펄피 미니샵 바로가기"></a></li>
-                        <li class="swiper-slide list_item"><a href="/minishop/woocompany"><img
-                                    src="/bvtIMG/banner/newbrand/woocompany.png" alt="브랜드 아토르 미니샵 바로가기"></a></li>
-                            <li class="swiper-slide list_item"><a href="/minishop/flowermari"><img
-                                src="/bvtIMG/banner/newbrand/flowermari.png" alt="브랜드 꽃마리 미니샵 바로가기"></a></li>
-                        <li class="swiper-slide list_item"><a href="/minishop/altori"><img
-                                    src="/bvtIMG/banner/newbrand/altori.png" alt="브랜드 하동율림 미니샵 바로가기"></a></li>
-                        <li class="swiper-slide list_item"><a href="/minishop/vanda"><img
-                                    src="/bvtIMG/banner/newbrand/vanda.png" alt="브랜드 키위글로우 미니샵 바로가기"></a></li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- 주간 베스트 -->
-        <div id="listmainTopValue" class="listmain">
-            <h3>👍 비보트 주간 BEST<span class="listmain_arrow displaynone"></span></h3>
-            <div class="list_contents_wrap">
-                <div class="list_item_box best weekbest" module="product_listmain_226">
+                <div class="list_item_box list1line" >
                     <!--
                         $count = 10
                         $basket_result = /product/add_basket.html
                         $basket_option = /product/basket_option.html
                     -->
                     <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
                 </div>
             </div>
         </div>
-        <!-- 무료배송 -->
-        <div id="listmainFreeShipping" class="listmain listmain_pagination" module="product_listmain_1">
-            <h3><a href="/product/list.html?cate_no=1099" title="{$category_title_text}">{$category_title_text}<span
-                        class="listmain_arrow"></span></a></h3>
-            <div class="list_contents_wrap">
-                <div class="list_item_box freeshipping">
-                    <!--
-                                $count =24
-                                $basket_result = /product/add_basket.html
-                                $basket_option = /product/basket_option.html
-                            -->
-                    <!--@import(/product/product_module/listmain/listmain.html)-->
-                </div>
+
+        <div class="listmain tab_design tab_design1">
+            <h3>내 몸에 닿는 건 친환경으로</h3>
+            <div class="list_content_tap">
+                <ul class="swiper-wrapper tap_wrapper">
+                    <li class="swiper-slide active"><a id="tab1-1" class="tab1 ">선케어</a></li>
+                    <li class="swiper-slide"><a id="tab1-2" class="tab1">핸드 · 바디</a></li>
+                    <li class="swiper-slide"><a id="tab1-3" class="tab1">두피 케어</a></li>
+                    <li class="swiper-slide"><a id="tab1-4" class="tab1">비누</a></li>
+                    <li class="swiper-slide"><a id="tab1-5" class="tab1">세탁</a></li>
+                </ul>
             </div>
-        </div>
-        <!-- 테마 -->
-        <div id="listmainTheme_1" class="listmain listmain_pagination" module="product_listmain_227">
-            <h3><a href="/product/list.html?cate_no=1038" title="{$category_title_text}">{$category_title_text}<span
-                        class="listmain_arrow"></span></a></h3>
             <div class="list_contents_wrap">
-                <div class="list_item_box listmain_theme">
+                <div class="list_item_box list1linetab tabmain1 tab1-1" module="product_listmain_232">
                     <!--
-                        $count = 30
+                        $count = 10
                         $basket_result = /product/add_basket.html
                         $basket_option = /product/basket_option.html
                     -->
                     <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
                 </div>
-            </div>
-        </div>
-        <!-- 테마 -->
-        <div id="listmainTheme_2" class="listmain listmain_pagination" module="product_listmain_228">
-            <h3><a href="/product/list.html?cate_no=627" title="{$category_title_text}">{$category_title_text}<span
-                        class="listmain_arrow"></span></a></h3>
-            <div class="list_contents_wrap">
-                <div class="list_item_box listmain_theme">
+                <div class="list_item_box list1line tabmain1 tab1-2 displaynone" module="product_listmain_233">
                     <!--
-                        $count = 30
+                        $count = 10
                         $basket_result = /product/add_basket.html
                         $basket_option = /product/basket_option.html
                     -->
                     <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
                 </div>
-            </div>
-        </div>
-        <!-- 테마 -->
-        <div id="listmainTheme_3" class="listmain listmain_pagination" module="product_listmain_229">
-            <h3><a href="/product/list.html?cate_no=685" title="{$category_title_text}">{$category_title_text}<span
-                        class="listmain_arrow"></span></a></h3>
-            <div class="list_contents_wrap">
-                <div class="list_item_box listmain_theme">
+                <div class="list_item_box list1line tabmain1 tab1-3 displaynone" module="product_listmain_234">
                     <!--
-                        $count = 30
+                        $count = 10
                         $basket_result = /product/add_basket.html
                         $basket_option = /product/basket_option.html
                     -->
                     <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
                 </div>
-            </div>
-        </div>
-        <!-- 테마 -->
-        <div id="listmainTheme_4" class="listmain listmain_pagination" module="product_listmain_230">
-            <h3><a href="/product/list.html?cate_no=1018" title="{$category_title_text}">{$category_title_text}<span
-                        class="listmain_arrow"></span></a></h3>
-            <div class="list_contents_wrap">
-                <div class="list_item_box listmain_theme">
+                <div class="list_item_box list1line tabmain1 tab1-4 displaynone" module="product_listmain_235">
                     <!--
-                        $count = 30
+                        $count = 10
                         $basket_result = /product/add_basket.html
                         $basket_option = /product/basket_option.html
                     -->
                     <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
+                </div>
+                <div class="list_item_box list1line tabmain1 tab1-5 displaynone" module="product_listmain_236">
+                    <!--
+                        $count = 10
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
                 </div>
             </div>
         </div>
-        <!--@import(/main/module/board_8.html)-->
-    </section>
-    <!-- 메인진열 섹션 -->
-    <!--@layout(/layout/basic/layout.html)-->
-</article>
+        <div class="listmain tab_design tab_design2">
+            <h3>나와 너를 위한 선물</h3>
+            <div class="list_content_tap">
+                <ul class="swiper-wrapper tap_wrapper">
+                    <li class="swiper-slide active"><a id="tab2-1" class="tab2 ">집들이 · 선물세트 </a></li>
+                    <li class="swiper-slide"><a id="tab2-2" class="tab2">데일리 · 리추얼</a></li>
+                    <li class="swiper-slide"><a id="tab2-3" class="tab2">바를거리</a></li>
+                    <li class="swiper-slide"><a id="tab2-4" class="tab2">비건 푸드</a></li>
+                </ul>
+            </div>
+            <div class="list_contents_wrap">
+                <div class="list_item_box list3x2tab tabmain2 tab2-1" module="product_listmain_237">
+                    <!--
+                        $count = 10
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="swiper-pagination swiper-pagination-tab swiper-pagination-tab2-1"></div>
+                </div>
+                <div class="list_item_box list3x2 tabmain2 tab2-2 displaynone" module="product_listmain_238">
+                    <!--
+                        $count = 10
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="swiper-pagination swiper-pagination-tab swiper-pagination-tab2-2"></div>
+                </div>
+                <div class="list_item_box list3x2 tabmain2 tab2-3 displaynone" module="product_listmain_239">
+                    <!--
+                        $count = 10
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="swiper-pagination swiper-pagination-tab swiper-pagination-tab2-3"></div>
+                </div>
+                <div class="list_item_box list3x2 tabmain2 tab2-4 displaynone" module="product_listmain_240">
+                    <!--
+                        $count = 10
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="swiper-pagination swiper-pagination-tab swiper-pagination-tab2-4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="listmain line1 only3">
+            <h3>인기 브랜드 둘러보기</h3>
+            <div class="list_contents_wrap swiper-wrapper">
+                <div class="only3item brand1 swiper-slide" module="product_listmain_80">
+                    <!--
+                        $count = 3
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <div class="brand_banner"><a href="/supply/index.html?supplier_code=S00000KS" title="핸드메이드로 나를 돌보는 시간"><img src="/bvtIMG/banner/newbrand/230803_brand_1.webp" alt="에리제론 핸드메이드로 나를 돌보는 시간 인기 브랜드 둘러보기"  /></a></div>
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
+                </div>
+                <div class="only3item brand2 swiper-slide" module="product_listmain_94">
+                    <!--
+                        $count = 3
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <div class="brand_banner"><a href="/supply/index.html?supplier_code=S000000O" title="엄선된 친환경을 한 번에 만나는 곳"><img src="/bvtIMG/banner/newbrand/230803_brand_2.webp" alt="비보트 엄선된 친환경을 한 번에 만나는 곳 인기 브랜드 둘러보기"  /></a></div>
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
+                </div>
+                <div class="only3item brand3 swiper-slide" module="product_listmain_95">
+                    <!--
+                        $count = 3
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <div class="brand_banner"><a href="/supply/index.html?supplier_code=S0000BBC" title="지구와 사람들을 위한 생태적인 세제"><img src="/bvtIMG/banner/newbrand/230803_brand_3.webp" alt="꽃마리 지구와 사람들을 위한 생태적인 세제 인기 브랜드 둘러보기"  /></a></div>
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
+                </div>
+                <div class="only3item brand4 swiper-slide" module="product_listmain_96">
+                    <!--
+                        $count = 3
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <div class="brand_banner"><a href="/supply/index.html?supplier_code=S0000BBC" title="건강한 몸과 마음을 위한 나의 이야기"><img src="/bvtIMG/banner/newbrand/230803_brand_4.webp" alt="써니콘 건강한 몸과 마음을 위한 나의 이야기 인기 브랜드 둘러보기"  /></a></div>
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
+                </div>
+                <div class="only3item brand5 swiper-slide" module="product_listmain_97">
+                    <!--
+                        $count = 3
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <div class="brand_banner"><a href="/supply/index.html?supplier_code=S00000CO" title="약사가 만든 브랜드, 순식물성 영양제"><img src="/bvtIMG/banner/newbrand/230803_brand_5.webp" alt="영롱 약사가 만든 브랜드, 순식물성 영양제 인기 브랜드 둘러보기"  /></a></div>
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
+                </div>
+                <div class="only3item brand6 swiper-slide" module="product_listmain_211">
+                    <!--
+                        $count = 3
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <div class="brand_banner"><a href="/supply/index.html?supplier_code=S00000IF" title="향기 좋다고 입소문 난, 제주 공항의 선택"><img src="/bvtIMG/banner/newbrand/230803_brand_6.webp" alt="코코리제주 향기 좋다고 입소문 난, 제주 공항의 선택 인기 브랜드 둘러보기"  /></a></div>
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
+                </div>
+                <div class="only3item brand7 swiper-slide" module="product_listmain_212">
+                    <!--
+                        $count = 3
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <div class="brand_banner"><a href="/supply/index.html?supplier_code=S00000VK" title="지구에 사는 모든 생명을 존중하는 마음을 담아"><img src="/bvtIMG/banner/newbrand/230803_brand_7.webp" alt="퐁 지구에 사는 모든 생명을 존중하는 마음을 담아 인기 브랜드 둘러보기"  /></a></div>
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
+                </div>
+                <div class="only3item brand8 swiper-slide" module="product_listmain_213">
+                    <!--
+                        $count = 3
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <div class="brand_banner"><a href="/supply/index.html?supplier_code=S00000PY" title="핸드폰도 지구도 함께 지킬 수 있다면"><img src="/bvtIMG/banner/newbrand/230803_brand_8.webp" alt="폴라올라 핸드폰도 지구도 함께 지킬 수 있다면 인기 브랜드 둘러보기"  /></a></div>
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
+                </div>
+                <div class="only3item brand9 swiper-slide" module="product_listmain_224">
+                    <!--
+                        $count = 3
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <div class="brand_banner"><a href="/supply/index.html?supplier_code=S00000ED" title="심플하고 자연에 가까운 유기농 비누"><img src="/bvtIMG/banner/newbrand/230803_brand_9.webp" alt="라라어스 심플하고 자연에 가까운 유기농 비누 인기 브랜드 둘러보기"  /></a></div>
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
+                </div>
+                <div class="only3item brand10 swiper-slide" module="product_listmain_225">
+                    <!--
+                        $count = 3
+                        $basket_result = /product/add_basket.html
+                        $basket_option = /product/basket_option.html
+                    -->
+                    <div class="brand_banner"><a href="/supply/index.html?supplier_code=S00000HQ" title="비건 구강 청결 브랜드, 함께 시작해요"><img src="/bvtIMG/banner/newbrand/230803_brand_10.webp" alt="쏘두위  비건 구강 청결 브랜드, 함께 시작해요  인기 브랜드 둘러보기"  /></a></div>
+                    <!--@import(/product/product_module/listmain/listmain.html)-->
+                    <div class="listmain-pagination-num"></div>
+                </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-brand"></div>
+        </div>
+    </article>
+    <!-- /메인진열 섹션 -->
+
+    <!-- 하단  사각 배너 -->
+    <article id="indexListmain" class="index_list">
+        <h2>내가 찾던 친환경 라이프 시작</h2>
+        <div id="indexBannerBottom" class="index_banner_bottom">
+            <ul class="index_banner_list swiper-wrapper">
+                <li class="banner_item swiper-slide">
+                    <a href="/product/project.html?cate_no=1108" title="일반 가죽보다 매력적인 비건 가죽">
+                        <img src="/bvtIMG/banner/mainlistbanner/230803_special_1.webp" alt="일반 가죽보다 매력적인 비건 가죽">
+                    </a>
+                </li>
+                <li class="banner_item swiper-slide">
+                    <a href="/product/project.html?cate_no=1109" title="친환경 라이프 감성의 끝 생분해 폰케이스">
+                        <img src="/bvtIMG/banner/mainlistbanner/230803_special_2.webp" alt="친환경 라이프 감성의 끝 생분해 폰케이스">
+                    </a>
+                </li>
+                <li class="banner_item swiper-slide">
+                    <a href="/product/project.html?cate_no=1112" title="지구 힙스터 납시오 프라이탁 같은">
+                        <img src="/bvtIMG/banner/mainlistbanner/230803_special_3.webp" alt="지구 힙스터 납시오 프라이탁 같은">
+                    </a>
+                </li>
+                <li class="banner_item swiper-slide">
+                    <a href="/product/project.html?cate_no=1114" title="순한 비누 좋아, 바 타입 좋아 러쉬 같은">
+                        <img src="/bvtIMG/banner/mainlistbanner/230803_special_4.webp" alt="순한 비누 좋아, 바 타입 좋아 러쉬 같은">
+                    </a>
+                </li>
+            </ul>
+        </div>
+<!-- <div class="swiper-pagination banner_item_bullet_bottom"></div> -->
+
+    </article>
+    <!-- /하단 사각 배너 -->
+
+    <!-- 리뷰에이드 베스트 위젯 -->
+
+    <div id="review-aid-best-review-root" class="ReviewAidV2"></div>
+    <!-- /리뷰에이드 베스트 위젯 -->
+</section>
 <!--@import(/layout/basic/footer.html)-->
 <!--@define(cmc_log)-->
-<script src="/layout/basic/js/index.js"></script>
-<!-- AOS 초기화 -->
-<script>
-    AOS.init();
-    /* 슬라이더 */
 
-    // Funding 메인진열 슬라이드
-    var swiper = new Swiper(".funding", {
-        slidesPerView: 1,
-        spaceBetween: 11,
-        loop: document.querySelectorAll(".bvt-funding > li").length > 3,
-        autoplay: {
-            delay: 4500,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".list_item_bullet",
-            clickable: true,
-        },
-    });
-    // 무료배송
-    var swiper = new Swiper(".freeshipping", {
-        slidesPerView: 1.112,
-        slidesPerColumn: 4,
-    });
-    // Brand 메인진열 슬라이드
-    var swiper = new Swiper("#brand", {
-        slidesPerView: 2.16168,
-        spaceBetween: 10,
-    });
-    // 주간베스트
-    var swiper = new Swiper(".best", {
-        slidesPerView: 2.2227,
-        spaceBetween: 10,
-    });
-    // 테마
-    var swiper = new Swiper(".listmain_theme", {
-        slidesPerView: 1.7,
-        spaceBetween: 10,
-        freeMode: {
-            enabled: true,
-            minimumVelocity: 2,
-            momentumBounceRatio: 0.1,
-            momentumRatio: 0.5,
-            momentumVelocityRatio: 0.5,
-        },
-    });
-</script>
-<script>
-
-
-    //나머지 노드 찾기
-    const getSibiling = (nodearray, btn) => {
-        return nodearray && [...nodearray].filter(node => node != btn);
-    }
-
-    /* 더보기 세팅 */
-    const moreview_listmain = document.querySelectorAll(".moreview .prdList");
-    //초기 로딩 시 4개 제외하고 모두 displaynone 처리
-    const hideMoreview = () => {
-        moreview_listmain.forEach(list => {
-            [...list.children].forEach((item, i) => {
-                i > 3 ?
-                    item.classList.add("displaynone") :
-                    null;
-
-            });
-        });
-    };
-
-    /* 더보기 버튼 */
-    //display none인 값 모을 배열
-    let none_arr = [];
-    const clickMoreviewBtn = () => {
-        const moreviewBtn = document.querySelectorAll(".moreview_btn");
-        moreviewBtn.forEach(el => {
-            el.addEventListener("click", (e) => {
-                //display none이 있는 상태에서의 이벤트
-                const buttonClass = e.currentTarget.dataset.btn;
-                const selectList = document.querySelector(`.list_item_box.${buttonClass}>.prdList`);
-
-                //더보기 끝났는지 체크 (item 중 display none인게 있는지 검사)
-                const clickListItem = selectList.children;
-                if ([...clickListItem].filter((item) => { return window.getComputedStyle(item).display === 'none' }).length != 0) {
-                    //clickTagListItem 중 display가 none인 것 찾아서 4개 바꾸기
-                    [...clickListItem].forEach((item) => {
-                        if (window.getComputedStyle(item).display === 'none') {
-                            none_arr.push(item);
-                        }
-                    });
-                    console.log('none_arr: ', none_arr.length);
-
-                    if (none_arr.length > 4) {
-                        //index 0-3까지 4개의 상품 list flex로 변경
-                        for (let i = 0; i < 4; i++) {
-                            none_arr[i].classList.remove("displaynone");
-                        }
-                        //display none 값 가진 배열 초기화
-                        none_arr = [];
-                    } else if (none_arr.length < 4) {
-                        console.log("none_arr", none_arr)
-                        none_arr.forEach(item => {
-                            item.classList.remove("displaynone");
-                        });
-                        //더보기 버튼 삭제
-                        e.currentTarget.classList.add("displaynone");
-                    }
-                } else {
-                    //더보기 버튼 삭제
-                    e.currentTarget.classList.add("displaynone");
-                }
-            })
-        })
-    }
-    window.addEventListener("DOMContentLoaded", () => {
-        hideMoreview();
-        clickMoreviewBtn();
-    })
-</script>
+<script defer src="/layout/basic/js/index.js"></script>
 <script defer src="https://snippet.reviewaid.ai/latest/request-review.js"></script>
+<script defer src="https://snippet.reviewaid.ai/latest/best-review-v2.js"></script>
