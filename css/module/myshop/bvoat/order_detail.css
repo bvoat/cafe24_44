@@ -40,7 +40,7 @@
   font-size: 1.4rem;
 }
 #orderDetail .boardTotal strong {
-  color: #022CFF !important;
+  color: #003DD3 !important;
 }
 #orderDetail .boardTotal td {
   padding: 14px 14px 14px 0;
@@ -50,7 +50,7 @@
   font-size: 13px;
 }
 #orderDetail .review_btn {
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
   font-weight: bold;
   font-size: 13px;
@@ -60,7 +60,7 @@
 }
 #orderDetail .review_btn:hover {
   background: #ffffff;
-  color: #022CFF;
+  color: #003DD3;
 }
 #orderDetail .ec-base-fold.theme3 .contents {
   font-size: 13px;
@@ -88,7 +88,7 @@
 #orderDetail .list_btn {
   display: block;
   width: 100%;
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
   font-size: 16px;
   font-weight: bold;
@@ -255,7 +255,7 @@
   align-items: center;
   width: 66px;
   height: 30px;
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
   font-size: 1.4rem;
   font-weight: 500;
@@ -272,7 +272,7 @@
   background: #F2F2F2;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #022CFF;
+  color: #003DD3;
 }
 #orderCancel #orderCancelTable .ec-base-fold dt.selected:after {
   transform: rotate(180deg);
@@ -390,18 +390,18 @@
   align-items: center;
   width: 40%;
   height: 55px;
-  border: 1px solid #022CFF;
+  border: 1px solid #003DD3;
   border-radius: 40px;
 }
 #orderCancel .ec-base-button > a:nth-child(1) {
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
   font-size: 1.6rem;
   font-weight: 600;
 }
 #orderCancel .ec-base-button > a:nth-child(2) {
   background: #ffffff;
-  color: #022CFF;
+  color: #003DD3;
   font-size: 1.6rem;
   font-weight: 600;
 }/*# sourceMappingURL=order_detail.css.map */

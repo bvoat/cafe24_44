@@ -90,7 +90,7 @@
   margin-bottom: 10px;
 }
 #memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .monthly_couponzone .crew_title em {
-  color: #022CFF;
+  color: #003DD3;
 }
 #memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .monthly_couponzone .couponSkinArea {
   display: flex;
@@ -112,7 +112,7 @@
 }
 #memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .crew_couponzone {
   position: relative;
-  background: #022CFF;
+  background: #003DD3;
   padding: 70px 0 60px;
   overflow: hidden;
 }
@@ -194,7 +194,7 @@
   align-items: center;
   width: 84px;
   height: 39px;
-  color: #022CFF;
+  color: #003DD3;
   background: #ffffff;
   font-size: 1.8rem;
   font-weight: 500;
@@ -338,7 +338,7 @@
   position: absolute;
   width: 66px;
   height: 37px;
-  background: #022CFF;
+  background: #003DD3;
   font-size: 1.3rem;
   font-weight: 600;
   color: #ffffff;
@@ -375,7 +375,7 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  color: #022CFF;
+  color: #003DD3;
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -412,7 +412,7 @@
   align-items: center;
   font-size: 1.7rem;
   font-weight: 700;
-  color: #022CFF;
+  color: #003DD3;
   background: none;
   animation: up-and-down-item 1.2s ease-in-out infinite;
 }

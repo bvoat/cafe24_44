@@ -87,12 +87,12 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.3rem;
-  height: 2.8rem;
+  height: 2.6rem;
 }
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .information li:nth-child(2) {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #022CFF;
+  color: #003DD3;
 }
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .information li:nth-child(3) {
   position: absolute;
@@ -191,7 +191,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  background: #022CFF;
+  background: #003DD3;
   border-radius: 12px;
   color: #ffffff;
   font-weight: 500;

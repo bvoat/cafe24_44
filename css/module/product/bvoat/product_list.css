@@ -78,7 +78,17 @@
 .desc .brand {
   font-size: 0rem;
   color: #707070;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.5rem;
   margin-bottom: 3px;
+  font-weight: normal;
 }
 .desc .summary {
   display: block;
@@ -94,12 +104,14 @@
   word-wrap: break-word;
   line-height: 1.5rem;
   margin-bottom: 7px;
+  font-weight: normal;
 }
 .desc .product_name,
-.desc .product_name span {
+.desc .product_name > span,
+.desc .product_name > a {
   color: #292929 !important;
   font-size: 1.4rem !important;
-  font-weight: 500;
+  font-weight: normal !important;
   word-wrap: break-word;
   word-break: keep-all;
   display: block;
@@ -111,6 +123,6 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.7rem;
-  height: 3.6rem;
+  height: 3.4rem;
   margin-bottom: 18px;
 }/*# sourceMappingURL=product_list.css.map */

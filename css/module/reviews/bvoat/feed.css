@@ -92,7 +92,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 3.3rem;
-  height: 3.8rem;
+  height: 3.6rem;
   line-height: normal;
   height: auto;
 }
@@ -181,7 +181,7 @@
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .reviews_thumb_box .reviews_rate span {
   font-size: 1.3rem;
   font-weight: 400;
-  color: #022CFF;
+  color: #003DD3;
   margin-left: 2px;
 }
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .reviews_reaction_box {
@@ -207,14 +207,14 @@
   align-items: center;
   width: 40px;
   height: 22px;
-  border: 1px solid #022CFF;
+  border: 1px solid #003DD3;
   border-width: 1.2px;
   border-radius: 2px;
   background: #ffffff;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: -0.2px;
-  color: #022CFF;
+  color: #003DD3;
   padding: 1px 7px 0;
 }
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .reviews_reaction_box .reviews_reaction .reviews_likes::before {
@@ -227,7 +227,7 @@
   margin-right: 1px;
 }
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .reviews_reaction_box .reviews_reaction .reviews_likes.active {
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
 }
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .reviews_reaction_box .reviews_reaction .reviews_likes.active::before {
@@ -273,7 +273,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 2.3rem;
-  height: 4.8rem;
+  height: 4.6rem;
 }
 
 /* 리뷰 상세보기 view.html */
@@ -339,7 +339,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 2.7rem;
-  height: 3.2rem;
+  height: 3rem;
   line-height: normal;
   height: auto;
 }
@@ -364,7 +364,7 @@
   height: 26px;
   background: #F5F6FB;
   border-radius: 2px;
-  color: #022CFF;
+  color: #003DD3;
   font-size: 1.45rem;
   font-weight: 700;
 }
@@ -375,7 +375,7 @@
 }
 #reviewsViewWrap .reviews_item .userinfo_wrap .userfollow button.following {
   color: #ffffff;
-  background: #022CFF;
+  background: #003DD3;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap {
   width: 100%;
@@ -461,7 +461,7 @@
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_thumb_box .reviews_rate span {
   font-size: 1.3rem;
   font-weight: 400;
-  color: #022CFF;
+  color: #003DD3;
   margin-left: 2px;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_content {
@@ -575,7 +575,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 2.4rem;
-  height: 2.9rem;
+  height: 2.7rem;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .prd_info p:nth-child(2) {
   font-size: 1.4rem;
@@ -590,7 +590,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 2.2rem;
-  height: 2.7rem;
+  height: 2.5rem;
 }
 #reviewsViewWrap .reviews_item .reviews_reaction_box {
   display: flex;
@@ -614,14 +614,14 @@
   align-items: center;
   width: 138px;
   height: 30px;
-  border: 1px solid #022CFF;
+  border: 1px solid #003DD3;
   border-width: 1.2px;
   border-radius: 2px;
   background: #ffffff;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 2.027rem;
-  color: #022CFF;
+  color: #003DD3;
 }
 #reviewsViewWrap .reviews_item .reviews_reaction_box .reviews_reaction .reviews_likes span {
   font-weight: 700;
@@ -636,7 +636,7 @@
   margin-right: 3.68px;
 }
 #reviewsViewWrap .reviews_item .reviews_reaction_box .reviews_reaction .reviews_likes.active {
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
 }
 #reviewsViewWrap .reviews_item .reviews_reaction_box .reviews_reaction .reviews_likes.active::before {
@@ -659,7 +659,7 @@
   align-items: center;
   width: 264px;
   height: 40px;
-  background: #022CFF;
+  background: #003DD3;
   opacity: 50%;
   border-radius: 20px;
   font-size: 1.45rem;
@@ -711,7 +711,7 @@
   line-height: 2.2rem;
 }
 #reviewsViewWrap .reviews_item .reviews_reaction_box .reviews_control .reviews_admin .admin_modal .modify {
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
 }
 #reviewsViewWrap .reviews_item .reviews_reaction_box .reviews_control .reviews_admin .admin_modal .delete {
@@ -828,7 +828,7 @@
 }
 #reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .admin_modal .edit,
 #reviewsViewWrap .comment_box .comment_list .cmt_item .child_user_wrap .comment_admin .admin_modal .edit {
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
 }
 #reviewsViewWrap .comment_box .comment_list .cmt_item .user_wrap .comment_admin .admin_modal .delete,
@@ -868,7 +868,7 @@
   height: 17px;
   font-size: 1.45rem;
   font-weight: 700;
-  color: #022CFF;
+  color: #003DD3;
   top: 22px;
   right: 14px;
   background: #ffffff;
@@ -990,7 +990,7 @@
   background: #ffffff;
 }
 #reviewsViewWrap .comment_write_box form fieldset .cmt_create_btn.active {
-  color: #022CFF;
+  color: #003DD3;
 }
 #reviewsViewWrap .write_move {
   display: flex;
@@ -1005,7 +1005,7 @@
   align-items: center;
   width: 100%;
   height: 49px;
-  background: #022CFF;
+  background: #003DD3;
   box-shadow: 3px 3px 11px #C7C7C7;
   border-radius: 5px;
   font-size: 1.6rem;
@@ -1115,7 +1115,7 @@
   width: 100%;
   max-width: 180px;
   height: 40px;
-  border: 1px solid #022CFF;
+  border: 1px solid #003DD3;
   border-radius: 5px;
   border-width: 1.2px;
   font-size: 1.6rem;
@@ -1123,11 +1123,11 @@
   margin-right: 10px;
 }
 #reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .user_reaction .write_reviews {
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
 }
 #reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .user_reaction .modify_profile {
-  color: #022CFF;
+  color: #003DD3;
 }
 #reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .user_reaction .follow_action {
   display: flex;
@@ -1137,12 +1137,12 @@
   width: 100%;
   max-width: none;
   height: 40px;
-  border: 1px solid #022CFF;
+  border: 1px solid #003DD3;
   border-radius: 5px;
   border-width: 1.2px;
   font-size: 1.6rem;
   font-weight: 600;
-  color: #022CFF;
+  color: #003DD3;
   margin-right: 7px;
   background: transparent;
 }
@@ -1155,7 +1155,7 @@
 }
 #reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .user_reaction .follow_action.following {
   color: #ffffff;
-  background: #022CFF;
+  background: #003DD3;
 }
 #reviewsProfileWrap #reviewsProfileTitle .userinfo_wrap .user_reaction .follow_action.following::after {
   display: none;
@@ -1331,7 +1331,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 2.1rem;
-  height: 2.6rem;
+  height: 2.4rem;
 }
 #reviewsWriteWrap #reviewsWriteProduct > button .product_info .product_option {
   width: 100%;
@@ -1347,7 +1347,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 2.1rem;
-  height: 2.6rem;
+  height: 2.4rem;
 }
 #reviewsWriteWrap #reviewsWriteProduct > button .product_info .product_price {
   font-weight: 400;
@@ -1391,7 +1391,7 @@
 }
 #reviewsWriteWrap #reviewsWriteTitle > details summary em {
   font-weight: 600;
-  color: #022CFF;
+  color: #003DD3;
   margin-left: 5px;
 }
 #reviewsWriteWrap #reviewsWriteTitle > details summary::-webkit-details-marker {
@@ -1422,7 +1422,7 @@
 }
 #reviewsWriteWrap #reviewsWriteTitle > details > ol li em {
   font-weight: 600;
-  color: #022CFF;
+  color: #003DD3;
   margin-left: 5px;
 }
 #reviewsWriteWrap #reviewsWriteTitle > details > ol li:first-child {
@@ -1456,7 +1456,7 @@
 #reviewsWriteWrap #reviewsWriteBox h3 {
   font-weight: 700;
   font-size: 1.6rem;
-  color: #022CFF;
+  color: #003DD3;
   letter-spacing: -0.5px;
   margin-bottom: 8px;
 }
@@ -1582,7 +1582,7 @@
   align-items: center;
   font-size: 1.6rem;
   font-weight: 700;
-  color: #022CFF;
+  color: #003DD3;
   letter-spacing: -0.5px;
   background: #ffffff;
   border: 1px dashed #CECECE;
@@ -1667,7 +1667,7 @@
   color: #ffffff;
 }
 #reviewsWriteWrap #reviewsWriteBox .review_submit_btn.active {
-  background: #022CFF;
+  background: #003DD3;
 }
 #reviewsWriteWrap #reviewsTerms {
   width: 100%;
@@ -1749,7 +1749,7 @@
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_purchase_data span {
   font-weight: 600;
-  color: #022CFF;
+  color: #003DD3;
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product {
   position: relative;
@@ -1814,7 +1814,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 2.1rem;
-  height: 2.6rem;
+  height: 2.4rem;
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_info .product_option {
   position: relative;
@@ -1896,11 +1896,11 @@
   align-items: center;
   width: 100%;
   height: 40px;
-  border: 1px solid #022CFF;
+  border: 1px solid #003DD3;
   border-radius: 5px;
   font-size: 1.4rem;
   font-weight: 700;
-  color: #022CFF;
+  color: #003DD3;
 }
 
 /* 팔로잉, 팔로워 follow.html */
@@ -1982,15 +1982,15 @@
 }
 #reviewsUserFollowWrap #reviewsUserFollowListBox #reviewsUserFollowList li.user_item ul.user_box li.userfollow button.follow {
   background: #ffffff;
-  color: #022CFF;
-  border: 1px solid #022CFF;
+  color: #003DD3;
+  border: 1px solid #003DD3;
 }
 #reviewsUserFollowWrap #reviewsUserFollowListBox #reviewsUserFollowList li.user_item ul.user_box li.userfollow button.following {
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
 }
 #reviewsUserFollowWrap #reviewsUserFollowListBox #reviewsUserFollowList li.user_item ul.user_box li.userfollow button.active {
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
 }
 
@@ -2032,7 +2032,7 @@
   align-items: center;
   width: 264px;
   height: 40px;
-  background: #022CFF;
+  background: #003DD3;
   opacity: 50%;
   border-radius: 20px;
   font-size: 1.45rem;
@@ -2095,7 +2095,7 @@
   line-height: 1.73rem;
 }
 #bvtReviewForm .ok_btn {
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
   margin-bottom: 10.26px;
 }

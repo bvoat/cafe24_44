@@ -192,7 +192,7 @@
   margin-bottom: 15px;
 }
 .option_direct table tbody tr .product > span {
-  color: #022CFF;
+  color: #003DD3;
 }
 .option_direct table tbody tr .quantity {
   position: relative;
@@ -342,7 +342,7 @@
 .buy_screen_option_result .total_wrap .total strong {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #022CFF;
+  color: #003DD3;
   margin-right: 2px;
 }
 .buy_screen_option_result .total_wrap .total strong em {
@@ -371,7 +371,7 @@
   display: inline-block;
   font-size: 1.5rem !important;
   font-weight: 700 !important;
-  color: #022CFF !important;
+  color: #003DD3 !important;
 }
 .buy_screen_option_result .total_delivery_price.not_free span.delv_price_B {
   font-weight: 500 !important;
@@ -382,7 +382,7 @@
 .buy_screen_option_result .total_delivery_price.not_free span.delv_price_B > strong {
   font-size: 1.5rem !important;
   font-weight: 700 !important;
-  color: #022CFF !important;
+  color: #003DD3 !important;
 }
 .buy_screen_option_result .total_delivery_price.not_free span.delv_price_B > strong::after {
   content: "원";
@@ -526,7 +526,7 @@
   min-height: 56px;
   font-weight: 700;
   font-size: 1.6rem;
-  border: 1px solid #022CFF;
+  border: 1px solid #003DD3;
   border-radius: 5px;
 }
 .buy_button .btn_cart {
@@ -534,10 +534,10 @@
 }
 .buy_button .btn_cart button {
   background: #ffffff;
-  color: #022CFF;
+  color: #003DD3;
 }
 .buy_button .btn_buy button {
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
 }
 .buy_button .select_none {

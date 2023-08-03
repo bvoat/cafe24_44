@@ -113,7 +113,7 @@
   right: 0;
   font-size: 1.3rem;
   font-weight: bold;
-  color: #022CFF;
+  color: #003DD3;
 }
 #productBoardList #productBoardListWrap li.review_item .item .item_anchor .thumbnail_info .rate::before {
   display: block;
@@ -238,7 +238,7 @@
 }
 #productBoardList #productBoardPagenation ol .this {
   font-weight: bold;
-  color: #022CFF;
+  color: #003DD3;
   background: #F5F6FB;
 }
 #productBoardList #productBoardSearch {
@@ -279,7 +279,7 @@
   border: 1px solid #E2E2E2;
 }
 #productBoardList #productBoardSearch fieldset button {
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
   font-size: 1.4rem;
   font-weight: bold;

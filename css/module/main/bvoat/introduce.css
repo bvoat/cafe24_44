@@ -50,7 +50,7 @@
   padding: 18px 29px 63px;
 }
 #bvoatIntroduce #bvoatBeginning .introduce_title em {
-  color: #022CFF;
+  color: #003DD3;
 }
 #bvoatIntroduce #bvoatBeginning .introduce_title::before {
   display: block;
@@ -92,7 +92,7 @@
   padding: 53px 29px 82px;
 }
 #bvoatIntroduce #bvoatPromise .introduce_title em {
-  color: #022CFF;
+  color: #003DD3;
 }
 #bvoatIntroduce #bvoatPromise .introduce_title::before {
   display: block;
@@ -110,7 +110,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #022CFF;
+  border: 1px solid #003DD3;
   border-radius: 55px;
   background: #ffffff;
   font-size: 1.7rem;
@@ -118,7 +118,7 @@
   line-height: 2.8rem;
   padding: 18px 10px;
   margin-bottom: 9px;
-  color: #022CFF;
+  color: #003DD3;
 }
 @media (max-width: 345px) {
   #bvoatIntroduce #bvoatPromise .introduce_desc ul li {
@@ -126,7 +126,7 @@
   }
 }
 #bvoatIntroduce #bvoatPromise .introduce_desc ul li:nth-child(4) {
-  background: #022CFF;
+  background: #003DD3;
   font-weight: 500;
   color: #ffffff;
 }
@@ -137,7 +137,7 @@
   margin-top: 44px;
 }
 #bvoatIntroduce #bvoatContact {
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
   padding: 63px 29px 120px;
 }

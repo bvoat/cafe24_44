@@ -16,7 +16,7 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 #header_wrap #header_logo_section {
   display: flex;
@@ -26,23 +26,23 @@
   width: 100%;
   max-width: 450px;
   height: 60px;
-  padding: 0 26.3px;
+  padding: 0 17px;
 }
 #header_wrap #header_logo_section > .back_btn {
   display: block;
   width: 33%;
-  height: 60px;
+  height: 26.33px;
   background: none;
 }
 #header_wrap #header_logo_section > .back_btn button {
-  width: 35px;
+  width: 16px;
   height: 100%;
   background: none;
 }
 #header_wrap #header_logo_section > a .header_logo {
   display: block;
-  width: 107.55px;
-  height: 26.78px;
+  width: 96.39px;
+  height: 24px;
   background: url("https://bvoatofficial.cafe24.com/bvtIMG/logo/v2_logo_3x.png") no-repeat center;
   background-size: contain;
   text-indent: -9999px;
@@ -65,13 +65,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 19.9px;
+  margin-right: 14px;
 }
 #header_wrap #header_logo_section .header_menu .header_wish > a {
   position: relative;
   display: block;
-  width: 28.64px;
-  height: 25.88px;
+  width: 26.56px;
+  height: 24px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29.638' height='27.085'%3E%3Cpath fill='%232b3dd3' stroke='%232b3dd3' d='M26.741 2.896a8.182 8.182 0 0 0-10.609-.812l-1.245 1.229-.417-.417A8.184 8.184 0 0 0 2.896 14.47l11.94 11.908 11.9-11.906a8.186 8.186 0 0 0 0-11.575Zm-10.978 10.83c1.513 1.059 3.547 3.005 4.965 4l-4.965 5.1Zm-10.986 0-.568-.568a6.328 6.328 0 0 1 8.948-8.949l.718.718v17.864l-8.641-8.638Zm20.652-.568-3.579 3.488c-1.035-.728-2.194-1.89-3.666-2.92-.593-.416-1.677-1.408-2.422-1.929V5.051a6.551 6.551 0 0 1 .7-.842 6.891 6.891 0 0 1 .858-.706 6.328 6.328 0 0 1 8.109 9.655Z' data-name='패스 1513'/%3E%3C/svg%3E") no-repeat center;
   background-size: contain;
   text-indent: -9999px;
@@ -86,9 +86,24 @@
 #header_wrap #header_logo_section .header_menu .header_search > button {
   position: relative;
   display: block;
-  width: 25.75px;
-  height: 26.33px;
+  width: 23.47px;
+  height: 24px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26.835' height='27.328'%3E%3Cpath fill='%23003dd3' fill-rule='evenodd' stroke='%23003dd3' d='M12.874.5a12.367 12.367 0 0 1 9.116 20.731l3.978 3.97a.953.953 0 0 1-1.347 1.349l-4.026-4.015A12.371 12.371 0 1 1 12.874.5Zm0 1.906a10.468 10.468 0 1 0 10.467 10.467A10.479 10.479 0 0 0 12.874 2.406Z' data-name='Iconly/Light-Outline/Search'/%3E%3C/svg%3E") no-repeat center;
   background-size: contain;
   text-indent: -9999px;
+}
+#header_wrap #header_logo_section .header_menu .header_cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 19.9px;
+}
+#header_wrap #header_logo_section .header_menu .header_cart > a {
+  position: relative;
+  display: block;
+  width: 26.56px;
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27.348' height='26.779'%3E%3Cg fill='%23003dd3' data-name='Iconly/Bulk/Buy'%3E%3Cpath d='M7.42 22.639a2.07 2.07 0 1 1-2.077 2.077 2.073 2.073 0 0 1 2.077-2.077Zm15.371 0a2.07 2.07 0 1 1-2.077 2.077 2.073 2.073 0 0 1 2.078-2.077Z' opacity='.4'/%3E%3Cpath d='M1.064 0 1.2.011 4.462.5a1.032 1.032 0 0 1 .847.929l.26 3.061a.834.834 0 0 0 .831.77h18.455a2.325 2.325 0 0 1 1.927.915 2.906 2.906 0 0 1 .518 2.349L26 17.487a3.487 3.487 0 0 1-3.457 2.992H7.639a3.483 3.483 0 0 1-3.471-3.2L2.911 2.389.848 2.034A1.029 1.029 0 0 1 .015.859 1.045 1.045 0 0 1 1.2.011Zm19.3 10.314h-3.789a1.025 1.025 0 1 0 0 2.05h3.785a1.025 1.025 0 0 0 0-2.05Z'/%3E%3C/g%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
 }/*# sourceMappingURL=header.css.map */

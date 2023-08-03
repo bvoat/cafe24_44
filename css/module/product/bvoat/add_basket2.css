@@ -108,7 +108,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.9rem;
-  height: 2.4rem;
+  height: 2.2rem;
   color: #707070;
 }
 .desc .basket_option {
@@ -154,6 +154,6 @@
   color: #292929;
 }
 .layer_basket_btn .stay_btn {
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
 }/*# sourceMappingURL=add_basket2.css.map */

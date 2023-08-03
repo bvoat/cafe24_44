@@ -11,7 +11,8 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
+
 
     #header_logo_section {
         display: flex;
@@ -21,16 +22,16 @@
         width: 100%;
         max-width: 450px;
         height: 60px;
-        padding: 0 26.3px;
+        padding: 0 17px;
 
         >.back_btn {
             display: block;
             width: 33%;
-            height: 60px;
+            height: 26.33px;
             background: none;
 
             button {
-                width: 35px;
+                width: 16px;
                 height: 100%;
                 background: none;
             }
@@ -39,8 +40,8 @@
         >a {
             .header_logo {
                 display: block;
-                width: 107.55px;
-                height: 26.78px;
+                width: 96.39px;
+                height: 24px;
                 background: $bvt-logo no-repeat center;
                 background-size: contain;
                 text-indent: -9999px;
@@ -68,13 +69,13 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-right: 19.9px;
+                margin-right: 14px;
 
                 >a {
                     position: relative;
                     display: block;
-                    width: 28.64px;
-                    height: 25.88px;
+                    width: 26.56px;
+                    height: 24px;
                     background: $wish-icon no-repeat center;
                     background-size: contain;
                     text-indent: -9999px;
@@ -91,14 +92,30 @@
                 >button {
                     position: relative;
                     display: block;
-                    width: 25.75px;
-                    height: 26.33px;
+                    width: 23.47px;
+                    height: 24px;
                     background: $search-icon no-repeat center;
                     background-size: contain;
                     text-indent: -9999px;
                 }
             }
 
+            .header_cart {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 19.9px;
+
+                >a {
+                    position: relative;
+                    display: block;
+                    width: 26.56px;
+                    height: 24px;
+                    background: $cart-icon no-repeat center;
+                    background-size: contain;
+                }
+            }
 
 
         }

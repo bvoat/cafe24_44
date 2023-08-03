@@ -397,8 +397,6 @@
                 width: calc(50% - 5px);
                 max-width: 200px;
                 margin-bottom: 27px;
-                //위시버튼
-                @include wish-button(21px, 18.98px, 0, 0);
 
                 //아이콘 컨트롤
                 .icon {
@@ -426,9 +424,6 @@
             &:nth-child(19) {
                 margin-right: 2.1%;
             }
-
-            //위시버튼
-            @include wish-button(17px, 15px, 0, 0);
         }
     }
 
@@ -541,8 +536,6 @@
             width: calc(50% - 9px);
             max-width: 190px;
             margin-bottom: 27px;
-            //위시버튼
-            @include wish-button(21px, 18.98px, 0, 0);
 
             &:nth-child(n+5) {
                 display: none;

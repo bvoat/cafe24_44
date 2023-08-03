@@ -74,7 +74,7 @@
   position: relative;
   width: 48.5%;
   height: 87px;
-  border: 1px solid #022CFF;
+  border: 1px solid #003DD3;
   border-radius: 10px;
   background: #F5F6FC;
 }
@@ -100,7 +100,7 @@
   right: 7.6%;
 }
 #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a > p {
-  color: #022CFF;
+  color: #003DD3;
 }
 #specialProject .project_productlist_wrap .project_coupon_wrap .coupon_list > li a > p:nth-child(1) {
   font-size: 1.4rem;
@@ -189,7 +189,17 @@
 #specialProject .project_productlist_wrap .desc .brand {
   font-size: 1rem;
   color: #707070;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.4rem;
   margin-bottom: 3px;
+  font-weight: normal;
 }
 #specialProject .project_productlist_wrap .desc .summary {
   display: block;
@@ -205,12 +215,14 @@
   word-wrap: break-word;
   line-height: 1.4rem;
   margin-bottom: 7px;
+  font-weight: normal;
 }
 #specialProject .project_productlist_wrap .desc .product_name,
-#specialProject .project_productlist_wrap .desc .product_name span {
+#specialProject .project_productlist_wrap .desc .product_name > span,
+#specialProject .project_productlist_wrap .desc .product_name > a {
   color: #292929 !important;
   font-size: 1.3rem !important;
-  font-weight: 500;
+  font-weight: normal !important;
   word-wrap: break-word;
   word-break: keep-all;
   display: block;
@@ -222,7 +234,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.6rem;
-  height: 3.4rem;
+  height: 3.2rem;
   margin-bottom: 18px;
 }
 #specialProject .project_productlist_wrap .thumb {

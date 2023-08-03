@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 #explorer {
@@ -103,7 +100,8 @@
   max-width: 450px;
   margin-bottom: 37px;
 }
-#indexListmain ul .index_list > div .banner a, #indexListmain ul .index_list > div .banner a > img {
+#indexListmain ul .index_list > div .banner a,
+#indexListmain ul .index_list > div .banner a > img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -118,31 +116,6 @@
   width: 33.33%;
   max-width: 181px;
   margin-bottom: 27px;
-}
-#indexListmain ul .index_list > div > ul .list_item .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0;
-  right: 0;
-}
-#indexListmain ul .index_list > div > ul .list_item .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-#indexListmain ul .index_list > div > ul .list_item .wish button img {
-  position: relative;
-  width: 41px;
-  height: 38.98px;
-  padding: 10px;
-  margin-top: 2.5px;
 }
 #indexListmain ul .index_list > div > ul .list_item .icon {
   height: 22px !important;

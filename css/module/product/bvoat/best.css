@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* 공통 스타일 */
-/* 공통 스타일 */
+/* 공통 디자인 */
+/* ellipsis*/
+/* ellipsis*/
+/* 공통 디자인 */
 /* 애니메이션 */
 /* 애니메이션 */
-/* 멤버십 관련 */
-/* 멤버십 관련 */
-/* 상품 목록 list 관련 공통 스타일 */
-/* 셀렉트 박스 화살표 */
-/* 상품 목록 list 관련 공통 스타일 */
 /* 미디어쿼리 */
 /* 미디어쿼리 */
 #weekSocialOrderList {
@@ -21,7 +18,7 @@
   padding: 7px 0 0 0;
 }
 .desc .brand {
-  font-size: 1rem !important;
+  font-size: 1rem;
   color: #707070;
   display: block;
   overflow: hidden;
@@ -33,11 +30,12 @@
   word-wrap: break-word;
   line-height: 1.4rem;
   margin-bottom: 3px;
+  font-weight: normal;
 }
 .desc .summary {
-  font-size: 1.1rem !important;
-  font-weight: 700;
-  color: #292929;
+  display: block;
+  font-size: 1.1rem;
+  color: #707070;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -46,14 +44,16 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.5rem;
-  margin-bottom: 10px;
+  line-height: 1.4rem;
+  margin-bottom: 7px;
+  font-weight: normal;
 }
 .desc .product_name,
-.desc .product_name span {
+.desc .product_name > span,
+.desc .product_name > a {
   color: #292929 !important;
   font-size: 1.29rem !important;
-  font-weight: 300;
+  font-weight: normal !important;
   word-wrap: break-word;
   word-break: keep-all;
   display: block;
@@ -64,8 +64,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.69rem;
-  height: 3.28rem;
+  line-height: 1.59rem;
+  height: 3.18rem;
   margin-bottom: 18px;
 }
 
@@ -77,10 +77,10 @@
 .thumb .img_wrap {
   display: block;
   position: relative;
+  width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  font-size: 0;
+  border-radius: 4px;
 }
 .thumb > a > img,
 .thumb .img_wrap > img {
@@ -92,37 +92,12 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.thumb .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0;
-  right: 0;
-}
-.thumb .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-.thumb .wish button img {
-  position: relative;
-  width: 41px;
-  height: 38.98px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
 
-.icon img {
-  height: inherit;
-  -o-object-fit: contain;
-     object-fit: contain;
-  image-rendering: auto;
+.icon {
+  position: absolute;
+  top: 0;
+  height: 21px;
+  z-index: 1;
 }
 
 #weekTotalBestList {
@@ -267,7 +242,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.4rem;
+  line-height: 1.3rem;
 }
 #weekTotalBestList #weekTotalBestListContents .weekbest > ul .list_item .summary {
   display: block;
@@ -281,7 +256,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.4rem;
+  line-height: 1.3rem;
   min-height: 11px;
   margin-bottom: 7px;
 }
@@ -345,14 +320,13 @@
 }
 #weekTagBestList #weekTagBestListContents .weektag #weekTagTitle .tag_subtitle .purchasers {
   font-weight: 700;
-  color: #022CFF;
+  color: #003DD3;
 }
 #weekTagBestList #weekTagBestListContents .weektag #weekTagTitle .tag_subtitle .cate_item {
   display: inline-flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 28px;
@@ -402,31 +376,6 @@
   max-width: 200px;
   margin-bottom: 27px;
 }
-.weekbest > ul .list_item:nth-child(1) .wish, .weekbest > ul .list_item:nth-child(2) .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0;
-  right: 0;
-}
-.weekbest > ul .list_item:nth-child(1) .wish button, .weekbest > ul .list_item:nth-child(2) .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-.weekbest > ul .list_item:nth-child(1) .wish button img, .weekbest > ul .list_item:nth-child(2) .wish button img {
-  position: relative;
-  width: 41px;
-  height: 38.98px;
-  padding: 10px;
-  margin-top: 2.5px;
-}
 .weekbest > ul .list_item:nth-child(1) .icon, .weekbest > ul .list_item:nth-child(2) .icon {
   display: block;
   height: 25px !important;
@@ -440,31 +389,6 @@
 }
 .weekbest > ul .list_item:nth-child(3n), .weekbest > ul .list_item:nth-child(4), .weekbest > ul .list_item:nth-child(7), .weekbest > ul .list_item:nth-child(10), .weekbest > ul .list_item:nth-child(13), .weekbest > ul .list_item:nth-child(16), .weekbest > ul .list_item:nth-child(19) {
   margin-right: 2.1%;
-}
-.weekbest > ul .list_item .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0;
-  right: 0;
-}
-.weekbest > ul .list_item .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-.weekbest > ul .list_item .wish button img {
-  position: relative;
-  width: 37px;
-  height: 35px;
-  padding: 10px;
-  margin-top: 2.5px;
 }
 @media (max-width: 420px) {
   .weekbest ul {
@@ -550,31 +474,6 @@
   width: calc(50% - 9px);
   max-width: 190px;
   margin-bottom: 27px;
-}
-.weektag > ul .list_item .wish {
-  position: absolute;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  bottom: 0;
-  right: 0;
-}
-.weektag > ul .list_item .wish button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-.weektag > ul .list_item .wish button img {
-  position: relative;
-  width: 41px;
-  height: 38.98px;
-  padding: 10px;
-  margin-top: 2.5px;
 }
 .weektag > ul .list_item:nth-child(n+5) {
   display: none;

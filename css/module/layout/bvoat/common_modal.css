@@ -62,7 +62,7 @@
   font-size: 1.4rem;
 }
 #bvtCommonModal #bvtCommonForm .bvt_modal_btn .ok_btn {
-  background: #022CFF;
+  background: #003DD3;
 }
 #bvtCommonModal #bvtCommonForm .bvt_modal_btn .no_btn {
   background: #C4C4C4;
@@ -78,7 +78,7 @@
   min-height: 200px;
   background: #ffffff;
   border-radius: 20px;
-  border: 1px solid #022CFF;
+  border: 1px solid #003DD3;
   padding: 20px 0 0 0;
   overflow: hidden;
 }
@@ -152,7 +152,7 @@
   width: 90px;
   height: 40px;
   border-radius: 20px;
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: 400;
@@ -168,7 +168,7 @@
   width: 383px;
   height: 33px;
   border-radius: 5px;
-  background: rgba(2, 44, 255, 0.65);
+  background: rgba(0, 61, 211, 0.65);
   color: #ffffff;
   font-size: 1.4rem;
   font-weight: 400;

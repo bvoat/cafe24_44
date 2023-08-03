@@ -110,7 +110,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.72rem;
-  height: 3.64rem;
+  height: 3.44rem;
 }
 #categoryOfRecommended #categoryOfRecommendedList .progressbar {
   display: none;
@@ -206,7 +206,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.72rem;
-  height: 3.64rem;
+  height: 3.44rem;
 }
 #categoryOfTag #categoryOfTagList .progressbar,
 #categoryOfProduct #categoryOfTagList .progressbar {
@@ -292,7 +292,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.72rem;
-  height: 3.64rem;
+  height: 3.44rem;
 }
 
 /* 페이지 프로그레스 */

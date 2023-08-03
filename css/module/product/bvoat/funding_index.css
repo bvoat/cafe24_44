@@ -39,7 +39,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: #ffffff;
-  background: #022CFF;
+  background: #003DD3;
   border-radius: 31px;
   z-index: 1;
 }
@@ -191,7 +191,7 @@
   display: none;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #022CFF;
+  color: #003DD3;
   margin-bottom: 11px;
 }
 .bvt-funding .list_item .desc .title {
@@ -218,7 +218,7 @@
   align-items: flex-start;
   font-size: 1.4rem;
   font-weight: bold;
-  color: #022CFF;
+  color: #003DD3;
   margin-top: 11px;
 }
 .bvt-funding .list_item .desc .custom_voter {
@@ -227,7 +227,7 @@
 }
 .bvt-funding .list_item .desc .custom_voter div:nth-child(1) {
   font-size: 1.25rem;
-  color: #022CFF;
+  color: #003DD3;
 }
 .bvt-funding .list_item .desc .custom_voter div:nth-child(2) {
   font-size: 1.24rem;

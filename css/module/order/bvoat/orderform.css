@@ -47,7 +47,7 @@ body {
   display: block;
   width: 73px;
   height: 40px;
-  background: url("https://bvoatofficial.cafe24.com/bvtIMG/Bvoat_022CFF_Text_logo_trans_fit.png") no-repeat center;
+  background: url("https://bvoatofficial.cafe24.com/bvtIMG/logo/v2_logo_3x.png") no-repeat center;
   background-size: contain;
   text-indent: -9999px;
 }
@@ -113,11 +113,11 @@ body {
 
 /* ----------- 쿠폰 새 창 -------------- */
 #mCafe24Order .ec-base-layer.typeWide h1 {
-  background: #022CFF;
+  background: #003DD3;
 }
 
 #mCafe24Order .btnSubmit {
-  background: #022CFF;
+  background: #003DD3;
 }
 
 /* ----------- 바로구매  -------------- */

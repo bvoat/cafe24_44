@@ -96,12 +96,12 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.9rem;
-  height: 4rem;
+  height: 3.8rem;
 }
 #productBoardRead #productBoardReadTableHead .product_info .information li:nth-child(2) {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #022CFF;
+  color: #003DD3;
 }
 #productBoardRead #productBoardReadTableHead .product_info .information li:nth-child(3) {
   position: absolute;
@@ -193,7 +193,7 @@
 .ec-base-button span:nth-child(2) a {
   display: inline-block;
   font-size: 1.1rem;
-  background: #022CFF;
+  background: #003DD3;
   border-radius: 12px;
   padding: 2% 6%;
   color: #ffffff;

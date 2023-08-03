@@ -84,7 +84,7 @@
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 28px;
-  background: #022CFF;
+  background: #003DD3;
   font-size: 1.3rem;
   font-weight: 600;
   color: #ffffff;
@@ -207,7 +207,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.6rem;
-  height: 3.4rem;
+  height: 3.2rem;
 }
 #productBoardList #productBoardListTable > .ec-base-button {
   display: flex;
@@ -233,7 +233,7 @@
 #productBoardList #productBoardListTable > .ec-base-button span:nth-child(2) a {
   display: inline-block;
   font-size: 1.1rem;
-  background: #022CFF;
+  background: #003DD3;
   border-radius: 12px;
   padding: 2% 6%;
   color: #ffffff;
@@ -256,7 +256,7 @@
   align-items: center;
   width: 80px;
   height: 32px;
-  background: #022CFF;
+  background: #003DD3;
   border-radius: 22px;
   font-size: 1.4rem;
   color: #ffffff;
@@ -328,7 +328,7 @@
 }
 #productBoardList .page-pagination ol li .this {
   font-weight: 600;
-  color: #022CFF;
+  color: #003DD3;
 }
 #productBoardList .page-pagination {
   margin: 20px 0;
@@ -366,12 +366,12 @@
 #productBoardList #boardListSearch fieldset p button.btnEmFix {
   width: 12%;
   height: 28px;
-  border: 1px solid #022CFF;
+  border: 1px solid #003DD3;
   border-radius: 18px;
   background: #ffffff;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #022CFF;
+  color: #003DD3;
   margin-left: 12px;
 }
 #productBoardList #boardListAdminMenu div {
@@ -386,7 +386,7 @@
 }
 #productBoardList #boardListAdminMenu button {
   display: inline-flex;
-  background: #022CFF;
+  background: #003DD3;
   color: #ffffff;
   justify-content: center;
   align-items: center;

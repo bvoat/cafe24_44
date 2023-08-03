@@ -291,8 +291,8 @@
   font-weight: 600;
 }
 #mypageWrap #mypageInfo .reviewscoupon_box .mypage_info_menu li:nth-child(1) {
-  background: #022CFF;
-  border: 1px solid #022CFF;
+  background: #003DD3;
+  border: 1px solid #003DD3;
   margin-right: 8px;
 }
 #mypageWrap #mypageInfo .reviewscoupon_box .mypage_info_menu li:nth-child(1) > a {
@@ -399,7 +399,7 @@
   margin-bottom: 3px;
 }
 #mypageWrap #mypageBenefit .stampinfo_box ul li > a {
-  color: #022CFF;
+  color: #003DD3;
 }
 #mypageWrap #mypageMenu {
   width: 100%;
