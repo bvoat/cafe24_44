@@ -5,24 +5,26 @@
             <a href="/product/detail.html{$param}"><img src="{$image_big}" alt="{$seo_alt_tag}"></a>
         </div>
         <ul class="desc box-desc">
-            <li class="summary">{$summary_desc}</li>
+            <li class="brand">{$prd_brand}</li>
             <li class="product_name"><a href="/product/detail.html{$param}">{$product_name|striptag}</a></li>
             <li class="listmain_price">
                 <!--@import(../list_price_wrap.html)-->
             </li>
         </ul>
-        <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
+        <!-- <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div> -->
     </li>
     <li id="anchorBoxId_{$product_no}" class="swiper-slide list_item" data-productno="{$product_no}">
         <div class="thumb">
             <a href="/product/detail.html{$param}"><img src="{$image_big}" alt="{$seo_alt_tag}"></a>
         </div>
         <ul class="desc box-desc">
-            <li class="summary">{$summary_desc}</li>
+            <li class="brand">{$prd_brand}</li>
             <li class="product_name"><a href="/product/detail.html{$param}">{$product_name|striptag}</a></li>
-            <!--@import(../list_price_wrap.html)-->
+            <li class="listmain_price">
+                <!--@import(../list_price_wrap.html)-->
+            </li>
         </ul>
-        <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div>
+        <!-- <div class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</div> -->
     </li>
     <!-- pagination 별도 삽입 -->
 </ul>

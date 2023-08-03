@@ -10,54 +10,50 @@
 -->
 <!--@import(./product_module/buy_screen.html)-->
 <!-- 상품 정보 상단 -->
-<article id="productDetailTop" module="product_detail">
+<section id="productDetailTop" module="product_detail">
     <!--
 		※ 옵션 선택시 품목의 할인가로 표시됩니다.
 		$use_item_sale_price = T
 	-->
     <!-- 썸네일 -->
-    <section id="productThumnail" class="product_thumnail_wrap" module="product_image">
-        <h1 class="displaynone">상품 이미지</h1>
-        <em class="product_icon">{$soldout_icon}{$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</em>
-        <img src="{$big_img}" alt="{$seo_alt_tag}" class="{$big_img_class}" />
-    </section>
+    <article id="productThumnail" class="product_thumnail_wrap" module="product_image" module="Product_mobileImage">
+        <ul class="swiper-wrapper thumb_wrapper thumb">
+            <li class="main_thumb img_wrap swiper-slide">
+                <img src="{$big_img}" />
+            </li>
+            {$aAddImage}
+        </ul>
+        <div class="swiper-pagination swiper-pagination-thumb"></div>
+    </article>
     <!-- 썸네일 -->
     <!-- 상품명, 가격정보, 태그 -->
-    <section id="productInfo" class="product_info_wrap">
-        <h1 class="displaynone">상품 정보</h1>
-        <ul id="categoryTagBox" class="tag_box">
-            <!-- 태그 삽입 부분 -->
-        </ul>
-        <h3 class="summary_desc {$summary_desc_display}">{$summary_desc}</h3>
+    <article id="productInfo" class="product_info_wrap">
+
+        <section id="supplyMinishop" class="supply_minishop_wrap" module="product_image">
+            <div class="top_supply_link_wrap {$supply_link_display|display}">
+                <button class="minishop_btn" onclick="{$supply_go_action}" title="같은 브랜드 제품 보러가기">{$prd_brand}</button>
+            </div>
+        </section>
+
         <h2 class="product_name">{$name}</h2>
 
         <div class="product_price">
             <!--@import(./product_module/detail_price_wrap.html)-->
-            <div class="button_wrap">
-                <button onclick="{$action_wishlist}" class="wish_btn" title="위시리스트 담기">위시리스트 담기</button>
-                <button class="share_btn" title="공유하기">공유하기</button>
-            </div>
         </div>
-    </section>
+        <ul id="categoryTagBox" class="tag_box">
+            <!-- 태그 삽입 부분 -->
+        </ul>
+    </article>
     <!-- 상품명, 가격정보, 태그 -->
     <!-- 상품 안내 -->
     <section id="productDetail" class="product_detail_wrap">
         <h1 class="displaynone">상품 안내</h1>
         <ul class="product_detail">
-            <li class="delivery">
-                <p class="title">배송 안내</p>
-                <p class="detail">
-                    <span><em>{$prd_brand}</em> 배송</span>
-                    <span>배송비 <i>{$delivery_price}</i></span>
-                </p>
-            </li>
             <li class="mileage">
                 <p class="title">마일리지</p>
                 <p class="detail">
-                    <em class="mileage_info"><i class="voter_value">{$mileage_value}</i>점 적립 <span
-                            class="crew_mileage">(크루 등급 <i
-                                class="crew_value">{$mileage_value}</i><span>점</span>)</span></em>
-                    <span class="mileage_txt">리뷰 작성 시 최대 1,000점이 추가 적립됩니다.</span>
+                    <em class="mileage_info">{$mileage_value}점 적립 <span class="crew_mileage">(크루 등급
+                            {$mileage_value}<span>점</span>)</span></em>
             </li>
             <li id="productStamp" class="stamp">
                 <p class="title">가치 스탬프</p>
@@ -74,55 +70,24 @@
                     </ol>
                 </div>
             </li>
+            <li class="delivery">
+                <p class="title">배송 안내</p>
+                <p class="detail">
+                    <span>{$prd_brand} 배송</span>
+                    <span>배송비 {$delivery_price}
+                    </span>
+                </p>
+            </li>
+            <li class="minishop">
+                <p class="title">미니샵</p>
+                <p class="detail">
+                    <button class="minishop_btn" onclick="{$supply_go_action}" title="같은 브랜드 제품 보러가기">같은 브랜드 제품
+                        보러가기</button>
+                </p>
+            </li>
         </ul>
     </section>
     <!-- 상품 안내 -->
-    <!-- 펀딩 -->
-    <section id="aside-funding" class="detail-aside-funding displaynone">
-        <!-- <div class="info_box padding2">
-            <div class="t08 title"><span class="blue2 b">From.</span> {$prd_brand}</div>
-            <div class="t12 b prd_name" id="gettitle">{$name}</div>
-            <div class="info_like {$disp_likeprd_class}">
-                <button class="gdVote" type="button">{$disp_likeprd_icon}</button>
-            </div>
-            <div class="t08 gray" id="getdesc">{$summary_desc}</div>
-            <div class="info_box-desc t08 gray2">{$simple_desc}</div>
-        </div> -->
-        <div class="funding_box">
-            <div class="funding_info_box displaynone ">
-                <div class="t13 b"><span id="funding-dday"></span></div>
-                <div class="t07 gray2">함께할수록 커지는 가치, 공유해보세요!</div>
-                <div class="gradientline"> </div>
-                <div class="custom_box">
-                    <div class="custom_box_1" style="visibility: hidden">
-                        <div class="t07">참여 중인 보터</div>
-                        <span class="b t11" id="custom-voter"></span>
-                        <img src="/bvtIMG/icon/arrow-up.svg">
-                    </div>
-                    <div class="custom_box_2">
-                    </div>
-                </div>
-            </div>
-            <div class="notice_box">
-                <!--사이즈 가이드 활용 이미지 삽입-->
-                <div module="Product_SizeGuide {$size_guide_image_display|display}">
-                    {$size_guide_description}
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- 펀딩 -->
-    <!-- 공급사 바로가기버튼 영역 -->
-    <section id="supplyMinishop" class="supply_minishop_wrap" module="product_image">
-        <div class="topLogo supply_link_wrap {$supply_link_display|display}">
-            <span class="supply_name">
-                <!-- {$supply_top_logo} -->
-                {$prd_brand}
-            </span>
-            <button class="minishop_btn" onclick="{$supply_go_action}" title="묶음 배송 상품 구경하기">묶음 배송 상품 구경하기</button>
-        </div>
-    </section>
-    <!-- 공급사 바로가기버튼 영역 -->
     <!-- 연관 상품 -->
     <section id="productRelation" class="product_relation_wrap" module="product_relation">
         <h2>설렘이 배가 되는 상품,</h2>
@@ -130,237 +95,250 @@
         <!--@import(./product_module/listproduct/relation_list.html)-->
     </section>
     <!-- 연관 상품 -->
-</article>
-<!-- 상품 정보 상단 -->
-<!-- 상품 정보 하단 선택 탭 -->
-<ul class="detail_tab_wrap" module="product_additional">
-    <li class="tab0 tab" data-hash="prd_detail">상품정보
-    </li>
-    <li class="tab1 tab" data-hash="prd_bh">리뷰</li>
-    <li class="tab2 tab" data-hash="use_qna">Q&A({$qna_count})
-    </li>
-    <li class="tab3 tab" data-hash="prd_info">배송안내
-    </li>
-</ul>
-<!-- 상품 정보 하단 선택 탭 -->
-<!-- 상품 정보 하단 -->
-<article id="productDetailBottom" module="product_additional">
-    <!-- 상품 정보 하단 정보 -->
-    <div id="detail_swiper_wrap" class="detail_swiper_wrap swiper-wrapper">
-        <!-- tab0 상품정보 -->
-        <div id="tab0" class="tab_content swiper-slide" data-hash="prd_detail">
-            <div id="prd_detail">
-                <!--이벤트-->
-                <div class="tab_detail_page eventArea {$common_event_a|display}">
-                    <div class="event">{$common_event_a}</div>
-                </div>
-                <!--상세페이지-->
-                <div class="tab_detail_page">
-                    <!--@css(../css/module/product/module/product_detail.css)-->
-                    {$product_detail}
+    </se>
+    <!-- 상품 정보 상단 -->
+    <!-- 상품 정보 하단 선택 탭 -->
+    <ul class="detail_tab_wrap" module="product_additional">
+        <li class="tab0 tab" data-hash="prd_detail">상품정보
+        </li>
+        <li class="tab1 tab" data-hash="prd_bh">리뷰</li>
+        <li class="tab2 tab" data-hash="use_qna">Q&A({$qna_count})
+        </li>
+        <li class="tab3 tab" data-hash="prd_info">배송안내
+        </li>
+    </ul>
+    <!-- 상품 정보 하단 선택 탭 -->
+    <!-- 상품 정보 하단 -->
+    <article id="productDetailBottom" module="product_additional">
+        <!-- 상품 정보 하단 정보 -->
+        <div id="detail_swiper_wrap" class="detail_swiper_wrap swiper-wrapper">
+            <!-- tab0 상품정보 -->
+            <div id="tab0" class="tab_content swiper-slide" data-hash="prd_detail">
+                <div id="prd_detail">
+                    <!--이벤트-->
+                    <div class="tab_detail_page eventArea {$common_event_a|display}">
+                        <div class="event">{$common_event_a}</div>
+                    </div>
+                    <!--상세페이지-->
+                    <div class="tab_detail_page">
+                        <!--@css(../css/module/product/module/product_detail.css)-->
+                        {$product_detail}
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- tab0 상품정보 -->
-        <!-- tab1 리뷰 -->
-        <div id="tab1" class="tab_content swiper-slide" data-hash="prd_bh">
-            <script defer src="https://snippet.reviewaid.ai/latest/product.js"></script>
-            <div id="ReviewAid" style="display: none"></div>
-            <div id="review-aid-fake-product-root" style="display: none"></div>
-            <div id="review-aid-widget-root" class="ReviewAidV2"></div>
-            <div id="review-aid-fake-product-root" style="display: none"></div>
-            <div id="review-aid-review-page-root" class="ReviewAidV2"></div>
-            <div id="prdReview" class="displaynone">
-                <div class="board">
-                    <!-- <ul class="btnArea type2">
+            <!-- tab0 상품정보 -->
+            <!-- tab1 리뷰 -->
+            <div id="tab1" class="tab_content swiper-slide" data-hash="prd_bh">
+                <script defer src="https://snippet.reviewaid.ai/latest/product.js"></script>
+                <div id="ReviewAid" style="display: none"></div>
+                <div id="review-aid-fake-product-root" style="display: none"></div>
+                <div id="review-aid-widget-root" class="ReviewAidV2"></div>
+                <div id="review-aid-fake-product-root" style="display: none"></div>
+                <div id="review-aid-review-page-root" class="ReviewAidV2"></div>
+                <div id="prdReview" class="displaynone">
+                    <div class="board">
+                        <!-- <ul class="btnArea type2">
                         <li><a href="{$review_write}" class="btnSubmit">상품후기쓰기</a></li> 
                         <li> <a href="{$review_list}" class="btnEm">이 상품 후기 모두보기</a></li> 
                     </ul> -->
-                    <div module="product_review">
-                <!--
+                        <div module="product_review">
+                            <!--
                         $count = 12
                         $product_name_cut = 30
                         $subject_cut = 22
                         $login_page_url = /member/login.html
                         $deny_access_url = /index.html
                     -->
-                        <section class="no_access">
-                            <a name="use_review"></a>
-                            <p class="noAccess {$deny_display|display}">글읽기 권한이 없습니다.</p>
-                            <div class="minor {$adult_display|display}">
-                                <p><span>19세 미만의 미성년자</span>는 출입을 금합니다.</p>
-                                <a class="btnBasic" href="/intro/board.html{$returnParam}">성인인증하기</a>
-                            </div>
-                        </section>
-                        <ul id="productBoardListWrap" class="board {$list_display|display}">
-                            <li id="review_{$no}" class="review_item">
-                                <div class="item">
-                                    <a href="{$link_board_detail}" class="item_anchor" >
-                                        <div class="user_info">
-                                                <img class="user_img" src="https://bvoat.shop/images/new_img/ico__11.png" onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'">
-                                                <p class="user_name" title="작성자">{$writer}</p>
-                                        </div>
-                                        <div class="thumbnail_info">
-                                            <div class="thumbnail" data-id="{$no}">
-                                                {$product_img}{$image_medium}<img src="{$img_src}" onerror="this.remove ? this.remove() : this.removeNode();" alt="" /></div>                            <p class="rate">{$point_count}</p>
-                                        </div>
-                                        <div class="summary_info">
-                                            <div class="vote_comment">
-                                                <span class="vote">
-                                                    {$vote}
-                                                </span>
-                                                <span class="comment">{$comment_count}</span>
-                                            </div>
-                                            <p class="summary" title="내용">{$content}</p>
-                                        </div>
-                                    </a>
+                            <section class="no_access">
+                                <a name="use_review"></a>
+                                <p class="noAccess {$deny_display|display}">글읽기 권한이 없습니다.</p>
+                                <div class="minor {$adult_display|display}">
+                                    <p><span>19세 미만의 미성년자</span>는 출입을 금합니다.</p>
+                                    <a class="btnBasic" href="/intro/board.html{$returnParam}">성인인증하기</a>
                                 </div>
-                            </li>
-                            <li id="review_{$no}" class="review_item">
-                                <div class="item">
-                                    <a href="{$link_board_detail}" class="item_anchor" >
-                                        <div class="user_info">
-                                                <img class="user_img" src="https://bvoat.shop/images/new_img/ico__11.png" onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'">
+                            </section>
+                            <ul id="productBoardListWrap" class="board {$list_display|display}">
+                                <li id="review_{$no}" class="review_item">
+                                    <div class="item">
+                                        <a href="{$link_board_detail}" class="item_anchor">
+                                            <div class="user_info">
+                                                <img class="user_img"
+                                                    src="https://bvoat.shop/images/new_img/ico__11.png"
+                                                    onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'">
                                                 <p class="user_name" title="작성자">{$writer}</p>
-                                        </div>
-                                        <div class="thumbnail_info">
-                                            <div class="thumbnail" data-id="{$no}">
-                                                {$product_img}{$image_medium}<img src="{$img_src}" onerror="this.remove ? this.remove() : this.removeNode();" alt="" /></div>                            <p class="rate">{$point_count}</p>
-                                        </div>
-                                        <div class="summary_info">
-                                            <div class="vote_comment">
-                                                <span class="vote">
-                                                    {$vote}
-                                                </span>
-                                                <span class="comment">{$comment_count}</span>
                                             </div>
-                                            <p class="summary" title="내용">{$content}</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="productBoardPagenation" module="product_reviewpaging" class="paginate typeList">
-                        <p class="prev"><a href="{$param_before}" title="이전 페이지"></a></p>
-                        <ol>
-                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                        </ol>
-                        <p class="next"><a href="{$param_next}" title="다음 페이지"></a></p>
+                                            <div class="thumbnail_info">
+                                                <div class="thumbnail" data-id="{$no}">
+                                                    {$product_img}{$image_medium}<img src="{$img_src}"
+                                                        onerror="this.remove ? this.remove() : this.removeNode();"
+                                                        alt="" /></div>
+                                                <p class="rate">{$point_count}</p>
+                                            </div>
+                                            <div class="summary_info">
+                                                <div class="vote_comment">
+                                                    <span class="vote">
+                                                        {$vote}
+                                                    </span>
+                                                    <span class="comment">{$comment_count}</span>
+                                                </div>
+                                                <p class="summary" title="내용">{$content}</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li id="review_{$no}" class="review_item">
+                                    <div class="item">
+                                        <a href="{$link_board_detail}" class="item_anchor">
+                                            <div class="user_info">
+                                                <img class="user_img"
+                                                    src="https://bvoat.shop/images/new_img/ico__11.png"
+                                                    onerror="this.src='https://bvoat.shop/images/new_img/ico__11.png'">
+                                                <p class="user_name" title="작성자">{$writer}</p>
+                                            </div>
+                                            <div class="thumbnail_info">
+                                                <div class="thumbnail" data-id="{$no}">
+                                                    {$product_img}{$image_medium}<img src="{$img_src}"
+                                                        onerror="this.remove ? this.remove() : this.removeNode();"
+                                                        alt="" /></div>
+                                                <p class="rate">{$point_count}</p>
+                                            </div>
+                                            <div class="summary_info">
+                                                <div class="vote_comment">
+                                                    <span class="vote">
+                                                        {$vote}
+                                                    </span>
+                                                    <span class="comment">{$comment_count}</span>
+                                                </div>
+                                                <p class="summary" title="내용">{$content}</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="productBoardPagenation" module="product_reviewpaging" class="paginate typeList">
+                            <p class="prev"><a href="{$param_before}" title="이전 페이지"></a></p>
+                            <ol>
+                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                            </ol>
+                            <p class="next"><a href="{$param_next}" title="다음 페이지"></a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
-        <!-- tab1 리뷰 -->
-        <!-- tab2 Q&A -->
-        <div id="tab2" class="tab_content swiper-slide" data-hash="use_qna">
-            <div id="use_qna">
-                <div class="tab-tip">
-                    <div class="tab-tip-head tab3_heading">
-                        <em>{$prd_model}</em>에 대해 궁금하신가요?
+            </div>
+            <!-- tab1 리뷰 -->
+            <!-- tab2 Q&A -->
+            <div id="tab2" class="tab_content swiper-slide" data-hash="use_qna">
+                <div id="use_qna">
+                    <div class="tab-tip">
+                        <div class="tab-tip-head tab3_heading">
+                            <em>{$name}</em>에 대해 궁금하신가요?</div>
                     </div>
-                </div>
-                <div class="product_detail_qna" module="product_qna">
-                    <!--@css(/css/module/product/qna.css)-->
-                    <!-- @js(/js/module/product/qna.js ) -->
-                    <!--
+                    <div class="product_detail_qna" module="product_qna">
+                        <!--@css(/css/module/product/qna.css)-->
+                        <!-- @js(/js/module/product/qna.js ) -->
+                        <!--
                             $count = 6
                         -->
-                    <p class="noAccess {$deny_display|display}">글읽기 권한이 없습니다.</p>
-                    <ul class="tab-board-table {$list_display|display}">
-                        <li class="descriptions">
-                            <a class="description_link" title="{$subject}" href="/board/product/read.html{$param_read}"
-                                target="_self">
-                                <h1> {$icon_re} {$icon_lock} {$icon_mobile} {$subject} </h1>
-                                <p>
-                                    {$member_icon}
-                                    <span class="id" title="작성자">{$writer}</span>
-                                    <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
-                                </p>
-                            </a>
-                        </li>
-                        <li class="descriptions">
-                            <a class="description_link" title="{$subject}" href="/board/product/read.html{$param_read}"
-                                target="_self">
-                                <h1> {$icon_re} {$icon_lock} {$icon_mobile} {$subject} </h1>
-                                <p>
-                                    {$member_icon}
-                                    <span class="id" title="작성자">{$writer}</span>
-                                    <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
-                                </p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="tab-tips-btns">
-                    <div class="qna_btn"><a href="{$qna_write}" target="_self">물어보기</a>
-                    </div>
-                </div>
-                <div class="product_detail_paginate page-pagination" module="product_qnapaging">
-                    <div class="paginate-box">
-                        <span class="btnPrev_wrap">
-                            <a href="{$param_first}" class="first">처음</a>
-                            <a href="{$param_before}" class="btnPrev">이전</a>
-                        </span>
-                        <ol>
-                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                        </ol>
-                        <span class="btnNext_wrap">
-                            <a href="{$param_next}" class="btnNext">다음</a>
-                            <a href="{$param_last}" class="last">끝</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- tab2 Q&A -->
-        <!-- tab3 배송안내 -->
-        <div id="tab3" class="tab_content swiper-slide" data-hash="prd_info">
-            <div id="prd_info">
-                <div class="tab_prd_info">
-                    <div class="title">상품결제정보</div>
-                    <div class="content">{$payment_info}</div>
-                </div>
-                <div class="tab_prd_info">
-                    <div class="title">배송정보</div>
-                    <div class="content">
-                        <ul class="delivery">
-                            <li>배송 방법 : {$shipping_method}</li>
-                            <li>배송 지역 : {$shipping_area}</li>
-                            <li>배송 비용 : {$shipping_fee}</li>
-                            <li>배송 기간 : {$shipping_period}</li>
-                            <li>배송 안내 : {$shipping_info}</li>
+                        <p class="noAccess {$deny_display|display}">글읽기 권한이 없습니다.</p>
+                        <ul class="tab-board-table {$list_display|display}">
+                            <li class="descriptions">
+                                <a class="description_link" title="{$subject}"
+                                    href="/board/product/read.html{$param_read}" target="_self">
+                                    <h1> {$icon_re} {$icon_lock} {$icon_mobile} {$subject} </h1>
+                                    <p>
+                                        {$member_icon}
+                                        <span class="id" title="작성자">{$writer}</span>
+                                        <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="descriptions">
+                                <a class="description_link" title="{$subject}"
+                                    href="/board/product/read.html{$param_read}" target="_self">
+                                    <h1> {$icon_re} {$icon_lock} {$icon_mobile} {$subject} </h1>
+                                    <p>
+                                        {$member_icon}
+                                        <span class="id" title="작성자">{$writer}</span>
+                                        <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
+                                    </p>
+                                </a>
+                            </li>
                         </ul>
                     </div>
-                </div>
-                <div class="tab_prd_info">
-                    <div class="title">교환/반품정보</div>
-                    <div class="content">{$exchange_info}</div>
-                </div>
-                <div class="tab_prd_info">
-                    <div class="title">서비스 문의</div>
-                    <div class="content">{$supplier_id} & 비보트 카카오톡 상담</div>
+                    <div class="tab-tips-btns">
+                        <div class="qna_btn"><a href="{$qna_write}" target="_self">물어보기</a>
+                        </div>
+                    </div>
+                    <div class="product_detail_paginate page-pagination" module="product_qnapaging">
+                        <div class="paginate-box">
+                            <span class="btnPrev_wrap">
+                                <a href="{$param_first}" class="first">처음</a>
+                                <a href="{$param_before}" class="btnPrev">이전</a>
+                            </span>
+                            <ol>
+                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                            </ol>
+                            <span class="btnNext_wrap">
+                                <a href="{$param_next}" class="btnNext">다음</a>
+                                <a href="{$param_last}" class="last">끝</a>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!-- tab2 Q&A -->
+            <!-- tab3 배송안내 -->
+            <div id="tab3" class="tab_content swiper-slide" data-hash="prd_info">
+                <div id="prd_info">
+                    <div class="tab_prd_info">
+                        <div class="title">상품결제정보</div>
+                        <div class="content">{$payment_info}</div>
+                    </div>
+                    <div class="tab_prd_info">
+                        <div class="title">배송정보</div>
+                        <div class="content">
+                            <ul class="delivery">
+                                <li>배송 방법 : {$shipping_method}</li>
+                                <li>배송 지역 : {$shipping_area}</li>
+                                <li>배송 비용 : {$shipping_fee}</li>
+                                <li>배송 기간 : {$shipping_period}</li>
+                                <li>배송 안내 : {$shipping_info}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab_prd_info">
+                        <div class="title">교환/반품정보</div>
+                        <div class="content">{$exchange_info}</div>
+                    </div>
+                    <div class="tab_prd_info">
+                        <div class="title">서비스 문의</div>
+                        <div class="content">{$supplier_id} & 비보트 카카오톡 상담</div>
+                    </div>
+                </div>
+            </div>
+            <!-- tab4 배송안내 -->
         </div>
-        <!-- tab4 배송안내 -->
-    </div>
-    <!-- 상품 정보 하단 정보 -->
-</article>
-<!-- 상품 정보 하단 -->
-<!-- 상품 구매 탭 -->
-<section id="buyAction" module="product_action">
-    <div class="webnmobile_product_html">
-        <button class="buy_btn purchase_button " data-type="buy" alt="구매하기">구매하기</button>
-    </div>
-</section>
-<!-- 상품 구매 탭 -->
-<script src="/js/module/product/detail.js"></script>
-<!--@define(cmc_log)-->
+        <!-- 상품 정보 하단 정보 -->
+    </article>
+    <!-- 상품 정보 하단 -->
+    <!-- 상품 구매 탭 -->
+    <section id="buyAction" module="product_action">
+        <div class="webnmobile_product_html">
+
+            <button onclick="{$action_wishlist}" class="wish_btn {$wishlist_display}" title="위시리스트 담기">찜</button>
+            <button class="share_btn" title="공유하기">공유</button>
+            <button class="gift_btn" title="선물하기">선물하기</button>
+            <button class="buy_btn purchase_button " data-type="buy" alt="구매하기">구매하기</button>
+        </div>
+    </section>
+    <!-- 상품 구매 탭 -->
+    <script src="/js/module/product/detail.js"></script>
+    <!--@define(cmc_log)-->
