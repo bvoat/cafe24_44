@@ -9,6 +9,7 @@
 //환경변수 세팅
 let api_domain;
 let now_cafe_href = window.location.href;
+
 if (
   now_cafe_href.includes("skin-skin44") ||
   now_cafe_href.includes("skin-mobile9")
@@ -29,28 +30,18 @@ function getUrlParams(param){
   return new URLSearchParams(location.search).get(param);
 }
 
-
 /**
- * 브랜드, 요약 설명 감시 함수 
-*/
-function monitoringDesc(){
-  let brand = document.querySelectorAll(".brand");
-  let summary = document.querySelectorAll(".summary");
-  brand.forEach((el)=>{ el.style.fontSize = "10px"});
-  summary.forEach((el)=>{ el.style.fontSize = "11.5px"});
-  console.log("monitoring desc")
-} 
-
+ * 가격 CSS 변경
+ */
 function monitoringPrice() {
   console.log("price monitoring");
   const priceWrap = document.querySelectorAll(".price_wrap");
   priceWrap.forEach((price)=>{
-    const fixedPrice = price.children[0];
-    const fixedPriceNum = Number((fixedPrice.dataset.price).replace(/,/g,""));
-    const realPrice = price.children[1];
+    const discount = price.children[1];    
+    const realPrice = price.children[0];
     const realPriceNum = Number((realPrice.dataset.price).replace(/,/g,""));
-    const discount = price.children[2];    
-
+    const fixedPrice = price.children[2];
+    const fixedPriceNum = Number((fixedPrice.dataset.price).replace(/,/g,""));
   //소비자가가 입력된 경우 체크
   //소비자가 없으면 0으로 표시
   if(fixedPriceNum != 0){
@@ -76,6 +67,7 @@ function monitoringPrice() {
           (discount_num / fixedPriceNum) * 100
         );
         discount.innerHTML = `${percentage}%`;
+        discount.classList.add("pad_add");
     }
   }else{
     //소비자가가 0이면 할인 없음
@@ -86,16 +78,13 @@ function monitoringPrice() {
     realPrice.classList.add("finalprice")
   }
   })
-
-
 }
-window.addEventListener("DOMContentLoaded", () => {
+
+window.addEventListener("load", () => {
   if (document.querySelector(".price_wrap")) {
     setTimeout(monitoringPrice,900)
-    // setTimeout(monitoringDesc,900)
   } else {
     setTimeout(monitoringPrice,1200)
-    // setTimeout(monitoringDesc,1200)
   }
 });
 
@@ -137,30 +126,11 @@ const checkMoreView = () => {
   });
 };
 
-window.addEventListener("load", () => {
-  checkMoreView();
-});
 
 /* nav 컨트롤 스크립트 */
 //상단바 컨트롤
-function controlTopNav(page_path) {
-  // nav 전체
-  const back_btn = document.querySelector(".back_btn");
-  const default_nav = document.querySelector(".default_top_nav");
-  const comm_nav = document.querySelector(".community_top_nav");
-  //상단바 (탑메뉴) 사라지게 할 path
-  const expect_array = [
-    "order/basket",
-    "order/orderform",
-    "product/detail",
-    "product/category",
-    "myshop/wish_list",
-    "member/login",
-    "myshop/index",
-    "member/modify",
-  ];
-  //커뮤니티용 path
-  // const community_array = ["community", "buy_records", "crewinfo", "reviews"];
+function controlBackIcon(page_path) {
+
   //뒤로가기 있어야 하는 path
   const back_array = [
     "product/detail",
@@ -179,59 +149,34 @@ function controlTopNav(page_path) {
     "article"
   ];
 
-  //상단바 (탑메뉴) 사라지게 하기
-  expect_array.forEach((path) => {
-    page_path.includes(path) ? default_nav.classList.add("displaynone") : null;
-  });
-  //커뮤니티 하단바로 변경하기
-  // community_array.forEach((path) => {
-  //   if (page_path.includes(path)) {
-  //     console.log('path: ', path);
-  //     default_nav.classList.add("displaynone");
-  //     comm_nav.classList.remove("displaynone");
-  //     // document.querySelector(`#${path}_nav`).classList.add("top_nav_active");
-  //     document.querySelector(`.${path}_nav`).classList.add("top_nav_active");
-  //   }
-  // });
-
   //뒤로가기 표시 하기
   back_array.forEach((path) => {
     if (page_path.includes(path)) {
       back_btn.classList.remove("visiblehidden");
     }
   });
-}
-//상단바 active 표시
-function controlTopNavActive(page_path) {
-  console.log('page_path: ', page_path);
 
- if (page_path.includes("crew/crew.html") || page_path.includes("crew/crewinfo.html")) {
-    //크루에 active 
-    document.querySelector("#crew").classList.add("top_nav_active");
-  } else if (page_path.includes("introduce")) {
-    //비보트 소개에 active
-    document.querySelector("#intro").classList.add("top_nav_active");
-  } else if (page_path.includes("board_no=8") || page_path.includes("article")) {
-    //읽을거리에 active
-    document.querySelector("#board").classList.add("top_nav_active");
-  } else if(page_path.includes("board_no=4/")) {
-    //비보트 추천에 active
-    document.querySelector("#buy_records_nav").classList.add("top_nav_active");
-  } else if(page_path.includes("realtime")){
-    //보터들의 픽에 active
-    document.querySelector("#realtime").classList.add("top_nav_active");
+}
+/**
+ * 헤더 장바구니/검색 표시
+ */
+const headerControl = (page_path) => {
+  console.log('page_path: ', page_path);
+  //검색/장바구니 교체
+  if(page_path.includes("detail.html")){
+    document.querySelector(".header_menu").children[1].remove();
   } else {
-        //관련 없는 경우  -> 비보트 추천 에 active
-        document.querySelector("#index").classList.add("top_nav_active");
+    document.querySelector(".header_menu").children[2].remove();
   }
 }
-window.addEventListener("DOMContentLoaded", () => {
-  //top nav 숨기기 함수
-  controlTopNav(window.location.href);
-  //top nav active 함수 
-  controlTopNavActive(window.location.href);
-});
+
 /* nav 컨트롤 스크립트 */ 
+
+window.addEventListener("DOMContentLoaded", ()=>{
+  headerControl(now_cafe_href);
+  controlBackIcon(now_cafe_href);
+  checkMoreView();
+})
 
 /* 아이폰 스크롤 시 튕김 현상 prevent */
 // disable touchmove event when height is smaller than screen height
@@ -456,15 +401,3 @@ function setArraylocal(key, value, limitMax) {
   }
   localStorage.setItem(key, JSON.stringify(obj));
 }
-
-/**
- * 날짜 변경
- */
-function monthChange() {
-  document.querySelectorAll(".month").forEach((month)=>{
-    console.log('month: ', month);
-      month.innerText = (new Date().getMonth()) + 1;
-  })
-}
-
-window.addEventListener("load", setTimeout(monthChange, 500))

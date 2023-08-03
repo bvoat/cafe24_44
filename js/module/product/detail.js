@@ -1,41 +1,27 @@
 /* ------------------------------------------------------------------------------------ */
 /* bvt */
 
+//thumbnail 스와이퍼
+var swiper = new Swiper(".product_thumnail_wrap", {
+  spaceBetween: 8,
+  slidesPerView: "1",
+  pagination: {
+      el: ".swiper-pagination-thumb",
+      clickable: true,
+      type: "fraction",
+  },
+})
+
 // relation list 스와이퍼
 var swiper = new Swiper(".product_relation_list", {
   spaceBetween: 8,
   slidesPerView: "3",
   pagination: {
       el: ".list_item_progress",
-      clickable: true,
       type: "progressbar",
   },
 });
 
-// 리뷰 수신
-const review_frame = document.querySelector("#reviewsDetail > iframe");
-if (review_frame != null) {
-  //상품 번호 수신
-  let product_no = new URLSearchParams(location.search).get("product_no");
-  review_frame.setAttribute(
-    "src",
-    `https://${api_domain}.shop/buy_records?product_no=${product_no}`
-  );
-}
-//최초 탭 높이 조절 
-
-window.addEventListener("load", ()=>{
-  const productDetailBottom = document.getElementById("productDetailBottom");
-  const detail_swiper_wrap = document.getElementById("detail_swiper_wrap");
-  if(productDetailBottom){
-    let firstTab = getComputedStyle(productDetailBottom);
-    const firstControlContentWrapHeight = (firstTab) => {
-      productDetailBottom.style.height = (firstTab.height + 100 + 'px');
-      detail_swiper_wrap.style.height = (firstTab.height + 100 + 'px');
-    };
-    firstControlContentWrapHeight(firstTab);
-  }
-})
 
 //상품 상세 하단 페이지 탭 슬라이더
 //node 값 받아서 Array
@@ -47,15 +33,14 @@ var detailTabSwiper = new Swiper("#productDetailBottom", {
   slidesPerView: 1,
   centeredSlides: true,
   spaceBetween: 1,
-  // edgeSwipeDetection: true,
-  // edgeSwipeThreshold: 50,
-  // maxBackfaceHiddenSlides: 5,
-  // loop: true,
-  lazy: false,
-  // watchSlidesVisibility: true,
-  // watchSlidesProgress: true,
-  // resistance: true,
-  // resistanceRatio: 1,
+  lazy: true,
+  observer: true,
+  observerParent: true,
+  allowTouchMove: false,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  resistance: true,
+  resistanceRatio: 1,
   allowTouchMove: false,
   hashNavigation: {
     replaceState: true,
@@ -73,6 +58,17 @@ var detailTabSwiper = new Swiper("#productDetailBottom", {
   },
 });
 
+//하단 메뉴 탭 상단 붙이기
+window.addEventListener("scroll", ()=>{
+  const detailMenu = document.querySelector(".detail_tab_wrap");
+  console.log("window.scrollY", window.scrollY)
+  if(window.scrollY > 1019 ){
+    detailMenu.classList.add("active");
+  } else {
+    detailMenu.classList.remove("active");
+  }
+})
+
 //슬라이더 이외 함수 시작
 
 //Q&A heading 컨트롤
@@ -86,48 +82,6 @@ const qnaControl = () => {
       });
     }
   }
-};
-
-//리뷰 컨트롤
-const buyRecordFrameControl = () => {
-  // 리뷰 iframe 높이 조절
-  let bh_frame = document.querySelectorAll("#reviewsDetailFrame");
-  let bh_detail = document.querySelectorAll("#reviewsDetail");
-
-  window.addEventListener("message", function (e) {
-    let message = e.data;
-    if (message && message.height) {
-      bh_frame.forEach((node) => {
-        node.style.height = message.height + 10 + "px";
-      });
-      bh_detail.forEach((node) => {
-        node.style.height = message.height + 10 + "px";
-      });
-      //iframe 높이 조절
-    }
-  });
-  // 스크롤 하단까지 갔을때 iframe 에 전달
-  var loading = false;
-  let sObj = {};
-  let b_p = 0;
-  let st = 0;
-  // var iframe_content = document.getElementById('buy_record_frame').contentWindow;
-  window.scroll(function () {
-    // if ($("div.tab1 .swiper-slide-duplicate-active").length > 0) {
-    st = window.scrollTop();
-    if (b_p < st) {
-      if (st + 200 >= document.height() - window.height()) {
-        //    if(!loading)
-        {
-          sObj.more = true;
-          loading = true;
-          bh_frame.postMessage(sObj, "*");
-        }
-      }
-    }
-    b_p = st;
-    // }
-  });
 };
 
 //크루 등급 마일리지 2배 변환
