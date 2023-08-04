@@ -607,6 +607,7 @@ div.layerProgress {
     font-weight: bold;
     color: #003DD3;
     letter-spacing: -0.5px;
+    margin-left: 10px;
 }
 
 /* 장바구니 카운트 */
