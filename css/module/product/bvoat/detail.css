@@ -218,7 +218,7 @@
 #productDetailTop #productDetail .product_detail li .detail {
   display: flex;
   flex-flow: column nowrap;
-  width: calc(100% - 125px);
+  width: 100%;
   font-size: 1.35rem;
   font-weight: 300;
   color: #292929;
