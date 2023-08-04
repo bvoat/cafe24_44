@@ -50,9 +50,7 @@
   display: block;
   width: 100%;
   border-radius: 10px;
-  height: 200px;
   margin-bottom: 14.6px;
-  overflow: hidden;
 }
 .only3 .list_contents_wrap .only3item .brand_banner a {
   position: relative;
@@ -60,10 +58,7 @@
   width: 100%;
 }
 .only3 .list_contents_wrap .only3item .brand_banner a img {
-  position: absolute;
   width: 100%;
-  top: 0;
-  left: 0;
   -o-object-fit: contain;
      object-fit: contain;
   background-size: contain;
