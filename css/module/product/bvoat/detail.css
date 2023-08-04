@@ -1069,7 +1069,7 @@
   overflow: hidden;
   box-shadow: 0px -3px 11px rgba(203, 203, 203, 0.4);
 }
-#buyAction .awebnmobile_product_html {
+#buyAction .by_action {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1079,13 +1079,13 @@
   padding-left: 17px;
   background: #ffffff;
 }
-#buyAction .awebnmobile_product_html button {
+#buyAction .by_action button {
   font-size: 1.1rem;
   color: #707070;
   background: transparent;
   height: 60px;
 }
-#buyAction .awebnmobile_product_html .wish_btn {
+#buyAction .by_action .wishlist_btn {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -1094,7 +1094,7 @@
   width: fit-content;
   padding: 0 17px 0 0;
 }
-#buyAction .awebnmobile_product_html .wish_btn::before {
+#buyAction .by_action .wishlist_btn::before {
   display: block;
   content: "";
   width: 26.75px;
@@ -1103,7 +1103,7 @@
   background-size: contain;
   margin-bottom: 8.9px;
 }
-#buyAction .awebnmobile_product_html .share_btn {
+#buyAction .by_action .share_btn {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -1112,7 +1112,7 @@
   width: fit-content;
   padding: 0 17px 0 0;
 }
-#buyAction .awebnmobile_product_html .share_btn::before {
+#buyAction .by_action .share_btn::before {
   display: block;
   content: "";
   width: 26.75px;
@@ -1121,7 +1121,7 @@
   background-size: contain;
   margin-bottom: 8.9px;
 }
-#buyAction .awebnmobile_product_html .gift_btn {
+#buyAction .by_action .gift_btn {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -1131,7 +1131,7 @@
   font-weight: bold;
   color: #003DD3;
 }
-#buyAction .awebnmobile_product_html .gift_btn::before {
+#buyAction .by_action .gift_btn::before {
   display: block;
   content: "";
   width: 25px;
@@ -1140,7 +1140,7 @@
   background-size: contain;
   margin-bottom: 8.9px;
 }
-#buyAction .awebnmobile_product_html .buy_btn {
+#buyAction .by_action .buy_btn {
   display: flex;
   width: 100%;
   background: #003DD3;
