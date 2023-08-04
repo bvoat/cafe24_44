@@ -9,6 +9,7 @@
 //환경변수 세팅
 let api_domain;
 let now_cafe_href = window.location.href;
+const back_btn  = document.querySelector(".back_btn");
 
 if (
   now_cafe_href.includes("skin-skin44") ||
