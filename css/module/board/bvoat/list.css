@@ -161,6 +161,7 @@
 #productBoardList #productBoardListTable .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #productBoardList #productBoardListTable .thumb > a,
 #productBoardList #productBoardListTable .thumb .img_wrap {

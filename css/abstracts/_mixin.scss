@@ -8,6 +8,7 @@
     .thumb {
         position: relative;
         width: 100%;
+        font-size: 0;
 
         >a,
         .img_wrap {
@@ -43,7 +44,7 @@
 
     //상품 설명
     .desc {
-        padding: $top-padding 0 25.5px 0;
+        padding: $top-padding 0 17px 0;
 
         .brand {
             font-size: $brand-ftsize;

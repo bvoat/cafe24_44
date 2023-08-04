@@ -66,6 +66,7 @@
 #orderExchange #orderExchangeTable .description .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #orderExchange #orderExchangeTable .description .thumb > a,
 #orderExchange #orderExchangeTable .description .thumb .img_wrap {

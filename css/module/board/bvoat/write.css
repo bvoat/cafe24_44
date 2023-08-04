@@ -39,6 +39,7 @@
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb > a,
 #productBoardWrite #productBoardWriteSection .ec-base-box .product_info .thumb .img_wrap {

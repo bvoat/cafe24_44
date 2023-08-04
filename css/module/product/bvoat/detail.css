@@ -33,6 +33,7 @@
 #productDetailTop .product_thumnail_wrap .thumb_wrapper .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #productDetailTop .product_thumnail_wrap .thumb_wrapper .thumb > a,
 #productDetailTop .product_thumnail_wrap .thumb_wrapper .thumb .img_wrap {

@@ -81,6 +81,7 @@
 #orderReturn #applyForm #orderReturnTable .description .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #orderReturn #applyForm #orderReturnTable .description .thumb > a,
 #orderReturn #applyForm #orderReturnTable .description .thumb .img_wrap {

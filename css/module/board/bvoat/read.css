@@ -49,6 +49,7 @@
 #productBoardRead #productBoardReadTableHead .product_info .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #productBoardRead #productBoardReadTableHead .product_info .thumb > a,
 #productBoardRead #productBoardReadTableHead .product_info .thumb .img_wrap {

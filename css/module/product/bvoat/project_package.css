@@ -184,7 +184,7 @@
   padding-bottom: 30px;
 }
 #specialProject .project_productlist_wrap .desc {
-  padding: 7px 0 25.5px 0;
+  padding: 7px 0 17px 0;
 }
 #specialProject .project_productlist_wrap .desc .brand {
   font-size: 1rem;
@@ -240,6 +240,7 @@
 #specialProject .project_productlist_wrap .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #specialProject .project_productlist_wrap .thumb > a,
 #specialProject .project_productlist_wrap .thumb .img_wrap {

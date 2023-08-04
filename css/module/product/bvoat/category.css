@@ -63,6 +63,7 @@
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .thumb > a,
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .thumb .img_wrap {
@@ -147,6 +148,7 @@
 #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a,
 #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap,
@@ -238,6 +240,7 @@
 #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb > a,
 #categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb .img_wrap,

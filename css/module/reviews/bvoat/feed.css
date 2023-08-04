@@ -114,6 +114,7 @@
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb > a,
 #reviewsFeedWrap ul.reviews_feed_list li.reviews_item div.reviews_wrap .thumb .img_wrap {
@@ -384,6 +385,7 @@
 #reviewsViewWrap .reviews_item div.reviews_wrap .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap .thumb > a,
 #reviewsViewWrap .reviews_item div.reviews_wrap .thumb .img_wrap {
@@ -513,6 +515,7 @@
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb > a,
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .thumb .img_wrap {
@@ -1198,6 +1201,7 @@
 #reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb > a,
 #reviewsProfileWrap #reviewsProfileReviews .reviews_id_list .reviews_item .thumb .img_wrap {
@@ -1279,6 +1283,7 @@
 #reviewsWriteWrap #reviewsWriteProduct > button .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #reviewsWriteWrap #reviewsWriteProduct > button .thumb > a,
 #reviewsWriteWrap #reviewsWriteProduct > button .thumb .img_wrap {
@@ -1766,6 +1771,7 @@
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb > a,
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .thumb .img_wrap {

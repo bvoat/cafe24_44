@@ -35,6 +35,7 @@
 #memberModify #memberModifyTitle #memberUserImage .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #memberModify #memberModifyTitle #memberUserImage .thumb > a,
 #memberModify #memberModifyTitle #memberUserImage .thumb .img_wrap {

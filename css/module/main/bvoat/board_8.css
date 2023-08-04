@@ -20,6 +20,7 @@
 #bvtBoard8 .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 #bvtBoard8 .thumb > a,
 #bvtBoard8 .thumb .img_wrap {

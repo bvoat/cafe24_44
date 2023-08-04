@@ -21,6 +21,7 @@
 .thumb {
   position: relative;
   width: 100%;
+  font-size: 0;
 }
 .thumb > a,
 .thumb .img_wrap {
