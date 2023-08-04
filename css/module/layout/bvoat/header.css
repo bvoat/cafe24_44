@@ -31,13 +31,13 @@
 #header_wrap #header_logo_section > .back_btn {
   display: block;
   width: 33%;
-  height: 26.33px;
+  height: 26px;
   background: none;
 }
 #header_wrap #header_logo_section > .back_btn button {
-  width: 16px;
+  width: 13px;
   height: 100%;
-  background: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.84' height='25.072'%3E%3Cpath fill='%23003DD3' stroke='%23003DD3' d='M11.987.84a1.269 1.269 0 0 1 .1 1.512l-.1.13L3.053 12.5l8.934 10.018a1.269 1.269 0 0 1 .1 1.512l-.1.13a.954.954 0 0 1-1.348.112l-.116-.112L.856 13.321a1.269 1.269 0 0 1-.1-1.512l.1-.13L10.52.84a.958.958 0 0 1 1.467 0Z' data-name='Iconly/Light-Outline/Arrow---Left-2'/%3E%3C/svg%3E") no-repeat center;
 }
 #header_wrap #header_logo_section > a .header_logo {
   display: block;
