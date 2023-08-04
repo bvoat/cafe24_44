@@ -46,6 +46,7 @@
             background: $x-btn no-repeat;
             background-size: cover;
             text-indent: -9999px;
+            fill: $bvt-blue;
         }
 
 
@@ -200,11 +201,6 @@
                                 background-color: $bvt-blue;
                                 color: $bvt-white;
                                 font-size: 1.1rem;
-                            }
-
-                            &:nth-child(4) {
-                                margin: 0 0 10.8px 0;
-
                             }
                         }
                     }

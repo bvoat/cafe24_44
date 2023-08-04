@@ -124,9 +124,15 @@ Array.from(purchase_button).forEach((btn)=>{
   })
 })
 const buy_screen_title = document.querySelector(".buy_screen_title");
+// const stay_btn = document.querySelector(".stay_btn");
+
 buy_screen_title.addEventListener("click", ()=>{
   classToggle(buyScreen, "displaynone");
 })
+
+// stay_btn.addEventListener("click", ()=>{
+//   classToggle(buyScreen, "displaynone");
+// })
 /* 가격 -> 스탬프 */
 //스탬프 갯수 변수 할당
 const createStampPcsFromPrice = (price) => {
