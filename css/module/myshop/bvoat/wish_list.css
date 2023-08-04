@@ -245,7 +245,10 @@
   color: #ffffff;
 }
 #wishList #wishListCardSection #wishListBtn {
-  padding: 15px;
+  padding: 15px 0 0 0;
+}
+#wishList #wishListCardSection #wishListBtn .select_btn_wrap {
+  font-size: 0;
 }
 #wishList #wishListCardSection #wishListBtn .select_btn_wrap > button {
   display: inline-block;
@@ -259,7 +262,7 @@
 }
 #wishList #wishListCardSection #wishListBtn .select_btn_wrap .select_all_btn {
   width: 88px;
-  margin-right: 1px;
+  margin-right: 4px;
 }
 #wishList #wishListCardSection #wishListBtn .select_btn_wrap .select_del_btn {
   width: 88px;
@@ -282,7 +285,7 @@
   color: #ffffff;
   font-size: 1.65rem;
   font-weight: bold;
-  margin-top: 33.7px;
+  margin-top: 25px;
 }
 
 .page-pagination {

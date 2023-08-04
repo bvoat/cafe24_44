@@ -8,7 +8,7 @@
     align-items: center;
     width: 100%;
     max-width: 450px;
-    padding: 23px 0 150px;
+    padding: 23px 0 30px;
     margin: 60px auto 80px; //top_nav hide
 
     #BasketTitle {
@@ -401,6 +401,7 @@
     width: 100%;
     margin-top: 16px;
     padding: 0 17px;
+    white-space: nowrap;
 
     button {
         display: flex;
@@ -434,11 +435,11 @@
 
         .select_del {
             width: 88px;
+            margin-right: 4px;
         }
 
         .select_clear {
             width: 39.5%;
-            margin-left: 4px;
         }
     }
 }

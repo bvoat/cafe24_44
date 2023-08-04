@@ -280,9 +280,11 @@
         }
 
         #wishListBtn {
-            padding: 15px;
+            padding: 15px 0 0 0;
 
             .select_btn_wrap {
+                font-size: 0;
+
                 >button {
                     display: inline-block;
                     height: 40px;
@@ -296,7 +298,7 @@
 
                 .select_all_btn {
                     width: 88px;
-                    margin-right: 1px;
+                    margin-right: 4px;
                 }
 
                 .select_del_btn {
@@ -323,7 +325,7 @@
                 color: $bvt-white;
                 font-size: 1.65rem;
                 font-weight: bold;
-                margin-top: 33.7px
+                margin-top: 25px
             }
         }
     }

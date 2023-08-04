@@ -13,7 +13,7 @@
   align-items: center;
   width: 100%;
   max-width: 450px;
-  padding: 23px 0 150px;
+  padding: 23px 0 30px;
   margin: 60px auto 80px;
 }
 #Basket #BasketTitle {
@@ -362,6 +362,7 @@
   width: 100%;
   margin-top: 16px;
   padding: 0 17px;
+  white-space: nowrap;
 }
 .basket_select_action_wrap button {
   display: flex;
@@ -392,10 +393,10 @@
 }
 .basket_select_action_wrap .basket_select_box .select_del {
   width: 88px;
+  margin-right: 4px;
 }
 .basket_select_action_wrap .basket_select_box .select_clear {
   width: 39.5%;
-  margin-left: 4px;
 }
 
 .basket_total {
