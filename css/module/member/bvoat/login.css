@@ -14,8 +14,9 @@
 #memberLogin {
   width: 100%;
   max-width: 450px;
-  margin: 67px 0;
-  padding: 0 17px 100%;
+  margin: 67px 0 0 0;
+  padding: 0 17px;
+  height: 100vh;
 }
 #memberLogin #memberLoginTitle {
   display: flex;
