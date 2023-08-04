@@ -13,7 +13,7 @@
   align-items: center;
   width: 100%;
   max-width: 450px;
-  padding: 23px 11px 150px;
+  padding: 23px 0 150px;
   margin: 60px auto 80px;
 }
 #Basket #BasketTitle {
@@ -31,7 +31,6 @@
 #Basket #BasketSection {
   width: 100%;
   max-width: 450px;
-  padding: 0 11px;
 }
 #Basket #BasketSection .empty {
   text-align: center;
@@ -46,6 +45,7 @@
 #BasketList {
   width: 100%;
   max-width: 450px;
+  padding: 0 29px;
 }
 #BasketList .boardList {
   width: 100%;
@@ -182,7 +182,7 @@
   padding: 0 0 0 19px;
 }
 .item_desc .item_info .item_name {
-  font-size: 1.75rem;
+  font-size: 1.3rem;
   font-weight: normal;
   margin-bottom: 11px;
   display: block;
@@ -361,6 +361,7 @@
   justify-content: space-between;
   width: 100%;
   margin-top: 16px;
+  padding: 0 29px;
 }
 .basket_select_action_wrap button {
   display: flex;
@@ -370,10 +371,11 @@
   border: 1px solid #E2E2E2;
   border-radius: 5px;
   background: #F2F2F2;
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: bold;
   color: #707070;
   letter-spacing: -0.3px;
+  padding: 0 5px;
 }
 .basket_select_action_wrap #product_select_all {
   min-width: 88px;
@@ -403,13 +405,14 @@
   width: 100%;
   margin-top: 16px;
   border-top: 7px solid #F2F2F2;
-  padding: 29px 32px 27px;
+  padding: 29px 0 27px;
 }
 .basket_total .total {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  padding: 0 29px;
 }
 .basket_total .total h2,
 .basket_total .total h3,
@@ -436,6 +439,7 @@
   flex-flow: row nowrap;
   justify-content: center;
   height: 66px;
+  padding: 0 29px;
 }
 .basket_total_btn_wrap .order_select {
   width: 100%;
