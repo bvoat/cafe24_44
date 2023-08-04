@@ -128,3 +128,8 @@
 #review-aid-best-review-root {
     margin-bottom: 80px;
 }
+
+//전체보기 삭제
+#review-aid-best-review-root>section>div>a {
+    display: none
+}
