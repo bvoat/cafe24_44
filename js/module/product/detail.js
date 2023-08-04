@@ -85,10 +85,10 @@ window.addEventListener("scroll", ()=>{
   const headerWrap = document.querySelector("#header_wrap");
   if(window.scrollY > 1015 ){
     detailMenu.classList.add("active");
-    headerWrap.classList.remove("gradient")
+    headerWrap.classList.remove("gradient");
   } else {
     detailMenu.classList.remove("active");
-    headerWrap.classList.add("gradient")
+    headerWrap.classList.add("gradient");
   }
 })
 
