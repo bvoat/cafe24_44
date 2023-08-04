@@ -68,7 +68,6 @@ function monitoringPrice() {
           (discount_num / fixedPriceNum) * 100
         );
         discount.innerHTML = `${percentage}%`;
-        discount.classList.add("pad_add");
     }
   }else{
     //소비자가가 0이면 할인 없음
