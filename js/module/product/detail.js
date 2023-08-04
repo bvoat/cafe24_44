@@ -1,6 +1,14 @@
 /* ------------------------------------------------------------------------------------ */
 /* bvt */
 
+const thumbnail_list = document.querySelector(".thumb").children;
+[...thumbnail_list].forEach(li => {
+  li.classList.add("main_thumb", "img_wrap", "swiper-slide");
+  li.style="display: inline-block";
+})
+
+
+
 //thumbnail 스와이퍼
 var swiper = new Swiper(".product_thumnail_wrap", {
   spaceBetween: 8,
