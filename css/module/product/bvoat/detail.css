@@ -163,43 +163,16 @@
   align-items: center;
   /* 가격 표시 */
 }
-#productDetailTop .product_info_wrap .product_price .price_wrap {
-  position: relative;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
+#productDetailTop .product_info_wrap .product_price .price_wrap .price_item {
+  font-size: 2.15rem;
 }
-#productDetailTop .product_info_wrap .product_price .price_wrap > .price_item {
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: #292929;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  order: 2;
+#productDetailTop .product_info_wrap .product_price .price_wrap .discountrate {
+  font-size: 2.15rem;
+  margin-left: 10px;
 }
 #productDetailTop .product_info_wrap .product_price .price_wrap .strike_price {
-  text-decoration: line-through !important;
-  color: #B7B7B7 !important;
-  font-size: 1.5rem !important;
-  top: -25px;
-  left: 0;
-  padding-bottom: 0;
-}
-#productDetailTop .product_info_wrap .product_price .price_wrap .onpromotion {
-  color: #292929 !important;
-}
-#productDetailTop .product_info_wrap .product_price .price_wrap .onpromotion::after {
-  color: #292929 !important;
-}
-#productDetailTop .product_info_wrap .product_price .price_wrap > .discountrate {
-  position: relative;
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: #003DD3;
-  letter-spacing: -0.5px;
-}
-#productDetailTop .product_info_wrap .product_price .price_wrap .pad_add {
-  padding-right: 10px;
+  font-size: 1.65rem !important;
+  margin-top: 10px;
 }
 #productDetailTop .product_info_wrap .product_price .button_wrap {
   position: absolute;

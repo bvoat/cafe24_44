@@ -138,51 +138,21 @@
 
 			/* 가격 표시 */
 			.price_wrap {
-				position: relative;
-				display: flex;
-				flex-flow: row nowrap;
-				justify-content: center;
 
-				>.price_item {
-					font-size: 2.2rem;
-					font-weight: bold;
-					color: #292929;
-					margin-bottom: 0;
-					padding-bottom: 0;
-					order: 2;
+				//가격
+				.price_item {
+					font-size: 2.15rem;
+				}
+
+				.discountrate {
+					font-size: 2.15rem;
+					margin-left: 10px;
 				}
 
 				.strike_price {
-
-					text-decoration: line-through !important;
-					color: #B7B7B7 !important;
-					font-size:
-						1.5rem !important;
-					top: -25px;
-					left: 0;
-					padding-bottom: 0;
+					font-size: 1.65rem !important;
+					margin-top: 10px;
 				}
-
-				.onpromotion {
-					color: #292929 !important;
-				}
-
-				.onpromotion::after {
-					color: #292929 !important;
-				}
-
-				>.discountrate {
-					position: relative;
-					font-size: 2.2rem;
-					font-weight: bold;
-					color: $bvt-blue;
-					letter-spacing: -0.5px;
-				}
-
-				.pad_add {
-					padding-right: 10px;
-				}
-
 			}
 
 			.button_wrap {
