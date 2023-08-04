@@ -460,9 +460,7 @@
   position: absolute;
   width: 100%;
   margin: 0 auto;
-  top: 80px;
-  left: 50%;
-  transform: translate(-107px, 0);
+  top: 90px;
 }
 
 .basket_select_btn_wrap {
