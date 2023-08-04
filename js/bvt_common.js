@@ -9,7 +9,7 @@
 //환경변수 세팅
 let api_domain;
 let now_cafe_href = window.location.href;
-const back_btn  = document.querySelector(".back_btn");
+console.log('now_cafe_href: ', now_cafe_href);
 
 if (
   now_cafe_href.includes("skin-skin44") ||
@@ -130,18 +130,15 @@ const checkMoreView = () => {
 
 /* nav 컨트롤 스크립트 */
 //상단바 컨트롤
-function controlBackIcon(page_path) {
+const controlBackIcon = (page_path) => {
+  const back_btn  = document.querySelector(".back_btn");
 
   //뒤로가기 있어야 하는 path
   const back_array = [
-    "product/detail",
-    "order/basket",
-    "order/orderform",
-    "community_view",
-    "community_write",
-    "buy_records/view.html",
-    "buy_records/write.html",
-    "order/basket",
+    "detail",
+    "basket",
+    "orderform",
+    "supply/index",
     "id/find_id",
     "passwd/find_passwd_info",
     "member/login",
