@@ -29,8 +29,14 @@
 			width: 100%;
 			font-size: 0;
 
+			.img_wrap,
+			a {
+				border-radius: 0 !important;
+			}
+
 			@include product-thumb(0);
 		}
+
 
 		.swiper-pagination-thumb {
 			position: absolute;

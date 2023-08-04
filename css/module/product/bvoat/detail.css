@@ -30,6 +30,10 @@
   width: 100%;
   font-size: 0;
 }
+#productDetailTop .product_thumnail_wrap .thumb_wrapper .img_wrap,
+#productDetailTop .product_thumnail_wrap .thumb_wrapper a {
+  border-radius: 0 !important;
+}
 #productDetailTop .product_thumnail_wrap .thumb_wrapper .thumb {
   position: relative;
   width: 100%;
