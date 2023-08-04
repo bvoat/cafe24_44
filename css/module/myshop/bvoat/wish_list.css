@@ -13,8 +13,8 @@
   align-items: center;
   width: 100%;
   max-width: 450px;
-  padding: 0 17px 80%;
-  margin: 67px 0px 120px;
+  padding: 23px 0 30px;
+  margin: 60px auto 80px;
 }
 #wishList #wishListTitle {
   display: flex;
@@ -24,7 +24,7 @@
   margin-bottom: 24px;
 }
 #wishList #wishListTitle h1 {
-  font-size: 2.35rem;
+  font-size: 2.45rem;
   font-weight: bold;
 }
 #wishList #wishListCardSection {
@@ -37,8 +37,7 @@
   font-size: 1.9rem;
   font-weight: bold;
   line-height: 35px;
-  padding-bottom: 100%;
-  margin-bottom: 100%;
+  height: 70vh;
 }
 #wishList #wishListCardSection #wishListList {
   position: relative;

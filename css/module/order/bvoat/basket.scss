@@ -9,7 +9,7 @@
     width: 100%;
     max-width: 450px;
     padding: 23px 0 30px;
-    margin: 60px auto 80px; //top_nav hide
+    margin: 60px auto 80px;
 
     #BasketTitle {
         display: flex;
@@ -36,8 +36,8 @@
             font-size: 1.9rem;
             font-weight: bold;
             line-height: 35px;
-            padding-bottom: 100%;
-            margin-bottom: 100%;
+            height: calc(100vh - 30vh);
+
         }
     }
 }
