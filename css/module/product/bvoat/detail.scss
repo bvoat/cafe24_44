@@ -1162,6 +1162,7 @@
 	z-index: 100;
 	bottom: 0;
 	overflow: hidden;
+	box-shadow: $bvt-top-shadow;
 
 
 	.webnmobile_product_html {
@@ -1176,7 +1177,6 @@
 		padding-bottom: calc(env(safe-area-inset-bottom) + 5px);
 		padding-left: 17px;
 		background: $bvt-white;
-		box-shadow: $bvt-top-shadow;
 
 		button {
 			font-size: 1.1rem;
