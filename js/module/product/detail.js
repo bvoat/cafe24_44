@@ -82,7 +82,6 @@ window.addEventListener("load", ()=>{
 //하단 메뉴 탭 상단 붙이기
 window.addEventListener("scroll", ()=>{
   const detailMenu = document.querySelector(".detail_tab_wrap");
-  console.log("window.scrollY", window.scrollY)
   if(window.scrollY > 1019 ){
     detailMenu.classList.add("active");
   } else {
