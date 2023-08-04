@@ -172,6 +172,7 @@
 }
 #searchModal #searchBarForm .search_input_box .hot_keyword .search_hot .hot_list > li a {
   color: #707070;
+  white-space: nowrap;
 }
 #searchModal #searchBarForm .search_input_box .hot_keyword .search_hot .hot_list > li > button {
   width: 27px;
