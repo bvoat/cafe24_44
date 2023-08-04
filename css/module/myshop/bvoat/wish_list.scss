@@ -95,7 +95,7 @@
 
                         .product_name {
                             width: 100%;
-                            font-size: 1.3rem;
+                            font-size: 1.35rem;
                             font-weight: normal;
                             margin-bottom: 11px;
                             @include only-ellipsis(1, 2rem)
@@ -234,6 +234,7 @@
                     height: 43px;
                     margin: 10px 0;
 
+
                     a,
                     button {
                         height: 100%;
@@ -241,6 +242,7 @@
                         letter-spacing: -0.7px;
                         border-radius: 5px;
                         box-sizing: border-box;
+                        font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif;
                     }
 
                     .item_del {

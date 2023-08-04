@@ -92,7 +92,7 @@
 }
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box .description .product_name {
   width: 100%;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: normal;
   margin-bottom: 11px;
   display: block;
@@ -219,6 +219,7 @@
   letter-spacing: -0.7px;
   border-radius: 5px;
   box-sizing: border-box;
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "나눔고딕", "맑은 고딕", "Malgun Gothic", "돋움", dotum, Verdana, AppleGothic, sans-serif;
 }
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_btn .item_del {
   display: flex;
