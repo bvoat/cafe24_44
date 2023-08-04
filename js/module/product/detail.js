@@ -30,17 +30,17 @@ const tab_txt = tab.map((node) => node.innerHTML);
 const tab_hash = tab.map((node) => node.dataset.hash);
 var detailTabSwiper = new Swiper("#productDetailBottom", {
   autoHeight: true,
-  slidesPerView: 1,
-  centeredSlides: true,
-  spaceBetween: 1,
-  lazy: true,
   observer: true,
-  observerParent: true,
-  allowTouchMove: false,
+  observeParents: true,
+  slidesPerView: "auto",
+  centeredSlides: true,
+  spaceBetween: 22,
+  edgeSwipeThreshold: 25,
+  // loop: true,
+  lazy: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
-  resistance: true,
-  resistanceRatio: 1,
+  edgeSwipeDetection: true,
   allowTouchMove: false,
   hashNavigation: {
     replaceState: true,
@@ -57,7 +57,20 @@ var detailTabSwiper = new Swiper("#productDetailBottom", {
     },
   },
 });
+//최초 탭 높이 조절 
 
+window.addEventListener("load", ()=>{
+  const productDetailBottom = document.getElementById("productDetailBottom");
+  const detail_swiper_wrap = document.getElementById("detail_swiper_wrap");
+  if(productDetailBottom){
+    let firstTab = getComputedStyle(productDetailBottom);
+    const firstControlContentWrapHeight = (firstTab) => {
+      productDetailBottom.style.height = (firstTab.height + 100 + 'px');
+      detail_swiper_wrap.style.height = (firstTab.height + 100 + 'px');
+    };
+    firstControlContentWrapHeight(firstTab);
+  }
+})
 //하단 메뉴 탭 상단 붙이기
 window.addEventListener("scroll", ()=>{
   const detailMenu = document.querySelector(".detail_tab_wrap");
