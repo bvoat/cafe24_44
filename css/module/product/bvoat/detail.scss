@@ -1254,6 +1254,8 @@
 			font-size: 1.1rem;
 			color: $bvt-darkgray;
 			background: transparent;
+			height: 65px;
+			padding: 5px;
 		}
 
 		.wish_btn {
@@ -1262,7 +1264,6 @@
 			justify-content: center;
 			align-items: center;
 			width: calc((100% - 278px) / 1.85);
-			height: 100%;
 
 			&::before {
 				display: block;
@@ -1283,7 +1284,6 @@
 			justify-content: center;
 			align-items: center;
 			width: calc((100% - 278px) / 1.85);
-			height: 100%;
 
 			&::before {
 				display: block;
@@ -1302,7 +1302,6 @@
 			justify-content: center;
 			align-items: center;
 			width: calc((100% - 278px) / 1.85);
-			height: 100%;
 			font-weight: bold;
 			color: $bvt-blue;
 
@@ -1320,11 +1319,10 @@
 
 		.buy_btn {
 			width: 100%;
-			height: 100%;
 			background: $bvt-blue;
 			justify-content: center;
 			font-size: 1.6rem;
-			font-weight: 600;
+			font-weight: bold;
 			color: $bvt-white;
 		}
 	}

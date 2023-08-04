@@ -1144,6 +1144,8 @@
   font-size: 1.1rem;
   color: #707070;
   background: transparent;
+  height: 65px;
+  padding: 5px;
 }
 #buyAction .webnmobile_product_html .wish_btn {
   display: flex;
@@ -1151,7 +1153,6 @@
   justify-content: center;
   align-items: center;
   width: calc((100% - 278px) / 1.85);
-  height: 100%;
 }
 #buyAction .webnmobile_product_html .wish_btn::before {
   display: block;
@@ -1168,7 +1169,6 @@
   justify-content: center;
   align-items: center;
   width: calc((100% - 278px) / 1.85);
-  height: 100%;
 }
 #buyAction .webnmobile_product_html .share_btn::before {
   display: block;
@@ -1185,7 +1185,6 @@
   justify-content: center;
   align-items: center;
   width: calc((100% - 278px) / 1.85);
-  height: 100%;
   font-weight: bold;
   color: #003DD3;
 }
@@ -1200,10 +1199,9 @@
 }
 #buyAction .webnmobile_product_html .buy_btn {
   width: 100%;
-  height: 100%;
   background: #003DD3;
   justify-content: center;
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: bold;
   color: #ffffff;
 }/*# sourceMappingURL=detail.css.map */
