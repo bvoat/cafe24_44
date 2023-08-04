@@ -155,7 +155,8 @@
 	if (document.querySelector(".xans-mall-supplymainimage img") != null) {
 		document.querySelector(".xans-mall-supplymainimage img").setAttribute("height", "auto");
 	} else {
-		const supplyItemList = document.querySelector("#supplyItemList");
+		const supplyItemList = document.querySelector(".xans-product xans-product-listmain-1");
+		
 		console.log('supplyItemList: ', supplyItemList.childElementCount);
 		if (supplyItemList.childElementCount == 0) {
 			supplyItemList.insertAdjacentHTML("afterbegin", `<p style="width: 100%; text-align: center; font-size: 15px;">이 브랜드에는 상품이 없어요 :)</p>`)
