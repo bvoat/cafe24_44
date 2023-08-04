@@ -209,8 +209,8 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  width: 125px;
-  min-width: 100px;
+  width: 91px;
+  min-width: 91px;
   font-size: 1.35rem;
   font-weight: 300;
   color: #707070;
@@ -236,14 +236,6 @@
 #productDetailTop #productDetail .product_detail .mileage {
   margin-bottom: 19px;
 }
-#productDetailTop #productDetail .product_detail .mileage .title::before {
-  display: inline-block;
-  content: "";
-  width: 17.93px;
-  height: 17.93px;
-  background: var(--mileage-icon) no-repeat center;
-  margin-right: 14.1px;
-}
 #productDetailTop #productDetail .product_detail .mileage .detail .mileage_info .crew_mileage {
   font-weight: 300;
 }
@@ -254,25 +246,8 @@
   font-size: 1.2rem;
   color: #707070;
 }
-#productDetailTop #productDetail .product_detail .mileage .detail .mileage_txt::before {
-  display: inline-block;
-  content: " ";
-  width: 14.63px;
-  height: 14.63px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='none'%3E%3Cpath fill='%23707070' d='M7.31 0a7.31 7.31 0 1 0 0 14.63A7.31 7.31 0 0 0 7.31 0Zm.74 10.97H6.57v-4.4h1.48v4.4Zm0-5.84H6.57V3.66h1.48v1.47Z'/%3E%3C/svg%3E") no-repeat center;
-  background-size: contain;
-  margin-right: 6px;
-}
 #productDetailTop #productDetail .product_detail .stamp {
   margin-bottom: 19px;
-}
-#productDetailTop #productDetail .product_detail .stamp .title::before {
-  display: inline-block;
-  content: "";
-  width: 16.92px;
-  height: 19.75px;
-  background: var(--stamp-icon) no-repeat center;
-  margin-right: 14.1px;
 }
 #productDetailTop #productDetail .product_detail .stamp .stamp_list {
   display: flex;
@@ -320,15 +295,6 @@
 }
 #productDetailTop #productDetail .product_detail .delivery {
   position: relative;
-}
-#productDetailTop #productDetail .product_detail .delivery .title::before {
-  display: inline-block;
-  content: "";
-  width: 17.5px;
-  height: 14.2px;
-  background: var(--delivery-icon) no-repeat center;
-  background-size: contain;
-  margin-right: 14.1px;
 }
 #productDetailTop #productDetail .product_detail .delivery .detail span {
   font-size: 1.35rem !important;

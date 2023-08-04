@@ -199,8 +199,8 @@
 					display: flex;
 					flex-flow: row nowrap;
 					align-items: center;
-					width: 125px;
-					min-width: 100px;
+					width: 91px;
+					min-width: 91px;
 					font-size: 1.35rem;
 					font-weight: 300;
 					color: $bvt-darkgray;
@@ -234,16 +234,6 @@
 			.mileage {
 				margin-bottom: 19px;
 
-				.title {
-					&::before {
-						display: inline-block;
-						content: '';
-						width: 17.93px;
-						height: 17.93px;
-						background: var(--mileage-icon) no-repeat center;
-						margin-right: 14.1px;
-					}
-				}
 
 				.detail {
 					.mileage_info {
@@ -258,16 +248,6 @@
 						width: 100%;
 						font-size: 1.2rem;
 						color: $bvt-darkgray;
-
-						&::before {
-							display: inline-block;
-							content: " ";
-							width: 14.63px;
-							height: 14.63px;
-							background: $info-icon no-repeat center;
-							background-size: contain;
-							margin-right: 6px;
-						}
 					}
 				}
 			}
@@ -275,17 +255,6 @@
 			//스탬프
 			.stamp {
 				margin-bottom: 19px;
-
-				.title {
-					&::before {
-						display: inline-block;
-						content: '';
-						width: 16.92px;
-						height: 19.75px;
-						background: var(--stamp-icon) no-repeat center;
-						margin-right: 14.1px;
-					}
-				}
 
 				.stamp_list {
 					display: flex;
@@ -343,18 +312,6 @@
 			//배송안내
 			.delivery {
 				position: relative;
-
-				.title {
-					&::before {
-						display: inline-block;
-						content: '';
-						width: 17.5px;
-						height: 14.2px;
-						background: var(--delivery-icon) no-repeat center;
-						background-size: contain;
-						margin-right: 14.1px;
-					}
-				}
 
 				.detail {
 					span {
