@@ -19,7 +19,7 @@
 .list3x2,
 .only3,
 .only3item,
-.tab_design2 {
+.tab_design2>.list_contents_wrap {
 	overflow: hidden;
 }
 
@@ -102,10 +102,9 @@
 				border: $bvt-btn-border-gray;
 				border-radius: 22px;
 				background-color: $bvt-white;
-				margin-right: 8px;
+				margin-right: 7px;
 				box-sizing: border-box;
-				padding: 2% 3%;
-
+				padding: calc(2% + 1px) calc(3% + 1px);
 
 				a {
 					display: block;
@@ -115,6 +114,7 @@
 					font-weight: normal;
 					color: $bvt-darkgray;
 					line-height: 1.5rem;
+					letter-spacing: -.4px;
 				}
 			}
 
@@ -122,7 +122,7 @@
 				background: $bvt-blue;
 				border: 1px solid $bvt-blue;
 				box-sizing: border-box;
-				padding: 2% 3%;
+				padding: calc(2% + 1px) calc(3% + 1px);
 
 				a {
 					display: block;
@@ -133,6 +133,8 @@
 					font-weight: normal;
 					box-sizing: border-box;
 					line-height: 1.5rem;
+					background: green;
+					letter-spacing: -.4px;
 				}
 			}
 		}
