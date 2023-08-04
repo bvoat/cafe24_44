@@ -45,7 +45,7 @@
 #BasketList {
   width: 100%;
   max-width: 450px;
-  padding: 0 29px;
+  padding: 0 17px;
 }
 #BasketList .boardList {
   width: 100%;
@@ -361,7 +361,7 @@
   justify-content: space-between;
   width: 100%;
   margin-top: 16px;
-  padding: 0 29px;
+  padding: 0 17px;
 }
 .basket_select_action_wrap button {
   display: flex;
@@ -412,7 +412,7 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 29px;
+  padding: 0 17px;
 }
 .basket_total .total h2,
 .basket_total .total h3,
@@ -439,7 +439,7 @@
   flex-flow: row nowrap;
   justify-content: center;
   height: 66px;
-  padding: 0 29px;
+  padding: 0 17px;
 }
 .basket_total_btn_wrap .order_select {
   width: 100%;

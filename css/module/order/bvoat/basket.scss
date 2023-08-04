@@ -47,7 +47,7 @@
 #BasketList {
     width: 100%;
     max-width: 450px;
-    padding: 0 29px;
+    padding: 0 17px;
 
     .boardList {
         width: 100%;
@@ -400,7 +400,7 @@
     justify-content: space-between;
     width: 100%;
     margin-top: 16px;
-    padding: 0 29px;
+    padding: 0 17px;
 
     button {
         display: flex;
@@ -458,7 +458,7 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
-        padding: 0 29px;
+        padding: 0 17px;
 
         h2,
         h3,
@@ -494,7 +494,7 @@
     flex-flow: row nowrap;
     justify-content: center;
     height: 66px;
-    padding: 0 29px;
+    padding: 0 17px;
 
     .order_select {
         width: 100%;
