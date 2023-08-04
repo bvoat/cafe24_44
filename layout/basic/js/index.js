@@ -136,7 +136,7 @@ var swiper = new Swiper(".only3item", {
 });
 
 var swiper = new Swiper(".index_banner_bottom", {
-slidesPerView: 1.8,
+slidesPerView: 1.25,
 spaceBetween: 8.1,
 centeredSlides: true,
 // pagination: {
