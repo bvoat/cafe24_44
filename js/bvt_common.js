@@ -85,7 +85,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".price_wrap")) {
     setTimeout(monitoringPrice,500)
   } else {
-    setTimeout(monitoringPrice,800)
+    setTimeout(monitoringPrice,1500)
   }
 });
 
