@@ -83,7 +83,7 @@ var swiper = new Swiper(".product_relation_list", {
 window.addEventListener("scroll", ()=>{
   const detailMenu = document.querySelector(".detail_tab_wrap");
   const headerWrap = document.querySelector("#header_wrap");
-  if(window.scrollY > 1015 ){
+  if(window.scrollY > 1020 ){
     detailMenu.classList.add("active");
     headerWrap.classList.remove("gradient");
   } else {
