@@ -68,6 +68,10 @@
 #bvtHome .index_list_h3_first {
   margin: 30px 0 20px;
 }
+#bvtHome .tab_design1 > h3,
+#bvtHome .tab_design2 > h3 {
+  margin: 33px 0 20px;
+}
 #bvtHome .pad_add {
   padding-left: 7px;
 }
