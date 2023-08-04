@@ -98,21 +98,21 @@
     <!-- 상품 정보 상단 -->
     <!-- 상품 정보 하단 선택 탭 -->
     <ul class="detail_tab_wrap" module="product_additional">
-        <li class="tab0 tab" data-hash="prd_detail">상품정보
+        <li class="tab" data-hash="prd_detail"><button  class="tab0 tab_button active" data-id="tab0">상품정보</button>
         </li>
-        <li class="tab1 tab" data-hash="prd_bh">리뷰</li>
-        <li class="tab2 tab" data-hash="use_qna">Q&A({$qna_count})
+        <li class="tab" data-hash="prd_bh"><button class="tab1 tab_button" data-id="tab1">리뷰</button></li>
+        <li class="tab" data-hash="use_qna"><button class="tab2 tab_button" data-id="tab2">Q&A({$qna_count})</button>
         </li>
-        <li class="tab3 tab" data-hash="prd_info">배송안내
+        <li class="tab" data-hash="prd_info" ><button class="tab3 tab_button" data-id="tab3">배송안내</button>
         </li>
     </ul>
     <!-- 상품 정보 하단 선택 탭 -->
     <!-- 상품 정보 하단 -->
     <article id="productDetailBottom" module="product_additional">
         <!-- 상품 정보 하단 정보 -->
-        <div id="detail_swiper_wrap" class="detail_swiper_wrap swiper-wrapper">
+        <div id="detail_swiper_wrap" class="detail_swiper_wrap">
             <!-- tab0 상품정보 -->
-            <div id="tab0" class="tab_content swiper-slide" data-hash="prd_detail">
+            <div id="tab0" class="tab_content" data-hash="prd_detail">
                 <div id="prd_detail">
                     <!--이벤트-->
                     <div class="tab_detail_page eventArea {$common_event_a|display}">
@@ -127,7 +127,7 @@
             </div>
             <!-- tab0 상품정보 -->
             <!-- tab1 리뷰 -->
-            <div id="tab1" class="tab_content swiper-slide" data-hash="prd_bh">
+            <div id="tab1" class="tab_content" data-hash="prd_bh">
                 <script defer src="https://snippet.reviewaid.ai/latest/product.js"></script>
                 <div id="ReviewAid" style="display: none"></div>
                 <div id="review-aid-fake-product-root" style="display: none"></div>
@@ -232,7 +232,7 @@
             </div>
             <!-- tab1 리뷰 -->
             <!-- tab2 Q&A -->
-            <div id="tab2" class="tab_content swiper-slide" data-hash="use_qna">
+            <div id="tab2" class="tab_content" data-hash="use_qna">
                 <div id="use_qna">
                     <div class="tab-tip">
                         <div class="tab-tip-head tab3_heading">
@@ -295,7 +295,7 @@
             </div>
             <!-- tab2 Q&A -->
             <!-- tab3 배송안내 -->
-            <div id="tab3" class="tab_content swiper-slide" data-hash="prd_info">
+            <div id="tab3" class="tab_content" data-hash="prd_info">
                 <div id="prd_info">
                     <div class="tab_prd_info">
                         <div class="title">상품결제정보</div>
@@ -334,7 +334,7 @@
 
             <button onclick="{$action_wishlist}" class="wish_btn {$wishlist_display}" title="위시리스트 담기">찜</button>
             <button class="share_btn" title="공유하기">공유</button>
-            <button class="gift_btn" title="선물하기">선물하기</button>
+            <button class="gift_btn gift_order_btn " title="선물하기">선물하기</button>
             <button class="buy_btn purchase_button " data-type="buy" alt="구매하기">구매하기</button>
         </div>
     </section>

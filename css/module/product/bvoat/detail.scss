@@ -590,7 +590,7 @@
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
-	align-items: end;
+	align-items: flex-end;
 	width: 100%;
 	height: 63px;
 	border-bottom: $bvt-btn-border-gray;
@@ -598,33 +598,35 @@
 	color: $bvt-black;
 	background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
 
-	.tab_custom {
+	.tab {
 		width: fit-content !important;
 		background: transparent !important;
-		height: 30px;
-		margin-right: 32px !important;
-		font-size: 1.45rem !important;
+		margin-right: 32px;
+		font-size: 1.45rem;
 		color: $bvt-darkgray;
 		box-shadow: none;
-		opacity: 1;
+
+		button {
+			color: $bvt-darkgray;
+			background: transparent;
+			font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif;
+			border-bottom: 3px solid transparent;
+			padding: 0 1px 12px 1px;
+			box-sizing: border-box;
+		}
+
+		.active {
+			color: $bvt-blue;
+			background: transparent;
+			font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif;
+			border-bottom: 3px solid $bvt-blue;
+			padding: 0 1px 12px 1px;
+			box-sizing: border-box;
+			font-weight: bold;
+		}
 
 		&:last-child {
 			margin-right: 0 !important;
-		}
-	}
-
-	.swiper-pagination-bullet-active {
-		color: $bvt-blue;
-		font-weight: bold;
-
-		&::after {
-			display: block;
-			content: "";
-			width: 102%;
-			height: 3px;
-			background: $bvt-blue;
-			border-radius: 3px;
-			margin-top: 10px;
 		}
 	}
 }
@@ -653,13 +655,11 @@
 	position: relative;
 	width: 100%;
 	height: auto;
-	z-index: 1;
 	display: flex;
 	transition-property: height;
 	box-sizing: content-box;
 	padding: 0 0 20px 0;
 	overflow: hidden;
-
 
 	.detail_swiper_wrap {
 		height: auto;
@@ -1116,6 +1116,8 @@
 
 		//배송안내
 		#tab3 {
+			margin-top: 20px;
+
 			div {
 				.tab_prd_info {
 					padding: 10px;

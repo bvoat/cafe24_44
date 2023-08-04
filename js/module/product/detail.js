@@ -33,61 +33,83 @@ var swiper = new Swiper(".product_relation_list", {
 
 //상품 상세 하단 페이지 탭 슬라이더
 //node 값 받아서 Array
-const tab = [...document.querySelectorAll(".tab")];
-const tab_txt = tab.map((node) => node.innerHTML);
-const tab_hash = tab.map((node) => node.dataset.hash);
-var detailTabSwiper = new Swiper("#productDetailBottom", {
-  autoHeight: true,
-  observer: true,
-  observeParents: true,
-  slidesPerView: "auto",
-  centeredSlides: true,
-  spaceBetween: 22,
-  edgeSwipeThreshold: 25,
-  // loop: true,
-  lazy: true,
-  watchSlidesVisibility: true,
-  watchSlidesProgress: true,
-  edgeSwipeDetection: true,
-  allowTouchMove: false,
-  hashNavigation: {
-    replaceState: true,
-  },
-  pagination: {
-    el: ".detail_tab_wrap",
-    clickable: true,
-    renderBullet: function (index, className) {
-      return `<span class="tab_custom swiper-pagination-bullet tab${
-        index + 1
-      }" tabindex="${index}" role="button" aria-label=${
-        tab_txt[index]
-      } data-hash=${tab_hash[index]}> ${tab_txt[index]} </span> `;
-    },
-  },
-});
+// const tab = [...document.querySelectorAll(".tab")];
+// const tab_txt = tab.map((node) => node.innerHTML);
+// const tab_hash = tab.map((node) => node.dataset.hash);
+// var detailTabSwiper = new Swiper("#productDetailBottom", {
+//   autoHeight: true,
+//   observer: true,
+//   observeParents: true,
+//   slidesPerView: "auto",
+//   centeredSlides: true,
+//   spaceBetween: 22,
+//   edgeSwipeThreshold: 25,
+//   // loop: true,
+//   lazy: true,
+//   watchSlidesVisibility: true,
+//   watchSlidesProgress: true,
+//   edgeSwipeDetection: true,
+//   allowTouchMove: false,
+//   hashNavigation: {
+//     replaceState: true,
+//   },
+//   pagination: {
+//     el: ".detail_tab_wrap",
+//     clickable: true,
+//     renderBullet: function (index, className) {
+//       return `<span class="tab_custom swiper-pagination-bullet tab${
+//         index + 1
+//       }" tabindex="${index}" role="button" aria-label=${
+//         tab_txt[index]
+//       } data-hash=${tab_hash[index]}> ${tab_txt[index]} </span> `;
+//     },
+//   },
+// });
 //최초 탭 높이 조절 
 
-window.addEventListener("load", ()=>{
-  const productDetailBottom = document.getElementById("productDetailBottom");
-  const detail_swiper_wrap = document.getElementById("detail_swiper_wrap");
-  if(productDetailBottom){
-    let firstTab = getComputedStyle(productDetailBottom);
-    const firstControlContentWrapHeight = (firstTab) => {
-      productDetailBottom.style.height = (firstTab.height + 100 + 'px');
-      detail_swiper_wrap.style.height = (firstTab.height + 100 + 'px');
-    };
-    firstControlContentWrapHeight(firstTab);
-  }
-})
-//하단 메뉴 탭 상단 붙이기
+// window.addEventListener("load", ()=>{
+//   const productDetailBottom = document.getElementById("productDetailBottom");
+//   const detail_swiper_wrap = document.getElementById("detail_swiper_wrap");
+//   if(productDetailBottom){
+//     let firstTab = getComputedStyle(productDetailBottom);
+//     const firstControlContentWrapHeight = (firstTab) => {
+//       productDetailBottom.style.height = (firstTab.height + 100 + 'px');
+//       detail_swiper_wrap.style.height = (firstTab.height + 100 + 'px');
+//     };
+//     firstControlContentWrapHeight(firstTab);
+//   }
+// })
+// 하단 메뉴 탭 상단 붙이기
 window.addEventListener("scroll", ()=>{
   const detailMenu = document.querySelector(".detail_tab_wrap");
-  if(window.scrollY > 1019 ){
+  const headerWrap = document.querySelector("#header_wrap");
+  if(window.scrollY > 1015 ){
     detailMenu.classList.add("active");
+    headerWrap.classList.remove("gradient")
   } else {
     detailMenu.classList.remove("active");
+    headerWrap.classList.add("gradient")
   }
 })
+
+//탭 클릭 이동
+
+const tabClickMove = () => {
+  const tab_arr = document.querySelectorAll(".tab_button");
+  tab_arr.forEach(button => {
+    button.addEventListener("click", (btn) => {
+      tab_arr.forEach(btn=>{
+        btn.classList.remove("active");
+      })
+      btn.currentTarget.classList.add("active")
+      const hash_id= document.querySelector(`#${btn.currentTarget.dataset.id}`);
+      const hash_position = Number(window.pageYOffset + hash_id.getBoundingClientRect().top);
+      window.scroll(0, hash_position - 123)
+    })
+  })
+}
+
+
 
 //슬라이더 이외 함수 시작
 
@@ -270,6 +292,8 @@ window.addEventListener("load", ()=>{
   }else{
     setTimeout(()=>{createStamp(createStampPcsFromPrice)}, 1200)
   }
+
+  tabClickMove();
 })
 //가치태그 수신
 reciveTagDetail(prd_no);

@@ -11,7 +11,6 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
 
 
     #header_logo_section {
@@ -121,4 +120,8 @@
         }
     }
 
+}
+
+#header_wrap .gradient {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
