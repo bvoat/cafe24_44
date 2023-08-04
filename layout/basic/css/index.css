@@ -112,6 +112,11 @@
   margin-bottom: 80px;
 }
 
-#review-aid-best-review-root > section > div > a {
-  display: none;
+[class*=BestReview_view-all] {
+  visibility: hidden !important;
+}
+
+.BestReview_BestReview__PRz8Q span.BestReview_title__nJz5V {
+  font-size: 22.5px;
+  font-weight: bold;
 }/*# sourceMappingURL=index.css.map */
