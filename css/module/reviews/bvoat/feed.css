@@ -91,8 +91,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 3.3rem;
-  height: 3.6rem;
+  line-height: 3.5rem;
+  height: 3.9rem;
   line-height: normal;
   height: auto;
 }
@@ -272,8 +272,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.3rem;
-  height: 4.6rem;
+  line-height: 2.5rem;
+  height: 4.9rem;
 }
 
 /* 리뷰 상세보기 view.html */
@@ -338,8 +338,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.7rem;
-  height: 3rem;
+  line-height: 2.9rem;
+  height: 3.3rem;
   line-height: normal;
   height: auto;
 }
@@ -574,8 +574,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.4rem;
-  height: 2.7rem;
+  line-height: 2.6rem;
+  height: 3rem;
 }
 #reviewsViewWrap .reviews_item div.reviews_wrap .reviews_product button ul .prd_info p:nth-child(2) {
   font-size: 1.4rem;
@@ -589,8 +589,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.2rem;
-  height: 2.5rem;
+  line-height: 2.4rem;
+  height: 2.8rem;
 }
 #reviewsViewWrap .reviews_item .reviews_reaction_box {
   display: flex;
@@ -1330,8 +1330,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.1rem;
-  height: 2.4rem;
+  line-height: 2.3rem;
+  height: 2.7rem;
 }
 #reviewsWriteWrap #reviewsWriteProduct > button .product_info .product_option {
   width: 100%;
@@ -1346,8 +1346,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.1rem;
-  height: 2.4rem;
+  line-height: 2.3rem;
+  height: 2.7rem;
 }
 #reviewsWriteWrap #reviewsWriteProduct > button .product_info .product_price {
   font-weight: 400;
@@ -1813,8 +1813,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.1rem;
-  height: 2.4rem;
+  line-height: 2.3rem;
+  height: 2.7rem;
 }
 #reviewsWritableListWrap #reviewsWritableListBox #reviewsWritableList .reviews_writable_item .reviews_product .product_info .product_option {
   position: relative;

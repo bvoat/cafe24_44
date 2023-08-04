@@ -151,8 +151,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 2.8rem;
-  height: 5.6rem;
+  line-height: 3rem;
+  height: 5.9rem;
   margin-bottom: 40px;
 }
 #productDetailTop .product_info_wrap .product_price {

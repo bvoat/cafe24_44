@@ -109,8 +109,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.72rem;
-  height: 3.44rem;
+  line-height: 1.92rem;
+  height: 3.74rem;
 }
 #categoryOfRecommended #categoryOfRecommendedList .progressbar {
   display: none;
@@ -205,8 +205,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.72rem;
-  height: 3.44rem;
+  line-height: 1.92rem;
+  height: 3.74rem;
 }
 #categoryOfTag #categoryOfTagList .progressbar,
 #categoryOfProduct #categoryOfTagList .progressbar {
@@ -291,8 +291,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.72rem;
-  height: 3.44rem;
+  line-height: 1.92rem;
+  height: 3.74rem;
 }
 
 /* 페이지 프로그레스 */

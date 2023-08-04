@@ -14,7 +14,7 @@
   margin: 80px 0 60px;
 }
 #realTimeOrderList .desc {
-  padding: 7px 0 0 0;
+  padding: 7px 0 25.5px 0;
 }
 #realTimeOrderList .desc .brand {
   font-size: 1rem;
@@ -63,9 +63,9 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.59rem;
-  height: 3.18rem;
-  margin-bottom: 18px;
+  line-height: 1.79rem;
+  height: 3.48rem;
+  margin-bottom: 12px;
 }
 #realTimeOrderList .thumb {
   position: relative;
