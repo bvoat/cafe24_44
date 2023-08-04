@@ -95,7 +95,7 @@
 
                         .product_name {
                             width: 100%;
-                            font-size: 1.75rem;
+                            font-size: 1.3rem;
                             font-weight: normal;
                             margin-bottom: 11px;
                             @include only-ellipsis(1, 2rem)
@@ -284,11 +284,12 @@
                 >button {
                     display: inline-block;
                     height: 40px;
-                    font-size: 1.45rem;
+                    font-size: 1.35rem;
                     font-weight: bold;
                     border: $bvt-input-border;
                     color: $bvt-darkgray;
                     border-radius: 5px;
+                    padding: 0 5px;
                 }
 
                 .select_all_btn {

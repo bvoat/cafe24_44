@@ -92,7 +92,7 @@
 }
 #wishList #wishListCardSection #wishListList .wishlist_item .wishlist_item_box .description .product_name {
   width: 100%;
-  font-size: 1.75rem;
+  font-size: 1.3rem;
   font-weight: normal;
   margin-bottom: 11px;
   display: block;
@@ -249,11 +249,12 @@
 #wishList #wishListCardSection #wishListBtn .select_btn_wrap > button {
   display: inline-block;
   height: 40px;
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: bold;
   border: 1px solid #C4C4C4;
   color: #707070;
   border-radius: 5px;
+  padding: 0 5px;
 }
 #wishList #wishListCardSection #wishListBtn .select_btn_wrap .select_all_btn {
   width: 88px;
