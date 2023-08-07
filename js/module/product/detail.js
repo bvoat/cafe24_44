@@ -93,12 +93,19 @@ Array.from(purchase_button).forEach((btn)=>{
   btn.addEventListener("click",(e)=>{
     e.preventDefault();
     let type = e.currentTarget.dataset.type;
-    console.log('type: ', type);
+
+    if(type == "buy"){
+      console.log('type: ', type);
+    } else if (type == "gift"){
+      console.log('type:  ', type);
+    }
     const buyScreen = document.getElementById("buyScreen");
     classToggle(buyScreen, "displaynone");
+    
   })
 })
 const buy_screen_title = document.querySelector(".buy_screen_title");
+console.log('buy_screen_title: ', buy_screen_title);
 
 buy_screen_title.addEventListener("click", ()=>{
   classToggle(buyScreen, "displaynone");
