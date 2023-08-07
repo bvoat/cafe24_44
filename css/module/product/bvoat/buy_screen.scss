@@ -659,3 +659,13 @@
         text-align: center;
     }
 }
+
+.webnmobile_product_html {
+    width: 100%;
+    max-width: 450px !important;
+
+
+    .btn_gift {
+        background: $bvt-blue !important;
+    }
+}

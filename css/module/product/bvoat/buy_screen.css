@@ -546,4 +546,12 @@
   font-weight: 500;
   color: #707070;
   text-align: center;
+}
+
+.webnmobile_product_html {
+  width: 100%;
+  max-width: 450px !important;
+}
+.webnmobile_product_html .btn_gift {
+  background: #003DD3 !important;
 }/*# sourceMappingURL=buy_screen.css.map */
