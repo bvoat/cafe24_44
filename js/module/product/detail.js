@@ -1,6 +1,7 @@
 /* ------------------------------------------------------------------------------------ */
 /* bvt */
 
+//thumbnail 즉시 슬라이드화
 const thumbnail_list = document.querySelector(".thumb").children;
 [...thumbnail_list].forEach(li => {
   li.classList.add("main_thumb", "img_wrap", "swiper-slide");
@@ -31,59 +32,18 @@ var swiper = new Swiper(".product_relation_list", {
 });
 
 
-//상품 상세 하단 페이지 탭 슬라이더
-//node 값 받아서 Array
-// const tab = [...document.querySelectorAll(".tab")];
-// const tab_txt = tab.map((node) => node.innerHTML);
-// const tab_hash = tab.map((node) => node.dataset.hash);
-// var detailTabSwiper = new Swiper("#productDetailBottom", {
-//   autoHeight: true,
-//   observer: true,
-//   observeParents: true,
-//   slidesPerView: "auto",
-//   centeredSlides: true,
-//   spaceBetween: 22,
-//   edgeSwipeThreshold: 25,
-//   // loop: true,
-//   lazy: true,
-//   watchSlidesVisibility: true,
-//   watchSlidesProgress: true,
-//   edgeSwipeDetection: true,
-//   allowTouchMove: false,
-//   hashNavigation: {
-//     replaceState: true,
-//   },
-//   pagination: {
-//     el: ".detail_tab_wrap",
-//     clickable: true,
-//     renderBullet: function (index, className) {
-//       return `<span class="tab_custom swiper-pagination-bullet tab${
-//         index + 1
-//       }" tabindex="${index}" role="button" aria-label=${
-//         tab_txt[index]
-//       } data-hash=${tab_hash[index]}> ${tab_txt[index]} </span> `;
-//     },
-//   },
-// });
-//최초 탭 높이 조절 
+//크루 등급 마일리지 2배 변환
+const crewValueControl = (multiple) => {
+  const voterValue = document.querySelector(".voter_value");
+  const crewValue = document.querySelector(".crew_value");
+  voterValue ? (crewValue.innerHTML = voterValue.innerHTML * multiple) : null;
+};
 
-// window.addEventListener("load", ()=>{
-//   const productDetailBottom = document.getElementById("productDetailBottom");
-//   const detail_swiper_wrap = document.getElementById("detail_swiper_wrap");
-//   if(productDetailBottom){
-//     let firstTab = getComputedStyle(productDetailBottom);
-//     const firstControlContentWrapHeight = (firstTab) => {
-//       productDetailBottom.style.height = (firstTab.height + 100 + 'px');
-//       detail_swiper_wrap.style.height = (firstTab.height + 100 + 'px');
-//     };
-//     firstControlContentWrapHeight(firstTab);
-//   }
-// })
 // 하단 메뉴 탭 상단 붙이기
 window.addEventListener("scroll", ()=>{
   const detailMenu = document.querySelector(".detail_tab_wrap");
   const headerWrap = document.querySelector("#header_wrap");
-  if(window.scrollY > 1020 ){
+  if(window.scrollY > 1022 ){
     detailMenu.classList.add("active");
     headerWrap.classList.remove("gradient");
   } else {
@@ -124,13 +84,6 @@ const qnaControl = () => {
       });
     }
   }
-};
-
-//크루 등급 마일리지 2배 변환
-const crewValueControl = (multiple) => {
-  const voterValue = document.querySelector(".voter_value");
-  const crewValue = document.querySelector(".crew_value");
-  voterValue ? (crewValue.innerHTML = voterValue.innerHTML * multiple) : null;
 };
 
 
@@ -276,27 +229,38 @@ const reciveTagDetail = (prd_no) => {
 };
  
 /* 최종 함수 실행 */
-//리뷰 컨트롤
-//buyRecordFrameControl();
-//크루 등급 마일리지 2배 변환
-crewValueControl(2);
-//공유 이벤트 클릭
 
-//Q&A heading 컨트롤
-qnaControl();
-//스탬프 만들기
-//bvt_common.js 파일에서 가격 정보 받아온 후 실행해야 함
-window.addEventListener("load", ()=>{
-  if(document.querySelector(".finalprice")){
-    setTimeout(()=>{createStamp(createStampPcsFromPrice)}, 500)
-  }else{
-    setTimeout(()=>{createStamp(createStampPcsFromPrice)}, 1200)
-  }
 
+window.addEventListener("DOMContentLoaded", ()=>{
+
+  //탭 클릭시 이동
   tabClickMove();
+
+  //가치태그 수신
+  reciveTagDetail(prd_no);
+
+
+  //스탬프 만들기
+  //bvt_common.js 파일에서 가격 정보 받아온 후 실행해야 함
+
+    if(document.querySelector(".finalprice")){
+      setTimeout(()=>{createStamp(createStampPcsFromPrice)}, 500)
+    }else{
+      setTimeout(()=>{createStamp(createStampPcsFromPrice)}, 1000)
+    }
+
+
+  //크루 등급 마일리지 2배 변환
+  crewValueControl(2);
+
+  //Q&A heading 컨트롤
+  qnaControl();
+
+
+
+
 })
-//가치태그 수신
-reciveTagDetail(prd_no);
+
 
 // /* cafe24 default */
 // // Tab event
@@ -370,29 +334,3 @@ function removePagingArea(oTarget)
     });
 });
 
-
-   //thumnail 한 개만 남기기
-    const thumnailChange = () => {
-   const thumbnail = document.querySelectorAll(".thumbnail");
-        thumbnail.forEach(box => {
-            const imgTagCount = box.childElementCount;
-            if(parseInt(imgTagCount) === 2){
-                const product_img = box.children[0];
-                product_img.remove();
-            }
-        })
-    };
- //username 네이버 페이 구매자 면 익명의 보터로 변경
-    const userNameChange = () => {
- const username = document.querySelectorAll(".user_name");
-        username.forEach(name => {
-            name.innerHTML == '네이버 페이 구매자' || name.innerHTML == '비보트' ? name.innerHTML = '익명의 보터' : null;
-        })
-    };
-    window.addEventListener("load", ()=>{
-        thumnailChange();
-        userNameChange();
-    })
-
-/* aos 초기화 */
-AOS.init();
