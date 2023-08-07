@@ -43,6 +43,7 @@
   position: relative;
   width: 100%;
   max-width: 450px;
+  padding: 0 17px;
 }
 #wishList #wishListCardSection #wishListList .wishlist_item {
   padding: 19.4px 14.4px;
@@ -244,7 +245,7 @@
   color: #ffffff;
 }
 #wishList #wishListCardSection #wishListBtn {
-  padding: 15px 0 0 0;
+  padding: 15px 17px 0;
 }
 #wishList #wishListCardSection #wishListBtn .select_btn_wrap {
   font-size: 0;
