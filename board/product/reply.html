@@ -1,23 +1,16 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div module="board_ReplyPackage_4">
+<div id="productBoardWrite" module="board_ReplyPackage_4">
     <!--@css(/css/module/board/replyPackage.css)-->
-    <div module="board_title_4">
-        <div class="path">
-            <span>현재 위치</span>
-            <ol>
-                <li><a href="/">홈</a></li>
-                <li><a href="/board/index.html">게시판</a></li>
-                <li title="현재 위치"><strong>{$board_name}</strong></li>
-            </ol>
-        </div>
+    <!--@css(/css/module/board/bvoat/write.css)-->
 
-        <div class="titleArea">
-            <h2>{$board_title}</h2>
-            <p>{$board_info}</p>
-        </div>
+    <div module="board_title_4">
+        <section id="productBoardWriteTitle" module="board_title_4">
+            <h1>{$board_title}</h1>
+            <h2>{$board_info}</h2>
+        </section>
     </div>
 
-    <div module="board_reply_4">
+    <section id="productBoardWriteSection" module="board_reply_4">
         <!--
             $login_page_url = /member/login.html
             $deny_access_url = /index.html
@@ -111,5 +104,5 @@
                 <a href="{$link_board_list}" class="btnBasicFix sizeS">취소</a>
             </span>
         </div>
-    </div>
+    </section>
 </div>

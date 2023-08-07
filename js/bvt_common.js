@@ -9,7 +9,6 @@
 //환경변수 세팅
 let api_domain;
 let now_cafe_href = window.location.href;
-console.log('now_cafe_href: ', now_cafe_href);
 
 if (
   now_cafe_href.includes("skin-skin44") ||
@@ -19,7 +18,6 @@ if (
 } else {
   api_domain = "bvoat";
 }
-console.log("api_domain: ", api_domain);
 /* 환경변수 확인 */
 
 /**
