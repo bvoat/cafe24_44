@@ -728,6 +728,7 @@
 		//사용 후기
 		#tab1 {
 			width: 100%;
+			margin-bottom: 25px;
 
 			section {
 				width: 100%;
@@ -983,7 +984,11 @@
 
 		//Q&A
 		#tab2 {
+			border-top: $bvt-btn-border-gray;
+
+
 			div {
+
 				.tab-tip {
 					text-align: center;
 					padding: 18px 0;

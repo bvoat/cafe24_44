@@ -636,6 +636,7 @@
 }
 #productDetailBottom .detail_swiper_wrap #tab1 {
   width: 100%;
+  margin-bottom: 25px;
 }
 #productDetailBottom .detail_swiper_wrap #tab1 section {
   width: 100%;
@@ -858,6 +859,9 @@
   font-weight: bold;
   color: #003DD3;
   background: #F5F6FB;
+}
+#productDetailBottom .detail_swiper_wrap #tab2 {
+  border-top: 1px solid #E2E2E2;
 }
 #productDetailBottom .detail_swiper_wrap #tab2 div .tab-tip {
   text-align: center;
