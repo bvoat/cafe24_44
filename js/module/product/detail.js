@@ -232,8 +232,7 @@ const reciveTagDetail = (prd_no) => {
 
 
 window.addEventListener("DOMContentLoaded", ()=>{
-
-  //탭 클릭시 이동
+  
   tabClickMove();
 
   //가치태그 수신
