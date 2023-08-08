@@ -101,18 +101,18 @@ Array.from(purchase_button).forEach((btn)=>{
 
       let type = e.currentTarget.dataset.type;
 
-      if(type == "buy"){
-        console.log('type: ', type);
-        buy_button_wrap.classList.add("buying");
-        btn_gift.classList.add("displaynone");
+      // if(type == "buy"){
+      //   console.log('type: ', type);
+      //   buy_button_wrap.classList.add("buying");
+      //   btn_gift.classList.add("displaynone");
 
-      } else if (type == "gift"){
-        buy_button_wrap.classList.add("gifting");
-        btn_cart.classList.add("displaynone");
-        btn_buy.classList.add("displaynone");
+      // } else if (type == "gift"){
+      //   buy_button_wrap.classList.add("gifting");
+      //   btn_cart.classList.add("displaynone");
+      //   btn_buy.classList.add("displaynone");
 
-        console.log('type: ', type);
-      }
+      //   console.log('type: ', type);
+      // }
       const buyScreen = document.getElementById("buyScreen");
       classToggle(buyScreen, "displaynone");
     
