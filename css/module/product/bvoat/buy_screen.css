@@ -496,7 +496,7 @@
   flex-flow: row nowrap;
   justify-content: center;
   width: 100%;
-  max-width: 450px;
+  max-width: 450px !important;
   border-top: 1px solid #DEDEDE;
   bottom: 0;
   padding-top: 15px;
@@ -509,8 +509,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 210px;
+  width: 33.3%;
   height: 100%;
   padding-bottom: calc(constant(safe-area-inset-bottom));
   padding-bottom: calc(env(safe-area-inset-bottom));
@@ -524,7 +523,7 @@
   height: 100%;
   max-height: 56px;
   min-height: 56px;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 1.6rem;
   border: 1px solid #003DD3;
   border-radius: 5px;
@@ -541,7 +540,8 @@
   color: #ffffff;
 }
 .buy_button .btn_gift .gift_order_btn {
-  color: #003DD3 !important;
+  background: #003DD3 !important;
+  color: #ffffff !important;
 }
 .buy_button .select_none {
   width: 100%;

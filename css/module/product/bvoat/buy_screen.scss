@@ -600,7 +600,7 @@
     flex-flow: row nowrap;
     justify-content: center;
     width: 100%;
-    max-width: 450px;
+    max-width: 450px !important;
     border-top: 1px solid #DEDEDE;
     bottom: 0;
     padding-top: 15px;
@@ -613,8 +613,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        max-width: 210px;
+        width: 33.3%;
         height: 100%;
         padding-bottom: calc(constant(safe-area-inset-bottom));
         padding-bottom: calc(env(safe-area-inset-bottom));
@@ -628,7 +627,7 @@
             height: 100%;
             max-height: 56px;
             min-height: 56px;
-            font-weight: 700;
+            font-weight: bold;
             font-size: 1.6rem;
             border: $bvt-btn-border;
             border-radius: 5px;
@@ -653,7 +652,8 @@
 
     .btn_gift {
         .gift_order_btn {
-            color: $bvt-blue !important;
+            background: $bvt-blue !important;
+            color: $bvt-white !important;
         }
     }
 
