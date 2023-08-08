@@ -634,6 +634,7 @@
         }
     }
 
+    //장바구니 담기
     .btn_cart {
         margin-right: 1.78%;
 
@@ -643,6 +644,7 @@
         }
     }
 
+    //바로구매
     .btn_buy {
         margin-right: 1.78%;
 
@@ -652,7 +654,10 @@
         }
     }
 
+    //선물하기
     .btn_gift {
+        margin-left: 0 !important;
+
         .gift_order_btn {
             background: $bvt-blue !important;
             color: $bvt-white !important;

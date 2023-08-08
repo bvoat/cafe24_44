@@ -542,6 +542,9 @@
   background: #003DD3;
   color: #ffffff;
 }
+.buy_button .btn_gift {
+  margin-left: 0 !important;
+}
 .buy_button .btn_gift .gift_order_btn {
   background: #003DD3 !important;
   color: #ffffff !important;
