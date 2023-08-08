@@ -98,27 +98,29 @@ Array.from(purchase_button).forEach((btn)=>{
     const buyScreen = document.getElementById("buyScreen");
     classToggle(buyScreen, "displaynone");
 
-    
-    const btn_cart = document.querySelector(".btn_cart");
-    const btn_buy  = document.querySelector(".btn_buy");
-    const btn_gift = document.querySelectorAll(".btn_gift");
+window.addEventListener("load", ()=>{
+      
+  const btn_cart = document.querySelector(".btn_cart");
+  const btn_buy  = document.querySelector(".btn_buy");
+  const btn_gift = document.querySelectorAll(".btn_gift");
 
 
-      let type = e.currentTarget.dataset.type;
-        console.log('type: ', type);
+    let type = e.currentTarget.dataset.type;
+      console.log('type: ', type);
 
-      if(type == "buy"){
-        btn_cart.classList.remove("displaynone");
-        btn_buy.classList.remove("displaynone");
-        [...btn_gift].forEach(btn => {btn.classList.add("displaynone");})
-        
+    if(type == "buy"){
+      btn_cart.classList.remove("displaynone");
+      btn_buy.classList.remove("displaynone");
+      [...btn_gift].forEach(btn => {btn.classList.add("displaynone");})
+      
 
-      } else if (type == "gift"){
-        btn_cart.classList.add("displaynone");
-        btn_buy.classList.add("displaynone");
-        [...btn_gift][1].classList.remove("displaynone");
-      }
+    } else if (type == "gift"){
+      btn_cart.classList.add("displaynone");
+      btn_buy.classList.add("displaynone");
+      [...btn_gift][1].classList.remove("displaynone");
+    }
 
+})
 
     
   })
