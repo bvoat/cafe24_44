@@ -381,6 +381,11 @@
     width: 100%;
     background: $bvt-white;
 
+    //선물하기 버튼 삭제
+    .btn_gift {
+        display: none;
+    }
+
     //총 금액 
     .total_wrap {
         display: flex;

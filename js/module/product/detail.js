@@ -91,12 +91,12 @@ const qnaControl = () => {
 const purchase_button = document.querySelectorAll(".purchase_button");
 
 Array.from(purchase_button).forEach((btn)=>{
+  
   btn.addEventListener("click",(e)=>{
     e.preventDefault();
-    const buy_button_wrap  = document.querySelector(".buy_button");
     const btn_cart = document.querySelector(".btn_cart");
     const btn_buy  = document.querySelector(".btn_buy");
-    const btn_gift = document.querySelector(".btn_gift");
+    const btn_gift = document.querySelectorAll(".btn_gift");
 
 
       let type = e.currentTarget.dataset.type;
@@ -105,12 +105,12 @@ Array.from(purchase_button).forEach((btn)=>{
       if(type == "buy"){
         btn_cart.classList.remove("displaynone");
         btn_buy.classList.remove("displaynone");
-        btn_gift.classList.add("displaynone");
+        [...btn_gift].forEach(btn => {btn.classList.add("displaynone");})
 
       } else if (type == "gift"){
         btn_cart.classList.add("displaynone");
         btn_buy.classList.add("displaynone");
-        btn_gift.classList.remove("displaynone");
+        [...btn_gift].forEach(btn => {btn.classList.remove("displaynone");})
       }
 
       const buyScreen = document.getElementById("buyScreen");

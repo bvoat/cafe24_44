@@ -315,6 +315,9 @@
   width: 100%;
   background: #ffffff;
 }
+.buy_screen_option_result .btn_gift {
+  display: none;
+}
 .buy_screen_option_result .total_wrap {
   display: flex;
   flex-flow: row nowrap;
