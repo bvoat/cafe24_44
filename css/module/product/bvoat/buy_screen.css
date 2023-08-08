@@ -514,13 +514,13 @@
   height: 100%;
   padding-bottom: calc(constant(safe-area-inset-bottom));
   padding-bottom: calc(env(safe-area-inset-bottom));
+  border-radius: 5px;
 }
 .buy_button div button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 210px;
   height: 100%;
   max-height: 56px;
   min-height: 56px;
@@ -540,18 +540,13 @@
   background: #003DD3;
   color: #ffffff;
 }
+.buy_button .btn_gift .gift_order_btn {
+  color: #003DD3 !important;
+}
 .buy_button .select_none {
   width: 100%;
   font-size: 1.6rem;
   font-weight: 500;
   color: #707070;
   text-align: center;
-}
-
-.webnmobile_product_html {
-  width: 100%;
-  max-width: 450px !important;
-}
-.webnmobile_product_html .btn_gift {
-  background: #003DD3 !important;
 }/*# sourceMappingURL=buy_screen.css.map */
