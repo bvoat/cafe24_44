@@ -94,6 +94,11 @@ Array.from(purchase_button).forEach((btn)=>{
 
   btn.addEventListener("click",(e)=>{
     e.preventDefault();
+
+    const buyScreen = document.getElementById("buyScreen");
+    classToggle(buyScreen, "displaynone");
+
+    
     const btn_cart = document.querySelector(".btn_cart");
     const btn_buy  = document.querySelector(".btn_buy");
     const btn_gift = document.querySelectorAll(".btn_gift");
@@ -114,8 +119,7 @@ Array.from(purchase_button).forEach((btn)=>{
         [...btn_gift][1].classList.remove("displaynone");
       }
 
-      const buyScreen = document.getElementById("buyScreen");
-      classToggle(buyScreen, "displaynone");
+
     
   })
 })
