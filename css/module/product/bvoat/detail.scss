@@ -29,14 +29,8 @@
 			width: 100%;
 			font-size: 0;
 
-			.img_wrap,
-			a {
-				border-radius: 0 !important;
-			}
-
 			@include product-thumb(0);
 		}
-
 
 		.swiper-pagination-thumb {
 			position: absolute;
@@ -72,9 +66,10 @@
 			position: relative;
 			display: flex;
 			flex-flow: row wrap;
-			justify-content: flex-start;
+			justify-content: first baseline;
 			align-items: center;
 			width: 100%;
+			height: 20px;
 			margin-top: 20px;
 			margin-bottom: 30px;
 			bottom: 0;
@@ -91,7 +86,7 @@
 				box-sizing: border-box;
 				border: $bvt-btn-border-gray;
 				border-radius: 14px;
-				margin: 0 6px 0 0;
+				margin: 0 6px 6px 0;
 
 				>a {
 					font-size: 1.2rem;
@@ -107,7 +102,7 @@
 		}
 
 		.minishop_btn {
-			font-size: 1.3rem;
+			font-size: 1.25rem;
 			font-weight: 400;
 			color: $bvt-darkgray;
 			background: transparent;
@@ -131,7 +126,7 @@
 			word-wrap: break-word;
 			word-break: keep-all;
 			letter-spacing: -0.5px;
-			@include only-ellipsis(2, 2.5rem);
+			@include ellipsis(2, 2.5rem);
 			margin-bottom: 40px;
 		}
 
@@ -143,21 +138,51 @@
 
 			/* 가격 표시 */
 			.price_wrap {
+				position: relative;
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: center;
 
-				//가격
-				.price_item {
-					font-size: 2.15rem;
-				}
-
-				.discountrate {
-					font-size: 2.15rem;
-
+				>.price_item {
+					font-size: 2.2rem;
+					font-weight: bold;
+					color: #292929;
+					margin-bottom: 0;
+					padding-bottom: 0;
+					order: 2;
 				}
 
 				.strike_price {
-					font-size: 1.65rem !important;
-					margin-top: 10px;
+
+					text-decoration: line-through !important;
+					color: #B7B7B7 !important;
+					font-size:
+						1.5rem !important;
+					top: -25px;
+					left: 0;
+					padding-bottom: 0;
 				}
+
+				.onpromotion {
+					color: #292929 !important;
+				}
+
+				.onpromotion::after {
+					color: #292929 !important;
+				}
+
+				>.discountrate {
+					position: relative;
+					font-size: 2.2rem;
+					font-weight: bold;
+					color: $bvt-blue;
+					letter-spacing: -0.5px;
+				}
+
+				.pad_add {
+					padding-right: 10px;
+				}
+
 			}
 
 			.button_wrap {
@@ -205,8 +230,8 @@
 					display: flex;
 					flex-flow: row nowrap;
 					align-items: center;
-					width: 91px;
-					min-width: 91px;
+					width: 125px;
+					min-width: 100px;
 					font-size: 1.35rem;
 					font-weight: 300;
 					color: $bvt-darkgray;
@@ -215,7 +240,7 @@
 				.detail {
 					display: flex;
 					flex-flow: column nowrap;
-					width: 100%;
+					width: calc(100% - 125px);
 					font-size: 1.35rem;
 					font-weight: 300;
 					color: $bvt-black;
@@ -240,6 +265,16 @@
 			.mileage {
 				margin-bottom: 19px;
 
+				.title {
+					&::before {
+						display: inline-block;
+						content: '';
+						width: 17.93px;
+						height: 17.93px;
+						background: var(--mileage-icon) no-repeat center;
+						margin-right: 14.1px;
+					}
+				}
 
 				.detail {
 					.mileage_info {
@@ -254,6 +289,16 @@
 						width: 100%;
 						font-size: 1.2rem;
 						color: $bvt-darkgray;
+
+						&::before {
+							display: inline-block;
+							content: " ";
+							width: 14.63px;
+							height: 14.63px;
+							background: $info-icon no-repeat center;
+							background-size: contain;
+							margin-right: 6px;
+						}
 					}
 				}
 			}
@@ -261,6 +306,17 @@
 			//스탬프
 			.stamp {
 				margin-bottom: 19px;
+
+				.title {
+					&::before {
+						display: inline-block;
+						content: '';
+						width: 16.92px;
+						height: 19.75px;
+						background: var(--stamp-icon) no-repeat center;
+						margin-right: 14.1px;
+					}
+				}
 
 				.stamp_list {
 					display: flex;
@@ -319,6 +375,18 @@
 			.delivery {
 				position: relative;
 
+				.title {
+					&::before {
+						display: inline-block;
+						content: '';
+						width: 17.5px;
+						height: 14.2px;
+						background: var(--delivery-icon) no-repeat center;
+						background-size: contain;
+						margin-right: 14.1px;
+					}
+				}
+
 				.detail {
 					span {
 						font-size: 1.35rem !important;
@@ -374,8 +442,14 @@
 	margin-top: 25px;
 	padding: 0 11px;
 
-	h3 {
-		font-size: 1.8rem;
+	>h2 {
+		font-size: 1.25rem;
+		font-weight: 300;
+		color: $bvt-darkgray;
+	}
+
+	>h3 {
+		font-size: 1.6rem;
 		margin-bottom: 12px;
 	}
 
@@ -590,7 +664,7 @@
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
-	align-items: flex-end;
+	align-items: end;
 	width: 100%;
 	height: 63px;
 	border-bottom: $bvt-btn-border-gray;
@@ -598,37 +672,33 @@
 	color: $bvt-black;
 	background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
 
-	.tab {
+	.tab_custom {
 		width: fit-content !important;
 		background: transparent !important;
-		margin-right: 32px;
+		height: 30px;
+		margin-right: 32px !important;
+		font-size: 1.45rem !important;
 		color: $bvt-darkgray;
 		box-shadow: none;
-		font-size: 1.45rem !important;
-
-		button {
-			font-size: 1.45rem !important;
-			color: $bvt-darkgray;
-			background: transparent;
-			font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif;
-			border-bottom: 3px solid transparent;
-			padding: 0 1px 12px 1px;
-			box-sizing: border-box;
-		}
-
-		.active {
-			font-size: 1.45rem !important;
-			color: $bvt-blue;
-			background: transparent;
-			font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif;
-			border-bottom: 3px solid $bvt-blue;
-			padding: 0 1px 12px 1px;
-			box-sizing: border-box;
-			font-weight: bold;
-		}
+		opacity: 1;
 
 		&:last-child {
 			margin-right: 0 !important;
+		}
+	}
+
+	.swiper-pagination-bullet-active {
+		color: $bvt-blue;
+		font-weight: bold;
+
+		&::after {
+			display: block;
+			content: "";
+			width: 102%;
+			height: 3px;
+			background: $bvt-blue;
+			border-radius: 3px;
+			margin-top: 10px;
 		}
 	}
 }
@@ -657,11 +727,13 @@
 	position: relative;
 	width: 100%;
 	height: auto;
+	z-index: 1;
 	display: flex;
 	transition-property: height;
 	box-sizing: content-box;
 	padding: 0 0 20px 0;
 	overflow: hidden;
+
 
 	.detail_swiper_wrap {
 		height: auto;
@@ -728,7 +800,6 @@
 		//사용 후기
 		#tab1 {
 			width: 100%;
-			margin-bottom: 25px;
 
 			section {
 				width: 100%;
@@ -984,11 +1055,7 @@
 
 		//Q&A
 		#tab2 {
-			border-top: $bvt-btn-border-gray;
-
-
 			div {
-
 				.tab-tip {
 					text-align: center;
 					padding: 18px 0;
@@ -1123,8 +1190,6 @@
 
 		//배송안내
 		#tab3 {
-			margin-top: 20px;
-
 			div {
 				.tab_prd_info {
 					padding: 10px;
@@ -1171,36 +1236,33 @@
 	z-index: 100;
 	bottom: 0;
 	overflow: hidden;
-	box-shadow: $bvt-top-shadow;
 
 
-	.by_action {
+	.webnmobile_product_html {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: center;
 		align-items: center;
-
-		// padding-top: calc(constant(safe-area-inset-bottom));
-		// padding-top: calc(env(safe-area-inset-bottom));
+		height: 65px;
+		// padding-top: calc(constant(safe-area-inset-bottom) - 20px);
+		// padding-top: calc(env(safe-area-inset-bottom) - 20px);
 		padding-bottom: calc(constant(safe-area-inset-bottom));
 		padding-bottom: calc(env(safe-area-inset-bottom));
-		padding-left: 17px;
 		background: $bvt-white;
 
 		button {
 			font-size: 1.1rem;
 			color: $bvt-darkgray;
 			background: transparent;
-			height: 60px;
 		}
 
-		.wishlist_btn {
+		.wish_btn {
 			display: flex;
 			flex-flow: column nowrap;
 			justify-content: center;
 			align-items: center;
-			width: fit-content;
-			padding: 0 17px 0 0;
+			width: calc((100% - 278px) / 1.85);
+			height: 100%;
 
 			&::before {
 				display: block;
@@ -1220,8 +1282,8 @@
 			flex-flow: column nowrap;
 			justify-content: center;
 			align-items: center;
-			width: fit-content;
-			padding: 0 17px 0 0;
+			width: calc((100% - 278px) / 1.85);
+			height: 100%;
 
 			&::before {
 				display: block;
@@ -1239,7 +1301,8 @@
 			flex-flow: column nowrap;
 			justify-content: center;
 			align-items: center;
-			width: fit-content;
+			width: calc((100% - 278px) / 1.85);
+			height: 100%;
 			font-weight: bold;
 			color: $bvt-blue;
 
@@ -1256,18 +1319,13 @@
 
 
 		.buy_btn {
-			display: flex;
 			width: 100%;
+			height: 100%;
 			background: $bvt-blue;
 			justify-content: center;
-			align-items: center;
 			font-size: 1.6rem;
-			font-weight: bold;
+			font-weight: 600;
 			color: $bvt-white;
-			margin-top: 5px;
-			margin-left: 17px;
-			margin-right: 5px;
-			border-radius: 5px;
 		}
 	}
 

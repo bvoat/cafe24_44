@@ -100,19 +100,19 @@ Array.from(purchase_button).forEach((btn)=>{
 
 
       let type = e.currentTarget.dataset.type;
+        console.log('type: ', type);
 
-      // if(type == "buy"){
-      //   console.log('type: ', type);
-      //   buy_button_wrap.classList.add("buying");
-      //   btn_gift.classList.add("displaynone");
-
-      // } else if (type == "gift"){
-      //   buy_button_wrap.classList.add("gifting");
-      //   btn_cart.classList.add("displaynone");
-      //   btn_buy.classList.add("displaynone");
-
-      //   console.log('type: ', type);
-      // }
+      if(type == "buy"){
+        buy_button_wrap.classList.add("buying");
+        btn_gift.classList.add("displaynone");
+        btn_cart.classList.remove("displaynone");
+        btn_buy.classList.remove("displaynone");
+      } else if (type == "gift"){
+        buy_button_wrap.classList.add("gifting");
+        btn_cart.classList.add("displaynone");
+        btn_buy.classList.add("displaynone");
+        btn_gift.classList.remove("displaynone");
+      }
       const buyScreen = document.getElementById("buyScreen");
       classToggle(buyScreen, "displaynone");
     

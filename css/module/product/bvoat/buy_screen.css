@@ -509,7 +509,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 33.3%;
+  width: 100% !important;
   height: 100%;
   padding-bottom: calc(constant(safe-area-inset-bottom));
   padding-bottom: calc(env(safe-area-inset-bottom));
@@ -534,6 +534,9 @@
 .buy_button .btn_cart button {
   background: #ffffff;
   color: #003DD3;
+}
+.buy_button .btn_buy {
+  margin-right: 1.78%;
 }
 .buy_button .btn_buy button {
   background: #003DD3;
