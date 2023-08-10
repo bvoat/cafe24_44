@@ -271,9 +271,11 @@ const rankNumbering = () => {
 * 최종 함수 실행
 */
 window.addEventListener("DOMContentLoaded", () => {
-  receiveMemberCount();
   listmainTab1();
   listmainTab2();
+})
+window.addEventListener("load", () => {
   rankNumbering();
+  receiveMemberCount();
 })
 
