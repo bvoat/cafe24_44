@@ -177,10 +177,8 @@
 					font-weight: bold;
 					color: $bvt-blue;
 					letter-spacing: -0.5px;
-				}
-
-				.pad_add {
-					padding-right: 10px;
+					margin: 0;
+					margin-right: 7px;
 				}
 
 			}
@@ -659,12 +657,12 @@
 
 
 
-// 상품 정보 하단
+/// 상품 정보 하단
 .detail_tab_wrap {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
-	align-items: end;
+	align-items: flex-end;
 	width: 100%;
 	height: 63px;
 	border-bottom: $bvt-btn-border-gray;
@@ -672,35 +670,40 @@
 	color: $bvt-black;
 	background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
 
-	.tab_custom {
+	.tab {
 		width: fit-content !important;
 		background: transparent !important;
-		height: 30px;
-		margin-right: 32px !important;
-		font-size: 1.45rem !important;
+		margin-right: 32px;
 		color: $bvt-darkgray;
 		box-shadow: none;
-		opacity: 1;
+		font-size: 1.45rem !important;
+
+		button {
+			font-size: 1.45rem !important;
+			color: $bvt-darkgray;
+			background: transparent;
+			font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif;
+			border-bottom: 3px solid transparent;
+			padding: 0 1px 12px 1px;
+			box-sizing: border-box;
+		}
+
+		.active {
+			font-size: 1.45rem !important;
+			color: $bvt-blue;
+			background: transparent;
+			font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif;
+			border-bottom: 3px solid $bvt-blue;
+			padding: 0 1px 12px 1px;
+			box-sizing: border-box;
+			font-weight: bold;
+		}
 
 		&:last-child {
 			margin-right: 0 !important;
 		}
 	}
 
-	.swiper-pagination-bullet-active {
-		color: $bvt-blue;
-		font-weight: bold;
-
-		&::after {
-			display: block;
-			content: "";
-			width: 102%;
-			height: 3px;
-			background: $bvt-blue;
-			border-radius: 3px;
-			margin-top: 10px;
-		}
-	}
 }
 
 .detail_tab_wrap.active {
@@ -800,261 +803,302 @@
 		//사용 후기
 		#tab1 {
 			width: 100%;
+			padding: 0 !important;
 
-			section {
-				width: 100%;
-				padding: 0;
-			}
-
-			#prdReview {
-
-
-				.nodata {
-					background: $bvt-bg-lightblue;
-					width: 100%;
-					height: 400px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					margin: 20px auto;
-					font-size: 1.5rem;
-					font-weight: bold;
-					color: $bvt-blue;
-					text-align: center;
-
-				}
+			//AI리뷰
+			.ReviewAid_tempWrapper__7MGRC.ReviewAid_mobile__iZazx {
+				grid-gap: 20px !important;
+				padding: 0px 0 30px !important;
 
 			}
 
-			#productBoardListWrap {
-				display: flex;
-				flex-flow: row wrap;
-				align-items: flex-start;
-				width: 100%;
-				margin: 50px 0;
-
-				//리뷰 아이템
-				li.review_item {
-					width: 50%;
-					list-style: none;
-					text-align: center;
-					padding: 0 7.5px;
-
-					.item {
-						position: relative;
-						margin-bottom: 30px;
-
-						.item_anchor {
-
-							.user_info {
-								display: flex;
-								flex-flow: row nowrap;
-								justify-content: flex-start;
-								align-items: center;
-								margin-bottom: 12px;
-								font-size: 0;
-
-								.user_img {
-									position: relative;
-									width: 30px;
-									margin-right: 8px;
-								}
-
-								.user_name {
-									font-size: 1.6rem;
-									font-weight: bold;
-									@include only-ellipsis(2, 1.9rem);
-								}
-							}
-
-							.thumbnail_info {
-								position: relative;
-								display: block;
-								width: 100%;
-								padding-top: 100%;
-								overflow: hidden;
-								border-radius: 4px;
-								margin-bottom: 12px;
-
-								img {
-									position: absolute;
-									top: 0;
-									left: 0;
-									width: 100%;
-									height: 100%;
-									-o-object-fit: cover;
-									object-fit: cover;
-								}
-
-								.rate {
-									position: absolute;
-									display: flex;
-									flex-flow: row nowrap;
-									justify-content: center;
-									align-items: center;
-									width: 51px;
-									height: 23px;
-									border-radius: 100px;
-									background: rgba(242, 242, 242, 0.5);
-									margin: 0 12px 10px 0;
-									bottom: 0;
-									right: 0;
-									font-size: 1.3rem;
-									font-weight: bold;
-									color: $bvt-blue;
-
-									&::before {
-										display: block;
-										content: "";
-										width: 11px;
-										height: 10.47px;
-										background: var(--icon-rate) no-repeat center;
-										margin-right: 3px;
-									}
-
-								}
-							}
-
-							.summary_info {
-								//p표시 여러개 중복되어 height로 잡아줌 
-								width: 100%;
-								height: 67px;
-								overflow: hidden;
-
-								.vote_comment {
-									display: flex;
-									flex-wrap: nowrap;
-									justify-content: flex-start;
-									align-items: center;
-									margin: 5px 0;
-
-									.vote {
-										display: flex;
-										flex-wrap: nowrap;
-										justify-content: space-between;
-										align-items: center;
-										width: 40px;
-										height: 22px;
-										border: 1px solid #022CFF;
-										border-width: 1.2px;
-										border-radius: 2px;
-										background: #ffffff;
-										font-size: 1.1rem;
-										font-weight: bold;
-										letter-spacing: -0.2px;
-										color: #022CFF;
-										padding: 1px 7px 0;
-										box-sizing: border-box;
-										margin-right: 8px;
-
-										&::before {
-											display: inline-block;
-											width: 12.1px;
-											height: 11.36px;
-											content: "";
-											background: var(--icon-likes) no-repeat center;
-											margin-right: 1px;
-										}
-									}
-
-									.comment {
-										&::after {
-											display: inline-block;
-											content: "";
-											width: 16.7px;
-											height: 14.1px;
-											background: var(--icon-cmt) no-repeat transparent center;
-										}
-									}
-
-								}
-
-								p {
-									font-size: 1.3rem;
-									@include only-ellipsis(2, 1.7rem);
-									text-align: left;
-								}
-
-								span {
-									display: none;
-								}
-
-							}
-						}
-					}
-				}
+			//총 평점
+			.ReviewPageSummary_mobile__Bs7M6 {
+				gap: 15px !important;
+				padding: 10px 0 15px 10px !important;
 			}
+
+			//포토리뷰
+			.PhotoReviews_ReviewPageHeader__T-2hw .PhotoReviews_horizon__Svoiu .PhotoReviews_photo-wrapper__vRcim {
+				padding: 0 10px 20px !important;
+			}
+
+			//추천순
+			.ReviewFilter_mobile__iwCfm {
+				padding: 10px 5px;
+			}
+
+			.ReviewFilter_ReviewFilter__CrFwx .ReviewFilter_filter-wrapper__UY81t.ReviewFilter_mobile__iwCfm {
+				padding: 0 !important;
+			}
+
+			//포토리뷰 먼저 보기
+			.ReviewFilter_ReviewFilter__CrFwx .ReviewFilter_filter-wrapper__UY81t .ReviewFilter_photo-filter__LMvVR {
+				align-items: center;
+			}
+
+			.ReviewPageContent_ReviewPageContent__OBfzb.ReviewPageContent_mobile__oSZWT {
+				padding: 5px 10px 20px !important;
+			}
+
+			//별점
+			.ReviewPageContent_mobile__oSZWT {
+				padding: 0 0 15px !important;
+				;
+			}
+
+			// #prdReview {
+
+
+			// 	.nodata {
+			// 		background: $bvt-bg-lightblue;
+			// 		width: 100%;
+			// 		height: 400px;
+			// 		display: flex;
+			// 		justify-content: center;
+			// 		align-items: center;
+			// 		margin: 20px auto;
+			// 		font-size: 1.5rem;
+			// 		font-weight: bold;
+			// 		color: $bvt-blue;
+			// 		text-align: center;
+
+			// 	}
+
+			// }
+
+			// #productBoardListWrap {
+			// 	display: flex;
+			// 	flex-flow: row wrap;
+			// 	align-items: flex-start;
+			// 	width: 100%;
+			// 	margin: 50px 0;
+
+			// 	//리뷰 아이템
+			// 	li.review_item {
+			// 		width: 50%;
+			// 		list-style: none;
+			// 		text-align: center;
+			// 		padding: 0 7.5px;
+
+			// 		.item {
+			// 			position: relative;
+			// 			margin-bottom: 30px;
+
+			// 			.item_anchor {
+
+			// 				.user_info {
+			// 					display: flex;
+			// 					flex-flow: row nowrap;
+			// 					justify-content: flex-start;
+			// 					align-items: center;
+			// 					margin-bottom: 12px;
+			// 					font-size: 0;
+
+			// 					.user_img {
+			// 						position: relative;
+			// 						width: 30px;
+			// 						margin-right: 8px;
+			// 					}
+
+			// 					.user_name {
+			// 						font-size: 1.6rem;
+			// 						font-weight: bold;
+			// 						@include only-ellipsis(2, 1.9rem);
+			// 					}
+			// 				}
+
+			// 				.thumbnail_info {
+			// 					position: relative;
+			// 					display: block;
+			// 					width: 100%;
+			// 					padding-top: 100%;
+			// 					overflow: hidden;
+			// 					border-radius: 4px;
+			// 					margin-bottom: 12px;
+
+			// 					img {
+			// 						position: absolute;
+			// 						top: 0;
+			// 						left: 0;
+			// 						width: 100%;
+			// 						height: 100%;
+			// 						-o-object-fit: cover;
+			// 						object-fit: cover;
+			// 					}
+
+			// 					.rate {
+			// 						position: absolute;
+			// 						display: flex;
+			// 						flex-flow: row nowrap;
+			// 						justify-content: center;
+			// 						align-items: center;
+			// 						width: 51px;
+			// 						height: 23px;
+			// 						border-radius: 100px;
+			// 						background: rgba(242, 242, 242, 0.5);
+			// 						margin: 0 12px 10px 0;
+			// 						bottom: 0;
+			// 						right: 0;
+			// 						font-size: 1.3rem;
+			// 						font-weight: bold;
+			// 						color: $bvt-blue;
+
+			// 						&::before {
+			// 							display: block;
+			// 							content: "";
+			// 							width: 11px;
+			// 							height: 10.47px;
+			// 							background: var(--icon-rate) no-repeat center;
+			// 							margin-right: 3px;
+			// 						}
+
+			// 					}
+			// 				}
+
+			// 				.summary_info {
+			// 					//p표시 여러개 중복되어 height로 잡아줌 
+			// 					width: 100%;
+			// 					height: 67px;
+			// 					overflow: hidden;
+
+			// 					.vote_comment {
+			// 						display: flex;
+			// 						flex-wrap: nowrap;
+			// 						justify-content: flex-start;
+			// 						align-items: center;
+			// 						margin: 5px 0;
+
+			// 						.vote {
+			// 							display: flex;
+			// 							flex-wrap: nowrap;
+			// 							justify-content: space-between;
+			// 							align-items: center;
+			// 							width: 40px;
+			// 							height: 22px;
+			// 							border: 1px solid #022CFF;
+			// 							border-width: 1.2px;
+			// 							border-radius: 2px;
+			// 							background: #ffffff;
+			// 							font-size: 1.1rem;
+			// 							font-weight: bold;
+			// 							letter-spacing: -0.2px;
+			// 							color: #022CFF;
+			// 							padding: 1px 7px 0;
+			// 							box-sizing: border-box;
+			// 							margin-right: 8px;
+
+			// 							&::before {
+			// 								display: inline-block;
+			// 								width: 12.1px;
+			// 								height: 11.36px;
+			// 								content: "";
+			// 								background: var(--icon-likes) no-repeat center;
+			// 								margin-right: 1px;
+			// 							}
+			// 						}
+
+			// 						.comment {
+			// 							&::after {
+			// 								display: inline-block;
+			// 								content: "";
+			// 								width: 16.7px;
+			// 								height: 14.1px;
+			// 								background: var(--icon-cmt) no-repeat transparent center;
+			// 							}
+			// 						}
+
+			// 					}
+
+			// 					p {
+			// 						font-size: 1.3rem;
+			// 						@include only-ellipsis(2, 1.7rem);
+			// 						text-align: left;
+			// 					}
+
+			// 					span {
+			// 						display: none;
+			// 					}
+
+			// 				}
+			// 			}
+			// 		}
+			// 	}
+			// }
 
 			//페이지네이션
-			#productBoardPagenation {
-				width: 100%;
-				display: flex;
-				flex-flow: row nowrap;
-				justify-content: center;
-				align-items: center;
-				margin-bottom: 12px;
+			// #productBoardPagenation {
+			// 	width: 100%;
+			// 	display: flex;
+			// 	flex-flow: row nowrap;
+			// 	justify-content: center;
+			// 	align-items: center;
+			// 	margin-bottom: 12px;
 
-				.prev {
-					margin: 0 6px;
+			// 	.prev {
+			// 		margin: 0 6px;
 
-					a {
-						display: inline-block;
-						width: 17px;
-						height: 18px;
-						background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/blue_arrow_back_3x.png) no-repeat center;
-						background-size: contain;
-					}
-				}
+			// 		a {
+			// 			display: inline-block;
+			// 			width: 17px;
+			// 			height: 18px;
+			// 			background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/blue_arrow_back_3x.png) no-repeat center;
+			// 			background-size: contain;
+			// 		}
+			// 	}
 
-				.next {
-					margin: 0 6px;
+			// 	.next {
+			// 		margin: 0 6px;
 
-					a {
-						display: inline-block;
-						width: 17px;
-						height: 18px;
-						background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/blue_arrow_back_3x.png) no-repeat center;
-						background-size: contain;
-						transform: scaleX(-1);
-					}
-				}
+			// 		a {
+			// 			display: inline-block;
+			// 			width: 17px;
+			// 			height: 18px;
+			// 			background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/blue_arrow_back_3x.png) no-repeat center;
+			// 			background-size: contain;
+			// 			transform: scaleX(-1);
+			// 		}
+			// 	}
 
-				ol {
-					display: flex;
-					flex-flow: row nowrap;
-					justify-content: center;
-					align-items: center;
+			// 	ol {
+			// 		display: flex;
+			// 		flex-flow: row nowrap;
+			// 		justify-content: center;
+			// 		align-items: center;
 
-					li {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						font-size: 1.5rem;
-						font-weight: normal;
-						margin: 0 13px;
+			// 		li {
+			// 			display: flex;
+			// 			justify-content: center;
+			// 			align-items: center;
+			// 			font-size: 1.5rem;
+			// 			font-weight: normal;
+			// 			margin: 0 13px;
 
-						a {
-							display: flex;
-							flex-flow: row nowrap;
-							justify-content: center;
-							align-items: center;
-							width: 20px;
-							height: 20px;
-							border-radius: 50%;
-						}
-					}
+			// 			a {
+			// 				display: flex;
+			// 				flex-flow: row nowrap;
+			// 				justify-content: center;
+			// 				align-items: center;
+			// 				width: 20px;
+			// 				height: 20px;
+			// 				border-radius: 50%;
+			// 			}
+			// 		}
 
-					.this {
-						font-weight: bold;
-						color: $bvt-blue;
-						background: $bvt-bg-blue;
-					}
-				}
-			}
+			// 		.this {
+			// 			font-weight: bold;
+			// 			color: $bvt-blue;
+			// 			background: $bvt-bg-blue;
+			// 		}
+			// 	}
+			// }
 		}
 
 		//Q&A
 		#tab2 {
+			padding: 11px 0;
+
+
 			div {
 				.tab-tip {
 					text-align: center;
@@ -1077,7 +1121,6 @@
 
 				.product_detail_qna {
 					width: 100%;
-					padding: 0 22px;
 
 					.noAccess {
 						color: $bvt-darkgray;
@@ -1168,16 +1211,16 @@
 						justify-content: center;
 						align-items: center;
 						float: right;
-						width: 100px;
-						height: 50px;
+						width: 73px;
+						height: 36px;
 						background: $bvt-blue;
-						border-radius: 60px;
+						border-radius: 3px;
 						cursor: pointer;
 
 						a {
 							display: block;
 							color: $bvt-white;
-							font-weight: 400;
+							font-weight: bold;
 							font-size: 1.3rem;
 						}
 					}
@@ -1238,7 +1281,7 @@
 	overflow: hidden;
 
 
-	.webnmobile_product_html {
+	.buy_action {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: center;

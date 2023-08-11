@@ -121,7 +121,7 @@ Array.from(purchase_button).forEach((btn)=>{
         setTimeout(()=>{
           [...btn_gift][1].classList.remove("displaynone");
 
-        },1500)
+        },1000)
       }
 
 

@@ -231,15 +231,12 @@
             <!-- tab2 Q&A -->
             <div id="tab2" class="tab_content" data-hash="use_qna">
                 <div id="use_qna">
-                    <div class="tab-tip">
-                        <div class="tab-tip-head tab3_heading">
-                            <em>{$name}</em>에 대해 궁금하신가요?</div>
-                    </div>
+
                     <div class="product_detail_qna" module="product_qna">
                         <!--@css(/css/module/product/qna.css)-->
                         <!-- @js(/js/module/product/qna.js ) -->
                         <!--
-                            $count = 6
+                            $count = 12
                         -->
                         <p class="noAccess {$deny_display|display}">글읽기 권한이 없습니다.</p>
                         <ul class="tab-board-table {$list_display|display}">
@@ -268,6 +265,10 @@
                         </ul>
                     </div>
                     <div class="tab-tips-btns">
+                        <div class="tab-tip">
+                            <div class="tab-tip-head tab3_heading">
+                                <em>{$name}</em>에 대해 궁금하신가요?</div>
+                        </div>
                         <div class="qna_btn"><a href="{$qna_write}" target="_self">물어보기</a>
                         </div>
                     </div>
@@ -327,9 +328,9 @@
     <!-- 상품 정보 하단 -->
     <!-- 상품 구매 탭 -->
     <section id="buyAction" module="product_action">
-        <div class="by_action">
+        <div class="buy_action">
 
-            <button onclick="{$action_wishlist}" class="wishlist_btn {$wishlist_display}" title="위시리스트 담기">찜</button>
+            <button onclick="{$action_wishlist}" class="wish_btn {$wishlist_display}" title="위시리스트 담기">찜</button>
             <button class="share_btn" title="공유하기">공유</button>
             <button class="gift_btn gift_order_btn purchase_button" data-type="gift"  title="선물하기">선물하기</button>
             <button class="buy_btn purchase_button " data-type="buy" alt="구매하기">구매하기</button>
