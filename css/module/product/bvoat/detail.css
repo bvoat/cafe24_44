@@ -948,6 +948,7 @@
   padding-bottom: calc(constant(safe-area-inset-bottom) + 3px);
   padding-bottom: calc(env(safe-area-inset-bottom) + 3px);
   background: #ffffff;
+  padding-right: 5px;
 }
 #buyAction .buy_action button {
   font-size: 1.15rem;

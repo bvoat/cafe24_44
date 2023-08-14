@@ -1292,6 +1292,7 @@
 		padding-bottom: calc(constant(safe-area-inset-bottom) + 3px);
 		padding-bottom: calc(env(safe-area-inset-bottom) + 3px);
 		background: $bvt-white;
+		padding-right: 5px;
 
 		button {
 			font-size: 1.15rem;
