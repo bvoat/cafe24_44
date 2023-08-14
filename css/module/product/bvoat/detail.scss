@@ -1289,8 +1289,8 @@
 		// padding-top: calc(constant(safe-area-inset-bottom) + 1px);
 		// padding-top: calc(env(safe-area-inset-bottom) + 1px);
 		padding-top: 5px;
-		padding-bottom: calc(constant(safe-area-inset-bottom) + 7px);
-		padding-bottom: calc(env(safe-area-inset-bottom) + 7px);
+		padding-bottom: calc(constant(safe-area-inset-bottom) + 3px);
+		padding-bottom: calc(env(safe-area-inset-bottom) + 3px);
 		background: $bvt-white;
 
 		button {

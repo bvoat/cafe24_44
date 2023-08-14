@@ -945,8 +945,8 @@
   justify-content: center;
   align-items: center;
   padding-top: 5px;
-  padding-bottom: calc(constant(safe-area-inset-bottom) + 7px);
-  padding-bottom: calc(env(safe-area-inset-bottom) + 7px);
+  padding-bottom: calc(constant(safe-area-inset-bottom) + 3px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 3px);
   background: #ffffff;
 }
 #buyAction .buy_action button {
