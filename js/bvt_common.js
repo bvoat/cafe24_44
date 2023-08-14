@@ -35,11 +35,15 @@ function getUrlParams(param){
 function monitoringPrice() {
   console.log("price monitoring");
   const priceWrap = document.querySelectorAll(".price_wrap");
+  console.log('priceWrap: ', priceWrap);
   priceWrap.forEach((price)=>{
     const discount = price.children[1];    
+    console.log('discount: ', discount);
     const realPrice = price.children[0];
+    console.log('realPrice: ', realPrice);
     const realPriceNum = Number((realPrice.dataset.price).replace(/,/g,""));
     const fixedPrice = price.children[2];
+    console.log('fixedPrice: ', fixedPrice);
     const fixedPriceNum = Number((fixedPrice.dataset.price).replace(/,/g,""));
   //소비자가가 입력된 경우 체크
   //소비자가 없으면 0으로 표시
