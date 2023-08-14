@@ -101,7 +101,7 @@ Array.from(purchase_button).forEach((btn)=>{
     
     const btn_cart = document.querySelector(".btn_cart");
     const btn_buy  = document.querySelector(".btn_buy");
-    const btn_gift = document.querySelectorAll(".btn_gift");
+    const btn_gift = document.querySelector(".btn_gift");
         console.log('type: ', type);
 
 
