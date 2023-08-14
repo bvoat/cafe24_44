@@ -110,8 +110,8 @@ Array.from(purchase_button).forEach((btn)=>{
       if(type == "buy"){
         btn_cart.classList.remove("displaynone");
         btn_buy.classList.remove("displaynone");
-  setTimeout(()=>{
-    [...btn_gift].forEach(btn => {btn.classList.add("displaynone");})
+        setTimeout(()=>{
+          [...btn_gift].forEach(btn => {btn.classList.add("displaynone");})
 
   },500)        
 
@@ -121,7 +121,7 @@ Array.from(purchase_button).forEach((btn)=>{
         setTimeout(()=>{
           [...btn_gift][1].classList.remove("displaynone");
 
-        },1000)
+        },800)
       }
 
 
