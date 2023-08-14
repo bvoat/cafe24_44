@@ -961,6 +961,7 @@
   justify-content: center;
   align-items: center;
   width: calc((100% - 278px) / 1.65);
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "나눔고딕", "맑은 고딕", "Malgun Gothic", "돋움";
 }
 #buyAction .buy_action .wish_btn::before {
   display: block;
@@ -977,6 +978,7 @@
   justify-content: center;
   align-items: center;
   width: calc((100% - 278px) / 1.65);
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "나눔고딕", "맑은 고딕", "Malgun Gothic", "돋움";
 }
 #buyAction .buy_action .share_btn::before {
   display: block;
@@ -995,6 +997,7 @@
   width: calc((100% - 278px) / 1.35);
   font-weight: bold;
   color: #003DD3;
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "나눔고딕", "맑은 고딕", "Malgun Gothic", "돋움";
 }
 #buyAction .buy_action .gift_btn::before {
   display: block;
@@ -1014,4 +1017,5 @@
   font-weight: bold;
   color: #ffffff;
   border-radius: 5px;
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "나눔고딕", "맑은 고딕", "Malgun Gothic", "돋움";
 }/*# sourceMappingURL=detail.css.map */
