@@ -944,12 +944,10 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  height: 65px;
-  padding-top: 5px;
-  padding-top: calc(constant(safe-area-inset-bottom));
-  padding-top: calc(env(safe-area-inset-bottom));
-  padding-bottom: calc(constant(safe-area-inset-bottom) + 10px);
-  padding-bottom: calc(env(safe-area-inset-bottom) + 10px);
+  padding-top: calc(constant(safe-area-inset-bottom) + 5px);
+  padding-top: calc(env(safe-area-inset-bottom) + 5px);
+  padding-bottom: calc(constant(safe-area-inset-bottom) + 12px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 12px);
   background: #ffffff;
 }
 #buyAction .buy_action button {
@@ -964,7 +962,6 @@
   justify-content: center;
   align-items: center;
   width: calc((100% - 278px) / 1.85);
-  height: 65px;
 }
 #buyAction .buy_action .wish_btn::before {
   display: block;
@@ -981,7 +978,6 @@
   justify-content: center;
   align-items: center;
   width: calc((100% - 278px) / 1.85);
-  height: 65px;
 }
 #buyAction .buy_action .share_btn::before {
   display: block;
@@ -998,7 +994,6 @@
   justify-content: center;
   align-items: center;
   width: calc((100% - 278px) / 1.75);
-  height: 65px;
   font-weight: bold;
   color: #003DD3;
 }
