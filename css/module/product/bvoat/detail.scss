@@ -730,6 +730,13 @@
 			width: 100%;
 			padding: 0 !important;
 
+			.heading {
+				padding: 0 11px;
+				font-size: 2rem;
+				margin-bottom: 40px;
+				text-align: center;
+			}
+
 			//AI리뷰
 			.ReviewAid_tempWrapper__7MGRC.ReviewAid_mobile__iZazx {
 				grid-gap: 20px !important;
@@ -1021,6 +1028,14 @@
 
 		//Q&A
 		#tab2 {
+			padding-top: 50px;
+
+			.heading {
+				padding: 0 11px;
+				font-size: 2rem;
+				margin-bottom: 40px;
+				text-align: center;
+			}
 
 			div {
 
@@ -1040,7 +1055,6 @@
 					text-align: center;
 					font-size: 1.5rem;
 					padding: 50px 0;
-					margin: 15px 0;
 				}
 
 				.product_detail_qna {
@@ -1122,7 +1136,7 @@
 					width: 100%;
 					max-width: 450px;
 					height: 50px;
-					padding: 0 22px;
+					padding: 0;
 					margin: 11px 0;
 
 					.noAccess {
@@ -1151,14 +1165,29 @@
 					}
 				}
 
-				@include page-pagination;
+				.product_detail_paginate {
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-top: 20px;
+					margin-bottom: 30px !important;
+				}
 
+				@include page-pagination;
 			}
 		}
 
 		//배송안내
 		#tab3 {
 			margin-top: 20px;
+
+			.heading {
+				padding: 0 11px;
+				font-size: 2rem;
+				margin-bottom: 40px;
+				text-align: center;
+			}
 
 			div {
 				.tab_prd_info {

@@ -37,7 +37,6 @@
 #productDetailTop .product_thumnail_wrap .thumb_wrapper .thumb {
   position: relative;
   width: 100%;
-  font-size: 0;
 }
 #productDetailTop .product_thumnail_wrap .thumb_wrapper .thumb > a,
 #productDetailTop .product_thumnail_wrap .thumb_wrapper .thumb .img_wrap {
@@ -638,6 +637,12 @@
   width: 100%;
   padding: 0 !important;
 }
+#productDetailBottom .detail_swiper_wrap #tab1 .heading {
+  padding: 0 11px;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
 #productDetailBottom .detail_swiper_wrap #tab1 .ReviewAid_tempWrapper__7MGRC.ReviewAid_mobile__iZazx {
   grid-gap: 20px !important;
   padding: 0px 0 30px !important;
@@ -664,6 +669,15 @@
 #productDetailBottom .detail_swiper_wrap #tab1 .ReviewPageContent_mobile__oSZWT {
   padding: 0 0 15px !important;
 }
+#productDetailBottom .detail_swiper_wrap #tab2 {
+  padding-top: 50px;
+}
+#productDetailBottom .detail_swiper_wrap #tab2 .heading {
+  padding: 0 11px;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
 #productDetailBottom .detail_swiper_wrap #tab2 div .tab-tip {
   text-align: center;
   padding: 18px 0;
@@ -678,7 +692,6 @@
   text-align: center;
   font-size: 1.5rem;
   padding: 50px 0;
-  margin: 15px 0;
 }
 #productDetailBottom .detail_swiper_wrap #tab2 div .product_detail_qna {
   width: 100%;
@@ -742,7 +755,7 @@
   width: 100%;
   max-width: 450px;
   height: 50px;
-  padding: 0 22px;
+  padding: 0;
   margin: 11px 0;
 }
 #productDetailBottom .detail_swiper_wrap #tab2 div .tab-tips-btns .noAccess {
@@ -766,6 +779,14 @@
   color: #ffffff;
   font-weight: normal;
   font-size: 1.3rem;
+}
+#productDetailBottom .detail_swiper_wrap #tab2 div .product_detail_paginate {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px !important;
 }
 #productDetailBottom .detail_swiper_wrap #tab2 div .page-pagination {
   display: flex;
@@ -838,6 +859,12 @@
 }
 #productDetailBottom .detail_swiper_wrap #tab3 {
   margin-top: 20px;
+}
+#productDetailBottom .detail_swiper_wrap #tab3 .heading {
+  padding: 0 11px;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
 }
 #productDetailBottom .detail_swiper_wrap #tab3 div .tab_prd_info {
   padding: 10px;

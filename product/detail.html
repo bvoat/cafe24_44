@@ -97,10 +97,10 @@
     <ul class="detail_tab_wrap" module="product_additional">
         <li class="tab" data-hash="prd_detail"><button  class="tab0 tab_button active" data-id="tab0">상품정보</button>
         </li>
-        <li class="tab" data-hash="prd_bh"><button class="tab1 tab_button" data-id="tab1">리뷰</button></li>
+        <li class="tab" data-hash="prd_bh"><button class="tab1 tab_button" data-id="tab1">리뷰<em class="tab2_heading"></em></button></li>
         <li class="tab" data-hash="use_qna"><button class="tab2 tab_button" data-id="tab2">Q&A({$qna_count})</button>
         </li>
-        <li class="tab" data-hash="prd_info" ><button class="tab3 tab_button" data-id="tab3">배송안내</button>
+        <li class="tab" data-hash="prd_info" ><button class="tab3 tab_button" data-id="tab3">구매안내</button>
         </li>
     </ul>
     <!-- 상품 정보 하단 선택 탭 -->
@@ -125,6 +125,7 @@
             <!-- tab0 상품정보 -->
             <!-- tab1 리뷰 -->
             <div id="tab1" class="tab_content" data-hash="prd_bh">
+                <h3 class="heading">리뷰</h3>
                 <script defer src="https://snippet.reviewaid.ai/latest/product.js"></script>
                 <div id="ReviewAid" style="display: none"></div>
                 <div id="review-aid-fake-product-root" style="display: none"></div>
@@ -133,18 +134,14 @@
                 <div id="review-aid-review-page-root" class="ReviewAidV2"></div>
                 <div id="prdReview" class="displaynone">
                     <div class="board">
-                        <!-- <ul class="btnArea type2">
-                        <li><a href="{$review_write}" class="btnSubmit">상품후기쓰기</a></li> 
-                        <li> <a href="{$review_list}" class="btnEm">이 상품 후기 모두보기</a></li> 
-                    </ul> -->
                         <div module="product_review">
                             <!--
-                        $count = 12
-                        $product_name_cut = 30
-                        $subject_cut = 22
-                        $login_page_url = /member/login.html
-                        $deny_access_url = /index.html
-                    -->
+                                $count = 200
+                                $product_name_cut = 30
+                                $subject_cut = 22
+                                $login_page_url = /member/login.html
+                                $deny_access_url = /index.html
+                            -->
                             <section class="no_access">
                                 <a name="use_review"></a>
                                 <p class="noAccess {$deny_display|display}">글읽기 권한이 없습니다.</p>
@@ -230,6 +227,7 @@
             <!-- tab1 리뷰 -->
             <!-- tab2 Q&A -->
             <div id="tab2" class="tab_content" data-hash="use_qna">
+                <h3 class="heading">상품 문의</h3>
                 <div id="use_qna">
 
                     <div class="product_detail_qna" module="product_qna">
@@ -243,7 +241,7 @@
                             <li class="descriptions">
                                 <a class="description_link" title="{$subject}"
                                     href="/board/product/read.html{$param_read}" target="_self">
-                                    <h1> {$icon_re} {$icon_lock} {$icon_mobile} {$subject} </h1>
+                                    <h1> {$icon_re} {$icon_lock} {$subject} </h1>
                                     <p>
                                         {$member_icon}
                                         <span class="id" title="작성자">{$writer}</span>
@@ -254,9 +252,8 @@
                             <li class="descriptions">
                                 <a class="description_link" title="{$subject}"
                                     href="/board/product/read.html{$param_read}" target="_self">
-                                    <h1> {$icon_re} {$icon_lock} {$icon_mobile} {$subject} </h1>
+                                    <h1> {$icon_re} {$icon_lock} {$subject} </h1>
                                     <p>
-                                        {$member_icon}
                                         <span class="id" title="작성자">{$writer}</span>
                                         <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
                                     </p>
@@ -292,8 +289,9 @@
                 </div>
             </div>
             <!-- tab2 Q&A -->
-            <!-- tab3 배송안내 -->
+            <!-- tab3 구매안내 -->
             <div id="tab3" class="tab_content" data-hash="prd_info">
+                <h3 class="heading">구매안내</h3>
                 <div id="prd_info">
                     <div class="tab_prd_info">
                         <div class="title">상품결제정보</div>
@@ -321,7 +319,7 @@
                     </div>
                 </div>
             </div>
-            <!-- tab4 배송안내 -->
+            <!-- tab4 구매안내 -->
         </div>
         <!-- 상품 정보 하단 정보 -->
     </article>
