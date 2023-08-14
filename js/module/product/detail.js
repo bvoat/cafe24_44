@@ -102,6 +102,9 @@ Array.from(purchase_button).forEach((btn)=>{
     const btn_cart = document.querySelector(".btn_cart");
     const btn_buy  = document.querySelector(".btn_buy");
     const btn_gift = document.querySelectorAll(".btn_gift");
+    console.log('btn_gift: ', btn_gift);
+    console.log('btn_gift0: ', btn_gift[0]);
+    console.log('btn_gift1: ', btn_gift[1]);
 
 
       let type = e.currentTarget.dataset.type;
