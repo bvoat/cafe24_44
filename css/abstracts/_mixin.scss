@@ -8,7 +8,6 @@
     .thumb {
         position: relative;
         width: 100%;
-        font-size: 0;
 
         >a,
         .img_wrap {
@@ -44,7 +43,7 @@
 
     //상품 설명
     .desc {
-        padding: $top-padding 0 17px 0;
+        padding: $top-padding 0 0 0;
 
         .brand {
             font-size: $brand-ftsize;
@@ -72,7 +71,7 @@
             word-wrap: break-word;
             word-break: keep-all;
             @include ellipsis(2, $name-ftsize);
-            margin-bottom: 12px;
+            margin-bottom: 18px;
         }
     }
 }
@@ -266,8 +265,8 @@
     /* 라인수 */
     -webkit-box-orient: vertical;
     word-wrap: break-word;
-    line-height: $line-height + 0.5rem;
-    height: (($line-height) * $line-cnt) + 0.9rem;
+    line-height: $line-height + 0.3rem;
+    height: (($line-height) * $line-cnt) + 0.6rem;
 }
 
 // ellipsis 처리만
