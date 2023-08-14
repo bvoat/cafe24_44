@@ -60,4 +60,10 @@
             type: 'progressbar',
         },
     });
+
+    const stay = document.querySelector(".stay_btn");
+    stay.addEventListener("click", (e) => {
+        const buyScreen = document.getElementById("buyScreen");
+        classToggle(buyScreen, "displaynone");
+    })
 </script>
