@@ -8,8 +8,6 @@ const thumbnail_list = document.querySelector(".thumb").children;
   li.style="display: inline-block";
 })
 
-
-
 //thumbnail 스와이퍼
 var swiper = new Swiper(".product_thumnail_wrap", {
   spaceBetween: 8,
@@ -72,6 +70,14 @@ const tabClickMove = () => {
 
 
 //슬라이더 이외 함수 시작
+
+const reviewControl = () => {
+  const reviewCheck = document.querySelector("#productBoardListWrap");
+  const tabHeading = document.querySelector(".tab2_heading");
+  const reviewNumber = reviewCheck.childElementCount;
+  tabHeading.innerHTML=`(${reviewNumber})`;
+ 
+}
 
 //Q&A heading 컨트롤
 const qnaControl = () => {
@@ -273,7 +279,8 @@ window.addEventListener("DOMContentLoaded", ()=>{
 
   //크루 등급 마일리지 2배 변환
   crewValueControl(2);
-
+  //리뷰 heading 컨트롤
+  reviewControl();
   //Q&A heading 컨트롤
   qnaControl();
 
