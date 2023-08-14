@@ -1305,7 +1305,7 @@
 			flex-flow: column nowrap;
 			justify-content: center;
 			align-items: center;
-			width: calc((100% - 278px) / 1.85);
+			width: calc((100% - 278px) / 1.65);
 
 			&::before {
 				display: block;
@@ -1325,7 +1325,7 @@
 			flex-flow: column nowrap;
 			justify-content: center;
 			align-items: center;
-			width: calc((100% - 278px) / 1.85);
+			width: calc((100% - 278px) / 1.65);
 
 			&::before {
 				display: block;
@@ -1343,7 +1343,7 @@
 			flex-flow: column nowrap;
 			justify-content: center;
 			align-items: center;
-			width: calc((100% - 278px) / 1.75);
+			width: calc((100% - 278px) / 1.35);
 			font-weight: bold;
 			color: $bvt-blue;
 
@@ -1367,6 +1367,7 @@
 			font-size: 1.6rem;
 			font-weight: bold;
 			color: $bvt-white;
+			border-radius: 5px;
 		}
 	}
 
