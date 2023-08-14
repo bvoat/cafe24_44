@@ -493,7 +493,7 @@
   margin-top: 10px !important;
 }
 
-.buy_button {
+.webnmobile_product_html {
   position: fixed;
   display: flex;
   flex-flow: row nowrap;
@@ -508,7 +508,7 @@
   padding-bottom: 15px;
   background: #ffffff;
 }
-.buy_button div {
+.webnmobile_product_html div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -518,7 +518,7 @@
   padding-bottom: calc(env(safe-area-inset-bottom));
   border-radius: 5px;
 }
-.buy_button div button {
+.webnmobile_product_html div button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -531,28 +531,28 @@
   border: 1px solid #003DD3;
   border-radius: 5px;
 }
-.buy_button .btn_cart {
+.webnmobile_product_html .btn_cart {
   margin-right: 1.78%;
 }
-.buy_button .btn_cart button {
+.webnmobile_product_html .btn_cart button {
   background: #ffffff;
   color: #003DD3;
 }
-.buy_button .btn_buy {
+.webnmobile_product_html .btn_buy {
   margin-right: 1.78%;
 }
-.buy_button .btn_buy button {
+.webnmobile_product_html .btn_buy button {
   background: #003DD3;
   color: #ffffff;
 }
-.buy_button .btn_gift {
+.webnmobile_product_html .btn_gift {
   margin-left: 0 !important;
 }
-.buy_button .btn_gift .gift_order_btn {
+.webnmobile_product_html .btn_gift .gift_order_btn {
   background: #003DD3 !important;
   color: #ffffff !important;
 }
-.buy_button .select_none {
+.webnmobile_product_html .select_none {
   width: 100%;
   font-size: 1.6rem;
   font-weight: 500;
