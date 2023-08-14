@@ -953,6 +953,7 @@
   font-size: 1.15rem;
   color: #707070;
   background: transparent;
+  height: 65px;
 }
 #buyAction .buy_action .wish_btn {
   display: flex;
@@ -960,7 +961,6 @@
   justify-content: center;
   align-items: center;
   width: calc((100% - 278px) / 1.85);
-  height: 100%;
 }
 #buyAction .buy_action .wish_btn::before {
   display: block;
@@ -977,7 +977,6 @@
   justify-content: center;
   align-items: center;
   width: calc((100% - 278px) / 1.85);
-  height: 100%;
 }
 #buyAction .buy_action .share_btn::before {
   display: block;
@@ -993,8 +992,7 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  width: calc((100% - 278px) / 1.85);
-  height: 100%;
+  width: calc((100% - 278px) / 1.75);
   font-weight: bold;
   color: #003DD3;
 }
@@ -1013,6 +1011,6 @@
   background: #003DD3;
   justify-content: center;
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: bold;
   color: #ffffff;
 }/*# sourceMappingURL=detail.css.map */

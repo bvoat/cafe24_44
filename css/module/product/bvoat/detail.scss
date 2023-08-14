@@ -1297,6 +1297,7 @@
 			font-size: 1.15rem;
 			color: $bvt-darkgray;
 			background: transparent;
+			height: 65px;
 		}
 
 		.wish_btn {
@@ -1305,7 +1306,6 @@
 			justify-content: center;
 			align-items: center;
 			width: calc((100% - 278px) / 1.85);
-			height: 100%;
 
 			&::before {
 				display: block;
@@ -1326,7 +1326,6 @@
 			justify-content: center;
 			align-items: center;
 			width: calc((100% - 278px) / 1.85);
-			height: 100%;
 
 			&::before {
 				display: block;
@@ -1344,8 +1343,7 @@
 			flex-flow: column nowrap;
 			justify-content: center;
 			align-items: center;
-			width: calc((100% - 278px) / 1.85);
-			height: 100%;
+			width: calc((100% - 278px) / 1.75);
 			font-weight: bold;
 			color: $bvt-blue;
 
@@ -1367,7 +1365,7 @@
 			background: $bvt-blue;
 			justify-content: center;
 			font-size: 1.6rem;
-			font-weight: 600;
+			font-weight: bold;
 			color: $bvt-white;
 		}
 	}
