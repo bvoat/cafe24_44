@@ -945,10 +945,11 @@
   justify-content: center;
   align-items: center;
   height: 65px;
+  padding-top: 5px;
   padding-top: calc(constant(safe-area-inset-bottom));
   padding-top: calc(env(safe-area-inset-bottom));
-  padding-bottom: calc(constant(safe-area-inset-bottom) + 5px);
-  padding-bottom: calc(env(safe-area-inset-bottom) + 5px);
+  padding-bottom: calc(constant(safe-area-inset-bottom) + 10px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 10px);
   background: #ffffff;
 }
 #buyAction .buy_action button {
