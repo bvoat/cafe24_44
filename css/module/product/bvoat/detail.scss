@@ -1245,8 +1245,8 @@
 
 		// padding-top: calc(constant(safe-area-inset-bottom));
 		// padding-top: calc(env(safe-area-inset-bottom));
-		padding-bottom: calc(constant(safe-area-inset-bottom)) + 5px;
-		padding-bottom: calc(env(safe-area-inset-bottom))+ 5px;
+		padding-bottom: calc(constant(safe-area-inset-bottom));
+		padding-bottom: calc(env(safe-area-inset-bottom));
 		padding-left: 17px;
 		background: $bvt-white;
 
@@ -1330,9 +1330,7 @@
 			font-size: 1.6rem;
 			font-weight: bold;
 			color: $bvt-white;
-			margin-top: 5px;
-			margin-left: 17px;
-			margin-right: 5px;
+			margin: 5px 5px 0px 17px;
 			border-radius: 5px;
 			font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움';
 		}
