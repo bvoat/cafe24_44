@@ -62,21 +62,21 @@
 }
 #subCategorySwiper .subcategory .subcategory_list a {
   display: block;
-  font-weight: 300;
+  font-weight: normal;
   font-size: 1.45rem;
   letter-spacing: -0.5px;
   word-break: keep-all;
   word-wrap: break-word;
 }
 #subCategorySwiper .subcategory .subcategory_list.active a {
-  font-weight: 600;
+  font-weight: bold;
   color: #003DD3;
 }
 #subCategorySwiper .subcategory .subcategory_list.active a::after {
   position: absolute;
   display: block;
   content: "";
-  width: 120%;
+  width: 105%;
   height: 3px;
   border-radius: 5px;
   background: #003DD3;
