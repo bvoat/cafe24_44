@@ -3,11 +3,12 @@
 @import "../../../abstracts/variables";
 
 #normalPackageWrap {
-    padding: 20px 17px;
+    padding: 20px 11px;
 }
 
 #listmainWrap {
-    padding: 20px 17px;
+    background: $bvt-bg-lightblue;
+    padding: 20px 11px;
 }
 
 #supplyMinishop {
@@ -23,7 +24,7 @@
 
         img {
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
     }
 

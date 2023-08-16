@@ -33,7 +33,6 @@
 .thumb {
   position: relative;
   width: 100%;
-  font-size: 0;
 }
 .thumb > a,
 .thumb .img_wrap {
@@ -65,19 +64,8 @@
 .desc {
   padding: 9px 0 0 0;
 }
-.desc .summary {
-  font-size: 1.2rem;
-}
-.desc .product_name,
-.desc .product_name span {
-  font-size: 1.4rem;
-}
-
-.desc {
-  padding: 9px 0 17px 0;
-}
 .desc .brand {
-  font-size: 0rem;
+  font-size: 1.1rem;
   color: #707070;
   display: block;
   overflow: hidden;
@@ -123,7 +111,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.9rem;
-  height: 3.7rem;
-  margin-bottom: 12px;
+  line-height: 1.7rem;
+  height: 3.4rem;
+  margin-bottom: 18px;
 }/*# sourceMappingURL=product_list.css.map */

@@ -47,7 +47,6 @@
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.426' height='13.423'%3E%3Cpath data-name='Icon ionic-ios-close' d='m8.304 6.711 4.8-4.8A1.124 1.124 0 0 0 11.515.327l-4.8 4.8-4.8-4.8A1.124 1.124 0 1 0 .331 1.911l4.8 4.8-4.8 4.8a1.124 1.124 0 0 0 1.584 1.584l4.8-4.8 4.8 4.8a1.124 1.124 0 1 0 1.584-1.584Z' fill='%23707070'/%3E%3C/svg%3E") no-repeat;
   background-size: cover;
   text-indent: -9999px;
-  fill: #003DD3;
 }
 #searchModal #searchModalTitle {
   width: 100%;
@@ -173,7 +172,6 @@
 }
 #searchModal #searchBarForm .search_input_box .hot_keyword .search_hot .hot_list > li a {
   color: #707070;
-  white-space: nowrap;
 }
 #searchModal #searchBarForm .search_input_box .hot_keyword .search_hot .hot_list > li > button {
   width: 27px;
@@ -181,6 +179,9 @@
   background-color: #003DD3;
   color: #ffffff;
   font-size: 1.1rem;
+}
+#searchModal #searchBarForm .search_input_box .hot_keyword .search_hot .hot_list > li:nth-child(4) {
+  margin: 0 0 10.8px 0;
 }
 
 .dimmed {
@@ -246,7 +247,6 @@
 .thumb {
   position: relative;
   width: 100%;
-  font-size: 0;
 }
 .thumb > a,
 .thumb .img_wrap {
@@ -276,10 +276,10 @@
 }
 
 .desc {
-  padding: 7px 0 17px 0;
+  padding: 9px 0 0 0;
 }
 .desc .brand {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #707070;
   display: block;
   overflow: hidden;
@@ -289,13 +289,13 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.45rem;
+  line-height: 1.5rem;
   margin-bottom: 3px;
   font-weight: normal;
 }
 .desc .summary {
   display: block;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: #707070;
   display: block;
   overflow: hidden;
@@ -305,7 +305,7 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.45rem;
+  line-height: 1.5rem;
   margin-bottom: 7px;
   font-weight: normal;
 }
@@ -313,7 +313,7 @@
 .desc .product_name > span,
 .desc .product_name > a {
   color: #292929 !important;
-  font-size: 1.3rem !important;
+  font-size: 1.4rem !important;
   font-weight: normal !important;
   word-wrap: break-word;
   word-break: keep-all;
@@ -325,9 +325,9 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.8rem;
-  height: 3.5rem;
-  margin-bottom: 12px;
+  line-height: 1.7rem;
+  height: 3.4rem;
+  margin-bottom: 18px;
 }
 
 .page-pagination {
