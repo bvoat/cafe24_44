@@ -293,7 +293,7 @@
 //상품 이미지 구역
 @include product-thumb(4px);
 //상품 상세 정보 구역
-@include product-desc(9px, 1.1rem, 1.2rem, 1.4rem);
+@include product-desc(9px, 1.2rem, 1.2rem, 1.4rem);
 
 //페이지네이션
 @include page-pagination;
