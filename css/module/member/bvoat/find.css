@@ -10,21 +10,21 @@
 .find_article {
   width: 100%;
   max-width: 450px;
-  padding: 23px 11px 100%;
-  margin-top: 80px;
-  background: #FAFAFE;
+  padding: 23px 17px 100%;
+  margin-top: 60px;
 }
 .find_article .find_title {
   margin-bottom: 18px;
+  text-align: center;
 }
 .find_article .find_title h2 {
-  font-weight: 600;
-  font-size: 2.2rem;
+  font-weight: bold;
+  font-size: 2rem;
   line-height: 4rem;
 }
 .find_article .find_title h3 {
-  font-weight: 300;
-  font-size: 1.4rem;
+  font-weight: normal;
+  font-size: 1.45rem;
   color: #707070;
 }
 .find_article .find_form fieldset > ul {
@@ -39,11 +39,11 @@
 }
 .find_article .find_form fieldset > ul .find_input_wrap > span {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: bold;
 }
 .find_article .find_form fieldset > ul .find_input_wrap .txtInfo {
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: normal;
 }
 .find_article .find_form fieldset > ul .find_input_wrap .input_label {
   display: block;
@@ -104,13 +104,13 @@
 }
 .find_article .find_form fieldset #findPwdIdBtn {
   width: 100%;
-  height: 55px;
+  height: 45px;
   background: #003DD3;
   color: #ffffff;
   font-size: 1.5rem;
-  font-weight: 600;
-  border-radius: 100px;
-  margin-top: 40px;
+  font-weight: bold;
+  font-family: inherit;
+  border-radius: 5px;
 }
 .find_article .find_form > ul {
   width: 100%;
@@ -127,26 +127,26 @@
 .find_article .find_form > ul > li > p {
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  line-height: 2.3rem;
+  line-height: 1.8rem;
 }
 .find_article .find_form > ul > li > p > span {
   color: #003DD3;
-  font-weight: 600;
-  background: #FFF239;
+  font-weight: bold;
   text-align: center;
 }
 .find_article .find_form > a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  height: 55px;
+  width: 100%;
+  height: 45px;
   background: #003DD3;
   color: #ffffff;
   font-size: 1.5rem;
-  font-weight: 600;
-  border-radius: 100px;
-  margin: 14px auto;
+  font-weight: bold;
+  font-family: inherit;
+  border-radius: 5px;
+  margin: 7px auto;
 }
 
 .find_btn {
@@ -158,7 +158,7 @@
 }
 
 .ec-base-desc li {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin: 15px 0 0 !important;
 }
 .ec-base-desc li .term {
@@ -166,8 +166,8 @@
   width: 40%;
 }
 .ec-base-desc li .desc {
-  padding-left: 10% !important;
-  font-size: 1.3rem;
+  padding-left: 5% !important;
+  font-size: 1.4rem;
 }
 
 .xans-member-findpasswdmethod .inner .ec-base-button {
@@ -175,19 +175,20 @@
 }
 
 .submit_btn {
-  width: 45%;
+  width: 48%;
   padding: 4%;
   background: #003DD3;
   color: #ffffff;
   font-weight: bold;
-  border-radius: 100px;
+  border-radius: 5px;
 }
 
 .cancle_btn {
-  width: 45%;
+  width: 48%;
   padding: 4%;
-  background: #707070;
-  color: #ffffff;
+  background: #ffffff;
+  color: #003DD3;
   font-weight: bold;
-  border-radius: 100px;
+  border-radius: 5px;
+  border: 1px solid #003DD3;
 }/*# sourceMappingURL=find.css.map */

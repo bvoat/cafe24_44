@@ -3,7 +3,7 @@
     <section id="findPwdIdTitle" class="find_title">
         <h1 class="displaynone">비밀번호 찾기</h1>
         <h2>비밀번호 찾기</h2>
-        <h3>아래 정보를 확인해주세요.<br>개인정보 보호법에 따라 임시 비밀번호가 선택하신 방법으로 전송됩니다.
+        <h3>아래 정보를 확인해주세요.<br><br>개인정보 보호법에 따라<br>임시 비밀번호가 선택하신 방법으로 전송됩니다.
         </h3>
     </section>
     <div id="findPwdIdForm" module="member_findpasswdmethod" class="find_form ec-base-box typeThin">
@@ -25,11 +25,12 @@
                                 class="txtEm number">{$passwd_method_mobile}</strong></span></li>
                 </ul>
                 <div class="ec-base-button gColumn">
+                    <button type="button" class="btnNormal cancle_btn"
+                    onclick="{$action_func_find_passwd_cancel}">취소</button>
                     <button type="button" class="btnSubmit submit_btn" onclick="{$action_func_find_passwd_send}">임시
                         비밀번호
                         전송</button>
-                    <button type="button" class="btnNormal cancle_btn"
-                        onclick="{$action_func_find_passwd_cancel}">취소</button>
+               
                 </div>
             </fieldset>
         </div>

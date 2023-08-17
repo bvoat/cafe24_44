@@ -6,22 +6,22 @@
 .find_article {
     width: 100%;
     max-width: 450px;
-    padding: 23px 11px 100%;
-    margin-top: 80px; //top_nav hide
-    background: $bvt-bg-lightblue;
+    padding: 23px 17px 100%;
+    margin-top: 60px; //top_nav hide
 
     .find_title {
         margin-bottom: 18px;
+        text-align: center;
 
         h2 {
-            font-weight: 600;
-            font-size: 2.2rem;
+            font-weight: bold;
+            font-size: 2rem;
             line-height: 4rem;
         }
 
         h3 {
-            font-weight: 300;
-            font-size: 1.4rem;
+            font-weight: normal;
+            font-size: 1.45rem;
             color: $bvt-darkgray;
         }
     }
@@ -40,12 +40,12 @@
 
                     >span {
                         font-size: 1.5rem;
-                        font-weight: 600;
+                        font-weight: bold;
                     }
 
                     .txtInfo {
                         font-size: 1.2rem;
-                        font-weight: 300;
+                        font-weight: normal;
                     }
 
                     .input_label {
@@ -112,13 +112,13 @@
 
             #findPwdIdBtn {
                 width: 100%;
-                height: 55px;
+                height: 45px;
                 background: $bvt-blue;
                 color: $bvt-white;
                 font-size: 1.5rem;
-                font-weight: 600;
-                border-radius: 100px;
-                margin-top: 40px;
+                font-weight: bold;
+                font-family: inherit;
+                border-radius: 5px;
             }
         }
 
@@ -137,12 +137,11 @@
                 >p {
                     font-size: 1.4rem;
                     margin-bottom: 1rem;
-                    line-height: 2.3rem;
+                    line-height: 1.8rem;
 
                     >span {
                         color: $bvt-blue;
-                        font-weight: 600;
-                        background: $bvt-yellow;
+                        font-weight: bold;
                         text-align: center;
                     }
                 }
@@ -153,14 +152,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 80%;
-            height: 55px;
+            width: 100%;
+            height: 45px;
             background: $bvt-blue;
             color: $bvt-white;
             font-size: 1.5rem;
-            font-weight: 600;
-            border-radius: 100px;
-            margin: 14px auto;
+            font-weight: bold;
+            font-family: inherit;
+            border-radius: 5px;
+            margin: 7px auto;
         }
     }
 
@@ -177,7 +177,7 @@
 //find_passwd_method 수정
 
 .ec-base-desc li {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin: 15px 0 0 !important;
 
     .term {
@@ -186,8 +186,8 @@
     }
 
     .desc {
-        padding-left: 10% !important;
-        font-size: 1.3rem;
+        padding-left: 5% !important;
+        font-size: 1.4rem;
     }
 }
 
@@ -196,19 +196,20 @@
 }
 
 .submit_btn {
-    width: 45%;
+    width: 48%;
     padding: 4%;
     background: $bvt-blue;
     color: $bvt-white;
     font-weight: bold;
-    border-radius: 100px;
+    border-radius: 5px;
 }
 
 .cancle_btn {
-    width: 45%;
+    width: 48%;
     padding: 4%;
-    background: $bvt-darkgray;
-    color: $bvt-white;
+    background: $bvt-white;
+    color: $bvt-blue;
     font-weight: bold;
-    border-radius: 100px;
+    border-radius: 5px;
+    border: $bvt-btn-border;
 }
