@@ -13,138 +13,157 @@
   align-items: center;
   width: 100%;
   max-width: 450px;
-  padding: 23px 11px;
-  margin: 81px 0px 24px;
+  margin-top: 60px;
 }
 #myshopCoupon #myshopCouponTitle {
   display: flex;
   flex-flow: column nowrap;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
-  margin-bottom: 18px;
 }
 #myshopCoupon #myshopCouponTitle h2 {
-  font-size: 1.9rem;
-  font-weight: 700;
-  margin-bottom: 2px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-top: 19px;
 }
-#myshopCoupon #myshopCouponTitle h3 {
-  font-size: 1.3rem;
-  font-weight: 300;
-  color: #ABABAB;
-}
-#myshopCoupon .coupon_use {
-  width: 100%;
-  text-align: center;
-  padding: 11px 11px 24px;
-}
-#myshopCoupon .page-pagination {
-  margin-bottom: 0;
+#myshopCoupon #myshopCouponTitle p {
+  font-size: 1.55rem;
+  font-weight: normal;
+  margin-top: 20px;
+  color: #707070;
+  letter-spacing: -0.2px;
+  line-height: 2rem;
 }
 
 #myshopCouponTable {
   width: 100%;
   max-width: 450px;
+  margin-top: 29px;
+  padding: 0 17px 48px;
 }
-#myshopCouponTable > ul {
-  width: 100%;
-  padding: 0 11px;
-}
-
-.coupon_item {
-  border: 1px solid #E2E2E2;
-  border-radius: 24px;
-  margin-bottom: 15px;
-  padding: 6%;
-}
-.coupon_item .name {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 7px;
-}
-.coupon_item > ul li {
+#myshopCouponTable .coupon_item {
   display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #003DD3;
+  border-color: #003DD3;
+  border-radius: 10px;
+  margin-bottom: 13px;
+  padding: 24px 31.5px;
+}
+#myshopCouponTable .coupon_item .name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #003DD3;
+  letter-spacing: -0.5px;
+  margin-bottom: 19px;
+}
+#myshopCouponTable .coupon_item > ul li {
+  display: inline-flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  color: #707070;
 }
-.coupon_item > ul .date {
-  position: relative;
-  padding: 0 0 16px 0;
-}
-.coupon_item > ul .date::after {
-  position: absolute;
-  display: block;
+#myshopCouponTable .coupon_item > ul li:nth-child(1) {
+  display: inline-flex;
   content: "";
+  background-image: linear-gradient(to right, #003DD3 55%, rgba(255, 255, 255, 0) 0%);
+  background-position: top;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
   width: 100%;
-  height: 2px;
-  border-bottom: 3px dotted #F2F2F2;
-  bottom: 0;
+  padding-top: 19px;
+  margin-bottom: 7.5px;
 }
-.coupon_item > ul .paymethod {
-  margin-top: 12px;
-}
-.coupon_item > ul .tag {
-  display: inline-block;
+#myshopCouponTable .coupon_item > ul .tag {
   width: 20%;
-  max-width: 105px;
-  min-width: 70px;
+  min-width: 74px;
   overflow: hidden;
-  font-size: 1.23rem;
-  font-weight: 500;
-  padding: 3px 0;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
-.coupon_item > ul .content {
-  display: inline-block;
+#myshopCouponTable .coupon_item > ul .content {
   width: 80%;
   font-size: 1.2rem;
   font-weight: normal;
-  padding: 3px 3px 3px 8px;
 }
-
-.btnSubmit {
-  display: block;
-  padding: 24px;
-  background: #003DD3;
-  color: #ffffff;
-  font-size: 1.4rem;
-  font-weight: 500;
+#myshopCouponTable .no_coupon_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 50%;
+  margin-bottom: 50%;
+}
+#myshopCouponTable .no_coupon_wrap .no-coupon {
+  text-align: center;
+}
+#myshopCouponTable .no_coupon_wrap .no-coupon p:nth-child(1) {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+#myshopCouponTable .no_coupon_wrap .no-coupon p:nth-child(2) {
+  font-size: 1.95rem;
+  font-weight: bold;
+  margin-top: 14px;
 }
 
 #myshopCouponSerial {
   width: 100%;
   max-width: 450px;
-  padding: 0 11px;
-  margin-bottom: 100px;
+  padding: 39px 17px 141.9px;
+  background: #F7F7F7;
 }
 #myshopCouponSerial h2 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 6px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 20.5px;
+  text-align: center;
 }
 #myshopCouponSerial fieldset {
   display: flex;
   flex-flow: column nowrap;
-  padding: 5px 0;
 }
 #myshopCouponSerial fieldset label {
-  font-size: 1.35rem;
-  font-weight: 600;
-  margin-bottom: 5px;
+  font-size: 1.45rem;
+  font-weight: bold;
+  margin-bottom: 10.5px;
 }
-#myshopCouponSerial fieldset input {
+#myshopCouponSerial fieldset .tips {
+  font-style: normal;
+  font-weight: normal;
+}
+#myshopCouponSerial fieldset .coupon_code_submit {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#myshopCouponSerial fieldset .coupon_code_submit input {
   width: 100%;
-  height: 60px;
+  height: 49.09px;
   border: 1px solid #C4C4C4;
   border-radius: 90px;
   padding: 5px 12px;
   font-size: 1.3rem;
-  margin: 12px 0;
+  font-family: inherit;
 }
-#myshopCouponSerial fieldset .tips {
-  font-size: 1.1rem;
-  font-style: normal;
-  font-weight: normal;
-  color: #707070;
+#myshopCouponSerial fieldset .coupon_code_submit button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 102px;
+  height: 49.09px;
+  border-radius: 90px;
+  margin-left: 9.3px;
+  border: 1px solid #003DD3;
+  color: #003DD3;
+  font-weight: bold;
+  font-size: 1.4rem;
+  font-family: inherit;
+  letter-spacing: -0.5px;
+  background: #ffffff;
 }
 #myshopCouponSerial #myshopCouponHelp {
   width: 100%;

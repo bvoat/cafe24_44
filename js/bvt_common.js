@@ -142,7 +142,9 @@ const controlBackIcon = (page_path) => {
     "member/modify",
     "/product/list.html",
     "article",
-    "myshop/wish_list"
+    "myshop/wish_list",
+    "coupon",
+    "crew.html"
   ];
 
   //뒤로가기 표시 하기
