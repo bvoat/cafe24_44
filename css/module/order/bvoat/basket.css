@@ -13,7 +13,7 @@
   align-items: center;
   width: 100%;
   max-width: 450px;
-  padding: 23px 0 30px;
+  padding: 23px 11px 150px;
   margin: 60px auto 80px;
 }
 #Basket #BasketTitle {
@@ -31,6 +31,7 @@
 #Basket #BasketSection {
   width: 100%;
   max-width: 450px;
+  padding: 0 11px;
 }
 #Basket #BasketSection .empty {
   text-align: center;
@@ -38,13 +39,13 @@
   font-size: 1.9rem;
   font-weight: bold;
   line-height: 35px;
-  height: 70vh;
+  padding-bottom: 100%;
+  margin-bottom: 100%;
 }
 
 #BasketList {
   width: 100%;
   max-width: 450px;
-  padding: 0 17px;
 }
 #BasketList .boardList {
   width: 100%;
@@ -181,7 +182,7 @@
   padding: 0 0 0 19px;
 }
 .item_desc .item_info .item_name {
-  font-size: 1.3rem;
+  font-size: 1.75rem;
   font-weight: normal;
   margin-bottom: 11px;
   display: block;
@@ -360,8 +361,6 @@
   justify-content: space-between;
   width: 100%;
   margin-top: 16px;
-  padding: 0 17px;
-  white-space: nowrap;
 }
 .basket_select_action_wrap button {
   display: flex;
@@ -371,11 +370,10 @@
   border: 1px solid #E2E2E2;
   border-radius: 5px;
   background: #F2F2F2;
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   font-weight: bold;
   color: #707070;
   letter-spacing: -0.3px;
-  padding: 0 5px;
 }
 .basket_select_action_wrap #product_select_all {
   min-width: 88px;
@@ -392,10 +390,10 @@
 }
 .basket_select_action_wrap .basket_select_box .select_del {
   width: 88px;
-  margin-right: 4px;
 }
 .basket_select_action_wrap .basket_select_box .select_clear {
   width: 39.5%;
+  margin-left: 4px;
 }
 
 .basket_total {
@@ -405,14 +403,13 @@
   width: 100%;
   margin-top: 16px;
   border-top: 7px solid #F2F2F2;
-  padding: 29px 0 27px;
+  padding: 29px 32px 27px;
 }
 .basket_total .total {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 17px;
 }
 .basket_total .total h2,
 .basket_total .total h3,
@@ -439,7 +436,6 @@
   flex-flow: row nowrap;
   justify-content: center;
   height: 66px;
-  padding: 0 17px;
 }
 .basket_total_btn_wrap .order_select {
   width: 100%;
@@ -450,6 +446,7 @@
   background-color: #E6EEFF;
   font-size: 1.7rem;
   font-weight: bold;
+  font-family: inherit;
 }
 .basket_total_btn_wrap .order_all {
   width: 100%;
@@ -459,12 +456,15 @@
   border-radius: 5px;
   font-size: 1.7rem;
   font-weight: bold;
+  font-family: inherit;
 }
 .basket_total_btn_wrap .naver_checkout {
   position: absolute;
   width: 100%;
   margin: 0 auto;
-  top: 90px;
+  top: 80px;
+  left: 50%;
+  transform: translate(-107px, 0);
 }
 
 .basket_select_btn_wrap {

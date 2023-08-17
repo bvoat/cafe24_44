@@ -8,8 +8,8 @@
     align-items: center;
     width: 100%;
     max-width: 450px;
-    padding: 23px 0 30px;
-    margin: 60px auto 80px;
+    padding: 23px 11px 150px;
+    margin: 60px auto 80px; //top_nav hide
 
     #BasketTitle {
         display: flex;
@@ -29,6 +29,7 @@
     #BasketSection {
         width: 100%;
         max-width: 450px;
+        padding: 0 11px;
 
         .empty {
             text-align: center;
@@ -36,8 +37,8 @@
             font-size: 1.9rem;
             font-weight: bold;
             line-height: 35px;
-            height: calc(100vh - 30vh);
-
+            padding-bottom: 100%;
+            margin-bottom: 100%;
         }
     }
 }
@@ -47,7 +48,6 @@
 #BasketList {
     width: 100%;
     max-width: 450px;
-    padding: 0 17px;
 
     .boardList {
         width: 100%;
@@ -208,7 +208,7 @@
 
         //상품명
         .item_name {
-            font-size: 1.3rem;
+            font-size: 1.75rem;
             font-weight: normal;
             margin-bottom: 11px;
             @include only-ellipsis(1, 2.5rem);
@@ -400,8 +400,6 @@
     justify-content: space-between;
     width: 100%;
     margin-top: 16px;
-    padding: 0 17px;
-    white-space: nowrap;
 
     button {
         display: flex;
@@ -411,11 +409,10 @@
         border: $bvt-btn-border-gray;
         border-radius: 5px;
         background: $bvt-whitegray;
-        font-size: 1.35rem;
+        font-size: 1.45rem;
         font-weight: bold;
         color: $bvt-darkgray;
         letter-spacing: -.3px;
-        padding: 0 5px;
     }
 
     #product_select_all {
@@ -435,11 +432,11 @@
 
         .select_del {
             width: 88px;
-            margin-right: 4px;
         }
 
         .select_clear {
             width: 39.5%;
+            margin-left: 4px;
         }
     }
 }
@@ -452,14 +449,13 @@
     width: 100%;
     margin-top: 16px;
     border-top: 7px solid $bvt-whitegray;
-    padding: 29px 0 27px;
+    padding: 29px 32px 27px;
 
     .total {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
-        padding: 0 17px;
 
         h2,
         h3,
@@ -495,7 +491,6 @@
     flex-flow: row nowrap;
     justify-content: center;
     height: 66px;
-    padding: 0 17px;
 
     .order_select {
         width: 100%;
@@ -506,6 +501,7 @@
         background-color: #E6EEFF;
         font-size: 1.7rem;
         font-weight: bold;
+        font-family: inherit;
     }
 
     .order_all {
@@ -516,13 +512,16 @@
         border-radius: 5px;
         font-size: 1.7rem;
         font-weight: bold;
+        font-family: inherit;
     }
 
     .naver_checkout {
         position: absolute;
         width: 100%;
         margin: 0 auto;
-        top: 90px;
+        top: 80px;
+        left: 50%;
+        transform: translate(-107px, 0);
     }
 }
 
