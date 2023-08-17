@@ -13,38 +13,6 @@
 /* aos 초기화 */
 AOS.init();
 
-/* 부드럽게 이동 */
-
-const moveLevelUp = document.querySelector("#moveLevelUp");
-const moveTop = document.querySelector("#moveTop");
-const crewLevelUp = document.querySelector("#crewLevelUp");
-
-/**
- * 스크롤 부드럽게
- * @param {node} element 
- * @param {위치} target 
- */
-const smoothScroll = (element, target) => {
-  if (target == "top") {
-    target = element.offsetTop;
-  } else {
-    target = element.offsetHeight;
-  }
-  window.scroll({
-    behavior: "smooth",
-    left: 0,
-    top: target,
-  });
-};
-
-moveTop.addEventListener("click", () => {
-  smoothScroll(document.querySelector("body"), "top");
-});
-moveLevelUp.addEventListener("click", () => {
-  smoothScroll(crewLevelUp, "top");
-});
-
-
 
 const crew_link_copy = document.querySelector(".crew_link_copy");
 const crew_link_share = document.querySelector(".crew_link_share");
@@ -56,6 +24,7 @@ const voter_id = document.querySelector("#recoIdCheck");
  * @returns 
  */
 const copyBtnClick = (e) => {
+  console.log('e: ', e);
   e.preventDefault();
   if (voter_id == null) {
     alert("공유를 위해서는 로그인이 필요해요");
