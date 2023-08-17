@@ -40,103 +40,224 @@
 #memberCrew #memberCrewContent .crew_title em {
   display: block;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: bold;
   margin-bottom: 14px;
 }
 #memberCrew #memberCrewContent .crew_title h3 {
   font-size: 3.5rem;
-  font-weight: 800;
+  font-weight: bold;
   margin-bottom: 27px;
 }
 #memberCrew #memberCrewContent .crew_title p {
-  font-size: 1.7rem;
-  font-weight: 300;
-  line-height: 2.8rem;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 2.75rem;
 }
 #memberCrew #memberCrewContent #crewCouponZone {
   width: 100%;
   max-width: 450px;
+  font-size: 0;
+}
+#memberCrew #memberCrewContent #crewCouponZone .crew_title_img {
+  width: 100%;
 }
 #memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list {
   width: 100%;
+  position: relative;
+  background: #F7F7F7;
+  padding: 45px 11px 73px;
 }
-#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .couponSkinArea .coupon_list {
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .couponZone {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 7px 11px 39px 0px rgba(0, 0, 0, 0.0862745098);
 }
-#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .couponSkinArea .coupon_list .coupon_item {
-  width: 100%;
-  margin-bottom: -50px;
-}
-#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .couponSkinArea .coupon_list .coupon_item .coupon {
-  width: 100%;
-}
-#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .couponSkinArea .coupon_list .coupon_item .coupon img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .monthly_couponzone {
-  position: relative;
-  background: #F5FF02;
-  padding: 51px 0 79px;
-  overflow: hidden;
-}
-#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .monthly_couponzone .crew_title {
-  margin-bottom: 10px;
-}
-#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .monthly_couponzone .crew_title em {
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .couponZone .crew_zone_title h3 {
   color: #003DD3;
+  font-size: 1.65rem;
+  letter-spacing: -0.5px;
+  margin: 0;
 }
-#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .monthly_couponzone .couponSkinArea {
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .couponZone .crew_zone_title .crew_title_serve {
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .couponZone .crew_zone_title .crew_title_main {
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .couponZone .couponSkinArea {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .couponZone .couponSkinArea .coupon {
+  position: relative;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .couponZone .couponSkinArea .coupon .coupon_link {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .newvoter_couponzone {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  position: relative;
+  padding: 23px 0 31.4px;
+  margin-bottom: 25px;
 }
-#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .monthly_couponzone .couponSkinArea::after {
-  position: absolute;
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .newvoter_couponzone .crew_zone_title {
+  margin-bottom: 17.6px;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .newvoter_couponzone .crew_zone_title .crew_title_serve {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .newvoter_couponzone .crew_zone_title .crew_title_serve::before {
   display: block;
-  content: " ";
-  background: #DFE800;
-  width: 139%;
-  padding-bottom: 139%;
-  border-radius: 50%;
-  top: 60px;
-  z-index: 0;
+  content: "";
+  width: 83px;
+  height: 83px;
+  background: url("/bvtIMG/coupon/newvoter_couponzone_image.jpg") no-repeat center;
+  background-size: contain;
+  margin-bottom: 6px;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .newvoter_couponzone .couponSkinArea {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .newvoter_couponzone .couponSkinArea .coupon {
+  width: 50%;
+  max-width: 196.24px;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .newvoter_couponzone .couponSkinArea .coupon:nth-child(1) {
+  margin-right: 5.4px;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .newvoter_couponzone .couponSkinArea .coupon .coupon_link {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .newvoter_couponzone .couponSkinArea .coupon .coupon_link img {
+  width: 100%;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .voter_couponzone {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 23px 0 31.4px;
+  margin-bottom: 19px;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .voter_couponzone .crew_zone_title {
+  margin-bottom: 21.6px;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .voter_couponzone .crew_zone_title .crew_title_serve {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .voter_couponzone .crew_zone_title .crew_title_serve::before {
+  display: block;
+  content: "";
+  width: 83px;
+  height: 83px;
+  background: url("/bvtIMG/coupon/voter_couponzone_image.jpg") no-repeat center;
+  background-size: contain;
+  margin-bottom: 6px;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .voter_couponzone .couponSkinArea {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .voter_couponzone .couponSkinArea .coupon {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .voter_couponzone .couponSkinArea .coupon .coupon_link {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .voter_couponzone .couponSkinArea .coupon .coupon_link img {
+  width: 100%;
+  max-width: 238.5px;
+  backface-visibility: visible;
 }
 #memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .crew_couponzone {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 23px 0 31.4px;
   position: relative;
-  background: #003DD3;
-  padding: 70px 0 60px;
-  overflow: hidden;
 }
-#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .crew_couponzone .crew_title {
-  color: #ffffff;
-  margin-bottom: 10px;
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .crew_couponzone .crew_zone_title {
+  margin-bottom: 21.6px;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .crew_couponzone .crew_zone_title .crew_title_serve {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .crew_couponzone .crew_zone_title .crew_title_serve::before {
+  display: block;
+  content: "";
+  width: 83px;
+  height: 83px;
+  background: url("/bvtIMG/coupon/crew_couponzone_image.jpg") no-repeat center;
+  background-size: contain;
+  margin-bottom: 6px;
 }
 #memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .crew_couponzone .couponSkinArea {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
-#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .crew_couponzone .couponSkinArea::after {
-  position: absolute;
-  display: block;
-  content: " ";
-  background: #3456FF;
-  width: 139%;
-  padding-bottom: 139%;
-  border-radius: 50%;
-  top: 60px;
-  z-index: 0;
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .crew_couponzone .couponSkinArea .coupon {
+  width: 100%;
+  max-width: 238.5px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .crew_couponzone .couponSkinArea .coupon .coupon_link {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#memberCrew #memberCrewContent #crewCouponZone ul.crew_coupone_list .crew_couponzone .couponSkinArea .coupon .coupon_link img {
+  width: 100%;
+  max-width: 238.5px;
+  backface-visibility: visible;
 }
 #memberCrew #memberCrewContent #crewCouponZone #moveLevelUp {
   display: flex;
@@ -159,14 +280,11 @@
   position: relative;
   width: 100%;
   max-width: 450px;
-  background: #292929;
-  padding: 78px 29px 44px;
+  background: #E376A0;
+  padding: 62px 29px 30px;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_title {
   color: #ffffff;
-}
-#memberCrew #memberCrewContent #crewLevelUp .crew_title em {
-  color: #F5FF02;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method {
   width: 100%;
@@ -185,7 +303,7 @@
   width: 100%;
   max-width: 450px;
   color: #ffffff;
-  margin-bottom: 85px;
+  margin-bottom: 67px;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .crew_method_list_content .crew_method_list_title {
   position: relative;
@@ -194,38 +312,40 @@
   align-items: center;
   width: 84px;
   height: 39px;
-  color: #003DD3;
-  background: #ffffff;
-  font-size: 1.8rem;
-  font-weight: 500;
+  color: #ffffff;
+  background: #003DD3;
+  font-size: 1.75rem;
+  font-weight: bold;
   border-radius: 37px;
-  margin-bottom: 28px;
+  margin-bottom: 9px;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .crew_method_list_content .crew_method_list_heading {
   font-size: 2.1rem;
-  font-weight: 600;
+  font-weight: bold;
   color: #ffffff;
   margin-bottom: 19px;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .crew_method_list_content .crew_method_txt {
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.65rem;
+  font-weight: normal;
   color: #ffffff;
-  line-height: 2.7rem;
+  line-height: 2.6rem;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .crew_method_list_content .crew_method_sub_txt,
-#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .crew_method_list_content .crew_method_sub_txt li {
-  font-size: 1.2rem;
-  font-weight: 200;
-  color: #F5FF02;
-  line-height: 2.1rem;
+#memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .crew_method_list_content .crew_method_sub_txt p {
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #ffffff;
+  line-height: 1.9rem;
+  letter-spacing: -0.5px;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_stamp {
   width: 100%;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_stamp .crew_method_img_wrap {
   width: 100%;
-  margin-bottom: 17px;
+  margin-top: 10px;
+  margin-bottom: 36px;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_stamp .crew_method_img_wrap .crew_method_img {
   width: 100%;
@@ -259,24 +379,27 @@
   height: 114px;
   background: url("/bvtIMG/icon/crew_method_recommend_icon.png") no-repeat center;
   background-size: cover;
+  margin-bottom: 19px;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_recommend .crew_method_btn_wrap {
   width: 100%;
-  margin: 35px 0 30px;
+  margin: 35px 0 27px;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_recommend .crew_method_btn_wrap button {
   width: 100%;
   height: 63px;
-  font-size: 1.7rem;
-  font-weight: 600;
+  font-size: 1.65rem;
+  font-weight: bold;
   border-radius: 9px;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_recommend .crew_method_btn_wrap .crew_link_copy {
   background: #F5FF02;
   margin-bottom: 7px;
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "나눔고딕", "맑은 고딕", "Malgun Gothic", "돋움", dotum, Verdana, AppleGothic, sans-serif;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_recommend .crew_method_btn_wrap .crew_link_share {
   background: #ffffff;
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "나눔고딕", "맑은 고딕", "Malgun Gothic", "돋움", dotum, Verdana, AppleGothic, sans-serif;
 }
 #memberCrew #memberCrewContent #crewLevelUp .crew_levelup_method .crew_levelup_method_list .method_share {
   width: 100%;
@@ -424,24 +547,26 @@
 #memberCrew #memberCrewContent #crewRole {
   width: 100%;
   max-height: 450px;
-  padding: 41px 18px 66px;
-  background: #F2F2F2;
-  color: #707070;
-  text-align: left;
+  padding: 53px 22px 82px;
+  background: #ffffff;
+  color: #292929;
+  text-align: center;
 }
 #memberCrew #memberCrewContent #crewRole > ul {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 2.2rem;
+  font-weight: bold;
   text-indent: -2%;
 }
 #memberCrew #memberCrewContent #crewRole > ul > li {
-  font-size: 1.3rem;
-  font-weight: 300;
-  line-height: 1.8rem;
-  letter-spacing: normal;
+  font-size: 1.35rem;
+  font-weight: normal;
+  line-height: 2.1rem;
+  letter-spacing: -0.5px;
+  text-align: left;
+  color: #707070;
 }
 #memberCrew #memberCrewContent #crewRole > ul > li:nth-child(1) {
-  margin-top: 30px;
+  margin-top: 26px;
 }
 
 @keyframes up-and-down-item {

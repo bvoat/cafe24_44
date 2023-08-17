@@ -39,20 +39,20 @@
             em {
                 display: block;
                 font-size: 1.8rem;
-                font-weight: 600;
+                font-weight: bold;
                 margin-bottom: 14px;
             }
 
             h3 {
                 font-size: 3.5rem;
-                font-weight: 800;
+                font-weight: bold;
                 margin-bottom: 27px;
             }
 
             p {
-                font-size: 1.7rem;
-                font-weight: 300;
-                line-height: 2.8rem;
+                font-size: 2rem;
+                font-weight: normal;
+                line-height: 2.75rem;
             }
         }
 
@@ -60,104 +60,253 @@
         #crewCouponZone {
             width: 100%;
             max-width: 450px;
+            font-size: 0;
+
+            .crew_title_img {
+                width: 100%;
+
+            }
+
+
 
             ul.crew_coupone_list {
                 width: 100%;
+                position: relative;
+                background: #F7F7F7;
+                padding: 45px 11px 73px;
 
                 //쿠폰 리스트 공통
-                .couponSkinArea {
-                    .coupon_list {
-                        width: 100%;
-                        display: flex;
-                        flex-flow: column nowrap;
-                        justify-content: center;
-                        align-items: center;
-                        z-index: 1;
+                .couponZone {
+                    width: 100%;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    background: $bvt-white;
+                    border-radius: 10px;
+                    box-shadow: 7px 11px 39px 0px #00000016;
 
-                        .coupon_item {
-                            width: 100%;
-                            margin-bottom: -50px;
-
-                            .coupon {
-                                width: 100%;
-
-                                img {
-                                    width: 100%;
-                                    object-fit: cover;
-                                }
-                            }
+                    //개별 타이틀
+                    .crew_zone_title {
+                        h3 {
+                            color: $bvt-blue;
+                            font-size: 1.65rem;
+                            letter-spacing: -.5px;
+                            margin: 0;
                         }
 
+                        .crew_title_serve {
+                            font-weight: normal;
+                            margin-bottom: 4px;
+                        }
+
+                        .crew_title_main {
+                            font-size: 2.25rem;
+                            font-weight: bold;
+                        }
+                    }
+
+                    .couponSkinArea {
+                        position: relative;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        max-width: 450px;
+
+                        .coupon {
+                            position: relative;
+
+                            .coupon_link {
+                                display: flex;
+                                flex-flow: row nowrap;
+                                justify-content: space-between;
+                                align-items: center;
+                                width: 100%;
+                                max-width: 450px;
+                            }
+                        }
                     }
                 }
 
-                //월별 쿠폰
-                .monthly_couponzone {
-                    position: relative;
-                    background: $bvt-point-yellow;
-                    padding: 51px 0 79px;
-                    overflow: hidden;
+                //신규회원 쿠폰
+                .newvoter_couponzone {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 23px 0 31.4px;
+                    margin-bottom: 25px;
 
-                    //개별 타이틀
-                    .crew_title {
-                        margin-bottom: 10px;
+                    .crew_zone_title {
+                        margin-bottom: 17.6px;
 
-                        em {
-                            color: $bvt-blue;
+                        .crew_title_serve {
+                            display: flex;
+                            flex-flow: column nowrap;
+                            align-items: center;
+
+                            &::before {
+                                display: block;
+                                content: "";
+                                width: 83px;
+                                height: 83px;
+                                background: url("/bvtIMG/coupon/newvoter_couponzone_image.jpg") no-repeat center;
+                                background-size: contain;
+                                margin-bottom: 6px;
+                            }
                         }
                     }
 
                     .couponSkinArea {
                         display: flex;
-                        flex-flow: column nowrap;
+                        flex-flow: row nowrap;
                         justify-content: center;
                         align-items: center;
-                        position: relative;
 
-                        &::after {
-                            position: absolute;
-                            display: block;
-                            content: " ";
-                            background: #DFE800;
-                            width: 139%;
-                            padding-bottom: 139%;
-                            border-radius: 50%;
-                            top: 60px;
-                            z-index: 0;
+                        .coupon {
+                            width: 50%;
+                            max-width: 196.24px;
+
+                            &:nth-child(1) {
+                                margin-right: 5.4px;
+                            }
+
+                            .coupon_link {
+                                width: 100%;
+                                position: relative;
+                                display: flex;
+                                flex-flow: row nowrap;
+                                justify-content: center;
+                                align-items: center;
+
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                //회원 쿠폰
+                .voter_couponzone {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 23px 0 31.4px;
+                    margin-bottom: 19px;
+
+                    .crew_zone_title {
+                        margin-bottom: 21.6px;
+
+                        .crew_title_serve {
+                            display: flex;
+                            flex-flow: column nowrap;
+                            align-items: center;
+
+                            &::before {
+                                display: block;
+                                content: "";
+                                width: 83px;
+                                height: 83px;
+                                background: url("/bvtIMG/coupon/voter_couponzone_image.jpg") no-repeat center;
+                                background-size: contain;
+                                margin-bottom: 6px;
+                            }
+                        }
+                    }
+
+                    .couponSkinArea {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: center;
+                        align-items: center;
+
+                        .coupon {
+                            width: 100%;
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: center;
+                            align-items: center;
+
+                            .coupon_link {
+                                display: flex;
+                                flex-flow: row nowrap;
+                                justify-content: center;
+                                align-items: center;
+
+                                img {
+                                    width: 100%;
+                                    max-width: 238.5px;
+                                    backface-visibility: visible;
+                                }
+                            }
+
+
                         }
                     }
                 }
 
                 //크루 쿠폰
                 .crew_couponzone {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 23px 0 31.4px;
                     position: relative;
-                    background: $bvt-blue;
-                    padding: 70px 0 60px;
-                    overflow: hidden;
 
-                    //개별 타이틀
-                    .crew_title {
-                        color: $bvt-white;
-                        margin-bottom: 10px;
+                    .crew_zone_title {
+                        margin-bottom: 21.6px;
+
+                        .crew_title_serve {
+                            display: flex;
+                            flex-flow: column nowrap;
+                            align-items: center;
+
+                            &::before {
+                                display: block;
+                                content: "";
+                                width: 83px;
+                                height: 83px;
+                                background: url("/bvtIMG/coupon/crew_couponzone_image.jpg") no-repeat center;
+                                background-size: contain;
+                                margin-bottom: 6px;
+                            }
+                        }
                     }
 
                     .couponSkinArea {
                         display: flex;
-                        flex-flow: column nowrap;
+                        flex-flow: row nowrap;
                         justify-content: center;
                         align-items: center;
-                        position: relative;
 
-                        &::after {
-                            position: absolute;
-                            display: block;
-                            content: " ";
-                            background: #3456FF;
-                            width: 139%;
-                            padding-bottom: 139%;
-                            border-radius: 50%;
-                            top: 60px;
-                            z-index: 0;
+                        .coupon {
+                            width: 100%;
+                            max-width: 238.5px;
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: center;
+                            align-items: center;
+
+
+                            .coupon_link {
+                                display: flex;
+                                flex-flow: row nowrap;
+                                justify-content: center;
+                                align-items: center;
+
+                                img {
+                                    width: 100%;
+                                    max-width: 238.5px;
+                                    backface-visibility: visible;
+                                }
+                            }
+
                         }
                     }
                 }
@@ -188,16 +337,12 @@
             position: relative;
             width: 100%;
             max-width: 450px;
-            background: $bvt-black;
-            padding: 78px 29px 44px;
+            background: #E376A0;
+            padding: 62px 29px 30px;
 
             //개별 타이틀
             .crew_title {
                 color: $bvt-white;
-
-                em {
-                    color: $bvt-point-yellow;
-                }
             }
 
             .crew_levelup_method {
@@ -218,7 +363,7 @@
                         width: 100%;
                         max-width: 450px;
                         color: $bvt-white;
-                        margin-bottom: 85px;
+                        margin-bottom: 67px;
 
                         //방법 1, 2, 3
                         .crew_method_list_title {
@@ -228,35 +373,36 @@
                             align-items: center;
                             width: 84px;
                             height: 39px;
-                            color: $bvt-blue;
-                            background: $bvt-white;
-                            font-size: 1.8rem;
-                            font-weight: 500;
+                            color: $bvt-white;
+                            background: $bvt-blue;
+                            font-size: 1.75rem;
+                            font-weight: bold;
                             border-radius: 37px;
-                            margin-bottom: 28px;
+                            margin-bottom: 9px;
                         }
 
                         .crew_method_list_heading {
                             font-size: 2.1rem;
-                            font-weight: 600;
+                            font-weight: bold;
                             color: $bvt-white;
                             margin-bottom: 19px;
                         }
 
                         .crew_method_txt {
-                            font-size: 1.5rem;
-                            font-weight: 300;
+                            font-size: 1.65rem;
+                            font-weight: normal;
                             color: $bvt-white;
-                            line-height: 2.7rem;
+                            line-height: 2.6rem;
                         }
 
                         // 세부 설명
                         .crew_method_sub_txt,
-                        .crew_method_sub_txt li {
-                            font-size: 1.2rem;
-                            font-weight: 200;
-                            color: $bvt-point-yellow;
-                            line-height: 2.1rem;
+                        .crew_method_sub_txt p {
+                            font-size: 1.4rem;
+                            font-weight: normal;
+                            color: $bvt-white;
+                            line-height: 1.9rem;
+                            letter-spacing: -.5px;
                         }
 
                     }
@@ -269,7 +415,8 @@
 
                         .crew_method_img_wrap {
                             width: 100%;
-                            margin-bottom: 17px;
+                            margin-top: 10px;
+                            margin-bottom: 36px;
 
                             .crew_method_img {
                                 width: 100%;
@@ -312,28 +459,31 @@
                                 height: 114px;
                                 background: url('/bvtIMG/icon/crew_method_recommend_icon.png') no-repeat center;
                                 background-size: cover;
+                                margin-bottom: 19px;
                             }
                         }
 
                         .crew_method_btn_wrap {
                             width: 100%;
-                            margin: 35px 0 30px;
+                            margin: 35px 0 27px;
 
                             button {
                                 width: 100%;
                                 height: 63px;
-                                font-size: 1.7rem;
-                                font-weight: 600;
+                                font-size: 1.65rem;
+                                font-weight: bold;
                                 border-radius: 9px;
                             }
 
                             .crew_link_copy {
                                 background: $bvt-point-yellow;
                                 margin-bottom: 7px;
+                                font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif;
                             }
 
                             .crew_link_share {
                                 background: $bvt-white;
+                                font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif;
                             }
                         }
                     }
@@ -511,24 +661,26 @@
         #crewRole {
             width: 100%;
             max-height: 450px;
-            padding: 41px 18px 66px;
-            background: $bvt-whitegray;
-            color: $bvt-darkgray;
-            text-align: left;
+            padding: 53px 22px 82px;
+            background: $bvt-white;
+            color: $bvt-black;
+            text-align: center;
 
             >ul {
-                font-size: 2rem;
-                font-weight: 500;
+                font-size: 2.2rem;
+                font-weight: bold;
                 text-indent: -2%;
 
                 >li {
-                    font-size: 1.3rem;
-                    font-weight: 300;
-                    line-height: 1.8rem;
-                    letter-spacing: normal;
+                    font-size: 1.35rem;
+                    font-weight: normal;
+                    line-height: 2.1rem;
+                    letter-spacing: -.5px;
+                    text-align: left;
+                    color: $bvt-darkgray;
 
                     &:nth-child(1) {
-                        margin-top: 30px;
+                        margin-top: 26px;
                     }
                 }
             }
