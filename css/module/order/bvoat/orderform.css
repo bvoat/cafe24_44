@@ -100,16 +100,6 @@ body {
   position: relative;
   width: 100%;
 }
-#ec-jigsaw-title-discount h2::before {
-  width: 100%;
-  display: block;
-  content: "이미 할인이 적용된 펀딩 상품에서는 사용이 불가합니다.";
-  font-size: 11px;
-  font-weight: normal;
-  color: #707070;
-  position: absolute;
-  top: -16px;
-}
 
 /* ----------- 쿠폰 새 창 -------------- */
 #mCafe24Order .ec-base-layer.typeWide h1 {
