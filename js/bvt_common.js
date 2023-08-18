@@ -43,7 +43,7 @@ function monitoringPrice() {
     const fixedPriceNum = Number((fixedPrice.dataset.price).replace(/,/g,""));
   //소비자가가 입력된 경우 체크
   //소비자가 없으면 0으로 표시
-  if(fixedPriceNum != 0){
+  if(fixedPriceNum != '0'){
     //소비자가와 판매가가 같으면 할인 없음
     if(fixedPriceNum == realPriceNum){
       //할인이 없기 때문에 1개의 가격만 노출하면 되나
