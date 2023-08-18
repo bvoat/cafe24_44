@@ -17,85 +17,29 @@
   align-items: center;
   width: 100%;
   max-width: 450px;
-  padding: 24px 15px 36px;
-  margin: 40px 0;
+  padding: 23px 17px 150px;
+  margin: 60px auto 80px;
 }
 #memberModify #memberModifyTitle {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
-#memberModify #memberModifyTitle #memberUserImage {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
+#memberModify #memberModifyTitle h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  letter-spacing: -0.5px;
 }
-#memberModify #memberModifyTitle #memberUserImage .thumb {
-  position: relative;
-  width: 100%;
-  font-size: 0;
-}
-#memberModify #memberModifyTitle #memberUserImage .thumb > a,
-#memberModify #memberModifyTitle #memberUserImage .thumb .img_wrap {
-  display: block;
-  position: relative;
-  width: 100%;
-  padding-top: 100%;
-  overflow: hidden;
-  border-radius: 4px;
-}
-#memberModify #memberModifyTitle #memberUserImage .thumb > a > img,
-#memberModify #memberModifyTitle #memberUserImage .thumb .img_wrap > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#memberModify #memberModifyTitle #memberUserImage .icon {
-  position: absolute;
-  top: 0;
-  height: 21px;
-  z-index: 1;
-}
-#memberModify #memberModifyTitle #memberUserImage #userImgPreview {
-  width: 100%;
-  max-width: 85px;
-}
-#memberModify #memberModifyTitle #memberUserImage #userImgPreview .img_wrap {
-  width: 100%;
-  border-radius: 50%;
-}
-#memberModify #memberModifyTitle #memberUserImage #userImg {
-  display: none;
-}
-#memberModify #memberModifyTitle #memberUserImage > label {
-  position: relative;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #003DD3;
-  padding-top: 7px;
-}
-#memberModify #memberModifyTitle #memberUserImage > label::after {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 19.5px;
-  height: 15.5px;
-  background: var(--icon-blue-camera) no-repeat center;
-  top: -22px;
-  right: 8px;
-}
-#memberModify #memberModifyField {
+
+#memberModifyField {
   position: relative;
   width: 100%;
   max-width: 450px;
 }
-#memberModify #memberModifyField fieldset {
+#memberModifyField fieldset {
   position: relative;
   display: flex;
   flex-flow: column nowrap;
@@ -103,25 +47,25 @@
   align-items: center;
   width: 100%;
 }
-#memberModify #memberModifyField fieldset .modify_form {
+#memberModifyField fieldset .modify_form {
   position: relative;
   width: 100%;
   max-width: 450px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section {
+#memberModifyField fieldset .modify_form .modify_section {
   margin-bottom: 16px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul {
+#memberModifyField fieldset .modify_form .modify_section > ul {
   display: flex;
   flex-flow: column nowrap;
   flex-basis: auto;
   width: 100%;
   max-width: 450px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list {
   margin-bottom: 19px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .input_label {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list .input_label {
   display: block;
   font-weight: 400;
   font-size: 1.4rem;
@@ -129,7 +73,7 @@
   letter-spacing: -0.2px;
   margin-bottom: 2px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
@@ -138,7 +82,7 @@
   width: 100%;
   max-width: 450px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap input {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap input {
   width: 100%;
   height: 36px;
   border: none;
@@ -151,27 +95,27 @@
   letter-spacing: -0.2px;
   padding-left: 10px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap input::-moz-placeholder {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap input::-moz-placeholder {
   font-size: 1.2rem;
   font-weight: 400;
   color: #C4C4C4;
   letter-spacing: -0.3px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap input::placeholder {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap input::placeholder {
   font-size: 1.2rem;
   font-weight: 400;
   color: #C4C4C4;
   letter-spacing: -0.3px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #user_passwd_confirm {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #user_passwd_confirm {
   margin-top: 6px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap .small_mobile_input {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap .small_mobile_input {
   font-weight: 400;
   font-size: 1.4rem;
   color: #707070;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap > select {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap > select {
   width: calc((100% - 78px - 12px - 60px) / 3);
   height: 36px;
   font-size: 1.6rem;
@@ -187,8 +131,8 @@
   cursor: pointer;
   text-align: center;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #mobile2,
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #mobile3 {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #mobile2,
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #mobile3 {
   width: calc((100% - 78px - 12px - 60px) / 3);
   height: 36px;
   font-size: 1.6rem;
@@ -199,20 +143,20 @@
   margin: 0 11px;
   padding-left: 0px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #mobile3 {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #mobile3 {
   margin: 0 0 0 11px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #confirm_verify_mobile {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #confirm_verify_mobile {
   margin-top: 6px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #expiryTime {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap #expiryTime {
   position: fixed;
   right: 7%;
   font-size: 1.2rem;
   font-weight: bold;
   color: #003DD3;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap .input_btn {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list .modify_input_wrap .input_btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,15 +174,15 @@
   cursor: pointer;
   margin-left: 12px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list_reco {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list_reco {
   margin-bottom: 30px;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list_pwd > label {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list_pwd > label {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
 }
-#memberModify #memberModifyField fieldset .modify_form .modify_section > ul .modify_list_pwd > label::after {
+#memberModifyField fieldset .modify_form .modify_section > ul .modify_list_pwd > label::after {
   position: absolute;
   display: block;
   width: 4px;
@@ -249,20 +193,20 @@
   top: 2px;
   right: -7px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section {
+#memberModifyField fieldset .modify_form .member_agree_section {
   margin-bottom: 22px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul {
+#memberModifyField fieldset .modify_form .member_agree_section > ul {
   display: flex;
   flex-flow: column nowrap;
   flex-basis: auto;
   width: 100%;
   max-width: 450px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list {
+#memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list {
   margin-bottom: 18px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .input_label {
+#memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .input_label {
   display: block;
   font-weight: 400;
   font-size: 1.4rem;
@@ -270,7 +214,7 @@
   letter-spacing: -0.2px;
   margin-bottom: 12px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap {
+#memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
@@ -280,10 +224,10 @@
   max-width: 450px;
   padding: 0 14px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap input[type=radio] {
+#memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap input[type=radio] {
   display: none;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap > label {
+#memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap > label {
   display: inline-flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -294,7 +238,7 @@
   color: #909090;
   cursor: pointer;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap input[type=radio] + label::before {
+#memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap input[type=radio] + label::before {
   display: inline-block;
   content: "";
   width: 19px;
@@ -303,7 +247,7 @@
   background-size: contain;
   margin-right: 9px;
 }
-#memberModify #memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap input[type=radio]:checked + label::before {
+#memberModifyField fieldset .modify_form .member_agree_section > ul .modify_list .modify_input_wrap input[type=radio]:checked + label::before {
   /* 체크 상태 */
   display: inline-block;
   content: "";

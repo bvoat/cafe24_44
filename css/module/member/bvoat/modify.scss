@@ -12,324 +12,330 @@
     align-items: center;
     width: 100%;
     max-width: 450px;
-    padding: 24px 15px 36px;
-    margin: 40px 0;
+    padding: 23px 17px 150px;
+    margin: 60px auto 80px; //top_nav hide
 
     #memberModifyTitle {
         display: flex;
         flex-flow: column nowrap;
+        justify-content: center;
         align-items: center;
         width: 100%;
-        margin-bottom: 18px;
+        margin-bottom: 24px;
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: bold;
+            letter-spacing: -.5px;
+        }
 
         //프로필 사진 바꾸기
-        #memberUserImage {
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: center;
+        // #memberUserImage {
+        //     display: flex;
+        //     flex-flow: column nowrap;
+        //     align-items: center;
 
-            //이미지 미리보기
-            @include product-thumb(4px);
+        //이미지 미리보기
+        // @include product-thumb(4px);
 
-            #userImgPreview {
-                width: 100%;
-                max-width: 85px;
+        // #userImgPreview {
+        //     width: 100%;
+        //     max-width: 85px;
 
-                .img_wrap {
-                    width: 100%;
-                    border-radius: 50%;
-                }
-            }
+        //     .img_wrap {
+        //         width: 100%;
+        //         border-radius: 50%;
+        //     }
+        // }
 
-            //input 숨김
-            #userImg {
-                display: none;
-            }
+        //input 숨김
+        // #userImg {
+        //     display: none;
+        // }
 
-            //프로필 사진 바꾸기
-            >label {
-                position: relative;
-                font-size: 1.4rem;
-                font-weight: 600;
-                color: $bvt-blue;
-                padding-top: 7px;
+        //프로필 사진 바꾸기
+        // >label {
+        //     position: relative;
+        //     font-size: 1.4rem;
+        //     font-weight: 600;
+        //     color: $bvt-blue;
+        //     padding-top: 7px;
 
-                &::after {
-                    position: absolute;
-                    content: "";
-                    display: block;
-                    width: 19.5px;
-                    height: 15.5px;
-                    background: var(--icon-blue-camera) no-repeat center;
-                    top: -22px;
-                    right: 8px;
-                }
-            }
-        }
+        //     &::after {
+        //         position: absolute;
+        //         content: "";
+        //         display: block;
+        //         width: 19.5px;
+        //         height: 15.5px;
+        //         background: var(--icon-blue-camera) no-repeat center;
+        //         top: -22px;
+        //         right: 8px;
+        //     }
+        // }
     }
-
-    #memberModifyField {
-        position: relative;
-        width: 100%;
-        max-width: 450px;
-
-        fieldset {
-            position: relative;
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-
-            .modify_form {
-                position: relative;
-                width: 100%;
-                max-width: 450px;
-
-                //입력 구역
-                .modify_section {
-                    margin-bottom: 16px;
-
-                    >ul {
-                        display: flex;
-                        flex-flow: column nowrap;
-                        flex-basis: auto;
-                        width: 100%;
-                        max-width: 450px;
-
-                        // 입력 구역 - 회원가입 수정 리스트 
-                        .modify_list {
-                            margin-bottom: 19px;
-
-                            // 라벨
-                            .input_label {
-                                display: block;
-                                font-weight: 400;
-                                font-size: 1.4rem;
-                                color: $bvt-darkgray;
-                                letter-spacing: -0.2px;
-                                margin-bottom: 2px;
-                            }
-
-                            .modify_input_wrap {
-                                position: relative;
-                                display: flex;
-                                flex-flow: row nowrap;
-                                justify-content: space-between;
-                                align-items: center;
-                                width: 100%;
-                                max-width: 450px;
-
-                                // input 박스
-                                input {
-                                    width: 100%;
-                                    height: 36px;
-                                    border: none;
-                                    border-bottom: $bvt-input-border;
-                                    border-color: #DDDDDD;
-                                    font-weight: 500;
-                                    font-size: 1.6rem;
-                                    color: black;
-                                    line-height: 1.969rem;
-                                    letter-spacing: -0.2px;
-                                    padding-left: 10px;
-
-                                    &::placeholder {
-                                        font-size: 1.2rem;
-                                        font-weight: 400;
-                                        color: $bvt-lightgray;
-                                        letter-spacing: -0.3px;
-                                    }
-                                }
-
-                                //비밀번호 확인
-                                #user_passwd_confirm {
-                                    margin-top: 6px;
-                                }
-
-                                // 휴대전화
-                                .small_mobile_input {
-                                    font-weight: 400;
-                                    font-size: 1.4rem;
-                                    color: $bvt-darkgray;
-                                }
-
-                                >select {
-                                    width: calc((100% - 78px - 12px - 60px) / 3);
-                                    height: 36px;
-                                    font-size: 1.6rem;
-                                    color: black;
-                                    border: none;
-                                    border-bottom: $bvt-input-border;
-                                    appearance: none;
-                                    margin-right: 12px;
-                                    background: $off-arrow no-repeat;
-                                    background-position: 95%;
-                                    cursor: pointer;
-                                    text-align: center;
-                                }
-
-                                #mobile2,
-                                #mobile3 {
-                                    width: calc((100% - 78px - 12px - 60px) / 3);
-                                    height: 36px;
-                                    font-size: 1.6rem;
-                                    color: black;
-                                    border: none;
-                                    border-bottom: $bvt-input-border;
-                                    text-align: center;
-                                    margin: 0 11px;
-                                    padding-left: 0px;
-                                }
-
-                                #mobile3 {
-                                    margin: 0 0 0 11px;
-                                }
-
-                                #confirm_verify_mobile {
-                                    margin-top: 6px;
-                                }
-
-                                #expiryTime {
-                                    position: fixed;
-                                    right: 7%;
-                                    font-size: 1.2rem;
-                                    font-weight: bold;
-                                    color: $bvt-blue;
-                                }
-
-                                // 버튼
-                                .input_btn {
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-                                    width: 78px;
-                                    min-width: 78px;
-                                    height: 36px;
-                                    border: $bvt-btn-border;
-                                    border-radius: 5px;
-                                    background: transparent;
-                                    font-weight: 500;
-                                    font-size: 1.4rem;
-                                    color: $bvt-blue;
-                                    letter-spacing: -0.2px;
-                                    word-break: keep-all;
-                                    cursor: pointer;
-                                    margin-left: 12px;
-                                }
-                            }
-                        }
-
-                        // 입력 구역 - 추천인 아이디
-                        .modify_list_reco {
-                            margin-bottom: 30px;
-                        }
-
-                        // 입력 구역 - 비밀번호
-                        .modify_list_pwd {
-                            >label {
-                                position: relative;
-                                width: fit-content;
-
-                                &::after {
-                                    position: absolute;
-                                    display: block;
-                                    width: 4px;
-                                    height: 4px;
-                                    content: "";
-                                    background: $bvt-blue;
-                                    border-radius: 50%;
-                                    top: 2px;
-                                    right: -7px;
-                                }
-                            }
-                        }
-
-                    }
-                }
-
-                //동의 구역
-                .member_agree_section {
-                    margin-bottom: 22px;
-
-                    >ul {
-                        display: flex;
-                        flex-flow: column nowrap;
-                        flex-basis: auto;
-                        width: 100%;
-                        max-width: 450px;
-
-                        // 동의 구역 - 회원가입 수정 리스트 
-                        .modify_list {
-                            margin-bottom: 18px;
-
-                            // 라벨
-                            .input_label {
-                                display: block;
-                                font-weight: 400;
-                                font-size: 1.4rem;
-                                color: $bvt-darkgray;
-                                letter-spacing: -0.2px;
-                                margin-bottom: 12px;
-                            }
-
-                            // 동의 구역 - 라디오 
-                            .modify_input_wrap {
-                                position: relative;
-                                display: flex;
-                                flex-flow: row nowrap;
-                                justify-content: flex-start;
-                                align-items: center;
-                                width: 100%;
-                                max-width: 450px;
-                                padding: 0 14px;
-
-                                input[type="radio"] {
-                                    display: none;
-                                }
-
-                                >label {
-                                    display: inline-flex;
-                                    flex-flow: row nowrap;
-                                    align-items: center;
-                                    font-weight: 400;
-                                    font-size: 1.4rem;
-                                    margin: 0 10px;
-                                    letter-spacing: -0.2px;
-                                    color: #909090;
-                                    cursor: pointer;
-                                }
-
-                                input[type="radio"]+label::before {
-                                    display: inline-block;
-                                    content: "";
-                                    width: 19px;
-                                    height: 18px;
-                                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='18' fill='none'%3E%3Crect width='19' height='18' fill='%23F3F3F3' rx='9'/%3E%3Cpath fill='%23E0E0E0' d='M8.48 14a.8.8 0 0 1-.58-.25L4.2 9.69a.75.75 0 0 1 .06-1.09.8.8 0 0 1 1.11.06L8.38 12l5.18-7.65a.8.8 0 0 1 1.09-.21c.36.23.46.7.22 1.06l-5.73 8.47a.78.78 0 0 1-.6.34h-.06Z'/%3E%3C/svg%3E") no-repeat center;
-                                    background-size: contain;
-                                    margin-right: 9px;
-
-                                }
-
-                                input[type="radio"]:checked+label::before {
-                                    /* 체크 상태 */
-                                    display: inline-block;
-                                    content: "";
-                                    width: 19px;
-                                    height: 18px;
-                                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='18' fill='none'%3E%3Cpath fill='%23E0E0E0' d='M8.16 14.8a.9.9 0 0 1-.67-.3L3.23 9.72a.9.9 0 1 1 1.35-1.2l3.47 3.92L14 3.4a.91.91 0 0 1 1.26-.26.9.9 0 0 1 .25 1.25l-6.6 10a.89.89 0 0 1-.69.4h-.07Z'/%3E%3Crect width='19' height='18' fill='%2300F' rx='9'/%3E%3Cpath fill='%23fff' d='M8.55 14a.8.8 0 0 1-.58-.25l-3.7-4.06a.75.75 0 0 1 .06-1.09.8.8 0 0 1 1.11.06L8.46 12l5.17-7.65a.8.8 0 0 1 1.1-.21c.35.23.45.7.22 1.06L9.2 13.66a.78.78 0 0 1-.6.34h-.06Z'/%3E%3C/svg%3E")no-repeat center;
-                                    background-size: contain;
-                                }
-
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
 }
+
+#memberModifyField {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+
+    fieldset {
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+
+        .modify_form {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+
+            //입력 구역
+            .modify_section {
+                margin-bottom: 16px;
+
+                >ul {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    flex-basis: auto;
+                    width: 100%;
+                    max-width: 450px;
+
+                    // 입력 구역 - 회원가입 수정 리스트 
+                    .modify_list {
+                        margin-bottom: 19px;
+
+                        // 라벨
+                        .input_label {
+                            display: block;
+                            font-weight: 400;
+                            font-size: 1.4rem;
+                            color: $bvt-darkgray;
+                            letter-spacing: -0.2px;
+                            margin-bottom: 2px;
+                        }
+
+                        .modify_input_wrap {
+                            position: relative;
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                            max-width: 450px;
+
+                            // input 박스
+                            input {
+                                width: 100%;
+                                height: 36px;
+                                border: none;
+                                border-bottom: $bvt-input-border;
+                                border-color: #DDDDDD;
+                                font-weight: 500;
+                                font-size: 1.6rem;
+                                color: black;
+                                line-height: 1.969rem;
+                                letter-spacing: -0.2px;
+                                padding-left: 10px;
+
+                                &::placeholder {
+                                    font-size: 1.2rem;
+                                    font-weight: 400;
+                                    color: $bvt-lightgray;
+                                    letter-spacing: -0.3px;
+                                }
+                            }
+
+                            //비밀번호 확인
+                            #user_passwd_confirm {
+                                margin-top: 6px;
+                            }
+
+                            // 휴대전화
+                            .small_mobile_input {
+                                font-weight: 400;
+                                font-size: 1.4rem;
+                                color: $bvt-darkgray;
+                            }
+
+                            >select {
+                                width: calc((100% - 78px - 12px - 60px) / 3);
+                                height: 36px;
+                                font-size: 1.6rem;
+                                color: black;
+                                border: none;
+                                border-bottom: $bvt-input-border;
+                                appearance: none;
+                                margin-right: 12px;
+                                background: $off-arrow no-repeat;
+                                background-position: 95%;
+                                cursor: pointer;
+                                text-align: center;
+                            }
+
+                            #mobile2,
+                            #mobile3 {
+                                width: calc((100% - 78px - 12px - 60px) / 3);
+                                height: 36px;
+                                font-size: 1.6rem;
+                                color: black;
+                                border: none;
+                                border-bottom: $bvt-input-border;
+                                text-align: center;
+                                margin: 0 11px;
+                                padding-left: 0px;
+                            }
+
+                            #mobile3 {
+                                margin: 0 0 0 11px;
+                            }
+
+                            #confirm_verify_mobile {
+                                margin-top: 6px;
+                            }
+
+                            #expiryTime {
+                                position: fixed;
+                                right: 7%;
+                                font-size: 1.2rem;
+                                font-weight: bold;
+                                color: $bvt-blue;
+                            }
+
+                            // 버튼
+                            .input_btn {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 78px;
+                                min-width: 78px;
+                                height: 36px;
+                                border: $bvt-btn-border;
+                                border-radius: 5px;
+                                background: transparent;
+                                font-weight: 500;
+                                font-size: 1.4rem;
+                                color: $bvt-blue;
+                                letter-spacing: -0.2px;
+                                word-break: keep-all;
+                                cursor: pointer;
+                                margin-left: 12px;
+                            }
+                        }
+                    }
+
+                    // 입력 구역 - 추천인 아이디
+                    .modify_list_reco {
+                        margin-bottom: 30px;
+                    }
+
+                    // 입력 구역 - 비밀번호
+                    .modify_list_pwd {
+                        >label {
+                            position: relative;
+                            width: fit-content;
+
+                            &::after {
+                                position: absolute;
+                                display: block;
+                                width: 4px;
+                                height: 4px;
+                                content: "";
+                                background: $bvt-blue;
+                                border-radius: 50%;
+                                top: 2px;
+                                right: -7px;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            //동의 구역
+            .member_agree_section {
+                margin-bottom: 22px;
+
+                >ul {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    flex-basis: auto;
+                    width: 100%;
+                    max-width: 450px;
+
+                    // 동의 구역 - 회원가입 수정 리스트 
+                    .modify_list {
+                        margin-bottom: 18px;
+
+                        // 라벨
+                        .input_label {
+                            display: block;
+                            font-weight: 400;
+                            font-size: 1.4rem;
+                            color: $bvt-darkgray;
+                            letter-spacing: -0.2px;
+                            margin-bottom: 12px;
+                        }
+
+                        // 동의 구역 - 라디오 
+                        .modify_input_wrap {
+                            position: relative;
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: flex-start;
+                            align-items: center;
+                            width: 100%;
+                            max-width: 450px;
+                            padding: 0 14px;
+
+                            input[type="radio"] {
+                                display: none;
+                            }
+
+                            >label {
+                                display: inline-flex;
+                                flex-flow: row nowrap;
+                                align-items: center;
+                                font-weight: 400;
+                                font-size: 1.4rem;
+                                margin: 0 10px;
+                                letter-spacing: -0.2px;
+                                color: #909090;
+                                cursor: pointer;
+                            }
+
+                            input[type="radio"]+label::before {
+                                display: inline-block;
+                                content: "";
+                                width: 19px;
+                                height: 18px;
+                                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='18' fill='none'%3E%3Crect width='19' height='18' fill='%23F3F3F3' rx='9'/%3E%3Cpath fill='%23E0E0E0' d='M8.48 14a.8.8 0 0 1-.58-.25L4.2 9.69a.75.75 0 0 1 .06-1.09.8.8 0 0 1 1.11.06L8.38 12l5.18-7.65a.8.8 0 0 1 1.09-.21c.36.23.46.7.22 1.06l-5.73 8.47a.78.78 0 0 1-.6.34h-.06Z'/%3E%3C/svg%3E") no-repeat center;
+                                background-size: contain;
+                                margin-right: 9px;
+
+                            }
+
+                            input[type="radio"]:checked+label::before {
+                                /* 체크 상태 */
+                                display: inline-block;
+                                content: "";
+                                width: 19px;
+                                height: 18px;
+                                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='18' fill='none'%3E%3Cpath fill='%23E0E0E0' d='M8.16 14.8a.9.9 0 0 1-.67-.3L3.23 9.72a.9.9 0 1 1 1.35-1.2l3.47 3.92L14 3.4a.91.91 0 0 1 1.26-.26.9.9 0 0 1 .25 1.25l-6.6 10a.89.89 0 0 1-.69.4h-.07Z'/%3E%3Crect width='19' height='18' fill='%2300F' rx='9'/%3E%3Cpath fill='%23fff' d='M8.55 14a.8.8 0 0 1-.58-.25l-3.7-4.06a.75.75 0 0 1 .06-1.09.8.8 0 0 1 1.11.06L8.46 12l5.17-7.65a.8.8 0 0 1 1.1-.21c.35.23.45.7.22 1.06L9.2 13.66a.78.78 0 0 1-.6.34h-.06Z'/%3E%3C/svg%3E")no-repeat center;
+                                background-size: contain;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 //수정 완료
