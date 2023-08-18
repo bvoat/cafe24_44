@@ -1,4 +1,4 @@
-const userImgPreview = document.querySelector(".user_img");
+// const userImgPreview = document.querySelector(".user_img");
 
 /* 휴대전화 입력 4자리 포커스 이동*/
 const mobile_left = document.querySelector("#mobile2");
@@ -73,59 +73,59 @@ for (const node of label_arr) {
 /**
  * 로그인 유저 프로필 이미지 파일 셋팅
  */
-const settingUserImage = () => {
-    const user = document.getElementById("member_id").value;
-    fetch(`https://${api_domain}.shop/member/profile?member_id=${user}`, {
-		method: "GET",
-	})
-	.then((response) => response.json())
-    .then((response) => {
-        console.log('response: ', response);
-        if(response.success){
-            const profile_image = response.data.profile_image;
-            userImgPreview.setAttribute("src", `${profile_image}`);
-        }else{
-            return false;
-        }
-    })
-}
+// const settingUserImage = () => {
+//     const user = document.getElementById("member_id").value;
+//     fetch(`https://${api_domain}.shop/member/profile?member_id=${user}`, {
+// 		method: "GET",
+// 	})
+// 	.then((response) => response.json())
+//     .then((response) => {
+//         console.log('response: ', response);
+//         if(response.success){
+//             const profile_image = response.data.profile_image;
+//             userImgPreview.setAttribute("src", `${profile_image}`);
+//         }else{
+//             return false;
+//         }
+//     })
+// }
 
 /**
  * 이미지 파일 저장
  */
 
-function previewUserImage(input) {
-    if(input.files[0].size > (5 * 1024 * 1024)){
-        alert("5MB 이상의 이미지는 첨부할 수 없어요 🥲");
-        return false;
-    }
+// function previewUserImage(input) {
+//     if(input.files[0].size > (5 * 1024 * 1024)){
+//         alert("5MB 이상의 이미지는 첨부할 수 없어요 🥲");
+//         return false;
+//     }
 
-    //선택된 파일 가져오기
-    const image = input.files[0];
-    const user = document.getElementById("member_id").value;
+//     //선택된 파일 가져오기
+//     const image = input.files[0];
+//     const user = document.getElementById("member_id").value;
 
-  	//새로운 이미지로 src 변환
-    userImgPreview.setAttribute("src",URL.createObjectURL(image));
+//   	//새로운 이미지로 src 변환
+//     userImgPreview.setAttribute("src",URL.createObjectURL(image));
 
-    //formData 생성
-    let formData = new FormData();
+//     //formData 생성
+//     let formData = new FormData();
 
-    formData.append("user_image", image);
-    formData.append("member_id", user);
+//     formData.append("user_image", image);
+//     formData.append("member_id", user);
 
-    fetch(`https://${api_domain}.shop/member/profile`, {
-        method: "POST",
-        body: formData,
-    })
-	.then((response) => response.json())
-    .then((response)=>{
-        console.log('response: ', response);
-        if(response.error){
-            alert("이미지 업로드에 오류가 있어요 🥲 다시 한 번 시도해 주세요.")
-        }
-    })
-};
+//     fetch(`https://${api_domain}.shop/member/profile`, {
+//         method: "POST",
+//         body: formData,
+//     })
+// 	.then((response) => response.json())
+//     .then((response)=>{
+//         console.log('response: ', response);
+//         if(response.error){
+//             alert("이미지 업로드에 오류가 있어요 🥲 다시 한 번 시도해 주세요.")
+//         }
+//     })
+// };
 
 /* 최종 함수 실행 */
 //이미지 수신
-window.addEventListener("load", settingUserImage);
+// window.addEventListener("load", settingUserImage);
