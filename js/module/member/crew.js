@@ -4,14 +4,8 @@
   var swiper = new Swiper(".crew_method_img_wrap", {
     slidesPerView: 2.1,
     spaceBetween: 10,
-    pagination: {
-      el: ".img_pagination",
-      clickable: true,
-      type: "progressbar",
-    },
   });
-/* aos 초기화 */
-AOS.init();
+
 
 
 const crew_link_copy = document.querySelector(".crew_link_copy");
