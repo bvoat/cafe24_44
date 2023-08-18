@@ -17,8 +17,8 @@
   align-items: center;
   width: 100%;
   max-width: 450px;
-  padding: 23px 17px 150px;
-  margin: 60px auto 80px;
+  padding: 23px 17px 40px;
+  margin: 60px auto 50px;
 }
 #memberModify #memberModifyTitle {
   display: flex;
