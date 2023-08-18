@@ -119,7 +119,7 @@ const checkMoreView = () => {
     btn.addEventListener("click", () => {
       setTimeout(() => {
         monitoringPrice();
-      }, 1000);
+      }, 2000);
     });
   });
 };
