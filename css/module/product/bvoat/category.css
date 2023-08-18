@@ -10,18 +10,15 @@
 #category {
   width: 100%;
   max-width: 450px;
-  margin: 40px 0 80px;
-  background: #F5F6FC;
-}
-#category h2.category_title {
-  font-size: 1.9rem;
-  font-weight: 400;
-  margin-bottom: 14px;
+  margin: 77px 0 150px;
+  padding: 0 17px;
 }
 #category li[class^=parent_category] {
-  font-size: 1.7rem;
-  font-weight: 600;
-  margin-bottom: 14.5px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  letter-spacing: -0.9px;
 }
 #category .category_summary {
   font-size: 1.3rem;
@@ -33,9 +30,16 @@
 #categoryOfRecommended {
   width: 100%;
   max-width: 450px;
-  background: #ffffff;
-  padding: 21px 17px 0px;
-  margin-bottom: 8px;
+}
+#categoryOfRecommended .parent_category_843::before {
+  content: "쉽게 바꾸는 집과 일상";
+  display: block;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: normal;
+  color: #707070;
+  letter-spacing: -0.5px;
+  margin-bottom: 5px;
 }
 #categoryOfRecommended #categoryOfRecommendedList {
   width: 100%;
@@ -45,13 +49,14 @@
 }
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item {
-  width: 96.46px;
+  width: calc(33.3333333333% - 3.5px);
+  margin-bottom: 65px;
 }
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a {
   display: flex;
@@ -63,7 +68,6 @@
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .thumb {
   position: relative;
   width: 100%;
-  font-size: 0;
 }
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .thumb > a,
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .thumb .img_wrap {
@@ -96,22 +100,12 @@
   overflow: hidden;
 }
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .category_name {
-  font-weight: 600;
-  font-size: 1.2rem;
+  font-weight: bold;
+  font-size: 1.55rem;
   color: #707070;
-  letter-spacing: -0.4px;
-  margin: 9px 0 0 0;
+  letter-spacing: -0.7px;
+  margin: 10px 0 0 0;
   text-align: center;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
-  line-height: 1.92rem;
-  height: 3.74rem;
 }
 #categoryOfRecommended #categoryOfRecommendedList .progressbar {
   display: none;
@@ -125,9 +119,65 @@
 #categoryOfProduct {
   width: 100%;
   max-width: 450px;
-  background: #ffffff;
-  padding: 21px 17px 10px;
-  margin-bottom: 8px;
+}
+#categoryOfTag .parent_category_810::before,
+#categoryOfProduct .parent_category_810::before {
+  content: "환경 친화적 라이프스타일";
+  display: block;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: normal;
+  color: #707070;
+  letter-spacing: -0.5px;
+  margin-bottom: 5px;
+}
+#categoryOfTag .parent_category_635::before,
+#categoryOfProduct .parent_category_635::before {
+  content: "순한 성분으로 나를 보듬기";
+  display: block;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: normal;
+  color: #707070;
+  letter-spacing: -0.5px;
+  margin-bottom: 5px;
+  margin-top: 44px;
+}
+#categoryOfTag .parent_category_570::before,
+#categoryOfProduct .parent_category_570::before {
+  content: "#프라이탁 #파타고니아 같은";
+  display: block;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: normal;
+  color: #707070;
+  letter-spacing: -0.5px;
+  margin-bottom: 5px;
+  margin-top: 44px;
+}
+#categoryOfTag .parent_category_634::before,
+#categoryOfProduct .parent_category_634::before {
+  content: "맛있고 건강하게";
+  display: block;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: normal;
+  color: #707070;
+  letter-spacing: -0.5px;
+  margin-bottom: 5px;
+  margin-top: 44px;
+}
+#categoryOfTag .parent_category_838::before,
+#categoryOfProduct .parent_category_838::before {
+  content: "#친환경 #비건 #사회가치";
+  display: block;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: normal;
+  color: #707070;
+  letter-spacing: -0.5px;
+  margin-bottom: 5px;
+  margin-top: 44px;
 }
 #categoryOfTag #categoryOfTagList,
 #categoryOfProduct #categoryOfTagList {
@@ -135,7 +185,7 @@
 }
 #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item,
 #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item {
-  width: 131.76px;
+  width: calc(33.3333333333% - 3px);
 }
 #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a,
 #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a {
@@ -148,7 +198,6 @@
 #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb {
   position: relative;
   width: 100%;
-  font-size: 0;
 }
 #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb > a,
 #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .thumb .img_wrap,
@@ -207,8 +256,8 @@
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.92rem;
-  height: 3.74rem;
+  line-height: 1.72rem;
+  height: 3.44rem;
 }
 #categoryOfTag #categoryOfTagList .progressbar,
 #categoryOfProduct #categoryOfTagList .progressbar {
@@ -218,16 +267,21 @@
 #categoryOfProduct #categoryOfProductList {
   width: 100%;
 }
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category],
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] {
+  width: 100%;
+}
 #categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper,
 #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  -moz-column-gap: 11px;
-       column-gap: 11px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
-#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item:nth-child(4n),
-#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item:nth-child(4n) {
-  margin-right: 0;
+#categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item,
+#categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item {
+  width: calc(33.3333333333% - 3.5px);
+  margin-bottom: 21px;
 }
 #categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a,
 #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a {
@@ -240,7 +294,6 @@
 #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb {
   position: relative;
   width: 100%;
-  font-size: 0;
 }
 #categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb > a,
 #categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .thumb .img_wrap,
@@ -280,28 +333,23 @@
 }
 #categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .category_name,
 #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .category_name {
-  font-weight: 600;
-  font-size: 1.2rem;
+  font-weight: bold;
+  font-size: 1.55rem;
   color: #707070;
-  letter-spacing: -0.4px;
-  margin: 9px 0 0 0;
+  letter-spacing: -0.7px;
+  margin: 10px 0 0 0;
   text-align: center;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
-  line-height: 1.92rem;
-  height: 3.74rem;
+}
+#categoryOfTag #categoryOfProductList .middle_main_category_634 > .no-swiper,
+#categoryOfProduct #categoryOfProductList .middle_main_category_634 > .no-swiper {
+  justify-content: flex-start !important;
+}
+#categoryOfTag #categoryOfProductList .middle_main_category_634 > .no-swiper li:first-child,
+#categoryOfProduct #categoryOfProductList .middle_main_category_634 > .no-swiper li:first-child {
+  margin-right: 6px;
 }
 
 /* 페이지 프로그레스 */
 .progressbar {
-  width: 100%;
-  height: 3px;
-  margin-top: 13px;
-  z-index: 9;
+  display: none;
 }/*# sourceMappingURL=category.css.map */

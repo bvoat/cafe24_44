@@ -5,19 +5,16 @@
 #category {
     width: 100%;
     max-width: 450px;
-    margin: 40px 0 80px;
-    background: $bvt-bg-skyblue;
+    margin: 77px 0 150px;
+    padding: 0 17px;
 
-    h2.category_title {
-        font-size: 1.9rem;
-        font-weight: 400;
-        margin-bottom: 14px;
-    }
 
     li[class^='parent_category'] {
-        font-size: 1.7rem;
-        font-weight: 600;
-        margin-bottom: 14.5px;
+        font-size: 2.25rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: center;
+        letter-spacing: -0.9px;
     }
 
     .category_summary {
@@ -32,9 +29,20 @@
 #categoryOfRecommended {
     width: 100%;
     max-width: 450px;
-    background: $bvt-white;
-    padding: 21px 17px 0px;
-    margin-bottom: 8px;
+
+    //MD추천
+    .parent_category_843 {
+        &::before {
+            content: "쉽게 바꾸는 집과 일상";
+            display: block;
+            font-size: 1.6rem;
+            font-family: inherit;
+            font-weight: normal;
+            color: $bvt-darkgray;
+            letter-spacing: -.5px;
+            margin-bottom: 5px;
+        }
+    }
 
     #categoryOfRecommendedList {
         width: 100%;
@@ -44,14 +52,16 @@
 
             >ul {
                 display: flex;
-                flex-flow: row wrap;
-                justify-content: flex-start;
+                flex-flow: row nowrap;
+                justify-content: space-between;
                 align-items: center;
                 width: 100%;
 
                 //개별 아이템
                 .middle_item {
-                    width: 96.46px;
+                    width: calc((100% / 3) - 3.5px);
+
+                    margin-bottom: 65px;
 
                     a {
                         display: flex;
@@ -70,13 +80,12 @@
                         }
 
                         .category_name {
-                            font-weight: 600;
-                            font-size: 1.2rem;
+                            font-weight: bold;
+                            font-size: 1.55rem;
                             color: $bvt-darkgray;
-                            letter-spacing: -0.4px;
-                            margin: 9px 0 0 0;
+                            letter-spacing: -0.7px;
+                            margin: 10px 0 0 0;
                             text-align: center;
-                            @include ellipsis(2, 1.42rem);
                         }
                     }
                 }
@@ -100,9 +109,80 @@
 #categoryOfProduct {
     width: 100%;
     max-width: 450px;
-    background: $bvt-white;
-    padding: 21px 17px 10px;
-    margin-bottom: 8px;
+
+    //홈리빙생활용품
+    .parent_category_810 {
+        &::before {
+            content: "환경 친화적 라이프스타일";
+            display: block;
+            font-size: 1.6rem;
+            font-family: inherit;
+            font-weight: normal;
+            color: $bvt-darkgray;
+            letter-spacing: -.5px;
+            margin-bottom: 5px;
+        }
+    }
+
+    //순식물성 피부 케어
+    .parent_category_635 {
+        &::before {
+            content: "순한 성분으로 나를 보듬기";
+            display: block;
+            font-size: 1.6rem;
+            font-family: inherit;
+            font-weight: normal;
+            color: $bvt-darkgray;
+            letter-spacing: -.5px;
+            margin-bottom: 5px;
+            margin-top: 44px;
+        }
+    }
+
+    //지구 힙스터 패션
+    .parent_category_570 {
+        &::before {
+            content: "#프라이탁 #파타고니아 같은";
+            display: block;
+            font-size: 1.6rem;
+            font-family: inherit;
+            font-weight: normal;
+            color: $bvt-darkgray;
+            letter-spacing: -.5px;
+            margin-bottom: 5px;
+            margin-top: 44px;
+        }
+    }
+
+    //비건 식품, 맛있는 채식
+    .parent_category_634 {
+        &::before {
+            content: "맛있고 건강하게";
+            display: block;
+            font-size: 1.6rem;
+            font-family: inherit;
+            font-weight: normal;
+            color: $bvt-darkgray;
+            letter-spacing: -.5px;
+            margin-bottom: 5px;
+            margin-top: 44px;
+        }
+    }
+
+    //가치 태그 모아보기
+    .parent_category_838 {
+        &::before {
+            content: "#친환경 #비건 #사회가치";
+            display: block;
+            font-size: 1.6rem;
+            font-family: inherit;
+            font-weight: normal;
+            color: $bvt-darkgray;
+            letter-spacing: -.5px;
+            margin-bottom: 5px;
+            margin-top: 44px;
+        }
+    }
 
     //태그별
     #categoryOfTagList {
@@ -112,7 +192,7 @@
 
             //개별 아이템
             .middle_item {
-                width: 131.76px;
+                width: calc((100% / 3) - 3px);
 
                 a {
                     display: flex;
@@ -159,17 +239,19 @@
 
 
         li[class^='middle_main_category'] {
+            width: 100%;
+
             ul.no-swiper {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                column-gap: 11px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: center;
 
                 //개별 아이템
                 .middle_item {
+                    width: calc((100% / 3) - 3.5px);
 
-                    &:nth-child(4n) {
-                        margin-right: 0;
-                    }
+                    margin-bottom: 21px;
 
                     a {
                         display: flex;
@@ -186,19 +268,30 @@
                         }
 
                         .category_name {
-                            font-weight: 600;
-                            font-size: 1.2rem;
+                            font-weight: bold;
+                            font-size: 1.55rem;
                             color: $bvt-darkgray;
-                            letter-spacing: -0.4px;
-                            margin: 9px 0 0 0;
+                            letter-spacing: -0.7px;
+                            margin: 10px 0 0 0;
                             text-align: center;
-                            @include ellipsis(2, 1.42rem);
                         }
                     }
                 }
             }
 
         }
+
+        //비건식품 spb->flexstart
+        .middle_main_category_634>.no-swiper {
+            justify-content: flex-start !important;
+
+            li {
+                &:first-child {
+                    margin-right: 6px;
+                }
+            }
+        }
+
     }
 
 
@@ -207,8 +300,9 @@
 /* 페이지 프로그레스 */
 
 .progressbar {
-    width: 100%;
-    height: 3px;
-    margin-top: 13px;
-    z-index: 9;
+    display: none;
+    // width: 100%;
+    // height: 3px;
+    // margin-top: 13px;
+    // z-index: 9;
 }

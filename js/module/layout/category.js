@@ -100,7 +100,7 @@ let methods = {
             "ul[id^='categoryOfRecommended']>li[class^='parent_category']"
           ),
         ].forEach((parent) => {
-          let middleCategory = methods.createdMidCategoryNode(parent.dataset.cateno, 'recommend', 'slide');
+          let middleCategory = methods.createdMidCategoryNode(parent.dataset.cateno, 'recommend', 'no-swiper');
           parent.insertAdjacentHTML("afterend", middleCategory);
         });
         // 가치태그 카테고리 > 개별 중 카테고리 생성
@@ -109,7 +109,7 @@ let methods = {
             "ul[id^='categoryOfTag']>li[class^='parent_category']"
           ),
         ].forEach((parent) => {
-          let middleCategory = methods.createdMidCategoryNode(parent.dataset.cateno, 'product-tag', 'slide');
+          let middleCategory = methods.createdMidCategoryNode(parent.dataset.cateno, 'product-tag', 'no-swiper');
           parent.insertAdjacentHTML("afterend", middleCategory);
         });
         // 상품별 카테고리 > 개별 중 카테고리 생성
