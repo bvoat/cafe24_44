@@ -636,6 +636,7 @@
 #productDetailBottom .detail_swiper_wrap #tab1 {
   width: 100%;
   padding: 0 !important;
+  margin-top: 30px;
 }
 #productDetailBottom .detail_swiper_wrap #tab1 .heading {
   padding: 0 11px;
@@ -670,7 +671,7 @@
   padding: 0 0 15px !important;
 }
 #productDetailBottom .detail_swiper_wrap #tab2 {
-  padding-top: 50px;
+  margin-top: 30px;
 }
 #productDetailBottom .detail_swiper_wrap #tab2 .heading {
   padding: 0 11px;
