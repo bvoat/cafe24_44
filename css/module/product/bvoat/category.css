@@ -240,7 +240,7 @@
 }
 #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_name,
 #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_name {
-  font-weight: 600;
+  font-weight: bold;
   font-size: 1.2rem;
   color: #707070;
   letter-spacing: -0.4px;
