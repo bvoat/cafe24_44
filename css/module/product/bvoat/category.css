@@ -96,7 +96,6 @@
 }
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .category_img {
   width: 100%;
-  border-radius: 20px;
   overflow: hidden;
 }
 #categoryOfRecommended #categoryOfRecommendedList li[class^=middle_main_category] > ul .middle_item a .category_name {
@@ -233,7 +232,6 @@
 #categoryOfProduct #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_img {
   width: 100%;
   height: 73.09px;
-  border-radius: 20px;
   overflow: hidden;
 }
 #categoryOfTag #categoryOfTagList li[class^=middle_main_category] .middle_item a .category_img .img_wrap img,
@@ -328,7 +326,6 @@
 #categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .category_img,
 #categoryOfProduct #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .category_img {
   width: 100%;
-  border-radius: 20px;
   overflow: hidden;
 }
 #categoryOfTag #categoryOfProductList li[class^=middle_main_category] ul.no-swiper .middle_item a .category_name,
