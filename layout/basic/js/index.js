@@ -273,9 +273,6 @@ const rankNumbering = () => {
 window.addEventListener("DOMContentLoaded", () => {
   listmainTab1();
   listmainTab2();
-})
-window.addEventListener("load", () => {
   rankNumbering();
   receiveMemberCount();
 })
-
