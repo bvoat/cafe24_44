@@ -31,16 +31,18 @@ body {
         #header_logo_section {
             display: flex;
             flex-flow: row nowrap;
-            justify-content: center;
             align-items: center;
+            justify-content: space-between;
             width: 100%;
             max-width: 450px;
+            height: 60px;
+            padding: 0 17px;
 
             >a {
                 .header_logo {
                     display: block;
-                    width: 73px;
-                    height: 40px;
+                    width: 96.39px;
+                    height: 24px;
                     background: $bvt-logo no-repeat center;
                     background-size: contain;
                     text-indent: -9999px;
