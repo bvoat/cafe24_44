@@ -92,6 +92,7 @@ body {
     margin: 14px 14px 80px 18px;
 }
 
+//할인 부가결제
 #ec-jigsaw-title-discount {
     position: relative;
     width: 100%;
@@ -101,6 +102,28 @@ body {
 #ec-jigsaw-title-discount h2 {
     position: relative;
     width: 100%;
+}
+
+#ec-jigsaw-title-discount {
+    .contents {
+        .mCouponSelect {
+            .mCouponSelect {
+                &::after {
+                    display: block;
+                    content: "1.쿠폰은 주문서당 1개 사용이 가능합니다. <br> 2.쿠폰 적용 페이지에서는 사용 가능한 쿠폰만 노출됩니다.";
+                    clear: both;
+                    text-align: left;
+                    font-size: 13px;
+                    font-weight: 400;
+                    color: #383838;
+                    padding: 0 20px 0 0;
+                    margin-top: 20px;
+                    padding: 13px 20px;
+                    background-color: #F8F9FA;
+                }
+            }
+        }
+    }
 }
 
 /* ----------- 쿠폰 새 창 -------------- */
