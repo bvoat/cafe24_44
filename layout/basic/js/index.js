@@ -270,9 +270,8 @@ const rankNumbering = () => {
 /**
 * 최종 함수 실행
 */
-window.addEventListener("DOMContentLoaded", () => {
+
   listmainTab1();
   listmainTab2();
   rankNumbering();
   receiveMemberCount();
-})
