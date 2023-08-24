@@ -241,6 +241,30 @@ const receiveMemberCount = () => {
   .then((response) => response.json())
   .then((response) => {
       if(response.success){             
+        
+        /**
+         * 숫자 카운트
+         * @param {숫자 넣을 node} $counter 
+         * @param {최대치} max 
+         */
+        function numberCounting($counter, max) {
+          let now = max;
+
+          const handle = setInterval(() => {
+              const gap = Math.ceil(max - now);
+              const number = gap.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+              $counter.innerHTML = number;
+
+              // 목표에 도달하면 정지
+              if (now < 1) {
+              clearInterval(handle);
+              }
+
+              // 적용될 수치, 점점 줄어듬
+              const step = now / 3;
+              now -= step;
+          }, 40);
+        }
           const memberCount = document.querySelector(".membercnt");
           numberCounting(memberCount, response.data)
       }
