@@ -574,6 +574,7 @@ div.layerProgress {
     flex-flow:  row nowrap;
     align-items: normal;
     padding-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .price_wrap>.price_item {
@@ -590,7 +591,7 @@ div.layerProgress {
     font-weight: normal !important;
     position: absolute;
     left: 0;
-    top: 17px;
+    top: 20px;
 }
 
 .onpromotion {

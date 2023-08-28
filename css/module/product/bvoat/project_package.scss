@@ -245,7 +245,7 @@
         }
 
         //상품 설명 (mixin)
-        @include product-desc(7px, 1.1rem, 1.1rem, 1.3rem);
+        @include product-desc(9px, 1.2rem, 1.1rem, 1.3rem);
 
         // 이미지 정사각형 공통 (mixin)
         // thumb 부모에게 width 정해줘야 함!
