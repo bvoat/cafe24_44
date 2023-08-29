@@ -533,6 +533,7 @@
 }
 .webnmobile_product_html .btn_cart {
   margin-right: 1.78%;
+  order: 2;
 }
 .webnmobile_product_html .btn_cart button {
   background: #ffffff;
@@ -541,6 +542,7 @@
 }
 .webnmobile_product_html .btn_buy {
   margin-right: 1.78%;
+  order: 3;
 }
 .webnmobile_product_html .btn_buy button {
   background: #003DD3;
@@ -549,10 +551,11 @@
 }
 .webnmobile_product_html .btn_gift {
   margin-left: 0 !important;
+  order: 1;
 }
 .webnmobile_product_html .btn_gift .gift_order_btn {
-  background: #003DD3 !important;
-  color: #ffffff !important;
+  background: #ffffff !important;
+  color: #003DD3 !important;
   font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "나눔고딕", "맑은 고딕", "Malgun Gothic", "돋움";
 }
 .webnmobile_product_html .select_none {

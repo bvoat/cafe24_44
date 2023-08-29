@@ -642,6 +642,7 @@
     //장바구니 담기
     .btn_cart {
         margin-right: 1.78%;
+        order: 2;
 
         button {
             background: $bvt-white;
@@ -653,6 +654,7 @@
     //바로구매
     .btn_buy {
         margin-right: 1.78%;
+        order: 3;
 
         button {
             background: $bvt-blue;
@@ -664,10 +666,11 @@
     //선물하기
     .btn_gift {
         margin-left: 0 !important;
+        order: 1;
 
         .gift_order_btn {
-            background: $bvt-blue !important;
-            color: $bvt-white !important;
+            background: $bvt-white !important;
+            color: $bvt-blue !important;
             font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움';
         }
     }
