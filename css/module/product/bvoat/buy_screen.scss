@@ -488,7 +488,7 @@
 
     h3 {
         font-size: 1.6rem;
-        margin-bottom: 5px;
+        margin-bottom: 12px;
     }
 
     span {
@@ -496,53 +496,75 @@
         font-weight: normal;
     }
 
+    select {
+        width: 100%;
+        height: 44px;
+        background: transparent;
+        border: 1px solid #DEDEDE;
+        border-radius: 2px;
+        font-size: 1.35rem;
+        font-weight: 500;
+        color: #454545;
+        letter-spacing: -0.25px;
+        padding: 6px 46px 6px 17px;
+        cursor: pointer;
+    }
+
     .product_additional_ul {
 
         li {
-            margin: 3px;
 
             .information {
                 display: flex;
                 flex-flow: row nowrap;
-                align-items: center;
+                align-items: flex-start;
+                margin-bottom: 12px;
 
                 .thumbnail {
-                    min-width: 100px;
-                    max-width: 100px;
+                    min-width: 80px;
+                    max-width: 80px;
                     border-radius: 4px;
                     overflow: hidden;
-                    margin-right: 12px;
+                    margin-right: 15px;
+
+                    a {
+                        min-width: 80px;
+                        max-width: 80px;
+                        height: 80px;
+
+                        img {
+                            min-width: 80px;
+                            max-width: 80px;
+                        }
+
+                        ;
+                    }
                 }
 
                 .info {
-                    width: calc(100% - 100px);
+                    width: calc(100% - 80px);
 
                     .name {
-                        font-size: 1.4rem;
+                        font-size: 1.45rem;
                         font-weight: bold;
-                        @include only-ellipsis(1, 1.8rem)
+                        @include only-ellipsis(2, 1.8rem)
                     }
 
                     .price,
                     .salePrice {
-                        font-size: 1.4rem;
+                        font-size: 1.3rem;
+                        font-weight: normal;
+                        margin-top: 9px;
                     }
                 }
             }
 
             .option {
+                margin-bottom: 12px;
 
                 li {
                     font-size: 1.4rem;
-                    padding: 2px 0 0 0;
 
-                    select {
-                        width: 100%;
-                        height: 30px;
-                        font-size: 1.3rem;
-                        margin: 5px 0;
-                        padding: 2px;
-                    }
                 }
 
             }
@@ -653,7 +675,6 @@
 
     //바로구매
     .btn_buy {
-        margin-right: 1.78%;
         order: 3;
 
         button {
@@ -666,6 +687,7 @@
     //선물하기
     .btn_gift {
         margin-left: 0 !important;
+        margin-right: 1.78%;
         order: 1;
 
         .gift_order_btn {

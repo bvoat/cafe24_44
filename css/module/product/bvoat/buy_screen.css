@@ -398,38 +398,58 @@
 }
 .buy_screen_additional h3 {
   font-size: 1.6rem;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
 }
 .buy_screen_additional span {
   font-size: 1.3rem;
   font-weight: normal;
 }
-.buy_screen_additional .product_additional_ul li {
-  margin: 3px;
+.buy_screen_additional select {
+  width: 100%;
+  height: 44px;
+  background: transparent;
+  border: 1px solid #DEDEDE;
+  border-radius: 2px;
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #454545;
+  letter-spacing: -0.25px;
+  padding: 6px 46px 6px 17px;
+  cursor: pointer;
 }
 .buy_screen_additional .product_additional_ul li .information {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 12px;
 }
 .buy_screen_additional .product_additional_ul li .information .thumbnail {
-  min-width: 100px;
-  max-width: 100px;
+  min-width: 80px;
+  max-width: 80px;
   border-radius: 4px;
   overflow: hidden;
-  margin-right: 12px;
+  margin-right: 15px;
+}
+.buy_screen_additional .product_additional_ul li .information .thumbnail a {
+  min-width: 80px;
+  max-width: 80px;
+  height: 80px;
+}
+.buy_screen_additional .product_additional_ul li .information .thumbnail a img {
+  min-width: 80px;
+  max-width: 80px;
 }
 .buy_screen_additional .product_additional_ul li .information .info {
-  width: calc(100% - 100px);
+  width: calc(100% - 80px);
 }
 .buy_screen_additional .product_additional_ul li .information .info .name {
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: bold;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
@@ -437,18 +457,15 @@
 }
 .buy_screen_additional .product_additional_ul li .information .info .price,
 .buy_screen_additional .product_additional_ul li .information .info .salePrice {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin-top: 9px;
+}
+.buy_screen_additional .product_additional_ul li .option {
+  margin-bottom: 12px;
 }
 .buy_screen_additional .product_additional_ul li .option li {
   font-size: 1.4rem;
-  padding: 2px 0 0 0;
-}
-.buy_screen_additional .product_additional_ul li .option li select {
-  width: 100%;
-  height: 30px;
-  font-size: 1.3rem;
-  margin: 5px 0;
-  padding: 2px;
 }
 
 .naver_msg {
@@ -541,7 +558,6 @@
   font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "나눔고딕", "맑은 고딕", "Malgun Gothic", "돋움";
 }
 .webnmobile_product_html .btn_buy {
-  margin-right: 1.78%;
   order: 3;
 }
 .webnmobile_product_html .btn_buy button {
@@ -551,6 +567,7 @@
 }
 .webnmobile_product_html .btn_gift {
   margin-left: 0 !important;
+  margin-right: 1.78%;
   order: 1;
 }
 .webnmobile_product_html .btn_gift .gift_order_btn {
