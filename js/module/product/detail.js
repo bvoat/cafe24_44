@@ -114,6 +114,8 @@ Array.from(purchase_button).forEach((btn)=>{
         btn_cart.classList.add("displaynone");
         btn_buy.classList.add("displaynone");
           [...btn_gift][1].classList.remove("displaynone");
+          [...btn_gift][1].classList.add("blue");
+
       }
 
   })

@@ -697,6 +697,14 @@
         }
     }
 
+    .btn_gift .blue {
+        .gift_order_btn {
+            background: $bvt-blue !important;
+            color: $bvt-white !important;
+            font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움';
+        }
+    }
+
     .select_none {
         width: 100%;
         font-size: 1.6rem;
