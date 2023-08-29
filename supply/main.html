@@ -152,13 +152,13 @@
 <!--@define(cmc_log)-->
 <script>
 
-const supplyItemList = document.querySelector("#supplyItemList");
-		const listmainWrap = document.querySelector("#listmainWrap");
-		console.log('supplyItemList: ', supplyItemList.childElementCount);
-		console.log('listmainWrap: ', listmainWrap.childElementCount);
-		if (supplyItemList.childElementCount != 0 && listmainWrap.childElementCount != 0) {
-			supplyItemList.classList.add("displaynone");
-		} else if(listmainWrap.childElementCount == 0){
-			listmainWrap.classList.add("displaynone");
+const normallist = document.querySelector(".normallist");
+		const listmain = document.querySelector(".listmain");
+		console.log('supplyItemList: ', normallist.childElementCount);
+		console.log('listmain: ', listmain.childElementCount);
+		if (normallist.childElementCount != 0 && listmain.childElementCount != 0) {
+			normallist.classList.add("displaynone");
+		} else if(listmain.childElementCount == 0){
+			listmain.classList.add("displaynone");
 		}
 </script>
