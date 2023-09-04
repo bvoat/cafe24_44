@@ -135,7 +135,7 @@ const controlBackIcon = (page_path) => {
     "detail",
     "basket",
     "orderform",
-    "supply/index",
+    "supply",
     "id/find_id",
     "passwd/find_passwd_info",
     "member/login",
@@ -144,7 +144,8 @@ const controlBackIcon = (page_path) => {
     "article",
     "myshop/wish_list",
     "coupon",
-    "crew.html"
+    "crew.html",
+    "project.html",
   ];
 
   //뒤로가기 표시 하기
