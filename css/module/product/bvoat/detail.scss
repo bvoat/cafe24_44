@@ -656,6 +656,7 @@
 #productDetailBottom {
 	position: relative;
 	width: 100%;
+	max-width: 450px;
 	height: auto;
 	display: flex;
 	transition-property: height;
@@ -664,6 +665,8 @@
 	overflow: hidden;
 
 	.detail_swiper_wrap {
+		width: 100%;
+		max-width: 450px;
 		height: auto;
 		padding-bottom: 100px;
 		margin-bottom: 20px;
@@ -673,7 +676,6 @@
 			width: 100%;
 			max-width: 100%;
 			overflow-x: hidden;
-			padding: 0 11px;
 		}
 
 		//상품 정보
@@ -683,7 +685,7 @@
 			padding: 0 !important;
 
 			.tab_detail_page {
-				width: 100vw;
+				width: 100%;
 				font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', '나눔고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, Verdana, AppleGothic, sans-serif !important;
 				letter-spacing: -.5px;
 
@@ -699,7 +701,7 @@
 			img {
 				position: relative;
 				//220824 이미지 태그 내 inline으로 width 1924 height 설정 들어가서 (원인 모름) important 삽입
-				width: 100% !important;
+				width: 100vw !important;
 				// height: auto !important;
 				max-width: 450px;
 				min-width: 200px;
@@ -728,7 +730,7 @@
 
 		//사용 후기
 		#tab1 {
-			width: 100%;
+			width: 100% !important;
 			max-width: 450px;
 			padding: 0 !important;
 			margin-top: 30px;

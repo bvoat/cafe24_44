@@ -573,6 +573,7 @@
 #productDetailBottom {
   position: relative;
   width: 100%;
+  max-width: 450px;
   height: auto;
   display: flex;
   transition-property: height;
@@ -581,6 +582,8 @@
   overflow: hidden;
 }
 #productDetailBottom .detail_swiper_wrap {
+  width: 100%;
+  max-width: 450px;
   height: auto;
   padding-bottom: 100px;
   margin-bottom: 20px;
@@ -589,7 +592,6 @@
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  padding: 0 11px;
 }
 #productDetailBottom .detail_swiper_wrap #tab0 {
   width: 100%;
@@ -597,7 +599,7 @@
   padding: 0 !important;
 }
 #productDetailBottom .detail_swiper_wrap #tab0 .tab_detail_page {
-  width: 100vw;
+  width: 100%;
   font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "나눔고딕", "맑은 고딕", "Malgun Gothic", "돋움", dotum, Verdana, AppleGothic, sans-serif !important;
   letter-spacing: -0.5px;
 }
@@ -610,7 +612,7 @@
 }
 #productDetailBottom .detail_swiper_wrap #tab0 img {
   position: relative;
-  width: 100% !important;
+  width: 100vw !important;
   max-width: 450px;
   min-width: 200px;
   backface-visibility: hidden;
@@ -635,7 +637,7 @@
      object-fit: cover;
 }
 #productDetailBottom .detail_swiper_wrap #tab1 {
-  width: 100%;
+  width: 100% !important;
   max-width: 450px;
   padding: 0 !important;
   margin-top: 30px;
