@@ -249,6 +249,15 @@ const reciveTagDetail = (prd_no) => {
       console.error("실패:", error);
     });
 };
+
+//리뷰 숫자 계산
+const review_item_length = document.querySelectorAll(".review_item").length;
+const review_num = document.querySelector(".review_num");
+
+const review_num_insert = (review_item_length) => {
+  review_num.innerHTML = review_item_length;
+}
+
  
 /* 최종 함수 실행 */
 
@@ -277,8 +286,9 @@ window.addEventListener("DOMContentLoaded", ()=>{
   //Q&A heading 컨트롤
   qnaControl();
 
-
-
+ //review_item_length 삽입
+ review_num_insert(review_item_length);
+ 
 
 })
 
