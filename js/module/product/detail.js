@@ -260,7 +260,7 @@ const review_num_insert = (review_item_length) => {
 
 //user_name 수정
 const user_name_arr = document.querySelectorAll(".user_name");
-user_name_arr.forEach(name => name.innerHTML == "비보트" ? name.innerHTML = "비회원 구매자" : null);
+user_name_arr.forEach(name => name.innerHTML === "비보트" ? name.innerHTML = "비회원 구매자" : null);
  
 /* 최종 함수 실행 */
 

@@ -835,7 +835,7 @@
 #productDetailBottom .detail_swiper_wrap #tab1 #productBoardListWrap li.review_item .item .item_anchor .summary_info span {
   display: none;
 }
-#productDetailBottom .detail_swiper_wrap #tab1 페이지네이션 #productBoardPagenation {
+#productDetailBottom .detail_swiper_wrap #tab1 #productBoardPagenation {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -843,20 +843,20 @@
   align-items: center;
   margin-bottom: 12px;
 }
-#productDetailBottom .detail_swiper_wrap #tab1 페이지네이션 #productBoardPagenation .prev {
+#productDetailBottom .detail_swiper_wrap #tab1 #productBoardPagenation .prev {
   margin: 0 6px;
 }
-#productDetailBottom .detail_swiper_wrap #tab1 페이지네이션 #productBoardPagenation .prev a {
+#productDetailBottom .detail_swiper_wrap #tab1 #productBoardPagenation .prev a {
   display: inline-block;
   width: 17px;
   height: 18px;
   background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/blue_arrow_back_3x.png) no-repeat center;
   background-size: contain;
 }
-#productDetailBottom .detail_swiper_wrap #tab1 페이지네이션 #productBoardPagenation .next {
+#productDetailBottom .detail_swiper_wrap #tab1 #productBoardPagenation .next {
   margin: 0 6px;
 }
-#productDetailBottom .detail_swiper_wrap #tab1 페이지네이션 #productBoardPagenation .next a {
+#productDetailBottom .detail_swiper_wrap #tab1 #productBoardPagenation .next a {
   display: inline-block;
   width: 17px;
   height: 18px;
@@ -864,13 +864,13 @@
   background-size: contain;
   transform: scaleX(-1);
 }
-#productDetailBottom .detail_swiper_wrap #tab1 페이지네이션 #productBoardPagenation ol {
+#productDetailBottom .detail_swiper_wrap #tab1 #productBoardPagenation ol {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
-#productDetailBottom .detail_swiper_wrap #tab1 페이지네이션 #productBoardPagenation ol li {
+#productDetailBottom .detail_swiper_wrap #tab1 #productBoardPagenation ol li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -878,7 +878,7 @@
   font-weight: normal;
   margin: 0 13px;
 }
-#productDetailBottom .detail_swiper_wrap #tab1 페이지네이션 #productBoardPagenation ol li a {
+#productDetailBottom .detail_swiper_wrap #tab1 #productBoardPagenation ol li a {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -887,7 +887,7 @@
   height: 20px;
   border-radius: 50%;
 }
-#productDetailBottom .detail_swiper_wrap #tab1 페이지네이션 #productBoardPagenation ol .this {
+#productDetailBottom .detail_swiper_wrap #tab1 #productBoardPagenation ol .this {
   font-weight: bold;
   color: #003DD3;
   background: #F5F6FB;
