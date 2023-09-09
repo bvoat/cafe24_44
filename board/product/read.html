@@ -297,7 +297,7 @@
     
 
 //user_name 수정
-const user_name_arr = document.querySelectorAll(".writer");
+const user_name_arr = document.querySelectorAll(".writer > span");
 console.log('user_name_arr: ', user_name_arr);
 user_name_arr.forEach(name => name.innerHTML == "비보트" ? name.innerHTML = "비보트 보터" : name.innerHTML == "네이버 페이 구매자" ? name.innerHTML = "비보트 보터" : name.innerHTML == "비보트(1836712227@a)" ? name.innerHTML = "비보트 보터" : null);
  
