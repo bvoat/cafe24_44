@@ -849,9 +849,9 @@
 }
 #productDetailBottom .detail_swiper_wrap #tab1 #productBoardPagenation .prev a {
   display: inline-block;
-  width: 17px;
-  height: 18px;
-  background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/blue_arrow_back_3x.png) no-repeat center;
+  width: 12px;
+  height: 14px;
+  background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/icon_back.png) no-repeat center;
   background-size: contain;
 }
 #productDetailBottom .detail_swiper_wrap #tab1 #productBoardPagenation .next {
@@ -859,9 +859,9 @@
 }
 #productDetailBottom .detail_swiper_wrap #tab1 #productBoardPagenation .next a {
   display: inline-block;
-  width: 17px;
-  height: 18px;
-  background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/blue_arrow_back_3x.png) no-repeat center;
+  width: 12px;
+  height: 14px;
+  background: url(https://bvoatofficial.cafe24.com/bvtIMG/icon/icon_back.png) no-repeat center;
   background-size: contain;
   transform: scaleX(-1);
 }
