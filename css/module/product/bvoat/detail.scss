@@ -820,7 +820,7 @@
 
 					.item {
 						position: relative;
-						margin-bottom: 30px;
+						margin-bottom: 15px;
 
 						.item_anchor {
 
@@ -896,7 +896,7 @@
 							.summary_info {
 								//p표시 여러개 중복되어 height로 잡아줌 
 								width: 100%;
-								height: 67px;
+								height: fit-content;
 								overflow: hidden;
 
 								.vote_comment {
