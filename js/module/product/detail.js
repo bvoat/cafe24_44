@@ -2,10 +2,18 @@
 /* bvt */
 
 //thumbnail 즉시 슬라이드화
-const thumbnail_list = document.querySelector(".thumb").children;
+
+  const thumbnail_list = document.querySelector(".thumb_wrapper").children;
+
 [...thumbnail_list].forEach(li => {
   li.classList.add("main_thumb", "img_wrap", "swiper-slide");
   li.style="display: inline-block";
+});
+
+
+const buy_screen_title = document.querySelector(".buy_screen_title");
+buy_screen_title.addEventListener("click", ()=>{
+  classToggle(buyScreen, "displaynone");
 })
 
 //thumbnail 스와이퍼
@@ -119,11 +127,6 @@ Array.from(purchase_button).forEach((btn)=>{
       }
 
   })
-})
-const buy_screen_title = document.querySelector(".buy_screen_title");
-
-buy_screen_title.addEventListener("click", ()=>{
-  classToggle(buyScreen, "displaynone");
 })
 
 /* 가격 -> 스탬프 */
@@ -251,12 +254,12 @@ const reciveTagDetail = (prd_no) => {
 };
 
 //리뷰 숫자 계산
-const review_item_length = document.querySelectorAll(".review_item").length;
-const review_num = document.querySelector(".review_num");
+// const review_item_length = document.querySelectorAll(".review_item").length;
+// const review_num = document.querySelector(".review_num");
 
-const review_num_insert = (review_item_length) => {
-  review_num.innerHTML = review_item_length;
-}
+// const review_num_insert = (review_item_length) => {
+//   review_num.innerHTML = review_item_length;
+// }
 
 //user_name 수정
 const user_name_arr = document.querySelectorAll(".user_name");
@@ -265,34 +268,25 @@ user_name_arr.forEach(name => name.innerHTML == "비보트" ? name.innerHTML = "
 
 /* 최종 함수 실행 */
 
-
 window.addEventListener("DOMContentLoaded", ()=>{
-  
-  tabClickMove();
 
+  tabClickMove();
   //가치태그 수신
   reciveTagDetail(prd_no);
-
-
   //스탬프 만들기
   //bvt_common.js 파일에서 가격 정보 받아온 후 실행해야 함
-
     if(document.querySelector(".finalprice")){
       setTimeout(()=>{createStamp(createStampPcsFromPrice)}, 500)
     }else{
       setTimeout(()=>{createStamp(createStampPcsFromPrice)}, 1000)
     }
 
-
   //크루 등급 마일리지 2배 변환
   crewValueControl(2);
-
   //Q&A heading 컨트롤
   qnaControl();
-
- //review_item_length 삽입
- review_num_insert(review_item_length);
- 
+ //review_item_length 삽입(리뷰에이드로 대체)
+//  review_num_insert(review_item_length);
 
 })
 
